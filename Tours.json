@@ -5631,6 +5631,16 @@
       "websiteURL": null
     },
     {
+      "id": "88c4d25c-0e2c-522a-ba1d-e55f60f5ef11",
+      "displayName": "Atlas Studio LIL",
+      "platform": "dozent",
+      "handle": "atlas.lil",
+      "avatarURL": null,
+      "avatarEmoji": "🇫🇷",
+      "bio": "Atlas Studio's Lille bureau — the Flemish capital of France, where the merchants' Bourse and the weavers' squares tell of a city built on cloth, old mills and sorting offices have become art spaces, and the kitchens run from a gaufre counter of 1849 to wine bars facing each other across the Vieux-Lille.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -73147,9 +73157,9 @@
         "8941e2d3-583e-553c-8625-817f7e2ac985",
         "7f1c44dc-ad8b-53c6-9e9b-c4281fcf3ffd",
         "6339e837-a7b5-56f9-8dbf-c19710f25473",
+        "347dab13-ec7d-5f13-811a-40fdd9c2f9e3",
         "84e222ee-b49a-5a51-aaf2-a3f6fe441eb8",
-        "4dcf4a84-0066-5267-87ae-c315600d8cf2",
-        "15674F4E-057C-5D7F-8C54-3F33D15F1803"
+        "4dcf4a84-0066-5267-87ae-c315600d8cf2"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -103607,7 +103617,7 @@
         "e0c70663-7916-5023-982e-7f6027a49416",
         "35286e95-babc-548b-956a-53e485bc070c",
         "3261bd51-24b5-5a79-a691-a1e1a868ccfb",
-        "632478cb-b0b2-5aa6-aa08-46f2e47e2f3e"
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -123057,9 +123067,9 @@
         "e9740319-7b4f-5e89-ac29-7471dd0f3881",
         "8751aa0e-b1e8-530f-8df7-2914cef14602",
         "49b2c18c-616f-57e5-81db-efb59ef54a89",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b",
         "726c0fd2-ae39-5ed5-b84c-20c6783e67f5",
-        "0489af4d-d8cc-58bd-9fa4-4c897d2dca41",
-        "b4f87483-ebae-567e-896f-b7b4042ca34a"
+        "0489af4d-d8cc-58bd-9fa4-4c897d2dca41"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -132819,6 +132829,7 @@
       "city": "Oslo",
       "country": "Norway",
       "relatedTourIds": [
+        "268691cd-719a-5243-a758-d205cfbe90cb",
         "5FD518A0-2202-5313-83AD-7D49AE9D915F",
         "c933fed3-eb24-5319-87df-7ce498c62100",
         "0378b836-089d-5f9e-8232-8e2e9afe3e09",
@@ -134934,6 +134945,1112 @@
         "Venue",
         "Food",
         "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "268691cd-719a-5243-a758-d205cfbe90cb",
+      "createdAt": "2026-10-23",
+      "title": "Atelier Kumø",
+      "shortDescription": "Kumo is the Japanese word for cloud, and the woman who gave this shop its name spent seven years as an architect before deciding she would…",
+      "longDescription": "Kumo is the Japanese word for cloud, and the woman who gave this shop its name spent seven years as an architect before deciding she would rather fill rooms than design them.\n\nThe windows of number seven come first, and in them things tend to be small enough to carry home: notebooks and paper goods, children's toys, little plants in carefully matched pots, and bags. Emilie Kaori Bessineau opened it in 2016, mixing a Japanese taste for restraint with a Scandinavian fondness for pale wood and useful objects, and she has always leaned towards independent makers rather than big names.",
+      "makerId": "88c4d25c-0e2c-522a-ba1d-e55f60f5ef11",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-atelier-kumo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-atelier-kumo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-atelier-kumo_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6ab203b2-880a-56cf-ab90-bb7f97c9dcc6",
+          "order": 0,
+          "title": "Atelier Kumø",
+          "caption": "On Rue de l'Hôpital Militaire, between Atelier Kumø at number seven and Maison Kumø at number thirteen.",
+          "latitude": 50.6331604792529,
+          "longitude": 3.0622566124296915,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lil-atelier-kumo.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-atelier-kumo_hero.webp",
+          "transcriptText": "Kumo is the Japanese word for cloud, and the woman who gave this shop its name spent seven years as an architect before deciding she would rather fill rooms than design them.\n\nRue de l'Hôpital Militaire is the street underfoot, and there are two shopfronts to find on it: Atelier Kumø at number seven, and its younger sister, Maison Kumø, further along at number thirteen. Stand on the pavement between them and you have the whole enterprise in a single glance, the newer house having opened in February 2023.\n\nThe windows of number seven come first, and in them things tend to be small enough to carry home: notebooks and paper goods, children's toys, little plants in carefully matched pots, and bags. Emilie Kaori Bessineau opened it in 2016, mixing a Japanese taste for restraint with a Scandinavian fondness for pale wood and useful objects, and she has always leaned towards independent makers rather than big names.\n\nNow look along to number thirteen, which turns the same eye on the rest of the home — kitchen, bathroom, living room and bedroom — so that the pair of shops reads like a floor plan that has been split across two addresses.\n\nWhat sets the place apart, though, is the making, since under the banner of a club called Do It Together, the atelier has run hands-on sessions in crochet, embroidery, weaving and graphic design, some of them for children as young as five.\n\nAnd that, if you ask me, is the heart of it, because an architect is trained to think about how people actually live in a space, and in these two shops that training has quietly become a way of selling, in which buying a well-made mug and learning to weave are treated as two halves of the same thing.\n\nThe idea has travelled as far as Brussels, where there are now two more Kumø shops, but closer to hand Rue de Béthune runs just round the corner, and a stroll north along it carries you towards the old heart of the city and the Grand Place."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.6331604792529,
+      "centroidLongitude": 3.0622566124296915,
+      "city": "Lille",
+      "country": "France",
+      "relatedTourIds": [
+        "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50",
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "5230cc32-e47b-51e7-a81c-ad53a8b3a3fa",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf",
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Art",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "54ea68c0-e852-5264-b867-9a651c1eb4d1",
+      "createdAt": "2026-10-23",
+      "title": "Bienheureux",
+      "shortDescription": "Bienheureux is a French word that sits somewhere between blissful and blessed, which is a fairly bold thing to promise on a sign. The red-brick…",
+      "longDescription": "Bienheureux is a French word that sits somewhere between blissful and blessed, which is a fairly bold thing to promise on a sign.\n\nThe building itself is a northern manor house of the kind you find dotted around the edges of Lille, which has been reworked into a hotel of fifteen rooms. Each room is built around what the owners call a different sensory world, so one leans on dark tones, another on deep crimson, and a third on round windows or slatted wood.",
+      "makerId": "88c4d25c-0e2c-522a-ba1d-e55f60f5ef11",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-bienheureux_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-bienheureux_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-bienheureux_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-bienheureux_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-bienheureux_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2d239e90-05f4-5ea4-b92e-be8290457998",
+          "order": 0,
+          "title": "Bienheureux",
+          "caption": "At number thirty-five Avenue de la Marne, facing the red-brick manor among the trees of the Parc du Verseau.",
+          "latitude": 50.68919495753527,
+          "longitude": 3.124959439154304,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lil-bienheureux.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-bienheureux_hero.webp",
+          "transcriptText": "Bienheureux is a French word that sits somewhere between blissful and blessed, which is a fairly bold thing to promise on a sign.\n\nThe red-brick manor in front of you stands at thirty-five Avenue de la Marne in Wasquehal, set back among the trees of the Parc du Verseau, with a slate roof above and a garden terrace laid out at ground level. The centre of Lille is around fifteen minutes away, which is part of the appeal, since inside the grounds the main road seems to fall away behind you.\n\nThe building itself is a northern manor house of the kind you find dotted around the edges of Lille, which has been reworked into a hotel of fifteen rooms. Each room is built around what the owners call a different sensory world, so one leans on dark tones, another on deep crimson, and a third on round windows or slatted wood.\n\nThe ground floor is where the house works hardest, because it changes its job through the day: breakfast is served at the bar, lunch moves into the dining room, the afternoon drifts out onto the terrace, and dinner brings everyone back indoors. In summer there is a guinguette in the garden as well, the old French name for a garden bar where people gather to drink and dance in the open.\n\nThe kitchen belongs to chef Lucas Grabowski, who arrived by way of Paris and cooks mostly seafood and vegetables, with Asian notes such as Thai-style oil, yakitori seasoning and kimchi, while keeping his suppliers as close to home in the Hauts-de-France as he can.\n\nWhat the house is really after is to be treated less as a hotel and more as a place to live in for a day, where ordinary moments are given a little more care than usual, and that, rather than any single dish or room, is what the name is promising.\n\nBefore you leave, ask to see the wine cellar, which is open to browse, with bottles to buy and carry home as a souvenir of the afternoon."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.68919495753527,
+      "centroidLongitude": 3.124959439154304,
+      "city": "Wasquehal",
+      "country": "France",
+      "relatedTourIds": [
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "A957C31E-38FE-564B-8F0D-C11F7EA24456",
+        "87197947-f2f1-5565-aad8-7575508ea9df",
+        "C37E821E-F28A-560E-B1F5-DC02771E47E9",
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+        "347dab13-ec7d-5f13-811a-40fdd9c2f9e3",
+        "B039CF72-99D4-5AEE-B1AB-C5D01BB41DB6",
+        "7C2B5DCE-15DA-5107-8B63-89FE0AB9A176"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Architecture",
+        "Green Escape",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5230cc32-e47b-51e7-a81c-ad53a8b3a3fa",
+      "createdAt": "2026-10-23",
+      "title": "Clivia Nobili",
+      "shortDescription": "Bleu de travail, the French working blue, is the colour that dressed generations of mechanics, painters and factory hands across this country…",
+      "longDescription": "Bleu de travail, the French working blue, is the colour that dressed generations of mechanics, painters and factory hands across this country, and one designer on this street has spent her career treating it as seriously as couture.\n\nLook first at the shapes on display, because Clivia Nobili has been building collections around workwear since 2009, reworking artists' smocks, sailor shirts, overalls and aprons into clothes you might happily wear to dinner. One of her lines is called Prêt-à-Travailler, a neat play on prêt-à-porter that swaps ready to wear for ready to work.",
+      "makerId": "88c4d25c-0e2c-522a-ba1d-e55f60f5ef11",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-clivia-nobili_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-clivia-nobili_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "88be7d4b-eb7b-5324-ba0d-e15fe82221cb",
+          "order": 0,
+          "title": "Clivia Nobili",
+          "caption": "At forty bis Rue Saint-André in the Vieux-Lille, by the window of workwear in deep French blue.",
+          "latitude": 50.64425723845081,
+          "longitude": 3.058431183594242,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lil-clivia-nobili.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-clivia-nobili_hero.webp",
+          "transcriptText": "Bleu de travail, the French working blue, is the colour that dressed generations of mechanics, painters and factory hands across this country, and one designer on this street has spent her career treating it as seriously as couture.\n\nForty bis Rue Saint-André, a narrow street in the Vieux-Lille, is the address, and the blue in the window is the giveaway. With the shop in front of you, the wine bar JaJa sits just down the street, at number thirty-six.\n\nLook first at the shapes on display, because Clivia Nobili has been building collections around workwear since 2009, reworking artists' smocks, sailor shirts, overalls and aprons into clothes you might happily wear to dinner. One of her lines is called Prêt-à-Travailler, a neat play on prêt-à-porter that swaps ready to wear for ready to work.\n\nThe fabric deserves a second look, since there is a story woven into it. After the pandemic, Nobili discovered that the blue cloth she relied on was being made outside Europe, and rather than shrug it off she set about bringing the weaving of that blue back to the north of France. The project, called Bleu à Tisser, was backed by a culture ministry programme, and the finished garments are sewn in Merville, at a workwear workshop that has been running since 1920.\n\nIn early 2023 the project went on show in the chapel of the Musée de l'Hospice Comtesse, which is a fair sign of how the city sees it: not simply as a fashion label but as a piece of local heritage.\n\nLille grew rich on textiles, and for generations this region wove the very cloth that working France wore, so a shop built on the belief that the right garment belongs with the right people is, in its own quiet way, picking up an old thread and carrying it on.\n\nThe Hospice Comtesse itself is only a short walk away on Rue de la Monnaie, if you'd like to see the chapel where the blue had its moment."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.64425723845081,
+      "centroidLongitude": 3.058431183594242,
+      "city": "Lille",
+      "country": "France",
+      "relatedTourIds": [
+        "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b",
+        "268691cd-719a-5243-a758-d205cfbe90cb",
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "87197947-f2f1-5565-aad8-7575508ea9df",
+        "eb336221-bd19-534d-9fea-ceefe48d568f",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Fashion",
+        "Commerce",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "347dab13-ec7d-5f13-811a-40fdd9c2f9e3",
+      "createdAt": "2026-10-23",
+      "title": "JaJa, Planches & Vins",
+      "shortDescription": "In French slang, jaja is the cheap everyday red you might pour from a carafe without a second thought, which makes it a cheeky name for a bar…",
+      "longDescription": "In French slang, jaja is the cheap everyday red you might pour from a carafe without a second thought, which makes it a cheeky name for a bar with more than two hundred wines on its list.\n\nThrough the window, the room mixes the old bistro with something sharper, with parquet floors, contemporary tiles and leather banquettes, while one wall is given over almost entirely to bottles, so that the cellar doubles as the decoration.",
+      "makerId": "88c4d25c-0e2c-522a-ba1d-e55f60f5ef11",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-jaja_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-jaja_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-jaja_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-jaja_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2ad5af29-8393-5b18-a0e2-3d76c5ddb287",
+          "order": 0,
+          "title": "JaJa, Planches & Vins",
+          "caption": "On Rue Saint-André, between JaJa at number thirty-six and Petit JaJa across the road at thirty-seven.",
+          "latitude": 50.64419522446429,
+          "longitude": 3.0586052547581657,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lil-jaja.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-jaja_hero.webp",
+          "transcriptText": "In French slang, jaja is the cheap everyday red you might pour from a carafe without a second thought, which makes it a cheeky name for a bar with more than two hundred wines on its list.\n\nLook for the door at number thirty-six, which is easiest to spot after six in the evening, when the lights go on and the tables start to fill. Across the road, at number thirty-seven, sits its younger sibling, Petit JaJa, so if you stand between the two you can take in both at once.\n\nThrough the window, the room mixes the old bistro with something sharper, with parquet floors, contemporary tiles and leather banquettes, while one wall is given over almost entirely to bottles, so that the cellar doubles as the decoration.\n\nThe list itself ranges across France and well beyond, and you can drink by the glass, by the bottle or, if the evening calls for it, by the magnum. The food comes on planches, the wooden boards of charcuterie, cheese and seafood that give the bar the other half of its name, alongside a few treats such as a croque monsieur made with truffle.\n\nAcross the way, Petit JaJa keeps a slightly different rhythm, opening from Tuesday to Saturday and sending out a chef's small plates for sharing rather than boards.\n\nWhat I like about the pairing is the conversation it sets up. Two wine bars facing each other across a street this narrow could easily have been rivals, yet here they behave more like two rooms of the same house, with the road running between them like a corridor.\n\nThat name, in the end, is the clue to the mood, because this is serious wine served without any fuss at all. If you're passing in daylight, the shop window of Clivia Nobili, a little further up at forty bis, shows off workwear in deep French blue."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.64419522446429,
+      "centroidLongitude": 3.0586052547581657,
+      "city": "Lille",
+      "country": "France",
+      "relatedTourIds": [
+        "87197947-f2f1-5565-aad8-7575508ea9df",
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+        "e381dd4d-bc72-5c91-8b28-e4127be90431",
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "5230cc32-e47b-51e7-a81c-ad53a8b3a3fa",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf",
+        "924fb37f-f106-5626-9112-e89b3ececd84",
+        "54ea68c0-e852-5264-b867-9a651c1eb4d1"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e9d931ed-b399-5acd-8876-c074e47d0f6b",
+      "createdAt": "2026-10-23",
+      "title": "Old Stock Exchange | La Vieille Bourse",
+      "shortDescription": "In 1651, Lille was a Spanish city, and its merchants had to write to King Philip IV in Madrid for permission to build themselves a proper place…",
+      "longDescription": "In 1651, Lille was a Spanish city, and its merchants had to write to King Philip IV in Madrid for permission to build themselves a proper place to do business.\n\nThe clever part is that what looks from outside like one grand palace is in fact twenty-four separate houses, built side by side in 1652 and 1653 to a design by Julien Destrée and arranged around this shared courtyard, so that each merchant had a house of his own while the trading happened in the middle.",
+      "makerId": "88c4d25c-0e2c-522a-ba1d-e55f60f5ef11",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-vieille-bourse_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-vieille-bourse_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-vieille-bourse_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-vieille-bourse_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-vieille-bourse_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bddfb0a9-1ca5-5761-8f42-40125b9d601d",
+          "order": 0,
+          "title": "Old Stock Exchange | La Vieille Bourse",
+          "caption": "In the arcaded inner courtyard, between the Grand Place and Place du Théâtre.",
+          "latitude": 50.63716036709334,
+          "longitude": 3.0643352124299414,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lil-vieille-bourse.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-vieille-bourse_hero.webp",
+          "transcriptText": "In 1651, Lille was a Spanish city, and its merchants had to write to King Philip IV in Madrid for permission to build themselves a proper place to do business.\n\nMake your way through one of the arched passages into the inner courtyard, and then turn slowly on the spot. A covered arcade runs all the way round you, lined with stalls and shelves of second-hand books, and above it rise the brick and carved-stone fronts of the building itself, with the Grand Place on one side of these walls and Place du Théâtre on the other.\n\nThe clever part is that what looks from outside like one grand palace is in fact twenty-four separate houses, built side by side in 1652 and 1653 to a design by Julien Destrée and arranged around this shared courtyard, so that each merchant had a house of his own while the trading happened in the middle.\n\nHave a look at the decoration on the upper floors, which is laid on thickly in the Flemish manner, with carved figures, garlands of fruit and flowers, and lions of Flanders guarding the doorways. The colourful painted coats of arms above the upper windows are much newer than they look, since they honour the companies that helped pay for the restoration carried out between 1989 and 1998.\n\nUp on the bell tower, meanwhile, a figure of Mercury, the god of trade, keeps watch over the whole arrangement.\n\nWhat I find rather lovely is how gently the building has changed its purpose. It was made for money, and these days its courtyard deals mainly in second-hand books, flowers and games of chess, with tango dancers taking over on Sunday evenings in summer, so a monument to commerce has turned into one of the city's favourite places simply to linger.\n\nWalk out on the far side and the opera house stands across the square, with the chamber of commerce and its tall belfry just beside it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.63716036709334,
+      "centroidLongitude": 3.0643352124299414,
+      "city": "Lille",
+      "country": "France",
+      "relatedTourIds": [
+        "89b99107-9d86-509c-9cf6-56bd7f756471",
+        "eb336221-bd19-534d-9fea-ceefe48d568f",
+        "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Commerce",
+        "History",
+        "Baroque",
+        "Iconic Landmark",
+        "Free to Visit",
+        "Designed by a Master",
+        "Julien Destrée"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e381dd4d-bc72-5c91-8b28-e4127be90431",
+      "createdAt": "2026-10-23",
+      "title": "Le Barboteur",
+      "shortDescription": "A canard barboteur is what French birdwatchers call a dabbling duck, the kind that tips up in the shallows rather than diving, and it's a fine…",
+      "longDescription": "A canard barboteur is what French birdwatchers call a dabbling duck, the kind that tips up in the shallows rather than diving, and it's a fine name for a place that spends most of its time looking at the water.\n\nThe boats explain the neighbourhood, since Bois-Blancs became an island in the 1950s, when canal works for the port of Lille cut it off from the mainland, and for years the houseboat community here was regarded as a slightly eccentric corner of the city.",
+      "makerId": "88c4d25c-0e2c-522a-ba1d-e55f60f5ef11",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-barboteur_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-barboteur_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-barboteur_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-barboteur_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-barboteur_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f09bf8d7-d404-58bd-a4cc-7474692f9dd7",
+          "order": 0,
+          "title": "Le Barboteur",
+          "caption": "At ninety-one Quai de l'Ouest in Bois-Blancs, back to the restaurant, facing the Gare d'eau and its barges.",
+          "latitude": 50.629445923416526,
+          "longitude": 3.0215494101762888,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lil-le-barboteur.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-barboteur_hero.webp",
+          "transcriptText": "A canard barboteur is what French birdwatchers call a dabbling duck, the kind that tips up in the shallows rather than diving, and it's a fine name for a place that spends most of its time looking at the water.\n\nThe big, high-ceilinged restaurant with the wide terrace, at ninety-one Quai de l'Ouest in the Bois-Blancs neighbourhood, is your reference point. With your back to its doors, the water ahead is the Gare d'eau, a mooring basin off the Deûle, and the long boats tied up along its edge are barges and houseboats, some of which have been lived on for decades.\n\nThe boats explain the neighbourhood, since Bois-Blancs became an island in the 1950s, when canal works for the port of Lille cut it off from the mainland, and for years the houseboat community here was regarded as a slightly eccentric corner of the city.\n\nThe basin itself was reworked between 2021 and 2023. The original plan was for a full marina, but local residents had their doubts, and what opened in September 2023 was a smaller, gentler stopping place for boats that left the character of the basin more or less intact.\n\nLe Barboteur arrived just before all that, at the end of 2019, with a lunchtime menu that changes about every fortnight and leans on fresh local produce, mixing modern French cooking with flavours from Asia, North Africa and the Middle East. In the evening it turns into more of a bar, with boards to share and local beers.\n\nTiming is what makes it work, since it opened just as an old industrial waterfront was being given a second life, and it has managed to become part of that change without crowding out the barges that were here first.\n\nIf you've time, follow the quay a short way north towards EuraTechnologies, where a vast former textile mill has kept its brick shell and filled its insides with technology companies."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.629445923416526,
+      "centroidLongitude": 3.0215494101762888,
+      "city": "Lille",
+      "country": "France",
+      "relatedTourIds": [
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "87197947-f2f1-5565-aad8-7575508ea9df",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "347dab13-ec7d-5f13-811a-40fdd9c2f9e3",
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf",
+        "12985eac-ae42-58e7-9a0a-e887c830640a"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Waterfront",
+        "Food",
+        "Maritime",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "87197947-f2f1-5565-aad8-7575508ea9df",
+      "createdAt": "2026-10-23",
+      "title": "Le Braque",
+      "shortDescription": "A braque is a pointer, the gundog breed, and the one this restaurant is named after is called Marcel, who belongs to the chef and has a habit of…",
+      "longDescription": "A braque is a pointer, the gundog breed, and the one this restaurant is named after is called Marcel, who belongs to the chef and has a habit of sleeping near the kitchen.\n\nBegin with that phrase, since a comptoir is a counter, and inside the seats run along the walls in the manner of a bar, against bare brick and light wood, so that dinner here feels closer to sitting at the kitchen pass than to a formal dining room. The kitchen itself is open, under a glass roof that lets the daylight in.",
+      "makerId": "88c4d25c-0e2c-522a-ba1d-e55f60f5ef11",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-braque_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-braque_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-braque_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-braque_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6af2e95f-ca56-54e5-9998-95f6d0412271",
+          "order": 0,
+          "title": "Le Braque",
+          "caption": "At number forty-five Rue de la Monnaie, by the shopfront painted Comptoir gourmand.",
+          "latitude": 50.64119288530827,
+          "longitude": 3.062591369731487,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lil-le-braque.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-braque_hero.webp",
+          "transcriptText": "A braque is a pointer, the gundog breed, and the one this restaurant is named after is called Marcel, who belongs to the chef and has a habit of sleeping near the kitchen.\n\nRue de la Monnaie takes its name from the mint that once stood here, and the restaurant is at number forty-five, just a short walk north of the cathedral. Look for the discreet shopfront with the words Comptoir gourmand painted on it, which is about as close as the place comes to announcing itself.\n\nBegin with that phrase, since a comptoir is a counter, and inside the seats run along the walls in the manner of a bar, against bare brick and light wood, so that dinner here feels closer to sitting at the kitchen pass than to a formal dining room. The kitchen itself is open, under a glass roof that lets the daylight in.\n\nThe chef is Damien Laforce, who comes from French Flanders, appeared on the television competition Top Chef, and trained at the Auberge du Vert Mont, a farm restaurant out near the Belgian border. He opened Le Braque in 2021, and the habits of that training show in the way he works, sourcing from within about fifty kilometres of Lille and, where he can, from his own hunting and fishing.\n\nThen there's the larder, which is where the cooking gets interesting. Very little is thrown away, so vegetables are fermented, trimmings become vinegars and syrups, and the charcuterie is made in house, which means the menu shifts with whatever the season and the store cupboard have to offer.\n\nIt's easy to take a restaurant like this for a passing trend, but the approach is closer to an old country habit than anything new: cook what's near, waste nothing, and let the dog sleep by the stove.\n\nWhen you leave, take the few steps west to the little Place aux Oignons, a cobbled square of old weavers' houses whose name hides a surprisingly good linguistic joke."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.64119288530827,
+      "centroidLongitude": 3.062591369731487,
+      "city": "Lille",
+      "country": "France",
+      "relatedTourIds": [
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+        "e381dd4d-bc72-5c91-8b28-e4127be90431",
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf",
+        "347dab13-ec7d-5f13-811a-40fdd9c2f9e3",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "94b8d652-e2bd-5bbf-a698-a88cfb8c0a60",
+      "createdAt": "2026-10-23",
+      "title": "Le Fresnoy",
+      "shortDescription": "Before it was a school for artists, this corner of Tourcoing was where the town came to enjoy itself, and from 1905 until 1977 it offered silent…",
+      "longDescription": "Before it was a school for artists, this corner of Tourcoing was where the town came to enjoy itself, and from 1905 until 1977 it offered silent films, a dance floor, a roller-skating rink laid with wooden parquet, a restaurant, a carousel for the children and, on certain nights, wrestling.\n\nThat lid is the work of the architect Bernard Tschumi, who, rather than knock the old entertainment halls down or restore them as a museum piece, kept them and covered everything with one enormous roof, which takes care of the insulation, the ventilation and the weather for old and new alike.\n\nIts full name is Le Fresnoy – Studio national des arts contemporains.",
+      "makerId": "88c4d25c-0e2c-522a-ba1d-e55f60f5ef11",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-fresnoy_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-fresnoy_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-fresnoy_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-fresnoy_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c3d83568-95d4-5582-911e-bffd75ec1807",
+          "order": 0,
+          "title": "Le Fresnoy",
+          "caption": "Far enough back from the entrance on Rue du Fresnoy to take in the great metal roof over the old halls.",
+          "latitude": 50.700550665058145,
+          "longitude": 3.155118010580932,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lil-le-fresnoy.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-fresnoy_hero.webp",
+          "transcriptText": "Before it was a school for artists, this corner of Tourcoing was where the town came to enjoy itself, and from 1905 until 1977 it offered silent films, a dance floor, a roller-skating rink laid with wooden parquet, a restaurant, a carousel for the children and, on certain nights, wrestling.\n\nStand far enough back from the entrance to take in the whole roofline, and you'll see what happened next: a vast metal canopy laid right over the top of a cluster of older brick buildings, as though someone had decided to put a lid on an entire block.\n\nThat lid is the work of the architect Bernard Tschumi, who, rather than knock the old entertainment halls down or restore them as a museum piece, kept them and covered everything with one enormous roof, which takes care of the insulation, the ventilation and the weather for old and new alike.\n\nThe clever bit is the gap, because between the old pitched roofs and the new one there is a space that would normally be wasted, and here it has been threaded with catwalks and suspended walkways and lit by skylights shaped like clouds, so that the leftover space in the middle has become the building's signature.\n\nThen there's what goes on underneath, since Le Fresnoy opened in October 1997 as a national studio for contemporary art, offering a two-year postgraduate course in film, video and digital work to students from dozens of countries, and every autumn their new pieces go on show in an exhibition called Panorama.\n\nSeen that way, the building makes its own argument. It turns down the usual choice between demolition and preservation, keeps the old fun palace, and treats the space in between as the place where new things get made, which suits artists who work in the gaps between film, sound and screen.\n\nPanorama 28 runs until early January 2027, and the exhibitions and the cinema are open to everyone, so if the doors are open, go inside and look up at the old roofs sitting beneath the new one."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.700550665058145,
+      "centroidLongitude": 3.155118010580932,
+      "city": "Tourcoing",
+      "country": "France",
+      "relatedTourIds": [
+        "e22f888b-f47f-5f4e-9cfe-cd6842e7d671",
+        "24A5FF02-DFF6-437B-9FD8-F3D71B70A627",
+        "096a3cba-09b6-57e7-8379-2e49f3a7b507",
+        "8751aa0e-b1e8-530f-8df7-2914cef14602",
+        "2e894f42-7142-5739-b7cf-9c702494e4b4",
+        "fe2cbf01-fba7-57c4-8788-5ca761c33e81",
+        "2bfc11d0-23e9-5e67-ad0f-fe89ba8700b3",
+        "8e8cfd3d-279e-5d8c-ac59-0134465d123e"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Contemporary",
+        "Designed by a Master",
+        "Bernard Tschumi"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4feadb69-9ce2-566a-92f1-4cc76882304a",
+      "createdAt": "2026-10-23",
+      "title": "Le Restaurant du Cerisier",
+      "shortDescription": "Griotte, Amarelle and Burlat are all varieties of cherry, and at this restaurant they are also the names of the tasting menus, which tells you…",
+      "longDescription": "Griotte, Amarelle and Burlat are all varieties of cherry, and at this restaurant they are also the names of the tasting menus, which tells you fairly quickly how seriously the place takes its own title.\n\nDownstairs is the easy way in, with a shorter menu that changes every week and prices that are a good deal kinder than the floor above.",
+      "makerId": "88c4d25c-0e2c-522a-ba1d-e55f60f5ef11",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-cerisier_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-cerisier_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-cerisier_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-cerisier_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "30f02ecc-1918-5bea-8378-9650e612b4f5",
+          "order": 0,
+          "title": "Le Restaurant du Cerisier",
+          "caption": "At number fourteen Avenue du Peuple-Belge, facing the brasserie with the starred dining room above.",
+          "latitude": 50.64220376325963,
+          "longitude": 3.0642330663973296,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lil-le-cerisier.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-cerisier_hero.webp",
+          "transcriptText": "Griotte, Amarelle and Burlat are all varieties of cherry, and at this restaurant they are also the names of the tasting menus, which tells you fairly quickly how seriously the place takes its own title.\n\nNumber fourteen Avenue du Peuple-Belge is a contemporary building, and Le Cerisier spreads itself across two of its floors. Facing it, the ground floor holds the relaxed brasserie, while the Michelin-starred dining room sits on the first floor above it.\n\nDownstairs is the easy way in, with a shorter menu that changes every week and prices that are a good deal kinder than the floor above.\n\nThen lift your eyes to the first floor, where the room is softly lit and arranged around an open kitchen in which chef Guillaume Barengo cooks a creative menu led by whatever the market delivers. The star first arrived in 2021, under a previous chef, and the restaurant has held on to it since, which is often the harder trick.\n\nThe wine makes up the third part of the picture. The list runs to more than six hundred references, but the more personal detail is that the family behind Le Cerisier comes from Mayenne, in western France, where they keep a vineyard of their own, and some of its bottles find their way onto the tables here.\n\nWhat the building offers, really, is a ladder you can climb at your own pace, from a weekday lunch downstairs to a tasting menu for a special occasion, or simply a cocktail made with the house gin, all of it under one roof and one kitchen's sense of taste.\n\nBefore you go, look along the avenue itself, because beneath it runs the old Basse-Deûle, the canal where Lille did its trading for centuries until it was filled in in 1930, and whether to bring the water back is a question the city is still debating, after a 2022 public vote narrowly favoured a park instead."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.64220376325963,
+      "centroidLongitude": 3.0642330663973296,
+      "city": "Lille",
+      "country": "France",
+      "relatedTourIds": [
+        "e381dd4d-bc72-5c91-8b28-e4127be90431",
+        "87197947-f2f1-5565-aad8-7575508ea9df",
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50",
+      "createdAt": "2026-10-23",
+      "title": "Le Tripostal",
+      "shortDescription": "The name is the job description: tri postal is French for postal sorting, and for decades this long concrete building did exactly that, sending…",
+      "longDescription": "The name is the job description: tri postal is French for postal sorting, and for decades this long concrete building did exactly that, sending the region's letters and parcels on their way.\n\nThe sheer bulk of it is the point, because inside there are three floors, each one an open platform of around two thousand square metres, which made it ideal for handling sacks of mail and, as it turned out, just as handy for art.",
+      "makerId": "88c4d25c-0e2c-522a-ba1d-e55f60f5ef11",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-tripostal_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-tripostal_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-tripostal_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-tripostal_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2d1574f5-0bae-5142-9fed-45073fbec291",
+          "order": 0,
+          "title": "Le Tripostal",
+          "caption": "On Avenue Willy Brandt, facing the long concrete block between Lille Flandres and Lille Europe.",
+          "latitude": 50.63703588121551,
+          "longitude": 3.072180325921706,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lil-le-tripostal.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-le-tripostal_hero.webp",
+          "transcriptText": "The name is the job description: tri postal is French for postal sorting, and for decades this long concrete building did exactly that, sending the region's letters and parcels on their way.\n\nAvenue Willy Brandt runs past the front, and your landmark is the broad, plain block wedged between the two railway stations, with Lille Flandres on one side and Lille Europe on the other. It was put up in the 1950s as the sorting centre for the whole metropolitan area, which explains the location, since the post simply moved from one set of trains to the next.\n\nThe sheer bulk of it is the point, because inside there are three floors, each one an open platform of around two thousand square metres, which made it ideal for handling sacks of mail and, as it turned out, just as handy for art.\n\nThat second life began in 2004, when Lille was European Capital of Culture and the city went looking for big, flexible spaces in which to put on shows. The sorting centre was pressed into service, and it never quite went back, becoming one of the main venues for lille3000, the cultural programme that grew out of that year.\n\nOver the years it has hosted works from the Centre Pompidou's collections, large themed exhibitions, club nights and performances, with whole floors rebuilt for each new show and then stripped back again afterwards.\n\nThere's something fitting about that afterlife, since a building designed to take things in, sort them and send them out again now does much the same with ideas, and a temporary arrangement made for a single festival year has quietly turned into a permanent habit.\n\nThe building has been closed between shows, with an exhibition built around laughter and drawn from France's regional contemporary art collections due to open this autumn, so check what's on before heading in, and if the doors happen to be shut, a stroll along Avenue Willy Brandt from one station to the other traces the very journey the mail used to make."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.63703588121551,
+      "centroidLongitude": 3.072180325921706,
+      "city": "Lille",
+      "country": "France",
+      "relatedTourIds": [
+        "89b99107-9d86-509c-9cf6-56bd7f756471",
+        "eb336221-bd19-534d-9fea-ceefe48d568f",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b",
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "History",
+        "Modernist"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "89b99107-9d86-509c-9cf6-56bd7f756471",
+      "createdAt": "2026-10-23",
+      "title": "Lille Opera | Opéra de Lille",
+      "shortDescription": "On the night of the fifth of April 1903, Lille's old Grand Théâtre burned down, and it took the city twenty years, one architectural competition…",
+      "longDescription": "On the night of the fifth of April 1903, Lille's old Grand Théâtre burned down, and it took the city twenty years, one architectural competition and a world war to put a new one in its place.\n\nLook up first at the pediment, the triangle at the top of the facade, where the sculptor Hippolyte Lefebvre placed Apollo, god of music and poetry, surrounded by the Muses. Lower down, carved reliefs by other sculptors fill out the allegory, so the front of the building announces its purpose before you've bought a ticket.",
+      "makerId": "88c4d25c-0e2c-522a-ba1d-e55f60f5ef11",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-opera_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-opera_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-opera_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-opera_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "cb61b909-3086-5f97-9a0a-6f39b565eee4",
+          "order": 0,
+          "title": "Lille Opera | Opéra de Lille",
+          "caption": "On Place du Théâtre, facing the pale stone front, with the Chamber of Commerce belfry to its left.",
+          "latitude": 50.63773439381611,
+          "longitude": 3.0655302179875257,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lil-opera.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-opera_hero.webp",
+          "transcriptText": "On the night of the fifth of April 1903, Lille's old Grand Théâtre burned down, and it took the city twenty years, one architectural competition and a world war to put a new one in its place.\n\nFind a spot on Place du Théâtre where you can see the whole of the pale stone palace with its columns and sculpted pediment, the Opéra de Lille. Next door, to the left as you face it, stands the Chamber of Commerce with its tall belfry.\n\nLook up first at the pediment, the triangle at the top of the facade, where the sculptor Hippolyte Lefebvre placed Apollo, god of music and poetry, surrounded by the Muses. Lower down, carved reliefs by other sculptors fill out the allegory, so the front of the building announces its purpose before you've bought a ticket.\n\nThe architect was Louis-Marie Cordonnier, who won the 1907 competition, and the gift here is what you can't see. The ground was soft and damp, so he sank around one thousand and fifty piles some five metres down to hold the building up, and he wrapped a reinforced concrete frame in stone to make the new theatre fireproof.\n\nThe timing was cruel, too, because the building was finished in July 1914, just as war broke out, and the interior was left incomplete under occupation, so the official opening didn't come until October 1923. During the Second World War it was again requisitioned for German audiences, from 1941 until 1944.\n\nSo this is a theatre built for peace that kept being overtaken by events, and that history gives its later revival real weight: closed for safety in 1998, it reopened in December 2003, just in time for Lille's year as European Capital of Culture.\n\nInside, the horseshoe auditorium seats a little over eleven hundred, and if you can't make a performance, Cordonnier's Chamber of Commerce next door deserves a long look too, since the same architect designed both."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.63773439381611,
+      "centroidLongitude": 3.0655302179875257,
+      "city": "Lille",
+      "country": "France",
+      "relatedTourIds": [
+        "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50",
+        "eb336221-bd19-534d-9fea-ceefe48d568f",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b",
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+        "0926fd1d-5182-58c9-8c27-a6310504c1da",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "12985eac-ae42-58e7-9a0a-e887c830640a"
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance",
+        "Architecture",
+        "Beaux-Arts",
+        "War",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Louis-Marie Cordonnier"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4a89091e-b6e7-5395-968d-3dbef6f63daf",
+      "createdAt": "2026-10-23",
+      "title": "Méert",
+      "shortDescription": "Lille's most famous sweet was invented by a Fleming, which tells you a good deal about a city that has sat on the edge of Flanders for most of…",
+      "longDescription": "Lille's most famous sweet was invented by a Fleming, which tells you a good deal about a city that has sat on the edge of Flanders for most of its history.\n\nThe gaufre is what most people come for, and it isn't the thick, crisp waffle you might be picturing, but a thin, oval wafer of brioche dough, baked between two irons, cut to shape and then filled by hand with butter, sugar and Madagascar vanilla, and the recipe is said to have stayed the same since 1849.",
+      "makerId": "88c4d25c-0e2c-522a-ba1d-e55f60f5ef11",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-meert_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-meert_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-meert_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-meert_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-meert_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3a9adf97-a707-5bf2-99b5-33c6919c1b8f",
+          "order": 0,
+          "title": "Méert",
+          "caption": "At twenty-seven Rue Esquermoise, by the window displays of small golden boxes.",
+          "latitude": 50.637835847175516,
+          "longitude": 3.061991697081611,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lil-meert.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-meert_hero.webp",
+          "transcriptText": "Lille's most famous sweet was invented by a Fleming, which tells you a good deal about a city that has sat on the edge of Flanders for most of its history.\n\nTwenty-seven Rue Esquermoise, on the busy shopping street that runs away from the Grand Place, is the address, and you'll spot it by the elegant window displays and the small golden boxes stacked inside, with a tea room further back.\n\nThe gaufre is what most people come for, and it isn't the thick, crisp waffle you might be picturing, but a thin, oval wafer of brioche dough, baked between two irons, cut to shape and then filled by hand with butter, sugar and Madagascar vanilla, and the recipe is said to have stayed the same since 1849.\n\nThat was the year Michael Paulus Gislinus Méert, a confectioner from Flanders, took over the business and gave it his name, though sweets had been made at this address for a long time before him, and the house traces its own story back well into the eighteenth century.\n\nNow look past the counter at the room itself, which dates from 1839, when the architect Charles Benvignat dressed it in gilding, coffered ceilings, fine woods, marble and decorative ironwork, so that buying a box of biscuits here feels a little like shopping in a jewellery box.\n\nThe customers matched the surroundings, since from 1864 Méert supplied King Leopold the First of Belgium, and later on General de Gaulle, who was born in Lille, had boxes of gaufres sent to the Élysée Palace.\n\nA famous patisserie can easily be treated as a museum, yet its achievement is quieter than that, because what's kept this place going is a single, very simple thing made in the same way for well over a century and a half.\n\nSince 2010 there's been a branch in Paris too, but the gaufres taste best here, so take a box out onto Rue Esquermoise and wander up into the old town while they're fresh."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.637835847175516,
+      "centroidLongitude": 3.061991697081611,
+      "city": "Lille",
+      "country": "France",
+      "relatedTourIds": [
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "87197947-f2f1-5565-aad8-7575508ea9df",
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce",
+        "History",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Charles Benvignat"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+      "createdAt": "2026-10-23",
+      "title": "Wazemmes Market | Marché de Wazemmes",
+      "shortDescription": "The square underneath this market is named after a dance hall that closed in 1835, which seems fitting for a place that still behaves, on a…",
+      "longDescription": "The square underneath this market is named after a dance hall that closed in 1835, which seems fitting for a place that still behaves, on a Sunday morning, like a party with groceries.\n\nThe hall went up in 1873, designed by César Joly with a nod to Victor Baltard's great market halls in Paris, and it originally held two hundred and thirty-two stalls, which gives you a sense of how much food this neighbourhood needed.",
+      "makerId": "88c4d25c-0e2c-522a-ba1d-e55f60f5ef11",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-marche-de-wazemmes_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-marche-de-wazemmes_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-marche-de-wazemmes_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-marche-de-wazemmes_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "786a91a3-7954-59bb-b059-9e887e380c6e",
+          "order": 0,
+          "title": "Wazemmes Market | Marché de Wazemmes",
+          "caption": "On Place de la Nouvelle Aventure, by the iron-and-glass market hall and the open-air stalls around it.",
+          "latitude": 50.62635225418727,
+          "longitude": 3.0497061390367715,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lil-marche-de-wazemmes.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-marche-de-wazemmes_hero.webp",
+          "transcriptText": "The square underneath this market is named after a dance hall that closed in 1835, which seems fitting for a place that still behaves, on a Sunday morning, like a party with groceries.\n\nPlace de la Nouvelle Aventure is where you're standing, and the thing to look for is the long covered hall of iron and glass at its edge, the Halles de Wazemmes, with the open-air stalls spread out around it. If it's a Tuesday, a Thursday or a Sunday morning, you'll know you're in the right place by the noise.\n\nThe hall went up in 1873, designed by César Joly with a nod to Victor Baltard's great market halls in Paris, and it originally held two hundred and thirty-two stalls, which gives you a sense of how much food this neighbourhood needed.\n\nThat need came quickly, because Wazemmes only became part of Lille in 1858, when its fields were swallowed by textile factories and terraces of workers' housing, with grander bourgeois homes mixed in among them.\n\nThen there's the name of the square, which goes back further still. In 1758 a man named Cordonnier opened a guinguette here, an open-air spot for drinking and dancing called the New Adventure, where people from very different walks of life rubbed shoulders, and although it was pulled down long ago, the name stuck.\n\nOn a busy Sunday as many as fifty thousand people pass through, and the stalls reflect a cosmopolitan neighbourhood: olives and dried fruit, pastries from around the Mediterranean, and the rotisserie chickens roasting over potatoes that many families carry home for lunch.\n\nThe Nouvelle Aventure was a place where classes mixed over a drink, and more than two and a half centuries later the square is still doing that job, only now the meeting happens over a bag of clementines.\n\nIf you've time, seek out the nearby Maison Folie de Wazemmes, a former textile factory reborn as an arts centre, which rounds off the neighbourhood's story neatly."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.62635225418727,
+      "centroidLongitude": 3.0497061390367715,
+      "city": "Lille",
+      "country": "France",
+      "relatedTourIds": [
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf",
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50",
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b",
+        "e381dd4d-bc72-5c91-8b28-e4127be90431"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Market",
+        "Public Square",
+        "Food",
+        "Immigration",
+        "Commerce",
+        "History",
+        "Free to Visit",
+        "Designed by a Master",
+        "César Joly"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0926fd1d-5182-58c9-8c27-a6310504c1da",
+      "createdAt": "2026-10-23",
+      "title": "Notre-Dame-de-la-Treille Cathedral | Cathédrale Notre-Dame-de-la-Treille",
+      "shortDescription": "The first stone of this cathedral was laid in 1854, and the front you're looking at was finished in 1999, which makes it a building that took…",
+      "longDescription": "The first stone of this cathedral was laid in 1854, and the front you're looking at was finished in 1999, which makes it a building that took very nearly a hundred and fifty years to complete.\n\nTake the body of the church first, which is neo-Gothic, designed by Charles Leroy in a nineteenth-century spirit of enthusiasm for the Middle Ages. Money kept running out, so the building went up in stages over the following decades, became a cathedral in 1913 when the diocese of Lille was created, and stood for a long time without a proper front at all.",
+      "makerId": "88c4d25c-0e2c-522a-ba1d-e55f60f5ef11",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-notre-dame-de-la-treille_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-notre-dame-de-la-treille_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-notre-dame-de-la-treille_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-notre-dame-de-la-treille_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7025e224-48d3-588e-9164-fedb5db31fb2",
+          "order": 0,
+          "title": "Notre-Dame-de-la-Treille Cathedral | Cathédrale Notre-Dame-de-la-Treille",
+          "caption": "On the raised forecourt, facing the west front and its arch of translucent marble.",
+          "latitude": 50.640323053374985,
+          "longitude": 3.062670268249752,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lil-notre-dame-de-la-treille.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-notre-dame-de-la-treille_hero.webp",
+          "transcriptText": "The first stone of this cathedral was laid in 1854, and the front you're looking at was finished in 1999, which makes it a building that took very nearly a hundred and fifty years to complete.\n\nThe square forecourt around you sits on raised ground, and that's no accident, because this is the old castle mound where the counts of Flanders once kept their stronghold. Face the main entrance and the west front is the startling part, because its tall, pointed central arch is filled with pale, translucent stone that looks nothing like the older walls behind it.\n\nTake the body of the church first, which is neo-Gothic, designed by Charles Leroy in a nineteenth-century spirit of enthusiasm for the Middle Ages. Money kept running out, so the building went up in stages over the following decades, became a cathedral in 1913 when the diocese of Lille was created, and stood for a long time without a proper front at all.\n\nThat front was designed by Pierre-Louis Carlier, with the engineer Peter Rice and the artist Ladislas Kijno, who made the rose window, and the central arch, around thirty metres high, is clad in a hundred and ten panels of Portuguese marble, cut so thin that light passes through them, while the doors below were sculpted by Georges Jeanclos.\n\nAs for the name, a treille is a trellis, and it refers to a statue of the Virgin, venerated here since the Middle Ages, which once stood inside a gilded wooden lattice.\n\nRather than fake a medieval front to match, the builders finished it honestly in the language of their own time, so the seam between centuries is left in full view and the long wait becomes part of the story the building tells.\n\nGo inside on a bright day and turn round to face the entrance, because from within, that marble glows like a lantern, and the crypt below holds a collection of modern sacred art."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.640323053374985,
+      "centroidLongitude": 3.062670268249752,
+      "city": "Lille",
+      "country": "France",
+      "relatedTourIds": [
+        "89b99107-9d86-509c-9cf6-56bd7f756471",
+        "eb336221-bd19-534d-9fea-ceefe48d568f",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "98f0406d-f7fa-531f-8db0-540bcb932621",
+        "eef8a099-2f7a-5883-9c02-35c0e1836bbd",
+        "7f755582-1524-5ed5-9215-2a0d7b044fc3"
+      ],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Architecture",
+        "Gothic",
+        "Contemporary",
+        "Engineering",
+        "Iconic Landmark",
+        "Free to Visit",
+        "Designed by a Master",
+        "Charles Leroy",
+        "Pierre-Louis Carlier"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "eb336221-bd19-534d-9fea-ceefe48d568f",
+      "createdAt": "2026-10-23",
+      "title": "Palace of Fine Arts | Palais des Beaux-Arts de Lille",
+      "shortDescription": "This museum owes its existence to the French Revolution, since in 1801 a government decree shared out confiscated works of art among fifteen…",
+      "longDescription": "This museum owes its existence to the French Revolution, since in 1801 a government decree shared out confiscated works of art among fifteen cities, and Lille was one of them.\n\nThe palace itself was put up between 1885 and 1892 by the architects Édouard Bérard and Fernand Delmas, at a time when cities wanted their museums to look like palaces. The collection that fills it now runs to more than seventy thousand objects, from Raphael and Donatello through to Picasso, making it one of the largest art collections in France outside Paris.",
+      "makerId": "88c4d25c-0e2c-522a-ba1d-e55f60f5ef11",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-palais-des-beaux-arts_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-palais-des-beaux-arts_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-palais-des-beaux-arts_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-palais-des-beaux-arts_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-palais-des-beaux-arts_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8c4c6bbc-4566-5e54-bfba-6648c6e6c120",
+          "order": 0,
+          "title": "Palace of Fine Arts | Palais des Beaux-Arts de Lille",
+          "caption": "On Place de la République, facing the museum on its southern side, with the prefecture behind you.",
+          "latitude": 50.630596865005906,
+          "longitude": 3.0627820682491906,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lil-palais-des-beaux-arts.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-palais-des-beaux-arts_hero.webp",
+          "transcriptText": "This museum owes its existence to the French Revolution, since in 1801 a government decree shared out confiscated works of art among fifteen cities, and Lille was one of them.\n\nPlace de la République opens out around you, and the grand stone palace on its southern side, all columns and carved decoration, is the Palais des Beaux-Arts. If you turn round, the building facing it across the square is the prefecture, the seat of the state in the region.\n\nThe palace itself was put up between 1885 and 1892 by the architects Édouard Bérard and Fernand Delmas, at a time when cities wanted their museums to look like palaces. The collection that fills it now runs to more than seventy thousand objects, from Raphael and Donatello through to Picasso, making it one of the largest art collections in France outside Paris.\n\nBehind and beneath it is another story, since between 1991 and 1997 the architects Jean-Marc Ibos and Myrto Vitart reworked the whole place, clearing out a 1970s extension and adding a glass building at the back, covered in a fine silver dot pattern, so that the old palace is reflected in it like an image made of tiny points.\n\nThe best of it, though, is underground, in a room dug out during that renovation to hold the plans-reliefs, scale models of fortified towns made from 1668 onwards for military planners, at one six-hundredth of real size, showing six French towns, seven Belgian ones and one in the Netherlands, built from wood, painted card, silk and sand.\n\nThose models were made for generals planning defences and sieges, and the museum has turned them into one of its most absorbing rooms, which seems a fitting fate for a collection that began with art confiscated in the Revolution and handed to the public.\n\nHead inside and down to that basement first, and lean in close to the models, where whole towns of tiny houses, gardens and star-shaped ramparts are laid out in astonishing detail."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.630596865005906,
+      "centroidLongitude": 3.0627820682491906,
+      "city": "Lille",
+      "country": "France",
+      "relatedTourIds": [
+        "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50",
+        "89b99107-9d86-509c-9cf6-56bd7f756471",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b",
+        "0926fd1d-5182-58c9-8c27-a6310504c1da",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "5230cc32-e47b-51e7-a81c-ad53a8b3a3fa",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "History",
+        "War",
+        "Beaux-Arts",
+        "Contemporary",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Édouard Bérard",
+        "Fernand Delmas",
+        "Jean-Marc Ibos",
+        "Myrto Vitart"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+      "createdAt": "2026-10-23",
+      "title": "Place aux Oignons",
+      "shortDescription": "Despite the name, nobody ever sold onions here, because the Place aux Oignons takes its title from a medieval mishearing: the Latin word for the…",
+      "longDescription": "Despite the name, nobody ever sold onions here, because the Place aux Oignons takes its title from a medieval mishearing: the Latin word for the lord's keep, the tower of the counts of Flanders that once stood nearby, slid over the centuries into something that sounded like the French for onions.\n\nThe houses date mostly from the late seventeenth and early eighteenth centuries and are plainer than the showy Flemish fronts elsewhere in the old town. They were built for sayetteurs, weavers of a light woollen cloth, who set up their looms in the attics and in the cellars, where the damp air helped keep the threads supple.",
+      "makerId": "88c4d25c-0e2c-522a-ba1d-e55f60f5ef11",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-place-aux-oignons_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "aac1881e-4cb0-59c4-a8f7-706a453577b3",
+          "order": 0,
+          "title": "Place aux Oignons",
+          "caption": "In the small cobbled square in the Vieux-Lille, ringed by old weavers’ houses, near the cathedral.",
+          "latitude": 50.641079025164366,
+          "longitude": 3.061535425921906,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lil-place-aux-oignons.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-place-aux-oignons_hero.webp",
+          "transcriptText": "Despite the name, nobody ever sold onions here, because the Place aux Oignons takes its title from a medieval mishearing: the Latin word for the lord's keep, the tower of the counts of Flanders that once stood nearby, slid over the centuries into something that sounded like the French for onions.\n\nThis small, cobbled square is the whole of it, tucked into the oldest part of Lille just a short walk from the cathedral, with restaurant terraces spilling across the stones and a ring of brick houses standing shoulder to shoulder around you.\n\nThe houses date mostly from the late seventeenth and early eighteenth centuries and are plainer than the showy Flemish fronts elsewhere in the old town. They were built for sayetteurs, weavers of a light woollen cloth, who set up their looms in the attics and in the cellars, where the damp air helped keep the threads supple.\n\nPicture the square a century ago, when the weaving trade had gone and factory workers had crowded into the same buildings. By the middle of the twentieth century this was one of the poorest corners of the city, with courtyards where six or seven families might share a single tap and a single toilet.\n\nThe turnaround came slowly, since the square was brought into Lille's protected historic district in 1967, work began in the 1970s under the mayor Pierre Mauroy, and between 1985 and 1990 the houses were carefully rebuilt to keep their original character rather than being swept away.\n\nThat choice is the story here, because the city could easily have cleared the whole block, and instead it decided that these modest weavers' houses were worth saving, which is why one of Lille's most loved little squares is also one of its humblest.\n\nWhen you've had your fill, follow the lanes back towards Notre-Dame-de-la-Treille, which stands on the very mound where that keep once rose, and see how close together the castle and the onions really were."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.641079025164366,
+      "centroidLongitude": 3.061535425921906,
+      "city": "Lille",
+      "country": "France",
+      "relatedTourIds": [
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "12985eac-ae42-58e7-9a0a-e887c830640a",
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf",
+        "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+        "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50",
+        "89b99107-9d86-509c-9cf6-56bd7f756471"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Public Square",
+        "History",
+        "Architecture",
+        "Hidden Gem",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
+      "createdAt": "2026-10-23",
+      "title": "Restaurant Sébastopol",
+      "shortDescription": "In 1903, with the city's main theatre lost to fire, Lille built itself a stand-in in just a hundred and three days, and the temporary theatre it…",
+      "longDescription": "In 1903, with the city's main theatre lost to fire, Lille built itself a stand-in in just a hundred and three days, and the temporary theatre it put up is still standing on this square more than a century later.\n\nThe theatre sets the scene, and it was designed by Léonce Hainiez, built on an empty plot that had been earmarked for a linen market, and opened on the thirtieth of November 1903 with two thousand seats, a figure since trimmed to about thirteen hundred and fifty for comfort.",
+      "makerId": "88c4d25c-0e2c-522a-ba1d-e55f60f5ef11",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-restaurant-sebastopol_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-restaurant-sebastopol_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-restaurant-sebastopol_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-restaurant-sebastopol_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-restaurant-sebastopol_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-restaurant-sebastopol_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bc0c164c-f99f-55d0-b989-cd278c70362e",
+          "order": 0,
+          "title": "Restaurant Sébastopol",
+          "caption": "On Place Sébastopol, with the theatre on one side and the little restaurant at number one across from it.",
+          "latitude": 50.62900308614834,
+          "longitude": 3.0589895394130275,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lil-restaurant-sebastopol.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-restaurant-sebastopol_hero.webp",
+          "transcriptText": "In 1903, with the city's main theatre lost to fire, Lille built itself a stand-in in just a hundred and three days, and the temporary theatre it put up is still standing on this square more than a century later.\n\nTwo buildings face each other across Place Sébastopol, and you'll want both in view: the Théâtre Sébastopol, the big, broad-fronted hall on the square, and, directly across from it at number one, the small restaurant that borrows its name, the Restaurant Sébastopol.\n\nThe theatre sets the scene, and it was designed by Léonce Hainiez, built on an empty plot that had been earmarked for a linen market, and opened on the thirtieth of November 1903 with two thousand seats, a figure since trimmed to about thirteen hundred and fifty for comfort.\n\nThe restaurant, by contrast, seats only around thirty and has been fully renovated into a warm, modern bistro. The chef, Anthony Dorard, took an unusual road to the stove, having started out as a pharmacy assistant before learning the trade through a series of mentors in eastern France, Lille and Bordeaux.\n\nHis cooking is the draw, because he likes to pair land and sea in ways that shouldn't work and somehow do, so you might find foie gras with cod, or black pudding with turbot. The short menu changes every week, with new dishes arriving each Thursday, and guest artists are regularly invited in.\n\nThere's a nice symmetry in that, because on one side of the square stands a building meant to last a season that has lasted well over a hundred years, and on the other a kitchen that deliberately starts again every week, so permanence and reinvention are facing each other across the cobbles.\n\nOnce you've eaten, the Palais des Beaux-Arts is only a short stroll away on Place de la République, and its basement of model fortified towns makes a fine way to spend an afternoon."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.62900308614834,
+      "centroidLongitude": 3.0589895394130275,
+      "city": "Lille",
+      "country": "France",
+      "relatedTourIds": [
+        "87197947-f2f1-5565-aad8-7575508ea9df",
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf",
+        "89b99107-9d86-509c-9cf6-56bd7f756471",
+        "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50",
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "347dab13-ec7d-5f13-811a-40fdd9c2f9e3"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Performance",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "12985eac-ae42-58e7-9a0a-e887c830640a",
+      "createdAt": "2026-10-23",
+      "title": "Rue de la Clef",
+      "shortDescription": "This is one of the oldest streets in Lille, with a line that may go back to around the year 1000, and its name comes from an old inn sign: the…",
+      "longDescription": "This is one of the oldest streets in Lille, with a line that may go back to around the year 1000, and its name comes from an old inn sign: the Hôtel de la Clef, the Inn of the Key.\n\nLook for the street sign first, which comes with a mosaic in the shape of a key, the work of a street artist who signs as MifaMosa. It's a small, playful nod to the name, and once you've seen it you'll find yourself looking for the key everywhere.",
+      "makerId": "88c4d25c-0e2c-522a-ba1d-e55f60f5ef11",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-rue-de-la-clef_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d01069a9-68b2-5865-9264-f923f268d042",
+          "order": 0,
+          "title": "Rue de la Clef",
+          "caption": "On the narrow cobbled lane between Boulevard Carnot and Place des Patiniers; look for the key mosaic.",
+          "latitude": 50.63903726138731,
+          "longitude": 3.0649425682496623,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lil-rue-de-la-clef.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-rue-de-la-clef_hero.webp",
+          "transcriptText": "This is one of the oldest streets in Lille, with a line that may go back to around the year 1000, and its name comes from an old inn sign: the Hôtel de la Clef, the Inn of the Key.\n\nRue de la Clef runs between Boulevard Carnot and the little Place des Patiniers, and wherever you've joined it, the thing to notice first is the shape of it, a narrow cobbled lane of small shopfronts and cafés with flowers and greenery spilling from the windows.\n\nLook for the street sign first, which comes with a mosaic in the shape of a key, the work of a street artist who signs as MifaMosa. It's a small, playful nod to the name, and once you've seen it you'll find yourself looking for the key everywhere.\n\nThe boulevard tells its own story, since Boulevard Carnot was cut through the old town from 1907, replacing a narrow street called the Rue des Oyers, and it's a reminder that much of medieval Lille was cleared in the name of progress, while this lane was simply left to carry on along its old course.\n\nThe name had its own close call, too, because during the Revolution the street was briefly renamed Rue Marat, after one of the radical leaders of the day, before quietly going back to being the street of the key.\n\nNot so long ago this was a stretch that people tended to avoid, and today it's one of the favourite strolls in the old town, lined with independent fashion boutiques and a café or two along the way.\n\nWhat survives here is less a set of famous buildings than the route itself, a path that people have been walking for close to a thousand years, which has outlasted inns, revolutionary renamings and the boulevards that swept away its neighbours.\n\nAt the far end, Place des Patiniers leads on into Rue des Chats-Bossus, the street of the hunchbacked cats, a name that practically begs to be explored."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.63903726138731,
+      "centroidLongitude": 3.0649425682496623,
+      "city": "Lille",
+      "country": "France",
+      "relatedTourIds": [
+        "ec4fa992-fca8-5197-9361-587aa53b6fbf",
+        "3f5e8a1d-db2b-5f01-89cf-ef95c22bba50",
+        "c2696f04-31dc-526d-b8d3-ad272b0615a0",
+        "4feadb69-9ce2-566a-92f1-4cc76882304a",
+        "e9d931ed-b399-5acd-8876-c074e47d0f6b",
+        "5230cc32-e47b-51e7-a81c-ad53a8b3a3fa",
+        "4a89091e-b6e7-5395-968d-3dbef6f63daf",
+        "87197947-f2f1-5565-aad8-7575508ea9df"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "District",
+        "History",
+        "Fashion",
+        "Commerce",
+        "Public Art",
+        "Hidden Gem",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "664156fb-32e9-58aa-a233-4caeeb00f02e",
+      "createdAt": "2026-10-23",
+      "title": "Villa Cavrois",
+      "shortDescription": "Air, light, work, sport, hygiene, comfort and efficiency were the principles behind this house, and you can see most of them at once from where…",
+      "longDescription": "Air, light, work, sport, hygiene, comfort and efficiency were the principles behind this house, and you can see most of them at once from where you're standing.\n\nThe house was designed by Robert Mallet-Stevens and finished in 1932 for Paul Cavrois, a textile industrialist who needed room for his seven children and the household staff. For its day it was remarkably up to date, with electric light in every room, radios, telephones between rooms, plentiful hot water and a twenty-seven-metre swimming pool.",
+      "makerId": "88c4d25c-0e2c-522a-ba1d-e55f60f5ef11",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-villa-cavrois_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-villa-cavrois_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-villa-cavrois_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-villa-cavrois_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-villa-cavrois_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-villa-cavrois_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-villa-cavrois_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c34d8cb8-9c04-58d0-b613-b7002b0cd60e",
+          "order": 0,
+          "title": "Villa Cavrois",
+          "caption": "On the garden side, beside the long reflecting pool, with the whole yellow-brick house across the water.",
+          "latitude": 50.66732941329858,
+          "longitude": 3.1639932761424183,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lil-villa-cavrois.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lil-villa-cavrois_hero.webp",
+          "transcriptText": "Air, light, work, sport, hygiene, comfort and efficiency were the principles behind this house, and you can see most of them at once from where you're standing.\n\nThe long, low villa of yellow brick is the Villa Cavrois, and the best place to take it in is from the garden side, beside the long reflecting pool, where the whole sixty-metre length of the house lies across the water in one horizontal line.\n\nThe house was designed by Robert Mallet-Stevens and finished in 1932 for Paul Cavrois, a textile industrialist who needed room for his seven children and the household staff. For its day it was remarkably up to date, with electric light in every room, radios, telephones between rooms, plentiful hot water and a twenty-seven-metre swimming pool.\n\nThe plan is the surprise, because for all its modern materials the villa borrows the layout of a French château, with two symmetrical wings either side of a central hall, so it's a very traditional idea of a grand family home dressed in the language of the future.\n\nDown at the water, the reflecting pool, seventy-two metres long, had disappeared completely by the time the state stepped in, and it was only through archaeological digging in the garden that it could be found and rebuilt.\n\nThat rescue came late, because German troops had used the villa as barracks in the Second World War, and after its sale in 1985 it fell into serious disrepair and faced the threat of demolition. It was protected in 1990, bought by the state in 2001, and reopened in June 2015 after twelve years of restoration costing around twenty-three million euros.\n\nSo the house that looks so serenely certain of itself very nearly vanished, and the calm you see in that long reflection was hard won.\n\nInside, tablets fill the gaps left by lost furniture with digital reconstructions, so carry one round as you walk through, comparing what survived with what had to be imagined back."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.66732941329858,
+      "centroidLongitude": 3.1639932761424183,
+      "city": "Croix",
+      "country": "France",
+      "relatedTourIds": [
+        "e01770af-347d-5f43-a63e-1fa97ce3551d",
+        "70a01d74-8edf-5f78-9d8b-a05850c0299a",
+        "89443016-9aea-5422-a33a-be72636e89f1",
+        "b4f87483-ebae-567e-896f-b7b4042ca34a",
+        "6CD8B760-BD43-567C-97AE-E626351787F4",
+        "12FAAD05-1917-5E7A-B53E-98FCA2D83C70",
+        "AFE37C10-3F2B-4ACF-A781-EBCC3A9A4563",
+        "8587bca7-d0e8-55fe-a2c4-69fc3cf96cc7"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Modernist",
+        "War",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Robert Mallet-Stevens"
       ],
       "priceUSD": 0
     }
