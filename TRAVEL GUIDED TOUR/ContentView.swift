@@ -47,6 +47,15 @@ struct ContentView: View {
     /// still render. When present and not installed, the bottom module is drawn
     /// inline as a fallback — see the render site in `body`.
     @Environment(BottomModuleWindowController.self) private var bottomModuleWindow: BottomModuleWindowController?
+    /// Optional so previews and tests still render. Present on the real app.
+    @Environment(OnboardingCoordinator.self) private var onboarding: OnboardingCoordinator?
+    @Environment(CoachMarkCenter.self) private var coachMarks: CoachMarkCenter?
+
+    /// From the first onboarding card to the last coach-mark stop. The
+    /// location prompt waits for this, so it never lands on a card or a stop.
+    private var firstRunIsActive: Bool {
+        (onboarding?.isCovering ?? false) || (coachMarks?.isRunning ?? false)
+    }
 
     /// `.onAppear` fires every time the view re-attaches (tab switch,
     /// returning from background, etc.). Request location permission
@@ -198,7 +207,8 @@ struct ContentView: View {
             if let bottomModuleWindow,
                BottomModuleWindowController.rendersInlineFallback(
                    isShowingBars: bottomModuleWindow.isShowingBars,
-                   withdrawnByScreen: appShared.hidesBottomModule,
+                   withdrawnByScreen: appShared.hidesBottomModule
+                       || (onboarding?.holdsBottomModule ?? false),
                    isSplashVisible: launchState?.isSplashVisible ?? false
                ) {
                 BottomModuleRoot()
@@ -220,7 +230,26 @@ struct ContentView: View {
         // stall the gate.
         .onChange(of: launchState?.isSplashVisible ?? false) { _, splashVisible in
             guard !splashVisible else { return }
+            // 🔴 Withheld through first run. `willPresentWelcome` is resolved in
+            // App `init`, NOT read live: this `.onChange` fires before
+            // `OnboardingCoordinator.begin()` does, so a live `isCovering`
+            // check would still let the system alert land over the first card.
+            guard onboarding?.willPresentWelcome != true else { return }
             requestLocationPermissionIfNeeded()
+        }
+        // …and asked for once first run is over — after the navigation
+        // tour's last stop, not when onboarding closes, because that is the
+        // moment the tour's first stop appears.
+        .onChange(of: firstRunIsActive) { _, active in
+            guard !active else { return }
+            requestLocationPermissionIfNeeded()
+        }
+        // The navigation tour explains Home as a fresh launch shows it — the
+        // drawer at mid-detent — however it was left (owner, 2026-10-06: a
+        // replay from Settings found it collapsed).
+        .onChange(of: coachMarks?.isRunning ?? false) { _, running in
+            guard running else { return }
+            withAnimation(.easeInOut(duration: 0.25)) { homeSheetDetent = .medium }
         }
 
         .onAppear {
@@ -587,7 +616,9 @@ struct ContentView: View {
                 // when the drawer is fully expanded. AtlasSpacing.sm
                 // is a small visual buffer between the chip row's
                 // bottom edge and the drawer's top edge.
-                topReservedHeight: AtlasSpacing.searchAndChipsBlockHeight + AtlasSpacing.sm
+                topReservedHeight: AtlasSpacing.searchAndChipsBlockHeight + AtlasSpacing.sm,
+                // Anchored on the panel inside the sheet — see `coachMark`.
+                coachMark: .drawer
             ) {
                 HomeDrawerContent(
                     sheetDetent: $homeSheetDetent
