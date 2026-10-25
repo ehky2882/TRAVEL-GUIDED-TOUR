@@ -90,6 +90,7 @@ final class CoachMarkCenter {
         filterRowNudge = 0
         listNudge = .zero
         if drawerDemoDetent != nil { drawerDemoDetent = .medium }
+        if demoTab != nil { demoTab = .home }
         store.update { state in
             for mark in CoachMark.tour { state.seenCoachMarks.insert(mark.rawValue) }
         }
@@ -141,6 +142,11 @@ final class CoachMarkCenter {
     /// minimized"). `ContentView` applies it to the drawer's detent; `nil`
     /// means hands off.
     var drawerDemoDetent: BottomSheetDetent?
+
+    /// The bar stop's demonstration taps through the REAL tabs — owner,
+    /// 2026-10-25: "actually show the different tabs pages". The App applies
+    /// it to the selected tab; `nil` means hands off. Ends on Home.
+    var demoTab: AtlasTab?
 
     func setChipFrame(_ group: FilterGroup, _ frame: CGRect) {
         guard frame.width > 0, frame.height > 0,

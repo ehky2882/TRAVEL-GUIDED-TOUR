@@ -37,6 +37,7 @@ struct CoachMarkOverlay: View {
                               nudge: { center.filterRowNudge = $0 },
                               listNudge: { center.listNudge = $0 },
                               setDrawer: { center.drawerDemoDetent = $0 },
+                              setTab: { center.demoTab = $0 },
                               drawerFrame: center.anchors[.drawer],
                               barFrame: center.anchors[.tabBar],
                               advance: { center.advance() },
@@ -61,6 +62,8 @@ private struct CoachMarkStop: View {
     let listNudge: (CGSize) -> Void
     /// Lowers / raises the real drawer for the map demonstration.
     let setDrawer: (BottomSheetDetent?) -> Void
+    /// Switches the real tab for the bar demonstration.
+    let setTab: (AtlasTab?) -> Void
     let drawerFrame: CGRect?
     let barFrame: CGRect?
     /// The map's bubble stays where it opened while the drawer drops beneath
@@ -82,7 +85,7 @@ private struct CoachMarkStop: View {
                     .animation(.easeInOut(duration: 0.7), value: spot)
                 demo(spot: spot)
                     .frame(width: geo.size.width, height: geo.size.height)
-                bubbleColumn(spot: mark == .map ? (mapBubbleSpot ?? spot) : spot, size: geo.size)
+                bubbleColumn(spot: movesDrawer ? (mapBubbleSpot ?? spot) : spot, size: geo.size)
             }
             // The map stop remembers where things were when it opened: its
             // demonstration moves the drawer, and the bubble and finger must
@@ -160,8 +163,12 @@ private struct CoachMarkStop: View {
 
     // MARK: - The dozent and its bubble
 
+    /// The stops whose demonstration moves the real drawer, so the bubble
+    /// and the finger hold the positions the stop opened with.
+    private var movesDrawer: Bool { mark == .map || mark == .drawer }
+
     private func rememberMapStart(_ spot: CGRect?) {
-        guard mark == .map else { return }
+        guard movesDrawer else { return }
         if mapBubbleSpot == nil { mapBubbleSpot = spot }
         if mapStartDrawer == nil { mapStartDrawer = drawerFrame }
     }
@@ -173,7 +180,11 @@ private struct CoachMarkStop: View {
         case .filters where !demoChips.isEmpty:
             if let spot { CoachMarkFiltersDemo(chips: demoChips, row: spot, nudge: nudge) }
         case .drawer:
-            if let spot { CoachMarkDrawerDemo(spot: spot, nudge: listNudge) }
+            if let start = mapBubbleSpot ?? spot, let bar = barFrame {
+                CoachMarkDrawerDemo(spot: start, bar: bar, nudge: listNudge, setDrawer: setDrawer)
+            }
+        case .tabBar:
+            if let spot { CoachMarkBarDemo(bar: spot, setTab: setTab) }
         case .map:
             if let drawer = mapStartDrawer, let bar = barFrame {
                 CoachMarkMapDemo(drawer: drawer, bar: bar, setDrawer: setDrawer)

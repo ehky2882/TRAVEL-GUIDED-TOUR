@@ -401,6 +401,10 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     if running { appShared.selectedTab = .home }
                     syncBottomModuleVisibility()
                 }
+                // The bar stop's demonstration taps through the real tabs.
+                .onChange(of: coachMarks.demoTab) { _, tab in
+                    if let tab { appShared.selectedTab = tab }
+                }
                 .onChange(of: firstRunIsActive) { _, active in
                     guard !active, let link = pendingDeepLink else { return }
                     pendingDeepLink = nil

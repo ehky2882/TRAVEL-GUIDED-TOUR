@@ -156,10 +156,15 @@ private struct DemoFinger: View {
 /// by an offset (`CoachMarkCenter.listNudge`) — owner, 2026-10-25: "can you
 /// actually scroll sideways on the carousel and up the content?"
 struct CoachMarkDrawerDemo: View {
-    /// The lit drawer.
+    /// The lit drawer, as it was when the stop opened (mid-height).
     let spot: CGRect
+    /// The bar, for where the drawer's smallest height sits.
+    let bar: CGRect
     /// Slides the real first carousel (`width`) and list (`height`).
     let nudge: (CGSize) -> Void
+    /// Moves the REAL drawer between its heights — owner, 2026-10-25: "this
+    /// should actually show the ability for the drawer to go up and down".
+    let setDrawer: (BottomSheetDetent?) -> Void
     /// How far the handle finger travels each way.
     static let travel: CGFloat = 56
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
@@ -175,9 +180,19 @@ struct CoachMarkDrawerDemo: View {
                 .allowsHitTesting(false)
                 .accessibilityHidden(true)
                 .task { await run() }
-                .onDisappear { nudge(.zero) }
+                .onDisappear {
+                    nudge(.zero)
+                    setDrawer(.medium)
+                    setDrawer(nil)
+                }
         }
     }
+
+    /// How far the handle travels to the drawer's full and smallest heights.
+    /// Full stops just under the filter row (`topReservedHeight` in
+    /// `ContentView`); smallest shows 80pt above the bar (its peekHeight).
+    private var upTravel: CGFloat { -max(0, spot.minY - 180) }
+    private var downTravel: CGFloat { max(0, (bar.minY - 80) - spot.minY) }
 
     private func move(_ to: CGPoint, _ seconds: Double) {
         withAnimation(.easeInOut(duration: seconds)) { finger = to }
@@ -188,18 +203,18 @@ struct CoachMarkDrawerDemo: View {
     }
 
     private func run() async {
-        let travel = Self.travel
         // Where the first carousel's cards sit, and the list below them.
         let cards: CGFloat = min(170, spot.height * 0.35)
         while !Task.isCancelled {
-            // 1 · The handle: up for the full list, down for the map.
+            // 1 · The handle: the real drawer goes up for the full list,
+            // down for the map, and back to the middle.
             finger = .zero
             carriesHandle = true
             withAnimation(.easeOut(duration: 0.25)) { visible = true }
             await pause(350)
-            move(CGPoint(x: 0, y: -travel), 0.7);  await pause(1_000)
-            move(CGPoint(x: 0, y: travel), 0.9);   await pause(1_200)
-            move(.zero, 0.5);                      await pause(600)
+            move(CGPoint(x: 0, y: upTravel), 0.7);   setDrawer(.large);  await pause(1_300)
+            move(CGPoint(x: 0, y: downTravel), 0.7); setDrawer(.peek);   await pause(1_300)
+            move(.zero, 0.7);                        setDrawer(.medium); await pause(900)
             withAnimation(.easeIn(duration: 0.2)) { visible = false }
             await pause(400)
 
@@ -286,6 +301,79 @@ struct CoachMarkMapDemo: View {
             // And back up.
             withAnimation(.easeInOut(duration: 0.7)) { down = false }
             setDrawer(.medium)
+            try? await Task.sleep(for: .milliseconds(900))
+            withAnimation(.easeIn(duration: 0.25)) { visible = false }
+            try? await Task.sleep(for: .milliseconds(900))
+        }
+    }
+}
+
+// MARK: - The bar
+
+/// The bar stop taps Library, then Me, then Home — and the real pages switch
+/// underneath (owner, 2026-10-25: "actually show the different tabs pages").
+/// Always ends on Home, where the rest of the tour points.
+struct CoachMarkBarDemo: View {
+    /// The lit bottom module: mini-player above, three tabs below.
+    let bar: CGRect
+    let setTab: (AtlasTab?) -> Void
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var at: AtlasTab = .home
+    @State private var visible = false
+    @State private var rippleOut = false
+
+    /// Where a tab's icon sits: three equal columns along the bottom row.
+    private func point(_ tab: AtlasTab) -> CGPoint {
+        let column: CGFloat = switch tab {
+        case .home: 0.5
+        case .library: 1.5
+        case .me: 2.5
+        }
+        return CGPoint(x: bar.minX + bar.width * column / 3, y: bar.maxY - 50)
+    }
+
+    var body: some View {
+        if !reduceMotion {
+            ZStack {
+                Circle()
+                    .stroke(AtlasColors.brass, lineWidth: 2)
+                    .frame(width: 34, height: 34)
+                    .scaleEffect(rippleOut ? 1.8 : 0.8)
+                    .opacity(rippleOut ? 0 : 0.9)
+                DemoFinger()
+            }
+            .position(point(at))
+            .opacity(visible ? 1 : 0)
+            .allowsHitTesting(false)
+            .accessibilityHidden(true)
+            .task { await run() }
+            .onDisappear {
+                setTab(.home)
+                setTab(nil)
+            }
+        }
+    }
+
+    private func tap(_ tab: AtlasTab) async {
+        withAnimation(.easeInOut(duration: 0.5)) { at = tab }
+        try? await Task.sleep(for: .milliseconds(550))
+        rippleOut = false
+        try? await Task.sleep(for: .milliseconds(30))
+        withAnimation(.easeOut(duration: 0.4)) { rippleOut = true }
+        setTab(tab)
+    }
+
+    private func run() async {
+        while !Task.isCancelled {
+            at = .home
+            try? await Task.sleep(for: .milliseconds(700))
+            withAnimation(.easeOut(duration: 0.25)) { visible = true }
+            try? await Task.sleep(for: .milliseconds(300))
+            await tap(.library)
+            try? await Task.sleep(for: .milliseconds(1_500))
+            await tap(.me)
+            try? await Task.sleep(for: .milliseconds(1_500))
+            await tap(.home)
             try? await Task.sleep(for: .milliseconds(900))
             withAnimation(.easeIn(duration: 0.25)) { visible = false }
             try? await Task.sleep(for: .milliseconds(900))
