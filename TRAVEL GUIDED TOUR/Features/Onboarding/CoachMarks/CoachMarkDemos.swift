@@ -7,7 +7,10 @@
 //  operate?"):
 //
 //  · Filters — a tap lands on one chip, then a second, and both read as on:
-//    they stack.
+//    they stack. Then a swipe slides the row sideways to show there are more
+//    (owner, 2026-10-25: "add to the animation that it is sideways-scrollable").
+//    That swipe moves the REAL row — by an offset only (`filterRowNudge`), so
+//    no filter and no scroll position changes.
 //  · The list — a finger drags the handle up, then down: three heights.
 //
 //  🔴 Both are DRAWN over the spotlight, in the overlay. Neither touches the
@@ -26,12 +29,22 @@ import SwiftUI
 struct CoachMarkFiltersDemo: View {
     /// The first two filter chips, where they actually sit on screen.
     let chips: [(title: String, frame: CGRect)]
+    /// The lit filter row.
+    let row: CGRect
+    /// Slides the real row by this much (0 = at rest).
+    let nudge: (CGFloat) -> Void
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     /// How many chips currently read as on.
     @State private var on = 0
     @State private var tapIndex: Int?
     @State private var rippleOut = false
+    /// The swipe's finger: shown, and how far it has travelled left.
+    @State private var swiping = false
+    @State private var swipeX: CGFloat = 0
+
+    /// How far the swipe slides the row.
+    private static let swipeTravel: CGFloat = 150
 
     var body: some View {
         ZStack(alignment: .topLeading) {
@@ -57,10 +70,19 @@ struct CoachMarkFiltersDemo: View {
                     .opacity(rippleOut ? 0 : 0.95)
                     .position(x: chips[i].frame.midX, y: chips[i].frame.midY)
             }
+            Circle()
+                .fill(AtlasColors.brass.opacity(0.85))
+                .frame(width: 32, height: 32)
+                .overlay(Circle().stroke(Color.white, lineWidth: 2))
+                .shadow(color: .black.opacity(0.35), radius: 6, y: 2)
+                .position(x: row.maxX - 70 + swipeX, y: row.midY)
+                .opacity(swiping ? 1 : 0)
         }
         .allowsHitTesting(false)
         .accessibilityHidden(true)
         .task { await run() }
+        // Never leave the real row slid over when the stop ends.
+        .onDisappear { nudge(0) }
     }
 
     private func run() async {
@@ -83,61 +105,190 @@ struct CoachMarkFiltersDemo: View {
             withAnimation(.easeInOut(duration: 0.35)) { on = 0 }
             tapIndex = nil
             try? await Task.sleep(for: .milliseconds(450))
+
+            // Sideways: the finger slides left and the row goes with it.
+            let travel = Self.swipeTravel
+            withAnimation(.easeOut(duration: 0.2)) { swiping = true }
+            try? await Task.sleep(for: .milliseconds(250))
+            withAnimation(.easeInOut(duration: 0.8)) {
+                swipeX = -travel
+                nudge(-travel)
+            }
+            try? await Task.sleep(for: .milliseconds(1_300))
+            withAnimation(.easeInOut(duration: 0.6)) {
+                swipeX = 0
+                nudge(0)
+            }
+            withAnimation(.easeIn(duration: 0.3).delay(0.3)) { swiping = false }
+            try? await Task.sleep(for: .milliseconds(900))
+        }
+    }
+}
+
+// MARK: - A finger
+
+/// The brass finger every demonstration uses. Brass, not white: the drawer is
+/// white in light mode and a white finger vanished into it.
+private struct DemoFinger: View {
+    var carriesHandle = false
+
+    var body: some View {
+        ZStack {
+            if carriesHandle {
+                Capsule()
+                    .fill(AtlasColors.brass)
+                    .frame(width: 40, height: 5)
+                    .offset(y: -24)
+            }
+            Circle()
+                .fill(AtlasColors.brass.opacity(0.85))
+                .frame(width: 32, height: 32)
+                .overlay(Circle().stroke(Color.white, lineWidth: 2))
+                .shadow(color: .black.opacity(0.35), radius: 6, y: 2)
         }
     }
 }
 
 // MARK: - The list
 
+/// Three things the list does: drag its handle (three heights), swipe a
+/// carousel sideways, scroll the list up. The last two move the REAL content
+/// by an offset (`CoachMarkCenter.listNudge`) — owner, 2026-10-25: "can you
+/// actually scroll sideways on the carousel and up the content?"
 struct CoachMarkDrawerDemo: View {
     /// The lit drawer.
     let spot: CGRect
-    /// How far the finger travels each way.
+    /// Slides the real first carousel (`width`) and list (`height`).
+    let nudge: (CGSize) -> Void
+    /// How far the handle finger travels each way.
     static let travel: CGFloat = 56
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
-    @State private var offset: CGFloat = 0
+    @State private var finger: CGPoint = .zero
+    @State private var carriesHandle = true
     @State private var visible = false
 
     var body: some View {
         if !reduceMotion {
-            ZStack {
-                // A ghost of the handle, carried by the finger. Brass, not
-                // white: the drawer is white in light mode and a white finger
-                // vanished into it.
-                Capsule()
-                    .fill(AtlasColors.brass)
-                    .frame(width: 40, height: 5)
-                    .offset(y: -24)
-                Circle()
-                    .fill(AtlasColors.brass.opacity(0.85))
-                    .frame(width: 32, height: 32)
-                    .overlay(Circle().stroke(Color.white, lineWidth: 2))
-                    .shadow(color: .black.opacity(0.35), radius: 6, y: 2)
-            }
-            .position(x: spot.midX, y: spot.minY + 30)
-            .offset(y: offset)
-            .opacity(visible ? 1 : 0)
-            .allowsHitTesting(false)
-            .accessibilityHidden(true)
-            .task { await run() }
+            DemoFinger(carriesHandle: carriesHandle)
+                .position(x: spot.midX + finger.x, y: spot.minY + 30 + finger.y)
+                .opacity(visible ? 1 : 0)
+                .allowsHitTesting(false)
+                .accessibilityHidden(true)
+                .task { await run() }
+                .onDisappear { nudge(.zero) }
         }
+    }
+
+    private func move(_ to: CGPoint, _ seconds: Double) {
+        withAnimation(.easeInOut(duration: seconds)) { finger = to }
+    }
+
+    private func pause(_ ms: Int) async {
+        try? await Task.sleep(for: .milliseconds(ms))
     }
 
     private func run() async {
         let travel = Self.travel
+        // Where the first carousel's cards sit, and the list below them.
+        let cards: CGFloat = min(170, spot.height * 0.35)
         while !Task.isCancelled {
+            // 1 · The handle: up for the full list, down for the map.
+            finger = .zero
+            carriesHandle = true
+            withAnimation(.easeOut(duration: 0.25)) { visible = true }
+            await pause(350)
+            move(CGPoint(x: 0, y: -travel), 0.7);  await pause(1_000)
+            move(CGPoint(x: 0, y: travel), 0.9);   await pause(1_200)
+            move(.zero, 0.5);                      await pause(600)
+            withAnimation(.easeIn(duration: 0.2)) { visible = false }
+            await pause(400)
+
+            // 2 · A carousel scrolls sideways.
+            carriesHandle = false
+            finger = CGPoint(x: 90, y: cards)
+            withAnimation(.easeOut(duration: 0.2)) { visible = true }
+            await pause(300)
+            withAnimation(.easeInOut(duration: 0.8)) {
+                finger = CGPoint(x: -90, y: cards)
+                nudge(CGSize(width: -180, height: 0))
+            }
+            await pause(1_200)
+            withAnimation(.easeInOut(duration: 0.6)) {
+                finger = CGPoint(x: 90, y: cards)
+                nudge(.zero)
+            }
+            await pause(700)
+            withAnimation(.easeIn(duration: 0.2)) { visible = false }
+            await pause(400)
+
+            // 3 · The list scrolls up.
+            finger = CGPoint(x: 0, y: cards + 120)
+            withAnimation(.easeOut(duration: 0.2)) { visible = true }
+            await pause(300)
+            withAnimation(.easeInOut(duration: 0.8)) {
+                finger = CGPoint(x: 0, y: cards - 20)
+                nudge(CGSize(width: 0, height: -140))
+            }
+            await pause(1_200)
+            withAnimation(.easeInOut(duration: 0.6)) {
+                finger = CGPoint(x: 0, y: cards + 120)
+                nudge(.zero)
+            }
+            await pause(700)
+            withAnimation(.easeIn(duration: 0.2)) { visible = false }
+            await pause(900)
+        }
+    }
+}
+
+// MARK: - The map
+
+/// The map stop lowers the REAL drawer to its smallest and raises it again —
+/// owner, 2026-10-25: "can you actually show that the drawer can be
+/// minimized?" A finger rides the handle down and back.
+struct CoachMarkMapDemo: View {
+    /// Where the drawer and the bar sit when the stop opens.
+    let drawer: CGRect
+    let bar: CGRect
+    /// Sets the real drawer's detent; `nil` hands it back.
+    let setDrawer: (BottomSheetDetent?) -> Void
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var down = false
+    @State private var visible = false
+
+    /// The peeking drawer shows 80pt above the bar (`ContentView`'s peekHeight).
+    private var drop: CGFloat { max(0, (bar.minY - 80) - drawer.minY) }
+
+    var body: some View {
+        if !reduceMotion {
+            DemoFinger(carriesHandle: true)
+                .position(x: drawer.midX, y: drawer.minY + 30 + (down ? drop : 0))
+                .opacity(visible ? 1 : 0)
+                .allowsHitTesting(false)
+                .accessibilityHidden(true)
+                .task { await run() }
+                .onDisappear {
+                    setDrawer(.medium)
+                    setDrawer(nil)
+                }
+        }
+    }
+
+    private func run() async {
+        while !Task.isCancelled {
+            try? await Task.sleep(for: .milliseconds(900))
             withAnimation(.easeOut(duration: 0.25)) { visible = true }
             try? await Task.sleep(for: .milliseconds(350))
-            // Up: the full list.
-            withAnimation(.easeInOut(duration: 0.7)) { offset = -travel }
-            try? await Task.sleep(for: .milliseconds(1_000))
-            // Down past where it started: the map comes back.
-            withAnimation(.easeInOut(duration: 0.9)) { offset = travel }
-            try? await Task.sleep(for: .milliseconds(1_200))
-            withAnimation(.easeInOut(duration: 0.5)) { offset = 0 }
-            try? await Task.sleep(for: .milliseconds(600))
+            // Down: the drawer gets out of the way, the whole map shows.
+            withAnimation(.easeInOut(duration: 0.7)) { down = true }
+            setDrawer(.peek)
+            try? await Task.sleep(for: .milliseconds(1_800))
+            // And back up.
+            withAnimation(.easeInOut(duration: 0.7)) { down = false }
+            setDrawer(.medium)
+            try? await Task.sleep(for: .milliseconds(900))
             withAnimation(.easeIn(duration: 0.25)) { visible = false }
-            try? await Task.sleep(for: .milliseconds(700))
+            try? await Task.sleep(for: .milliseconds(900))
         }
     }
 }

@@ -34,6 +34,11 @@ struct CoachMarkOverlay: View {
                               demoChips: FilterGroup.allCases.prefix(2).compactMap { group in
                                   center.chipFrames[group].map { (group.title, $0) }
                               },
+                              nudge: { center.filterRowNudge = $0 },
+                              listNudge: { center.listNudge = $0 },
+                              setDrawer: { center.drawerDemoDetent = $0 },
+                              drawerFrame: center.anchors[.drawer],
+                              barFrame: center.anchors[.tabBar],
                               advance: { center.advance() },
                               back: { center.back() })
                 .id(mark)
@@ -50,6 +55,19 @@ private struct CoachMarkStop: View {
     let anchor: CGRect?
     /// The first filter chips, for the filters stop's demonstration.
     let demoChips: [(title: String, frame: CGRect)]
+    /// Slides the real filter row for the filters demonstration.
+    let nudge: (CGFloat) -> Void
+    /// Slides the real first carousel / list for the list demonstration.
+    let listNudge: (CGSize) -> Void
+    /// Lowers / raises the real drawer for the map demonstration.
+    let setDrawer: (BottomSheetDetent?) -> Void
+    let drawerFrame: CGRect?
+    let barFrame: CGRect?
+    /// The map's bubble stays where it opened while the drawer drops beneath
+    /// it (the spotlight grows; the bubble must not chase it).
+    @State private var mapBubbleSpot: CGRect?
+    /// The drawer's frame when the map stop opened (it moves during the demo).
+    @State private var mapStartDrawer: CGRect?
     let advance: () -> Void
     let back: () -> Void
 
@@ -61,10 +79,17 @@ private struct CoachMarkStop: View {
             let spot = spotlight(in: geo.size)
             ZStack(alignment: .topLeading) {
                 dim(spot: spot)
+                    .animation(.easeInOut(duration: 0.7), value: spot)
                 demo(spot: spot)
                     .frame(width: geo.size.width, height: geo.size.height)
-                bubbleColumn(spot: spot, size: geo.size)
+                bubbleColumn(spot: mark == .map ? (mapBubbleSpot ?? spot) : spot, size: geo.size)
             }
+            // The map stop remembers where things were when it opened: its
+            // demonstration moves the drawer, and the bubble and finger must
+            // not chase it.
+            .onAppear { rememberMapStart(spot) }
+            .onChange(of: spot) { _, new in rememberMapStart(new) }
+            .onChange(of: drawerFrame) { _, _ in rememberMapStart(spot) }
             // Reels-style, like the onboarding cards (owner, 2026-10-06): a
             // tap on the left third goes back, anywhere else advances; swipe
             // left for next, right for back. The button's own tap takes
@@ -135,14 +160,24 @@ private struct CoachMarkStop: View {
 
     // MARK: - The dozent and its bubble
 
+    private func rememberMapStart(_ spot: CGRect?) {
+        guard mark == .map else { return }
+        if mapBubbleSpot == nil { mapBubbleSpot = spot }
+        if mapStartDrawer == nil { mapStartDrawer = drawerFrame }
+    }
+
     /// Filters and the list show how they work; see `CoachMarkDemos.swift`.
     @ViewBuilder
     private func demo(spot: CGRect?) -> some View {
         switch mark {
         case .filters where !demoChips.isEmpty:
-            CoachMarkFiltersDemo(chips: demoChips)
+            if let spot { CoachMarkFiltersDemo(chips: demoChips, row: spot, nudge: nudge) }
         case .drawer:
-            if let spot { CoachMarkDrawerDemo(spot: spot) }
+            if let spot { CoachMarkDrawerDemo(spot: spot, nudge: listNudge) }
+        case .map:
+            if let drawer = mapStartDrawer, let bar = barFrame {
+                CoachMarkMapDemo(drawer: drawer, bar: bar, setDrawer: setDrawer)
+            }
         default:
             EmptyView()
         }

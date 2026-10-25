@@ -87,6 +87,9 @@ final class CoachMarkCenter {
 
     /// End the tour and record every stop as seen.
     func finish() {
+        filterRowNudge = 0
+        listNudge = .zero
+        if drawerDemoDetent != nil { drawerDemoDetent = .medium }
         store.update { state in
             for mark in CoachMark.tour { state.seenCoachMarks.insert(mark.rawValue) }
         }
@@ -122,6 +125,22 @@ final class CoachMarkCenter {
     /// (`CoachMarkFiltersDemo`). Kept, never cleared — the row is always
     /// mounted on Home; see `coachMarkAnchor(_:forgetsOnDisappear:)`.
     private(set) var chipFrames: [FilterGroup: CGRect] = [:]
+
+    /// How far the filters stop's demonstration has slid the real filter row
+    /// (`FilterChipRow` applies it as an offset). Only an offset: no filter
+    /// and no scroll position changes. 0 at rest, and reset when the tour ends.
+    var filterRowNudge: CGFloat = 0
+
+    /// The list stop's demonstration: `width` slides the first carousel
+    /// sideways, `height` slides the list up. Offsets only, like
+    /// `filterRowNudge`.
+    var listNudge: CGSize = .zero
+
+    /// The map stop's demonstration lowers the REAL drawer to `.peek` and
+    /// raises it again (owner, 2026-10-25: "show that the drawer can be
+    /// minimized"). `ContentView` applies it to the drawer's detent; `nil`
+    /// means hands off.
+    var drawerDemoDetent: BottomSheetDetent?
 
     func setChipFrame(_ group: FilterGroup, _ frame: CGRect) {
         guard frame.width > 0, frame.height > 0,

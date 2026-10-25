@@ -251,6 +251,11 @@ struct ContentView: View {
             guard running else { return }
             withAnimation(.easeInOut(duration: 0.25)) { homeSheetDetent = .medium }
         }
+        // The map stop lowers and raises the real drawer to show it minimises.
+        .onChange(of: coachMarks?.drawerDemoDetent) { _, detent in
+            guard let detent else { return }
+            withAnimation(.easeInOut(duration: 0.7)) { homeSheetDetent = detent }
+        }
 
         .onAppear {
             // Backstop for any host that never injects `LaunchState` (previews,

@@ -30,6 +30,8 @@ struct HomeDrawerContent: View {
     /// The filter is on the cross-window state — see
     /// `AppSharedState.filterPanel` for why it is not on `sharedState`.
     @Environment(AppSharedState.self) private var appShared: AppSharedState?
+    /// The navigation tour's list demonstration — see `CoachMarkCenter.listNudge`.
+    @Environment(CoachMarkCenter.self) private var coachMarks: CoachMarkCenter?
 
     /// Peek-detent height — mirrors `HomeView.peekHeight`. Used to
     /// fade the scrollable rails in as the drawer opens past peek so a
@@ -111,8 +113,12 @@ struct HomeDrawerContent: View {
                                 emptyState
                             } else {
                                 ForEach(rails) { rail in
-                                    RailCarousel(title: rail.title, tours: rail.tours)
-                                        .id(rail.id)
+                                    RailCarousel(
+                                        title: rail.title, tours: rail.tours,
+                                        demoNudge: rail.id == rails.first?.id
+                                            ? (coachMarks?.listNudge.width ?? 0) : 0
+                                    )
+                                    .id(rail.id)
                                 }
                             }
                         }
@@ -122,6 +128,7 @@ struct HomeDrawerContent: View {
                     // scrolled clear of the home-indicator strip on
                     // phones with rounded corners.
                     .padding(.bottom, AtlasSpacing.xxl)
+                    .offset(y: coachMarks?.listNudge.height ?? 0)
                 }
                 .opacity(listOpacity)
                 .allowsHitTesting(listOpacity > 0.01)
