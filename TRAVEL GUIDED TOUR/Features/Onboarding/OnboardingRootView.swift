@@ -596,7 +596,7 @@ private struct WelcomeByNameCard: View {
                     .padding(.top, OnboardingType.Gap.step)
             }
         } actions: {
-            OnboardingButton(title: "Show me") { onboarding.advance() }
+            OnboardingButton(title: "Let's begin") { onboarding.advance() }
         }
     }
 }
@@ -656,7 +656,7 @@ private struct LibraryLeadInCard: View {
                 .padding(.top, OnboardingType.Gap.step)
             }
         } actions: {
-            OnboardingButton(title: "Show me") { onboarding.advance() }
+            OnboardingButton(title: "Continue") { onboarding.advance() }
         }
     }
 }
@@ -713,7 +713,7 @@ private struct CommunityLeadInCard: View {
                     .padding(.top, OnboardingType.Gap.step)
             }
         } actions: {
-            OnboardingButton(title: "Show me") { onboarding.advance() }
+            OnboardingButton(title: "Continue") { onboarding.advance() }
         }
     }
 }
@@ -987,7 +987,7 @@ private struct ListsLeadInCard: View {
                     .padding(.top, OnboardingType.Gap.step)
             }
         } actions: {
-            OnboardingButton(title: "Show me") { onboarding.advance() }
+            OnboardingButton(title: "Continue") { onboarding.advance() }
         }
     }
 }
