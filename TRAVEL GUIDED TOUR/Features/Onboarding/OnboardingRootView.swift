@@ -535,6 +535,7 @@ private struct AccountFormCard: View {
                 onboarding.update {
                     $0.pendingDisplayName = displayName
                     $0.pendingUsername = Username.normalise(username)
+                    $0.pendingEmail = trimmed(email).lowercased()
                 }
                 withAnimation { confirmationSentTo = trimmed(email) }
             }

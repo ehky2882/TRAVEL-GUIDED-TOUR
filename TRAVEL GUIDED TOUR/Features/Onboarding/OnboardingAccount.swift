@@ -46,17 +46,32 @@ extension OnboardingCoordinator {
 
     /// Run on every sign-in: an email account made in onboarding gets its
     /// name and username the first time it actually signs in (after the
-    /// confirmation link). Cleared once applied, or once it can never apply.
-    func applyPendingProfile(using profiles: MakerProfileService) async {
+    /// confirmation link). Only that account — any other sign-in leaves them
+    /// waiting (`pendingProfileDecision`). Cleared once applied, or once it
+    /// can never apply.
+    func applyPendingProfile(using profiles: MakerProfileService, signedInEmail: String?) async {
+        switch state.pendingProfileDecision(signedInEmail: signedInEmail) {
+        case .none, .keep:
+            return
+        case .discard:
+            clearPendingProfile()
+            return
+        case .apply:
+            break
+        }
         let name = state.pendingDisplayName ?? ""
         let username = state.pendingUsername
-        guard !name.isEmpty || !(username ?? "").isEmpty else { return }
         // A refused username (taken in the meantime) is not retried forever;
         // they can set one on their profile.
         try? await applyProfile(displayName: name, username: username, using: profiles)
+        clearPendingProfile()
+    }
+
+    private func clearPendingProfile() {
         update {
             $0.pendingDisplayName = nil
             $0.pendingUsername = nil
+            $0.pendingEmail = nil
         }
     }
 }

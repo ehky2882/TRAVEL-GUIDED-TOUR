@@ -386,7 +386,10 @@ struct TRAVEL_GUIDED_TOURApp: App {
                 // first sign-in, whenever that is.
                 .onChange(of: authService.userId) { _, userId in
                     guard userId != nil else { return }
-                    Task { await onboarding.applyPendingProfile(using: makerProfileService) }
+                    Task {
+                        await onboarding.applyPendingProfile(using: makerProfileService,
+                                                             signedInEmail: authService.email)
+                    }
                 }
                 .onChange(of: onboarding.holdsBottomModule) { _, _ in
                     syncBottomModuleVisibility()

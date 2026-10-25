@@ -48,6 +48,34 @@ struct OnboardingState: Codable, Equatable, Sendable {
     /// states still decode.
     var pendingDisplayName: String?
     var pendingUsername: String?
+    /// The email that account was made with, lowercased. The name and
+    /// username belong to THAT account: without this, someone who never taps
+    /// the link and later signs in with Apple would hand them to the Apple
+    /// account instead.
+    var pendingEmail: String?
+}
+
+/// What a sign-in does with a waiting name and username.
+enum PendingProfileDecision: Equatable {
+    /// Nothing is waiting.
+    case none
+    /// The account they were made for has signed in.
+    case apply
+    /// A different account signed in; keep them for the right one.
+    case keep
+    /// Saved before `pendingEmail` existed, so whose they are is unknown.
+    case discard
+}
+
+extension OnboardingState {
+    func pendingProfileDecision(signedInEmail: String?) -> PendingProfileDecision {
+        guard !(pendingDisplayName ?? "").isEmpty || !(pendingUsername ?? "").isEmpty else {
+            return .none
+        }
+        guard let pendingEmail else { return .discard }
+        guard let signedInEmail, signedInEmail.lowercased() == pendingEmail else { return .keep }
+        return .apply
+    }
 }
 
 /// Reads and writes `OnboardingState`.

@@ -56,6 +56,24 @@ final class OnboardingStoreTests: XCTestCase {
         XCTAssertNil(store.state.pendingDisplayName)
     }
 
+    /// The waiting name and username go only to the email account they were
+    /// made for — never to an Apple or Google account that signs in first.
+    func testAPendingProfileOnlyAppliesToItsOwnAccount() {
+        var state = OnboardingState()
+        XCTAssertEqual(state.pendingProfileDecision(signedInEmail: "a@example.com"), .none)
+
+        state.pendingDisplayName = "Ada Lovelace"
+        state.pendingUsername = "ada"
+        state.pendingEmail = "ada@example.com"
+        XCTAssertEqual(state.pendingProfileDecision(signedInEmail: "Ada@Example.com"), .apply)
+        XCTAssertEqual(state.pendingProfileDecision(signedInEmail: "someone@privaterelay.appleid.com"), .keep)
+        XCTAssertEqual(state.pendingProfileDecision(signedInEmail: nil), .keep)
+
+        // Saved before the email was recorded: whose it is cannot be known.
+        state.pendingEmail = nil
+        XCTAssertEqual(state.pendingProfileDecision(signedInEmail: "ada@example.com"), .discard)
+    }
+
     func testAnswersSurviveRelaunch() {
         let store = OnboardingStore(defaults: defaults)
         store.update {
