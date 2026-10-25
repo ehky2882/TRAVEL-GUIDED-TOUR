@@ -164,12 +164,11 @@ private struct AccountAskCard: View {
     @State private var showingSignIn = false
 
     var body: some View {
-        // Tapping or swiping through is not choosing to sign up: "next"
-        // here is Skip (owner, 2026-10-06). Signing up takes a button.
-        OnboardingScaffold(
-            progressIndex: onboarding.progressIndex,
-            onForward: { onboarding.skipAccount() }
-        ) {
+        // Forward goes on to "Create an account" (owner, 2026-10-25: "i would
+        // like the default to be going next to 'create an account'"). The
+        // NEXT screen keeps forward = Skip, so tapping through still never
+        // lands in the sign-up form (owner, 2026-10-06).
+        OnboardingScaffold(progressIndex: onboarding.progressIndex) {
             VStack(spacing: 0) {
                 OnboardingLine("First, an account")
                 OnboardingLine("An account keeps your playlists, your downloads, and where you left off.")
