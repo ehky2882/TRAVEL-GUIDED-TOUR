@@ -31,6 +31,9 @@ struct CoachMarkOverlay: View {
         ZStack {
             if let center, let mark = center.current {
                 CoachMarkStop(mark: mark, anchor: center.spotlightFrame(for: mark),
+                              demoChips: FilterGroup.allCases.prefix(2).compactMap { group in
+                                  center.chipFrames[group].map { (group.title, $0) }
+                              },
                               advance: { center.advance() },
                               back: { center.back() })
                 .id(mark)
@@ -45,6 +48,8 @@ struct CoachMarkOverlay: View {
 private struct CoachMarkStop: View {
     let mark: CoachMark
     let anchor: CGRect?
+    /// The first filter chips, for the filters stop's demonstration.
+    let demoChips: [(title: String, frame: CGRect)]
     let advance: () -> Void
     let back: () -> Void
 
@@ -56,6 +61,8 @@ private struct CoachMarkStop: View {
             let spot = spotlight(in: geo.size)
             ZStack(alignment: .topLeading) {
                 dim(spot: spot)
+                demo(spot: spot)
+                    .frame(width: geo.size.width, height: geo.size.height)
                 bubbleColumn(spot: spot, size: geo.size)
             }
             // Reels-style, like the onboarding cards (owner, 2026-10-06): a
@@ -128,6 +135,19 @@ private struct CoachMarkStop: View {
 
     // MARK: - The dozent and its bubble
 
+    /// Filters and the list show how they work; see `CoachMarkDemos.swift`.
+    @ViewBuilder
+    private func demo(spot: CGRect?) -> some View {
+        switch mark {
+        case .filters where !demoChips.isEmpty:
+            CoachMarkFiltersDemo(chips: demoChips)
+        case .drawer:
+            if let spot { CoachMarkDrawerDemo(spot: spot) }
+        default:
+            EmptyView()
+        }
+    }
+
     /// Below the control when it sits in the top half, above it when it sits
     /// in the bottom half, and a third of the way down when there is nothing
     /// to point at.
@@ -141,7 +161,9 @@ private struct CoachMarkStop: View {
             } else if let spot {
                 Spacer(minLength: 0)
                 speech
-                Color.clear.frame(height: max(size.height - spot.minY + 18, 0))
+                // The list's finger travels up above the drawer's edge.
+                let room: CGFloat = mark == .drawer ? CoachMarkDrawerDemo.travel : 0
+                Color.clear.frame(height: max(size.height - spot.minY + 18 + room, 0))
             } else {
                 Color.clear.frame(height: size.height * 0.34)
                 speech

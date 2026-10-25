@@ -118,6 +118,17 @@ final class CoachMarkCenter {
         anchors[mark] = nil
     }
 
+    /// Where the first filter chips sit, for the filters stop's demonstration
+    /// (`CoachMarkFiltersDemo`). Kept, never cleared — the row is always
+    /// mounted on Home; see `coachMarkAnchor(_:forgetsOnDisappear:)`.
+    private(set) var chipFrames: [FilterGroup: CGRect] = [:]
+
+    func setChipFrame(_ group: FilterGroup, _ frame: CGRect) {
+        guard frame.width > 0, frame.height > 0,
+              frame.minX.isFinite, frame.minY.isFinite else { return }
+        if chipFrames[group] != frame { chipFrames[group] = frame }
+    }
+
     /// What a stop lights. Every stop but the map is its own control's frame.
     /// The map has no single view to measure — it runs under everything — so
     /// its spotlight is the part you can actually see: below the filter row,

@@ -27,6 +27,27 @@ extension View {
     }
 }
 
+extension View {
+    /// Report one filter chip's frame, so the filters stop can demonstrate
+    /// stacking on the real chips.
+    func coachMarkChip(_ group: FilterGroup) -> some View {
+        modifier(CoachMarkChipModifier(group: group))
+    }
+}
+
+private struct CoachMarkChipModifier: ViewModifier {
+    let group: FilterGroup
+    @Environment(CoachMarkCenter.self) private var center: CoachMarkCenter?
+
+    func body(content: Content) -> some View {
+        content.onGeometryChange(for: CGRect.self) { proxy in
+            proxy.frame(in: .global)
+        } action: { frame in
+            center?.setChipFrame(group, frame)
+        }
+    }
+}
+
 private struct CoachMarkAnchorModifier: ViewModifier {
     let mark: CoachMark
     let forgetsOnDisappear: Bool

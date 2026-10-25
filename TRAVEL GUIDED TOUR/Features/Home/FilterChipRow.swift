@@ -91,6 +91,7 @@ struct FilterChipRow: View {
         ) {
             appShared?.filterPanel = .group(group)
         }
+        .coachMarkChip(group)
     }
 
     private func makerName(_ id: UUID) -> String? {
