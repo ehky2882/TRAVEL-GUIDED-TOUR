@@ -218,7 +218,7 @@ private struct CoachMarkStop: View {
                 .overlay(alignment: .topLeading) {
                     // The tail — off the card's left edge, toward the face.
                     SpeechTail()
-                        .fill(AtlasColors.secondaryBackground)
+                        .fill(AtlasColors.brass)
                         .frame(width: 9, height: 16)
                         .offset(x: -8, y: faceRadius - 8)
                 }
@@ -229,10 +229,10 @@ private struct CoachMarkStop: View {
         VStack(alignment: .leading, spacing: 6) {
             Text(mark.title)
                 .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.primaryText)
+                .foregroundStyle(Color.white)
             Text(mark.message)
                 .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.primaryText)
+                .foregroundStyle(Color.white)
                 .lineSpacing(4)
                 .fixedSize(horizontal: false, vertical: true)
             HStack {
@@ -241,10 +241,10 @@ private struct CoachMarkStop: View {
                     Text(mark.buttonTitle)
                         .font(AtlasTypography.caption)
                         .fontWeight(.bold)
-                        .foregroundStyle(Color.white)
+                        .foregroundStyle(AtlasColors.brass)
                         .padding(.horizontal, 17)
                         .frame(height: 32)
-                        .background(Capsule().fill(AtlasColors.brass))
+                        .background(Capsule().fill(Color.white))
                 }
                 .buttonStyle(.plain)
             }
@@ -255,8 +255,9 @@ private struct CoachMarkStop: View {
         .padding(.bottom, 11)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
+            // Brass, button inverted to white (owner, 2026-10-25).
             RoundedRectangle(cornerRadius: 16)
-                .fill(AtlasColors.secondaryBackground)
+                .fill(AtlasColors.brass)
                 .shadow(color: .black.opacity(0.4), radius: 17, y: 10)
         )
     }
