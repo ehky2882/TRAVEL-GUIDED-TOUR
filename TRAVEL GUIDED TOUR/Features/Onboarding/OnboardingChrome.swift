@@ -162,7 +162,9 @@ struct OnboardingButton: View {
                 .fontWeight(.bold)
                 .foregroundStyle(filled ? Color.white : AtlasColors.secondaryText)
                 .frame(maxWidth: .infinity)
-                .frame(height: 54)
+                // 44pt — the face's height (owner, 2026-10-25), and Apple's
+                // minimum tap target. Was 54.
+                .frame(height: 44)
                 .background(
                     Capsule()
                         .fill(filled ? AtlasColors.brass : Color.clear)

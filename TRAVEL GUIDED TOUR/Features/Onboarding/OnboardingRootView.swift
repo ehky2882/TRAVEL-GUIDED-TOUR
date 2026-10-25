@@ -348,7 +348,8 @@ private struct AccountProvidersCard: View {
             }
             .foregroundStyle(AtlasColors.primaryText)
             .frame(maxWidth: .infinity)
-            .frame(height: 50)
+            // Same 44pt as `OnboardingButton` (owner, 2026-10-25). Was 50.
+            .frame(height: 44)
             .background(Capsule().fill(AtlasColors.secondaryBackground))
             .overlay(Capsule().stroke(AtlasColors.primaryText.opacity(0.20), lineWidth: 1))
         }
