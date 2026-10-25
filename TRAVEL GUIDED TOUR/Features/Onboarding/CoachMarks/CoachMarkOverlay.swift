@@ -46,7 +46,10 @@ struct CoachMarkOverlay: View {
                 .transition(.opacity)
             }
         }
-        .animation(reduceMotion ? nil : .easeInOut(duration: 0.22), value: center?.current)
+        // The last tap fades the tour slowly into the app it was explaining
+        // (owner, 2026-10-25: "the screen fades into use"); stop to stop stays quick.
+        .animation(reduceMotion ? nil : .easeInOut(duration: center?.current == nil ? 0.7 : 0.22),
+                   value: center?.current)
     }
 }
 
@@ -141,7 +144,7 @@ private struct CoachMarkStop: View {
     @ViewBuilder
     private func dim(spot: CGRect?) -> some View {
         ZStack {
-            Rectangle().fill(Color.black.opacity(spot == nil ? 0.42 : 0.62))
+            Rectangle().fill(Color.black.opacity(spot == nil ? (mark == .ready ? 0.18 : 0.42) : 0.62))
             if let spot {
                 RoundedRectangle(cornerRadius: 16)
                     .frame(width: spot.width, height: spot.height)
@@ -181,6 +184,12 @@ private struct CoachMarkStop: View {
         case .map:
             if let drawer = mapStartDrawer, let bar = barFrame {
                 CoachMarkMapDemo(drawer: drawer, bar: bar, setDrawer: setDrawer)
+            }
+        case .ready:
+            // Back to Home as it opens — whatever the bar demo was showing.
+            Color.clear.onAppear {
+                setTab(.home)
+                setDrawer(.medium)
             }
         default:
             EmptyView()

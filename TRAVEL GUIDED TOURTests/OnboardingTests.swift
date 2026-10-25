@@ -456,7 +456,7 @@ final class CoachMarkCenterTests: XCTestCase {
     }
 
     /// Owner's order, 2026-09-22: "1. map 2. search bar 3. filters 4. drawer
-    /// 5. tab bar".
+    /// 5. tab bar" — then the send-off (2026-10-25).
     func testTheStopsRunInTheOwnersOrder() {
         let (center, _, defaults, suite) = makeCenter()
         defer { defaults.removePersistentDomain(forName: suite) }
@@ -467,7 +467,7 @@ final class CoachMarkCenterTests: XCTestCase {
             seen.append(mark)
             center.advance()
         }
-        XCTAssertEqual(seen, [.map, .search, .filters, .drawer, .tabBar])
+        XCTAssertEqual(seen, [.map, .search, .filters, .drawer, .tabBar, .ready])
         XCTAssertFalse(center.isRunning)
         XCTAssertTrue(center.hasSeenAll)
     }
@@ -487,8 +487,9 @@ final class CoachMarkCenterTests: XCTestCase {
         XCTAssertEqual(center.current, .search)
     }
 
-    func testOnlyTheLastStopSaysGotIt() {
-        XCTAssertEqual(CoachMark.tabBar.buttonTitle, "Got it")
+    func testTheSendOffIsLastAndTheUserSaysTheyAreReady() {
+        XCTAssertEqual(CoachMark.tour.last, .ready)
+        XCTAssertEqual(CoachMark.ready.buttonTitle, "I'm ready to explore!")
         for mark in CoachMark.tour.dropLast() {
             XCTAssertEqual(mark.buttonTitle, "Next")
         }
@@ -498,7 +499,8 @@ final class CoachMarkCenterTests: XCTestCase {
     /// Owner on 183: "the actual map is not highlighted." Every stop lights
     /// something; the map's is the visible part, between filters and drawer.
     func testEveryStopHasASpotlightAndTheMapsSitsBetweenFiltersAndDrawer() {
-        for mark in CoachMark.tour { XCTAssertTrue(mark.hasSpotlight) }
+        for mark in CoachMark.tour.dropLast() { XCTAssertTrue(mark.hasSpotlight) }
+        XCTAssertFalse(CoachMark.ready.hasSpotlight, "the send-off shows Home whole")
 
         let (center, _, defaults, suite) = makeCenter()
         defer { defaults.removePersistentDomain(forName: suite) }
