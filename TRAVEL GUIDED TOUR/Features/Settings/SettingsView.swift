@@ -288,7 +288,10 @@ struct SettingsView: View {
                             dismiss()
                             Task { @MainActor in
                                 try? await Task.sleep(for: .milliseconds(350))
-                                onboarding.begin(replaying: true)
+                                // Signed out → the replay asks about an
+                                // account too; signed in → it skips that.
+                                onboarding.begin(replaying: true,
+                                                 askAboutAccount: !authService.isSignedIn)
                             }
                         } label: {
                             Label("Take the app tour", systemImage: "sparkles")

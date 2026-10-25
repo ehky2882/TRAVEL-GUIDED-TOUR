@@ -52,6 +52,9 @@ final class OnboardingCoordinator {
     /// True when this run was started from Settings rather than by a cold
     /// launch. The account screens are dropped — see `OnboardingFlow.steps`.
     private(set) var isReplay = false
+    /// A replay that still shows the account screens — Settings sets it when
+    /// the user is signed out. See `OnboardingFlow.steps`.
+    private(set) var asksAboutAccount = false
 
     /// Runs in the SAME call that closes the flow — the App wires it to start
     /// the navigation tour.
@@ -109,13 +112,14 @@ final class OnboardingCoordinator {
 
     /// Present the flow from the top. Called after the launch hand-off, and
     /// again from Settings when the user asks for the tour.
-    func begin(replaying: Bool = false) {
+    func begin(replaying: Bool = false, askAboutAccount: Bool = false) {
         hasBegun = true
         isReplay = replaying
+        asksAboutAccount = askAboutAccount
         usedProvider = false
         isCreatingAccount = false
         skippedAccount = false
-        steps = OnboardingFlow.steps(replaying: replaying)
+        steps = OnboardingFlow.steps(replaying: replaying, askAboutAccount: askAboutAccount)
         index = 0
         isCovering = true
     }
@@ -149,7 +153,7 @@ final class OnboardingCoordinator {
         // Back onto "First, an account" after skipping it: put the provider
         // and form screens back, so changing your mind leads to them again.
         if currentStep == .accountAsk {
-            let full = OnboardingFlow.steps(replaying: isReplay)
+            let full = OnboardingFlow.steps(replaying: isReplay, askAboutAccount: asksAboutAccount)
             if let at = full.firstIndex(of: .accountAsk) {
                 steps = full
                 index = at

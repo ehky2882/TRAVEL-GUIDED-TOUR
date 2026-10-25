@@ -82,10 +82,13 @@ enum OnboardingFlow {
     ///
     /// - Parameters:
     ///   - replaying: `true` when the user asked for the tour again from
-    ///     Settings. The account screens are skipped — they have an account, or
-    ///     they decided not to, and asking twice is nagging.
-    static func steps(replaying: Bool) -> [OnboardingStep] {
-        guard replaying else { return OnboardingStep.order }
+    ///     Settings. The account screens are skipped for someone SIGNED IN —
+    ///     asking them to make an account they have is nagging.
+    ///   - askAboutAccount: keep the account screens on a replay anyway.
+    ///     🔴 Settings passes `true` when signed out (owner, 2026-10-25,
+    ///     testing signed out: "why isn't it suggesting that i sign up").
+    static func steps(replaying: Bool, askAboutAccount: Bool = false) -> [OnboardingStep] {
+        guard replaying, !askAboutAccount else { return OnboardingStep.order }
         return OnboardingStep.order.filter {
             $0 != .accountAsk && $0 != .accountProviders && $0 != .accountForm
         }

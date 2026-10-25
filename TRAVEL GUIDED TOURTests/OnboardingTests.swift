@@ -381,6 +381,26 @@ final class OnboardingCoordinatorTests: XCTestCase {
         XCTAssertTrue(coordinator.isReplay)
         XCTAssertFalse(coordinator.steps.contains(.accountForm))
     }
+
+    /// Owner, 2026-10-25, replaying while signed out: "why isn't it
+    /// suggesting that i sign up". A signed-out replay keeps the account ask.
+    func testASignedOutReplayStillAsksAboutAnAccount() {
+        let (coordinator, defaults, suite) = makeCoordinator()
+        defer { defaults.removePersistentDomain(forName: suite) }
+
+        coordinator.begin(replaying: true, askAboutAccount: true)
+        XCTAssertTrue(coordinator.isReplay)
+        XCTAssertTrue(coordinator.steps.contains(.accountAsk))
+        XCTAssertEqual(coordinator.progressCount, 16)
+
+        // Skip, then back: the account screens come back, still on a replay.
+        coordinator.advance()                                   // → 3
+        coordinator.advance()                                   // → 4
+        coordinator.skipAccount()
+        coordinator.back()
+        XCTAssertEqual(coordinator.currentStep, .accountAsk)
+        XCTAssertTrue(coordinator.steps.contains(.accountForm))
+    }
 }
 
 /// Screen 12's chips promise that every pick can promote something, which is
