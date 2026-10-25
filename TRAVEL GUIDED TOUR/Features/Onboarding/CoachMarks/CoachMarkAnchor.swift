@@ -12,13 +12,24 @@ extension View {
     ///
     /// A no-op when no `CoachMarkCenter` is in the environment (previews,
     /// tests, and any host that never builds one), so it is safe to leave on.
-    func coachMarkAnchor(_ mark: CoachMark) -> some View {
-        modifier(CoachMarkAnchorModifier(mark: mark))
+    ///
+    /// - Parameter forgetsOnDisappear: clear the frame when the view leaves.
+    ///   Right for a view that is genuinely torn down and rebuilt (the
+    ///   drawer), which reports afresh when it returns. 🔴 WRONG for Home's
+    ///   always-mounted chrome — the search bar, the filter row, the bar: a
+    ///   push over Home (Search, a tour) fires their `onDisappear` AFTER the
+    ///   pop has re-reported the frame, and since nothing has moved,
+    ///   `onGeometryChange` never reports again. Every guide then lost its
+    ///   spotlight for the rest of the session (owner on 183: "search bar is
+    ///   not highlighted", "filters are not highlighted", "the bar isn't").
+    func coachMarkAnchor(_ mark: CoachMark, forgetsOnDisappear: Bool = true) -> some View {
+        modifier(CoachMarkAnchorModifier(mark: mark, forgetsOnDisappear: forgetsOnDisappear))
     }
 }
 
 private struct CoachMarkAnchorModifier: ViewModifier {
     let mark: CoachMark
+    let forgetsOnDisappear: Bool
     @Environment(CoachMarkCenter.self) private var center: CoachMarkCenter?
 
     func body(content: Content) -> some View {
@@ -34,6 +45,6 @@ private struct CoachMarkAnchorModifier: ViewModifier {
             // 🔴 Clear on the way out. The drawer and the Home chrome can be
             // torn down (another tab, a detail layer), and a stale rect would
             // cut a spotlight over whatever now sits there.
-            .onDisappear { center?.clearAnchor(mark) }
+            .onDisappear { if forgetsOnDisappear { center?.clearAnchor(mark) } }
     }
 }

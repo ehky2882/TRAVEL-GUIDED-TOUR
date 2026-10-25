@@ -477,11 +477,21 @@ final class CoachMarkCenterTests: XCTestCase {
     }
 
     /// The map IS the screen, so it is the one stop with nothing to cut out.
-    func testOnlyTheMapHasNoSpotlight() {
-        XCTAssertFalse(CoachMark.map.hasSpotlight)
-        for mark in CoachMark.tour where mark != .map {
-            XCTAssertTrue(mark.hasSpotlight)
-        }
+    /// Owner on 183: "the actual map is not highlighted." Every stop lights
+    /// something; the map's is the visible part, between filters and drawer.
+    func testEveryStopHasASpotlightAndTheMapsSitsBetweenFiltersAndDrawer() {
+        for mark in CoachMark.tour { XCTAssertTrue(mark.hasSpotlight) }
+
+        let (center, _, defaults, suite) = makeCenter()
+        defer { defaults.removePersistentDomain(forName: suite) }
+        XCTAssertNil(center.spotlightFrame(for: .map), "nothing to light until both report")
+
+        center.setAnchor(.filters, CGRect(x: 0, y: 122, width: 402, height: 44))
+        center.setAnchor(.drawer, CGRect(x: 8, y: 350, width: 386, height: 406))
+        let map = try! XCTUnwrap(center.spotlightFrame(for: .map))
+        XCTAssertGreaterThan(map.minY, 166)
+        XCTAssertLessThan(map.maxY, 350)
+        XCTAssertEqual(center.spotlightFrame(for: .search), center.anchors[.search])
     }
 
     /// Settings → "Show tips again" must actually run the tour again, not just

@@ -13,7 +13,9 @@
 //  · the dozent stands OUTSIDE the bubble and speaks it (2026-09-23);
 //  · no step counting, no "Skip all" (2026-09-23);
 //  · the face moves with the bubble to whatever it is explaining (2026-09-22);
-//  · the map stop has no cut-out — the map is the screen (2026-09-22).
+//  · the map stop lights the visible map, between the filter row and the
+//    drawer (2026-10-25 — it had no cut-out, and on device that read as
+//    nothing lit at all).
 //
 
 import SwiftUI
@@ -28,7 +30,7 @@ struct CoachMarkOverlay: View {
     var body: some View {
         ZStack {
             if let center, let mark = center.current {
-                CoachMarkStop(mark: mark, anchor: center.anchors[mark],
+                CoachMarkStop(mark: mark, anchor: center.spotlightFrame(for: mark),
                               advance: { center.advance() },
                               back: { center.back() })
                 .id(mark)

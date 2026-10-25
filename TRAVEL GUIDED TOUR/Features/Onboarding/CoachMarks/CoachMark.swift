@@ -38,7 +38,7 @@ enum CoachMark: String, CaseIterable, Codable, Sendable {
     var message: String {
         switch self {
         case .map:
-            "Everything lives here. Pan it and the list underneath follows — what you can see is what you get."
+            "Everything lives here. Pan it and the list underneath follows — what you can see is what you get. Swipe the list down for the whole map."
         case .search:
             "Any city on earth, or any dozent by name. Pick a place and the map flies there."
         case .filters:
@@ -61,10 +61,12 @@ enum CoachMark: String, CaseIterable, Codable, Sendable {
     /// "Got it" on the last stop, "Next" everywhere else.
     var buttonTitle: String { self == Self.tour.last ? "Got it" : "Next" }
 
-    /// Whether this stop gets a spotlight cut-out.
+    /// Whether this stop gets a spotlight cut-out. Every stop does.
     ///
-    /// 🔴 The map does not: it IS the screen, so there is nothing to cut a
-    /// hole in. The whole screen dims a little instead and the bubble floats
-    /// over the middle of it — the inverse of the other four.
-    var hasSpotlight: Bool { self != .map }
+    /// ⚠️ The map had none until 2026-10-06 (decided 2026-09-22: "it IS the
+    /// screen"). On device that read as nothing being lit at all — owner:
+    /// "the actual map is not highlighted." It now lights the visible map,
+    /// between the filter row and the drawer; see
+    /// `CoachMarkCenter.spotlightFrame(for:)`.
+    var hasSpotlight: Bool { true }
 }

@@ -251,7 +251,7 @@ struct HomeView: View {
                             travel: AtlasSpacing.searchBarHeight + geo.safeAreaInsets.top + AtlasSpacing.lg
                         ) {
                             SearchBar()
-                                .coachMarkAnchor(.search)
+                                .coachMarkAnchor(.search, forgetsOnDisappear: false)
                                 .padding(.horizontal, AtlasSpacing.md)
                                 // Retract the drawer to `.peek` when the
                                 // user opens search from `.medium` or
@@ -275,7 +275,7 @@ struct HomeView: View {
 
                         LaunchEntrance(part: .chips, travel: geo.size.width) {
                             FilterChipRow(makers: dataService.makers)
-                                .coachMarkAnchor(.filters)
+                                .coachMarkAnchor(.filters, forgetsOnDisappear: false)
                         }
                     }
                     .padding(.top, AtlasSpacing.sm)

@@ -117,4 +117,19 @@ final class CoachMarkCenter {
     func clearAnchor(_ mark: CoachMark) {
         anchors[mark] = nil
     }
+
+    /// What a stop lights. Every stop but the map is its own control's frame.
+    /// The map has no single view to measure — it runs under everything — so
+    /// its spotlight is the part you can actually see: below the filter row,
+    /// above the drawer. `nil` until both have reported.
+    func spotlightFrame(for mark: CoachMark) -> CGRect? {
+        guard mark == .map else { return anchors[mark] }
+        guard let filters = anchors[.filters], let drawer = anchors[.drawer] else { return nil }
+        // Pulled in by the overlay's own 6pt outset, so the lit edge sits
+        // clear of the chips and of the drawer's top.
+        let top = filters.maxY + 12
+        let bottom = drawer.minY - 12
+        guard bottom > top else { return nil }
+        return CGRect(x: drawer.minX + 6, y: top, width: drawer.width - 12, height: bottom - top)
+    }
 }

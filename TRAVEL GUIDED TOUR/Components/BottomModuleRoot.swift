@@ -113,7 +113,7 @@ struct BottomModuleRoot: View {
             }
             // Stop 5 of the navigation tour lights the mini-player and the
             // tab bar together — they read as one bar.
-            .coachMarkAnchor(.tabBar)
+            .coachMarkAnchor(.tabBar, forgetsOnDisappear: false)
             // The launch slide. Offset only — the measured height above is
             // unaffected by a translation, so the window still claims the right
             // strip while the bars are on their way in.
