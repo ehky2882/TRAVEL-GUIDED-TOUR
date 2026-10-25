@@ -16,6 +16,17 @@ USAGE
     python3 scripts/push-appstore-metadata.py            # dry run — shows a diff
     python3 scripts/push-appstore-metadata.py --apply    # actually writes
 
+    # A new release: create the version if there is none to edit, and attach
+    # a processed build to it. Both are dry-run unless --apply is given too.
+    python3 scripts/push-appstore-metadata.py --create-version 1.1.4 --build 190 --apply
+
+    # Leave fields as App Store Connect has them (comma-separated attribute names).
+    python3 scripts/push-appstore-metadata.py --skip promotionalText --apply
+
+It also pushes the App Review notes (`review_information/notes.txt`) to the
+version's review details. It never submits for review — that stays a person
+pressing Submit in App Store Connect.
+
 Credentials, from the environment (same names the fastlane lanes use):
 
     APP_STORE_CONNECT_KEY_ID
@@ -64,7 +75,9 @@ VERSION_FIELDS = {
     "promotionalText": "promotional_text.txt",
     "supportUrl": "support_url.txt",
     "marketingUrl": "marketing_url.txt",
-    # "whatsNew": "release_notes.txt",  # see trap 1 — only from version 1.1 on.
+    # Trap 1 below: refused on a first release. Every release since 1.1 has
+    # a previous version, so it is sent now.
+    "whatsNew": "release_notes.txt",
 }
 INFO_FIELDS = {
     "name": "name.txt",
@@ -151,6 +164,23 @@ def brief(text):
     return (text[:100] + " …") if len(text) > 100 else (text or "(empty)")
 
 
+def option(name):
+    """The value after `name` on the command line, or None."""
+    if name in sys.argv:
+        at = sys.argv.index(name)
+        if at + 1 < len(sys.argv):
+            return sys.argv[at + 1]
+    return None
+
+
+def review_notes():
+    path = os.path.join(METADATA, "review_information", "notes.txt")
+    if not os.path.exists(path):
+        return None
+    with open(path) as handle:
+        return handle.read().strip()
+
+
 def localisation_of(collection_path, locale=LOCALE):
     data = call(collection_path)[1].get("data", [])
     return next((item for item in data if item["attributes"].get("locale") == locale), None)
@@ -174,9 +204,45 @@ def main():
         ),
         None,
     )
+    wanted = option("--create-version")
+    if not version and wanted:
+        if not apply_changes:
+            print(f"Would create App Store version {wanted} (dry run). Re-run with --apply.")
+            return 0
+        status, body = call("appStoreVersions", method="POST", body={"data": {
+            "type": "appStoreVersions",
+            "attributes": {"platform": "IOS", "versionString": wanted, "releaseType": "MANUAL"},
+            "relationships": {"app": {"data": {"type": "apps", "id": app_id}}},
+        }})
+        print(f"Create version {wanted}: HTTP {status}")
+        if status >= 300:
+            sys.exit(body.get("_error"))
+        version = body["data"]
     if not version:
         sys.exit("No editable App Store version. Nothing changed.")
     print(f"Editable version: {version['attributes'].get('versionString')}")
+    if wanted and version["attributes"].get("versionString") != wanted:
+        sys.exit(f"The editable version is {version['attributes'].get('versionString')}, not {wanted}. Nothing changed.")
+
+    build_number = option("--build")
+    if build_number:
+        builds = call(f"builds?filter[app]={app_id}&filter[version]={build_number}&limit=1")[1].get("data", [])
+        if not builds:
+            sys.exit(f"No build {build_number} in App Store Connect yet. Nothing changed.")
+        state = builds[0]["attributes"].get("processingState")
+        if state != "VALID":
+            sys.exit(f"Build {build_number} is {state}, not VALID yet. Nothing changed.")
+        if apply_changes:
+            status, body = call(
+                f"appStoreVersions/{version['id']}/relationships/build",
+                method="PATCH",
+                body={"data": {"type": "builds", "id": builds[0]["id"]}},
+            )
+            print(f"Attach build {build_number}: HTTP {status}")
+            if status >= 300:
+                sys.exit(body.get("_error"))
+        else:
+            print(f"Would attach build {build_number} (VALID).")
 
     version_loc = localisation_of(f"appStoreVersions/{version['id']}/appStoreVersionLocalizations")
     if not version_loc:
@@ -194,8 +260,35 @@ def main():
     )
     info_loc = localisation_of(f"appInfos/{info['id']}/appInfoLocalizations") if info else None
 
-    version_changes = diff(version_loc["attributes"], VERSION_FIELDS)
-    info_changes = diff(info_loc["attributes"], INFO_FIELDS) if info_loc else {}
+    # `--skip promotionalText,keywords` leaves those fields as App Store Connect
+    # has them — for a field edited there by hand that the repo copy lags.
+    skipped = set(filter(None, (option("--skip") or "").split(",")))
+    version_changes = {k: v for k, v in diff(version_loc["attributes"], VERSION_FIELDS).items() if k not in skipped}
+    info_changes = {k: v for k, v in (diff(info_loc["attributes"], INFO_FIELDS) if info_loc else {}).items()
+                    if k not in skipped}
+
+    # The review notes live on the version's review details, not a localisation.
+    detail = call(f"appStoreVersions/{version['id']}/appStoreReviewDetail")[1].get("data")
+    notes = review_notes()
+    notes_change = notes if notes is not None and notes != ((detail or {}).get("attributes", {}).get("notes") or "") else None
+    if notes_change is not None:
+        print("\n  review notes\n    was: " + brief((detail or {}).get("attributes", {}).get("notes"))
+              + "\n    now: " + brief(notes_change))
+        if not detail:
+            print("    (this version has no review details yet — they would be created)")
+    if notes_change is not None and apply_changes:
+        if detail:
+            status, body = call(f"appStoreReviewDetails/{detail['id']}", method="PATCH", body={"data": {
+                "type": "appStoreReviewDetails", "id": detail["id"], "attributes": {"notes": notes_change}}})
+        else:
+            status, body = call("appStoreReviewDetails", method="POST", body={"data": {
+                "type": "appStoreReviewDetails",
+                "attributes": {"notes": notes_change},
+                "relationships": {"appStoreVersion": {"data": {"type": "appStoreVersions", "id": version["id"]}}},
+            }})
+        print(f"appStoreReviewDetails: HTTP {status}")
+        if status >= 300:
+            print(body.get("_error"))
 
     if not version_changes and not info_changes:
         print("Already up to date — the listing matches fastlane/metadata/.")

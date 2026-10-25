@@ -59,6 +59,22 @@ Owner reviewed build 187 on device: *"things look good"*. **PR #1093 is still NO
 
 Still device-only and not yet confirmed by the owner: Email / Apple / Google sign-up, "I already have an account", screen 14's real follows.
 
+## Round 4 (2026-10-25): faces, the send-off, no-zoom first launch — MERGED and SUBMITTED as 1.1.4
+
+**PR #1093 was squash-merged to `main` (c7988e66) on the owner's say-so, and 1.1.4 (build 190, built from `main`) was submitted to App Review** — state `WAITING_FOR_REVIEW`, release MANUAL, 7-day phased release set. The owner releases it after approval (`status/owner/release-1-1-4.md`), then `MARKETING_VERSION` needs its bump. Builds 188 and 189 were the branch builds the owner approved on device.
+
+| Change | Detail |
+|---|---|
+| Six faces | `DozentExpression`: `rest` (closed eyes, the original — calm screens only), `smile` (dot eyes, wide smile), `content` (smiling eyes), `beam` (big laugh), `wow` (little o), `excited` (smiling eyes + laugh). Picked by the owner from an option sheet; `wink` retired. Each card and guide stop names its face |
+| Send-off guide | `CoachMark.ready`, after the bar: no spotlight, the same 0.62 dim, Home as it opens (tab Home, drawer `.medium`), "That's the tour … These tips are always in Settings.", button "I'm ready to explore!". The final tap fades the overlay over 0.7s |
+| No-zoom first launch | On a first launch `runLaunchGate` → `handOffToOnboarding()`: screen 2 is mounted under the resting splash at the splash's exact geometry (`LaunchZoom.origin`, wordmark centre `22 + md` below), and the splash is lifted at the top of a breath (`SplashView.breathIsAtPeak`). Screen 2 waits for `launchState.isCovering == false` before its face fades in. Later launches keep the zoom |
+| Face fade | The face now fades in over a SOLID disc — the old cross-fade dipped it to ~75%, which the zoom had hidden |
+| Pending profile | `OnboardingState.pendingEmail`: a waiting name/username applies only when that email signs in (`pendingProfileDecision`); another account leaves it waiting; one saved before the field existed is discarded |
+| Release tooling | `scripts/push-appstore-metadata.py` now sends What's New + review notes, `--create-version`, `--build N`, `--skip field` (PR #1156) |
+| Store text | `fastlane/metadata/en-US/release_notes.txt` (What's New) and `review_information/notes.txt` (first-launch section, 2,100+ tours, swipe to the Price chip) — both pushed and re-checked. Promotional text deliberately NOT pushed: blank in ASC, the repo copy's numbers are stale |
+
+Checked: dark mode and iPad (portrait-only window, as 1.1.3 shipped) on every onboarding screen and guide.
+
 ## Not verifiable in the Simulator — check on device
 
 - **Every real account path**: Apple, Google, Email sign-up (+ the confirmation link → first sign-in applying the name/username). Creating an account on the live Supabase from a session is not allowed, and the Simulator has no Apple Account.
