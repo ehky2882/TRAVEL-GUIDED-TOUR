@@ -43,6 +43,22 @@ Owner: *"why would 'create an account' be anything except a real account"*. Scre
 - Apple's error codes are replaced with a sentence (`friendlyAccountError`).
 - `SignInView`'s nonce helpers moved to `AppleNonce` (shared).
 
+## Round 3 (2026-10-25): sign-up checks, layout, the face hand-off — builds 187
+
+Owner reviewed build 187 on device: *"things look good"*. **PR #1093 is still NOT merged** — wait for the owner to say "merge".
+
+| Change | Detail |
+|---|---|
+| Sign-up form checks | Email format + typo suggestion ("Did you mean gmail.com?"); live username check (`handle_available`, 450 ms debounce — needed `backend/handle_available_anon.sql`, applied and verified live); home city must be picked from `PlaceSearchService` suggestions (shown inline ABOVE the field); password eye + 8-character minimum (sign-in still accepts 6); `OnboardingTermsLine` on screen 5 and the email form |
+| Warnings colour | `AtlasColors.destructive`, never `mapPin` — that token IS the brand brass |
+| Face | 44pt (radius 22, the splash mark's size) on every card; was 84pt |
+| Buttons | `OnboardingButton` and the Apple/Google/Email capsules are 44pt (were 54/50). Form fields stay 52pt |
+| Button position | The actions area is a fixed `44 + 40 + 40` (button + two link slots), top-aligned, so the button sits on one line on every screen. The email form's Terms line moved UNDER Skip to fit |
+| Face hand-off 2 → 3 | One face via `matchedGeometryEffect` (`onboardingFaceSpace` env + `.onboardingFace()`). `isFaceHandOff` on the coordinator slows that one move to `.smooth(0.75)`. Both cards use `.onboardingHold` (an animatable no-op transition — a plain `.scale(1)` removed screen 2 instantly; `.opacity` dimmed the disc mid-slide); screen 3's bar/copy/buttons fade in via `chromeIn` |
+| Guides | No outline on the spotlight or the demo finger |
+
+Still device-only and not yet confirmed by the owner: Email / Apple / Google sign-up, "I already have an account", screen 14's real follows.
+
 ## Not verifiable in the Simulator — check on device
 
 - **Every real account path**: Apple, Google, Email sign-up (+ the confirmation link → first sign-in applying the name/username). Creating an account on the live Supabase from a session is not allowed, and the Simulator has no Apple Account.
