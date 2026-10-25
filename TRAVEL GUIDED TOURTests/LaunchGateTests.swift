@@ -562,6 +562,18 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertGreaterThanOrEqual(SplashView.handOffLatency, 0.3)
     }
 
+    /// First launch lifts the splash straight off onboarding's solid mark, so
+    /// only the very top of a breath will do (owner, 2026-10-25).
+    func test_breathIsAtPeak_onlyAtTheTopOfABreath() {
+        // Peak at 1.6s.
+        XCTAssertTrue(SplashView.breathIsAtPeak(sinceBreathStart: 1.58, reduceMotion: false))
+        XCTAssertFalse(SplashView.breathIsAtPeak(sinceBreathStart: 1.4, reduceMotion: false), "bright, but not solid")
+        XCTAssertFalse(SplashView.breathIsAtPeak(sinceBreathStart: 1.7, reduceMotion: false), "at the top now, past it a frame later")
+        XCTAssertFalse(SplashView.breathIsAtPeak(sinceBreathStart: 0.8, reduceMotion: false))
+        XCTAssertTrue(SplashView.breathIsAtPeak(sinceBreathStart: 0.8, reduceMotion: true))
+        XCTAssertTrue(SplashView.breathIsAtPeak(sinceBreathStart: nil, reduceMotion: false))
+    }
+
     @MainActor
     func test_markBreathStartedKeepsTheFirstAnchor() {
         let state = LaunchState()

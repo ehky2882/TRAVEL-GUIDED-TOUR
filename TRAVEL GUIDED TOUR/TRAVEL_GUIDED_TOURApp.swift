@@ -373,6 +373,8 @@ struct TRAVEL_GUIDED_TOURApp: App {
                             .environment(followService)
                             // Screen 6 names the new account's profile.
                             .environment(makerProfileService)
+                            // Screen 2 waits for the splash to lift.
+                            .environment(launchState)
                             .transition(.opacity)
                     }
                 }
@@ -500,6 +502,11 @@ struct TRAVEL_GUIDED_TOURApp: App {
         // Simulator: a frame with the opening barely started and the module
         // fully settled.
         try? await Task.sleep(for: .milliseconds(32))
+        // First launch: no zoom — the face appears in the breathing circle.
+        if onboarding.willPresentWelcome {
+            await handOffToOnboarding()
+            return
+        }
         // 🔴 RE-CHECK THE BREATH AT THE LAST MOMENT, and only go on the way INTO
         // the bright stretch. The gate's check happens before the unhide and the
         // frame wait above, and the zoom's first frame can land a few hundred ms
@@ -528,6 +535,38 @@ struct TRAVEL_GUIDED_TOURApp: App {
             try? await Task.sleep(for: .milliseconds(350))
             present(link)
         }
+    }
+
+    /// First launch: the splash is lifted straight off onboarding's screen 2,
+    /// which draws the same mark and wordmark in the same place — so the
+    /// breathing circle simply stops, and the face appears on it.
+    ///
+    /// Owner, 2026-10-25: *"if we are going to the intro tour, we should bypass
+    /// the 'zoom/expand' animation. the face should appear within the
+    /// 'breathing' circle and then onwards."* The zoom opens onto a map that
+    /// onboarding then covers straight back up, so on a first launch it is a
+    /// flourish for a screen nobody sees.
+    ///
+    /// 🔴 The lift waits for the TOP of a breath. Screen 2's mark is solid; the
+    /// splash's is breathing, so lifting it anywhere but at full brightness is
+    /// a visible step from pale to solid. `breathIsAtPeak` also looks a frame
+    /// ahead, so the lift cannot land on the way back down.
+    @MainActor
+    private func handOffToOnboarding() async {
+        // Mounted under the splash first, so it is already drawn when the
+        // splash goes.
+        _ = onboarding.beginIfNeeded()
+        try? await Task.sleep(for: .milliseconds(48))
+        let deadline = Date().addingTimeInterval(1.7)
+        while Date() < deadline,
+              !SplashView.breathIsAtPeak(
+                  sinceBreathStart: launchState.breathStartedAt.map { CACurrentMediaTime() - $0 },
+                  reduceMotion: reduceMotion
+              ) {
+            try? await Task.sleep(for: .milliseconds(8))
+        }
+        // The app behind is parked in its finished state, under onboarding.
+        launchState.settle()
     }
 
     /// The hand-off: the wordmark lifts, the mark contracts onto the user's

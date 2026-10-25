@@ -90,35 +90,43 @@ struct OnboardingRootView: View {
 
 // MARK: - 2 · the face fades in
 
-/// The existing hand-off with a different ending: the wordmark leaves, the
-/// face arrives on the mark that is already there.
+/// The splash, gaining a face: the wordmark leaves, the face arrives on the
+/// mark that is already there.
 ///
-/// Geometry matches `SplashView` exactly — a 44pt mark, the wordmark one
-/// `AtlasSpacing.md` below it — so nothing jumps between the two.
+/// 🔴 On a first launch there is NO zoom (owner, 2026-10-25: *"if we are going
+/// to the intro tour, we should bypass the 'zoom/expand' animation. the face
+/// should appear within the 'breathing' circle"*). This card is mounted under
+/// the resting splash and the splash is lifted off it at the top of a breath
+/// (`runLaunchGate`), so its geometry has to be the splash's EXACTLY — the
+/// mark at `LaunchZoom.origin` on the full screen, the wordmark's centre
+/// `22 + AtlasSpacing.md` below it, as `SplashView` draws them. Any
+/// difference is a visible jump at the swap.
 private struct FaceAppearsCard: View {
     @Environment(OnboardingCoordinator.self) private var onboarding
+    @Environment(LaunchState.self) private var launchState: LaunchState?
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var faceIn = false
 
     var body: some View {
-        VStack(spacing: AtlasSpacing.md) {
-            DozentFace(expression: .rest, radius: 22)
-                .opacity(faceIn ? 1 : 0)
-                .overlay {
-                    // The bare mark underneath, so the disc never blinks.
-                    Circle().fill(AtlasColors.brass).opacity(faceIn ? 0 : 1)
-                        .frame(width: 44, height: 44)
-                        .allowsHitTesting(false)
-                }
-                .onboardingFace()
-            dozentWordmark()
-                .foregroundStyle(AtlasColors.primaryText)
-                .opacity(faceIn ? 0 : 1)
+        GeometryReader { geo in
+            let origin = LaunchZoom.origin(in: geo.size)
+            ZStack {
+                face.position(origin)
+                dozentWordmark()
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .opacity(faceIn ? 0 : 1)
+                    .position(x: origin.x, y: origin.y + 22 + AtlasSpacing.md)
+            }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .ignoresSafeArea()
         .contentShape(Rectangle())
         .onTapGesture { onboarding.advance() }
         .task {
+            // Mounted under the splash on a first launch: the face waits for
+            // it to lift, or it would arrive where nobody can see it.
+            while launchState?.isCovering == true {
+                try? await Task.sleep(for: .milliseconds(16))
+            }
             if reduceMotion {
                 faceIn = true
                 try? await Task.sleep(for: .milliseconds(900))
@@ -129,6 +137,20 @@ private struct FaceAppearsCard: View {
             }
             onboarding.advance()
         }
+    }
+
+    /// 🔴 The bare mark stays SOLID underneath and the face fades in on top.
+    /// Cross-fading the two (face in, mark out) dipped the disc to ~75% halfway
+    /// through — invisible behind the old zoom, a visible flicker now that the
+    /// face appears in the splash's own circle.
+    private var face: some View {
+        ZStack {
+            Circle().fill(AtlasColors.brass)
+                .frame(width: 44, height: 44)
+            DozentFace(expression: .rest, radius: 22)
+                .opacity(faceIn ? 1 : 0)
+        }
+        .onboardingFace()
     }
 }
 
