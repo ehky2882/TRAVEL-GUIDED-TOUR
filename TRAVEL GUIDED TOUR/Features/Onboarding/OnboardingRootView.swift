@@ -533,14 +533,15 @@ private struct AccountFormCard: View {
                 }
             }
         } actions: {
-            if confirmationSentTo == nil, !fromProvider {
-                OnboardingTermsLine()
-                    .padding(.bottom, OnboardingType.Gap.tight)
-            }
             OnboardingButton(title: isWorking ? "Creating your account…" : "Continue", action: forward)
                 .disabled(confirmationSentTo == nil && (!isComplete || isWorking))
             if confirmationSentTo == nil {
                 OnboardingLink(title: "Skip", dimmed: true) { onboarding.skipAccount() }
+            }
+            // Under the button, not over it: above, it would push the button
+            // off the line every other screen keeps it on.
+            if confirmationSentTo == nil, !fromProvider {
+                OnboardingTermsLine()
             }
         }
         .onAppear(perform: prefillFromProvider)

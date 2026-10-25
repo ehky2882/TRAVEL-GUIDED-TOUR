@@ -226,6 +226,10 @@ struct OnboardingScaffold<Content: View, Actions: View>: View {
     /// version where it's the same size as the beginning circle"). Was 42.
     private let faceRadius: CGFloat = 22
 
+    /// One 44pt button plus two 40pt `OnboardingLink`s — the most any card
+    /// puts under the copy.
+    private static var actionsHeight: CGFloat { 44 + 40 + 40 }
+
     @State private var width: CGFloat = 0
 
     private func forward() {
@@ -260,7 +264,11 @@ struct OnboardingScaffold<Content: View, Actions: View>: View {
             .padding(.top, 36)
             .padding(.horizontal, AtlasSpacing.lg)
 
+            // The button sits at the top of a fixed-height area with room
+            // for two links under it, so it is in the same place on every
+            // screen however many links a card has (owner, 2026-10-25).
             VStack(spacing: 0) { actions() }
+                .frame(height: Self.actionsHeight, alignment: .top)
                 .padding(.horizontal, AtlasSpacing.lg)
                 .padding(.bottom, AtlasSpacing.sm)
         }
