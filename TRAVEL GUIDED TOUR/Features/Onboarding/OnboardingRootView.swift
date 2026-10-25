@@ -271,6 +271,9 @@ private struct AccountProvidersCard: View {
                     + dozentWordmark() + Text(" is not gated.")
                 )
                 .padding(.top, OnboardingType.Gap.step)
+                // Apple and Google create the account right here.
+                OnboardingTermsLine()
+                    .padding(.top, OnboardingType.Gap.tight)
             }
         } actions: {
             OnboardingButton(title: "Skip for now", filled: false) { onboarding.skipAccount() }
@@ -391,6 +394,11 @@ private struct AccountFormCard: View {
     @State private var cityConfirmed: String?
     @State private var citySearch = PlaceSearchService.cities()
     @FocusState private var focus: String?
+    @State private var showPassword = false
+
+    /// 8, not 6 — owner, 2026-10-25. The account system's own minimum is
+    /// lower, so this screen is the stricter of the two and never disagrees.
+    private static let minimumPassword = 8
 
     /// Apple and Google ARE the login, so username and password mean nothing
     /// on that path. What is left is what they could not give us.
@@ -407,7 +415,8 @@ private struct AccountFormCard: View {
     private var isComplete: Bool {
         guard filled(firstName), filled(lastName), cityConfirmed != nil else { return false }
         if fromProvider { return true }
-        return emailLooksValid && filled(username) && !usernameRefused && password.count >= 6
+        return emailLooksValid && filled(username) && !usernameRefused
+            && password.count >= Self.minimumPassword
     }
 
     // MARK: Checks (owner, 2026-10-25)
@@ -523,6 +532,10 @@ private struct AccountFormCard: View {
                 }
             }
         } actions: {
+            if confirmationSentTo == nil, !fromProvider {
+                OnboardingTermsLine()
+                    .padding(.bottom, OnboardingType.Gap.tight)
+            }
             OnboardingButton(title: isWorking ? "Creating your account…" : "Continue", action: forward)
                 .disabled(confirmationSentTo == nil && (!isComplete || isWorking))
             if confirmationSentTo == nil {
@@ -562,7 +575,7 @@ private struct AccountFormCard: View {
             if !fromProvider {
                 field("Email", text: $email, isEmail: true, note: emailNote)
                 field("Username", text: $username, note: usernameNote)
-                secureField("Password (6+ characters)")
+                passwordField("Password (8+ characters)")
             }
             // Real places as you type — listed ABOVE the field, so the
             // keyboard never covers them.
@@ -705,14 +718,49 @@ private struct AccountFormCard: View {
         Text("\(label) ") + Text("*").foregroundColor(AtlasColors.brass)
     }
 
-    private func secureField(_ label: String) -> some View {
-        SecureField(text: $password, prompt: requiredPrompt(label)) { Text(label) }
-            .font(AtlasTypography.caption)
+    /// The password, with an eye to show what was typed — a typo in a hidden
+    /// password is an account nobody can get back into (owner, 2026-10-25).
+    private func passwordField(_ label: String) -> some View {
+        VStack(alignment: .leading, spacing: 5) {
+            HStack(spacing: 8) {
+                Group {
+                    if showPassword {
+                        TextField(text: $password, prompt: requiredPrompt(label)) { Text(label) }
+                            .atlasNoAutocapitalization()
+                            .autocorrectionDisabled()
+                    } else {
+                        SecureField(text: $password, prompt: requiredPrompt(label)) { Text(label) }
+                    }
+                }
+                .font(AtlasTypography.caption)
+                .focused($focus, equals: label)
+                #if canImport(UIKit)
+                .textContentType(.newPassword)
+                #endif
+                Button {
+                    showPassword.toggle()
+                } label: {
+                    Image(systemName: showPassword ? "eye.slash" : "eye")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.secondaryText)
+                        .frame(width: 32, height: 32)
+                        .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel(showPassword ? "Hide password" : "Show password")
+            }
             .padding(.horizontal, 16)
             .frame(height: 52)
             .background(RoundedRectangle(cornerRadius: 13).fill(AtlasColors.secondaryBackground))
             .overlay(RoundedRectangle(cornerRadius: 13)
                 .stroke(AtlasColors.primaryText.opacity(0.18), lineWidth: 1))
+            if !password.isEmpty, password.count < Self.minimumPassword, focus != label {
+                Text("At least \(Self.minimumPassword) characters.")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.destructive)
+                    .padding(.horizontal, 16)
+            }
+        }
     }
 }
 

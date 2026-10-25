@@ -33,7 +33,9 @@ struct SignInView: View {
         mode == .signIn ? "No account? Create one" : "Have an account? Sign in"
     }
     private var canSubmit: Bool {
-        !isWorking && email.contains("@") && password.count >= 6
+        // Sign-up asks for 8, like onboarding's form; sign-in still accepts
+        // the 6 that older accounts were made with.
+        !isWorking && email.contains("@") && password.count >= (mode == .signUp ? 8 : 6)
     }
 
     var body: some View {

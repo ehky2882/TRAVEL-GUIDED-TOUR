@@ -72,6 +72,31 @@ struct OnboardingError: View {
     }
 }
 
+/// What creating an account agrees to, with the two documents one tap away
+/// (owner, 2026-10-25). Shown wherever an account is actually created —
+/// screen 5 (Apple / Google) and the email form.
+struct OnboardingTermsLine: View {
+    private var text: AttributedString {
+        let markdown = "By creating an account you agree to our "
+            + "[Terms](\(AtlasLegalLinks.terms.absoluteString)) and "
+            + "[Privacy Policy](\(AtlasLegalLinks.privacy.absoluteString))."
+        return (try? AttributedString(markdown: markdown))
+            ?? AttributedString("By creating an account you agree to our Terms and Privacy Policy.")
+    }
+
+    var body: some View {
+        Text(text)
+            .font(AtlasTypography.caption)
+            .foregroundStyle(AtlasColors.secondaryText)
+            .tint(AtlasColors.brass)
+            .multilineTextAlignment(.center)
+            // Never truncated: with the keyboard up the actions area is
+            // squeezed, and "Ter…" hides what is being agreed to.
+            .fixedSize(horizontal: false, vertical: true)
+            .frame(maxWidth: .infinity)
+    }
+}
+
 /// "Dozent", always in the wordmark — New York serif 15pt, tracked 2, Title
 /// Case. Same as `SplashView` and the Settings masthead.
 func dozentWordmark(_ trailing: String = "") -> Text {
