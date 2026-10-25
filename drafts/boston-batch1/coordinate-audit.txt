@@ -1,0 +1,56 @@
+RUN check-coordinates.py · rev 02bd1f9f · 2026-10-02T12:45:57Z · args: --drop /tmp/nextcity/drop --city Boston, United States --out drafts/boston-batch1/coordinate-audit.txt
+auditing 30 coordinate(s) against 'Boston, United States'  (~1.1 min at Nominatim's rate limit)
+
+  [  1/30] african-meeting-house              fwd      0m  at: African Meeting House
+  [  2/30] uss-constitution                   fwd    467m  at: USS Constitution
+  [  3/30] old-south-meeting-house            fwd      0m  at: Old South Meeting Place
+  [  4/30] old-north-church                   fwd      0m  at: Old North Church
+  [  5/30] greenway-north-end                 fwd    373m  at: North End Parks
+  [  6/30] paul-revere-house                  fwd      0m  at: Paul Revere House
+  [  7/30] commonwealth-avenue-mall           fwd  24175m  at: Civil War Veterans' Bench
+  [  8/30] faneuil-hall                       fwd      0m  at: -
+  [  9/30] boston-marathon-finish-line        fwd      0m  at: -
+  [ 10/30] copley-square                      fwd      0m  at: John Singleton Copley
+  [ 11/30] hanover-street-north-end           fwd    202m  at: -
+  [ 12/30] granary-burying-ground             fwd      0m  at: Franklin Family
+  [ 13/30] shaw-54th-memorial                 fwd    n/a  at: Robert Gould Shaw and Fifty-fo
+  [ 14/30] boston-public-garden               fwd     12m  at: Boston Public Garden Foot Brid
+  [ 15/30] kings-chapel                       fwd      0m  at: Kings Chapel
+  [ 16/30] bunker-hill-monument               fwd      0m  at: Bunker Hill Monument
+  [ 17/30] acorn-street-louisburg-square      fwd    n/a  at: -
+  [ 18/30] long-wharf-boston                  fwd      0m  at: -
+  [ 19/30] boston-common                      fwd     55m  at: Soldiers and Sailors Monument
+  [ 20/30] quincy-market                      fwd      0m  at: -
+  [ 21/30] park-street-church                 fwd      0m  at: Park Street Church
+  [ 22/30] chinatown-gate-boston              fwd      0m  at: Beach Street
+  [ 23/30] copps-hill-burying-ground          fwd    n/a  at: Copp's Hill Burying Ground
+  [ 24/30] boston-city-hall-plaza             fwd      0m  at: Main Plaza
+  [ 25/30] old-state-house                    fwd      0m  at: -
+  [ 26/30] massachusetts-state-house          fwd      0m  at: Massachusetts State House Post
+  [ 27/30] christian-science-plaza            fwd      0m  at: Christian Science Plaza
+  [ 28/30] charles-street-beacon-hill         fwd    233m  at: -
+  [ 29/30] fenway-park                        fwd      0m  at: -
+  [ 30/30] harvard-yard                       fwd    166m  at: Harvard Hall
+
+========================================================================
+GROSS - none: every coordinate is at or beside its venue
+
+UNVERIFIABLE - 6: no automatic verdict, and that is
+not the same as a pass. A towpath, a square and a long street have no
+single point to measure against; read the script and judge by hand.
+    commonwealth-avenue-mall                 venue geocodes to a street, not a point
+    hanover-street-north-end                 geocoder found something else (0 km away)
+    shaw-54th-memorial                       venue could not be geocoded
+    acorn-street-louisburg-square            venue could not be geocoded
+    copps-hill-burying-ground                venue could not be geocoded
+    charles-street-beacon-hill               venue geocodes to a street, not a point
+  (a GROSS verdict needs the geocoder to have found the venue itself;
+   where it did not, the distance is reported and not acted on)
+
+========================================================================
+BIAS - 11/26 north of true position, median -0.0 m, p = 0.56
+  reference, measured 2026-08-22:
+    old-sourced cities (NYC, London)   24/51   -0.9 m   p = 1.0
+    drop-pipeline cities (BCN, MIL)    41/50  +10.3 m   p = 5.6e-06
+
+  >> No significant directional bias. Consistent with upstream fixed.

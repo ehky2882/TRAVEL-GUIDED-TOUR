@@ -749,6 +749,16 @@ sat. A different branch of the same bar, and the pin was left alone.
 2026-09-15 pass, Kiwamiya and Saryo Tsujiri still share a point and are **correct**: both are
 inside 丸の内1-9-1, the Daimaru Tokyo / Gransta building. Check the addresses before "fixing" it.
 
+### 🔴 A street name geocodes to ONE of its segments, and it may be the wrong one (2026-09-29)
+
+Miami's Española Way was staged 457 m from where its script stands. The script is on the
+pedestrian lane off Washington Avenue; the point was on a residential stretch of the same street
+four blocks west. `check-coordinates.py` passed it, because its geocoder returned that same wrong
+segment: the check compared a point with itself. CI's **Spine coordinate audit** caught it (420 m
+from the Wikidata item). **For a street, a mall or any linear subject, match the point to the
+stretch the script describes** (OSM `highway=pedestrian` and the like), and read every Spine
+DISAGREES line on a city launch rather than filing it under "large site".
+
 ## 5. Images
 
 🔴 **Correcting an image means a NEW filename — never overwrite bytes at a live URL.** A phone
@@ -801,6 +811,31 @@ hand-building a `/thumb/` path (a constructed one returns 400).
 
 **rawpixel serves `editor_1024` whatever Openverse advertises.** Two images advertised at
 7000×5249 delivered 1024×768. Download and measure.
+
+### 🔴 A Commons category listing has NO licence filter (2026-09-29)
+
+The Miami batch was reported as "all PD/CC0 Commons, no attribution owed". The owner picked
+77 images on that basis, and 74 were uploaded. **At least 61 were CC BY or CC BY-SA.** The
+`license=cc0,pdm` filter exists on Openverse; a Commons `Category:` listing or MediaWiki
+search applies none. The pool had been drawn from both. The manifest recorded
+`num, slug, code, name, src, orig, sha` and **no licence**, so no later step could catch
+it. It surfaced only when a later session opened one file's Flickr source page.
+
+**Record the licence per candidate at sourcing time** (Commons `extmetadata.LicenseShortName`,
+or Openverse's `license`), carry it on the contact sheet, and refuse to call a batch
+"no attribution owed" unless every pick's recorded licence is `cc0`/`pdm`. To check a
+batch after the fact while Commons is throttled, match each exact Commons filename
+against Openverse (`?q=<title>&source=wikimedia`, with a real User-Agent — the default
+Python one is 403'd). Commons filenames are unique, so an exact title match is the same file.
+
+### A pasted image that never became a file is still in the transcript (2026-09-29)
+
+In web sessions an image the owner pastes into chat can render for Claude and still never
+appear on disk. Two sessions in a row hit this, and the first asked the owner to resend
+repeatedly. The image **is** saved in the session transcript,
+`~/.claude/projects/<project>/<session>.jsonl`, as a content block with `type: image` and
+base64 `source.data`. Decode it with a few lines of Python, then hash the written file as
+usual. **Do this before asking the owner to resend anything.**
 
 ### A creator's cover frame is not a picture of the venue (2026-09-16)
 
@@ -864,11 +899,16 @@ missing from the primary source and is wrong.
 decodes a missing key as nil and the feature just stops existing — no crash, no log, no failed CI.
 Asking the live RPC what keys it returns is the only detection.
 
-🔴 **Deleting from `Tours.json` does NOT remove it from Postgres.** `seed_from_toursjson.py` is
-**upsert-only by design**, so a deletion reaches the gh-pages mirror and the bundled seed and
-never reaches the database the app reads first. A removal is a two-part change: the catalogue
-edit **plus SQL the owner runs**. `backend/pull_nycunfilteredstories.sql` sat committed and
-unpasted for **eight days** while four "removed" pins kept being served.
+🔴 **Deleting from `Tours.json` reaches Postgres ONLY while the entry's maker stays in the
+catalogue.** `seed_from_toursjson.py` was upsert-only until it gained a prune step, and that prune
+deletes a missing tour or pin **only when its `maker_id` is still a catalogue maker** (the guard
+that keeps in-app uploads safe). So to remove a pin, delete the pin and **keep its maker row**,
+even if the maker now has no entries. The next content merge's seed then deletes it from the
+database with no owner paste (2026-10-02: the Instagram @oneyearinparis Chinese Scholar's Garden
+duplicate). ⚠️ **Delete the maker row as well and the prune can no longer see the pin**, and you
+are back to the old two-part change: the catalogue edit **plus SQL the owner runs**. That is how
+`backend/pull_nycunfilteredstories.sql` sat committed and unpasted for **eight days** while four
+"removed" pins kept being served.
 
 **And the inverse: adding a key to `Tours.json` does not put it in front of users.** Supabase is
 primary. Build 68 shipped the place layer and showed the old behaviour because `places.sql` had
@@ -3650,3 +3690,23 @@ a caption-slug file from before the pins were renamed. **When a pin's hero is co
 stop image with it** (every other pin has `stop == hero`). Also: two pins cut from one post are
 byte-identical by construction; `check-image-duplicates.py` now allows that, as it already did for
 two pins sharing one file.
+
+## A staged walk's image names go stale when a single's hero is corrected (2026-10-01)
+
+The Miami walk pick-map was written on 2026-09-29. It named the reused singles' heroes as `<slug>_hero`. Then three of
+those heroes were corrected the only safe way, under a NEW filename (`_hero-2`, CLAUDE.md § Image Pipeline step 9).
+Copying the pick-map at wire-in pointed one stop at a **404** (`dupont-building_hero`) and two at an orphaned
+old hero, byte-identical to its single's `_3` gallery image. The validator passed all three, because a URL
+is well-formed whether or not it exists. `check-image-duplicates.py --maker <CODE>` caught both kinds.
+**At wire-in, take a reused stop's image from the single's current `heroImageURL` in `Tours.json`, never
+from the staging document.**
+
+## gh-pages pushes a few minutes apart cancel each other's deploy (2026-10-02)
+
+The owner pasted Boston photos one at a time, and each was pushed to gh-pages as it arrived, 1 to 8 minutes
+apart. A Pages build takes about 8–10 minutes, and **each new push cancels the deploy still running**.
+Eight deploys in a row ended `cancelled`. So for an hour **none** of 92 images was live, including the
+first batch, pushed long before. The live check returned 404 on every file, and the branch looked fine
+throughout. **Batch the uploads: commit each photo locally, push gh-pages once when the owner pauses,
+then hash-verify the live URLs.** If a hash check fails across the board, list the `pages build and
+deployment` runs before suspecting the files.

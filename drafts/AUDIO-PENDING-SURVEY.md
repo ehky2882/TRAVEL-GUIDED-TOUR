@@ -31,7 +31,21 @@ the branches to answer "what's left?".
   `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
   `.mp3` is there).
 
-**Last verified:** 2026-09-25 — 🇺🇸 **MIAMI added to the queue: 30 single-stop tours staged, 0 MP3s.** Scripts only; images are being sourced now. See the row below and `drafts/miami-batch1/README.md` on `claude/new-city-staging-260925`. Miami will be the **36th bureau** (Atlas Studio MIA, `aed488af-23d3-514f-90f1-035ca2285d0d`) — the city has no Atlas tours today, only 39 creator link pins.
+**Last verified:** 2026-10-13 — 🇺🇸 **WASHINGTON DC added to the queue: 31 single-stop tours + 5 walks (34 segments) STAGED, 0 MP3s, 0 images.** Scripts, audited coordinates and pick-maps are in `drafts/washington-dc-batch1/` and `drafts/washington-dc-walks/` on `main`. Maker at wire-in: Atlas Studio WAS, `e170d645-86aa-51d2-a5e6-ad1cacf06e26` (uuid5 `atlas-maker:was`, scheme re-verified against PHL). Expect 65 MP3s.
+
+**Previously verified:** 2026-10-07 (evening) — 🇺🇸 **PHILADELPHIA IS LIVE: 30 singles + 5 walks wired (Atlas Studio PHL, the 41st studio). The queue is EMPTY.**
+
+**Previously verified:** 2026-10-06 — 🇺🇸 **Philadelphia's 66 MP3s arrived and are on gh-pages** (transcript-matched, hash-verified). The city is held, by the owner's instruction, until the last 5 tours' and 3 walk connectives' images are backfilled. The assembler is ready at `drafts/philadelphia-batch1/tools/wire_philly.py`.
+
+**Previously verified:** 2026-10-02 (night) — 🇺🇸 **PHILADELPHIA added to the queue: 30 single-stop tours + 5 walks (36 segments) STAGED, 0 MP3s, 0 images.** Scripts, audited coordinates and pick-maps are in `drafts/philadelphia-batch1/` and `drafts/philadelphia-walks/` on `main`. Maker at wire-in: Atlas Studio PHL, `e6977a1f-af18-5f64-923a-052c350ce76e` (uuid5 `atlas-maker:phl`, scheme re-verified against BOS), the 41st studio (Auckland took 40th on 2026-10-07). 🔴 The author's pronunciation pass is a hard blocker before recording (`drafts/philadelphia-batch1/README.md` § Owed).
+
+**Previously verified:** 2026-10-02 (evening) — 🇺🇸 **BOSTON IS LIVE: 30 singles + 5 walks wired. The queue is EMPTY.**
+
+**Previously verified:** 2026-10-02 — 🇺🇸 **BOSTON added to the queue: 30 single-stop tours + 5 walks (29 segments) STAGED, 0 MP3s.** Scripts, audited coordinates and pick-maps are in `drafts/boston-batch1/` and `drafts/boston-walks/` on `main`. Maker at wire-in: Atlas Studio BOS, `cebccd48-7b4b-5719-bb5b-194734d5db8e` (uuid5 `atlas-maker:bos`, scheme re-verified against MIA). Miami is fully LIVE (30 singles + 5 walks), so it has left the table.
+
+**Previously verified:** 2026-09-29 — 🇺🇸 **MIAMI's 30 singles are WIRED** (Atlas Studio MIA, `aed488af-23d3-514f-90f1-035ca2285d0d`, the 38th studio). The same Dropbox drop also carried **33 MP3s for five Miami walks (W1–W5)** that were never staged: no scripts in the repo, no stop coordinates, no images. They are the only thing in the queue now; see the row below.
+
+**Previously verified:** 2026-09-25 — Miami added to the queue: 30 single-stop tours staged, 0 MP3s.
 
 **Previously verified:** 2026-09-22 — **the queue was EMPTY.** `TOTAL PENDING` below reads 0 and that is right: 🇺🇸 **Atlanta, staged on 2026-08-26, has since gone LIVE** — 30 tours under Atlas Studio ATL in `origin/main`'s `Tours.json` (#900, the 35th bureau). ⚠️ **This header still read "Atlanta added to the queue" for four weeks after that**, contradicting the table directly beneath it — the header and the table are one record, so **move both in the same edit**. The branches still holding old staged drafts (`claude/london-batch3-scripts-260616`, `claude/paris-scripts-260622`, `claude/amsterdam-handoff-preserve-hlhyp8`) are for cities now fully live (London 100, Paris 50, Atlanta 30) and hold no pending content.
 **Previously verified:** 2026-08-26 (🇺🇸 **Atlanta added to the queue** — 30 single-stop tours staged, 21 image-complete, 0 MP3s; see the row below. Previously 2026-08-26: 🇩🇰 **Copenhagen COMPLETE** — 40 tours live under Atlas Studio CPH, the 34th Atlas maker, Denmark's first city and the catalog's 22nd country; catalog 1552 tours / 1924 stops. **Never in this table** — the thirteenth consecutive complete drop (audio + scripts + images in one Dropbox `/scl/fo/` drop, 103 MB, first try; 155 images already 1200×900, 40 clean/TTS-safe pairs 1:1, zero byte-duplicates) and wired the same day.)
@@ -58,16 +72,23 @@ the branches to answer "what's left?".
 
 ## PENDING — staged, awaiting narration audio
 
-**🇺🇸 Miami is pending** — staged 2026-09-25, scripts only, no narration recorded. It is the
-only thing in the queue. Five singles the Chicago master list marks as drafted (18 Wrigley Field,
-19 Lincoln Park, 22 Gold Coast/Astor, 26 Wicker Park, 27 The 606) were never delivered as
-scripts, images or audio — **if they ever arrive they are a second batch** and get a fresh row
-here, per the staging rule below.
+**🇺🇸 Miami walks W1–W5: STAGED 2026-09-29.** See `drafts/miami-walks/README.md` on `main`, which has all 33 stop coordinates, audio names, the image plan and what is still owed. The narrative below is the pre-staging account.
+The owner's 2026-09-29 Dropbox drop held 30 single MP3s, which are now wired, plus 33 walk MP3s
+(`MIAMI W1/…` to `MIAMI W5/…`, each walk with an `00_intro` and numbered or `c` connector stops),
+and three planning docs (`miami_tour_master_list.md`, `miami_scope_proposal.md`,
+`miami_session_handoff.md`). **The walk scripts, stop coordinates and images are not in the repo.**
+The master list names each stop's standpoint, e.g. W5: Lenox Avenue mouth → Alton → Venetian
+Causeway foot → Maurice Gibb Park → Purdy Avenue → 20th and Purdy. The MP3s were not uploaded,
+because slugs are undecided. Ask the owner for the drop again when a session stages them.
+The author's own handoff also lists **pre-record flags 25–66 as open** (factual claims to verify or
+soften, e.g. causeway status and roadwork). Those flags cover the singles too.
 
-| City | Pending tours | Breakdown | MP3s needed | Staging branch | Maker at wire-in |
-|------|--------------:|-----------|------------:|----------------|------------------|
-| 🇺🇸 **Miami** | **30** | 30 single-stop, no walks | **30** | `claude/new-city-staging-260925` | **Atlas Studio MIA** `aed488af-23d3-514f-90f1-035ca2285d0d` (new, 36th) |
-| **TOTAL PENDING** | **30** | | **30** | | |
+| City | Pending tours | Breakdown | MP3s | Staging branch | Maker at wire-in |
+|------|--------------:|-----------|-----:|----------------|------------------|
+| 🇺🇸 **Boston** | **0** | ✅ **LIVE 2026-10-02:** 30 singles + 5 walks (29 segments) wired under Atlas Studio BOS. See `archive/HANDOFF-261002-boston-live.md` | **59 on gh-pages** | — | **Atlas Studio BOS** |
+| 🇺🇸 **Philadelphia** | **0** | ✅ **LIVE 2026-10-07:** 30 singles + 5 walks (36 segments) wired under Atlas Studio PHL, the 41st studio. See `archive/HANDOFF-261006-philadelphia-ready.md` | **66 on gh-pages** | — | **Atlas Studio PHL** |
+| 🇺🇸 **Washington DC** | **36** | 31 singles (01–30 + 40 Old Stone House) + 5 walks (34 segments). STAGED 2026-10-13: scripts + audited coordinates. **Images DONE 2026-10-15 (168 on gh-pages). 0 MP3s.** Pronunciation pass owed before recording (`drafts/washington-dc-batch1/README.md`) | **0 of 65** | `main` (`drafts/washington-dc-*`) | **Atlas Studio WAS** `e170d645-…` |
+| **TOTAL PENDING** | **36** | | | | |
 
 ### 🇺🇸 Miami batch 1 — what a later session needs to know
 
@@ -96,6 +117,8 @@ time to re-derive:
   Boulevard` returns the median's relation centroid ~576 m south of the Bay of Pigs column (the
   median runs south; the column stands at the north end), and searching `Bayfront Park` ranks a
   Metromover station above the park.
+
+_(✅ 🇺🇸 **Miami singles = DONE (2026-09-29): 30 tours LIVE** under Atlas Studio MIA — 30 single-stop, geofenced at 30–120 m per the staged pick-map; 8 in `Miami Beach`, 22 in `Miami`. Images: 60 CC credit rows in `drafts/CREDITS.md` (owner chose to keep them with credits), plus owner photographs. The walks are still pending, above.)_
 
 _(✅ 🇺🇸 **Atlanta = DONE (2026-09-14, PR #900): 30 tours LIVE** — 30 single-stop, geofenced at
 30 m, no walks, under new maker **Atlas Studio ATL** (`ccaab715-2f29-597e-8b3a-0d38e8d370da`) —
@@ -260,7 +283,7 @@ If you replace an image under an existing name, update `CREDITS.md` in the same 
 - ~~`paris-leftbank` — "The Left Bank"~~ — **LIVE 2026-07-09 (PR #383)**, 7 tracks — **all 5 Paris walks now live**
 - Reuse the 45 live single-stop Paris heroes where stops overlap; a few fresh walk images already staged (Îles hero, Marais Musée Picasso — CC credits in `IMAGE-CREDITS-paris-batch1.txt`). READMEs say "create the PAR maker" — **stale**: PAR now exists, so walks wire straight in.
 
-**🇨🇦 Montreal — ✅ LIVE (2026-07-28)** — all **29 tours** under **Atlas Studio YUL** (`4f7241f0-9392-54a4-8807-24fd959e61fe`): 25 single-stop (geofenced 30 m) + 4 walks — `montreal-oldmontreal-walk` (intro+5, 1.5 km, history) · `montreal-mountroyal-walk` (intro+4, 1.8 km, natureAndParks) · `montreal-plateaumileend-walk` (intro+4, 3.0 km, culturalHeritage) · `montreal-downtown-walk` (intro+4, 1.5 km, culturalHeritage). **46 MP3s, 90m13s narration** (57m10 singles + 33m03 walks). Owner audio arrived complete and matched the staged drafts 1:1 — the numbering gaps (13, 18, 19, 20, 28, 29) in the delivery are exactly the scripts that were never written. Nothing Montreal pending. Credits: `drafts/CREDITS.md` (Montreal — 19 CC-credited).
+**🇨🇦 Montreal — ✅ LIVE (2026-07-28)** — all **29 tours** under **Atlas Studio YUL** (`4f7241f0-9392-54a4-8807-24fd959e61fe`): 25 single-stop (geofenced 30 m) + 4 walks — `montreal-oldmontreal-walk` (intro+5, 1.5 km, history) · `montreal-mountroyal-walk` (intro+4, 1.8 km, natureAndParks) · `montreal-plateaumileend-walk` (intro+4, 3.0 km, culturalHeritage) · `montreal-downtown-walk` (intro+4, 1.5 km, culturalHeritage). **46 MP3s, 90m13s narration** (57m10 singles + 33m03 walks). Owner audio arrived complete and matched the staged drafts 1:1 — the numbering gaps (13, 19, 20, 28, 29) in the delivery are exactly the scripts that were never written. Nothing Montreal pending. Credits: `drafts/CREDITS.md` (Montreal — 19 CC-credited).
 
 ⚠️ **Mount Royal's walk hero was an open question the staging README flagged owner-to-confirm** — the Kondiaronk Belvedere (the payoff view) vs the Cross (the narrative climax, since the walk is bookended by Maisonneuve's 1643 vow). Wired with the **belvedere**, the README's own stated default. One-line swap if the owner prefers the Cross.
 
@@ -306,7 +329,7 @@ Maker id (uuid5 of `atlas-maker:ord`): `f34cd76e-1e41-5c38-865d-d8eccd775cd3`. S
   image count, tags and credit, tag-validated against the controlled vocabulary. **Written as staging went, not
   after** — the lesson from Dubai.
 - **Singles: image staging COMPLETE and audited** — 84 files, every hero present, every gallery contiguous from `_2`.
-- **⚠️ The script numbering is NOT contiguous: 01–17, 20, 21, 23, 24, 25, 28, 29, 30. Numbers 18, 19, 22, 26 and 27
+- **⚠️ The script numbering is NOT contiguous: 01–17, 20, 21, 23, 24, 25, 28, 29, 30. Numbers 19, 22, 26 and 27
   were never delivered.** Recorded so nobody assumes a gap means a lost file — the Rome failure, written down in
   advance. If those five exist they are a second batch.
 - **5 walks** — three of intro + 5 stops, two (the Magnificent Mile, Pilsen) of intro + 4:

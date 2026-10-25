@@ -353,9 +353,46 @@ def oembed(url: str) -> dict:
             "COULD NOT VERIFY — the platform did not return JSON. This is NOT a\n"
             f"pass; the post may be private, deleted, or region-locked.\n{body[:300]}"
         )
+    if not data.get("thumbnail_url") and plat == "tiktok":
+        # ⚠️ Observed 2026-10-20: TikTok's oEmbed now returns only the iframe —
+        # no title, author or thumbnail — for every post. The video page still
+        # carries all three in its rehydration JSON, so read them from there.
+        data = {**data, **tiktok_page_meta(url)}
     if not data.get("thumbnail_url"):
         raise SystemExit("COULD NOT VERIFY — no thumbnail in the oEmbed response.")
     return data
+
+
+BROWSER_AGENT = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+                 "(KHTML, like Gecko) Chrome/124 Safari/537.36")
+
+
+def tiktok_page_meta(url: str) -> dict:
+    """oEmbed-shaped fields from a TikTok video page, or {} if it has none.
+
+    Scraping, like `avatar_source`: an internal key in page HTML that TikTok can
+    rename without notice. It returns {} rather than raising, so the caller's
+    "no thumbnail" refusal still fires when the page changes shape.
+    """
+    import re as _re
+    try:
+        html = curl(url, agent=BROWSER_AGENT)
+        g = _re.search(r'<script id="__UNIVERSAL_DATA_FOR_REHYDRATION__"[^>]*>(.*?)</script>',
+                       html, _re.S)
+        item = (json.loads(g.group(1))["__DEFAULT_SCOPE__"]["webapp.video-detail"]
+                ["itemInfo"]["itemStruct"])
+    except Exception:
+        return {}
+    video, author = item.get("video") or {}, item.get("author") or {}
+    uid = author.get("uniqueId") or ""
+    return {
+        "title": item.get("desc") or "",
+        "author_unique_id": uid,
+        "author_name": author.get("nickname") or uid,
+        "author_url": f"https://www.tiktok.com/@{uid}" if uid else "",
+        "thumbnail_url": video.get("originCover") or video.get("cover") or "",
+        "provider_name": "TikTok",
+    }
 
 
 def instagram_playability(html: str) -> tuple[bool, str]:

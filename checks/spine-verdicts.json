@@ -395,6 +395,15 @@
     "note": "CORRECT — and the 'finding' is a title artefact. Our order==0 stop sits 56 m from Wikidata's Drottningholm PALACE (Q207686-class, 59 sitelinks), which is what this 3-stop walk is about. The 276 m match is the LOCALITY 'Drottningholm' (19 sitelinks), picked only because our walk carries the bare place name as its title and that label-matches the village exactly. ⚠️ multiStop besides, which the runbook refuses to move.",
     "verdict": "name-collision"
   },
+  "Dudik Memorial Park": {
+    "at": [
+      45.330562,
+      19.017382
+    ],
+    "date": "2026-10-03",
+    "note": "Wikidata Q12759418 carries a rounded point (45.3336, 19.0125) 510 m north-west. OpenStreetMap's 'Spomen park Dudik' is 35 m from our point, which is on the memorial. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
   "East Side Gallery": {
     "at": [
       52.505,
@@ -2059,5 +2068,77 @@
     "date": "2026-09-23",
     "note": "CORRECT — the pin is on the schist village of Cerdeira (Lousã) and its arts centre, 'Atelier da Cerdeira' in OSM within 2 m. Wikidata matched the parish 'Cerdeira e Moura da Serra' in Arganil, 28 km away — a different place sharing the word.",
     "verdict": "name-collision"
+  },
+  "Ocean Drive — South Pointe to Lincoln Road": {
+    "at": [
+      25.76725,
+      -80.1355
+    ],
+    "date": "2026-10-01",
+    "note": "A multi-stop WALK named for the street it follows; the gazetteer matched the street 'Ocean Drive' (an extended feature, ~1.5 km long) against the walk's first stop, the intro at the South Pointe Park entrance where the route deliberately begins. Its Ocean Drive stop reuses the live single's coordinate exactly. Not a coordinate error. NOT MOVED.",
+    "verdict": "editorial-title"
+  },
+  "Calle Ocho — The Seam": {
+    "at": [
+      25.76572,
+      -80.21657
+    ],
+    "date": "2026-10-01",
+    "note": "A multi-stop WALK named for the street it follows; the gazetteer matched 'Calle Ocho Festival' (an event, not a venue) against the walk's first stop, the intro at SW 8th St x SW 13th Ave where the route deliberately begins. Not a coordinate error. NOT MOVED.",
+    "verdict": "editorial-title"
+  },
+  "Catacombs of Kom El Shoqafa": {
+    "at": [
+      31.17839,
+      29.89305
+    ],
+    "date": "2026-10-01",
+    "note": "OUR POINT IS CORRECT. en.wikipedia gives 31.178558, 29.892954 (~20 m from ours), and OSM's tourist-attraction node is at the same spot in Karmouz, just west of Pompey's Pillar. Wikidata Q2671839 sits 1.46 km north-east, which is not where the catacombs are. NOT MOVED.",
+    "verdict": "wikidata-wrong"
+  },
+  "Garuda Wisnu Kencana": {
+    "at": [
+      -8.81416,
+      115.16665
+    ],
+    "date": "2026-10-01",
+    "note": "The post is about the 121 m statue. Our point is 7.9 m from Wikidata's statue item 'Big Vishnu' (Q12498977). The 508 m match is Q1132052, the whole cultural park around it. NOT MOVED.",
+    "verdict": "extended-feature"
+  },
+  "Tuna el-Gebel": {
+    "at": [
+      27.74171,
+      30.7044
+    ],
+    "date": "2026-10-01",
+    "note": "A desert necropolis spread over several km (catacombs, the Petosiris tomb, the boundary stela). Our point is OSM's 'Tuna el-Gebel necropolis' attraction; Wikidata's centroid is 376 m away inside the same site. No single point is honest. NOT MOVED.",
+    "verdict": "extended-feature"
+  },
+  "Commonwealth Avenue Mall": {
+    "at": [
+      42.353618,
+      -71.071715
+    ],
+    "date": "2026-10-02",
+    "note": "CORRECT — the Mall is a ~1.5 km linear park from Arlington St to Massachusetts Ave; Wikidata's point sits mid-length. The script is told from the Arlington Street end looking west, and the stop sits on the east end of the Mall polygon (OSM way 820334088). NOT MOVED.",
+    "verdict": "extended-feature"
+  },
+  "Nairobi National Park": {
+    "at": [
+      -1.336773,
+      36.7798646
+    ],
+    "date": "2026-10-14",
+    "note": "Deliberately at the main gate, not the subject's centre: a whole 117 km² national park has no single honest point, and the tour's script opens at the gate (\"wherever your vehicle has stopped… head towards the main gate\"). Moved there at the contributor's request on 2026-10-14; Wikidata's point is the centre of the park.",
+    "verdict": "extended-feature"
+  },
+  "Karura Forest": {
+    "at": [
+      -1.2471606,
+      36.816451
+    ],
+    "date": "2026-10-14",
+    "note": "Deliberately at the main gate, not the subject's centre: a whole 1,000-hectare forest has no single honest point, and the tour's script opens at the gate (\"you're most likely at a gate off Kiambu Road or Limuru Road\"). Moved there at the contributor's request on 2026-10-14; Wikidata's point is the centre of the forest.",
+    "verdict": "extended-feature"
   }
 }

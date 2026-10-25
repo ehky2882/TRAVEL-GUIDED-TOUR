@@ -1,0 +1,266 @@
+{
+ "betsy-ross-house.mp3": {
+  "seconds": 135,
+  "sha256": "8819cad3ecd9733fce3b0a8da9794b72d9444896ec24183dad07ad53b110a3a3"
+ },
+ "boathouse-row.mp3": {
+  "seconds": 133,
+  "sha256": "7c55d8947255843e3b7fb8c7569963c31749c3ef587d812e73dbdbb7e842e844"
+ },
+ "carpenters-hall.mp3": {
+  "seconds": 136,
+  "sha256": "e63fd5fb18e04a265f0bbb102e5a1ba7d1ac7ca1613dfbd67d26d54dbb1b15e8"
+ },
+ "chinatown-friendship-gate.mp3": {
+  "seconds": 136,
+  "sha256": "58c8d6644716ca53fe6b82f52e4ba51705af02c4b4940b8ac70cb0640ab8abaa"
+ },
+ "christ-church-burial-ground.mp3": {
+  "seconds": 160,
+  "sha256": "541a87db7f67bcb3d55916f534f557a9af9cae7b2a50d4d825e895b2012a1c64"
+ },
+ "christ-church-philadelphia.mp3": {
+  "seconds": 143,
+  "sha256": "8552992d9523601f6f72de653221c19120c7e0c77fe902db97e194ff1e5a91c3"
+ },
+ "congress-hall.mp3": {
+  "seconds": 130,
+  "sha256": "16d470e0b40066c2a669fca63bc6c6ab6e523b3fa75ef2bc73c993037b317e21"
+ },
+ "eastern-state-penitentiary.mp3": {
+  "seconds": 140,
+  "sha256": "ea19f1e1d7f6f3b1b58b52b7858db86e59ffea552450243f4a341c15181d8d63"
+ },
+ "elfreths-alley.mp3": {
+  "seconds": 139,
+  "sha256": "b422fc7ef590fc0c434537f5261f523ccf554952ea9561d096e996e20d58197c"
+ },
+ "fairmount-water-works.mp3": {
+  "seconds": 134,
+  "sha256": "e7a5310566433d677a6938b07f5385d881af53be317911b5d99970e6fe948147"
+ },
+ "franklin-court.mp3": {
+  "seconds": 149,
+  "sha256": "67f21beb248cae5915950b6dc035984fe877c546c7a31ae99d8fea5338e6454a"
+ },
+ "franklin-square.mp3": {
+  "seconds": 136,
+  "sha256": "51080f446b2cefaf248c9a0ef045fcc8d3e8660ca7c37ebb01a5cfacc75dd340"
+ },
+ "head-house-square.mp3": {
+  "seconds": 131,
+  "sha256": "afec1ed94f657823cbf4cefa8e3fbcb9c60fa1ae0348a7d8326574aa71cf76e9"
+ },
+ "independence-hall.mp3": {
+  "seconds": 145,
+  "sha256": "17d6631af89e8563b26805ed9e8d49bd0f71b126e8e2023d6b56c95daaed9546"
+ },
+ "liberty-bell-center.mp3": {
+  "seconds": 159,
+  "sha256": "c2ff0dff6f1f3a83e75fb3fee7f98cf85b423771d29cd69c5863a140d8338470"
+ },
+ "logan-square.mp3": {
+  "seconds": 123,
+  "sha256": "def34fb4d80b41a45b9f4004c7cef75636c401e60ea971ee400a5a1f30b9167b"
+ },
+ "love-park.mp3": {
+  "seconds": 137,
+  "sha256": "a5d30f12a006ea20522fe51b0056d64de7283a49edd569a2b34ac96daee82650"
+ },
+ "masonic-temple-philadelphia.mp3": {
+  "seconds": 139,
+  "sha256": "a35f070f78650a11e59fa604722675b48b2c646e65bd70654c338adadc230a10"
+ },
+ "mother-bethel-ame-church.mp3": {
+  "seconds": 194,
+  "sha256": "97f84e6c93ea6e920353520cdd709330303fcded77a718246ec3df99d3933dc0"
+ },
+ "one-liberty-place.mp3": {
+  "seconds": 151,
+  "sha256": "c96656e3d2eed4fa79f5daaadab2ca1bf9385d3cace37ef6f16dfbd19ab494ca"
+ },
+ "penns-landing.mp3": {
+  "seconds": 123,
+  "sha256": "b5bccf914ee22acff78fb0d9efc50670cffb79b68d6f4cfc3e850b3d04758b28"
+ },
+ "philadelphia-brick-walk_stop0.mp3": {
+  "seconds": 125,
+  "sha256": "a53e67981ce4c78baec911390ff2b9fcc7062a2f5ceec3c1aa6e03de25d0e188"
+ },
+ "philadelphia-brick-walk_stop1.mp3": {
+  "seconds": 119,
+  "sha256": "89d74c002fe23be23d7b05ccd43cc147af4b91ab8ea51b40c50c291d8f0a5bac"
+ },
+ "philadelphia-brick-walk_stop2.mp3": {
+  "seconds": 140,
+  "sha256": "d44f0d3bd0884fd52f3eae56064119252cec81ea618f8df700ca370ecf004117"
+ },
+ "philadelphia-brick-walk_stop3.mp3": {
+  "seconds": 119,
+  "sha256": "fd1ca2d6eb9115e0d7a65538d02f780ad94d947dab12c99bd380b3ab8a0df902"
+ },
+ "philadelphia-brick-walk_stop4.mp3": {
+  "seconds": 90,
+  "sha256": "477f8cbdd9ffe4ba20743132dc943d5512f27b469fedd9321cc77121e0cc2dc3"
+ },
+ "philadelphia-brick-walk_stop5.mp3": {
+  "seconds": 128,
+  "sha256": "bf7f987083bcb4d40dc61e2fb8e7d52fde3a7a46d7607d45315aa9614d347e72"
+ },
+ "philadelphia-brick-walk_stop6.mp3": {
+  "seconds": 136,
+  "sha256": "7abc565effc4f0373fea09c6b2b3bcc22e632374c152306cd05d775a9adff7a2"
+ },
+ "philadelphia-brick-walk_stop7.mp3": {
+  "seconds": 137,
+  "sha256": "e0e9fe68328199ae7ad4f7124b848c6fb85c228f3f8fdd6265511b56dcd22425"
+ },
+ "philadelphia-broad-and-market-walk_stop0.mp3": {
+  "seconds": 98,
+  "sha256": "6e7fdbdbf88a1ab95109b2dbfb2ec0f21324b535605ab74eac3fa1ea20090922"
+ },
+ "philadelphia-broad-and-market-walk_stop1.mp3": {
+  "seconds": 81,
+  "sha256": "b61fe5889726af9065c03b8d74aa710d2df29abf1d462972c9b784ab577a18e2"
+ },
+ "philadelphia-broad-and-market-walk_stop2.mp3": {
+  "seconds": 81,
+  "sha256": "d507bd1a1570b0b1dff50adc3fb117a90bd04feac34b38656cdfd530f8ce0457"
+ },
+ "philadelphia-broad-and-market-walk_stop3.mp3": {
+  "seconds": 115,
+  "sha256": "565352a49606b847421a59f7a3e3830e0fa656ba7871b3b166c2982cd9b84a7f"
+ },
+ "philadelphia-broad-and-market-walk_stop4.mp3": {
+  "seconds": 102,
+  "sha256": "e7c1835e6d9219d42d0141bb14e83159266e7b508c4b45f85d3cc2d30bc76a11"
+ },
+ "philadelphia-broad-and-market-walk_stop5.mp3": {
+  "seconds": 40,
+  "sha256": "71165b476994c697480940d4f969e669aa74ba4a97699c1c44efb3df6622ffc1"
+ },
+ "philadelphia-broad-and-market-walk_stop6.mp3": {
+  "seconds": 74,
+  "sha256": "c50fbfb98ae53eb1644586e636cc003f7240c54a91dd82da070144df9debf9dd"
+ },
+ "philadelphia-broad-and-market-walk_stop7.mp3": {
+  "seconds": 77,
+  "sha256": "75ef01a4ad0e57cec42e8b93e0d2c16e5c23a27ed7b14c55079687fe4b36ceea"
+ },
+ "philadelphia-broad-and-market-walk_stop8.mp3": {
+  "seconds": 87,
+  "sha256": "94e0b8bd772d92886eda427bdb31b7ee8a0b8f8999d9edb20969504cf85868b0"
+ },
+ "philadelphia-city-hall.mp3": {
+  "seconds": 175,
+  "sha256": "2fc6bd3c681508d45c33858cb440cf6962fec52f07a8642e635fa04a9c0a4cad"
+ },
+ "philadelphia-fifth-square-walk_stop0.mp3": {
+  "seconds": 86,
+  "sha256": "140fb8b25d86f8d6c2d50e5c5a80c688c848d8f0a2404635770cd37fd83c51ce"
+ },
+ "philadelphia-fifth-square-walk_stop1.mp3": {
+  "seconds": 93,
+  "sha256": "d06ccd498888948c83522ac792fc113e64b5143630d54a27c838ec65a0cce3c9"
+ },
+ "philadelphia-fifth-square-walk_stop2.mp3": {
+  "seconds": 106,
+  "sha256": "145a51455a5b85d0f4b5839c39740717b869c1ecf91e9ad7989df41b9acbeb56"
+ },
+ "philadelphia-fifth-square-walk_stop3.mp3": {
+  "seconds": 54,
+  "sha256": "c3d1703f8e4a31b4bffca3ee460c5ce1925bb44a84029bee6d45094ee62b2ef2"
+ },
+ "philadelphia-fifth-square-walk_stop4.mp3": {
+  "seconds": 76,
+  "sha256": "8467fc1db482bcc62528b6015ffd40912f8cb72e734a6ed57f0010f032a8da6d"
+ },
+ "philadelphia-fifth-square-walk_stop5.mp3": {
+  "seconds": 107,
+  "sha256": "3225116b4ad92143339ac000ed0f23efdf652c59ccac5aa3208d00b45b15167d"
+ },
+ "philadelphia-house-that-isnt-there-walk_stop0.mp3": {
+  "seconds": 120,
+  "sha256": "9ce0d3f2fea9dc98dd65e5c93f85853ae6199ee0beb7ca160b2c7673c9bc5d1d"
+ },
+ "philadelphia-house-that-isnt-there-walk_stop1.mp3": {
+  "seconds": 123,
+  "sha256": "9283923257712718ac080b37794426363e825c9bf35911723f773c569e9314c5"
+ },
+ "philadelphia-house-that-isnt-there-walk_stop2.mp3": {
+  "seconds": 132,
+  "sha256": "89dd4823a8c9545edc2db6bd129c461390dc2b46a8a5d1479d2de2613b251f4c"
+ },
+ "philadelphia-house-that-isnt-there-walk_stop3.mp3": {
+  "seconds": 127,
+  "sha256": "b25e045863266178390d6e6637e1b86125c5c3488845adcd0a381ff9b5e1d889"
+ },
+ "philadelphia-house-that-isnt-there-walk_stop4.mp3": {
+  "seconds": 130,
+  "sha256": "5af71e60eb151c35b1f76c99cd6dddac7bbfc39821edd616646d3fe20aef54a8"
+ },
+ "philadelphia-house-that-isnt-there-walk_stop5.mp3": {
+  "seconds": 126,
+  "sha256": "6ed428d4811b538cdce46ada9410a7ac78de48e1b0b0871f7a438bab6161d2c8"
+ },
+ "philadelphia-house-that-isnt-there-walk_stop6.mp3": {
+  "seconds": 184,
+  "sha256": "9614adb82695148d34663a6e35cc164e20eac9692e0a04f6350bfe0e0007ca66"
+ },
+ "philadelphia-museum-of-art-steps.mp3": {
+  "seconds": 173,
+  "sha256": "55bf5806c76f3ff5d86d0a705917c6e81571f96c009e5766b67d20ea5d98e7a8"
+ },
+ "philadelphia-the-boulevard-walk_stop0.mp3": {
+  "seconds": 123,
+  "sha256": "242b2620be8708d1c414c1730d6b019ecd2b4f3fd7a278e8abb346c269a176a9"
+ },
+ "philadelphia-the-boulevard-walk_stop1.mp3": {
+  "seconds": 139,
+  "sha256": "38fc18349ab667ff25aa48abc27028ff9f6b90a8dfd6be0a94e477b71d54df61"
+ },
+ "philadelphia-the-boulevard-walk_stop2.mp3": {
+  "seconds": 125,
+  "sha256": "50ff7c45f9e8e9621c3c1b9fda98cab140f4a4f644960f924260ff4edb893a16"
+ },
+ "philadelphia-the-boulevard-walk_stop3.mp3": {
+  "seconds": 135,
+  "sha256": "7ae97047357a6af1b95b97a78a79cc22b65171dcfb3619bf868537487767529c"
+ },
+ "philadelphia-the-boulevard-walk_stop4.mp3": {
+  "seconds": 138,
+  "sha256": "a5e814570e41bdf9a232acd254ec3aaffc2d0d7d8c72a86503aceb929388989a"
+ },
+ "philadelphia-the-boulevard-walk_stop5.mp3": {
+  "seconds": 126,
+  "sha256": "ee956251158c2b12e2ba29ef9a5fcaad1e17f42d9ba13f1ff089202be1e1dbfe"
+ },
+ "presidents-house-site.mp3": {
+  "seconds": 141,
+  "sha256": "832e631621b1ea5c5c4adca9e1fcb53ceaf8dfa859ea6381b509320aa847ed85"
+ },
+ "race-street-pier.mp3": {
+  "seconds": 135,
+  "sha256": "96d6d0720d91a3c3793ba67b5bab50ac29e64708fef9fbca37d9d8ce75d7df09"
+ },
+ "reading-terminal-market.mp3": {
+  "seconds": 150,
+  "sha256": "383bf2cb8908770f1f0fad4754556d9eb14d6994de120f37ce24dda4b63a740b"
+ },
+ "rittenhouse-square.mp3": {
+  "seconds": 142,
+  "sha256": "d3c5c4159aff4bfc88ecde14aa5bef548d770db91c4e810a008266484e738f1e"
+ },
+ "rodin-museum.mp3": {
+  "seconds": 137,
+  "sha256": "e216e8229e02f3fb97e9eee4390171f1b490acd6adef732d26b124eb9e0713e3"
+ },
+ "second-bank-of-the-united-states.mp3": {
+  "seconds": 142,
+  "sha256": "902b952efbe985f7aeb71b199d9274241030fb3906eac8d92ac5d7e18edc95bf"
+ },
+ "washington-square-philadelphia.mp3": {
+  "seconds": 160,
+  "sha256": "2d7bb581bc7d1f4a978bc91a701e55521ff4732acd2d1179d2689481e4dc003b"
+ }
+}

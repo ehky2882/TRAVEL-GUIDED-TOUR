@@ -1,0 +1,2838 @@
+{
+ "picker": "https://claude.ai/artifact/Ky2zRMHBARidzPDbgzsq5B",
+ "note": "code -> source of each candidate in the Philadelphia image picker. url is the ~1400px source to crop from; credit=true means CC BY/BY-SA (log in drafts/CREDITS.md if picked). dl = Unsplash download_location to ping when a photo is used.",
+ "codes": {
+  "01-1": {
+   "url": "https://images.unsplash.com/photo-1665888382663-74a86f3ceb32?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwzfHxJbmRlcGVuZGVuY2UlMjBIYWxsJTIwUGhpbGFkZWxwaGlhfGVufDF8MHx8fDE3OTEwMzczMTR8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-large-brick-building-with-a-clock-tower-with-independence-hall-in-the-background-znjcQLC4Bz0",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Ernie Journeys",
+   "dl": "https://api.unsplash.com/photos/znjcQLC4Bz0/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwzfHxJbmRlcGVuZGVuY2UlMjBIYWxsJTIwUGhpbGFkZWxwaGlhfGVufDF8MHx8fDE3OTEwMzczMTR8MA"
+  },
+  "01-2": {
+   "url": "https://images.unsplash.com/photo-1651309097153-2b57609593df?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxJbmRlcGVuZGVuY2UlMjBIYWxsJTIwUGhpbGFkZWxwaGlhfGVufDF8MHx8fDE3OTEwMzczMTR8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-large-building-with-a-clock-tower-with-maryland-state-house-in-the-background-eJCQOMWhrGA",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Miguel \u00c1ngel Sanz",
+   "dl": "https://api.unsplash.com/photos/eJCQOMWhrGA/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxJbmRlcGVuZGVuY2UlMjBIYWxsJTIwUGhpbGFkZWxwaGlhfGVufDF8MHx8fDE3OTEwMzczMTR8MA"
+  },
+  "01-3": {
+   "url": "https://images.unsplash.com/photo-1644105740681-6bcb7335224b?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw1fHxJbmRlcGVuZGVuY2UlMjBIYWxsJTIwUGhpbGFkZWxwaGlhfGVufDF8MHx8fDE3OTEwMzczMTR8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-large-building-with-a-clock-tower-in-the-middle-of-a-park-5rRzN_a0RzY",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Jimmy Hu",
+   "dl": "https://api.unsplash.com/photos/5rRzN_a0RzY/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw1fHxJbmRlcGVuZGVuY2UlMjBIYWxsJTIwUGhpbGFkZWxwaGlhfGVufDF8MHx8fDE3OTEwMzczMTR8MA"
+  },
+  "01-4": {
+   "url": "https://images.unsplash.com/photo-1665888659015-0a50e60e938b?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw5fHxJbmRlcGVuZGVuY2UlMjBIYWxsJTIwUGhpbGFkZWxwaGlhfGVufDF8MHx8fDE3OTEwMzczMTR8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-clock-on-a-tower-M23cLuSb_Yo",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Ernie Journeys",
+   "dl": "https://api.unsplash.com/photos/M23cLuSb_Yo/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw5fHxJbmRlcGVuZGVuY2UlMjBIYWxsJTIwUGhpbGFkZWxwaGlhfGVufDF8MHx8fDE3OTEwMzczMTR8MA"
+  },
+  "01-5": {
+   "url": "https://images.pexels.com/photos/14088457/pexels-photo-14088457.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/independence-hall-in-philadelphia-under-blue-sky-14088457/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Lavdrim Mustafi",
+   "dl": null
+  },
+  "01-6": {
+   "url": "https://images.pexels.com/photos/14088588/pexels-photo-14088588.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/independence-national-historic-park-in-philadelphia-14088588/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Lavdrim Mustafi",
+   "dl": null
+  },
+  "01-8": {
+   "url": "https://images.pexels.com/photos/39382017/pexels-photo-39382017.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/independence-hall-tower-in-philadelphia-39382017/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "A G",
+   "dl": null
+  },
+  "01-9": {
+   "url": "https://images.pexels.com/photos/12344919/pexels-photo-12344919.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/the-historic-independence-hall-in-philadelphia-12344919/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Malcolm Hill",
+   "dl": null
+  },
+  "02-1": {
+   "url": "https://images.pexels.com/photos/39677739/pexels-photo-39677739.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/liberty-bell-in-philadelphia-historical-landmark-39677739/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Joshua Santos",
+   "dl": null
+  },
+  "02-2": {
+   "url": "https://images.pexels.com/photos/5437555/pexels-photo-5437555.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/pass-and-stow-bell-on-sunny-street-5437555/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Brett Sayles",
+   "dl": null
+  },
+  "02-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Independence_National_Historical_Park_INDE0004_b.jpg/1920px-Independence_National_Historical_Park_INDE0004_b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Independence_National_Historical_Park_INDE0004_b.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "National Park Service Digital Image Archives",
+   "dl": null
+  },
+  "02-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Independence_National_Historical_Park_%2835606c2d-3a41-4e6b-99aa-ae4fa72d51e1%29.jpg/1920px-Independence_National_Historical_Park_%2835606c2d-3a41-4e6b-99aa-ae4fa72d51e1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Independence_National_Historical_Park_(35606c2d-3a41-4e6b-99aa-ae4fa72d51e1).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Victoria Stauffenberg",
+   "dl": null
+  },
+  "02-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Visiting_the_Liberty_Bell_%282f5d5c60-1dd8-b71b-0b12-fa813e740f6a%29.JPG/1920px-Visiting_the_Liberty_Bell_%282f5d5c60-1dd8-b71b-0b12-fa813e740f6a%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Visiting_the_Liberty_Bell_(2f5d5c60-1dd8-b71b-0b12-fa813e740f6a).JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "NPS photo",
+   "dl": null
+  },
+  "02-6": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Liberty_Bell%2C_Philadelphia%2C_Pennsylvania_-_20120501.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Liberty_Bell,_Philadelphia,_Pennsylvania_-_20120501.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Smuconlaw",
+   "dl": null
+  },
+  "02-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Liberty_Bell-Philadelphia5652.JPG/1920px-Liberty_Bell-Philadelphia5652.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Liberty_Bell-Philadelphia5652.JPG",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Diego Delso",
+   "dl": null
+  },
+  "02-8": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Liberty_1.JPG/1920px-Liberty_1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Liberty_1.JPG",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "Artico2",
+   "dl": null
+  },
+  "02-9": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Liberty_Bell_Oregon_State_Capitol_3.jpg/1920px-Liberty_Bell_Oregon_State_Capitol_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Liberty_Bell_Oregon_State_Capitol_3.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Kingofthedead",
+   "dl": null
+  },
+  "02-10": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Independence_Hall_reflected_in_the_glass_of_the_Liberty_Bell_Center_with_the_Liberty_Bell_visible_through_the_glass.jpg/1920px-Independence_Hall_reflected_in_the_glass_of_the_Liberty_Bell_Center_with_the_Liberty_Bell_visible_through_the_glass.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Independence_Hall_reflected_in_the_glass_of_the_Liberty_Bell_Center_with_the_Liberty_Bell_visible_through_the_glass.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Impala402",
+   "dl": null
+  },
+  "03-1": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/2012-07_Independence_National_Historical_Park_07.JPG/1920px-2012-07_Independence_National_Historical_Park_07.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:2012-07_Independence_National_Historical_Park_07.JPG",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "Ziko van Dijk",
+   "dl": null
+  },
+  "03-2": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/President%27s_House_Site_2022-06_%2857%29.jpg/1920px-President%27s_House_Site_2022-06_%2857%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:President%27s_House_Site_2022-06_(57).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Kreuz und quer",
+   "dl": null
+  },
+  "03-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/President%27s_House_Site_2022-06_%2892%29.jpg/1920px-President%27s_House_Site_2022-06_%2892%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:President%27s_House_Site_2022-06_(92).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Kreuz und quer",
+   "dl": null
+  },
+  "03-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/President%27s_House_Site_overview_%28af38328e-f519-485d-8af2-d292752a5de1%29.JPG/1920px-President%27s_House_Site_overview_%28af38328e-f519-485d-8af2-d292752a5de1%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:President%27s_House_Site_overview_(af38328e-f519-485d-8af2-d292752a5de1).JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "NPS photo",
+   "dl": null
+  },
+  "03-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Names_of_the_Enslaved_-_President%27s_House_Site_2022-06_%2896%29.jpg/1920px-Names_of_the_Enslaved_-_President%27s_House_Site_2022-06_%2896%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Names_of_the_Enslaved_-_President%27s_House_Site_2022-06_(96).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Kreuz und quer",
+   "dl": null
+  },
+  "03-6": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/President%27s_House_Site%2C_original_foundations_%2869be07a6-155d-451f-6775-9799ea759c84%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:President%27s_House_Site,_original_foundations_(69be07a6-155d-451f-6775-9799ea759c84).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "NPS photo",
+   "dl": null
+  },
+  "03-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/2012-07_Independence_National_Historical_Park_08.JPG/1920px-2012-07_Independence_National_Historical_Park_08.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:2012-07_Independence_National_Historical_Park_08.JPG",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "Ziko van Dijk",
+   "dl": null
+  },
+  "03-8": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Presidents_House_Site_-_Enslaved_Memorial_2022-06_%289%29.jpg/1920px-Presidents_House_Site_-_Enslaved_Memorial_2022-06_%289%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Presidents_House_Site_-_Enslaved_Memorial_2022-06_(9).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Kreuz und quer",
+   "dl": null
+  },
+  "03-9": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/House_and_People%2C_Visitor_Center_-_President%27s_House_Site_2022-06_%2827%29.jpg/1920px-House_and_People%2C_Visitor_Center_-_President%27s_House_Site_2022-06_%2827%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:House_and_People,_Visitor_Center_-_President%27s_House_Site_2022-06_(27).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Kreuz und quer",
+   "dl": null
+  },
+  "03-10": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Dirty_Business_of_Slavery_-_President%27s_House_Site_2022-06_%2879%29.jpg/1920px-Dirty_Business_of_Slavery_-_President%27s_House_Site_2022-06_%2879%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Dirty_Business_of_Slavery_-_President%27s_House_Site_2022-06_(79).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Kreuz und quer",
+   "dl": null
+  },
+  "03-11": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Hercules_video_-_President%27s_House_Site_2022-06_%2880%29.jpg/1920px-Hercules_video_-_President%27s_House_Site_2022-06_%2880%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Hercules_video_-_President%27s_House_Site_2022-06_(80).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Kreuz und quer",
+   "dl": null
+  },
+  "03-12": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/President%27s_House_Site_2022-06_%28105%29.jpg/1920px-President%27s_House_Site_2022-06_%28105%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:President%27s_House_Site_2022-06_(105).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Kreuz und quer",
+   "dl": null
+  },
+  "04-1": {
+   "url": "https://images.unsplash.com/photo-1704226858774-62df77f2a8f3?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxFbGZyZXRoJTI3cyUyMEFsbGV5JTIwUGhpbGFkZWxwaGlhfGVufDF8MHx8fDE3OTEwMzczODd8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-narrow-street-lined-with-red-brick-buildings-wnBUOvKzFoo",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Vinicius Brasil",
+   "dl": "https://api.unsplash.com/photos/wnBUOvKzFoo/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxFbGZyZXRoJTI3cyUyMEFsbGV5JTIwUGhpbGFkZWxwaGlhfGVufDF8MHx8fDE3OTEwMzczODd8MA"
+  },
+  "04-2": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Elfreth%27s_Alley%2C_Philadelphia.jpg/1920px-Elfreth%27s_Alley%2C_Philadelphia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Elfreth%27s_Alley,_Philadelphia.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "C\u00e9line Harrand",
+   "dl": null
+  },
+  "04-3": {
+   "url": "https://images.pexels.com/photos/38325335/pexels-photo-38325335.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/charming-elfreth-s-alley-in-philadelphia-38325335/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Nancy Bourque",
+   "dl": null
+  },
+  "04-4": {
+   "url": "https://images.pexels.com/photos/9525391/pexels-photo-9525391.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/elfreths-alley-history-museum-in-philadelphia-9525391/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Noriely Fernandez",
+   "dl": null
+  },
+  "04-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Elfreth%27s_Alley%2C_Philadelphia%2C_Pennsylvania_LCCN2011630510.tif/lossy-page1-1920px-Elfreth%27s_Alley%2C_Philadelphia%2C_Pennsylvania_LCCN2011630510.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Elfreth%27s_Alley,_Philadelphia,_Pennsylvania_LCCN2011630510.tif",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Carol M. Highsmith",
+   "dl": null
+  },
+  "04-6": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Elfreth%27s_Alley%2C_Philadelphia%2C_2008.jpg/1920px-Elfreth%27s_Alley%2C_Philadelphia%2C_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Elfreth%27s_Alley,_Philadelphia,_2008.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "User:BenFranske",
+   "dl": null
+  },
+  "04-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Elfreth%27s_Alley%2C_Philadelphia%2C_PA.JPG/1920px-Elfreth%27s_Alley%2C_Philadelphia%2C_PA.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Elfreth%27s_Alley,_Philadelphia,_PA.JPG",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "ProfReader",
+   "dl": null
+  },
+  "04-8": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Elfreth%27s_Alley-2023_03.jpg/1920px-Elfreth%27s_Alley-2023_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Elfreth%27s_Alley-2023_03.jpg",
+   "lic": "CC BY 3.0",
+   "credit": true,
+   "by": "Alberto-g-rovi",
+   "dl": null
+  },
+  "04-9": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Elfreth%27s_Alley_%2853572700168%29.jpg/1920px-Elfreth%27s_Alley_%2853572700168%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Elfreth%27s_Alley_(53572700168).jpg",
+   "lic": "CC BY 2.0",
+   "credit": true,
+   "by": "ajay_suresh",
+   "dl": null
+  },
+  "04-10": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Elfreth%27s_Alley-2023_01.jpg/1920px-Elfreth%27s_Alley-2023_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Elfreth%27s_Alley-2023_01.jpg",
+   "lic": "CC BY 3.0",
+   "credit": true,
+   "by": "Alberto-g-rovi",
+   "dl": null
+  },
+  "04-11": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/132_Elfreth%27s_Alley.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:132_Elfreth%27s_Alley.JPG",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "ProfReader",
+   "dl": null
+  },
+  "04-12": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Elfreth%27s_Alley-2023_02.jpg/1920px-Elfreth%27s_Alley-2023_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Elfreth%27s_Alley-2023_02.jpg",
+   "lic": "CC BY 3.0",
+   "credit": true,
+   "by": "Alberto-g-rovi",
+   "dl": null
+  },
+  "05-1": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Christ_Church_Phila.JPG/1920px-Christ_Church_Phila.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Christ_Church_Phila.JPG",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "PVSBond",
+   "dl": null
+  },
+  "05-2": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Christ_Church_Phila_crop.JPG/1920px-Christ_Church_Phila_crop.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Christ_Church_Phila_crop.JPG",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "PVSBond; cropped by Beyond My Ken (talk) 02:26, 19 March 201",
+   "dl": null
+  },
+  "05-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Christ_Church%2C_Philadelphia_12.2021_%28edited%29.jpg/1920px-Christ_Church%2C_Philadelphia_12.2021_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Christ_Church,_Philadelphia_12.2021_(edited).jpg",
+   "lic": "CC BY-SA 2.0",
+   "credit": true,
+   "by": "Al R",
+   "dl": null
+  },
+  "05-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Christ_Church%2C_Philadelphia_12.2021_2.jpg/1920px-Christ_Church%2C_Philadelphia_12.2021_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Christ_Church,_Philadelphia_12.2021_2.jpg",
+   "lic": "CC BY-SA 2.0",
+   "credit": true,
+   "by": "Al R",
+   "dl": null
+  },
+  "05-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Christ_Church_from_N._2nd_Street.jpg/1920px-Christ_Church_from_N._2nd_Street.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Christ_Church_from_N._2nd_Street.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "05-6": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Christ_Church_Philadelphia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Christ_Church_Philadelphia.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "05-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Christ_Church_interior.jpg/1920px-Christ_Church_interior.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Christ_Church_interior.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "J. Passepartout",
+   "dl": null
+  },
+  "05-8": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Christ_church_philly.jpg/1920px-Christ_church_philly.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Christ_church_philly.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "J. Passepartout",
+   "dl": null
+  },
+  "05-9": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Christ_Church_tower_from_northwest_top.jpg/1920px-Christ_Church_tower_from_northwest_top.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Christ_Church_tower_from_northwest_top.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "05-10": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Christ_Church_tower%2C_Philadelphia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Christ_Church_tower,_Philadelphia.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Thornfield Hall",
+   "dl": null
+  },
+  "05-11": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Christ_Church_from_2nd_Street.jpg/1920px-Christ_Church_from_2nd_Street.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Christ_Church_from_2nd_Street.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "05-12": {
+   "url": "https://images.pexels.com/photos/33598937/pexels-photo-33598937.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/historical-church-illuminated-at-night-in-alexandria-33598937/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Eric Joseph",
+   "dl": null
+  },
+  "06-1": {
+   "url": "https://images.unsplash.com/photo-1580872395806-2b3e05243e7d?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxNHx8UGhpbGFkZWxwaGlhJTIwQ2l0eSUyMEhhbGx8ZW58MXwwfHx8MTc5MTAzNzQwMnww&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/white-concrete-building-under-blue-sky-during-daytime-JZ1XdKW5oHs",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Alejandro Barba",
+   "dl": "https://api.unsplash.com/photos/JZ1XdKW5oHs/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxNHx8UGhpbGFkZWxwaGlhJTIwQ2l0eSUyMEhhbGx8ZW58MXwwfHx8MTc5MTAzNzQwMnww"
+  },
+  "06-2": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Philadelphia_City_Hall_-_DSC06801.JPG/1920px-Philadelphia_City_Hall_-_DSC06801.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Philadelphia_City_Hall_-_DSC06801.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Daderot",
+   "dl": null
+  },
+  "06-3": {
+   "url": "https://images.pexels.com/photos/13570337/pexels-photo-13570337.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/the-philadelphia-city-hall-13570337/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Joel Zar",
+   "dl": null
+  },
+  "06-4": {
+   "url": "https://images.pexels.com/photos/5719245/pexels-photo-5719245.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/low-angle-shot-of-a-concrete-clock-tower-5719245/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Dan Parlante",
+   "dl": null
+  },
+  "06-5": {
+   "url": "https://images.unsplash.com/photo-1543372993-5fc1fc83caac?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwyfHxQaGlsYWRlbHBoaWElMjBDaXR5JTIwSGFsbHxlbnwxfDB8fHwxNzkxMDM3NDAyfDA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/timelapse-photography-of-city-6LCen1qDcOw",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Pretty Pink",
+   "dl": "https://api.unsplash.com/photos/6LCen1qDcOw/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwyfHxQaGlsYWRlbHBoaWElMjBDaXR5JTIwSGFsbHxlbnwxfDB8fHwxNzkxMDM3NDAyfDA"
+  },
+  "06-6": {
+   "url": "https://images.unsplash.com/photo-1543372993-db3d6409e431?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxMnx8UGhpbGFkZWxwaGlhJTIwQ2l0eSUyMEhhbGx8ZW58MXwwfHx8MTc5MTAzNzQwMnww&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/philadelphia-city-hall-at-night-20wbZZgbRP8",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Pretty Pink",
+   "dl": "https://api.unsplash.com/photos/20wbZZgbRP8/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxMnx8UGhpbGFkZWxwaGlhJTIwQ2l0eSUyMEhhbGx8ZW58MXwwfHx8MTc5MTAzNzQwMnww"
+  },
+  "06-7": {
+   "url": "https://images.pexels.com/photos/37023169/pexels-photo-37023169.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/majestic-philadelphia-city-hall-clock-tower-37023169/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Mariya Eskina",
+   "dl": null
+  },
+  "06-8": {
+   "url": "https://images.pexels.com/photos/37143598/pexels-photo-37143598.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/philadelphia-cityscape-featuring-city-hall-37143598/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "K",
+   "dl": null
+  },
+  "06-9": {
+   "url": "https://images.pexels.com/photos/39466836/pexels-photo-39466836.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/iconic-philadelphia-city-hall-at-dusk-39466836/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Mariya Eskina",
+   "dl": null
+  },
+  "06-10": {
+   "url": "https://images.pexels.com/photos/37195569/pexels-photo-37195569.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/dramatic-aerial-view-of-philadelphia-city-hall-at-night-37195569/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "K",
+   "dl": null
+  },
+  "06-11": {
+   "url": "https://images.pexels.com/photos/35377996/pexels-photo-35377996.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/festive-night-at-philadelphia-city-hall-35377996/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Trev W. Adams",
+   "dl": null
+  },
+  "06-12": {
+   "url": "https://images.unsplash.com/photo-1649037095218-259df25fe84c?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw0fHxQaGlsYWRlbHBoaWElMjBDaXR5JTIwSGFsbHxlbnwxfDB8fHwxNzkxMDM3NDAyfDA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-view-of-a-city-with-a-statue-in-the-middle-3vDkhjwV7hM",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Mike Conway",
+   "dl": "https://api.unsplash.com/photos/3vDkhjwV7hM/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw0fHxQaGlsYWRlbHBoaWElMjBDaXR5JTIwSGFsbHxlbnwxfDB8fHwxNzkxMDM3NDAyfDA"
+  },
+  "06-13": {
+   "url": "https://images.unsplash.com/photo-1641764793815-f1929469e7c0?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxNXx8UGhpbGFkZWxwaGlhJTIwQ2l0eSUyMEhhbGx8ZW58MXwwfHx8MTc5MTAzNzQwMnww&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-large-building-with-a-steeple-on-top-of-it-ARlO29SKa-Q",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Tomas Martinez",
+   "dl": "https://api.unsplash.com/photos/ARlO29SKa-Q/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxNXx8UGhpbGFkZWxwaGlhJTIwQ2l0eSUyMEhhbGx8ZW58MXwwfHx8MTc5MTAzNzQwMnww"
+  },
+  "06-14": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/FISHEYE_VIEW_FROM_CENTER_COURTYARD_OF_CITY_HALL_-_NARA_-_552707.tif/lossy-page1-1920px-FISHEYE_VIEW_FROM_CENTER_COURTYARD_OF_CITY_HALL_-_NARA_-_552707.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:FISHEYE_VIEW_FROM_CENTER_COURTYARD_OF_CITY_HALL_-_NARA_-_552707.tif",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Dick Swanson",
+   "dl": null
+  },
+  "07-1": {
+   "url": "https://images.unsplash.com/photo-1647964436128-21c64014f2c0?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxQaGlsYWRlbHBoaWElMjBNdXNldW0lMjBvZiUyMEFydCUyMHN0ZXBzfGVufDF8MHx8fDE3OTEwMzc0MTd8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-group-of-people-walking-up-and-down-steps-in-front-of-a-building-E8igli19YzA",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Andrew Adams",
+   "dl": "https://api.unsplash.com/photos/E8igli19YzA/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxQaGlsYWRlbHBoaWElMjBNdXNldW0lMjBvZiUyMEFydCUyMHN0ZXBzfGVufDF8MHx8fDE3OTEwMzc0MTd8MA"
+  },
+  "07-2": {
+   "url": "https://images.unsplash.com/photo-1722207942623-0cf42c86be73?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw0fHxQaGlsYWRlbHBoaWElMjBNdXNldW0lMjBvZiUyMEFydCUyMHN0ZXBzfGVufDF8MHx8fDE3OTEwMzc0MTd8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-group-of-people-walking-up-a-set-of-stairs-GTfHVTxMkd8",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Jonathan Gong",
+   "dl": "https://api.unsplash.com/photos/GTfHVTxMkd8/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw0fHxQaGlsYWRlbHBoaWElMjBNdXNldW0lMjBvZiUyMEFydCUyMHN0ZXBzfGVufDF8MHx8fDE3OTEwMzc0MTd8MA"
+  },
+  "07-3": {
+   "url": "https://images.unsplash.com/photo-1672620587986-39a1c179d41e?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw3fHxQaGlsYWRlbHBoaWElMjBNdXNldW0lMjBvZiUyMEFydCUyMHN0ZXBzfGVufDF8MHx8fDE3OTEwMzc0MTd8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-large-building-with-a-fountain-in-front-of-it-EypiOYgXgHU",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Yucel M",
+   "dl": "https://api.unsplash.com/photos/EypiOYgXgHU/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw3fHxQaGlsYWRlbHBoaWElMjBNdXNldW0lMjBvZiUyMEFydCUyMHN0ZXBzfGVufDF8MHx8fDE3OTEwMzc0MTd8MA"
+  },
+  "07-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Philadelphia_Museum_of_Art%2C_main_building.jpg/1920px-Philadelphia_Museum_of_Art%2C_main_building.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Philadelphia_Museum_of_Art,_main_building.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "",
+   "dl": null
+  },
+  "07-5": {
+   "url": "https://images.unsplash.com/photo-1601089846899-4d7d38111b4e?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwyfHxQaGlsYWRlbHBoaWElMjBNdXNldW0lMjBvZiUyMEFydCUyMHN0ZXBzfGVufDF8MHx8fDE3OTEwMzc0MTd8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/people-walking-near-brown-concrete-building-during-daytime-tSA7eU2WnE4",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Yucel M",
+   "dl": "https://api.unsplash.com/photos/tSA7eU2WnE4/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwyfHxQaGlsYWRlbHBoaWElMjBNdXNldW0lMjBvZiUyMEFydCUyMHN0ZXBzfGVufDF8MHx8fDE3OTEwMzc0MTd8MA"
+  },
+  "07-6": {
+   "url": "https://images.unsplash.com/photo-1687002165332-49a4bbd79032?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw2fHxQaGlsYWRlbHBoaWElMjBNdXNldW0lMjBvZiUyMEFydCUyMHN0ZXBzfGVufDF8MHx8fDE3OTEwMzc0MTd8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-large-building-with-a-statue-in-front-of-it-r2Q3G8KGqPc",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Praswin Prakashan",
+   "dl": "https://api.unsplash.com/photos/r2Q3G8KGqPc/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw2fHxQaGlsYWRlbHBoaWElMjBNdXNldW0lMjBvZiUyMEFydCUyMHN0ZXBzfGVufDF8MHx8fDE3OTEwMzc0MTd8MA"
+  },
+  "07-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Philadelphia_Museum_of_Art_2016.jpg/1920px-Philadelphia_Museum_of_Art_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Philadelphia_Museum_of_Art_2016.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Heather Dong",
+   "dl": null
+  },
+  "07-8": {
+   "url": "https://images.unsplash.com/photo-1669663648147-67377fca488c?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxMXx8UGhpbGFkZWxwaGlhJTIwTXVzZXVtJTIwb2YlMjBBcnQlMjBzdGVwc3xlbnwxfDB8fHwxNzkxMDM3NDE3fDA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-group-of-people-walking-up-stairs-_kns36IC6U0",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Luisa Frassier",
+   "dl": "https://api.unsplash.com/photos/_kns36IC6U0/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxMXx8UGhpbGFkZWxwaGlhJTIwTXVzZXVtJTIwb2YlMjBBcnQlMjBzdGVwc3xlbnwxfDB8fHwxNzkxMDM3NDE3fDA"
+  },
+  "07-9": {
+   "url": "https://images.unsplash.com/photo-1661004673919-24c9cf301eae?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxMnx8UGhpbGFkZWxwaGlhJTIwTXVzZXVtJTIwb2YlMjBBcnQlMjBzdGVwc3xlbnwxfDB8fHwxNzkxMDM3NDE3fDA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-group-of-people-play-on-some-steps-RdW4pQ1VEfA",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Daniel Bernard",
+   "dl": "https://api.unsplash.com/photos/RdW4pQ1VEfA/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxMnx8UGhpbGFkZWxwaGlhJTIwTXVzZXVtJTIwb2YlMjBBcnQlMjBzdGVwc3xlbnwxfDB8fHwxNzkxMDM3NDE3fDA"
+  },
+  "07-10": {
+   "url": "https://images.unsplash.com/photo-1669663645412-1c85f67891a9?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxM3x8UGhpbGFkZWxwaGlhJTIwTXVzZXVtJTIwb2YlMjBBcnQlMjBzdGVwc3xlbnwxfDB8fHwxNzkxMDM3NDE3fDA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-group-of-people-outside-a-building-BDm_JkxR3VQ",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Luisa Frassier",
+   "dl": "https://api.unsplash.com/photos/BDm_JkxR3VQ/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxM3x8UGhpbGFkZWxwaGlhJTIwTXVzZXVtJTIwb2YlMjBBcnQlMjBzdGVwc3xlbnwxfDB8fHwxNzkxMDM3NDE3fDA"
+  },
+  "07-11": {
+   "url": "https://images.unsplash.com/photo-1655387952054-af61e143f4a2?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwzfHxQaGlsYWRlbHBoaWElMjBNdXNldW0lMjBvZiUyMEFydCUyMHN0ZXBzfGVufDF8MHx8fDE3OTEwMzc0MTd8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-large-building-with-a-statue-in-the-middle-of-a-grass-field-68qj_holQfg",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Tomas Martinez",
+   "dl": "https://api.unsplash.com/photos/68qj_holQfg/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwzfHxQaGlsYWRlbHBoaWElMjBNdXNldW0lMjBvZiUyMEFydCUyMHN0ZXBzfGVufDF8MHx8fDE3OTEwMzc0MTd8MA"
+  },
+  "07-12": {
+   "url": "https://images.pexels.com/photos/4642501/pexels-photo-4642501.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/old-museum-of-art-near-sculptures-and-lawn-in-philadelphia-4642501/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "K",
+   "dl": null
+  },
+  "07-13": {
+   "url": "https://images.pexels.com/photos/37143585/pexels-photo-37143585.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/aerial-view-of-philadelphia-museum-of-art-37143585/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "K",
+   "dl": null
+  },
+  "07-14": {
+   "url": "https://images.pexels.com/photos/37143589/pexels-photo-37143589.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/aerial-view-of-philadelphia-museum-of-art-37143589/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "K",
+   "dl": null
+  },
+  "08-1": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Philadelphia_%283378102966%29.jpg/1920px-Philadelphia_%283378102966%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Philadelphia_(3378102966).jpg",
+   "lic": "CC BY 2.0",
+   "credit": true,
+   "by": "Mobilus In Mobili",
+   "dl": null
+  },
+  "08-2": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/12th_Arch.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:12th_Arch.jpg",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "Bruce Andersen",
+   "dl": null
+  },
+  "08-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Dinic%27s_Roast_Pork_%26_Beef_-_Reading_Terminal_Market_%2853587019890%29.jpg/1920px-Dinic%27s_Roast_Pork_%26_Beef_-_Reading_Terminal_Market_%2853587019890%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Dinic%27s_Roast_Pork_%26_Beef_-_Reading_Terminal_Market_(53587019890).jpg",
+   "lic": "CC BY 2.0",
+   "credit": true,
+   "by": "ajay_suresh",
+   "dl": null
+  },
+  "08-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Dutch_Eating_Place_-_Reading_Terminal_Market_%2853586896714%29.jpg/1920px-Dutch_Eating_Place_-_Reading_Terminal_Market_%2853586896714%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Dutch_Eating_Place_-_Reading_Terminal_Market_(53586896714).jpg",
+   "lic": "CC BY 2.0",
+   "credit": true,
+   "by": "ajay_suresh",
+   "dl": null
+  },
+  "08-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Philadelphia_Reading_Terminal_Market_Cheese_steak_%287138221275%29.jpg/1920px-Philadelphia_Reading_Terminal_Market_Cheese_steak_%287138221275%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Philadelphia_Reading_Terminal_Market_Cheese_steak_(7138221275).jpg",
+   "lic": "CC BY 2.0",
+   "credit": true,
+   "by": "Luca Nebuloni",
+   "dl": null
+  },
+  "08-6": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Day120aphillyreadingmarket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Day120aphillyreadingmarket.jpg",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "Chensiyuan at English Wikipedia",
+   "dl": null
+  },
+  "08-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/RTM_Harry_Ochs.jpg/1920px-RTM_Harry_Ochs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:RTM_Harry_Ochs.jpg",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "Bruce Andersen",
+   "dl": null
+  },
+  "08-8": {
+   "url": "https://images.pexels.com/photos/15426306/pexels-photo-15426306.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/interior-of-a-market-15426306/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Angel Balcruz",
+   "dl": null
+  },
+  "08-9": {
+   "url": "https://images.pexels.com/photos/15426317/pexels-photo-15426317.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/restaurants-and-market-stalls-15426317/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Angel Balcruz",
+   "dl": null
+  },
+  "08-10": {
+   "url": "https://images.pexels.com/photos/7883930/pexels-photo-7883930.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/people-at-a-meat-shop-7883930/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Garrison Gao",
+   "dl": null
+  },
+  "08-11": {
+   "url": "https://images.pexels.com/photos/19168409/pexels-photo-19168409.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/people-waiting-in-a-line-to-buy-food-19168409/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "BOA.vision",
+   "dl": null
+  },
+  "08-12": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Intrigue_at_the_Terminal_Market_-_Flickr_-_incidencematrix.jpg/1920px-Intrigue_at_the_Terminal_Market_-_Flickr_-_incidencematrix.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Intrigue_at_the_Terminal_Market_-_Flickr_-_incidencematrix.jpg",
+   "lic": "CC BY 2.0",
+   "credit": true,
+   "by": "incidencematrix",
+   "dl": null
+  },
+  "09-1": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Rittenhouse_Square_-_autumn_-_IMG_6570.JPG/1920px-Rittenhouse_Square_-_autumn_-_IMG_6570.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Rittenhouse_Square_-_autumn_-_IMG_6570.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Daderot",
+   "dl": null
+  },
+  "09-2": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Rittenhouse_Square_2024.jpg/1920px-Rittenhouse_Square_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Rittenhouse_Square_2024.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Ii2nmd",
+   "dl": null
+  },
+  "09-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Lion_Snake_Rittenhs_Sq.jpg/1920px-Lion_Snake_Rittenhs_Sq.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Lion_Snake_Rittenhs_Sq.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "09-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Rittenhouse_Square_-_autumn_-_IMG_6567.JPG/1920px-Rittenhouse_Square_-_autumn_-_IMG_6567.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Rittenhouse_Square_-_autumn_-_IMG_6567.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Daderot",
+   "dl": null
+  },
+  "09-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Rittenhouse_Square_-_autumn_-_IMG_6554.JPG/1920px-Rittenhouse_Square_-_autumn_-_IMG_6554.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Rittenhouse_Square_-_autumn_-_IMG_6554.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Daderot",
+   "dl": null
+  },
+  "09-6": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Rittenhouse_Square_-_autumn_-_IMG_6550.JPG/1920px-Rittenhouse_Square_-_autumn_-_IMG_6550.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Rittenhouse_Square_-_autumn_-_IMG_6550.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Daderot",
+   "dl": null
+  },
+  "09-7": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Girl_w_duck_Rittenhs_Sq.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Girl_w_duck_Rittenhs_Sq.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "09-8": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Bloomin_%28Unsplash%29.jpg/1920px-Bloomin_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Bloomin_(Unsplash).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Redd Angelo reddangelo16",
+   "dl": null
+  },
+  "09-9": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Christmas_tree_in_Rittenhouse_Square_-_IMG_7511.JPG/1920px-Christmas_tree_in_Rittenhouse_Square_-_IMG_7511.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Christmas_tree_in_Rittenhouse_Square_-_IMG_7511.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Daderot",
+   "dl": null
+  },
+  "09-10": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Rittenhouse_Square_-_autumn_-_IMG_6576.JPG/1920px-Rittenhouse_Square_-_autumn_-_IMG_6576.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Rittenhouse_Square_-_autumn_-_IMG_6576.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Daderot",
+   "dl": null
+  },
+  "09-11": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Sunflower_dial_Rittenhs_Sq.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Sunflower_dial_Rittenhs_Sq.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "10-1": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Franklin%27s_%22House%22_art_in_Philadelphia%2C_Pennsylvania_LCCN2011630519.tif/lossy-page1-1920px-Franklin%27s_%22House%22_art_in_Philadelphia%2C_Pennsylvania_LCCN2011630519.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Franklin%27s_%22House%22_art_in_Philadelphia,_Pennsylvania_LCCN2011630519.tif",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Carol M. Highsmith",
+   "dl": null
+  },
+  "10-2": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/73/The_large_white_steel_frame_in_the_foreground_marks_the_location_and_size_of_Benjamin_Franklin%27s_home_in_Franklin_Court_%283d00c6b9-155d-451f-67cb-cdfa110dc69e%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:The_large_white_steel_frame_in_the_foreground_marks_the_location_and_size_of_Benjamin_Franklin%27s_home_in_Franklin_Court_(3d00c6b9-155d-451f-67cb-cdfa110dc69e).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "NPS photo",
+   "dl": null
+  },
+  "10-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Franklin_Court_-_July_2009_-_Sarah_Stierch_03.jpg/1920px-Franklin_Court_-_July_2009_-_Sarah_Stierch_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Franklin_Court_-_July_2009_-_Sarah_Stierch_03.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Missvain",
+   "dl": null
+  },
+  "10-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Independence_National_Historical_Park_%28a80d78de-5277-4fa2-b783-27b335d927c5%29.jpg/1920px-Independence_National_Historical_Park_%28a80d78de-5277-4fa2-b783-27b335d927c5%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Independence_National_Historical_Park_(a80d78de-5277-4fa2-b783-27b335d927c5).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Victoria Stauffenberg",
+   "dl": null
+  },
+  "10-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Benjamin_Franklin_Museum_in_Philadelphia.jpg/1920px-Benjamin_Franklin_Museum_in_Philadelphia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Benjamin_Franklin_Museum_in_Philadelphia.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "\u9890\u56ed\u5c45",
+   "dl": null
+  },
+  "10-6": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Benjamin_Franklin_House_Outline.jpg/1920px-Benjamin_Franklin_House_Outline.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Benjamin_Franklin_House_Outline.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Ben Franske",
+   "dl": null
+  },
+  "10-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Benjamin_Franklin_Museum_%2853590173941%29.jpg/1920px-Benjamin_Franklin_Museum_%2853590173941%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Benjamin_Franklin_Museum_(53590173941).jpg",
+   "lic": "CC BY 2.0",
+   "credit": true,
+   "by": "ajay_suresh",
+   "dl": null
+  },
+  "10-8": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Old_City%2C_Philadelphia%2C_PA%2C_USA_-_panoramio_%284%29.jpg/1920px-Old_City%2C_Philadelphia%2C_PA%2C_USA_-_panoramio_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Old_City,_Philadelphia,_PA,_USA_-_panoramio_(4).jpg",
+   "lic": "CC BY 3.0",
+   "credit": true,
+   "by": "\u0410\u043d\u0434\u0440\u0435\u0439 \u0411\u043e\u0431\u0440\u043e\u0432\u0441\u043a\u0438\u0439",
+   "dl": null
+  },
+  "10-9": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Franklin_Court_-_July_2009_-_Sarah_Stierch_02.jpg/1920px-Franklin_Court_-_July_2009_-_Sarah_Stierch_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Franklin_Court_-_July_2009_-_Sarah_Stierch_02.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Missvain",
+   "dl": null
+  },
+  "10-10": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Fragments_of_Franklin_Court%2C_courtyard_entrance_%283e04860c-155d-451f-67db-a509d50beda9%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Fragments_of_Franklin_Court,_courtyard_entrance_(3e04860c-155d-451f-67db-a509d50beda9).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "NPS photo",
+   "dl": null
+  },
+  "10-11": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Reproduction_presses%2C_Franklin_Court_Printing_Office_%283de3dcae-155d-451f-6790-9f06d701dd35%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Reproduction_presses,_Franklin_Court_Printing_Office_(3de3dcae-155d-451f-6790-9f06d701dd35).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "NPS photo",
+   "dl": null
+  },
+  "10-12": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Franklin_Court_314-322_Market_Street.jpg/1920px-Franklin_Court_314-322_Market_Street.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Franklin_Court_314-322_Market_Street.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "11-1": {
+   "url": "https://images.unsplash.com/photo-1698028297929-554dbcae3189?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxTd2FubiUyME1lbW9yaWFsJTIwRm91bnRhaW4lMjBMb2dhbiUyMFNxdWFyZXxlbnwxfDB8fHwxNzkxMDM3NTE0fDA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-couple-of-statues-sitting-in-front-of-a-fountain-a2OVPyIWoFo",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Keith McCrea",
+   "dl": "https://api.unsplash.com/photos/a2OVPyIWoFo/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxTd2FubiUyME1lbW9yaWFsJTIwRm91bnRhaW4lMjBMb2dhbiUyMFNxdWFyZXxlbnwxfDB8fHwxNzkxMDM3NTE0fDA"
+  },
+  "11-2": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/LoganCircle_Fountain-West.JPG/1920px-LoganCircle_Fountain-West.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:LoganCircle_Fountain-West.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Wickedthought",
+   "dl": null
+  },
+  "11-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/LoganCircle_Philadelphia.jpg/1920px-LoganCircle_Philadelphia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:LoganCircle_Philadelphia.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Wickedthought",
+   "dl": null
+  },
+  "11-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Logan_Circle_Philly.JPG/1920px-Logan_Circle_Philly.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Logan_Circle_Philly.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Jared Kofsky/PlaceNJ.com",
+   "dl": null
+  },
+  "11-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/SwannFountainatNight.jpg/1920px-SwannFountainatNight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:SwannFountainatNight.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Peter Bond from Philadelphia, USA",
+   "dl": null
+  },
+  "11-6": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Swann_Fountain-27527.jpg/1920px-Swann_Fountain-27527.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Swann_Fountain-27527.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Ken Thomas",
+   "dl": null
+  },
+  "11-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Swann_Memorial_Fountain_%28also_known_as_the_Fountain_of_the_Three_Rivers%29_is_a_fountain_sculpture_located_in_the_center_of_Logan_Circle%2C_Philadelphia%2C_Pennsylvania_LCCN2011633293.tif/lossy-page1-1920px-thumbnail.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Swann_Memorial_Fountain_(also_known_as_the_Fountain_of_the_Three_Rivers)_is_a_fountain_sculpture_located_in_the_center_of_Logan_Circle,_Philadelphia,_Pennsylvania_LCCN2011633293.tif",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Carol M. Highsmith",
+   "dl": null
+  },
+  "12-1": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Tomb_of_the_Unknown_Revolutionary_War_Soldier-27527.jpg/1920px-Tomb_of_the_Unknown_Revolutionary_War_Soldier-27527.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Tomb_of_the_Unknown_Revolutionary_War_Soldier-27527.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Ken Thomas",
+   "dl": null
+  },
+  "12-2": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Washington_Square%2C_Tomb_of_the_Unknown_Soldier_of_the_American_Revolution_%2817eb2a62-1dd8-b71b-0b9a-c55e224e1bb0%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Washington_Square,_Tomb_of_the_Unknown_Soldier_of_the_American_Revolution_(17eb2a62-1dd8-b71b-0b9a-c55e224e1bb0).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "NPS photo",
+   "dl": null
+  },
+  "12-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Independence_National_Historical_Park_%283e63b85e-8e30-4dca-89de-45681aa949a4%29.jpg/1920px-Independence_National_Historical_Park_%283e63b85e-8e30-4dca-89de-45681aa949a4%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Independence_National_Historical_Park_(3e63b85e-8e30-4dca-89de-45681aa949a4).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Victoria Stauffenberg",
+   "dl": null
+  },
+  "12-4": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/A_fountain_sits_in_the_middle_of_this_urban_park%2C_not_far_from_the_Tomb_of_the_Unknown_Soldier_of_the_American_Revolution_%28174876bf-1dd8-b71b-0b3f-f0d23ffdb233%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:A_fountain_sits_in_the_middle_of_this_urban_park,_not_far_from_the_Tomb_of_the_Unknown_Soldier_of_the_American_Revolution_(174876bf-1dd8-b71b-0b3f-f0d23ffdb233).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "NPS photo",
+   "dl": null
+  },
+  "12-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Tomb_of_the_Unknown_Revolutionary_War_Soldier_1.jpg/1920px-Tomb_of_the_Unknown_Revolutionary_War_Soldier_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Tomb_of_the_Unknown_Revolutionary_War_Soldier_1.jpg",
+   "lic": "CC BY 4.0",
+   "credit": true,
+   "by": "Michael McConville",
+   "dl": null
+  },
+  "12-6": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Phila-tombunknown.jpg/1920px-Phila-tombunknown.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Phila-tombunknown.jpg",
+   "lic": "CC BY 2.5",
+   "credit": true,
+   "by": "Busterfreak at English Wikipedia",
+   "dl": null
+  },
+  "12-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Tomb_of_the_Unknown_Soldier_of_the_American_Revolution.jpg/1920px-Tomb_of_the_Unknown_Soldier_of_the_American_Revolution.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Tomb_of_the_Unknown_Soldier_of_the_American_Revolution.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Oleg Yunakov",
+   "dl": null
+  },
+  "12-8": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Washington_Square_east_entrance.jpg/1920px-Washington_Square_east_entrance.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Washington_Square_east_entrance.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "12-9": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Washington_Square_northeast_entrance.jpg/1920px-Washington_Square_northeast_entrance.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Washington_Square_northeast_entrance.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "12-10": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Washington_Square%2C_tree_lined_walk_%28178b431a-1dd8-b71b-0bec-bbfbee385a59%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Washington_Square,_tree_lined_walk_(178b431a-1dd8-b71b-0bec-bbfbee385a59).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "NPS photo",
+   "dl": null
+  },
+  "12-11": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Washington_Square.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Washington_Square.jpg",
+   "lic": "CC BY 2.0",
+   "credit": true,
+   "by": "Bev Sykes from Davis, CA, USA",
+   "dl": null
+  },
+  "12-12": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Washington_Square_2018.jpg/1920px-Washington_Square_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Washington_Square_2018.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Ii2nmd (talk) (Uploads)",
+   "dl": null
+  },
+  "13-1": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/CarpentersHall03.jpg/1920px-CarpentersHall03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:CarpentersHall03.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Davidt8",
+   "dl": null
+  },
+  "13-2": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/CarpentersHall00.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:CarpentersHall00.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Davidt8",
+   "dl": null
+  },
+  "13-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Independence_National_Historical_Park_%2820c71063-48ce-46ff-b7d1-fe35fd3bb460%29.jpg/1920px-Independence_National_Historical_Park_%2820c71063-48ce-46ff-b7d1-fe35fd3bb460%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Independence_National_Historical_Park_(20c71063-48ce-46ff-b7d1-fe35fd3bb460).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Victoria Stauffenberg",
+   "dl": null
+  },
+  "13-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Carpenters%27_Hall%2C_Philadelphia%2C_Pennsylvania%2C_where_the_First_Continental_Congress_met_in_1774_LCCN2011633597.tiff/lossy-page1-1920px-Carpenters%27_Hall%2C_Philadelphia%2C_Pennsylvania%2C_where_the_First_Continental_Congress_met_in_1774_LCCN2011633597.tiff.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Carpenters%27_Hall,_Philadelphia,_Pennsylvania,_where_the_First_Continental_Congress_met_in_1774_LCCN2011633597.tiff",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Carol M. Highsmith",
+   "dl": null
+  },
+  "13-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Carpenters%27_Hall_and_New_Hall_Military_Museum%2C_Philadelphia%2C_2007.jpg/1920px-Carpenters%27_Hall_and_New_Hall_Military_Museum%2C_Philadelphia%2C_2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Carpenters%27_Hall_and_New_Hall_Military_Museum,_Philadelphia,_2007.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "DimiTalen",
+   "dl": null
+  },
+  "13-6": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Carpenter_Hall_Philly.JPG/1920px-Carpenter_Hall_Philly.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Carpenter_Hall_Philly.JPG",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "13-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Carpenters%27_Hall.jpg/1920px-Carpenters%27_Hall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Carpenters%27_Hall.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Ben Franske",
+   "dl": null
+  },
+  "13-8": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/When_the_city_decided_to_pave_over_Dock_Creek_in_the_1790%27s%2C_it_became_one_of_the_few_curved_streets_in_Philadelphia%2C_a_city_%282066f96a-1dd8-b71b-0b8a-11a19b94b250%29.JPG/1920px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:When_the_city_decided_to_pave_over_Dock_Creek_in_the_1790%27s,_it_became_one_of_the_few_curved_streets_in_Philadelphia,_a_city_(2066f96a-1dd8-b71b-0b8a-11a19b94b250).JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "NPS photo",
+   "dl": null
+  },
+  "14-1": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Betsy_Ross_house_in_Philadelphia%2C_Pennsylvania_LCCN2011630511.tif/lossy-page1-1920px-Betsy_Ross_house_in_Philadelphia%2C_Pennsylvania_LCCN2011630511.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Betsy_Ross_house_in_Philadelphia,_Pennsylvania_LCCN2011630511.tif",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Carol M. Highsmith",
+   "dl": null
+  },
+  "14-2": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Betsy-Ross-House.JPG/1920px-Betsy-Ross-House.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Betsy-Ross-House.JPG",
+   "lic": "CC BY 3.0",
+   "credit": true,
+   "by": "Wolle8ball",
+   "dl": null
+  },
+  "14-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Betsy1.JPG/1920px-Betsy1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Betsy1.JPG",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "Artico2",
+   "dl": null
+  },
+  "14-4": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Betsy_Ross_House%2C_Philadelphia%2C_PA.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Betsy_Ross_House,_Philadelphia,_PA.JPG",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "ProfReader",
+   "dl": null
+  },
+  "14-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Betsy_Ross_House_%2853572939795%29.jpg/1920px-Betsy_Ross_House_%2853572939795%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Betsy_Ross_House_(53572939795).jpg",
+   "lic": "CC BY 2.0",
+   "credit": true,
+   "by": "ajay_suresh",
+   "dl": null
+  },
+  "14-6": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Betsy_Ross_House_239_Arch_Street.jpg/1920px-Betsy_Ross_House_239_Arch_Street.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Betsy_Ross_House_239_Arch_Street.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "14-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Betsyrosshouse.jpg/1920px-Betsyrosshouse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Betsyrosshouse.jpg",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "Coolcaesar",
+   "dl": null
+  },
+  "14-8": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Philadelphia_-_panoramio_-_4net_%2815%29.jpg/1920px-Philadelphia_-_panoramio_-_4net_%2815%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Philadelphia_-_panoramio_-_4net_(15).jpg",
+   "lic": "CC BY 3.0",
+   "credit": true,
+   "by": "4net",
+   "dl": null
+  },
+  "14-9": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Betsy_Ross_House_from_Arch_Street_in_Philadelphia.jpeg/1920px-Betsy_Ross_House_from_Arch_Street_in_Philadelphia.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Betsy_Ross_House_from_Arch_Street_in_Philadelphia.jpeg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Dough4872",
+   "dl": null
+  },
+  "15-1": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Independence_Hall_1.jpg/1920px-Independence_Hall_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Independence_Hall_1.jpg",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "Antoine Taveneaux",
+   "dl": null
+  },
+  "15-2": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Congress_Hall_-_Philadelphia_%282642813566%29.jpg/1920px-Congress_Hall_-_Philadelphia_%282642813566%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Congress_Hall_-_Philadelphia_(2642813566).jpg",
+   "lic": "CC BY 2.0",
+   "credit": true,
+   "by": "Reading Tom from Reading, UK",
+   "dl": null
+  },
+  "15-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Congress_Hall_%2853590490584%29.jpg/1920px-Congress_Hall_%2853590490584%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Congress_Hall_(53590490584).jpg",
+   "lic": "CC BY 2.0",
+   "credit": true,
+   "by": "ajay_suresh",
+   "dl": null
+  },
+  "15-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Congress_Hall_at_twilght.jpg/1920px-Congress_Hall_at_twilght.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Congress_Hall_at_twilght.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "15-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Congress_Hall_SE_side.jpg/1920px-Congress_Hall_SE_side.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Congress_Hall_SE_side.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Ben Franske",
+   "dl": null
+  },
+  "15-6": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Independence_Hall%2C_Congress_Hall_and_Public_Ledger_Building.jpg/1920px-Independence_Hall%2C_Congress_Hall_and_Public_Ledger_Building.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Independence_Hall,_Congress_Hall_and_Public_Ledger_Building.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "15-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/West_wing_building_of_Independence_Hall_and_Congress_Hall.jpg/1920px-West_wing_building_of_Independence_Hall_and_Congress_Hall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:West_wing_building_of_Independence_Hall_and_Congress_Hall.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Ben Franske",
+   "dl": null
+  },
+  "15-8": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Photo_showing_exterior_of_Congress_Hall_%282b87705d-155d-451f-67ef-6c39d9572636%29.jpg/1920px-Photo_showing_exterior_of_Congress_Hall_%282b87705d-155d-451f-67ef-6c39d9572636%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Photo_showing_exterior_of_Congress_Hall_(2b87705d-155d-451f-67ef-6c39d9572636).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "NPS Photo",
+   "dl": null
+  },
+  "15-9": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Congress_Hall%2C_House_of_Representatives_%2809fae55e-1dd8-b71b-0b23-da8b4de174d2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Congress_Hall,_House_of_Representatives_(09fae55e-1dd8-b71b-0b23-da8b4de174d2).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "NPS photo",
+   "dl": null
+  },
+  "15-10": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Congress_Hall%2C_detail_of_Senate_Chamber_carpet_%280a4d957d-1dd8-b71b-0b11-f87566130668%29.jpg/1920px-Congress_Hall%2C_detail_of_Senate_Chamber_carpet_%280a4d957d-1dd8-b71b-0b11-f87566130668%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Congress_Hall,_detail_of_Senate_Chamber_carpet_(0a4d957d-1dd8-b71b-0b11-f87566130668).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "NPS photo",
+   "dl": null
+  },
+  "15-11": {
+   "url": "https://images.pexels.com/photos/39382019/pexels-photo-39382019.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/historic-congress-hall-in-philadelphia-39382019/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "A G",
+   "dl": null
+  },
+  "15-12": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Congress_Hall_West_side.jpg/1920px-Congress_Hall_West_side.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Congress_Hall_West_side.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Ben Franske",
+   "dl": null
+  },
+  "16-1": {
+   "url": "https://images.pexels.com/photos/28951656/pexels-photo-28951656.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/classical-architecture-of-historic-building-facade-28951656/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Carlos Aviles",
+   "dl": null
+  },
+  "16-2": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Philly_secondBank_%282%29.JPG/1920px-Philly_secondBank_%282%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Philly_secondBank_(2).JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Rfj0906",
+   "dl": null
+  },
+  "16-3": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Second_Bank_of_the_United_States%2C_Philadelphia%2C_PA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Second_Bank_of_the_United_States,_Philadelphia,_PA.jpg",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "Kanan H. Jani",
+   "dl": null
+  },
+  "16-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Second_national_bank.jpg/1920px-Second_national_bank.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Second_national_bank.jpg",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "Bruce Andersen",
+   "dl": null
+  },
+  "16-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/2nd_National_Bank_-_Philadelphia_%282642005969%29.jpg/1920px-2nd_National_Bank_-_Philadelphia_%282642005969%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:2nd_National_Bank_-_Philadelphia_(2642005969).jpg",
+   "lic": "CC BY 2.0",
+   "credit": true,
+   "by": "Reading Tom from Reading, UK",
+   "dl": null
+  },
+  "16-6": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Second_Bank_of_the_United_States_%2853590172406%29.jpg/1920px-Second_Bank_of_the_United_States_%2853590172406%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Second_Bank_of_the_United_States_(53590172406).jpg",
+   "lic": "CC BY 2.0",
+   "credit": true,
+   "by": "ajay_suresh",
+   "dl": null
+  },
+  "16-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Second_Bank_of_the_United_States_May_2026.jpg/1920px-Second_Bank_of_the_United_States_May_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Second_Bank_of_the_United_States_May_2026.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Phillipedison1891",
+   "dl": null
+  },
+  "16-8": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Second_Bank_of_the_United_States%2C_Philadelphia.jpg/1920px-Second_Bank_of_the_United_States%2C_Philadelphia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Second_Bank_of_the_United_States,_Philadelphia.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Bestbudbrian",
+   "dl": null
+  },
+  "16-9": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/UnitedStatesSecondBankseeninJune2005.JPG/1920px-UnitedStatesSecondBankseeninJune2005.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:UnitedStatesSecondBankseeninJune2005.JPG",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "ScottyBoy900Q at English Wikipedia",
+   "dl": null
+  },
+  "16-10": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Center_City_East%2C_Philadelphia%2C_PA%2C_USA_-_panoramio_%2832%29.jpg/1920px-Center_City_East%2C_Philadelphia%2C_PA%2C_USA_-_panoramio_%2832%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Center_City_East,_Philadelphia,_PA,_USA_-_panoramio_(32).jpg",
+   "lic": "CC BY 3.0",
+   "credit": true,
+   "by": "\u0410\u043d\u0434\u0440\u0435\u0439 \u0411\u043e\u0431\u0440\u043e\u0432\u0441\u043a\u0438\u0439",
+   "dl": null
+  },
+  "16-11": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Back_gallery_with_Peale_image_%2810d269a9-328a-461c-938a-33b0d407b976%29.jpg/1920px-Back_gallery_with_Peale_image_%2810d269a9-328a-461c-938a-33b0d407b976%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Back_gallery_with_Peale_image_(10d269a9-328a-461c-938a-33b0d407b976).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "NPS photo",
+   "dl": null
+  },
+  "16-12": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Dd_%2824579235-4a7d-464c-adb9-5373c5d078b7%29.jpg/1920px-Dd_%2824579235-4a7d-464c-adb9-5373c5d078b7%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Dd_(24579235-4a7d-464c-adb9-5373c5d078b7).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "NPS photo",
+   "dl": null
+  },
+  "16-13": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Second_Bank_of_the_United_States_with_Robert_Morris%2C_Jr._statue%2C_Philadelphia.jpg/1920px-Second_Bank_of_the_United_States_with_Robert_Morris%2C_Jr._statue%2C_Philadelphia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Second_Bank_of_the_United_States_with_Robert_Morris,_Jr._statue,_Philadelphia.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Bestbudbrian",
+   "dl": null
+  },
+  "17-1": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Mother_Bethel_Philly_b.JPG/1920px-Mother_Bethel_Philly_b.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Mother_Bethel_Philly_b.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "17-2": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Mother_Bethel_Philly_a.JPG/1920px-Mother_Bethel_Philly_a.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Mother_Bethel_Philly_a.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "17-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Mother_Bethel_AME_Church_6th_and_Lombard_Sts_Philadelphia_PA_%28DSC_3152%29.jpg/1920px-Mother_Bethel_AME_Church_6th_and_Lombard_Sts_Philadelphia_PA_%28DSC_3152%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Mother_Bethel_AME_Church_6th_and_Lombard_Sts_Philadelphia_PA_(DSC_3152).jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Nick-philly",
+   "dl": null
+  },
+  "17-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Mother_Bethel_AME_Church_6th_and_Lombard_Sts_Philadelphia_PA_%28DSC_3506%29.jpg/1920px-Mother_Bethel_AME_Church_6th_and_Lombard_Sts_Philadelphia_PA_%28DSC_3506%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Mother_Bethel_AME_Church_6th_and_Lombard_Sts_Philadelphia_PA_(DSC_3506).jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Nick-philly",
+   "dl": null
+  },
+  "17-6": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Mother_Bethem_AME_Church_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Mother_Bethem_AME_Church_2.jpg",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "DevinHouse",
+   "dl": null
+  },
+  "17-7": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Mother_Bethel_AME_Church_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Mother_Bethel_AME_Church_3.jpg",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "DevinHouse",
+   "dl": null
+  },
+  "17-8": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Lombard_Street_Riot_Historical_Marker_at_6th_and_Lombard_Sts_Philadelphia_PA_%28DSC_4614%29.jpg/1920px-Lombard_Street_Riot_Historical_Marker_at_6th_and_Lombard_Sts_Philadelphia_PA_%28DSC_4614%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Lombard_Street_Riot_Historical_Marker_at_6th_and_Lombard_Sts_Philadelphia_PA_(DSC_4614).jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "NMGiovannucci",
+   "dl": null
+  },
+  "17-9": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Mother_Bethel_AME_Church_Historical_Marker_6th_and_Lombard_Sts_Philadelphia_PA_%28DSC_3511%29.jpg/1920px-Mother_Bethel_AME_Church_Historical_Marker_6th_and_Lombard_Sts_Philadelphia_PA_%28DSC_3511%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Mother_Bethel_AME_Church_Historical_Marker_6th_and_Lombard_Sts_Philadelphia_PA_(DSC_3511).jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Nick-philly",
+   "dl": null
+  },
+  "17-10": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Mother_Bethel_AME_Church_6th_and_Lombard_Sts_Philadelphia_PA_%28DSC_3515%29.jpg/1920px-Mother_Bethel_AME_Church_6th_and_Lombard_Sts_Philadelphia_PA_%28DSC_3515%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Mother_Bethel_AME_Church_6th_and_Lombard_Sts_Philadelphia_PA_(DSC_3515).jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Nick-philly",
+   "dl": null
+  },
+  "17-11": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Mother_Bethel_AME_Church_6th_and_Lombard_Sts_Philadelphia_PA_%28DSC_3516%29.jpg/1920px-Mother_Bethel_AME_Church_6th_and_Lombard_Sts_Philadelphia_PA_%28DSC_3516%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Mother_Bethel_AME_Church_6th_and_Lombard_Sts_Philadelphia_PA_(DSC_3516).jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Nick-philly",
+   "dl": null
+  },
+  "17-12": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Free_African_Society_Historical_Marker_6th_and_Lombard_Sts_Philadelphia_PA_%28DSC_3149%29.jpg/1920px-Free_African_Society_Historical_Marker_6th_and_Lombard_Sts_Philadelphia_PA_%28DSC_3149%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Free_African_Society_Historical_Marker_6th_and_Lombard_Sts_Philadelphia_PA_(DSC_3149).jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Nick-philly",
+   "dl": null
+  },
+  "18-1": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Headhouse_Philly_am.JPG/1920px-Headhouse_Philly_am.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Headhouse_Philly_am.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "18-2": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Head_House_and_Market_Shed.jpg/1920px-Head_House_and_Market_Shed.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Head_House_and_Market_Shed.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "18-3": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Head_House.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Head_House.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "18-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/New_Market_and_Head_House_%2853571643697%29.jpg/1920px-New_Market_and_Head_House_%2853571643697%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:New_Market_and_Head_House_(53571643697).jpg",
+   "lic": "CC BY 2.0",
+   "credit": true,
+   "by": "ajay_suresh",
+   "dl": null
+  },
+  "18-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/New_Market_and_Head_House_-_Head_House_%2853572946650%29.jpg/1920px-New_Market_and_Head_House_-_Head_House_%2853572946650%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:New_Market_and_Head_House_-_Head_House_(53572946650).jpg",
+   "lic": "CC BY 2.0",
+   "credit": true,
+   "by": "ajay_suresh",
+   "dl": null
+  },
+  "18-6": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/WTP_C14_AMP_1.jpg/1920px-WTP_C14_AMP_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:WTP_C14_AMP_1.jpg",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "See below",
+   "dl": null
+  },
+  "18-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Philadelphia%2C_Pennsylvania_%288482481129%29.jpg/1920px-Philadelphia%2C_Pennsylvania_%288482481129%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Philadelphia,_Pennsylvania_(8482481129).jpg",
+   "lic": "CC BY-SA 2.0",
+   "credit": true,
+   "by": "Doug Kerr from Albany, NY, United States",
+   "dl": null
+  },
+  "19-1": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Olympia_and_Becuna_3.JPG/1920px-Olympia_and_Becuna_3.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Olympia_and_Becuna_3.JPG",
+   "lic": "CC BY 3.0",
+   "credit": true,
+   "by": "User:Piotrus",
+   "dl": null
+  },
+  "19-2": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Olympia_C-6_01.JPG/1920px-Olympia_C-6_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Olympia_C-6_01.JPG",
+   "lic": "CC BY 3.0",
+   "credit": true,
+   "by": "User:Piotrus",
+   "dl": null
+  },
+  "19-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/USS_Olympia%2C_docked_at_the_Independence_Seaport_Museum_at_Penn%27s_Landing%2C_Philadelphia%2C_Pennsylvania_LCCN2011632225.tif/lossy-page1-1920px-USS_Olympia%2C_docked_at_the_Independence_Seaport_Museum_at_Penn%27s_Landing%2C_Philadelphia%2C_Pennsylvania_LCCN2011632225.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:USS_Olympia,_docked_at_the_Independence_Seaport_Museum_at_Penn%27s_Landing,_Philadelphia,_Pennsylvania_LCCN2011632225.tif",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Carol M. Highsmith",
+   "dl": null
+  },
+  "19-4": {
+   "url": "https://images.unsplash.com/photo-1591564896327-1967cc39dc2e?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw1fHxQZW5uJTI3cyUyMExhbmRpbmclMjBQaGlsYWRlbHBoaWF8ZW58MXwwfHx8MTc5MTAzNzcwMnww&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/blue-and-white-bridge-over-body-of-water-during-daytime-33rk_5R3BiI",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "LJ Montague",
+   "dl": "https://api.unsplash.com/photos/33rk_5R3BiI/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw1fHxQZW5uJTI3cyUyMExhbmRpbmclMjBQaGlsYWRlbHBoaWF8ZW58MXwwfHx8MTc5MTAzNzcwMnww"
+  },
+  "19-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Moshulu_Olympia_PA1.jpg/1920px-Moshulu_Olympia_PA1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Moshulu_Olympia_PA1.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Acroterion",
+   "dl": null
+  },
+  "19-6": {
+   "url": "https://images.unsplash.com/photo-1616432902619-381bec9f29b7?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxM3x8UGVubiUyN3MlMjBMYW5kaW5nJTIwUGhpbGFkZWxwaGlhfGVufDF8MHx8fDE3OTEwMzc3MDJ8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/people-walking-on-bridge-during-night-time-4ydO_FM10cE",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Ervin Lukacs",
+   "dl": "https://api.unsplash.com/photos/4ydO_FM10cE/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxM3x8UGVubiUyN3MlMjBMYW5kaW5nJTIwUGhpbGFkZWxwaGlhfGVufDF8MHx8fDE3OTEwMzc3MDJ8MA"
+  },
+  "19-7": {
+   "url": "https://images.pexels.com/photos/37195586/pexels-photo-37195586.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/aerial-view-of-philadelphia-skyline-and-waterfront-37195586/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "K",
+   "dl": null
+  },
+  "19-8": {
+   "url": "https://images.pexels.com/photos/37195587/pexels-photo-37195587.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/aerial-view-of-benjamin-franklin-bridge-and-philadelphia-skyline-37195587/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "K",
+   "dl": null
+  },
+  "19-9": {
+   "url": "https://images.pexels.com/photos/37007240/pexels-photo-37007240.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/scenic-river-cruise-by-ben-franklin-bridge-at-sunset-37007240/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Christopher Santiago",
+   "dl": null
+  },
+  "19-10": {
+   "url": "https://images.pexels.com/photos/36853550/pexels-photo-36853550.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/contemplative-woman-by-the-ben-franklin-bridge-36853550/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Christopher Santiago",
+   "dl": null
+  },
+  "19-11": {
+   "url": "https://images.pexels.com/photos/10802650/pexels-photo-10802650.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/suspension-bridge-over-water-10802650/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Raven Domingo",
+   "dl": null
+  },
+  "19-12": {
+   "url": "https://images.pexels.com/photos/37195593/pexels-photo-37195593.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/aerial-view-of-philadelphia-with-battleship-37195593/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "K",
+   "dl": null
+  },
+  "20-1": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Benjamin_Franklin_Bridge%2C_Philadelphia_%2849055788621%29.jpg/1920px-Benjamin_Franklin_Bridge%2C_Philadelphia_%2849055788621%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Benjamin_Franklin_Bridge,_Philadelphia_(49055788621).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Pierre Blach\u00e9 from Paris, France",
+   "dl": null
+  },
+  "20-2": {
+   "url": "https://images.unsplash.com/photo-1602124749681-da14d08ede1d?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxCZW4lMjBGcmFua2xpbiUyMEJyaWRnZSUyMFBoaWxhZGVscGhpYXxlbnwxfDB8fHwxNzkxMDM3NzgwfDA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/bridge-over-water-during-daytime-UM9kOT9kyBI",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Chris Henry",
+   "dl": "https://api.unsplash.com/photos/UM9kOT9kyBI/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxCZW4lMjBGcmFua2xpbiUyMEJyaWRnZSUyMFBoaWxhZGVscGhpYXxlbnwxfDB8fHwxNzkxMDM3NzgwfDA"
+  },
+  "20-3": {
+   "url": "https://images.pexels.com/photos/38154629/pexels-photo-38154629.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/ben-franklin-bridge-over-delaware-river-at-dusk-38154629/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Mariya Eskina",
+   "dl": null
+  },
+  "20-4": {
+   "url": "https://images.pexels.com/photos/38154627/pexels-photo-38154627.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/ben-franklin-bridge-over-delaware-river-summer-38154627/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Mariya Eskina",
+   "dl": null
+  },
+  "20-5": {
+   "url": "https://images.pexels.com/photos/37195589/pexels-photo-37195589.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/aerial-view-of-ben-franklin-bridge-in-philadelphia-37195589/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "K",
+   "dl": null
+  },
+  "20-6": {
+   "url": "https://images.pexels.com/photos/11309850/pexels-photo-11309850.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/ben-franklin-bridge-during-sunset-11309850/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Matt Weissinger",
+   "dl": null
+  },
+  "20-7": {
+   "url": "https://images.pexels.com/photos/6379461/pexels-photo-6379461.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/a-long-bridge-above-a-river-6379461/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Trev W. Adams",
+   "dl": null
+  },
+  "20-8": {
+   "url": "https://images.pexels.com/photos/4642494/pexels-photo-4642494.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/modern-bridge-over-river-behind-cityscape-under-sky-4642494/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "K",
+   "dl": null
+  },
+  "20-9": {
+   "url": "https://images.pexels.com/photos/38154657/pexels-photo-38154657.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/silhouetted-cafe-view-of-ben-franklin-bridge-38154657/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Mariya Eskina",
+   "dl": null
+  },
+  "20-10": {
+   "url": "https://images.pexels.com/photos/4642485/pexels-photo-4642485.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/suspension-bridge-over-river-in-megapolis-4642485/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "K",
+   "dl": null
+  },
+  "20-11": {
+   "url": "https://images.pexels.com/photos/37195592/pexels-photo-37195592.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/aerial-view-of-benjamin-franklin-bridge-in-philadelphia-37195592/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "K",
+   "dl": null
+  },
+  "20-12": {
+   "url": "https://images.unsplash.com/photo-1553343131-978dc5a2593e?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwzfHxCZW4lMjBGcmFua2xpbiUyMEJyaWRnZSUyMFBoaWxhZGVscGhpYXxlbnwxfDB8fHwxNzkxMDM3NzgwfDA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/suspension-bride-during-golden-hour-oyApv95pHCU",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Say Cheeze Studios",
+   "dl": "https://api.unsplash.com/photos/oyApv95pHCU/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwzfHxCZW4lMjBGcmFua2xpbiUyMEJyaWRnZSUyMFBoaWxhZGVscGhpYXxlbnwxfDB8fHwxNzkxMDM3NzgwfDA"
+  },
+  "20-13": {
+   "url": "https://images.unsplash.com/photo-1718034453644-779561ef0ff8?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw0fHxCZW4lMjBGcmFua2xpbiUyMEJyaWRnZSUyMFBoaWxhZGVscGhpYXxlbnwxfDB8fHwxNzkxMDM3NzgwfDA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/the-sun-is-setting-over-a-body-of-water-a1a73rMcPdk",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Mick Kirchman",
+   "dl": "https://api.unsplash.com/photos/a1a73rMcPdk/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw0fHxCZW4lMjBGcmFua2xpbiUyMEJyaWRnZSUyMFBoaWxhZGVscGhpYXxlbnwxfDB8fHwxNzkxMDM3NzgwfDA"
+  },
+  "20-14": {
+   "url": "https://images.unsplash.com/photo-1552781899-a885fc899da2?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw2fHxCZW4lMjBGcmFua2xpbiUyMEJyaWRnZSUyMFBoaWxhZGVscGhpYXxlbnwxfDB8fHwxNzkxMDM3NzgwfDA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/san-francisco-bridge-XCC5r9w71e4",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Kelly Kiernan",
+   "dl": "https://api.unsplash.com/photos/XCC5r9w71e4/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw2fHxCZW4lMjBGcmFua2xpbiUyMEJyaWRnZSUyMFBoaWxhZGVscGhpYXxlbnwxfDB8fHwxNzkxMDM3NzgwfDA"
+  },
+  "21-1": {
+   "url": "https://images.unsplash.com/photo-1659474122020-3c6d4fbe2792?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxFYXN0ZXJuJTIwU3RhdGUlMjBQZW5pdGVudGlhcnl8ZW58MXwwfHx8MTc5MTAzNzgxM3ww&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-long-hallway-with-many-doors-UDT5em_-lUk",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Lance Anderson",
+   "dl": "https://api.unsplash.com/photos/UDT5em_-lUk/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxFYXN0ZXJuJTIwU3RhdGUlMjBQZW5pdGVudGlhcnl8ZW58MXwwfHx8MTc5MTAzNzgxM3ww"
+  },
+  "21-2": {
+   "url": "https://images.unsplash.com/photo-1468933996188-428897920ab2?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw4fHxFYXN0ZXJuJTIwU3RhdGUlMjBQZW5pdGVudGlhcnl8ZW58MXwwfHx8MTc5MTAzNzgxM3ww&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/brown-brick-building-under-white-clouds-PwwyH_0oVIg",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Ashim D\u2019Silva",
+   "dl": "https://api.unsplash.com/photos/PwwyH_0oVIg/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw4fHxFYXN0ZXJuJTIwU3RhdGUlMjBQZW5pdGVudGlhcnl8ZW58MXwwfHx8MTc5MTAzNzgxM3ww"
+  },
+  "21-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Eastern_state_penitentiary49.JPG/1920px-Eastern_state_penitentiary49.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Eastern_state_penitentiary49.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Davidt8",
+   "dl": null
+  },
+  "21-4": {
+   "url": "https://images.unsplash.com/photo-1632360384065-62b21f100ee6?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwzfHxFYXN0ZXJuJTIwU3RhdGUlMjBQZW5pdGVudGlhcnl8ZW58MXwwfHx8MTc5MTAzNzgxM3ww&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-long-tunnel-with-a-metal-railing-leading-up-to-it-MOKze3c_iq4",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Edan Cohen",
+   "dl": "https://api.unsplash.com/photos/MOKze3c_iq4/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwzfHxFYXN0ZXJuJTIwU3RhdGUlMjBQZW5pdGVudGlhcnl8ZW58MXwwfHx8MTc5MTAzNzgxM3ww"
+  },
+  "21-5": {
+   "url": "https://images.unsplash.com/photo-1562030988-a2be440c118d?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw0fHxFYXN0ZXJuJTIwU3RhdGUlMjBQZW5pdGVudGlhcnl8ZW58MXwwfHx8MTc5MTAzNzgxM3ww&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/brown-abandoned-building-interior-gJcOCUuarsQ",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Sidney Trobee",
+   "dl": "https://api.unsplash.com/photos/gJcOCUuarsQ/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw0fHxFYXN0ZXJuJTIwU3RhdGUlMjBQZW5pdGVudGlhcnl8ZW58MXwwfHx8MTc5MTAzNzgxM3ww"
+  },
+  "21-6": {
+   "url": "https://images.unsplash.com/photo-1667501637627-ba19fd6d29db?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw5fHxFYXN0ZXJuJTIwU3RhdGUlMjBQZW5pdGVudGlhcnl8ZW58MXwwfHx8MTc5MTAzNzgxM3ww&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-staircase-in-a-building-CoV8iwy9go8",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Olga M\u00fcller",
+   "dl": "https://api.unsplash.com/photos/CoV8iwy9go8/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw5fHxFYXN0ZXJuJTIwU3RhdGUlMjBQZW5pdGVudGlhcnl8ZW58MXwwfHx8MTc5MTAzNzgxM3ww"
+  },
+  "21-7": {
+   "url": "https://images.unsplash.com/photo-1508092383827-140547788faa?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw1fHxFYXN0ZXJuJTIwU3RhdGUlMjBQZW5pdGVudGlhcnl8ZW58MXwwfHx8MTc5MTAzNzgxM3ww&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/grayscale-photo-of-hallway-inside-building-8nb6mlDXhwg",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Andrea Cappiello",
+   "dl": "https://api.unsplash.com/photos/8nb6mlDXhwg/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw1fHxFYXN0ZXJuJTIwU3RhdGUlMjBQZW5pdGVudGlhcnl8ZW58MXwwfHx8MTc5MTAzNzgxM3ww"
+  },
+  "21-8": {
+   "url": "https://images.pexels.com/photos/39677665/pexels-photo-39677665.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/historic-abandoned-prison-corridor-in-philadelphia-39677665/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Joshua Santos",
+   "dl": null
+  },
+  "21-9": {
+   "url": "https://images.pexels.com/photos/32608262/pexels-photo-32608262.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/historic-eastern-state-penitentiary-corridor-32608262/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Philippe Gerber",
+   "dl": null
+  },
+  "21-10": {
+   "url": "https://images.pexels.com/photos/191109/pexels-photo-191109.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/empty-alley-191109/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "J carter",
+   "dl": null
+  },
+  "21-11": {
+   "url": "https://images.pexels.com/photos/39677662/pexels-photo-39677662.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/abandoned-prison-cell-in-philadelphia-39677662/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Joshua Santos",
+   "dl": null
+  },
+  "21-12": {
+   "url": "https://images.pexels.com/photos/17765362/pexels-photo-17765362.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/prison-cell-in-alcatraz-17765362/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Mark Stebnicki",
+   "dl": null
+  },
+  "21-13": {
+   "url": "https://images.unsplash.com/photo-1523470229013-5959bffb5e9a?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwyfHxFYXN0ZXJuJTIwU3RhdGUlMjBQZW5pdGVudGlhcnl8ZW58MXwwfHx8MTc5MTAzNzgxM3ww&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/man-walking-near-cubicles-inside-building-SBYy3dBUKbM",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Kevin Jarrett",
+   "dl": "https://api.unsplash.com/photos/SBYy3dBUKbM/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwyfHxFYXN0ZXJuJTIwU3RhdGUlMjBQZW5pdGVudGlhcnl8ZW58MXwwfHx8MTc5MTAzNzgxM3ww"
+  },
+  "21-14": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Eastern_Pen_Two_Story_Wing.JPG/1920px-Eastern_Pen_Two_Story_Wing.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Eastern_Pen_Two_Story_Wing.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "AaronOReilly",
+   "dl": null
+  },
+  "22-1": {
+   "url": "https://images.unsplash.com/photo-1618199069786-93cc78b59d4e?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwzfHxXYXRlciUyMFdvcmtzJTIwUGhpbGFkZWxwaGlhfGVufDB8MHx8fDE3OTEwMzkxMjd8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/white-and-brown-concrete-building-beside-river-during-daytime-2HAqbm_XuRA",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "RAFIK KHALFALLAH",
+   "dl": "https://api.unsplash.com/photos/2HAqbm_XuRA/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwzfHxXYXRlciUyMFdvcmtzJTIwUGhpbGFkZWxwaGlhfGVufDB8MHx8fDE3OTEwMzkxMjd8MA"
+  },
+  "22-2": {
+   "url": "https://images.unsplash.com/photo-1672620588298-1eb23f475f3e?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwyfHxXYXRlciUyMFdvcmtzJTIwUGhpbGFkZWxwaGlhfGVufDB8MHx8fDE3OTEwMzkxMjd8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-river-with-a-bridge-and-buildings-in-the-background-LvjXOdvQo-w",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Yucel M",
+   "dl": "https://api.unsplash.com/photos/LvjXOdvQo-w/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwyfHxXYXRlciUyMFdvcmtzJTIwUGhpbGFkZWxwaGlhfGVufDB8MHx8fDE3OTEwMzkxMjd8MA"
+  },
+  "22-3": {
+   "url": "https://images.unsplash.com/photo-1615596280100-c6e864e043e4?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw0fHxXYXRlciUyMFdvcmtzJTIwUGhpbGFkZWxwaGlhfGVufDB8MHx8fDE3OTEwMzkxMjd8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/white-and-brown-concrete-building-beside-body-of-water-during-daytime-GO_GCM60dMI",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Dan Mall",
+   "dl": "https://api.unsplash.com/photos/GO_GCM60dMI/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw0fHxXYXRlciUyMFdvcmtzJTIwUGhpbGFkZWxwaGlhfGVufDB8MHx8fDE3OTEwMzkxMjd8MA"
+  },
+  "22-4": {
+   "url": "https://images.unsplash.com/photo-1544295699-624f04212074?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxXYXRlciUyMFdvcmtzJTIwUGhpbGFkZWxwaGlhfGVufDB8MHx8fDE3OTEwMzkxMjd8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/gray-concrete-building-near-body-of-water-PLgY0KpeL-g",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Chris Murray",
+   "dl": "https://api.unsplash.com/photos/PLgY0KpeL-g/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxXYXRlciUyMFdvcmtzJTIwUGhpbGFkZWxwaGlhfGVufDB8MHx8fDE3OTEwMzkxMjd8MA"
+  },
+  "22-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/DSC05845_%281%29Fairmount_Water_Works_from_the_Schuykill_River.jpg/1920px-DSC05845_%281%29Fairmount_Water_Works_from_the_Schuykill_River.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:DSC05845_(1)Fairmount_Water_Works_from_the_Schuykill_River.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Librarian1984",
+   "dl": null
+  },
+  "22-6": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Fairmount_Water_Works_2016.jpg/1920px-Fairmount_Water_Works_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Fairmount_Water_Works_2016.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Yasmeen Elmelige",
+   "dl": null
+  },
+  "22-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Fairmount_Water_Works_and_Philadelphia_Art_Museum.jpg/1920px-Fairmount_Water_Works_and_Philadelphia_Art_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Fairmount_Water_Works_and_Philadelphia_Art_Museum.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Laura Klotz",
+   "dl": null
+  },
+  "22-8": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/141208-JLT_8006.jpg/1920px-141208-JLT_8006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:141208-JLT_8006.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Jesse Lee Tucker",
+   "dl": null
+  },
+  "22-9": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Fairmount_Water_Works_%28DSC03847%29.jpg/1920px-Fairmount_Water_Works_%28DSC03847%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Fairmount_Water_Works_(DSC03847).jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Polibil",
+   "dl": null
+  },
+  "23-1": {
+   "url": "https://images.pexels.com/photos/29172432/pexels-photo-29172432.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/historic-boathouse-row-by-river-in-fall-29172432/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Malik",
+   "dl": null
+  },
+  "23-2": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Vesper-Malta2010.jpg/1920px-Vesper-Malta2010.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Vesper-Malta2010.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Ciricula",
+   "dl": null
+  },
+  "23-3": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Crescent-Pennsylvania2010.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Crescent-Pennsylvania2010.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Ciricula",
+   "dl": null
+  },
+  "23-4": {
+   "url": "https://images.pexels.com/photos/37993423/pexels-photo-37993423.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/winter-view-of-boathouse-row-in-philadelphia-37993423/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "\u00cdtalo Delani Lopez",
+   "dl": null
+  },
+  "23-5": {
+   "url": "https://images.unsplash.com/photo-1606237752464-d4834a185f25?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwyfHxCb2F0aG91c2UlMjBSb3clMjBQaGlsYWRlbHBoaWF8ZW58MXwwfHx8MTc5MTAzNzg1NXww&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/white-and-brown-wooden-house-on-body-of-water-during-daytime-V3yYMfjJNyQ",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Keith McCrea",
+   "dl": "https://api.unsplash.com/photos/V3yYMfjJNyQ/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwyfHxCb2F0aG91c2UlMjBSb3clMjBQaGlsYWRlbHBoaWF8ZW58MXwwfHx8MTc5MTAzNzg1NXww"
+  },
+  "23-6": {
+   "url": "https://images.unsplash.com/photo-1638706935047-658ab55a6407?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwzfHxCb2F0aG91c2UlMjBSb3clMjBQaGlsYWRlbHBoaWF8ZW58MXwwfHx8MTc5MTAzNzg1NXww&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-body-of-water-with-a-bunch-of-houses-in-the-background-0JOPOR4Bd3w",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Vann",
+   "dl": "https://api.unsplash.com/photos/0JOPOR4Bd3w/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwzfHxCb2F0aG91c2UlMjBSb3clMjBQaGlsYWRlbHBoaWF8ZW58MXwwfHx8MTc5MTAzNzg1NXww"
+  },
+  "23-7": {
+   "url": "https://images.unsplash.com/photo-1732168488633-d8eb259d7999?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw0fHxCb2F0aG91c2UlMjBSb3clMjBQaGlsYWRlbHBoaWF8ZW58MXwwfHx8MTc5MTAzNzg1NXww&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-view-of-a-body-of-water-with-houses-in-the-background-nLdLW_yZ7nk",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "John Maldonado",
+   "dl": "https://api.unsplash.com/photos/nLdLW_yZ7nk/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw0fHxCb2F0aG91c2UlMjBSb3clMjBQaGlsYWRlbHBoaWF8ZW58MXwwfHx8MTc5MTAzNzg1NXww"
+  },
+  "24-1": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Rodin_Museum_-_Joy_of_Museums_-_The_Thinker.jpg/1920px-Rodin_Museum_-_Joy_of_Museums_-_The_Thinker.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Rodin_Museum_-_Joy_of_Museums_-_The_Thinker.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "GordonMakryllos",
+   "dl": null
+  },
+  "24-2": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Rodin_Museum_-_Joy_of_Museums_1.jpg/1920px-Rodin_Museum_-_Joy_of_Museums_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Rodin_Museum_-_Joy_of_Museums_1.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "GordonMakryllos",
+   "dl": null
+  },
+  "24-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Rodin_Museum_Entry_Philadelphia.jpg/1920px-Rodin_Museum_Entry_Philadelphia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Rodin_Museum_Entry_Philadelphia.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Wickedthought",
+   "dl": null
+  },
+  "24-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Rodin_Musee_Philly.JPG/1920px-Rodin_Musee_Philly.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Rodin_Musee_Philly.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "24-5": {
+   "url": "https://images.pexels.com/photos/38325334/pexels-photo-38325334.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/elegant-facade-of-the-rodin-museum-in-philadelphia-38325334/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Nancy Bourque",
+   "dl": null
+  },
+  "24-6": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Philadelphia_October_2017_14_%28Rodin_Museum%29.jpg/1920px-Philadelphia_October_2017_14_%28Rodin_Museum%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Philadelphia_October_2017_14_(Rodin_Museum).jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Michael Barera",
+   "dl": null
+  },
+  "24-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Rodin_Museum_%283064434719%29.jpg/1920px-Rodin_Museum_%283064434719%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Rodin_Museum_(3064434719).jpg",
+   "lic": "CC BY-SA 2.0",
+   "credit": true,
+   "by": "elPadawan",
+   "dl": null
+  },
+  "24-8": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Rodin_Museum_-_Joy_of_Museums_2.jpg/1920px-Rodin_Museum_-_Joy_of_Museums_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Rodin_Museum_-_Joy_of_Museums_2.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "GordonMakryllos",
+   "dl": null
+  },
+  "24-9": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Rodin_Museum_Philly.JPG/1920px-Rodin_Museum_Philly.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Rodin_Museum_Philly.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "24-10": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Philadelphia_October_2017_13_%28Rodin_Museum%29.jpg/1920px-Philadelphia_October_2017_13_%28Rodin_Museum%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Philadelphia_October_2017_13_(Rodin_Museum).jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Michael Barera",
+   "dl": null
+  },
+  "25-1": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Masonic_Temple%2C_Philadelphia%2C_Pennsylvania_LCCN2011635136.tif/lossy-page1-1920px-Masonic_Temple%2C_Philadelphia%2C_Pennsylvania_LCCN2011635136.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Masonic_Temple,_Philadelphia,_Pennsylvania_LCCN2011635136.tif",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Carol M. Highsmith",
+   "dl": null
+  },
+  "25-2": {
+   "url": "https://images.pexels.com/photos/32182596/pexels-photo-32182596.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/historic-architecture-in-philadelphia-pa-32182596/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Samyantak Mohanty",
+   "dl": null
+  },
+  "25-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Grand_Lodge_of_Pennsylvania_-_Philadelphia%2C_PA_-_DSC06819.jpg/1920px-Grand_Lodge_of_Pennsylvania_-_Philadelphia%2C_PA_-_DSC06819.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Grand_Lodge_of_Pennsylvania_-_Philadelphia,_PA_-_DSC06819.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Daderot",
+   "dl": null
+  },
+  "25-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Grand_Lodge_of_Pennsylvania_-_Philadelphia%2C_PA_-_DSC06820.jpg/1920px-Grand_Lodge_of_Pennsylvania_-_Philadelphia%2C_PA_-_DSC06820.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Grand_Lodge_of_Pennsylvania_-_Philadelphia,_PA_-_DSC06820.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Daderot",
+   "dl": null
+  },
+  "25-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Grand_Lodge_of_Pennsylvania_-_Philadelphia%2C_PA_-_DSC06821.jpg/1920px-Grand_Lodge_of_Pennsylvania_-_Philadelphia%2C_PA_-_DSC06821.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Grand_Lodge_of_Pennsylvania_-_Philadelphia,_PA_-_DSC06821.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Daderot",
+   "dl": null
+  },
+  "25-6": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Grand_Lodge_of_Pennsylvania_-_Philadelphia%2C_PA_-_DSC06818.jpg/1920px-Grand_Lodge_of_Pennsylvania_-_Philadelphia%2C_PA_-_DSC06818.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Grand_Lodge_of_Pennsylvania_-_Philadelphia,_PA_-_DSC06818.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Daderot",
+   "dl": null
+  },
+  "26-1": {
+   "url": "https://images.unsplash.com/photo-1754448255254-f64b0f35ab56?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxDaGluYXRvd24lMjBGcmllbmRzaGlwJTIwR2F0ZSUyMFBoaWxhZGVscGhpYXxlbnwxfDB8fHwxNzkxMDM3ODgwfDA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/chinatowns-colorful-gate-framed-by-buildings-and-cars-u4v3uKyw8-I",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Michael R",
+   "dl": "https://api.unsplash.com/photos/u4v3uKyw8-I/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxDaGluYXRvd24lMjBGcmllbmRzaGlwJTIwR2F0ZSUyMFBoaWxhZGVscGhpYXxlbnwxfDB8fHwxNzkxMDM3ODgwfDA"
+  },
+  "26-2": {
+   "url": "https://images.pexels.com/photos/37182315/pexels-photo-37182315.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/vibrant-chinese-archway-in-liverpool-s-chinatown-37182315/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Chiara Salvi",
+   "dl": null
+  },
+  "26-3": {
+   "url": "https://images.pexels.com/photos/38542347/pexels-photo-38542347.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/illuminated-chinatown-gate-in-victoria-bc-at-night-38542347/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Vlad Vasnetsov",
+   "dl": null
+  },
+  "26-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Friendship_Gate_Chinatown_Philadelphia_from_east.jpg/1920px-Friendship_Gate_Chinatown_Philadelphia_from_east.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Friendship_Gate_Chinatown_Philadelphia_from_east.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "26-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Friendship_Gate_Chinatown_Philadelphia_from_west.jpg/1920px-Friendship_Gate_Chinatown_Philadelphia_from_west.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Friendship_Gate_Chinatown_Philadelphia_from_west.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "26-6": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Chinese_Friendship_Arch_-_Philadelphia_%2853572820104%29.jpg/1920px-Chinese_Friendship_Arch_-_Philadelphia_%2853572820104%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Chinese_Friendship_Arch_-_Philadelphia_(53572820104).jpg",
+   "lic": "CC BY 2.0",
+   "credit": true,
+   "by": "ajay_suresh",
+   "dl": null
+  },
+  "26-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Philadelphia_-_panoramio_-_4net_%283%29.jpg/1920px-Philadelphia_-_panoramio_-_4net_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Philadelphia_-_panoramio_-_4net_(3).jpg",
+   "lic": "CC BY 3.0",
+   "credit": true,
+   "by": "4net",
+   "dl": null
+  },
+  "26-8": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Chinatown_Gates_%2823975446055%29.jpg/1920px-Chinatown_Gates_%2823975446055%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Chinatown_Gates_(23975446055).jpg",
+   "lic": "CC BY-SA 2.0",
+   "credit": true,
+   "by": "Todd Van Hoosear",
+   "dl": null
+  },
+  "26-9": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Chinatown_Philly_%285583992894%29.jpg/1920px-Chinatown_Philly_%285583992894%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Chinatown_Philly_(5583992894).jpg",
+   "lic": "CC BY 2.0",
+   "credit": true,
+   "by": "Mobilus In Mobili",
+   "dl": null
+  },
+  "26-10": {
+   "url": "https://images.pexels.com/photos/33796854/pexels-photo-33796854.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/vibrant-chinese-archway-in-busy-street-scene-33796854/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Pexels User",
+   "dl": null
+  },
+  "26-11": {
+   "url": "https://images.pexels.com/photos/14288871/pexels-photo-14288871.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/city-street-and-gate-in-china-14288871/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "James L",
+   "dl": null
+  },
+  "26-12": {
+   "url": "https://images.pexels.com/photos/18173249/pexels-photo-18173249.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/traditional-decorative-gate-18173249/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Sof\u00eda Marquet",
+   "dl": null
+  },
+  "27-1": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Franklin_Square_Fountain_a.jpg/1920px-Franklin_Square_Fountain_a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Franklin_Square_Fountain_a.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Wobbanight",
+   "dl": null
+  },
+  "27-2": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Franklin_Square_Fountain_b.jpg/1920px-Franklin_Square_Fountain_b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Franklin_Square_Fountain_b.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Wobbanight",
+   "dl": null
+  },
+  "27-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/2013_Franklin_Square_Fountain.jpg/1920px-2013_Franklin_Square_Fountain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:2013_Franklin_Square_Fountain.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "27-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/2013_Franklin_Park_Carousel_from_southwest.jpg/1920px-2013_Franklin_Park_Carousel_from_southwest.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:2013_Franklin_Park_Carousel_from_southwest.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "27-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/2013_Franklin_Square_Carousel_from_east.jpg/1920px-2013_Franklin_Square_Carousel_from_east.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:2013_Franklin_Square_Carousel_from_east.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "27-6": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/2013_Franklin_Square.jpg/1920px-2013_Franklin_Square.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:2013_Franklin_Square.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "27-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Franklin_Square_fountain_and_carousel.JPG/1920px-Franklin_Square_fountain_and_carousel.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Franklin_Square_fountain_and_carousel.JPG",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "WikiMikeL",
+   "dl": null
+  },
+  "27-8": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Franklin_Square_golf.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Franklin_Square_golf.png",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "Bruce Andersen",
+   "dl": null
+  },
+  "27-9": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Franklin_Square.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "page": "https://commons.wikimedia.org/wiki/File:Franklin_Square.png",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "Bruce Andersen",
+   "dl": null
+  },
+  "27-10": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Franklin_Sq_Carousel_eagle.JPG/1920px-Franklin_Sq_Carousel_eagle.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Franklin_Sq_Carousel_eagle.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "27-11": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Franklin_Sq_Carousel_lead_horse.JPG/1920px-Franklin_Sq_Carousel_lead_horse.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Franklin_Sq_Carousel_lead_horse.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "27-12": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Franklin_Sq_Carousel_sea_creature.JPG/1920px-Franklin_Sq_Carousel_sea_creature.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Franklin_Sq_Carousel_sea_creature.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "28-1": {
+   "url": "https://images.unsplash.com/photo-1614946332671-c1bba0634fcc?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxDaHJpc3QlMjBDaHVyY2glMjBCdXJpYWwlMjBHcm91bmQlMjBQaGlsYWRlbHBoaWF8ZW58MXwwfHx8MTc5MTAzNzkxOXww&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/black-and-brown-brick-wall--K3gKiI4a2I",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Dan Mall",
+   "dl": "https://api.unsplash.com/photos/-K3gKiI4a2I/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxDaHJpc3QlMjBDaHVyY2glMjBCdXJpYWwlMjBHcm91bmQlMjBQaGlsYWRlbHBoaWF8ZW58MXwwfHx8MTc5MTAzNzkxOXww"
+  },
+  "28-2": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Amer0026_-_Flickr_-_NOAA_Photo_Library.jpg/1920px-Amer0026_-_Flickr_-_NOAA_Photo_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Amer0026_-_Flickr_-_NOAA_Photo_Library.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Captain Albert E. Theberge, NOAA Corps (ret.).",
+   "dl": null
+  },
+  "28-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Bainbridge_tombstone.jpg/1920px-Bainbridge_tombstone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Bainbridge_tombstone.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Wiki publius",
+   "dl": null
+  },
+  "28-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Ben_Rush_Christ_CH_Burial_G_Philly.JPG/1920px-Ben_Rush_Christ_CH_Burial_G_Philly.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Ben_Rush_Christ_CH_Burial_G_Philly.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "28-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/J_Taylor_Christ_Church_Burial_Ground.JPG/1920px-J_Taylor_Christ_Church_Burial_Ground.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:J_Taylor_Christ_Church_Burial_Ground.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "28-6": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Arch_Street_Friends_Meeting_House_%2853572939205%29.jpg/1920px-Arch_Street_Friends_Meeting_House_%2853572939205%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Arch_Street_Friends_Meeting_House_(53572939205).jpg",
+   "lic": "CC BY 2.0",
+   "credit": true,
+   "by": "ajay_suresh",
+   "dl": null
+  },
+  "28-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Arch_Street_Friends_Meeting_House_-_Philadelphia.JPG/1920px-Arch_Street_Friends_Meeting_House_-_Philadelphia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Arch_Street_Friends_Meeting_House_-_Philadelphia.JPG",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Farragutful",
+   "dl": null
+  },
+  "28-8": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Arch_Street_Meeting_House_Historical_Marker_at_320_Arch_St_Philadelphia_PA_%28DSC_4766%29.jpg/1920px-Arch_Street_Meeting_House_Historical_Marker_at_320_Arch_St_Philadelphia_PA_%28DSC_4766%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Arch_Street_Meeting_House_Historical_Marker_at_320_Arch_St_Philadelphia_PA_(DSC_4766).jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "NMGiovannucci",
+   "dl": null
+  },
+  "28-9": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Arch_Street_Meeting_House_northwest_corner.jpg/1920px-Arch_Street_Meeting_House_northwest_corner.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Arch_Street_Meeting_House_northwest_corner.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "28-10": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Arch_Street_Meetinghouse_from_front.jpg/1920px-Arch_Street_Meetinghouse_from_front.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Arch_Street_Meetinghouse_from_front.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "28-11": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Arch_Street_Friends_Meeting_House%2C_330_Arch_Street%2C_Philadelphia%2C_Philadelphia_County%2C_PA_HABS_PA%2C51-PHILA%2C10-42_%28CT%29.tif/lossy-page1-1920px-Arch_Street_Friends_Meeting_House%2C_330_Arch_Street%2C_Philadelphia%2C_Philadelphia_County%2C_PA_HABS_PA%2C51-PHILA%2C10-42_%28CT%29.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Arch_Street_Friends_Meeting_House,_330_Arch_Street,_Philadelphia,_Philadelphia_County,_PA_HABS_PA,51-PHILA,10-42_(CT).tif",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "",
+   "dl": null
+  },
+  "29-1": {
+   "url": "https://images.unsplash.com/photo-1618312776768-c5926372a2f5?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxMT1ZFJTIwc2N1bHB0dXJlJTIwUGhpbGFkZWxwaGlhfGVufDF8MHx8fDE3OTEwMzc5MzJ8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/red-love-freestanding-letter-in-the-street-yElP7IU8ttg",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Salonagility.com Daniel",
+   "dl": "https://api.unsplash.com/photos/yElP7IU8ttg/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxMT1ZFJTIwc2N1bHB0dXJlJTIwUGhpbGFkZWxwaGlhfGVufDF8MHx8fDE3OTEwMzc5MzJ8MA"
+  },
+  "29-2": {
+   "url": "https://images.pexels.com/photos/14645464/pexels-photo-14645464.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/monument-in-love-park-in-philadelphia-usa-14645464/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "DANIEL RIOS",
+   "dl": null
+  },
+  "29-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/WTP_D17_Techserv_1.jpg/1920px-WTP_D17_Techserv_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:WTP_D17_Techserv_1.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "See below",
+   "dl": null
+  },
+  "29-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/LOVE_Park_Philly.JPG/1920px-LOVE_Park_Philly.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:LOVE_Park_Philly.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "29-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/1_South_Broad_EVOL.jpg/1920px-1_South_Broad_EVOL.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:1_South_Broad_EVOL.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "29-6": {
+   "url": "https://images.unsplash.com/photo-1714157191342-d8483c85cad4?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwyfHxMT1ZFJTIwc2N1bHB0dXJlJTIwUGhpbGFkZWxwaGlhfGVufDF8MHx8fDE3OTEwMzc5MzJ8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-large-love-sculpture-in-front-of-a-large-building-LTX8y8r978k",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Karl Moore",
+   "dl": "https://api.unsplash.com/photos/LTX8y8r978k/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwyfHxMT1ZFJTIwc2N1bHB0dXJlJTIwUGhpbGFkZWxwaGlhfGVufDF8MHx8fDE3OTEwMzc5MzJ8MA"
+  },
+  "29-7": {
+   "url": "https://images.pexels.com/photos/31986024/pexels-photo-31986024.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/philadelphia-s-iconic-love-sculpture-in-urban-setting-31986024/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Hao Chen",
+   "dl": null
+  },
+  "29-8": {
+   "url": "https://images.unsplash.com/photo-1669924552522-dd66665fe820?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw2fHxMT1ZFJTIwc2N1bHB0dXJlJTIwUGhpbGFkZWxwaGlhfGVufDF8MHx8fDE3OTEwMzc5MzJ8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-red-sign-in-a-city-ijw4zqi6bsU",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Joao Marcelo",
+   "dl": "https://api.unsplash.com/photos/ijw4zqi6bsU/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw2fHxMT1ZFJTIwc2N1bHB0dXJlJTIwUGhpbGFkZWxwaGlhfGVufDF8MHx8fDE3OTEwMzc5MzJ8MA"
+  },
+  "29-9": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Love_Park_Renovation_Groundbreaking_2-1-2016_%2824316809293%29.jpg/1920px-Love_Park_Renovation_Groundbreaking_2-1-2016_%2824316809293%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Love_Park_Renovation_Groundbreaking_2-1-2016_(24316809293).jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Philadelphia City Council from Philadelphia, USA",
+   "dl": null
+  },
+  "30-1": {
+   "url": "https://images.unsplash.com/photo-1569761316261-9a8696fa2ca3?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxPbmUlMjBMaWJlcnR5JTIwUGxhY2UlMjBQaGlsYWRlbHBoaWElMjBza3lsaW5lfGVufDF8MHx8fDE3OTEwMzc5NDZ8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/aerial-photo-of-buildings-guy5aS3GvgA",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "ActionVance",
+   "dl": "https://api.unsplash.com/photos/guy5aS3GvgA/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxfHxPbmUlMjBMaWJlcnR5JTIwUGxhY2UlMjBQaGlsYWRlbHBoaWElMjBza3lsaW5lfGVufDF8MHx8fDE3OTEwMzc5NDZ8MA"
+  },
+  "30-2": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/OneLibertyPlaceSpire.jpg/1920px-OneLibertyPlaceSpire.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:OneLibertyPlaceSpire.jpg",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "User:Wasted Time R",
+   "dl": null
+  },
+  "30-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Liberty_Place_in_Philadelphia%2C_Pennsylvania_LCCN2011630493.tif/lossy-page1-1920px-Liberty_Place_in_Philadelphia%2C_Pennsylvania_LCCN2011630493.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Liberty_Place_in_Philadelphia,_Pennsylvania_LCCN2011630493.tif",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Carol M. Highsmith",
+   "dl": null
+  },
+  "30-4": {
+   "url": "https://images.pexels.com/photos/28050870/pexels-photo-28050870.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/philly-skyline-at-sunset-28050870/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Sarah Williams",
+   "dl": null
+  },
+  "30-5": {
+   "url": "https://images.unsplash.com/photo-1616528279874-b3d3b50ab6c7?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwzfHxPbmUlMjBMaWJlcnR5JTIwUGxhY2UlMjBQaGlsYWRlbHBoaWElMjBza3lsaW5lfGVufDF8MHx8fDE3OTEwMzc5NDZ8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/high-rise-buildings-during-daytime-KLiQpODADVA",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Nick Fewings",
+   "dl": "https://api.unsplash.com/photos/KLiQpODADVA/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwzfHxPbmUlMjBMaWJlcnR5JTIwUGxhY2UlMjBQaGlsYWRlbHBoaWElMjBza3lsaW5lfGVufDF8MHx8fDE3OTEwMzc5NDZ8MA"
+  },
+  "30-6": {
+   "url": "https://images.unsplash.com/photo-1663246801099-2fc375353df6?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw3fHxPbmUlMjBMaWJlcnR5JTIwUGxhY2UlMjBQaGlsYWRlbHBoaWElMjBza3lsaW5lfGVufDF8MHx8fDE3OTEwMzc5NDZ8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-city-with-tall-buildings-oxTSUoWlO6M",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Catherine Kerr",
+   "dl": "https://api.unsplash.com/photos/oxTSUoWlO6M/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw3fHxPbmUlMjBMaWJlcnR5JTIwUGxhY2UlMjBQaGlsYWRlbHBoaWElMjBza3lsaW5lfGVufDF8MHx8fDE3OTEwMzc5NDZ8MA"
+  },
+  "30-7": {
+   "url": "https://images.unsplash.com/photo-1647796155793-0cd9ff798f0f?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw5fHxPbmUlMjBMaWJlcnR5JTIwUGxhY2UlMjBQaGlsYWRlbHBoaWElMjBza3lsaW5lfGVufDF8MHx8fDE3OTEwMzc5NDZ8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-view-of-a-city-skyline-with-tall-buildings-H2QyE1poI6A",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Jimmy Hu",
+   "dl": "https://api.unsplash.com/photos/H2QyE1poI6A/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHw5fHxPbmUlMjBMaWJlcnR5JTIwUGxhY2UlMjBQaGlsYWRlbHBoaWElMjBza3lsaW5lfGVufDF8MHx8fDE3OTEwMzc5NDZ8MA"
+  },
+  "30-8": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/One_Liberty_Place%2C_Philadelphia%2C_Pennsylvania_LCCN2011630484.tif/lossy-page1-1920px-One_Liberty_Place%2C_Philadelphia%2C_Pennsylvania_LCCN2011630484.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:One_Liberty_Place,_Philadelphia,_Pennsylvania_LCCN2011630484.tif",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Carol M. Highsmith",
+   "dl": null
+  },
+  "30-9": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Skyline_in_Philadelphia_-_IMG_6643.JPG/1920px-Skyline_in_Philadelphia_-_IMG_6643.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Skyline_in_Philadelphia_-_IMG_6643.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Daderot",
+   "dl": null
+  },
+  "30-10": {
+   "url": "https://images.pexels.com/photos/37195582/pexels-photo-37195582.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/philadelphia-skyline-with-iconic-skyscrapers-37195582/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "K",
+   "dl": null
+  },
+  "30-11": {
+   "url": "https://images.pexels.com/photos/8738915/pexels-photo-8738915.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/city-skyline-during-night-time-8738915/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Scott Duygun",
+   "dl": null
+  },
+  "30-12": {
+   "url": "https://images.unsplash.com/photo-1581909811589-a1317515f20c?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwyfHxPbmUlMjBMaWJlcnR5JTIwUGxhY2UlMjBQaGlsYWRlbHBoaWElMjBza3lsaW5lfGVufDF8MHx8fDE3OTEwMzc5NDZ8MA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/city-skyline-during-day-time-YLn87mac45M",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Alejandro Barba",
+   "dl": "https://api.unsplash.com/photos/YLn87mac45M/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwyfHxPbmUlMjBMaWJlcnR5JTIwUGxhY2UlMjBQaGlsYWRlbHBoaWElMjBza3lsaW5lfGVufDF8MHx8fDE3OTEwMzc5NDZ8MA"
+  },
+  "30-13": {
+   "url": "https://images.pexels.com/photos/4642486/pexels-photo-4642486.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/bronze-statue-of-founder-of-city-on-top-of-building-4642486/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "K",
+   "dl": null
+  },
+  "30-14": {
+   "url": "https://images.unsplash.com/photo-1650389843905-cd4e43257d26?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxNXx8T25lJTIwTGliZXJ0eSUyMFBsYWNlJTIwUGhpbGFkZWxwaGlhJTIwc2t5bGluZXxlbnwxfDB8fHwxNzkxMDM3OTQ2fDA&ixlib=rb-4.1.0&w=1400&fm=jpg&q=80",
+   "page": "https://unsplash.com/photos/a-view-of-a-city-skyline-at-sunset-0AFOHWyxqa8",
+   "lic": "Unsplash",
+   "credit": false,
+   "by": "Mike Conway",
+   "dl": "https://api.unsplash.com/photos/0AFOHWyxqa8/download?ixid=M3w5Njk1MjZ8MHwxfHNlYXJjaHwxNXx8T25lJTIwTGliZXJ0eSUyMFBsYWNlJTIwUGhpbGFkZWxwaGlhJTIwc2t5bGluZXxlbnwxfDB8fHwxNzkxMDM3OTQ2fDA"
+  },
+  "W1-3-1": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/226_228_Washington_Square%2C_Philly.JPG/1920px-226_228_Washington_Square%2C_Philly.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:226_228_Washington_Square,_Philly.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "W1-3-2": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/709_711_Walnut%2C_Philly.JPG/1920px-709_711_Walnut%2C_Philly.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:709_711_Walnut,_Philly.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "W1-3-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Pine_at_5th%2C_Philly.JPG/1920px-Pine_at_5th%2C_Philly.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Pine_at_5th,_Philly.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "W1-3-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/13th_and_Lombard_Sts_Philly.JPG/1920px-13th_and_Lombard_Sts_Philly.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:13th_and_Lombard_Sts_Philly.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "W1-3-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/201-213_Delancey_Street_Society_Hill.jpg/1920px-201-213_Delancey_Street_Society_Hill.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:201-213_Delancey_Street_Society_Hill.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "W1-3-6": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/206_%26_208_S._4th_Street.jpg/1920px-206_%26_208_S._4th_Street.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:206_%26_208_S._4th_Street.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "W1-3-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Thaddeus_Kosciuszko_National_Memorial_%2853571640077%29.jpg/1920px-Thaddeus_Kosciuszko_National_Memorial_%2853571640077%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Thaddeus_Kosciuszko_National_Memorial_(53571640077).jpg",
+   "lic": "CC BY 2.0",
+   "credit": true,
+   "by": "ajay_suresh",
+   "dl": null
+  },
+  "W1-3-8": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Society_Hill%2C_Philadelphia_%2853571640107%29.jpg/1920px-Society_Hill%2C_Philadelphia_%2853571640107%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Society_Hill,_Philadelphia_(53571640107).jpg",
+   "lic": "CC BY 2.0",
+   "credit": true,
+   "by": "ajay_suresh",
+   "dl": null
+  },
+  "W1-3-9": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Girard_Row.jpg/1920px-Girard_Row.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Girard_Row.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "W1-3-10": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/HeadHouseSquare.JPG/1920px-HeadHouseSquare.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:HeadHouseSquare.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "W1-3-11": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/704_706_Locust%2C_Philly.JPG/1920px-704_706_Locust%2C_Philly.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:704_706_Locust,_Philly.JPG",
+   "lic": "Public domain",
+   "credit": false,
+   "by": "Smallbones",
+   "dl": null
+  },
+  "W1-3-12": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/319-325_Walnut_Street.jpg/1920px-319-325_Walnut_Street.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:319-325_Walnut_Street.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "W1-3-13": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/223_S._6th_Street.jpg/1920px-223_S._6th_Street.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:223_S._6th_Street.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "W2-5-1": {
+   "url": "https://images.pexels.com/photos/13570337/pexels-photo-13570337.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/the-philadelphia-city-hall-13570337/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Joel Zar",
+   "dl": null
+  },
+  "W2-5-2": {
+   "url": "https://images.pexels.com/photos/13570331/pexels-photo-13570331.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/low-angle-photography-of-the-philadelphia-city-hall-13570331/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Joel Zar",
+   "dl": null
+  },
+  "W2-5-3": {
+   "url": "https://images.pexels.com/photos/19871353/pexels-photo-19871353.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/view-of-a-fountain-and-the-city-hall-entrance-in-hamburg-germany-19871353/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "G\u00fcl I\u015f\u0131k",
+   "dl": null
+  },
+  "W2-5-4": {
+   "url": "https://images.pexels.com/photos/39677705/pexels-photo-39677705.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/philadelphia-city-hall-tower-in-summer-skies-39677705/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Joshua Santos",
+   "dl": null
+  },
+  "W2-5-5": {
+   "url": "https://images.pexels.com/photos/12289272/pexels-photo-12289272.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/city-hall-of-philadelphia-12289272/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Trev W. Adams",
+   "dl": null
+  },
+  "W4-4-1": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Betsy_Ross_House_239_Arch_Street.jpg/1920px-Betsy_Ross_House_239_Arch_Street.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Betsy_Ross_House_239_Arch_Street.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "W4-4-2": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Free_Quaker_Meeting_House_from_northeast.jpg/1920px-Free_Quaker_Meeting_House_from_northeast.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Free_Quaker_Meeting_House_from_northeast.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "W4-4-3": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Arch_Street_Meetinghouse_from_west.jpg/1920px-Arch_Street_Meetinghouse_from_west.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Arch_Street_Meetinghouse_from_west.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "W4-4-4": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Arch_Street_Meeting_House_Historical_Marker_at_320_Arch_St_Philadelphia_PA_%28DSC_4766%29.jpg/1920px-Arch_Street_Meeting_House_Historical_Marker_at_320_Arch_St_Philadelphia_PA_%28DSC_4766%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Arch_Street_Meeting_House_Historical_Marker_at_320_Arch_St_Philadelphia_PA_(DSC_4766).jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "NMGiovannucci",
+   "dl": null
+  },
+  "W4-4-5": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/ArchStreet.jpg/1920px-ArchStreet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:ArchStreet.jpg",
+   "lic": "CC BY-SA 3.0",
+   "credit": true,
+   "by": "Veldtkitty40 at English Wikipedia",
+   "dl": null
+  },
+  "W4-4-6": {
+   "url": "https://images.pexels.com/photos/36243335/pexels-photo-36243335.jpeg?auto=compress&w=1400",
+   "page": "https://www.pexels.com/photo/historic-brick-building-in-philadelphia-cityscape-36243335/",
+   "lic": "Pexels",
+   "credit": false,
+   "by": "Gene Samit",
+   "dl": null
+  },
+  "W4-4-7": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Arch_street._Philadelphia_-_panoramio_-_4net_%283%29.jpg/1920px-Arch_street._Philadelphia_-_panoramio_-_4net_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Arch_street._Philadelphia_-_panoramio_-_4net_(3).jpg",
+   "lic": "CC BY 3.0",
+   "credit": true,
+   "by": "4net",
+   "dl": null
+  },
+  "W4-4-8": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Philadelphia_-_panoramio_-_4net_%2816%29.jpg/1920px-Philadelphia_-_panoramio_-_4net_%2816%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Philadelphia_-_panoramio_-_4net_(16).jpg",
+   "lic": "CC BY 3.0",
+   "credit": true,
+   "by": "4net",
+   "dl": null
+  },
+  "W4-4-9": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/215-221_Arch_Street.jpg/1920px-215-221_Arch_Street.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:215-221_Arch_Street.jpg",
+   "lic": "CC BY-SA 4.0",
+   "credit": true,
+   "by": "Beyond My Ken",
+   "dl": null
+  },
+  "W4-4-10": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Arch_street._Philadelphia_-_panoramio_-_4net_%282%29.jpg/1920px-Arch_street._Philadelphia_-_panoramio_-_4net_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Arch_street._Philadelphia_-_panoramio_-_4net_(2).jpg",
+   "lic": "CC BY 3.0",
+   "credit": true,
+   "by": "4net",
+   "dl": null
+  }
+ }
+}

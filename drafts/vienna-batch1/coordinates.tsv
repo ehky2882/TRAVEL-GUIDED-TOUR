@@ -1,0 +1,35 @@
+01	vie-hotel-altstadt-vienna	48.204817	16.351339	40	visualArt	Kirchengasse 41
+02	vie-the-guesthouse-vienna	48.205173	16.369009	40	architecture	Führichgasse 10
+03	vie-grand-ferdinand	48.202320	16.374967	40	architecture	Schubertring 10-12
+04	vie-hotel-daniel-vienna	48.188862	16.383851	40	architecture	Landstraßer Gürtel 5
+05	vie-steirereck	48.204460	16.381279	40	foodAndDrink	Meierei, Stadtpark
+06	vie-cafe-prueckel	48.207607	16.380417	40	foodAndDrink	Stubenring 24
+07	vie-zum-schwarzen-kameel	48.209994	16.368316	40	foodAndDrink	Bognergasse 5
+08	vie-gasthaus-poeschl	48.206657	16.373858	40	foodAndDrink	Weihburggasse 17
+09	vie-mayer-am-pfarrplatz	48.255131	16.358982	40	foodAndDrink	Pfarrplatz 2, Heiligenstadt
+10	vie-kleines-cafe	48.206583	16.374358	40	foodAndDrink	Franziskanerplatz 3
+11	vie-das-loft	48.212719	16.379790	40	foodAndDrink	SO/ Vienna, Praterstraße 1
+12	vie-cafe-sperl	48.199838	16.361169	40	foodAndDrink	Gumpendorfer Straße 11
+13	vie-cafe-museum	48.201437	16.367665	40	foodAndDrink	Operngasse 7
+14	vie-strandbar-herrmann	48.211946	16.385805	40	foodAndDrink	Herrmannpark, Danube Canal
+15	vie-lobmeyr	48.205196	16.370800	40	culturalHeritage	Kärntner Straße 26
+16	vie-knize	48.208438	16.369821	40	architecture	Graben 13
+17	vie-muehlbauer	48.207233	16.370640	40	culturalHeritage	Seilergasse 10
+18	vie-augarten-wien	48.207749	16.370522	40	culturalHeritage	Spiegelgasse 3 (the shop, not the park)
+19	vie-postsparkasse	48.209977	16.380647	50	architecture	Georg-Coch-Platz 2
+20	vie-looshaus	48.208468	16.366592	40	architecture	Michaelerplatz 3
+21	vie-secession	48.200497	16.365768	40	visualArt	Friedrichstraße 12
+22	vie-otto-wagner-pavilion-karlsplatz	48.200275	16.370266	40	architecture	Karlsplatz
+23	vie-kirche-am-steinhof	48.210383	16.278411	50	sacredSites	Baumgartner Höhe 1
+24	vie-haus-wittgenstein	48.203361	16.394320	40	architecture	Kundmanngasse 19 (drop folder point, ~4 m from the staging README's)
+25	vie-wotrubakirche	48.147632	16.253453	50	sacredSites	Georgenberg, Mauer
+26	vie-karl-marx-hof	48.250160	16.364539	75	history	Zwölfter-Februar-Platz; the building is ~1 km long
+27	vie-werkbundsiedlung	48.179905	16.269496	75	architecture	Hietzing; an estate of 70 houses
+28	vie-library-and-learning-center	48.213856	16.408884	50	architecture	WU campus, Welthandelsplatz
+29	vie-prunksaal	48.206167	16.366690	40	culturalHeritage	Josefsplatz 1
+30	vie-hofmobiliendepot	48.198706	16.347049	40	culturalHeritage	Andreasgasse 7
+31	vie-haas-haus	48.208364	16.371555	40	architecture	Stephansplatz 12
+32	vie-flakturm-augarten	48.225826	16.373287	50	history	the round gun tower, Augarten
+33	vie-yppenplatz	48.213564	16.335837	50	culturalHeritage	Yppenplatz, Ottakring
+34	vie-friedhofskirche-zentralfriedhof	48.150619	16.438094	50	sacredSites	Zentralfriedhof, Simmering
+35	vie-kahlenberg	48.276341	16.333068	60	natureAndParks	summit viewing terrace
