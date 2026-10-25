@@ -20,6 +20,9 @@ USAGE
     # a processed build to it. Both are dry-run unless --apply is given too.
     python3 scripts/push-appstore-metadata.py --create-version 1.1.4 --build 190 --apply
 
+    # Leave fields as App Store Connect has them (comma-separated attribute names).
+    python3 scripts/push-appstore-metadata.py --skip promotionalText --apply
+
 It also pushes the App Review notes (`review_information/notes.txt`) to the
 version's review details. It never submits for review — that stays a person
 pressing Submit in App Store Connect.
@@ -257,8 +260,12 @@ def main():
     )
     info_loc = localisation_of(f"appInfos/{info['id']}/appInfoLocalizations") if info else None
 
-    version_changes = diff(version_loc["attributes"], VERSION_FIELDS)
-    info_changes = diff(info_loc["attributes"], INFO_FIELDS) if info_loc else {}
+    # `--skip promotionalText,keywords` leaves those fields as App Store Connect
+    # has them — for a field edited there by hand that the repo copy lags.
+    skipped = set(filter(None, (option("--skip") or "").split(",")))
+    version_changes = {k: v for k, v in diff(version_loc["attributes"], VERSION_FIELDS).items() if k not in skipped}
+    info_changes = {k: v for k, v in (diff(info_loc["attributes"], INFO_FIELDS) if info_loc else {}).items()
+                    if k not in skipped}
 
     # The review notes live on the version's review details, not a localisation.
     detail = call(f"appStoreVersions/{version['id']}/appStoreReviewDetail")[1].get("data")
