@@ -48,6 +48,10 @@ final class OnboardingCoordinator {
     /// The steps for the run in progress.
     private(set) var steps: [OnboardingStep] = []
     private(set) var index = 0
+    /// True for the one move off screen 2, where the face travels from the
+    /// splash's centre up to its place on every card — the root slows that
+    /// move down so the face can be seen to go there.
+    private(set) var isFaceHandOff = false
 
     /// True when this run was started from Settings rather than by a cold
     /// launch. The account screens are dropped — see `OnboardingFlow.steps`.
@@ -135,6 +139,7 @@ final class OnboardingCoordinator {
 
     func advance() {
         guard index + 1 < steps.count else { return finish() }
+        isFaceHandOff = currentStep == .faceAppears
         index += 1
     }
 
@@ -149,6 +154,7 @@ final class OnboardingCoordinator {
 
     func back() {
         guard canGoBack else { return }
+        isFaceHandOff = false
         index -= 1
         // Back onto "First, an account" after skipping it: put the provider
         // and form screens back, so changing your mind leads to them again.

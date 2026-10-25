@@ -22,21 +22,46 @@ struct OnboardingRootView: View {
     /// Held in the view, never persisted: the account screens in this build do
     /// not create an account, so there is nothing to submit it to.
     @State private var password = ""
+    /// One face across screens 2 and 3: the splash's face slides up into the
+    /// card's slot instead of fading out and back in (owner, 2026-10-25).
+    @Namespace private var faceSpace
 
     var body: some View {
         ZStack {
             AtlasColors.background.ignoresSafeArea()
             if let step = onboarding.currentStep {
                 card(for: step)
-                    .transition(.opacity)
+                    .transition(transition(for: step))
                     .id(step)
             }
         }
-        .animation(reduceMotion ? nil : .easeInOut(duration: 0.22), value: onboarding.index)
+        .environment(\.onboardingFaceSpace, faceSpace)
+        .animation(animation, value: onboarding.index)
         // Taps and swipes live in `OnboardingScaffold`, which knows what
         // "next" means on each card. VoiceOver's two-finger scrub:
         .accessibilityAction(.escape) { onboarding.back() }
         .onDisappear { password = "" }
+    }
+
+    /// Slower off screen 2, so the face is seen to travel; every other move
+    /// stays the quick cross-fade.
+    private var animation: Animation? {
+        if reduceMotion { return nil }
+        return onboarding.isFaceHandOff
+            ? .smooth(duration: 0.75)
+            : .easeInOut(duration: 0.22)
+    }
+
+    /// Neither card fades across the hand-off: both faces stay solid and
+    /// slide together, so they read as one. Screen 3's words and buttons fade
+    /// in on their own (`OnboardingScaffold`). A plain fade here would dim the
+    /// disc halfway up, and a do-nothing transition removes screen 2 at once.
+    private func transition(for step: OnboardingStep) -> AnyTransition {
+        if step == .faceAppears {
+            return .asymmetric(insertion: .opacity, removal: .onboardingHold)
+        }
+        if step == .definition, onboarding.isFaceHandOff { return .onboardingHold }
+        return .opacity
     }
 
     @ViewBuilder
@@ -85,6 +110,7 @@ private struct FaceAppearsCard: View {
                         .frame(width: 44, height: 44)
                         .allowsHitTesting(false)
                 }
+                .onboardingFace()
             dozentWordmark()
                 .foregroundStyle(AtlasColors.primaryText)
                 .opacity(faceIn ? 0 : 1)

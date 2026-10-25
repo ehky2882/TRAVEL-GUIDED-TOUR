@@ -197,6 +197,57 @@ struct OnboardingLink: View {
     }
 }
 
+// MARK: - The one face
+
+private struct OnboardingFaceSpaceKey: EnvironmentKey {
+    static let defaultValue: Namespace.ID? = nil
+}
+
+extension EnvironmentValues {
+    /// Set by `OnboardingRootView`, so the face on every card is the same
+    /// face as far as SwiftUI is concerned and moves rather than cross-fades.
+    var onboardingFaceSpace: Namespace.ID? {
+        get { self[OnboardingFaceSpaceKey.self] }
+        set { self[OnboardingFaceSpaceKey.self] = newValue }
+    }
+}
+
+private struct OnboardingFaceMatch: ViewModifier {
+    @Environment(\.onboardingFaceSpace) private var space
+
+    func body(content: Content) -> some View {
+        if let space {
+            content.matchedGeometryEffect(id: "dozentFace", in: space)
+        } else {
+            content
+        }
+    }
+}
+
+extension View {
+    /// Marks the onboarding face — see `onboardingFaceSpace`.
+    func onboardingFace() -> some View { modifier(OnboardingFaceMatch()) }
+}
+
+/// Changes nothing on screen, but animates — so SwiftUI keeps a card on
+/// screen for the whole animation instead of removing it at once.
+private struct OnboardingHold: ViewModifier, Animatable {
+    var progress: Double
+    var animatableData: Double {
+        get { progress }
+        set { progress = newValue }
+    }
+    func body(content: Content) -> some View { content }
+}
+
+extension AnyTransition {
+    /// Neither fades nor moves: for the face hand-off, where the face itself
+    /// does the moving (`OnboardingRootView.transition(for:)`).
+    static var onboardingHold: AnyTransition {
+        .modifier(active: OnboardingHold(progress: 0), identity: OnboardingHold(progress: 1))
+    }
+}
+
 // MARK: - The scaffold
 
 /// The frame every card is drawn into.
@@ -231,6 +282,10 @@ struct OnboardingScaffold<Content: View, Actions: View>: View {
     private static var actionsHeight: CGFloat { 44 + 40 + 40 }
 
     @State private var width: CGFloat = 0
+    /// Off screen 2 the face slides into place first; the rest of the card
+    /// fades in as it arrives.
+    @State private var chromeIn = false
+    private var chromeOpacity: Double { onboarding.isFaceHandOff && !chromeIn ? 0 : 1 }
 
     private func forward() {
         if let onForward { onForward() } else { onboarding.advance() }
@@ -241,10 +296,12 @@ struct OnboardingScaffold<Content: View, Actions: View>: View {
             OnboardingProgressBar(index: progressIndex, count: progressCount)
                 .padding(.top, 9)
                 .padding(.horizontal, AtlasSpacing.lg)
+                .opacity(chromeOpacity)
 
             Spacer().frame(height: 36)
 
             DozentFace(expression: expression, radius: faceRadius)
+                .onboardingFace()
                 .opacity(showsFace ? 1 : 0)
 
             // The band. Copy centres in it; anything taller scrolls rather
@@ -263,6 +320,7 @@ struct OnboardingScaffold<Content: View, Actions: View>: View {
             }
             .padding(.top, 36)
             .padding(.horizontal, AtlasSpacing.lg)
+            .opacity(chromeOpacity)
 
             // The button sits at the top of a fixed-height area with room
             // for two links under it, so it is in the same place on every
@@ -271,9 +329,14 @@ struct OnboardingScaffold<Content: View, Actions: View>: View {
                 .frame(height: Self.actionsHeight, alignment: .top)
                 .padding(.horizontal, AtlasSpacing.lg)
                 .padding(.bottom, AtlasSpacing.sm)
+                .opacity(chromeOpacity)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(AtlasColors.background)
+        .background(AtlasColors.background.opacity(chromeOpacity))
+        .onAppear {
+            guard onboarding.isFaceHandOff else { return }
+            withAnimation(.easeOut(duration: 0.45).delay(0.35)) { chromeIn = true }
+        }
         // Reels-style navigation (owner, 2026-10-06): tap the left third to go
         // back, anywhere else to go on; swipe left for next, right for back.
         // The buttons stay for anyone who prefers them. Controls inside the
