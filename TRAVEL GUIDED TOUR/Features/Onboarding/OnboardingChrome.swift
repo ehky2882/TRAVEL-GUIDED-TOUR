@@ -219,8 +219,10 @@ struct OnboardingScaffold<Content: View, Actions: View>: View {
     @ViewBuilder var content: () -> Content
     @ViewBuilder var actions: () -> Actions
 
-    /// 42pt radius — the size the whole run was drawn at.
-    private let faceRadius: CGFloat = 42
+    /// 22pt radius — the splash mark's own 44pt, so the face that appears on
+    /// screen 2 stays that size for the whole run (owner, 2026-10-25: "test a
+    /// version where it's the same size as the beginning circle"). Was 42.
+    private let faceRadius: CGFloat = 22
 
     @State private var width: CGFloat = 0
 
