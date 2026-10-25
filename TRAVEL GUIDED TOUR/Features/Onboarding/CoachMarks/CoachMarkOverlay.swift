@@ -150,15 +150,8 @@ private struct CoachMarkStop: View {
             }
         }
         .compositingGroup()
-        .overlay {
-            if let spot {
-                RoundedRectangle(cornerRadius: 16)
-                    .stroke(Color.white.opacity(0.55), lineWidth: 1.5)
-                    .frame(width: spot.width, height: spot.height)
-                    .position(x: spot.midX, y: spot.midY)
-                    .allowsHitTesting(false)
-            }
-        }
+        // No outline around the spotlight — the cut-out alone (owner,
+        // 2026-10-25: "no border. apply throughout").
     }
 
     // MARK: - The dozent and its bubble

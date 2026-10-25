@@ -73,7 +73,6 @@ struct CoachMarkFiltersDemo: View {
             Circle()
                 .fill(AtlasColors.brass.opacity(0.85))
                 .frame(width: 32, height: 32)
-                .overlay(Circle().stroke(Color.white, lineWidth: 2))
                 .shadow(color: .black.opacity(0.35), radius: 6, y: 2)
                 .position(x: row.maxX - 70 + swipeX, y: row.midY)
                 .opacity(swiping ? 1 : 0)
@@ -143,7 +142,6 @@ private struct DemoFinger: View {
             Circle()
                 .fill(AtlasColors.brass.opacity(0.85))
                 .frame(width: 32, height: 32)
-                .overlay(Circle().stroke(Color.white, lineWidth: 2))
                 .shadow(color: .black.opacity(0.35), radius: 6, y: 2)
         }
     }
