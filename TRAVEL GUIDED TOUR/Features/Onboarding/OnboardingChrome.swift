@@ -65,7 +65,8 @@ struct OnboardingError: View {
     var body: some View {
         Text(message)
             .font(OnboardingType.caption)
-            .foregroundStyle(AtlasColors.mapPin)
+            // Red, not `mapPin` — that token is the brand brass.
+            .foregroundStyle(AtlasColors.destructive)
             .multilineTextAlignment(.center)
             .frame(maxWidth: .infinity)
     }

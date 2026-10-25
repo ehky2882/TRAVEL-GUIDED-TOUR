@@ -1,0 +1,11 @@
+-- Let people who are signing up ask whether a username is free.
+--
+-- `handle_available()` (backend/usernames.sql § 7) was signed-in only, so the
+-- onboarding sign-up form — which runs BEFORE an account exists — got
+-- "permission denied" (42501) and could never say "taken". Verified on the
+-- live RPC, 2026-10-25.
+--
+-- Safe for anonymous callers: with no auth.uid() the function never returns
+-- 'yours', only available / taken / reserved / invalid — and usernames are
+-- already public on every profile.
+grant execute on function public.handle_available(text) to anon;

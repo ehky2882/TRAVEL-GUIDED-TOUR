@@ -355,6 +355,20 @@ private struct AccountProvidersCard: View {
 
 // MARK: - 6 / 6b · the form
 
+/// A line under a form field: fine (brass) or a problem (red).
+private enum FieldNote {
+    case fine(String)
+    case problem(String)
+
+    var text: String {
+        switch self { case .fine(let t), .problem(let t): t }
+    }
+    var isProblem: Bool {
+        if case .problem = self { return true }
+        return false
+    }
+}
+
 private struct AccountFormCard: View {
     @Environment(OnboardingCoordinator.self) private var onboarding
     @Environment(AuthService.self) private var authService: AuthService?
@@ -369,6 +383,14 @@ private struct AccountFormCard: View {
     @State private var errorMessage: String?
     /// Set when the account was made but waits on its confirmation link.
     @State private var confirmationSentTo: String?
+    /// The username's live availability, asked as the user types.
+    @State private var usernameStatus: Username.Availability?
+    /// The home city as picked from Apple's place search ("New York, United
+    /// States"). `nil` until a suggestion is chosen — typed text alone is not
+    /// a city (owner, 2026-10-25: "tied to an actual verifiable real city").
+    @State private var cityConfirmed: String?
+    @State private var citySearch = PlaceSearchService.cities()
+    @FocusState private var focus: String?
 
     /// Apple and Google ARE the login, so username and password mean nothing
     /// on that path. What is left is what they could not give us.
@@ -383,9 +405,36 @@ private struct AccountFormCard: View {
     /// Every field on screen is required (owner, 2026-10-06). Anyone who would
     /// rather not sign up has Skip, below the button.
     private var isComplete: Bool {
-        guard filled(firstName), filled(lastName), filled(homeCity) else { return false }
+        guard filled(firstName), filled(lastName), cityConfirmed != nil else { return false }
         if fromProvider { return true }
-        return trimmed(email).contains("@") && filled(username) && password.count >= 6
+        return emailLooksValid && filled(username) && !usernameRefused && password.count >= 6
+    }
+
+    // MARK: Checks (owner, 2026-10-25)
+
+    /// The shape of a real address. Whether the mailbox EXISTS is proven by
+    /// the confirmation link the account system sends — an address nobody
+    /// can open never becomes a working account.
+    private var emailLooksValid: Bool {
+        trimmed(email).range(of: #"^[A-Z0-9._%+'-]+@[A-Z0-9.-]+\.[A-Z]{2,}$"#,
+                             options: [.regularExpression, .caseInsensitive]) != nil
+    }
+
+    /// The usual slips of the thumb in the big providers' domains.
+    private var emailDomainSuggestion: String? {
+        let typos = ["gmial.com": "gmail.com", "gmai.com": "gmail.com", "gmail.co": "gmail.com",
+                     "gmail.con": "gmail.com", "gamil.com": "gmail.com", "yahoo.con": "yahoo.com",
+                     "yaho.com": "yahoo.com", "hotmial.com": "hotmail.com", "hotmail.con": "hotmail.com",
+                     "outlook.con": "outlook.com", "icloud.con": "icloud.com", "iclod.com": "icloud.com"]
+        guard let domain = trimmed(email).split(separator: "@").last.map({ $0.lowercased() }) else { return nil }
+        return typos[domain]
+    }
+
+    private var usernameRefused: Bool {
+        switch usernameStatus {
+        case .taken, .reserved, .invalid: true
+        default: false
+        }
     }
 
     private var displayName: String {
@@ -400,7 +449,7 @@ private struct AccountFormCard: View {
         onboarding.update {
             $0.firstName = trimmed(firstName)
             $0.lastName = trimmed(lastName)
-            $0.homeCity = trimmed(homeCity)
+            $0.homeCity = cityConfirmed ?? trimmed(homeCity)
         }
         errorMessage = nil
         isWorking = true
@@ -482,6 +531,22 @@ private struct AccountFormCard: View {
         }
         .onAppear(perform: prefillFromProvider)
         .onChange(of: authService?.providerFullName) { _, _ in prefillFromProvider() }
+        // Ask whether the username is free as it is typed, not after Continue.
+        .task(id: username) {
+            usernameStatus = nil
+            let typed = trimmed(username)
+            guard !fromProvider, !typed.isEmpty, let profiles else { return }
+            try? await Task.sleep(for: .milliseconds(450))
+            guard !Task.isCancelled else { return }
+            usernameStatus = await profiles.checkUsername(typed)
+        }
+        // Typing changes the city back to unconfirmed and asks Apple's place
+        // search for real ones.
+        .onChange(of: homeCity) { _, text in
+            guard text != cityConfirmed else { return }
+            cityConfirmed = nil
+            citySearch.search(text)
+        }
     }
 
     @ViewBuilder
@@ -495,16 +560,87 @@ private struct AccountFormCard: View {
             field("First name", text: $firstName, prefilled: fromProvider && filled(firstName))
             field("Last name", text: $lastName, prefilled: fromProvider && filled(lastName))
             if !fromProvider {
-                field("Email", text: $email, isEmail: true)
-                field("Username", text: $username)
+                field("Email", text: $email, isEmail: true, note: emailNote)
+                field("Username", text: $username, note: usernameNote)
                 secureField("Password (6+ characters)")
             }
-            field("Home city", text: $homeCity)
+            // Real places as you type — listed ABOVE the field, so the
+            // keyboard never covers them.
+            if cityConfirmed == nil, !citySearch.suggestions.isEmpty {
+                citySuggestions
+            }
+            field("Home city", text: $homeCity, note: cityNote)
         }
         .padding(.top, 22)
         if let errorMessage {
             OnboardingError(errorMessage)
                 .padding(.top, OnboardingType.Gap.tight)
+        }
+    }
+
+    // MARK: Notes under the fields
+
+    private var emailNote: FieldNote? {
+        guard filled(email), focus != "Email" else { return nil }
+        if let better = emailDomainSuggestion { return .problem("Did you mean \(better)?") }
+        return emailLooksValid ? nil : .problem("That doesn't look like an email address.")
+    }
+
+    private var usernameNote: FieldNote? {
+        switch usernameStatus {
+        case .available, .yours: .fine("@\(Username.normalise(username)) is available")
+        case .taken:             .problem("That username is taken. Try another.")
+        case .reserved:          .problem("That username isn't available. Try another.")
+        case .invalid(let issue): .problem("Username \(issue).")
+        default:                 nil
+        }
+    }
+
+    private var cityNote: FieldNote? {
+        if let city = cityConfirmed { return .fine("Found: \(city)") }
+        guard filled(homeCity), focus != "Home city" || citySearch.suggestions.isEmpty,
+              !citySearch.isSearching else { return nil }
+        return citySearch.suggestions.isEmpty
+            ? .problem("We couldn't find that city. Try its full name.")
+            : .problem("Pick your city from the list.")
+    }
+
+    private var citySuggestions: some View {
+        VStack(spacing: 0) {
+            ForEach(citySearch.suggestions.prefix(3)) { suggestion in
+                Button { pick(suggestion) } label: {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(suggestion.title)
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.primaryText)
+                        if !suggestion.subtitle.isEmpty {
+                            Text(suggestion.subtitle)
+                                .font(AtlasTypography.caption)
+                                .foregroundStyle(AtlasColors.secondaryText)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 10)
+                    .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .background(RoundedRectangle(cornerRadius: 13).fill(AtlasColors.secondaryBackground))
+        .shadow(color: .black.opacity(0.18), radius: 10, y: 4)
+    }
+
+    /// A chosen suggestion becomes "City, Country", from the place itself.
+    private func pick(_ suggestion: PlaceSuggestion) {
+        Task {
+            let place = await citySearch.resolveDetails(suggestion)
+            let city = place?.locality ?? suggestion.title
+            let label = [city, place?.country].compactMap { $0 }.joined(separator: ", ")
+            cityConfirmed = label
+            homeCity = label
+            citySearch.clear()
+            focus = nil
         }
     }
 
@@ -522,10 +658,24 @@ private struct AccountFormCard: View {
     }
 
     private func field(_ label: String, text: Binding<String>, prefilled: Bool = false,
-                       isEmail: Bool = false) -> some View {
+                       isEmail: Bool = false, note: FieldNote? = nil) -> some View {
+        VStack(alignment: .leading, spacing: 5) {
+            fieldBox(label, text: text, prefilled: prefilled, isEmail: isEmail)
+            if let note {
+                Text(note.text)
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(note.isProblem ? AtlasColors.destructive : AtlasColors.brass)
+                    .padding(.horizontal, 16)
+            }
+        }
+    }
+
+    private func fieldBox(_ label: String, text: Binding<String>, prefilled: Bool,
+                          isEmail: Bool) -> some View {
         HStack(spacing: 8) {
             TextField(text: text, prompt: requiredPrompt(label)) { Text(label) }
                 .font(AtlasTypography.caption)
+                .focused($focus, equals: label)
                 // `textInputAutocapitalization` does not exist on macOS, and
                 // this target builds there too — `PlatformHelpers` is the shim.
                 .atlasNoAutocapitalization()
