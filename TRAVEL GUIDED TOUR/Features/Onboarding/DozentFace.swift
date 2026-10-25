@@ -17,16 +17,23 @@
 
 import SwiftUI
 
-/// What the face is doing.
+/// What the face is doing. Six faces, picked by the owner on 2026-10-25 from
+/// a sheet of options (*"i want more variety"* and *"options that don't make
+/// it look like its eyes are closed"* — but *"the current eyes closed one …
+/// is fine too, just not every single instance"*).
 enum DozentExpression: String, CaseIterable, Sendable {
-    /// The default, and every screen that is only telling you something.
+    /// Eyes closed, small smile — the original face. Calm screens only.
     case rest
-    /// Welcome, and the moment after you answer something.
+    /// Dot eyes, wide smile (E1 + M2). The everyday face.
+    case smile
+    /// Smiling eyes, small smile (E7). Warm, a little pleased.
+    case content
+    /// Dot eyes, big open laugh (M4).
     case beam
-    /// "Let me suggest a few" — the conspiratorial one.
-    case wink
-    /// The payoff screens, when the map fills in.
+    /// Dot eyes, a little "o" (M6) — something worth seeing.
     case wow
+    /// Smiling eyes, big open laugh (X9). The big moments.
+    case excited
 }
 
 /// The brass disc with a face on it.
@@ -67,47 +74,67 @@ private struct FaceMarks: View {
 
     var body: some View {
         ZStack {
-            eye(flipped: false)
+            eye()
                 .offset(x: -radius * 0.38, y: -radius * 0.16)
-            eye(flipped: true)
+            eye()
                 .offset(x: radius * 0.38, y: -radius * 0.16)
             mouth
-                .offset(y: radius * 0.26)
         }
     }
 
-    /// A closed, content eye: a downward arc. `wink` flattens the right one.
+    /// Closed (a downward arc), open (a dot), or smiling (an upward arc).
     @ViewBuilder
-    private func eye(flipped: Bool) -> some View {
-        let winking = expression == .wink && flipped
-        let w = radius * 0.34
-        let h = winking ? 0 : radius * 0.13
-        ArcStroke(width: w, dip: h)
-            .stroke(ink, style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
-            .frame(width: w, height: max(h, lineWidth))
+    private func eye() -> some View {
+        switch expression {
+        case .rest:
+            let w = radius * 0.34, h = radius * 0.13
+            ArcStroke(width: w, dip: h)
+                .stroke(ink, style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
+                .frame(width: w, height: h)
+        case .smile, .beam, .wow:
+            Circle()
+                .fill(ink)
+                .frame(width: radius * 0.184, height: radius * 0.184)
+        case .content, .excited:
+            // 🔴 NEGATIVE dip: the middle rises, so the eye smiles (◠). The
+            // same curve as `rest` with the sign flipped.
+            let w = radius * 0.26, h = radius * 0.1
+            ArcStroke(width: w, dip: -h)
+                .stroke(ink, style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
+                .frame(width: w, height: h)
+                .offset(y: radius * 0.04)
+        }
     }
 
     @ViewBuilder
     private var mouth: some View {
         switch expression {
-        case .rest, .wink:
+        case .rest, .content:
             // A smile: the middle sits LOWER than the ends. 🔴 Positive `dip`.
             // Build 180 shipped this negative and every resting face on the
             // run was frowning (owner: *"why would a face ever be frowning?!"*).
             // Screen y grows downward, so "curves up" in the geometry is a
-            // frown on the glass. The eyes are the same curve, same sign.
+            // frown on the glass.
             ArcStroke(width: radius * 0.46, dip: radius * 0.17)
                 .stroke(ink, style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
                 .frame(width: radius * 0.46, height: radius * 0.17)
-        case .beam:
-            // An open smile: the lower half of a circle.
-            HalfDisc()
+                .offset(y: radius * 0.26)
+        case .smile:
+            ArcStroke(width: radius * 0.68, dip: radius * 0.2)
+                .stroke(ink, style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
+                .frame(width: radius * 0.68, height: radius * 0.2)
+                .offset(y: radius * 0.24)
+        case .beam, .excited:
+            // A big open laugh: the lower half of a wide ellipse.
+            HalfEllipse()
                 .fill(ink)
-                .frame(width: radius * 0.56, height: radius * 0.28)
+                .frame(width: radius * 0.76, height: radius * 0.34)
+                .offset(y: radius * 0.33)
         case .wow:
             Ellipse()
                 .fill(ink)
-                .frame(width: radius * 0.28, height: radius * 0.34)
+                .frame(width: radius * 0.2, height: radius * 0.24)
+                .offset(y: radius * 0.3)
         }
     }
 }
@@ -137,20 +164,13 @@ private struct ArcStroke: Shape {
     }
 }
 
-/// The lower half of a circle — the open smile.
-private struct HalfDisc: Shape {
+/// The lower half of an ellipse — the open laugh. Its top edge is the
+/// frame's top edge.
+private struct HalfEllipse: Shape {
     func path(in rect: CGRect) -> Path {
-        var path = Path()
-        path.move(to: CGPoint(x: rect.minX, y: rect.minY))
-        path.addArc(
-            center: CGPoint(x: rect.midX, y: rect.minY),
-            radius: rect.width / 2,
-            startAngle: .degrees(0),
-            endAngle: .degrees(180),
-            clockwise: false
-        )
-        path.closeSubpath()
-        return path
+        let whole = CGRect(x: rect.minX, y: rect.minY - rect.height,
+                           width: rect.width, height: rect.height * 2)
+        return Path(ellipseIn: whole).intersection(Path(rect))
     }
 }
 

@@ -194,7 +194,7 @@ private struct AccountAskCard: View {
         // like the default to be going next to 'create an account'"). The
         // NEXT screen keeps forward = Skip, so tapping through still never
         // lands in the sign-up form (owner, 2026-10-06).
-        OnboardingScaffold(progressIndex: onboarding.progressIndex) {
+        OnboardingScaffold(progressIndex: onboarding.progressIndex, expression: .smile) {
             VStack(spacing: 0) {
                 OnboardingLine("First, an account")
                 OnboardingLine("An account keeps your playlists, your downloads, and where you left off.")
@@ -271,6 +271,7 @@ private struct AccountProvidersCard: View {
         // here is Skip (owner, 2026-10-06). Signing up takes a button.
         OnboardingScaffold(
             progressIndex: onboarding.progressIndex,
+            expression: .smile,
             onForward: { onboarding.skipAccount() }
         ) {
             VStack(spacing: 0) {
@@ -547,6 +548,7 @@ private struct AccountFormCard: View {
     var body: some View {
         OnboardingScaffold(
             progressIndex: onboarding.progressIndex,
+            expression: .rest,
             onForward: forward,
             tapsNavigate: false
         ) {
@@ -810,7 +812,7 @@ private struct WelcomeByNameCard: View {
     }
 
     var body: some View {
-        OnboardingScaffold(progressIndex: onboarding.progressIndex, expression: .beam) {
+        OnboardingScaffold(progressIndex: onboarding.progressIndex, expression: .excited) {
             VStack(spacing: 0) {
                 OnboardingLine(greeting)
                 OnboardingLine(
@@ -847,7 +849,7 @@ private struct UseQuestionCard: View {
     ]
 
     var body: some View {
-        OnboardingScaffold(progressIndex: onboarding.progressIndex) {
+        OnboardingScaffold(progressIndex: onboarding.progressIndex, expression: .smile) {
             OnboardingRowQuestion(
                 title: Text("How will you use ") + dozentWordmark() + Text("?"),
                 options: Self.options,
@@ -868,7 +870,7 @@ private struct LibraryLeadInCard: View {
     @Environment(OnboardingCoordinator.self) private var onboarding
 
     var body: some View {
-        OnboardingScaffold(progressIndex: onboarding.progressIndex, expression: .beam) {
+        OnboardingScaffold(progressIndex: onboarding.progressIndex, expression: .wow) {
             VStack(spacing: 0) {
                 // 🔴 A lead-in card's first line names what comes next. It used
                 // to read "Fantastic." — a reaction, pointing backwards, telling
@@ -904,7 +906,7 @@ private struct FormatsQuestionCard: View {
     ]
 
     var body: some View {
-        OnboardingScaffold(progressIndex: onboarding.progressIndex) {
+        OnboardingScaffold(progressIndex: onboarding.progressIndex, expression: .content) {
             OnboardingRowQuestion(
                 title: Text("I like my…"),
                 options: Self.options,
@@ -925,7 +927,7 @@ private struct CommunityLeadInCard: View {
     @Environment(OnboardingCoordinator.self) private var onboarding
 
     var body: some View {
-        OnboardingScaffold(progressIndex: onboarding.progressIndex) {
+        OnboardingScaffold(progressIndex: onboarding.progressIndex, expression: .rest) {
             VStack(spacing: 0) {
                 OnboardingLine("Let's find you dozents to follow")
                 OnboardingLine(
@@ -950,7 +952,7 @@ private struct InterestsQuestionCard: View {
     @Environment(OnboardingCoordinator.self) private var onboarding
 
     var body: some View {
-        OnboardingScaffold(progressIndex: onboarding.progressIndex) {
+        OnboardingScaffold(progressIndex: onboarding.progressIndex, expression: .smile) {
             VStack(spacing: 0) {
                 OnboardingLine("What are you drawn to?")
                 OnboardingLine(countLine)
@@ -990,7 +992,7 @@ private struct SuggestLeadInCard: View {
     @Environment(OnboardingCoordinator.self) private var onboarding
 
     var body: some View {
-        OnboardingScaffold(progressIndex: onboarding.progressIndex, expression: .wink) {
+        OnboardingScaffold(progressIndex: onboarding.progressIndex, expression: .content) {
             VStack(spacing: 0) {
                 OnboardingLine("Let me suggest a few")
                 OnboardingLine("There are a lot of dozents covering what you are drawn to.")
@@ -1201,7 +1203,7 @@ private struct ListsLeadInCard: View {
     @Environment(OnboardingCoordinator.self) private var onboarding
 
     var body: some View {
-        OnboardingScaffold(progressIndex: onboarding.progressIndex) {
+        OnboardingScaffold(progressIndex: onboarding.progressIndex, expression: .rest) {
             VStack(spacing: 0) {
                 OnboardingLine("Your own lists")
                 OnboardingLine(
@@ -1231,7 +1233,7 @@ private struct ListUseQuestionCard: View {
     ]
 
     var body: some View {
-        OnboardingScaffold(progressIndex: onboarding.progressIndex) {
+        OnboardingScaffold(progressIndex: onboarding.progressIndex, expression: .smile) {
             OnboardingRowQuestion(
                 title: Text("How would you use a playlist?"),
                 options: Self.options,
@@ -1252,7 +1254,7 @@ private struct MakerLeadInCard: View {
     @Environment(OnboardingCoordinator.self) private var onboarding
 
     var body: some View {
-        OnboardingScaffold(progressIndex: onboarding.progressIndex, expression: .beam) {
+        OnboardingScaffold(progressIndex: onboarding.progressIndex, expression: .excited) {
             VStack(spacing: 0) {
                 OnboardingLine("Anyone can be a dozent")
                 OnboardingLine(

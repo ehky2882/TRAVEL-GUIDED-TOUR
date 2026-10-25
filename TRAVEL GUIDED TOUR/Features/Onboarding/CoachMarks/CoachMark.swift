@@ -53,8 +53,10 @@ enum CoachMark: String, CaseIterable, Codable, Sendable {
     var expression: DozentExpression {
         switch self {
         case .map: .wow
-        case .filters, .tabBar: .beam
-        case .search, .drawer: .rest
+        case .search: .smile
+        case .filters: .content
+        case .drawer: .rest
+        case .tabBar: .excited
         }
     }
 
