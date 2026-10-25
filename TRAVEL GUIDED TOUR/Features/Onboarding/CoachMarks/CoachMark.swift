@@ -14,7 +14,7 @@
 //  Then `ready` (owner, 2026-10-25): *"one more that goes back to the default
 //  home page and says something along the lines of 'i'm ready to explore!'
 //  with excitement and then the screen fades into use."* It points at
-//  nothing — it is Home itself, barely dimmed.
+//  nothing — it is Home itself, behind the same dim as every stop.
 //
 
 import Foundation
@@ -56,7 +56,7 @@ enum CoachMark: String, CaseIterable, Codable, Sendable {
         case .tabBar:
             "Whatever is playing stays here while you browse. Home, Library and you, underneath it."
         case .ready:
-            "The rest you'll find as you go. Pick a pin, press play, and start walking."
+            "The rest you'll find as you go. Pick a pin, press play, and start walking. These tips are always in Settings."
         }
     }
 

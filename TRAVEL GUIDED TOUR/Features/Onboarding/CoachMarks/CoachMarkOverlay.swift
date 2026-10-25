@@ -144,7 +144,9 @@ private struct CoachMarkStop: View {
     @ViewBuilder
     private func dim(spot: CGRect?) -> some View {
         ZStack {
-            Rectangle().fill(Color.black.opacity(spot == nil ? (mark == .ready ? 0.18 : 0.42) : 0.62))
+            // The send-off is as dark as the stops before it (owner, 2026-10-25);
+            // 0.42 is only the map's moment before its anchors report.
+            Rectangle().fill(Color.black.opacity(spot == nil && mark != .ready ? 0.42 : 0.62))
             if let spot {
                 RoundedRectangle(cornerRadius: 16)
                     .frame(width: spot.width, height: spot.height)
