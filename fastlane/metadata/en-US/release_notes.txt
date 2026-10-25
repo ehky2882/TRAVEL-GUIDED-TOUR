@@ -1,13 +1,9 @@
-Search that understands what you mean.
+A proper welcome.
 
-Ask for "somewhere quiet to walk" or "a building with a strange roof" and Dozent finds it — even when no tour uses those words. Search now reads meaning rather than matching text, and it runs on your phone. Mistype something and it works that out too. Each result quotes the line that matched, so you can see why it came up.
+Open Dozent for the first time and the little brass face shows you in: what a dozent is, a few questions about how you like to explore, and six dozents you might like to follow. You can create an account along the way with Apple, Google or email — or skip it. Browsing, playing and downloading never need one.
 
-More like this. Open any tour and find others about the same kind of place.
+A guided look around. Five short tips show you the map, search, filters, the list and the tab bar, each one working on the real screen. Missed something? Settings has Take the app tour and Show tips again.
 
-More like what you saved. The home screen now suggests tours based on what you have saved — whether you liked it or filed it into a list.
+Easier sign-up. The form spots typos in your email, tells you straight away if a username is taken, and offers real places for your home city.
 
-A clearer map. Pins that used to pile on top of each other at wide zoom now gather into a single circle with a count, and separate again as you zoom in.
-
-Faster, lighter updates. The app now fetches only what has actually changed instead of re-downloading the whole catalogue, so new tours arrive quicker and use far less data.
-
-Plus: a catalogue that repairs itself if it ever downloads badly, a Clear Cache button that genuinely clears it, and a fix for date sorting on creator pages, places and lists.
+More architects to browse by. Dozens of new architect tags arrived with the newest cities, so you can find buildings by who designed them.

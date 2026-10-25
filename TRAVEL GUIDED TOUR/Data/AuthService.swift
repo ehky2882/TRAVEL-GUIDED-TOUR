@@ -32,6 +32,17 @@ final class AuthService {
     /// The signed-in user's id as a plain `UUID` (nil when anonymous). Lets
     /// views reference it without importing the Supabase module.
     var userId: UUID? { user?.id }
+    /// The name a provider handed back (Google puts it in `full_name`), so
+    /// onboarding can fill the name fields instead of asking. `nil` when none.
+    var providerFullName: String? {
+        for key in ["full_name", "name"] {
+            if case .string(let name)? = user?.userMetadata[key],
+               !name.trimmingCharacters(in: .whitespaces).isEmpty {
+                return name
+            }
+        }
+        return nil
+    }
 
     /// Async hook invoked *before* the session is torn down in `signOut()`,
     /// while the access token (and `user`) are still valid. `SyncService`

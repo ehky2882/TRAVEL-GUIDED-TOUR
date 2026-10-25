@@ -251,6 +251,18 @@ final class BottomModuleWindowController {
     /// ended up dead. Hiding the window removes the claim with it.
     ///
     /// Idempotent, and survives a deferred install (see `isHiddenByRequest`).
+    /// Whether the window should take every touch — true only while the
+    /// navigation tour's overlay is up. Remembered so a window installed
+    /// later still honours it, exactly as `isHiddenByRequest` is.
+    private var claimsEntireScreenByRequest = false
+
+    /// See `PassThroughWindow.claimsEntireScreen`. Idempotent; the App calls
+    /// it from the same derived sync path as `setHidden`.
+    func setClaimsEntireScreen(_ claims: Bool) {
+        claimsEntireScreenByRequest = claims
+        (window as? PassThroughWindow)?.claimsEntireScreen = claims
+    }
+
     func setHidden(_ hidden: Bool) {
         // The flag is written only on a real change, so re-asserting the same
         // visibility (which `syncBottomModuleVisibility()` now does on every
@@ -423,6 +435,7 @@ final class BottomModuleWindowController {
         w.isOpaque = false
         // Prefer a measured height if one already arrived (deferred install).
         w.interactiveBottomInset = lastInteractiveBottomInset ?? interactiveBottomInset
+        w.claimsEntireScreen = claimsEntireScreenByRequest
 
         let host = UIHostingController(rootView: rootView())
         host.view.backgroundColor = .clear
@@ -525,23 +538,43 @@ final class PassThroughWindow: UIWindow {
     /// this strip are passed through to the main window.
     var interactiveBottomInset: CGFloat = 0
 
+    /// True while the navigation tour is on screen. Its overlay is drawn in
+    /// THIS window (the only one above the tab bar), and it covers the whole
+    /// screen, so the window must take every touch for as long as it shows.
+    ///
+    /// 🔴 Set only through `BottomModuleWindowController.setClaimsEntireScreen`,
+    /// which the App derives from `CoachMarkCenter.isRunning` — never latched.
+    /// Stuck on, this would make the whole app untappable.
+    var claimsEntireScreen = false
+
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        // When this window is presenting a modal (the full-screen
-        // PlayerView), it owns the entire screen — claim every touch so
-        // the player is fully interactive, not just its bottom strip.
-        if rootViewController?.presentedViewController != nil {
-            return super.hitTest(point, with: event)
-        }
-        // Anything above the painted bottom strip is decorative
-        // (transparent Spacers / VStacks in the SwiftUI tree) and
-        // must pass through to the main window. We decide
-        // geometrically off the point alone — checking the hit view
-        // identity is unreliable because SwiftUI often returns the
-        // hosting view itself even for taps on actual Buttons.
-        let topOfStrip = bounds.height - interactiveBottomInset
-        if point.y < topOfStrip {
-            return nil
-        }
+        guard Self.claimsTouch(
+            atY: point.y,
+            windowHeight: bounds.height,
+            interactiveBottomInset: interactiveBottomInset,
+            isPresentingModal: rootViewController?.presentedViewController != nil,
+            claimsEntireScreen: claimsEntireScreen
+        ) else { return nil }
         return super.hitTest(point, with: event)
+    }
+
+    /// Does this window take a touch at `y`? Pure, so it can be tested.
+    ///
+    /// · Presenting a modal (the full-screen player) → it owns the screen.
+    /// · The navigation tour is up → it owns the screen.
+    /// · Otherwise only the painted bottom strip. Anything above it is
+    ///   decorative (transparent Spacers / VStacks in the SwiftUI tree) and
+    ///   must pass through to the main window. Decided geometrically off the
+    ///   point alone — checking the hit view's identity is unreliable, because
+    ///   SwiftUI often returns the hosting view itself even for real Buttons.
+    static func claimsTouch(
+        atY y: CGFloat,
+        windowHeight: CGFloat,
+        interactiveBottomInset: CGFloat,
+        isPresentingModal: Bool,
+        claimsEntireScreen: Bool
+    ) -> Bool {
+        if isPresentingModal || claimsEntireScreen { return true }
+        return y >= windowHeight - interactiveBottomInset
     }
 }

@@ -8,6 +8,9 @@ import SwiftUI
 struct RailCarousel: View {
     let title: String
     let tours: [Tour]
+    /// The navigation tour slides the first rail sideways to show it scrolls
+    /// (`CoachMarkCenter.listNudge`). Offset only; 0 at rest.
+    var demoNudge: CGFloat = 0
 
     @Environment(TourPresenter.self) private var tourPresenter
 
@@ -45,6 +48,7 @@ struct RailCarousel: View {
                         .buttonStyle(.plain)
                     }
                 }
+                .offset(x: demoNudge)
             }
             .padding(.horizontal, AtlasSpacing.lg)
         }

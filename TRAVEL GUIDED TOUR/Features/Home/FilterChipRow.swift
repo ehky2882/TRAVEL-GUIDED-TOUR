@@ -36,6 +36,7 @@ struct FilterChipRow: View {
     /// already learned the same thing with `PlayerView`. See
     /// `AppSharedState.filterPanel`.
     @Environment(AppSharedState.self) private var appShared: AppSharedState?
+    @Environment(CoachMarkCenter.self) private var coachMarks: CoachMarkCenter?
 
     /// Nil-safe read: previews inject no shared state, and an empty filter is
     /// the right thing to draw there.
@@ -50,6 +51,9 @@ struct FilterChipRow: View {
                 }
             }
             .padding(.horizontal, AtlasSpacing.md)
+            // The navigation tour's demonstration slides the row sideways to
+            // show it scrolls. Offset only — see `CoachMarkCenter.filterRowNudge`.
+            .offset(x: coachMarks?.filterRowNudge ?? 0)
         }
     }
 
@@ -91,6 +95,7 @@ struct FilterChipRow: View {
         ) {
             appShared?.filterPanel = .group(group)
         }
+        .coachMarkChip(group)
     }
 
     private func makerName(_ id: UUID) -> String? {
