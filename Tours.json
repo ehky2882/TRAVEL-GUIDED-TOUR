@@ -7149,6 +7149,36 @@
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.instagram.com/whitlamsberlintours/"
+    },
+    {
+      "id": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "displayName": "Instagram @igobart_",
+      "platform": "instagram",
+      "handle": "igobart_",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/igobart_/"
+    },
+    {
+      "id": "AD10061B-8752-5C9F-A924-2783C26CA1E6",
+      "displayName": "Instagram @eatingwhatisgiven",
+      "platform": "instagram",
+      "handle": "eatingwhatisgiven",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/eatingwhatisgiven/"
+    },
+    {
+      "id": "3F70E203-0BCD-5782-B30D-2664A91154FA",
+      "displayName": "Instagram @bohun_story",
+      "platform": "instagram",
+      "handle": "bohun_story",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/bohun_story/"
     }
   ],
   "tours": [
@@ -13824,8 +13854,8 @@
         "C48B2BD7-9A7F-5D37-9CF8-FB1966F0F5E2",
         "4827e124-6873-4478-9cae-5cf5f965bbe1",
         "333EB30B-6B5A-5229-9C6B-FE4AFB35E177",
-        "3d117c47-6c6e-42b8-a0f9-9820796d85de",
-        "771c68bd-a100-482b-ba7d-cd4bbad137d3"
+        "1C7E02DA-1962-536F-81BC-BC0BDC97085A",
+        "3d117c47-6c6e-42b8-a0f9-9820796d85de"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -46111,8 +46141,8 @@
         "11378809-f986-505b-80c9-cad3c8aafb2d",
         "682428ed-8183-547b-a020-3ae35dbfeaba",
         "92655fdd-493b-564c-a19f-57ccce10e026",
-        "80df1e35-1f11-5505-823b-b81cf3768521",
-        "83c58cc1-9ec6-54d2-bce3-498a7bce51b0"
+        "11784987-DD5A-53D5-9C07-BC550C5E01A3",
+        "80df1e35-1f11-5505-823b-b81cf3768521"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -46276,7 +46306,7 @@
         "2c9fb701-2063-5c14-a418-c42f60e6dce0",
         "B6FFE1B1-3DC1-50D7-82CC-F029807CB922",
         "C7775855-C915-534D-9B39-530AC025702A",
-        "bc042fda-60f8-560f-92d4-3d478816d9ee"
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -46329,10 +46359,10 @@
         "89fa0677-9165-5507-9d25-a769338ed8df",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
         "80df1e35-1f11-5505-823b-b81cf3768521",
-        "0937722e-26f7-5453-88bf-bdf691fcdf43",
-        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
-        "E2D873FD-4A6E-58CE-A305-8A97E79568CD",
-        "745AD9DA-E8C8-5C4B-BB7B-5A3B18AFCB61"
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "52E7BDBA-05EF-5D20-8535-DD9C5E1E28F1",
+        "0937722e-26f7-5453-88bf-bdf691fcdf43"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -46439,12 +46469,12 @@
       "relatedTourIds": [
         "745AD9DA-E8C8-5C4B-BB7B-5A3B18AFCB61",
         "1C39542B-E87B-5215-A595-F7FF21D14545",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "9B11D6C0-AADF-5ED8-B487-FCCE8034AC59",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
         "be45d130-ef55-55e6-bb83-1f6669630cae",
-        "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "92655fdd-493b-564c-a19f-57ccce10e026",
-        "17d77b0d-070f-5414-b79b-5a22e78644ba",
-        "E2D873FD-4A6E-58CE-A305-8A97E79568CD",
-        "7c9541b3-d162-5655-8da1-de0286f43d21"
+        "A1662A00-D1A7-5764-967A-798CADEBAB90"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -46553,14 +46583,14 @@
       "city": "Paju",
       "country": "South Korea",
       "relatedTourIds": [
+        "076BC942-2D7E-533B-9586-C23B42C46DF6",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
         "17d77b0d-070f-5414-b79b-5a22e78644ba",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
-        "87C6E02C-AE70-5F7C-8FA6-F28D56845D1E",
-        "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "545368f1-0c52-56e9-8721-9c0b8e75c138",
-        "E2D873FD-4A6E-58CE-A305-8A97E79568CD",
-        "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
-        "4212828A-1D7B-58D5-9691-60D298F36F07"
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -46786,10 +46816,10 @@
         "cfbcb0a7-d377-5846-bca8-8073d3b36796",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
         "6b48cbd2-3f97-5887-9060-fde4750001d0",
+        "FAE18FD1-9ABE-5EC3-9D07-E78936BFEA25",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
         "dc3ac0b7-aa92-5036-a93b-64dc80dee56d",
-        "89fa0677-9165-5507-9d25-a769338ed8df",
-        "1d402527-2285-55a7-97db-67ed5071efc4",
-        "DC54CC4E-F8CD-571B-84FF-6D7DC6C7A42A"
+        "C0FB8DC8-27F8-516C-9630-191AB3AB0262"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -46841,11 +46871,11 @@
         "be6af98d-156a-5a62-9b18-ea7ed90b8686",
         "2490cc58-8b30-5331-9e8a-5650e038fd62",
         "80df1e35-1f11-5505-823b-b81cf3768521",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
         "d7bee72e-70d6-518f-acb3-ce3dd2babee4",
         "7c9541b3-d162-5655-8da1-de0286f43d21",
-        "17d77b0d-070f-5414-b79b-5a22e78644ba",
-        "8b8be0d5-7647-56a9-ac0d-1eb786a08ac1",
-        "E2D873FD-4A6E-58CE-A305-8A97E79568CD"
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+        "076BC942-2D7E-533B-9586-C23B42C46DF6"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -46959,8 +46989,8 @@
         "407f8416-3a6d-54c3-af84-775b448fd96f",
         "bc042fda-60f8-560f-92d4-3d478816d9ee",
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
-        "bd8db960-7dce-5efa-9d7b-6d56ae1dcea4",
-        "4fe03935-405b-53c8-9991-d21eba60c45c"
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "bd8db960-7dce-5efa-9d7b-6d56ae1dcea4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -47184,11 +47214,11 @@
         "FED40890-5ADF-5CD0-8751-732232799E8A",
         "bc042fda-60f8-560f-92d4-3d478816d9ee",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
+        "C0FB8DC8-27F8-516C-9630-191AB3AB0262",
+        "FAE18FD1-9ABE-5EC3-9D07-E78936BFEA25",
         "28427603-2539-5712-8d8f-33e5261fdc2a",
-        "6b48cbd2-3f97-5887-9060-fde4750001d0",
-        "C7775855-C915-534D-9B39-530AC025702A",
-        "dc3ac0b7-aa92-5036-a93b-64dc80dee56d",
-        "11378809-f986-505b-80c9-cad3c8aafb2d"
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "38D67931-3B30-5B52-B93F-59A83F7BB19E"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -47296,13 +47326,13 @@
       "country": "South Korea",
       "relatedTourIds": [
         "FED40890-5ADF-5CD0-8751-732232799E8A",
+        "C0FB8DC8-27F8-516C-9630-191AB3AB0262",
         "cfbcb0a7-d377-5846-bca8-8073d3b36796",
         "bc042fda-60f8-560f-92d4-3d478816d9ee",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
         "C7775855-C915-534D-9B39-530AC025702A",
-        "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "0538DFD8-C7CB-54DA-9487-8429AC9D2899",
-        "9FCF0920-A716-596C-8E36-0B45A0A026A0"
+        "B5A2F665-FE68-5593-AAD7-57AC872FD8B0",
+        "FAE18FD1-9ABE-5EC3-9D07-E78936BFEA25"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -47409,10 +47439,10 @@
         "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
         "92655fdd-493b-564c-a19f-57ccce10e026",
         "80df1e35-1f11-5505-823b-b81cf3768521",
-        "eec0af10-6d48-51af-8676-ed08cd3b6b8f",
-        "88f85bce-f765-5b54-b807-edcd0832ec8e",
-        "D97E831E-346D-567F-8068-1098A93B361E",
-        "11378809-f986-505b-80c9-cad3c8aafb2d"
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
+        "076BC942-2D7E-533B-9586-C23B42C46DF6",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "eec0af10-6d48-51af-8676-ed08cd3b6b8f"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -47523,10 +47553,10 @@
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
         "80df1e35-1f11-5505-823b-b81cf3768521",
         "D97E831E-346D-567F-8068-1098A93B361E",
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
         "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
-        "28427603-2539-5712-8d8f-33e5261fdc2a",
-        "eec0af10-6d48-51af-8676-ed08cd3b6b8f"
+        "28427603-2539-5712-8d8f-33e5261fdc2a"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -47632,12 +47662,12 @@
       "relatedTourIds": [
         "7c9541b3-d162-5655-8da1-de0286f43d21",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
+        "076BC942-2D7E-533B-9586-C23B42C46DF6",
         "92655fdd-493b-564c-a19f-57ccce10e026",
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
         "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
         "d7bee72e-70d6-518f-acb3-ce3dd2babee4",
-        "80df1e35-1f11-5505-823b-b81cf3768521",
-        "4fe03935-405b-53c8-9991-d21eba60c45c",
-        "D97E831E-346D-567F-8068-1098A93B361E"
+        "80df1e35-1f11-5505-823b-b81cf3768521"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -47690,12 +47720,12 @@
       "relatedTourIds": [
         "2490cc58-8b30-5331-9e8a-5650e038fd62",
         "EE51B458-1E2C-5ACE-A948-C08321368C3A",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
         "92655fdd-493b-564c-a19f-57ccce10e026",
-        "D97E831E-346D-567F-8068-1098A93B361E",
-        "d7bee72e-70d6-518f-acb3-ce3dd2babee4",
-        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
-        "80df1e35-1f11-5505-823b-b81cf3768521"
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+        "CEF440CC-76E0-520D-B7DD-27625F8F9DE6",
+        "D97E831E-346D-567F-8068-1098A93B361E"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -47743,14 +47773,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "804A2576-11B0-56E8-AFBB-675D13F48B08",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "9B11D6C0-AADF-5ED8-B487-FCCE8034AC59",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
         "92655fdd-493b-564c-a19f-57ccce10e026",
         "80df1e35-1f11-5505-823b-b81cf3768521",
         "be45d130-ef55-55e6-bb83-1f6669630cae",
-        "c758134d-e7a7-51e5-8e5b-fb2027b6fc0c",
-        "17d77b0d-070f-5414-b79b-5a22e78644ba",
-        "cf833db1-9801-5f5a-95c9-50355c243b71",
-        "89fa0677-9165-5507-9d25-a769338ed8df",
-        "976420fe-e66e-59bf-99e2-0071fe45a1ff"
+        "c758134d-e7a7-51e5-8e5b-fb2027b6fc0c"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -47910,13 +47940,13 @@
       "country": "South Korea",
       "relatedTourIds": [
         "28427603-2539-5712-8d8f-33e5261fdc2a",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
         "92655fdd-493b-564c-a19f-57ccce10e026",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
+        "076BC942-2D7E-533B-9586-C23B42C46DF6",
+        "E6BC80AB-D1F9-5122-AEBC-B5726EAAE55C",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "80df1e35-1f11-5505-823b-b81cf3768521",
-        "be6af98d-156a-5a62-9b18-ea7ed90b8686",
-        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
-        "7c9541b3-d162-5655-8da1-de0286f43d21"
+        "A4C45323-7A88-58A4-828E-83FED17DF01D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -48028,10 +48058,10 @@
         "0275501b-6d22-53de-b578-da36b7b9384e",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
         "d7bee72e-70d6-518f-acb3-ce3dd2babee4",
-        "80df1e35-1f11-5505-823b-b81cf3768521",
-        "a772c45c-deac-5b20-96df-6230e698ce00",
-        "79acccd5-bcde-5cd2-81fd-61c8bedbeda1",
-        "de18a5cb-04be-42dc-832a-6e4772a66bee"
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+        "6698108F-E886-5662-8DBB-159A3731BEE8",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "80df1e35-1f11-5505-823b-b81cf3768521"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -48081,11 +48111,11 @@
         "1d402527-2285-55a7-97db-67ed5071efc4",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "38D67931-3B30-5B52-B93F-59A83F7BB19E",
         "bc042fda-60f8-560f-92d4-3d478816d9ee",
-        "28427603-2539-5712-8d8f-33e5261fdc2a",
-        "FED40890-5ADF-5CD0-8751-732232799E8A",
-        "5aa36fa6-e57b-5d46-9061-6dd76cfd44a6",
-        "cfbcb0a7-d377-5846-bca8-8073d3b36796"
+        "28427603-2539-5712-8d8f-33e5261fdc2a"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -48135,14 +48165,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "ECD8C2A3-4665-5145-9214-6833E69D58FE",
+        "58304931-85B3-5CD9-A955-C114CCE8A1F3",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "B0601329-CFF5-5B21-A6CF-3A0BA199A6F8",
         "80df1e35-1f11-5505-823b-b81cf3768521",
         "2490cc58-8b30-5331-9e8a-5650e038fd62",
-        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
-        "7c9541b3-d162-5655-8da1-de0286f43d21",
-        "be6af98d-156a-5a62-9b18-ea7ed90b8686",
-        "92655fdd-493b-564c-a19f-57ccce10e026",
-        "eec0af10-6d48-51af-8676-ed08cd3b6b8f"
+        "4e3e8520-c950-5e89-8ffa-c480d369e60c"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -48191,12 +48221,12 @@
       "relatedTourIds": [
         "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "076BC942-2D7E-533B-9586-C23B42C46DF6",
         "92655fdd-493b-564c-a19f-57ccce10e026",
-        "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
-        "cf833db1-9801-5f5a-95c9-50355c243b71",
-        "80df1e35-1f11-5505-823b-b81cf3768521",
-        "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "4fe03935-405b-53c8-9991-d21eba60c45c"
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "E6BC80AB-D1F9-5122-AEBC-B5726EAAE55C",
+        "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -48247,11 +48277,11 @@
         "92655fdd-493b-564c-a19f-57ccce10e026",
         "745AD9DA-E8C8-5C4B-BB7B-5A3B18AFCB61",
         "28427603-2539-5712-8d8f-33e5261fdc2a",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
         "89fa0677-9165-5507-9d25-a769338ed8df",
-        "D97E831E-346D-567F-8068-1098A93B361E",
-        "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "0937722e-26f7-5453-88bf-bdf691fcdf43",
-        "80df1e35-1f11-5505-823b-b81cf3768521"
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "D97E831E-346D-567F-8068-1098A93B361E"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -149070,11 +149100,11 @@
         "831C19CB-0697-5B83-A9DE-DBA167ED90DC",
         "386E0B2C-272F-5078-971E-30E92700474E",
         "50CFB5A0-E6C2-54B0-952F-702397DBE263",
+        "466C7A8F-9107-56AC-822B-9934F46954C6",
         "AA9E76BD-0C20-534D-BBC0-5B4F914962CD",
         "1D3E90A9-32B0-5A73-AFD9-F71C59E750E7",
         "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
-        "B90E38B1-8141-5009-96B1-CD52B46204B9",
-        "CD5A2131-314F-563B-8F1D-5E07A0FDA174"
+        "B90E38B1-8141-5009-96B1-CD52B46204B9"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -150443,11 +150473,11 @@
         "26144511-5987-5259-AA11-3762F106408B",
         "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
+        "466C7A8F-9107-56AC-822B-9934F46954C6",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "BE8B80BD-771D-5CE4-801F-B81125261722",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
-        "31CDA6B4-E288-5599-B566-1BEB9413E432",
-        "6EECF5D5-FDB1-5BBD-8A63-2C92946479DF"
+        "31CDA6B4-E288-5599-B566-1BEB9413E432"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -158787,13 +158817,13 @@
       "country": "South Korea",
       "relatedTourIds": [
         "89aa9c49-b8b3-5cad-9751-2ce13b542c71",
+        "52E7BDBA-05EF-5D20-8535-DD9C5E1E28F1",
         "80df1e35-1f11-5505-823b-b81cf3768521",
         "2A83EDCE-B65C-591D-9B03-B13249F6DAE1",
         "856D117A-26F7-5B1F-B715-CDF2E2E0B662",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "83c58cc1-9ec6-54d2-bce3-498a7bce51b0",
-        "976420fe-e66e-59bf-99e2-0071fe45a1ff",
-        "6b48cbd2-3f97-5887-9060-fde4750001d0"
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "83c58cc1-9ec6-54d2-bce3-498a7bce51b0"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -197930,10 +197960,10 @@
         "2A83EDCE-B65C-591D-9B03-B13249F6DAE1",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
         "6b48cbd2-3f97-5887-9060-fde4750001d0",
-        "92655fdd-493b-564c-a19f-57ccce10e026",
-        "28427603-2539-5712-8d8f-33e5261fdc2a",
-        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
-        "bd8db960-7dce-5efa-9d7b-6d56ae1dcea4"
+        "23056721-45F1-5CA3-B1FE-0A4EF5B9E2B9",
+        "B0DD2A6F-C65D-55DE-857A-40316A0091F1",
+        "F989FFE1-8B71-53E1-AB1C-C53E1947F74F",
+        "92655fdd-493b-564c-a19f-57ccce10e026"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -206092,13 +206122,13 @@
       "country": "South Korea",
       "relatedTourIds": [
         "7c9541b3-d162-5655-8da1-de0286f43d21",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "B0601329-CFF5-5B21-A6CF-3A0BA199A6F8",
+        "ECD8C2A3-4665-5145-9214-6833E69D58FE",
         "2490cc58-8b30-5331-9e8a-5650e038fd62",
-        "d7bee72e-70d6-518f-acb3-ce3dd2babee4",
-        "D97E831E-346D-567F-8068-1098A93B361E",
-        "2A83EDCE-B65C-591D-9B03-B13249F6DAE1",
-        "92655fdd-493b-564c-a19f-57ccce10e026",
-        "cf833db1-9801-5f5a-95c9-50355c243b71",
-        "0937722e-26f7-5453-88bf-bdf691fcdf43"
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "58304931-85B3-5CD9-A955-C114CCE8A1F3",
+        "d7bee72e-70d6-518f-acb3-ce3dd2babee4"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -222966,7 +222996,7 @@
         "553EBE9B-7750-55A1-AB37-5AF764F9F577",
         "831C19CB-0697-5B83-A9DE-DBA167ED90DC",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
-        "EDABD84A-63A7-5F4E-9925-C17169884E58"
+        "466C7A8F-9107-56AC-822B-9934F46954C6"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -232472,13 +232502,13 @@
       "country": "United States",
       "relatedTourIds": [
         "26144511-5987-5259-AA11-3762F106408B",
+        "466C7A8F-9107-56AC-822B-9934F46954C6",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "5F8B2762-1CA1-57B1-83CE-99F963F6241F",
         "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "8CA1FDF4-64B1-5147-B63E-DBA3DA5EE2EB",
         "4B4E881E-7E0A-5F92-8E2D-D1255C864F09",
-        "6EECF5D5-FDB1-5BBD-8A63-2C92946479DF",
-        "031089F2-1BFA-55CF-8323-B13B22ADAEC3"
+        "6EECF5D5-FDB1-5BBD-8A63-2C92946479DF"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -232747,10 +232777,10 @@
         "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "5F8B2762-1CA1-57B1-83CE-99F963F6241F",
+        "466C7A8F-9107-56AC-822B-9934F46954C6",
         "6FAA314E-D6BF-5247-B77F-B22CE7C8D9FD",
         "031089F2-1BFA-55CF-8323-B13B22ADAEC3",
-        "A2FAAD55-8DC8-506F-B8DE-CFE68CCDAD48",
-        "4B4E881E-7E0A-5F92-8E2D-D1255C864F09"
+        "A2FAAD55-8DC8-506F-B8DE-CFE68CCDAD48"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -240547,14 +240577,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "1C7E02DA-1962-536F-81BC-BC0BDC97085A",
         "219D6C8F-CB76-5F59-9700-701C1B065F11",
         "3d117c47-6c6e-42b8-a0f9-9820796d85de",
         "771c68bd-a100-482b-ba7d-cd4bbad137d3",
         "83090c8c-ab5d-4311-a881-519b1e36183e",
         "21c1b7e3-b8fb-413b-83b7-0fa67693155c",
         "239E3759-DD45-5FB3-B33F-5AB6AF29FC0A",
-        "03AD1C89-9562-5923-B68A-1183E75D9DBE",
-        "6877114e-0d89-4271-a16b-dbabb95f42ae"
+        "03AD1C89-9562-5923-B68A-1183E75D9DBE"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -242561,12 +242591,12 @@
       "relatedTourIds": [
         "545368f1-0c52-56e9-8721-9c0b8e75c138",
         "1C39542B-E87B-5215-A595-F7FF21D14545",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
         "be45d130-ef55-55e6-bb83-1f6669630cae",
-        "92655fdd-493b-564c-a19f-57ccce10e026",
-        "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "be6af98d-156a-5a62-9b18-ea7ed90b8686",
-        "89fa0677-9165-5507-9d25-a769338ed8df",
-        "11378809-f986-505b-80c9-cad3c8aafb2d"
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -262650,6 +262680,7 @@
         "2DFCC005-BA39-5DE2-8C34-1B0BE711239A",
         "F3FA00B0-F388-50F6-891D-49C987DC9986",
         "4735A7C7-26CF-5192-904C-A5AA31F52915",
+        "466C7A8F-9107-56AC-822B-9934F46954C6",
         "FC26754D-7BB1-5A9C-94B2-D26D885C2D74"
       ],
       "primaryCategory": "foodAndDrink",
@@ -272177,13 +272208,13 @@
       "country": "United States",
       "relatedTourIds": [
         "26144511-5987-5259-AA11-3762F106408B",
+        "466C7A8F-9107-56AC-822B-9934F46954C6",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "5F8B2762-1CA1-57B1-83CE-99F963F6241F",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "BE8B80BD-771D-5CE4-801F-B81125261722",
         "98031BFE-B380-5D8C-BB40-0A4C572119BF",
-        "A90AECAF-CA4C-5FA5-9DD7-4C870F196AB9",
-        "01DDF36A-F835-5475-AF84-7908E12E9680"
+        "A90AECAF-CA4C-5FA5-9DD7-4C870F196AB9"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -278678,13 +278709,13 @@
       "country": "United States",
       "relatedTourIds": [
         "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "466C7A8F-9107-56AC-822B-9934F46954C6",
         "8EC93489-08F1-5998-9982-A9732336BE81",
         "BBF4E808-1033-599B-A905-D8FC66AE9C00",
         "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
         "4735A7C7-26CF-5192-904C-A5AA31F52915",
         "26144511-5987-5259-AA11-3762F106408B",
-        "EBE45797-87BC-5D11-8139-E0D35455EC60",
-        "831C19CB-0697-5B83-A9DE-DBA167ED90DC"
+        "EBE45797-87BC-5D11-8139-E0D35455EC60"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -295677,14 +295708,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
         "5C5D4FA4-AEBE-571B-B62B-B4BA27C66FB8",
         "4fe03935-405b-53c8-9991-d21eba60c45c",
+        "52E7BDBA-05EF-5D20-8535-DD9C5E1E28F1",
         "2A83EDCE-B65C-591D-9B03-B13249F6DAE1",
         "0937722e-26f7-5453-88bf-bdf691fcdf43",
-        "cf833db1-9801-5f5a-95c9-50355c243b71",
-        "976420fe-e66e-59bf-99e2-0071fe45a1ff",
-        "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "6b48cbd2-3f97-5887-9060-fde4750001d0"
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "cf833db1-9801-5f5a-95c9-50355c243b71"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -300816,12 +300847,12 @@
       "relatedTourIds": [
         "745AD9DA-E8C8-5C4B-BB7B-5A3B18AFCB61",
         "545368f1-0c52-56e9-8721-9c0b8e75c138",
-        "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "be6af98d-156a-5a62-9b18-ea7ed90b8686",
-        "E2D873FD-4A6E-58CE-A305-8A97E79568CD",
-        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
-        "7c9541b3-d162-5655-8da1-de0286f43d21",
-        "80df1e35-1f11-5505-823b-b81cf3768521"
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "52E7BDBA-05EF-5D20-8535-DD9C5E1E28F1"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -315975,9 +316006,9 @@
         "C7775855-C915-534D-9B39-530AC025702A",
         "DC54CC4E-F8CD-571B-84FF-6D7DC6C7A42A",
         "dc3ac0b7-aa92-5036-a93b-64dc80dee56d",
+        "FAE18FD1-9ABE-5EC3-9D07-E78936BFEA25",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "6b48cbd2-3f97-5887-9060-fde4750001d0",
-        "3310B7FB-17CD-56A1-B2E4-FE2E7A0E766B"
+        "C0FB8DC8-27F8-516C-9630-191AB3AB0262"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -339623,8 +339654,8 @@
         "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
         "88f85bce-f765-5b54-b807-edcd0832ec8e",
-        "eec0af10-6d48-51af-8676-ed08cd3b6b8f",
-        "83c58cc1-9ec6-54d2-bce3-498a7bce51b0"
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "eec0af10-6d48-51af-8676-ed08cd3b6b8f"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -339731,9 +339762,9 @@
         "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
         "D97E831E-346D-567F-8068-1098A93B361E",
         "80df1e35-1f11-5505-823b-b81cf3768521",
-        "17d77b0d-070f-5414-b79b-5a22e78644ba",
-        "F18C7173-BC4D-567F-9B5A-45E4BAEC5614",
-        "eec0af10-6d48-51af-8676-ed08cd3b6b8f"
+        "076BC942-2D7E-533B-9586-C23B42C46DF6",
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
+        "17d77b0d-070f-5414-b79b-5a22e78644ba"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -339781,14 +339812,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "D997A4A9-7F50-542B-9523-A7A5C804BAE4",
         "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "6BA4E7DB-6CA9-59F9-A2FD-E9412EEC2D01",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
         "F18C7173-BC4D-567F-9B5A-45E4BAEC5614",
-        "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
-        "9FCF0920-A716-596C-8E36-0B45A0A026A0",
-        "D97E831E-346D-567F-8068-1098A93B361E",
-        "1d402527-2285-55a7-97db-67ed5071efc4",
-        "6D9E3117-91CA-5DAB-A561-CCC0A1869041"
+        "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -339838,12 +339869,12 @@
       "relatedTourIds": [
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
         "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
         "92655fdd-493b-564c-a19f-57ccce10e026",
+        "076BC942-2D7E-533B-9586-C23B42C46DF6",
         "80df1e35-1f11-5505-823b-b81cf3768521",
-        "D97E831E-346D-567F-8068-1098A93B361E",
-        "F18C7173-BC4D-567F-9B5A-45E4BAEC5614",
-        "17d77b0d-070f-5414-b79b-5a22e78644ba",
-        "28427603-2539-5712-8d8f-33e5261fdc2a"
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "D97E831E-346D-567F-8068-1098A93B361E"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -340047,8 +340078,8 @@
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
         "80df1e35-1f11-5505-823b-b81cf3768521",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "8fd2d042-3de2-5e89-ab0f-085df6533c51",
-        "5aa36fa6-e57b-5d46-9061-6dd76cfd44a6"
+        "23056721-45F1-5CA3-B1FE-0A4EF5B9E2B9",
+        "8fd2d042-3de2-5e89-ab0f-085df6533c51"
       ],
       "primaryCategory": "literature",
       "tags": [
@@ -353545,14 +353576,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "466C7A8F-9107-56AC-822B-9934F46954C6",
         "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "4BDCA974-DD0D-536F-BB83-175659EC83C2",
         "5F8B2762-1CA1-57B1-83CE-99F963F6241F",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "031089F2-1BFA-55CF-8323-B13B22ADAEC3",
-        "644FE3D5-B93C-5209-8411-83C682BD33CF",
-        "4B4E881E-7E0A-5F92-8E2D-D1255C864F09"
+        "644FE3D5-B93C-5209-8411-83C682BD33CF"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -354434,13 +354465,13 @@
       "country": "South Korea",
       "relatedTourIds": [
         "4fe03935-405b-53c8-9991-d21eba60c45c",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7",
+        "52E7BDBA-05EF-5D20-8535-DD9C5E1E28F1",
         "5C5D4FA4-AEBE-571B-B62B-B4BA27C66FB8",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "80df1e35-1f11-5505-823b-b81cf3768521",
-        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
-        "AC7C3951-60AB-50B9-B8E0-2BF017E576CE",
-        "2490cc58-8b30-5331-9e8a-5650e038fd62",
-        "976420fe-e66e-59bf-99e2-0071fe45a1ff"
+        "F989FFE1-8B71-53E1-AB1C-C53E1947F74F",
+        "80df1e35-1f11-5505-823b-b81cf3768521"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -357976,9 +358007,9 @@
         "B6FFE1B1-3DC1-50D7-82CC-F029807CB922",
         "0538DFD8-C7CB-54DA-9487-8429AC9D2899",
         "FED40890-5ADF-5CD0-8751-732232799E8A",
-        "c758134d-e7a7-51e5-8e5b-fb2027b6fc0c",
-        "9FCF0920-A716-596C-8E36-0B45A0A026A0",
-        "bc042fda-60f8-560f-92d4-3d478816d9ee"
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "B5A2F665-FE68-5593-AAD7-57AC872FD8B0",
+        "c758134d-e7a7-51e5-8e5b-fb2027b6fc0c"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -358029,10 +358060,10 @@
         "C7775855-C915-534D-9B39-530AC025702A",
         "B6FFE1B1-3DC1-50D7-82CC-F029807CB922",
         "DC54CC4E-F8CD-571B-84FF-6D7DC6C7A42A",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
         "FED40890-5ADF-5CD0-8751-732232799E8A",
-        "9FCF0920-A716-596C-8E36-0B45A0A026A0",
-        "DC7E122A-A4FD-5306-AF45-8B485E8C2668",
-        "407f8416-3a6d-54c3-af84-775b448fd96f"
+        "B5A2F665-FE68-5593-AAD7-57AC872FD8B0",
+        "9FCF0920-A716-596C-8E36-0B45A0A026A0"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -358083,10 +358114,10 @@
         "0538DFD8-C7CB-54DA-9487-8429AC9D2899",
         "B6FFE1B1-3DC1-50D7-82CC-F029807CB922",
         "DC54CC4E-F8CD-571B-84FF-6D7DC6C7A42A",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
         "FED40890-5ADF-5CD0-8751-732232799E8A",
-        "6b48cbd2-3f97-5887-9060-fde4750001d0",
-        "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "cfbcb0a7-d377-5846-bca8-8073d3b36796"
+        "5B3A5411-41EE-5CDE-A482-B8CD1FEEC949",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -358349,12 +358380,12 @@
       "relatedTourIds": [
         "DC54CC4E-F8CD-571B-84FF-6D7DC6C7A42A",
         "C7775855-C915-534D-9B39-530AC025702A",
+        "23056721-45F1-5CA3-B1FE-0A4EF5B9E2B9",
         "0538DFD8-C7CB-54DA-9487-8429AC9D2899",
         "3310B7FB-17CD-56A1-B2E4-FE2E7A0E766B",
-        "cfbcb0a7-d377-5846-bca8-8073d3b36796",
-        "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "B3D63624-AD97-5962-9434-0113C816FF34",
-        "6b48cbd2-3f97-5887-9060-fde4750001d0"
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "38D67931-3B30-5B52-B93F-59A83F7BB19E",
+        "5B3A5411-41EE-5CDE-A482-B8CD1FEEC949"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -358785,9 +358816,9 @@
         "89fa0677-9165-5507-9d25-a769338ed8df",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
         "0937722e-26f7-5453-88bf-bdf691fcdf43",
-        "D97E831E-346D-567F-8068-1098A93B361E",
-        "1C39542B-E87B-5215-A595-F7FF21D14545",
-        "C7775855-C915-534D-9B39-530AC025702A"
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "52E7BDBA-05EF-5D20-8535-DD9C5E1E28F1",
+        "D97E831E-346D-567F-8068-1098A93B361E"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -360102,8 +360133,8 @@
         "DC54CC4E-F8CD-571B-84FF-6D7DC6C7A42A",
         "FED40890-5ADF-5CD0-8751-732232799E8A",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "cfbcb0a7-d377-5846-bca8-8073d3b36796",
-        "6b48cbd2-3f97-5887-9060-fde4750001d0"
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "cfbcb0a7-d377-5846-bca8-8073d3b36796"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -360251,14 +360282,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
-        "3310B7FB-17CD-56A1-B2E4-FE2E7A0E766B",
-        "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "C7775855-C915-534D-9B39-530AC025702A",
-        "0538DFD8-C7CB-54DA-9487-8429AC9D2899",
-        "B6FFE1B1-3DC1-50D7-82CC-F029807CB922",
-        "c758134d-e7a7-51e5-8e5b-fb2027b6fc0c",
-        "DC54CC4E-F8CD-571B-84FF-6D7DC6C7A42A",
-        "9FCF0920-A716-596C-8E36-0B45A0A026A0"
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "BFAF22DF-34CE-5D0D-891A-0A26D926D892"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -364787,7 +364818,7 @@
         "BFD11EA8-ECD0-58EB-A1E0-CCE2B9BEAE7F",
         "A3303827-10F5-5B55-AC6E-6A54A8F3C0F3",
         "3DADDCC8-0961-506C-B76C-35759D0D1CD9",
-        "051957C8-9EAC-5882-B79D-89AAE7996A29"
+        "2788BD41-03FF-5B1B-B0AB-FA00727EFF2D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -377469,6 +377500,2898 @@
         "Contemporary",
         "Designed by a Master",
         "Luís Pedro Silva"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ED1226A5-081F-5DD4-B40D-496999A8999F",
+      "createdAt": "2026-10-26",
+      "title": "Japanese House of Flatbush",
+      "shortDescription": "A post by @landmarksofny on Instagram.",
+      "longDescription": "At the turn of the 20th century, developer Dean Alvord started a project to bring the suburbs to New York City. Prospect Park South featured large, single-family homes, placed in the grid system of Flatbush, Brooklyn. In order to drum up excitement and to attract potential buyers, Alvord commissioned the construction of a large Japanese-style home which still exists to this day. Have you ever seen it?",
+      "makerId": "8CC7FDFC-1DE5-54F9-8601-13ADA9AA7A06",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/japanese-house-of-flatbush-landmarksofny_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/De1gSItBQGF/",
+      "sourceAuthor": "@landmarksofny",
+      "stops": [
+        {
+          "id": "CE15F135-9F81-5CF4-BA4B-BC5F66CF7830",
+          "order": 0,
+          "title": "Japanese House of Flatbush",
+          "caption": "At the turn of the 20th century, developer Dean Alvord started a project to bring the suburbs to New York City. Prospect Park South featured large, single-family homes, placed in the grid system of Flatbush, Brooklyn. In order to drum up excitement and to attract potential buyers, Alvord commissioned the construction of a large Japanese-style home which still exists to this day. Have you ever seen it?",
+          "latitude": 40.64736,
+          "longitude": -73.96433,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/japanese-house-of-flatbush-landmarksofny_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.64736,
+      "centroidLongitude": -73.96433,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "bd4d95e6-403e-4b9b-a894-efbc205668a5",
+        "01EF9E24-B23D-5B66-80D2-61335FA52C99",
+        "EA33657E-E198-5BBF-9ADC-7D7F57C87447",
+        "A0346E14-8B04-48FC-B174-483C6CB038DA",
+        "F70F0376-C237-5610-BA05-94F6478775E4",
+        "4890241F-C4EB-5B44-8282-8A13A3F4F8F4",
+        "D322F9B9-F1E5-57DB-90AE-FF84B7036A7D",
+        "2D9775A9-F265-5D5A-8995-76D87C5CC94E"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2788BD41-03FF-5B1B-B0AB-FA00727EFF2D",
+      "createdAt": "2026-10-26",
+      "title": "Edward Mooney House",
+      "shortDescription": "A post by @landmarksofny on Instagram.",
+      "longDescription": "One of the fascinating things about writing a book about buildings in New York is that inevitably, those buildings will change. I just didn’t expect it to be so fast. I wrote about the Edward Mooney House in my book Hidden Landmarks of New York and was pleasantly surprised to see it had been through a massive restoration. Let me know if you liked the red paint more.",
+      "makerId": "8CC7FDFC-1DE5-54F9-8601-13ADA9AA7A06",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/edward-mooney-house-landmarksofny_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Da7vWVDvU0f/",
+      "sourceAuthor": "@landmarksofny",
+      "stops": [
+        {
+          "id": "1B62C752-1716-54DC-9C89-9B6616207871",
+          "order": 0,
+          "title": "Edward Mooney House",
+          "caption": "One of the fascinating things about writing a book about buildings in New York is that inevitably, those buildings will change. I just didn’t expect it to be so fast. I wrote about the Edward Mooney House in my book Hidden Landmarks of New York and was pleasantly surprised to see it had been through a massive restoration. Let me know if you liked the red paint more.",
+          "latitude": 40.71444,
+          "longitude": -73.99806,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/edward-mooney-house-landmarksofny_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.71444,
+      "centroidLongitude": -73.99806,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "80DAF3A7-1C66-50E1-B5E8-6B683CF4C60B",
+        "E1D5E7F1-D44C-5294-8941-3EE27F65B4B8",
+        "4890241F-C4EB-5B44-8282-8A13A3F4F8F4",
+        "3D4B6A06-78F0-5824-ADA3-9ECE57ACBECC",
+        "A3303827-10F5-5B55-AC6E-6A54A8F3C0F3",
+        "E1516B43-BB08-519E-86B2-4CC166F5F2E0",
+        "4C9D8D4C-16C3-5FAA-B3A4-5EB8FECC93D2",
+        "CFEC4A34-94D6-5ADE-B689-AF3D3518EB7F"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1C7E02DA-1962-536F-81BC-BC0BDC97085A",
+      "createdAt": "2026-10-26",
+      "title": "Weir Greenhouse, Green-Wood Cemetery",
+      "shortDescription": "A post by @landmarksofny on Instagram.",
+      "longDescription": "In 1895, James Weir Jr. had this magnificent greenhouse built on the corner of 5th Avenue and 25th Street in Brooklyn, to cater to the throngs of guests and mourners visiting Green-Wood Cemetery. The Weirs would remain in this building until 1971. After a massive restoration project by Green-Wood, the greenhouse reopened as the new visitors center and museum.",
+      "makerId": "8CC7FDFC-1DE5-54F9-8601-13ADA9AA7A06",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/weir-greenhouse-landmarksofny_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DXZFpO6DPLm/",
+      "sourceAuthor": "@landmarksofny",
+      "stops": [
+        {
+          "id": "8B410BAA-BC0D-5E86-BCE3-33ACCD08BFE4",
+          "order": 0,
+          "title": "Weir Greenhouse, Green-Wood Cemetery",
+          "caption": "In 1895, James Weir Jr. had this magnificent greenhouse built on the corner of 5th Avenue and 25th Street in Brooklyn, to cater to the throngs of guests and mourners visiting Green-Wood Cemetery. The Weirs would remain in this building until 1971. After a massive restoration project by Green-Wood, the greenhouse reopened as the new visitors center and museum.",
+          "latitude": 40.65911,
+          "longitude": -73.9961,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/weir-greenhouse-landmarksofny_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.65911,
+      "centroidLongitude": -73.9961,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "333EB30B-6B5A-5229-9C6B-FE4AFB35E177",
+        "48149f3c-5cbd-4eb3-80f2-23ce84ff2fbe",
+        "5bb90e3a-a81f-492d-b761-b204fa5dc405",
+        "83090c8c-ab5d-4311-a881-519b1e36183e",
+        "cc251534-28cb-4f9b-bded-24602cef3a95",
+        "B63F5AE1-3D8D-4AA3-8D1B-9A82862D1AE6",
+        "21c1b7e3-b8fb-413b-83b7-0fa67693155c",
+        "1C45D0BE-B1E8-58D4-A38D-D85F5D126085"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Museum"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "466C7A8F-9107-56AC-822B-9934F46954C6",
+      "createdAt": "2026-10-26",
+      "title": "Carnegie Deli",
+      "shortDescription": "A post by @nickcabotrodriguez on Instagram.",
+      "longDescription": "The History of Restaurants - Episode 7: Carnegie Deli #nycfood #nychistory #restaurant #nyc",
+      "makerId": "299D0BA5-37D6-5B94-8378-85C8DA80712D",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carnegie-deli-nickcabotrodriguez_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/De4aNY8sYKm/",
+      "sourceAuthor": "@nickcabotrodriguez",
+      "stops": [
+        {
+          "id": "791CE77E-3585-5F93-A032-499106EA39EB",
+          "order": 0,
+          "title": "Carnegie Deli",
+          "caption": "The History of Restaurants - Episode 7: Carnegie Deli #nycfood #nychistory #restaurant #nyc",
+          "latitude": 40.76417,
+          "longitude": -73.98137,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carnegie-deli-nickcabotrodriguez_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.76417,
+      "centroidLongitude": -73.98137,
+      "city": "New York",
+      "country": "United States",
+      "relatedTourIds": [
+        "26144511-5987-5259-AA11-3762F106408B",
+        "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
+        "4BDCA974-DD0D-536F-BB83-175659EC83C2",
+        "866EE87D-8E08-514D-B67F-5B9268257DF0",
+        "5F8B2762-1CA1-57B1-83CE-99F963F6241F",
+        "CD5A2131-314F-563B-8F1D-5E07A0FDA174",
+        "9AC8FFF4-4A82-5E0F-B000-1B778758EB54",
+        "06C7250D-1112-5D87-A67E-097CA96C0311"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "B0DD2A6F-C65D-55DE-857A-40316A0091F1",
+      "createdAt": "2026-10-26",
+      "title": "French Embassy in Seoul",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Some buildings in Seoul really just trigger your curiosity. 서울의 어떤 건물들은 정말 호기심을 자극합니다. 📍 43-12 Seosomun-ro, Seodaemun-gu, Seoul. 📍 서소문로 43-12. #seoul #seoulkorea #seoulsecret #프랑스 #서울",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/french-embassy-seoul-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/De1Q4OShWFa/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "F539C09C-8492-582C-AD33-DDF6406E6019",
+          "order": 0,
+          "title": "French Embassy in Seoul",
+          "caption": "Some buildings in Seoul really just trigger your curiosity. 서울의 어떤 건물들은 정말 호기심을 자극합니다. 📍 43-12 Seosomun-ro, Seodaemun-gu, Seoul. 📍 서소문로 43-12. #seoul #seoulkorea #seoulsecret #프랑스 #서울",
+          "latitude": 37.5615,
+          "longitude": 126.96542,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/french-embassy-seoul-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.5615,
+      "centroidLongitude": 126.96542,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "F989FFE1-8B71-53E1-AB1C-C53E1947F74F",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Modernist"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "B0601329-CFF5-5B21-A6CF-3A0BA199A6F8",
+      "createdAt": "2026-10-26",
+      "title": "White Buddha of Okcheonam",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "This White Buddha is one of Seoul’s most beautiful hidden sights 이 백불은 서울의 숨은 명소 중에서도 손꼽히게 아름다운 곳입니다! #seoul #seoul🇰🇷 #seoulkorea #서울 #서울핫플",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/okcheonam-white-buddha-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Ded5vLeNjVt/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "9603849F-A8BA-51E1-8F05-1C2E46EF4080",
+          "order": 0,
+          "title": "White Buddha of Okcheonam",
+          "caption": "This White Buddha is one of Seoul’s most beautiful hidden sights 이 백불은 서울의 숨은 명소 중에서도 손꼽히게 아름다운 곳입니다! #seoul #seoul🇰🇷 #seoulkorea #서울 #서울핫플",
+          "latitude": 37.59681,
+          "longitude": 126.95493,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/okcheonam-white-buddha-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.59681,
+      "centroidLongitude": 126.95493,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "8E7A4D35-8709-53D8-B1A9-1CE8A3D8D710",
+        "58304931-85B3-5CD9-A955-C114CCE8A1F3",
+        "ECD8C2A3-4665-5145-9214-6833E69D58FE",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "AE40AB59-4C91-5FF9-8C54-12C55D6D9856",
+        "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B"
+      ],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F989FFE1-8B71-53E1-AB1C-C53E1947F74F",
+      "createdAt": "2026-10-26",
+      "title": "Seosomun Apartments",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Why is this Apartment building curved? 이 아파트 건물은 왜 곡선일까요? 📍Location 통일로 97 경찰청 59 Chungjeong-ro 6-gil, Seodaemun-gu, Seoul #seoul #seoulkorea #서울 #서울핫플 #서울가볼만한곳",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seosomun-apartments-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DeOhwXohRTk/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "F3624428-3FFD-54C7-A2FA-4F5606EB6271",
+          "order": 0,
+          "title": "Seosomun Apartments",
+          "caption": "Why is this Apartment building curved? 이 아파트 건물은 왜 곡선일까요? 📍Location 통일로 97 경찰청 59 Chungjeong-ro 6-gil, Seodaemun-gu, Seoul #seoul #seoulkorea #서울 #서울핫플 #서울가볼만한곳",
+          "latitude": 37.56273,
+          "longitude": 126.96807,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seosomun-apartments-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.56273,
+      "centroidLongitude": 126.96807,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "B0DD2A6F-C65D-55DE-857A-40316A0091F1",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "52E7BDBA-05EF-5D20-8535-DD9C5E1E28F1",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "B5A2F665-FE68-5593-AAD7-57AC872FD8B0",
+      "createdAt": "2026-10-26",
+      "title": "Namdaemun Kalguksu Alley",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "This may be the most uncomfortable place I‘ve ever eaten. 여기는 아마 제가 가본 곳 중 가장 불편한 음식점일 겁니다. 📍남대문칼국수골목 Namdaemun Kalguksu Alley #seoul #seoulfood #seoulkorea #서울 #서울맛집",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/namdaemun-kalguksu-alley-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dd_WBh5hvv9/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "40D3C465-882A-5896-919A-247BDE6E95C3",
+          "order": 0,
+          "title": "Namdaemun Kalguksu Alley",
+          "caption": "This may be the most uncomfortable place I‘ve ever eaten. 여기는 아마 제가 가본 곳 중 가장 불편한 음식점일 겁니다. 📍남대문칼국수골목 Namdaemun Kalguksu Alley #seoul #seoulfood #seoulkorea #서울 #서울맛집",
+          "latitude": 37.55944,
+          "longitude": 126.97742,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/namdaemun-kalguksu-alley-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.55944,
+      "centroidLongitude": 126.97742,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "C0FB8DC8-27F8-516C-9630-191AB3AB0262",
+        "FAE18FD1-9ABE-5EC3-9D07-E78936BFEA25",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+        "BFAF22DF-34CE-5D0D-891A-0A26D926D892",
+        "38D67931-3B30-5B52-B93F-59A83F7BB19E",
+        "6BA4E7DB-6CA9-59F9-A2FD-E9412EEC2D01",
+        "8A645DCB-68DE-5133-8DD6-31B3515A3E19"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Market"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5626CC92-E166-5EDE-A26B-B4A0FB31A663",
+      "createdAt": "2026-10-26",
+      "title": "Choansan",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "This may be the spookiest mountain in Seoul. 서울에서 가장 으스스한 산에 다녀왔습니다! ⛰️Choan-san 초안산 📍초안산로5길 74 📍9 Wolgye-ro 45ga-gil, Nowon-gu, Seoul #seoul #seoul_korea #seoulkorea #서울 #서울가볼만한곳",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/choansan-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdvRF4Phkpy/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "77494E47-4F81-5B01-9A32-D600DBF30E62",
+          "order": 0,
+          "title": "Choansan",
+          "caption": "This may be the spookiest mountain in Seoul. 서울에서 가장 으스스한 산에 다녀왔습니다! ⛰️Choan-san 초안산 📍초안산로5길 74 📍9 Wolgye-ro 45ga-gil, Nowon-gu, Seoul #seoul #seoul_korea #seoulkorea #서울 #서울가볼만한곳",
+          "latitude": 37.63878,
+          "longitude": 127.04681,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/choansan-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.63878,
+      "centroidLongitude": 127.04681,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+        "38D67931-3B30-5B52-B93F-59A83F7BB19E"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Green Escape",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+      "createdAt": "2026-10-26",
+      "title": "Tomb Statues, Seoul Children's Grand Park",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Tomb statues inside Seoul’s Children’s Grand Park? 무던 석상들이 왜 서울 어린이대공원에? 📍Seoul’s Children’s Grand Park 216 Neungdong-ro, Gwangjin District, Seoul 능동로 216 #seoul #seoul_korea #seoulkorea #서울 #서울핫플",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/childrens-grand-park-tomb-statues-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Ddn4yBnh-FN/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "D2934989-38C9-5ABD-8D0F-44A083C25120",
+          "order": 0,
+          "title": "Tomb Statues, Seoul Children's Grand Park",
+          "caption": "Tomb statues inside Seoul’s Children’s Grand Park? 무던 석상들이 왜 서울 어린이대공원에? 📍Seoul’s Children’s Grand Park 216 Neungdong-ro, Gwangjin District, Seoul 능동로 216 #seoul #seoul_korea #seoulkorea #서울 #서울핫플",
+          "latitude": 37.54889,
+          "longitude": 127.08048,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/childrens-grand-park-tomb-statues-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.54889,
+      "centroidLongitude": 127.08048,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "5CDB3A7E-3116-5015-A721-C21BD3062AE5",
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
+        "E6BC80AB-D1F9-5122-AEBC-B5726EAAE55C",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "6698108F-E886-5662-8DBB-159A3731BEE8",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Park",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E6BC80AB-D1F9-5122-AEBC-B5726EAAE55C",
+      "createdAt": "2026-10-26",
+      "title": "Insa Historic Site Museum",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Seoul just opened one of the coolest museums. 서울에 역대급 전시관이 새롭게 문을 열었는데요! Name museum: 인사도시유적전시관 Insa Historic Site Museum #seoul #seoulkorea #seoultrip #서울 #서울핫플",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/insa-historic-site-museum-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Db8PbfFu2cj/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "42589CB7-2EDD-534D-8C89-AFD577315B8C",
+          "order": 0,
+          "title": "Insa Historic Site Museum",
+          "caption": "Seoul just opened one of the coolest museums. 서울에 역대급 전시관이 새롭게 문을 열었는데요! Name museum: 인사도시유적전시관 Insa Historic Site Museum #seoul #seoulkorea #seoultrip #서울 #서울핫플",
+          "latitude": 37.57102,
+          "longitude": 126.98567,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/insa-historic-site-museum-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.57102,
+      "centroidLongitude": 126.98567,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "076BC942-2D7E-533B-9586-C23B42C46DF6",
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "5CDB3A7E-3116-5015-A721-C21BD3062AE5",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "FAE18FD1-9ABE-5EC3-9D07-E78936BFEA25",
+      "createdAt": "2026-10-26",
+      "title": "Seoul Folk Flea Market",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Most tourists don’t know about the Seoul Folk Flea Market. 대부분의 관광객은 서울풍물시장을 잘 모릅니다. #seoul #seoul_korea #seoultrip #서울 #서울핫플",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seoul-folk-flea-market-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbxqpmkOwVP/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "7D89BB12-8509-52C0-ADC0-489E57B2F39D",
+          "order": 0,
+          "title": "Seoul Folk Flea Market",
+          "caption": "Most tourists don’t know about the Seoul Folk Flea Market. 대부분의 관광객은 서울풍물시장을 잘 모릅니다. #seoul #seoul_korea #seoultrip #서울 #서울핫플",
+          "latitude": 37.57271,
+          "longitude": 127.02536,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seoul-folk-flea-market-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.57271,
+      "centroidLongitude": 127.02536,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "8A645DCB-68DE-5133-8DD6-31B3515A3E19",
+        "C0FB8DC8-27F8-516C-9630-191AB3AB0262",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "B5A2F665-FE68-5593-AAD7-57AC872FD8B0",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "38D67931-3B30-5B52-B93F-59A83F7BB19E"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Market",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "A4C45323-7A88-58A4-828E-83FED17DF01D",
+      "createdAt": "2026-10-26",
+      "title": "National Museum of Korea",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "This museum in Seoul is an absolute favorite of mine. 서울에서 두말할 필요 없이 제가 가장 사랑하는 박물관입니다. #seoul #seoulkorea #국립중앙박물관 #서울 #서울핫플",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-museum-of-korea-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DapmlQHODJM/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "93CB18B9-A25D-593B-BA95-9EDC6ED31FFD",
+          "order": 0,
+          "title": "National Museum of Korea",
+          "caption": "This museum in Seoul is an absolute favorite of mine. 서울에서 두말할 필요 없이 제가 가장 사랑하는 박물관입니다. #seoul #seoulkorea #국립중앙박물관 #서울 #서울핫플",
+          "latitude": 37.52395,
+          "longitude": 126.98032,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-museum-of-korea-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.52395,
+      "centroidLongitude": 126.98032,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "E6BC80AB-D1F9-5122-AEBC-B5726EAAE55C",
+        "076BC942-2D7E-533B-9586-C23B42C46DF6",
+        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
+        "D997A4A9-7F50-542B-9523-A7A5C804BAE4",
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "4284FAA8-8202-5D61-8544-56473530B392"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "52E7BDBA-05EF-5D20-8535-DD9C5E1E28F1",
+      "createdAt": "2026-10-26",
+      "title": "Hoehyeon Citizens' Apartment",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "This apartment complex is the last of its kind. 이제 이런 아파트 단지는 이곳만 남았습니다. #seoulkorea #seoul #seoul🇰🇷 #seoul_korea #서울",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hoehyeon-citizens-apartment-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DYrQQCspJf6/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "AE952157-D093-58FE-83E1-6AAEE0B13B65",
+          "order": 0,
+          "title": "Hoehyeon Citizens' Apartment",
+          "caption": "This apartment complex is the last of its kind. 이제 이런 아파트 단지는 이곳만 남았습니다. #seoulkorea #seoul #seoul🇰🇷 #seoul_korea #서울",
+          "latitude": 37.55562,
+          "longitude": 126.98107,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hoehyeon-citizens-apartment-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.55562,
+      "centroidLongitude": 126.98107,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7",
+        "B0DD2A6F-C65D-55DE-857A-40316A0091F1",
+        "4284FAA8-8202-5D61-8544-56473530B392"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "28198FA3-1115-553A-AEE1-455EE4294F92",
+      "createdAt": "2026-10-26",
+      "title": "Korea National University of Arts (former KCIA HQ)",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "This university used to be the headquarters of the Korean CIA. 이 대학교는 한때 한국 중앙정보부, KCIA의 본부였습니다. @missannayoon @hwihwic @idea0853 #seoulkorea #seoul #서울 #한예종 #한국예술종합학교",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/knua-former-kcia-headquarters-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DYMrlI1AMM_/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "113FD241-C0FA-58E3-9074-CA9A1004625B",
+          "order": 0,
+          "title": "Korea National University of Arts (former KCIA HQ)",
+          "caption": "This university used to be the headquarters of the Korean CIA. 이 대학교는 한때 한국 중앙정보부, KCIA의 본부였습니다. @missannayoon @hwihwic @idea0853 #seoulkorea #seoul #서울 #한예종 #한국예술종합학교",
+          "latitude": 37.60493,
+          "longitude": 127.05745,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/knua-former-kcia-headquarters-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.60493,
+      "centroidLongitude": 127.05745,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "E6BC80AB-D1F9-5122-AEBC-B5726EAAE55C",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
+        "B0DD2A6F-C65D-55DE-857A-40316A0091F1",
+        "076BC942-2D7E-533B-9586-C23B42C46DF6"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Power",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6BA4E7DB-6CA9-59F9-A2FD-E9412EEC2D01",
+      "createdAt": "2026-10-26",
+      "title": "Former Namyeong-dong Anti-Communist Interrogation Office",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "You can visit the former Anti-Communist Interrogation Office yourself. The section with the interrogation rooms (M2) is the most fascinating part, but it’s only open by reservation, so I highly recommend booking in advance. 옛 대공분실을 직접 방문해볼 수 있습니다. 그중에서도 취조실이 있는 M2 건물이 가장 흥미로운 공간인데, 예약제로만 관람할 수 있어서 미리 예약하시는 걸 강력히 추천드립니다. Follow Jacco Zwetsloot: @jaccozed #seoulkorea #seoul #서울 #서울여행 #남영동",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/namyeong-dong-interrogation-office-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DXbhmMDD-9S/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "9FC9F0BF-257E-5433-B7F6-7BC855A6658B",
+          "order": 0,
+          "title": "Former Namyeong-dong Anti-Communist Interrogation Office",
+          "caption": "You can visit the former Anti-Communist Interrogation Office yourself. The section with the interrogation rooms (M2) is the most fascinating part, but it’s only open by reservation, so I highly recommend booking in advance. 옛 대공분실을 직접 방문해볼 수 있습니다. 그중에서도 취조실이 있는 M2 건물이 가장 흥미로운 공간인데, 예약제로만 관람할 수 있어서 미리 예약하시는 걸 강력히 추천드립니다. Follow Jacco Zwetsloot: @jaccozed #seoulkorea #seoul #서울 #서울여행 #남영동",
+          "latitude": 37.54085,
+          "longitude": 126.97176,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/namyeong-dong-interrogation-office-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.54085,
+      "centroidLongitude": 126.97176,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "CEF440CC-76E0-520D-B7DD-27625F8F9DE6",
+        "D997A4A9-7F50-542B-9523-A7A5C804BAE4",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B",
+        "AE40AB59-4C91-5FF9-8C54-12C55D6D9856",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Remembrance",
+        "Kim Swoo-geun",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "38D67931-3B30-5B52-B93F-59A83F7BB19E",
+      "createdAt": "2026-10-26",
+      "title": "Namyeong Arcade",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Have you ever been to Namyeong Arcade? 남영 아케이드에 가보신 적 있나요? 📍5-8 Hangang-daero 84-gil, Yongsan District, Seoul #seoul #seoulkorea #서울 #남영동 #서울여행",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/namyeong-arcade-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DW_iMCCGGUt/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "D9AB5066-8E95-5D25-A6EA-008D18EFED6E",
+          "order": 0,
+          "title": "Namyeong Arcade",
+          "caption": "Have you ever been to Namyeong Arcade? 남영 아케이드에 가보신 적 있나요? 📍5-8 Hangang-daero 84-gil, Yongsan District, Seoul #seoul #seoulkorea #서울 #남영동 #서울여행",
+          "latitude": 37.54366,
+          "longitude": 126.97314,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/namyeong-arcade-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.54366,
+      "centroidLongitude": 126.97314,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "23056721-45F1-5CA3-B1FE-0A4EF5B9E2B9",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "BFAF22DF-34CE-5D0D-891A-0A26D926D892",
+      "createdAt": "2026-10-26",
+      "title": "Chamsaejip",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "I was about to eat roasted sparrows an old Korean delicacy 한국의 옛 별미(?) 참새구이를 먹으러 갔는데요.. #seoul #seoulfood #seoulkorea #서울맛집 #참새",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chamsaejip-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DWltxXXj1Bb/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "44F0824A-2164-506D-9AFF-CE1580098432",
+          "order": 0,
+          "title": "Chamsaejip",
+          "caption": "I was about to eat roasted sparrows an old Korean delicacy 한국의 옛 별미(?) 참새구이를 먹으러 갔는데요.. #seoul #seoulfood #seoulkorea #서울맛집 #참새",
+          "latitude": 37.57212,
+          "longitude": 126.98125,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chamsaejip-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.57212,
+      "centroidLongitude": 126.98125,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "B5A2F665-FE68-5593-AAD7-57AC872FD8B0",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+        "C0FB8DC8-27F8-516C-9630-191AB3AB0262",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "DC7E122A-A4FD-5306-AF45-8B485E8C2668",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "DC54CC4E-F8CD-571B-84FF-6D7DC6C7A42A"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5B3A5411-41EE-5CDE-A482-B8CD1FEEC949",
+      "createdAt": "2026-10-26",
+      "title": "Manpo Makguksu",
+      "shortDescription": "A post by @eatingwhatisgiven on Instagram.",
+      "longDescription": "I met Bart from \"IGoBart\" at a legendary North Korean style steamed chicken restaurant that has been serving authentic North Korean dishes in Seoul since the 1970s. This is a must try Seoul restaurant for authentic North Korean flavors! #koreanfood #korea #seoul",
+      "makerId": "AD10061B-8752-5C9F-A924-2783C26CA1E6",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/manpo-makguksu-eatingwhatisgiven_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DWAkfETjzm6/",
+      "sourceAuthor": "@eatingwhatisgiven",
+      "stops": [
+        {
+          "id": "396B819F-2093-50CC-9C7A-844F062691A0",
+          "order": 0,
+          "title": "Manpo Makguksu",
+          "caption": "I met Bart from \"IGoBart\" at a legendary North Korean style steamed chicken restaurant that has been serving authentic North Korean dishes in Seoul since the 1970s. This is a must try Seoul restaurant for authentic North Korean flavors! #koreanfood #korea #seoul",
+          "latitude": 37.55587,
+          "longitude": 127.01032,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/manpo-makguksu-eatingwhatisgiven_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.55587,
+      "centroidLongitude": 127.01032,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "3310B7FB-17CD-56A1-B2E4-FE2E7A0E766B",
+        "DC54CC4E-F8CD-571B-84FF-6D7DC6C7A42A",
+        "B5A2F665-FE68-5593-AAD7-57AC872FD8B0",
+        "FED40890-5ADF-5CD0-8751-732232799E8A",
+        "C7775855-C915-534D-9B39-530AC025702A",
+        "cfbcb0a7-d377-5846-bca8-8073d3b36796",
+        "9FCF0920-A716-596C-8E36-0B45A0A026A0"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9B11D6C0-AADF-5ED8-B487-FCCE8034AC59",
+      "createdAt": "2026-10-26",
+      "title": "Oil Tank Culture Park",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "This is one of Seoul’s most underrated parks. 서울에서 가장 과소평가된 공원 중 하나입니다. Seongsan-dong (성산동) 131/467. #welcometomydong #서울 #seoul #seoul🇰🇷 #seoulkorea #서울여행 #서울핫플 #seoultrip #서울핫플레이스 #seoul_korea #문화비축기지 #oiltankculturepark #서울데이트 #서울데이트코스 #성산동 #mapo",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/oil-tank-culture-park-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DPgIT7aj2-s/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "9971353F-E59A-5E8E-8F54-11C4BA9918A7",
+          "order": 0,
+          "title": "Oil Tank Culture Park",
+          "caption": "This is one of Seoul’s most underrated parks. 서울에서 가장 과소평가된 공원 중 하나입니다. Seongsan-dong (성산동) 131/467. #welcometomydong #서울 #seoul #seoul🇰🇷 #seoulkorea #서울여행 #서울핫플 #seoultrip #서울핫플레이스 #seoul_korea #문화비축기지 #oiltankculturepark #서울데이트 #서울데이트코스 #성산동 #mapo",
+          "latitude": 37.57103,
+          "longitude": 126.89416,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/oil-tank-culture-park-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.57103,
+      "centroidLongitude": 126.89416,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "5CDB3A7E-3116-5015-A721-C21BD3062AE5",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Park",
+        "Engineering"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+      "createdAt": "2026-10-26",
+      "title": "Seoul Express Bus Terminal",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Who’d think the Express Bus Terminal is a tourist spot? 고속버스터미널이 관광명소가 될 줄 누가 알았을까요? #welcometomydong #seoul #seoul🇰🇷 #seoul_korea #banpo #seoultrip #seoulkorea #seoulsecret #seoultrip #서울 #서울여행 #고속터미널 #반포동 #서울핫플 #서울맛집 #서울핫플레이스 #서울데이트",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seoul-express-bus-terminal-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DONuQ99kupc/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "9E3670B2-D709-55D4-8713-DDA6CD273E9E",
+          "order": 0,
+          "title": "Seoul Express Bus Terminal",
+          "caption": "Who’d think the Express Bus Terminal is a tourist spot? 고속버스터미널이 관광명소가 될 줄 누가 알았을까요? #welcometomydong #seoul #seoul🇰🇷 #seoul_korea #banpo #seoultrip #seoulkorea #seoulsecret #seoultrip #서울 #서울여행 #고속터미널 #반포동 #서울핫플 #서울맛집 #서울핫플레이스 #서울데이트",
+          "latitude": 37.50598,
+          "longitude": 127.00718,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seoul-express-bus-terminal-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.50598,
+      "centroidLongitude": 127.00718,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "5CDB3A7E-3116-5015-A721-C21BD3062AE5"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ECD8C2A3-4665-5145-9214-6833E69D58FE",
+      "createdAt": "2026-10-26",
+      "title": "Bongeunsa",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Welcome to Seouls Richest Buddhist Temple. 강남에서 가장 부유한 불교 사찰에 오셨습니다. Video guest is professor David Mason:@davidmason1751 Samseong-dong (삼성동) Gangnam District (강남구). Seoul neighborhood: 122/467. #seoul #welcometomydong #seoul🇰🇷 #bongeunsa #gangnam #seoul_korea #seoulkorea #seoulsecret #seoultrip #seoultour #서울 #서울여행 #봉은사 #강남 #서울핫플 #서울핫플레이스 #서울데이트",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bongeunsa-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DNh9VRrSujv/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "0354F21F-A6F9-5676-9B40-FD2A4737162F",
+          "order": 0,
+          "title": "Bongeunsa",
+          "caption": "Welcome to Seouls Richest Buddhist Temple. 강남에서 가장 부유한 불교 사찰에 오셨습니다. Video guest is professor David Mason:@davidmason1751 Samseong-dong (삼성동) Gangnam District (강남구). Seoul neighborhood: 122/467. #seoul #welcometomydong #seoul🇰🇷 #bongeunsa #gangnam #seoul_korea #seoulkorea #seoulsecret #seoultrip #seoultour #서울 #서울여행 #봉은사 #강남 #서울핫플 #서울핫플레이스 #서울데이트",
+          "latitude": 37.51566,
+          "longitude": 127.05729,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bongeunsa-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.51566,
+      "centroidLongitude": 127.05729,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "58304931-85B3-5CD9-A955-C114CCE8A1F3",
+        "B0601329-CFF5-5B21-A6CF-3A0BA199A6F8",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "d7bee72e-70d6-518f-acb3-ce3dd2babee4",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "8E7A4D35-8709-53D8-B1A9-1CE8A3D8D710"
+      ],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F04A5DF9-A400-591E-B704-E098CCB77D28",
+      "createdAt": "2026-10-26",
+      "title": "Remains of the Japanese Government-General Building",
+      "shortDescription": "A post by @bohun_story on Instagram.",
+      "longDescription": "한국이 어두운 역사를 기억하는 방법 ​ 일제강점기 착취와 억압의 상징이었던 조선총독부 건물. 이 건물은 1926년 경복궁의 정면을 가로막으며 세워졌는데요. ​ 한국이 해방된 후에는 미군정청, 중앙청, 국립중앙박물관으로 사용되었으나, 일제의 잔재를 청산하고 민족정기를 회복하기 위해 1995년 8월 15일 광복 50주년을 맞아 첨탑 제거를 시작으로 본격적인 철거가 진행되었습니다. ​ 철거를 둘러싸고는 ‘역사의 교훈으로 남겨야 한다’와 ‘일제 잔재를 청산해야 한다’는 의견이 대립했지만, 결국 건물은 역사 속으로 사라지게 되었죠. ​ 철거 이후 건물의 부재들은 독립기념관으로 옮겨져 과거를 기억하고 미래를 이야기하는 공간으로 활용되고 있습니다. ​ [독립기념관] 📍충청남도 천안시 동남구 목천읍 독립기념관로1 ⏰ 3월~10월 | 09:30 ~ 18:00, 11월~2월 | 09:30 ~ 17:00 *월요일 휴관(공휴일인 경우 정상 운영) - How Korea Remembers Its Dark History The Government-General Building was long felt to be a symbol of exploitation and oppression during the Japanese colonial period. Built in 1926, it stood directly in front of Gyeongbokgung Palace, blocking its view. Following Korea‘s liberation, the building served as U.S. Military Government Headquarters, Central Government Building, and later the National Museum of Korea. However, to eradicate the remnants of Japanese rule and restore national spirit, demolition began with the removal of the spire on August 15, 1995, marking the 50th anniversary of Liberation Day. There was a conflict of opinions over its demolition, with some arguing that it should remain as a lesson from history, while others insisted on removing the remnants of Japanese colonial rule. In the end, the building disappeared into history. After its demolition, parts of the building were moved to the Independence Hall of Korea, where they now serve as a space to remember the past and discuss the future. [The Independence Hall of Korea] 📍 1, Dongnipginyeomgwan-ro, Mokcheon-eup, Dongnam-gu, Cheonan-si, Chungcheongnam-do ⏰ March–October | 09:30–18:00, November–February | 09:30–17:00 *Closed on Mondays (open on public holidays). #국가보훈부 #광복절 #천안 #여행 #trip #korea #southkorea #korea🇰🇷 #koreatrip #한국여행",
+      "makerId": "3F70E203-0BCD-5782-B30D-2664A91154FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/government-general-building-remains-bohunstory_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DNSlxVigzLz/",
+      "sourceAuthor": "@bohun_story",
+      "stops": [
+        {
+          "id": "8A3AF79D-0AE5-59AA-8E6C-C3B976528051",
+          "order": 0,
+          "title": "Remains of the Japanese Government-General Building",
+          "caption": "한국이 어두운 역사를 기억하는 방법 ​ 일제강점기 착취와 억압의 상징이었던 조선총독부 건물. 이 건물은 1926년 경복궁의 정면을 가로막으며 세워졌는데요. ​ 한국이 해방된 후에는 미군정청, 중앙청, 국립중앙박물관으로 사용되었으나, 일제의 잔재를 청산하고 민족정기를 회복하기 위해 1995년 8월 15일 광복 50주년을 맞아 첨탑 제거를 시작으로 본격적인 철거가 진행되었습니다. ​ 철거를 둘러싸고는 ‘역사의 교훈으로 남겨야 한다’와 ‘일제 잔재를 청산해야 한다’는 의견이 대립했지만, 결국 건물은 역사 속으로 사라지게 되었죠. ​ 철거 이후 건물의 부재들은 독립기념관으로 옮겨져 과거를 기억하고 미래를 이야기하는 공간으로 활용되고 있습니다. ​ [독립기념관] 📍충청남도 천안시 동남구 목천읍 독립기념관로1 ⏰ 3월~10월 | 09:30 ~ 18:00, 11월~2월 | 09:30 ~ 17:00 *월요일 휴관(공휴일인 경우 정상 운영) - How Korea Remembers Its Dark History The Government-General Building was long felt to be a symbol of exploitation and oppression during the Japanese colonial period. Built in 1926, it stood directly in front of Gyeongbokgung Palace, blocking its view. Following Korea‘s liberation, the building served as U.S. Military Government Headquarters, Central Government Building, and later the National Museum of Korea. However, to eradicate the remnants of Japanese rule and restore national spirit, demolition began with the removal of the spire on August 15, 1995, marking the 50th anniversary of Liberation Day. There was a conflict of opinions over its demolition, with some arguing that it should remain as a lesson from history, while others insisted on removing the remnants of Japanese colonial rule. In the end, the building disappeared into history. After its demolition, parts of the building were moved to the Independence Hall of Korea, where they now serve as a space to remember the past and discuss the future. [The Independence Hall of Korea] 📍 1, Dongnipginyeomgwan-ro, Mokcheon-eup, Dongnam-gu, Cheonan-si, Chungcheongnam-do ⏰ March–October | 09:30–18:00, November–February | 09:30–17:00 *Closed on Mondays (open on public holidays). #국가보훈부 #광복절 #천안 #여행 #trip #korea #southkorea #korea🇰🇷 #koreatrip #한국여행",
+          "latitude": 36.78358,
+          "longitude": 127.22297,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/government-general-building-remains-bohunstory_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 36.78358,
+      "centroidLongitude": 127.22297,
+      "city": "Cheonan",
+      "country": "South Korea",
+      "primaryCategory": "history",
+      "tags": [
+        "Remembrance",
+        "Power"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+      "createdAt": "2026-10-26",
+      "title": "Magok Cultural Hall",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Don’t skip this building! 이 건물..지나치면 안돼요! 📍 마곡문화관 서울시 강서구 마곡동로 161 (우 07789) Magok Cultural Hall, Seoul Botanic Park 161 Magokdong‑ro, Gangseo‑gu, Seoul 07789 #seoul #welcometomydong #seoul_korea #seoulkorea #seoultrip #seoultravel #서울 #서울가볼만한곳 #서울여행 #마곡 #서울데이트 #서울데이트코스 #서울핫플 #서울핫플레이스",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/magok-cultural-hall-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DK1VYZ9zerE/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "75F6F7B8-8E67-56B7-BF98-C23C285DF29C",
+          "order": 0,
+          "title": "Magok Cultural Hall",
+          "caption": "Don’t skip this building! 이 건물..지나치면 안돼요! 📍 마곡문화관 서울시 강서구 마곡동로 161 (우 07789) Magok Cultural Hall, Seoul Botanic Park 161 Magokdong‑ro, Gangseo‑gu, Seoul 07789 #seoul #welcometomydong #seoul_korea #seoulkorea #seoultrip #seoultravel #서울 #서울가볼만한곳 #서울여행 #마곡 #서울데이트 #서울데이트코스 #서울핫플 #서울핫플레이스",
+          "latitude": 37.57149,
+          "longitude": 126.83499,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/magok-cultural-hall-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.57149,
+      "centroidLongitude": 126.83499,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "4284FAA8-8202-5D61-8544-56473530B392",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6F773793-8746-508C-82FE-A591119F042B",
+      "createdAt": "2026-10-26",
+      "title": "Seosan Rock-carved Buddha Triad",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Have you heard of the hidden Buddha in Seosan City? 서산시의 숨겨진 부처에 대해 들어본 적이 있나요? #korea #southkorea #southkorea🇰🇷 #koreatrip #koreatravel #seosan #한국여행 #서산시 #korea🇰🇷 #southkoreatrip #southkoreatravel #핫플 #데이트장소 #데이트룩추천 #데이트추천 #핫플레이스",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seosan-rock-carved-buddha-triad-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DJOtCpUz9k9/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "4AABAC95-FB75-5C71-A517-F46D27450980",
+          "order": 0,
+          "title": "Seosan Rock-carved Buddha Triad",
+          "caption": "Have you heard of the hidden Buddha in Seosan City? 서산시의 숨겨진 부처에 대해 들어본 적이 있나요? #korea #southkorea #southkorea🇰🇷 #koreatrip #koreatravel #seosan #한국여행 #서산시 #korea🇰🇷 #southkoreatrip #southkoreatravel #핫플 #데이트장소 #데이트룩추천 #데이트추천 #핫플레이스",
+          "latitude": 36.77389,
+          "longitude": 126.60528,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seosan-rock-carved-buddha-triad-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 36.77389,
+      "centroidLongitude": 126.60528,
+      "city": "Seosan",
+      "country": "South Korea",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Monument",
+        "Faith"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+      "createdAt": "2026-10-26",
+      "title": "Gungsan Tunnel",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "In 2008, a hidden tunnel was discovered! 2008년, 숨겨진 땅굴이 발견되었습니다! #seoul #서울 #welcometomydong #seoul🇰🇷 #seoulkorea #seoultravel #서울여행 #서울핫플 #seoultrip #서울핫플레이스 #마곡동 #마곡 #서울데이트 #서울데이트코스 #seoultour #seoul_korea #seoulcity #seoullovers",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gungsan-tunnel-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DG-X2dXSqF-/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "93E736BF-7FBC-54D9-9B3A-F87889AD524D",
+          "order": 0,
+          "title": "Gungsan Tunnel",
+          "caption": "In 2008, a hidden tunnel was discovered! 2008년, 숨겨진 땅굴이 발견되었습니다! #seoul #서울 #welcometomydong #seoul🇰🇷 #seoulkorea #seoultravel #서울여행 #서울핫플 #seoultrip #서울핫플레이스 #마곡동 #마곡 #서울데이트 #서울데이트코스 #seoultour #seoul_korea #seoulcity #seoullovers",
+          "latitude": 37.57446,
+          "longitude": 126.84052,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gungsan-tunnel-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.57446,
+      "centroidLongitude": 126.84052,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+        "5CDB3A7E-3116-5015-A721-C21BD3062AE5"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "War",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+      "createdAt": "2026-10-26",
+      "title": "National Folk Museum of Korea Pagoda",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Few have climbed this Pagoda—so, what’s its story? 이 탑에 올라간 사람은 몇 명 안될걸요?.. #seoul #seoultrip #welcometomydong #Seoultravel #seoulcity #서울 #데이트코스 #핫플 #seoul🇰🇷 #seoul_korea #서울핫플레이스 #박물관 #seoulmuseum #국립민속박물관",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-folk-museum-pagoda-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DEo6Ix2SLBM/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "0DECE3B3-1496-504C-8CD6-5DD6162668C2",
+          "order": 0,
+          "title": "National Folk Museum of Korea Pagoda",
+          "caption": "Few have climbed this Pagoda—so, what’s its story? 이 탑에 올라간 사람은 몇 명 안될걸요?.. #seoul #seoultrip #welcometomydong #Seoultravel #seoulcity #서울 #데이트코스 #핫플 #seoul🇰🇷 #seoul_korea #서울핫플레이스 #박물관 #seoulmuseum #국립민속박물관",
+          "latitude": 37.58083,
+          "longitude": 126.97904,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-folk-museum-pagoda-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.58083,
+      "centroidLongitude": 126.97904,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "E6BC80AB-D1F9-5122-AEBC-B5726EAAE55C",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+      "createdAt": "2026-10-26",
+      "title": "King Jinheung Stele, Bibong Peak",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Have you ever seen this mysterious stone in Bukhansan National Park? 북한산에 있는 이 신비로운 돌을 본 적이 있나요? #seoul #seoul🇰🇷 #seoulkorea #welcometomydong #seoullovers #seoultravel #bukhansan #서울 #서울가볼만한곳 #서울핫플레이스 #서울데이트코스 #서울여행 #북한산 #구기동 #서울핫플",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bibong-king-jinheung-stele-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DEehYWYyQoR/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "CFB284C5-D849-59D1-942E-CC895494A64A",
+          "order": 0,
+          "title": "King Jinheung Stele, Bibong Peak",
+          "caption": "Have you ever seen this mysterious stone in Bukhansan National Park? 북한산에 있는 이 신비로운 돌을 본 적이 있나요? #seoul #seoul🇰🇷 #seoulkorea #welcometomydong #seoullovers #seoultravel #bukhansan #서울 #서울가볼만한곳 #서울핫플레이스 #서울데이트코스 #서울여행 #북한산 #구기동 #서울핫플",
+          "latitude": 37.62556,
+          "longitude": 126.95278,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bibong-king-jinheung-stele-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.62556,
+      "centroidLongitude": 126.95278,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+        "9B11D6C0-AADF-5ED8-B487-FCCE8034AC59"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "DB4994F4-35A8-547E-96EC-E090D0E4B490",
+      "createdAt": "2026-10-26",
+      "title": "Mullae Park",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Underneath this Playground in Mullae Park lies a Hidden Secret. 문래공원의 이 놀이터 아래에는 숨겨진 비밀이 있습니다. #welcometomydong #seoul #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #seoul_korea #mullae #서울 #서울가볼만한곳 #서울핫플레이스 #서울핫플 #서울구경 #서울데이트 #서울데이트코스 #서울시 #문래",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mullae-park-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DCjcwB-yV_n/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "0C3A5BDE-2512-5258-8CDF-B52CCFCF1949",
+          "order": 0,
+          "title": "Mullae Park",
+          "caption": "Underneath this Playground in Mullae Park lies a Hidden Secret. 문래공원의 이 놀이터 아래에는 숨겨진 비밀이 있습니다. #welcometomydong #seoul #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #seoul_korea #mullae #서울 #서울가볼만한곳 #서울핫플레이스 #서울핫플 #서울구경 #서울데이트 #서울데이트코스 #서울시 #문래",
+          "latitude": 37.51476,
+          "longitude": 126.89392,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mullae-park-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.51476,
+      "centroidLongitude": 126.89392,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "4284FAA8-8202-5D61-8544-56473530B392",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Park",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4284FAA8-8202-5D61-8544-56473530B392",
+      "createdAt": "2026-10-26",
+      "title": "Seoul's Oldest Inn, Mullae-dong",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "This is seoul’s Oldest Inn. 서울에서 가장 오래된 여관입니다! 영등포구 경인로77가길11 전화번호: 010-9913-8657 #welcometomydong #seoul #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #seoultrip #Mullae #서울 #서울가볼만한곳 #서울핫플레이스 #서울데이트코스 #서울핫플 #문래동 #서울데이트 #문래",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seouls-oldest-inn-mullae-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DA0ThLFPBjP/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "EC9F63D1-D404-5529-8878-10C6C2A0EB02",
+          "order": 0,
+          "title": "Seoul's Oldest Inn, Mullae-dong",
+          "caption": "This is seoul’s Oldest Inn. 서울에서 가장 오래된 여관입니다! 영등포구 경인로77가길11 전화번호: 010-9913-8657 #welcometomydong #seoul #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #seoultrip #Mullae #서울 #서울가볼만한곳 #서울핫플레이스 #서울데이트코스 #서울핫플 #문래동 #서울데이트 #문래",
+          "latitude": 37.51301,
+          "longitude": 126.88949,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seouls-oldest-inn-mullae-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.51301,
+      "centroidLongitude": 126.88949,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "A4C45323-7A88-58A4-828E-83FED17DF01D"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Hidden Gem",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "CEF440CC-76E0-520D-B7DD-27625F8F9DE6",
+      "createdAt": "2026-10-26",
+      "title": "Yanghwajin Foreign Missionary Cemetery",
+      "shortDescription": "A post by @bohun_story on Instagram.",
+      "longDescription": "양화진 외국인 선교사 묘원은 서울 합정동에 있는 외국인 선교사들의 공동묘지입니다. 서울 한복판에서 이국적인 정취를 한껏 느낄 수 있는 특별한 장소이기도 하죠. ​ 이곳에는 대한매일신보 등을 창간하고 독립운동에 헌신한 어니스트 베델, 한국어 보급에 앞장서며 교육 발전에 기여한 호머 헐버트와 같은 외국인 독립유공자와 한국을 사랑한 많은 외국인 인사들이 잠들어 있습니다. ​묘원을 방문하신다면 이곳에서 운영 중인 무료 안내 프로그램에도 참여해 보세요. 그들의 삶과 업적을 더욱 깊이 이해할 수 있는 기회가 될 것입니다. ​ [양화진 외국인 선교사 묘원] 📍서울 마포구 양화진길 46(합정동, 양화진홍보관) * 2, 6호선 합정역 7번 출구에서 도보 4분 ⏰월~토 10:00~17:00 *일요일 휴무 - The Yanghwajin Foreign Missionary Cemetery is a public burial ground for foreign missionaries locating in the Hapjeong district of Seoul. It is also a place with a different atmosphere than the surrounding Korean neighbourhoods in the heart of Seoul. ​ Memorable mentions include Ernest Bethell, who founded the Korea Daily News and supported the liberation movement, Homer Hulbert, who took significants steps to spread the Korean language and helped improve education and many more who loved Korea and now rest here. Visitors are welcome to participate in the free-of-charge tour programme available in the cemetery, a great opportunity to gain a deeper understanding about the life and achievements of the people now resting here. ​ [Yanghwajin Foreign Missionary Cemetery] 📍46 Yanghwajin-gil, Mapo-gu, Seoul (Hapjeong-dong) * 4 minutes on foot from exit 7 of Hapjeong station (subway lines 2 and 6) ⏰Monday~Saturday 10:00~17:00 *Closed on Sundays ​ #국가보훈부 #서울 #합정 #서울가볼만한곳 #서울여행 #welcometomydong #seoul",
+      "makerId": "3F70E203-0BCD-5782-B30D-2664A91154FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yanghwajin-foreign-missionary-cemetery-bohunstory_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DAiUSZ3A_NM/",
+      "sourceAuthor": "@bohun_story",
+      "stops": [
+        {
+          "id": "C107182A-9307-5AF4-87F1-D744C9F929FF",
+          "order": 0,
+          "title": "Yanghwajin Foreign Missionary Cemetery",
+          "caption": "양화진 외국인 선교사 묘원은 서울 합정동에 있는 외국인 선교사들의 공동묘지입니다. 서울 한복판에서 이국적인 정취를 한껏 느낄 수 있는 특별한 장소이기도 하죠. ​ 이곳에는 대한매일신보 등을 창간하고 독립운동에 헌신한 어니스트 베델, 한국어 보급에 앞장서며 교육 발전에 기여한 호머 헐버트와 같은 외국인 독립유공자와 한국을 사랑한 많은 외국인 인사들이 잠들어 있습니다. ​묘원을 방문하신다면 이곳에서 운영 중인 무료 안내 프로그램에도 참여해 보세요. 그들의 삶과 업적을 더욱 깊이 이해할 수 있는 기회가 될 것입니다. ​ [양화진 외국인 선교사 묘원] 📍서울 마포구 양화진길 46(합정동, 양화진홍보관) * 2, 6호선 합정역 7번 출구에서 도보 4분 ⏰월~토 10:00~17:00 *일요일 휴무 - The Yanghwajin Foreign Missionary Cemetery is a public burial ground for foreign missionaries locating in the Hapjeong district of Seoul. It is also a place with a different atmosphere than the surrounding Korean neighbourhoods in the heart of Seoul. ​ Memorable mentions include Ernest Bethell, who founded the Korea Daily News and supported the liberation movement, Homer Hulbert, who took significants steps to spread the Korean language and helped improve education and many more who loved Korea and now rest here. Visitors are welcome to participate in the free-of-charge tour programme available in the cemetery, a great opportunity to gain a deeper understanding about the life and achievements of the people now resting here. ​ [Yanghwajin Foreign Missionary Cemetery] 📍46 Yanghwajin-gil, Mapo-gu, Seoul (Hapjeong-dong) * 4 minutes on foot from exit 7 of Hapjeong station (subway lines 2 and 6) ⏰Monday~Saturday 10:00~17:00 *Closed on Sundays ​ #국가보훈부 #서울 #합정 #서울가볼만한곳 #서울여행 #welcometomydong #seoul",
+          "latitude": 37.54656,
+          "longitude": 126.91183,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yanghwajin-foreign-missionary-cemetery-bohunstory_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.54656,
+      "centroidLongitude": 126.91183,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B",
+        "DD44D40E-8D64-5A4F-9964-E9D09E353297",
+        "D997A4A9-7F50-542B-9523-A7A5C804BAE4",
+        "AE40AB59-4C91-5FF9-8C54-12C55D6D9856",
+        "50EA5E02-5C4A-56F3-BF88-E8A739D248E5",
+        "58304931-85B3-5CD9-A955-C114CCE8A1F3",
+        "6BA4E7DB-6CA9-59F9-A2FD-E9412EEC2D01",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Remembrance",
+        "Faith"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B",
+      "createdAt": "2026-10-26",
+      "title": "Kang Woo-kyu Statue, Seoul Station",
+      "shortDescription": "A post by @bohun_story on Instagram.",
+      "longDescription": "서울역 앞 수류탄을 든 노인의 정체? 수많은 사람들이 오가는 여기 서울역에 숨겨진 이야기가 있습니다. 바로 1919년, 일제의 총독 사이토 마코토를 처단하기 위해 폭탄을 던졌던 강우규 의사의 의거가 일어난 장소입니다. 60세가 넘은 나이에도 불구하고, 조국의 독립을 위해 자신의 목숨을 건 강우규 의사. 그의 의거는 많은 이들의 독립운동 열망이 더욱 불타오르게 했습니다. 비록 강우규 의사는 결국 체포되어 순국하였으나, 그 불굴의 의지는 이곳에 남아 오늘날까지도 이어지고 있습니다. 이곳을 지나며, 강우규 의사의 독립을 향한 불굴의 의지를 마음에 새겨보세요. 그의 숭고한 정신을 되새기는 뜻깊은 시간이 될 것입니다.​ [강우규 의사 의거 터] 📍서울 중구 통일로 1(서울역 앞)​ - What is the identity of the elderly man holding a grenade in front of Seoul station? ​ A story is hidden among the countless people that come and go in Seoul station every day. There aren‘t many people who know that this is the location where the act of independence of martyr Kang Woo-kyu took place in 1919, when he threw a grenade in an act of defiance at the Japanese Governor-General of Korea, Saito Makoto, who was appointed by Imperial Japan. Despite the fact that he was in his 60s, Kang Woo-kyu gave his life for the independece of his country. It was this act that fueled the fire of independece to a greater degree. Kang Woo-kyu was arrested and sentenced to death, but his iron will lives on to this day in this place. If you pass by this location, take a look at the statue of martyr Kang Woo-gyu and think back on his bravery and dedication to his country. [Location of act independence by Kang Woo-kyu] 📍 Seoul Jung-gu Tongil-ro 1 (in front of Seoul station) #국가보훈부 #서울역 #seoultravel #seoultour #welcometomydong #서울 #서울여행 #seoul #seoul🇰🇷 #seoul_korea",
+      "makerId": "3F70E203-0BCD-5782-B30D-2664A91154FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kang-woo-kyu-statue-bohunstory_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/C_aMf8Vgh2I/",
+      "sourceAuthor": "@bohun_story",
+      "stops": [
+        {
+          "id": "2DA83B6D-CD85-52B1-AEE9-D968A7A16139",
+          "order": 0,
+          "title": "Kang Woo-kyu Statue, Seoul Station",
+          "caption": "서울역 앞 수류탄을 든 노인의 정체? 수많은 사람들이 오가는 여기 서울역에 숨겨진 이야기가 있습니다. 바로 1919년, 일제의 총독 사이토 마코토를 처단하기 위해 폭탄을 던졌던 강우규 의사의 의거가 일어난 장소입니다. 60세가 넘은 나이에도 불구하고, 조국의 독립을 위해 자신의 목숨을 건 강우규 의사. 그의 의거는 많은 이들의 독립운동 열망이 더욱 불타오르게 했습니다. 비록 강우규 의사는 결국 체포되어 순국하였으나, 그 불굴의 의지는 이곳에 남아 오늘날까지도 이어지고 있습니다. 이곳을 지나며, 강우규 의사의 독립을 향한 불굴의 의지를 마음에 새겨보세요. 그의 숭고한 정신을 되새기는 뜻깊은 시간이 될 것입니다.​ [강우규 의사 의거 터] 📍서울 중구 통일로 1(서울역 앞)​ - What is the identity of the elderly man holding a grenade in front of Seoul station? ​ A story is hidden among the countless people that come and go in Seoul station every day. There aren‘t many people who know that this is the location where the act of independence of martyr Kang Woo-kyu took place in 1919, when he threw a grenade in an act of defiance at the Japanese Governor-General of Korea, Saito Makoto, who was appointed by Imperial Japan. Despite the fact that he was in his 60s, Kang Woo-kyu gave his life for the independece of his country. It was this act that fueled the fire of independece to a greater degree. Kang Woo-kyu was arrested and sentenced to death, but his iron will lives on to this day in this place. If you pass by this location, take a look at the statue of martyr Kang Woo-gyu and think back on his bravery and dedication to his country. [Location of act independence by Kang Woo-kyu] 📍 Seoul Jung-gu Tongil-ro 1 (in front of Seoul station) #국가보훈부 #서울역 #seoultravel #seoultour #welcometomydong #서울 #서울여행 #seoul #seoul🇰🇷 #seoul_korea",
+          "latitude": 37.55626,
+          "longitude": 126.97175,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kang-woo-kyu-statue-bohunstory_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.55626,
+      "centroidLongitude": 126.97175,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "DD44D40E-8D64-5A4F-9964-E9D09E353297",
+        "D997A4A9-7F50-542B-9523-A7A5C804BAE4",
+        "CEF440CC-76E0-520D-B7DD-27625F8F9DE6",
+        "50EA5E02-5C4A-56F3-BF88-E8A739D248E5",
+        "AE40AB59-4C91-5FF9-8C54-12C55D6D9856",
+        "6BA4E7DB-6CA9-59F9-A2FD-E9412EEC2D01",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "58304931-85B3-5CD9-A955-C114CCE8A1F3"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "Remembrance"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "50EA5E02-5C4A-56F3-BF88-E8A739D248E5",
+      "createdAt": "2026-10-26",
+      "title": "Skirt Rock (Chimabawi), Inwangsan",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "경복궁 뒤로 보이는 거대한 바위에 숨겨진 슬픈 사연 ​ 경복궁의 서쪽, 인왕산 정상에는 ‘치마바위’라고 불리는 바위가 있습니다. ​ 이 바위의 이름은 조선 중종반정과 관련된 전설에서 유래됐는데요. 반정으로 왕위에 오른 중종은 단경왕후를 지킬 힘이 없었고, 단경왕후는 결국 7일 만에 궁궐에서 쫓겨나게 됐습니다. 그리움을 간직한 단경왕후는 자신을 그리워하는 중종을 위해 치마를 인왕산 바위에 걸어뒀는데요. 이러한 애틋한 사연이 전해지면서 이 바위를 ‘치마바위’로 부르게 된 것입니다. ​ 그러나 이 낭만적인 사랑 이야기와 달리, 1939년에는 비극적인 역사가 새겨졌습니다. 일제가 이 바위에 ‘동아청년단결’이라는 문구를 새겨놓은 것이죠. 이는 대일본청년단대회를 기념하고 중일전쟁 이후 전시동원체제를 강화하기 위한 사업의 일환으로 동아시아 청년들을 전쟁에 동원하기 위함이었습니다. ​ 해방 후 서울시가 치마바위에 새겨진 글자를 삭제하는 작업을 진행해 제대로 알아볼 수 없지만, 그 흔적은 여전히 남아있습니다. ​ -——————————————————— The sad story hidden on the imposing rock behind Gyeongbokgung Palace ​ There is a rock on the top of Inwangsan mountain, west of Gyeongbokgung Palace, called ‘Skirt Rock’. ​ The name of this rock comes from a legend related to the Jungjong coup, which took place during the Joseon era. Jungjong of Joseon, who ascended to the throne because of the coup was not able to protect his wife, the Queen Dangyeong. She was chased out of the palace a mere 7 days after her ascend. The legend says that Queen Dangyeong, exiled and yearning for her husband who missed her, too, hung a skirt on the rock of the mountain so he could see it. Because of this wistful story passed from generation to generation, the rock was named ‘Skirt Rock’. ​ In contrast to this love story, a tragic piece of history rebranded the history of the hill in 1939. During the Japanese Colonial period, the rock was engraved with letters called the ‘Dong-A Youth Unity’. Their purpose was to motivate the East Asian youth to volunteer in the war, and was one of the projects aiming to reinforce war-time mobilization after the Sino-Japanese War. ​ After the liberation of Korea, the city of Seoul made efforts to remove the letters from the rock. Even if they are not completely legible, their trace still remains. ​#seoultravel #seoultour #welcometomydong #서울 #서울여행 #seoul #서촌 #인왕산 #seoul🇰🇷 #seoul_korea #서울가볼만한곳 #광복절",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chimabawi-skirt-rock-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/C-mtk78yFAq/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "FD0C9D5E-E674-5AB9-AE2A-9C02FA13ECE0",
+          "order": 0,
+          "title": "Skirt Rock (Chimabawi), Inwangsan",
+          "caption": "경복궁 뒤로 보이는 거대한 바위에 숨겨진 슬픈 사연 ​ 경복궁의 서쪽, 인왕산 정상에는 ‘치마바위’라고 불리는 바위가 있습니다. ​ 이 바위의 이름은 조선 중종반정과 관련된 전설에서 유래됐는데요. 반정으로 왕위에 오른 중종은 단경왕후를 지킬 힘이 없었고, 단경왕후는 결국 7일 만에 궁궐에서 쫓겨나게 됐습니다. 그리움을 간직한 단경왕후는 자신을 그리워하는 중종을 위해 치마를 인왕산 바위에 걸어뒀는데요. 이러한 애틋한 사연이 전해지면서 이 바위를 ‘치마바위’로 부르게 된 것입니다. ​ 그러나 이 낭만적인 사랑 이야기와 달리, 1939년에는 비극적인 역사가 새겨졌습니다. 일제가 이 바위에 ‘동아청년단결’이라는 문구를 새겨놓은 것이죠. 이는 대일본청년단대회를 기념하고 중일전쟁 이후 전시동원체제를 강화하기 위한 사업의 일환으로 동아시아 청년들을 전쟁에 동원하기 위함이었습니다. ​ 해방 후 서울시가 치마바위에 새겨진 글자를 삭제하는 작업을 진행해 제대로 알아볼 수 없지만, 그 흔적은 여전히 남아있습니다. ​ -——————————————————— The sad story hidden on the imposing rock behind Gyeongbokgung Palace ​ There is a rock on the top of Inwangsan mountain, west of Gyeongbokgung Palace, called ‘Skirt Rock’. ​ The name of this rock comes from a legend related to the Jungjong coup, which took place during the Joseon era. Jungjong of Joseon, who ascended to the throne because of the coup was not able to protect his wife, the Queen Dangyeong. She was chased out of the palace a mere 7 days after her ascend. The legend says that Queen Dangyeong, exiled and yearning for her husband who missed her, too, hung a skirt on the rock of the mountain so he could see it. Because of this wistful story passed from generation to generation, the rock was named ‘Skirt Rock’. ​ In contrast to this love story, a tragic piece of history rebranded the history of the hill in 1939. During the Japanese Colonial period, the rock was engraved with letters called the ‘Dong-A Youth Unity’. Their purpose was to motivate the East Asian youth to volunteer in the war, and was one of the projects aiming to reinforce war-time mobilization after the Sino-Japanese War. ​ After the liberation of Korea, the city of Seoul made efforts to remove the letters from the rock. Even if they are not completely legible, their trace still remains. ​#seoultravel #seoultour #welcometomydong #서울 #서울여행 #seoul #서촌 #인왕산 #seoul🇰🇷 #seoul_korea #서울가볼만한곳 #광복절",
+          "latitude": 37.585,
+          "longitude": 126.95788,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chimabawi-skirt-rock-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.585,
+      "centroidLongitude": 126.95788,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "D997A4A9-7F50-542B-9523-A7A5C804BAE4",
+        "DD44D40E-8D64-5A4F-9964-E9D09E353297",
+        "AE40AB59-4C91-5FF9-8C54-12C55D6D9856",
+        "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B",
+        "CEF440CC-76E0-520D-B7DD-27625F8F9DE6",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "679D8232-A811-57F7-A8E5-C5CDBA7A9CB0",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Viewpoint",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "A1662A00-D1A7-5764-967A-798CADEBAB90",
+      "createdAt": "2026-10-26",
+      "title": "Suseong-dong Valley",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "This is a place I wish I had known earlier! 이런 장소를 진작 알았으면 좋았을 텐데요! #welcometomydong #seoul #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #seoul_korea #seoulcity #서울 #서울가볼만한곳 #서울핫플레이스 #서울핫플 #서울데이트코스 #서울데이트 #옥인동 #수성동계곡 #서울여행",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/suseong-dong-valley-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/C-aGx2UygG6/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "AE43556A-F605-5D5F-8FE8-1AEA4BFCECB4",
+          "order": 0,
+          "title": "Suseong-dong Valley",
+          "caption": "This is a place I wish I had known earlier! 이런 장소를 진작 알았으면 좋았을 텐데요! #welcometomydong #seoul #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #seoul_korea #seoulcity #서울 #서울가볼만한곳 #서울핫플레이스 #서울핫플 #서울데이트코스 #서울데이트 #옥인동 #수성동계곡 #서울여행",
+          "latitude": 37.58209,
+          "longitude": 126.96425,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/suseong-dong-valley-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.58209,
+      "centroidLongitude": 126.96425,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "076BC942-2D7E-533B-9586-C23B42C46DF6",
+      "createdAt": "2026-10-26",
+      "title": "Yongsan History Museum",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "용산 역사 박물관’은 사람들이 잘 모르는 용산의 보물입니다! The Yongsan History Museum is an unknown gem in Yongsan-gu The Yongsan History Museum is a great place to absorb Yongsan’s history; everything is well-explained in English. The building was a Railroad Hospital during colonial times when the railroad network rapidly expanded in and around Yongsan. The staff was friendly, too. The rooftop was also a great place to enjoy a nice view of Yongsan. It’s a museum gem because it’s fairly unknown but 100% worth a visit. Yongsan History Museum @yongsan_historymuseum 📍35-29 Hangang-daero 14-gil, Yongsan District, Seoul ⏰ Open every day from 10 am to 6 pm except for Mondays. #welcometomydong #seoul #seoultravel #seoultrip #서울 #서울여행 #서울시 #seoulkorea #seoul🇰🇷 #seoul_korea #서울핫플레이스 #서울핫플 #서울데이트코스 #서울데이트 #용산",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yongsan-history-museum-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/C9Mxg-pSMpw/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "165C0C60-37FD-5748-993C-B72E5102983F",
+          "order": 0,
+          "title": "Yongsan History Museum",
+          "caption": "용산 역사 박물관’은 사람들이 잘 모르는 용산의 보물입니다! The Yongsan History Museum is an unknown gem in Yongsan-gu The Yongsan History Museum is a great place to absorb Yongsan’s history; everything is well-explained in English. The building was a Railroad Hospital during colonial times when the railroad network rapidly expanded in and around Yongsan. The staff was friendly, too. The rooftop was also a great place to enjoy a nice view of Yongsan. It’s a museum gem because it’s fairly unknown but 100% worth a visit. Yongsan History Museum @yongsan_historymuseum 📍35-29 Hangang-daero 14-gil, Yongsan District, Seoul ⏰ Open every day from 10 am to 6 pm except for Mondays. #welcometomydong #seoul #seoultravel #seoultrip #서울 #서울여행 #서울시 #seoulkorea #seoul🇰🇷 #seoul_korea #서울핫플레이스 #서울핫플 #서울데이트코스 #서울데이트 #용산",
+          "latitude": 37.52595,
+          "longitude": 126.96601,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yongsan-history-museum-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.52595,
+      "centroidLongitude": 126.96601,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "E6BC80AB-D1F9-5122-AEBC-B5726EAAE55C",
+        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
+        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
+        "4284FAA8-8202-5D61-8544-56473530B392",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6698108F-E886-5662-8DBB-159A3731BEE8",
+      "createdAt": "2026-10-26",
+      "title": "Statue of Peace",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "This is the original comfort woman statue! 이것은 오리지널 ‘위안부’ 기림비입니다! #welcometomydong #seoul #seoul🇰🇷 #seoulkorea #seoultravel #seoultrip #seoul_korea #서울 #서울여행 #서울가볼만한곳 #서울핫플 #수송동 #위안부 #comfortwomen",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/statue-of-peace-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/C884Fvoy7U3/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "6C2AA45F-2B93-51BE-B530-F803B53A5351",
+          "order": 0,
+          "title": "Statue of Peace",
+          "caption": "This is the original comfort woman statue! 이것은 오리지널 ‘위안부’ 기림비입니다! #welcometomydong #seoul #seoul🇰🇷 #seoulkorea #seoultravel #seoultrip #seoul_korea #서울 #서울여행 #서울가볼만한곳 #서울핫플 #수송동 #위안부 #comfortwomen",
+          "latitude": 37.57493,
+          "longitude": 126.98035,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/statue-of-peace-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.57493,
+      "centroidLongitude": 126.98035,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Public Art",
+        "Remembrance"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "11784987-DD5A-53D5-9C07-BC550C5E01A3",
+      "createdAt": "2026-10-26",
+      "title": "Sound Dog",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Here is a hidden jazz Bar for you 당신을 위한숨은 재즈바를소개할게요 @sounddog_jazz #seoul #welcometomydong #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #seoultrip #서울 #서울가볼만한곳 #서울핫플레이스 #서울데이트코스 #서울데이트 #서울여행 #서울술집 #재즈바 #서울핫플 #후암동",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sound-dog-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/C6qeWFsv864/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "749FE1CB-0B32-5AEC-933E-5A4727F10AB4",
+          "order": 0,
+          "title": "Sound Dog",
+          "caption": "Here is a hidden jazz Bar for you 당신을 위한숨은 재즈바를소개할게요 @sounddog_jazz #seoul #welcometomydong #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #seoultrip #서울 #서울가볼만한곳 #서울핫플레이스 #서울데이트코스 #서울데이트 #서울여행 #서울술집 #재즈바 #서울핫플 #후암동",
+          "latitude": 37.55038,
+          "longitude": 126.97612,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sound-dog-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.55038,
+      "centroidLongitude": 126.97612,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "23056721-45F1-5CA3-B1FE-0A4EF5B9E2B9",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A"
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "DD44D40E-8D64-5A4F-9964-E9D09E353297",
+      "createdAt": "2026-10-26",
+      "title": "National April 19th Cemetery",
+      "shortDescription": "A post by @bohun_story on Instagram.",
+      "longDescription": "북한산을 배경으로 한 ’4·19민주묘지‘는 4·19혁명의 희생자를 위한 국립묘지입니다. 이곳에는 이들을 기리는 기념탑과 전시공간인 4·19혁명 기념관이 자리 잡고 있는데요. 해마다 4월 19일 즈음이면 수많은 사람들의 발걸음이 이어지는 명소 중 하나입니다. 4·19혁명은 1960년 4월 19일 학생이 중심세력이 되어 자유당 정권의 부정부패와 부정선거에 대항하여 일으킨 민주주의 혁명입니다. 약 한 달 전인 3·15 부정선거를 계기로 학생들의 시위에 시민들이 참여함으로써 혁명으로 발전했고, 당국과 경찰의 무력 진압으로 많은 희생자가 발생했는데요. 4월 11일에는 3월 15일 시위 중에 실종됐던 고등학생 김주열의 시신이 최루탄이 눈에 박힌 모습으로 마산 앞바다에서 발견되며, 소강상태를 보이던 시위가 다시 전국 곳곳에서 잇따라 일어났습니다. 학생과 시민들의 시위가 계속되자 당시 정부는 부정선거를 인정하며 수습책을 제시했는데요. 하지만 국민들이 원한 것은 이승만 대통령의 퇴진이었습니다. 이에 시위는 계속됐고 4월 26일 오전, 마침내 이승만 대통령의 하야 성명이 발표되었습니다. [국립 4.19 민주묘지] 📍서울특별시 강북구 수유동 580-1 - 4·19민주묘지역 2번 출구 *사진 출처: (사)3·15의거기념사업회 - The April 19th National Cemetery, located at the foot of Bukhan mountain, is dedicated to the victims of the April 19th Revolution. In their memory and honor, the April 19th Memorial Hall was erected, which serves as both monument and exhibition hall, and is visited by many people every year on the day of the Revolution. The April 19th Revolution, a democratic revolution, took place in 1960 when the people, spearheaded by students, stood against the corruption and rigged elections of the Liberal Party administration. Approximately a month before the Revolution, citizens participated in the student demonstations staged in the wake of the March 15th rigged elections, the forerunner of the Revolution, during which forceful suppression by the authorities and the police left many victims. On April 11th, the body of Kim Ju-yeol, a high-school student who went missing during the March 15th protests, was found near the coast of Masan with a tear gas bomb embedded in his eye. His death took the country by storm and reignited the protests that were beginning to quiet down. As the protests of students and citizes continued, the government acknowledged the rigged elections and attemped to do damage control. However, the people were not satisfied until President Rhee Seung-man stepped down. Protest continued and finally, on the morning of April 26th, President Rhee signed his resignation. [April 19th National Cemetery] 📍580-1 Suyu-dong, Gangbuk-gu, Seoul #국가보훈부 #419혁명 #북한산 #Seoul #서울 #서울여행 #welcometomydong #seoultravel",
+      "makerId": "3F70E203-0BCD-5782-B30D-2664A91154FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/april-19th-national-cemetery-bohunstory_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/C50Pkv5g46-/",
+      "sourceAuthor": "@bohun_story",
+      "stops": [
+        {
+          "id": "95167C2B-4A64-5B0B-9C21-2552E8681580",
+          "order": 0,
+          "title": "National April 19th Cemetery",
+          "caption": "북한산을 배경으로 한 ’4·19민주묘지‘는 4·19혁명의 희생자를 위한 국립묘지입니다. 이곳에는 이들을 기리는 기념탑과 전시공간인 4·19혁명 기념관이 자리 잡고 있는데요. 해마다 4월 19일 즈음이면 수많은 사람들의 발걸음이 이어지는 명소 중 하나입니다. 4·19혁명은 1960년 4월 19일 학생이 중심세력이 되어 자유당 정권의 부정부패와 부정선거에 대항하여 일으킨 민주주의 혁명입니다. 약 한 달 전인 3·15 부정선거를 계기로 학생들의 시위에 시민들이 참여함으로써 혁명으로 발전했고, 당국과 경찰의 무력 진압으로 많은 희생자가 발생했는데요. 4월 11일에는 3월 15일 시위 중에 실종됐던 고등학생 김주열의 시신이 최루탄이 눈에 박힌 모습으로 마산 앞바다에서 발견되며, 소강상태를 보이던 시위가 다시 전국 곳곳에서 잇따라 일어났습니다. 학생과 시민들의 시위가 계속되자 당시 정부는 부정선거를 인정하며 수습책을 제시했는데요. 하지만 국민들이 원한 것은 이승만 대통령의 퇴진이었습니다. 이에 시위는 계속됐고 4월 26일 오전, 마침내 이승만 대통령의 하야 성명이 발표되었습니다. [국립 4.19 민주묘지] 📍서울특별시 강북구 수유동 580-1 - 4·19민주묘지역 2번 출구 *사진 출처: (사)3·15의거기념사업회 - The April 19th National Cemetery, located at the foot of Bukhan mountain, is dedicated to the victims of the April 19th Revolution. In their memory and honor, the April 19th Memorial Hall was erected, which serves as both monument and exhibition hall, and is visited by many people every year on the day of the Revolution. The April 19th Revolution, a democratic revolution, took place in 1960 when the people, spearheaded by students, stood against the corruption and rigged elections of the Liberal Party administration. Approximately a month before the Revolution, citizens participated in the student demonstations staged in the wake of the March 15th rigged elections, the forerunner of the Revolution, during which forceful suppression by the authorities and the police left many victims. On April 11th, the body of Kim Ju-yeol, a high-school student who went missing during the March 15th protests, was found near the coast of Masan with a tear gas bomb embedded in his eye. His death took the country by storm and reignited the protests that were beginning to quiet down. As the protests of students and citizes continued, the government acknowledged the rigged elections and attemped to do damage control. However, the people were not satisfied until President Rhee Seung-man stepped down. Protest continued and finally, on the morning of April 26th, President Rhee signed his resignation. [April 19th National Cemetery] 📍580-1 Suyu-dong, Gangbuk-gu, Seoul #국가보훈부 #419혁명 #북한산 #Seoul #서울 #서울여행 #welcometomydong #seoultravel",
+          "latitude": 37.64833,
+          "longitude": 127.0075,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/april-19th-national-cemetery-bohunstory_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.64833,
+      "centroidLongitude": 127.0075,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B",
+        "50EA5E02-5C4A-56F3-BF88-E8A739D248E5",
+        "CEF440CC-76E0-520D-B7DD-27625F8F9DE6",
+        "D997A4A9-7F50-542B-9523-A7A5C804BAE4",
+        "AE40AB59-4C91-5FF9-8C54-12C55D6D9856",
+        "58304931-85B3-5CD9-A955-C114CCE8A1F3",
+        "6BA4E7DB-6CA9-59F9-A2FD-E9412EEC2D01",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Remembrance"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "AE40AB59-4C91-5FF9-8C54-12C55D6D9856",
+      "createdAt": "2026-10-26",
+      "title": "Huam-dong 108 Stairs",
+      "shortDescription": "A post by @bohun_story on Instagram.",
+      "longDescription": "해방촌에서 아픈 사연을 지닌 ‘이 계단‘을 본 적 있나요?🥺 현재는 계단 양쪽 벽에 예쁜 타일 벽화와 포토 스팟이 가득한 ’후암동 108계단‘ 하지만 일제강점기에는 일제의 침략전쟁 전사자들을 추모하기 위해 건립된 ‘경성호국신사’의 진입로였습니다. 이 악명높은 신사를 세우는 데는 한국인의 재산과 노동력이 강제 동원되기도 했습니다. 해방 후 한국전쟁이 끝나고 해방촌에 모인 사람들은 적극적으로 마을을 가꾸기 시작했고, 신사도 해체되어 지금의 ’108 계단‘만 남았습니다. 2018년에는 108계단에 경사형 승강기가 설치되어 주민들에게는 편리함을, 해방촌을 찾는 관광객들에게는 이색 경험을 제공하고 있습니다. [후암동 108계단] 📍서울 용산구 용산동2가 1-1342 후암동 108계단 ⏰이용 가능시간: 06:00~23:30 - Have you ever come across these stairs, which have been witness to the sad history of the HBC area?🥺 The Huam-dong 108 Stairway, of which the walls are now decorated with beautiful tiles on either side, creating plenty of photo spots, was actually created during the Japanese colonial era to access the Gyeongseong Hoguk Shrine, a Shinto shrine built in memory of the Japanese fallen soldiers from war campaigns of the era. The property and labor of the Korean people was also forcefully mobilized in building this notorious shrine. Following the liberation of Korea and the end of the Korean War, the people that settled in HBC actively started to develop the area, tearing down the shrine, of which only the ’108 Stairway‘ remains. An elevator was installed along the stairs in 2018 for the convenience of the residents, and the 108 Stairway has become a place where tourists can experience the lesser known side of the city. [Huam-dong 108 Stairway] 📍Seoul Yongsan-gu Yongsan-dong 2ga 1-1342 (Huam-dong 108 Stairway) ⏰Operating hours: 06:00~20:30 #국가보훈부 #후암동 #해방촌 #서울 #서울여행 #서울시 #seoulcity #seoultravel #seoultour #HBC #welcometomydong #seoul",
+      "makerId": "3F70E203-0BCD-5782-B30D-2664A91154FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/huam-dong-108-stairs-bohunstory_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/C37SCTDJg-K/",
+      "sourceAuthor": "@bohun_story",
+      "stops": [
+        {
+          "id": "355E9B12-F75A-51C6-8D79-B16C8FD16FD6",
+          "order": 0,
+          "title": "Huam-dong 108 Stairs",
+          "caption": "해방촌에서 아픈 사연을 지닌 ‘이 계단‘을 본 적 있나요?🥺 현재는 계단 양쪽 벽에 예쁜 타일 벽화와 포토 스팟이 가득한 ’후암동 108계단‘ 하지만 일제강점기에는 일제의 침략전쟁 전사자들을 추모하기 위해 건립된 ‘경성호국신사’의 진입로였습니다. 이 악명높은 신사를 세우는 데는 한국인의 재산과 노동력이 강제 동원되기도 했습니다. 해방 후 한국전쟁이 끝나고 해방촌에 모인 사람들은 적극적으로 마을을 가꾸기 시작했고, 신사도 해체되어 지금의 ’108 계단‘만 남았습니다. 2018년에는 108계단에 경사형 승강기가 설치되어 주민들에게는 편리함을, 해방촌을 찾는 관광객들에게는 이색 경험을 제공하고 있습니다. [후암동 108계단] 📍서울 용산구 용산동2가 1-1342 후암동 108계단 ⏰이용 가능시간: 06:00~23:30 - Have you ever come across these stairs, which have been witness to the sad history of the HBC area?🥺 The Huam-dong 108 Stairway, of which the walls are now decorated with beautiful tiles on either side, creating plenty of photo spots, was actually created during the Japanese colonial era to access the Gyeongseong Hoguk Shrine, a Shinto shrine built in memory of the Japanese fallen soldiers from war campaigns of the era. The property and labor of the Korean people was also forcefully mobilized in building this notorious shrine. Following the liberation of Korea and the end of the Korean War, the people that settled in HBC actively started to develop the area, tearing down the shrine, of which only the ’108 Stairway‘ remains. An elevator was installed along the stairs in 2018 for the convenience of the residents, and the 108 Stairway has become a place where tourists can experience the lesser known side of the city. [Huam-dong 108 Stairway] 📍Seoul Yongsan-gu Yongsan-dong 2ga 1-1342 (Huam-dong 108 Stairway) ⏰Operating hours: 06:00~20:30 #국가보훈부 #후암동 #해방촌 #서울 #서울여행 #서울시 #seoulcity #seoultravel #seoultour #HBC #welcometomydong #seoul",
+          "latitude": 37.54923,
+          "longitude": 126.98318,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/huam-dong-108-stairs-bohunstory_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.54923,
+      "centroidLongitude": 126.98318,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "50EA5E02-5C4A-56F3-BF88-E8A739D248E5",
+        "D997A4A9-7F50-542B-9523-A7A5C804BAE4",
+        "CEF440CC-76E0-520D-B7DD-27625F8F9DE6",
+        "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B",
+        "DD44D40E-8D64-5A4F-9964-E9D09E353297",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "6BA4E7DB-6CA9-59F9-A2FD-E9412EEC2D01",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "D997A4A9-7F50-542B-9523-A7A5C804BAE4",
+      "createdAt": "2026-10-26",
+      "title": "Yun Dong-ju Literary Museum",
+      "shortDescription": "A post by @bohun_story on Instagram.",
+      "longDescription": "물탱크가 박물관이 됐다고?!😮 방치된 수도 가압장과 물탱크가 개조되어 박물관으로 재탄생한 이곳은 ’윤동주문학관‘입니다. 오랜 세월의 흔적이 고스란히 남아있는 이 공간은 윤동주 시인의 시 세계와 만나 새로운 의미로 연결되는데요. 박물관 곳곳에 담긴 의미를 알아가며 윤동주 시인의 인생을 돌아보는 것도 윤동주문학관의 또 다른 묘미입니다. 문학관 뒤편으로는 윤동주 시인이 자주 산책하곤 했던 ’시인의 언덕‘이 이어집니다. 서울 시내가 한눈에 내려다 보이는 이곳에서 윤동주 시인의 시를 감상해 보는 건 어떨까요?😊 앞으로 공개될 국가보훈부와 아이고바트(@igobart_)가 함께한 콘텐츠도 많이 기대해주세요!❤️ [윤동주문학관] 📍서울특별시 종로구 창의문로 119 -3호선 경복궁역 3번출구/5호선 광화문역 2번출구 하차 후 버스 환승 ⏰10:00~18:00(매주 월요일 정기 휴무, 17:30 입장마감) 🎫관람료 무료 [시인의 언덕] 📍서울특별시 종로구 청운동 창의문로 119 *장소 협조: 종로문화재단 ------------------------------ A water tank turned into a museum?! 😮 This is the Literary Museum of Yoon Dong-ju, housed in a formerly neglected but now revived water pumping station and water tank. Visitors are invited to discover the tragic life story of poet Yoon Dong-ju and the world of his poetry, as it unfolds in a space that interacts with its contents and adds another layer of meaning. There is history and beauty hidden in every corner of the structure. The Museum is also linked to the Hill of Poet Yoon Dong-ju, where the poet himself used to take frequent walks. We recommend taking in the beautiful view of downtown Seoul at the top, while appreciating the poetry of Yoon Dong-ju 😊 Stay tuned for the future contents of iGoBart (@igobart_) in collaboration with the MPVA! ❤️ [Yoon Dong-ju Literary Museum] 📍 119 Changuimun-ro, Jongno-gu, Seoul - Line 3 Gyeongbokgung Station Exit 3/Line 5 Gwanghwamun Station Exit 2 and then bus ⏰10:00~18:00 (Closed on Mondays, last admission at 17:30) 🎫 Free admission [Hill of Poet Yoon Dong-ju] 📍119 Changuimun-ro, Cheongun-dong, Jongno-gu, Seoul *In cooperation with the Jongno Foundation for Arts & Culture #국가보훈부 #서울 #서울여행 #윤동주 #청운동 #부암동 #welcometomydong #seoul",
+      "makerId": "3F70E203-0BCD-5782-B30D-2664A91154FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yun-dong-ju-literary-museum-bohunstory_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/C3XItWEgo02/",
+      "sourceAuthor": "@bohun_story",
+      "stops": [
+        {
+          "id": "17F37DF8-8D74-57A3-82A0-3901B0A69BB4",
+          "order": 0,
+          "title": "Yun Dong-ju Literary Museum",
+          "caption": "물탱크가 박물관이 됐다고?!😮 방치된 수도 가압장과 물탱크가 개조되어 박물관으로 재탄생한 이곳은 ’윤동주문학관‘입니다. 오랜 세월의 흔적이 고스란히 남아있는 이 공간은 윤동주 시인의 시 세계와 만나 새로운 의미로 연결되는데요. 박물관 곳곳에 담긴 의미를 알아가며 윤동주 시인의 인생을 돌아보는 것도 윤동주문학관의 또 다른 묘미입니다. 문학관 뒤편으로는 윤동주 시인이 자주 산책하곤 했던 ’시인의 언덕‘이 이어집니다. 서울 시내가 한눈에 내려다 보이는 이곳에서 윤동주 시인의 시를 감상해 보는 건 어떨까요?😊 앞으로 공개될 국가보훈부와 아이고바트(@igobart_)가 함께한 콘텐츠도 많이 기대해주세요!❤️ [윤동주문학관] 📍서울특별시 종로구 창의문로 119 -3호선 경복궁역 3번출구/5호선 광화문역 2번출구 하차 후 버스 환승 ⏰10:00~18:00(매주 월요일 정기 휴무, 17:30 입장마감) 🎫관람료 무료 [시인의 언덕] 📍서울특별시 종로구 청운동 창의문로 119 *장소 협조: 종로문화재단 ------------------------------ A water tank turned into a museum?! 😮 This is the Literary Museum of Yoon Dong-ju, housed in a formerly neglected but now revived water pumping station and water tank. Visitors are invited to discover the tragic life story of poet Yoon Dong-ju and the world of his poetry, as it unfolds in a space that interacts with its contents and adds another layer of meaning. There is history and beauty hidden in every corner of the structure. The Museum is also linked to the Hill of Poet Yoon Dong-ju, where the poet himself used to take frequent walks. We recommend taking in the beautiful view of downtown Seoul at the top, while appreciating the poetry of Yoon Dong-ju 😊 Stay tuned for the future contents of iGoBart (@igobart_) in collaboration with the MPVA! ❤️ [Yoon Dong-ju Literary Museum] 📍 119 Changuimun-ro, Jongno-gu, Seoul - Line 3 Gyeongbokgung Station Exit 3/Line 5 Gwanghwamun Station Exit 2 and then bus ⏰10:00~18:00 (Closed on Mondays, last admission at 17:30) 🎫 Free admission [Hill of Poet Yoon Dong-ju] 📍119 Changuimun-ro, Cheongun-dong, Jongno-gu, Seoul *In cooperation with the Jongno Foundation for Arts & Culture #국가보훈부 #서울 #서울여행 #윤동주 #청운동 #부암동 #welcometomydong #seoul",
+          "latitude": 37.59211,
+          "longitude": 126.96704,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yun-dong-ju-literary-museum-bohunstory_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.59211,
+      "centroidLongitude": 126.96704,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "50EA5E02-5C4A-56F3-BF88-E8A739D248E5",
+        "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B",
+        "CEF440CC-76E0-520D-B7DD-27625F8F9DE6",
+        "DD44D40E-8D64-5A4F-9964-E9D09E353297",
+        "AE40AB59-4C91-5FF9-8C54-12C55D6D9856",
+        "6BA4E7DB-6CA9-59F9-A2FD-E9412EEC2D01",
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E"
+      ],
+      "primaryCategory": "literature",
+      "tags": [
+        "Museum",
+        "Literature"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "804A2576-11B0-56E8-AFBB-675D13F48B08",
+      "createdAt": "2026-10-26",
+      "title": "Lone Tree, Olympic Park",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "This may be the most famous tree in Seoul. 서울에서 가장 유명한 나무일 것 같아요! #welcometomydong #seoul #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #seoultrip #seoul_korea #lonetree #tree #서울 #나홀로나무 #서울스냅 #서울여행 #서울데이트코스 #서울데이트 #서울핫플 #서울가볼만한곳 #올림픽공원",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/olympic-park-lone-tree-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/C21LXlvPZvT/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "D8D59B4E-3EB5-5B4A-948C-2BE54C5EE8E0",
+          "order": 0,
+          "title": "Lone Tree, Olympic Park",
+          "caption": "This may be the most famous tree in Seoul. 서울에서 가장 유명한 나무일 것 같아요! #welcometomydong #seoul #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #seoultrip #seoul_korea #lonetree #tree #서울 #나홀로나무 #서울스냅 #서울여행 #서울데이트코스 #서울데이트 #서울핫플 #서울가볼만한곳 #올림픽공원",
+          "latitude": 37.52274,
+          "longitude": 127.12038,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/olympic-park-lone-tree-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.52274,
+      "centroidLongitude": 127.12038,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "5CDB3A7E-3116-5015-A721-C21BD3062AE5",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5CDB3A7E-3116-5015-A721-C21BD3062AE5",
+      "createdAt": "2026-10-26",
+      "title": "Flag Plaza, Olympic Park",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Why I Love these Flags in Seoul’s Olympic Park 내가 올림픽 공원의 국기 광장과 사랑에 빠진 이유. Have you been to Seoul’s Olympic Park? 서울의 올림픽 공원에 가봤어요? #welcometomydong #seoul #olympicpark #seoul🇰🇷 #seoulkorea #seoultravel #seoultrip #seoulcity #seoul_korea #seoultour #seoullovers #서울 #서울가볼만한곳 #서울데이트코스 #서울여행 #서울데이트 #서울핫플 #서울핫플레이스 #올림픽공원 #방이동",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/olympic-park-flag-plaza-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/C2o4ovvPO9y/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "C8DB77E1-7A44-520E-9A48-FC31CF6AF9B8",
+          "order": 0,
+          "title": "Flag Plaza, Olympic Park",
+          "caption": "Why I Love these Flags in Seoul’s Olympic Park 내가 올림픽 공원의 국기 광장과 사랑에 빠진 이유. Have you been to Seoul’s Olympic Park? 서울의 올림픽 공원에 가봤어요? #welcometomydong #seoul #olympicpark #seoul🇰🇷 #seoulkorea #seoultravel #seoultrip #seoulcity #seoul_korea #seoultour #seoullovers #서울 #서울가볼만한곳 #서울데이트코스 #서울여행 #서울데이트 #서울핫플 #서울핫플레이스 #올림픽공원 #방이동",
+          "latitude": 37.51831,
+          "longitude": 127.11523,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/olympic-park-flag-plaza-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.51831,
+      "centroidLongitude": 127.11523,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7",
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Park",
+        "Public Square"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E3BE0035-65B4-563D-88A6-7DBA92114B42",
+      "createdAt": "2026-10-26",
+      "title": "The 1968 Raid Pine, Bugaksan",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Why Buam-dong has a tree with 15 Bullet Holes? 부암동에 있는 총탄 15발 맞은 나무를 아시나요? #welcometomydong #buam #seoul #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #seoultrip #seoulcity #seoultour #seoul #부암동 #서울 #서울스냅 #서울가볼만한곳 #서울핫플레이스 #서울핫플 #서울시 #서울데이트코스 #서울데이트 #부암동",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bugaksan-1968-raid-pine-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/C2W0W-5P5SI/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "E1784856-BF2B-5D5C-932C-90F51FEE6178",
+          "order": 0,
+          "title": "The 1968 Raid Pine, Bugaksan",
+          "caption": "Why Buam-dong has a tree with 15 Bullet Holes? 부암동에 있는 총탄 15발 맞은 나무를 아시나요? #welcometomydong #buam #seoul #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #seoultrip #seoulcity #seoultour #seoul #부암동 #서울 #서울스냅 #서울가볼만한곳 #서울핫플레이스 #서울핫플 #서울시 #서울데이트코스 #서울데이트 #부암동",
+          "latitude": 37.59383,
+          "longitude": 126.97409,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bugaksan-1968-raid-pine-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.59383,
+      "centroidLongitude": 126.97409,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "804A2576-11B0-56E8-AFBB-675D13F48B08",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "5626CC92-E166-5EDE-A26B-B4A0FB31A663",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "War",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+      "createdAt": "2026-10-26",
+      "title": "Mugyewon",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Mugyewon is more than just an ordinary gorgeous Hanok Complex in Buam-dong! 무계원은 부암동의 아름다운 한옥 단지 그 이상입니다! Guest is Conan from @euljispace #welcometomydong #buamdong #seoul #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #seoultrip #seoul_korea #seoultour #서울 #부암동 #부암 #무계원 #서울여행 #서울구경 #서울데이트 #서울핫플레이스 #서울핫플 #서울데이트코스 #웰컴투마이동",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mugyewon-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/C1oiqqUvxfe/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "2638ED28-8340-5DB0-BBA3-E5A7A61CDCA4",
+          "order": 0,
+          "title": "Mugyewon",
+          "caption": "Mugyewon is more than just an ordinary gorgeous Hanok Complex in Buam-dong! 무계원은 부암동의 아름다운 한옥 단지 그 이상입니다! Guest is Conan from @euljispace #welcometomydong #buamdong #seoul #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #seoultrip #seoul_korea #seoultour #서울 #부암동 #부암 #무계원 #서울여행 #서울구경 #서울데이트 #서울핫플레이스 #서울핫플 #서울데이트코스 #웰컴투마이동",
+          "latitude": 37.59188,
+          "longitude": 126.96343,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mugyewon-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.59188,
+      "centroidLongitude": 126.96343,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "679D8232-A811-57F7-A8E5-C5CDBA7A9CB0",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+        "58304931-85B3-5CD9-A955-C114CCE8A1F3",
+        "D997A4A9-7F50-542B-9523-A7A5C804BAE4"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "679D8232-A811-57F7-A8E5-C5CDBA7A9CB0",
+      "createdAt": "2026-10-26",
+      "title": "Grand Ole Opry, Itaewon",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Meet Mama Kim 마마 킴을 소개합니다! Owner of Seoul’s Grand Ole Opry. 서울 ‘그랜드 올 오프리’의 주인입니다. #welcometomydong #seoul #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #grandoleopry #itaewon #seoultrip #서울 #서울데이트코스 #서울핫플레이스 #서울여행 #서울데이트 #이태원 #서울구경 #이태원술집 #서울술집",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/grand-ole-opry-itaewon-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/C0JW6PNPYej/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "C9D0DC84-9A79-52A2-B86A-7BF057778D1E",
+          "order": 0,
+          "title": "Grand Ole Opry, Itaewon",
+          "caption": "Meet Mama Kim 마마 킴을 소개합니다! Owner of Seoul’s Grand Ole Opry. 서울 ‘그랜드 올 오프리’의 주인입니다. #welcometomydong #seoul #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #grandoleopry #itaewon #seoultrip #서울 #서울데이트코스 #서울핫플레이스 #서울여행 #서울데이트 #이태원 #서울구경 #이태원술집 #서울술집",
+          "latitude": 37.5341,
+          "longitude": 126.99659,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/grand-ole-opry-itaewon-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.5341,
+      "centroidLongitude": 126.99659,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "6BA4E7DB-6CA9-59F9-A2FD-E9412EEC2D01",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7"
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+      "createdAt": "2026-10-26",
+      "title": "Sanchon",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Let me show you Seoul’s first and excellent temple food restaurant 서울 최초의 훌륭한 사찰 음식점을 소개하겠습니다! #서울 #맛집 #welcometomydong #seoul #seoul🇰🇷 #seoullovers #seoulfood #koreanvegan #seoulkorea #seoultravel #seoultrip #seoul_korea #서울맛집 #서울구경 #서울데이트코스 #서울핫플레이스 #서울핫플 #서울스냅 #인사동 #insadong",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sanchon-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Czih6ZCvDAN/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "F35C9CF8-60EF-5C1F-AC7F-603E96D8C010",
+          "order": 0,
+          "title": "Sanchon",
+          "caption": "Let me show you Seoul’s first and excellent temple food restaurant 서울 최초의 훌륭한 사찰 음식점을 소개하겠습니다! #서울 #맛집 #welcometomydong #seoul #seoul🇰🇷 #seoullovers #seoulfood #koreanvegan #seoulkorea #seoultravel #seoultrip #seoul_korea #서울맛집 #서울구경 #서울데이트코스 #서울핫플레이스 #서울핫플 #서울스냅 #인사동 #insadong",
+          "latitude": 37.57326,
+          "longitude": 126.9861,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sanchon-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.57326,
+      "centroidLongitude": 126.9861,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "C0FB8DC8-27F8-516C-9630-191AB3AB0262",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Faith"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7",
+      "createdAt": "2026-10-26",
+      "title": "Sewoon Plaza",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Did you know Sewoon Plaza held Seoul’s High-End apartments? 세운 상가가 원래 최고급 아파트였던 사실 아시나요? #세운상가 #세운 #을지로 #서울 #서울여행 #welcometomydong #seoul #sewoon #euljiro #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #seoultrip #seoulcity #seoul_korea #seoul_official #서울핫플레이스 #서울핫플 #서울데이트코스 #서울데이트 #서울투어",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sewoon-plaza-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/CwoZifOvpkg/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "2BC2DC17-5574-5986-AA19-80E75F3AEF25",
+          "order": 0,
+          "title": "Sewoon Plaza",
+          "caption": "Did you know Sewoon Plaza held Seoul’s High-End apartments? 세운 상가가 원래 최고급 아파트였던 사실 아시나요? #세운상가 #세운 #을지로 #서울 #서울여행 #welcometomydong #seoul #sewoon #euljiro #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #seoultrip #seoulcity #seoul_korea #seoul_official #서울핫플레이스 #서울핫플 #서울데이트코스 #서울데이트 #서울투어",
+          "latitude": 37.5693,
+          "longitude": 126.9952,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sewoon-plaza-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.5693,
+      "centroidLongitude": 126.9952,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "5CDB3A7E-3116-5015-A721-C21BD3062AE5",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "4284FAA8-8202-5D61-8544-56473530B392",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Kim Swoo-geun",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "58304931-85B3-5CD9-A955-C114CCE8A1F3",
+      "createdAt": "2026-10-26",
+      "title": "Doseonsa",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Welcome to one of Seoul’s MOST important Buddhist Temples 서울에서 가장 중요한 사찰 중 하나에 오신 걸 환영합니다 #seoul #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #seoultour #welcometomydong #도선사 #서울 #우이동 #서울데이트코스 #서울가볼만한곳 #서울핫플레이스 #서울핫플 #서울여행 #서울투어 #서울스냅 #서울구경 #seoul_korea",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/doseonsa-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Cv31cZ6PQ0Q/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "183EE112-1EE4-54F0-958B-D31BB8ADC505",
+          "order": 0,
+          "title": "Doseonsa",
+          "caption": "Welcome to one of Seoul’s MOST important Buddhist Temples 서울에서 가장 중요한 사찰 중 하나에 오신 걸 환영합니다 #seoul #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #seoultour #welcometomydong #도선사 #서울 #우이동 #서울데이트코스 #서울가볼만한곳 #서울핫플레이스 #서울핫플 #서울여행 #서울투어 #서울스냅 #서울구경 #seoul_korea",
+          "latitude": 37.6553,
+          "longitude": 126.99,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/doseonsa-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.6553,
+      "centroidLongitude": 126.99,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "ECD8C2A3-4665-5145-9214-6833E69D58FE",
+        "B0601329-CFF5-5B21-A6CF-3A0BA199A6F8",
+        "CEF440CC-76E0-520D-B7DD-27625F8F9DE6",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "D997A4A9-7F50-542B-9523-A7A5C804BAE4",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E"
+      ],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+      "createdAt": "2026-10-26",
+      "title": "Teobangnae",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Want to feel Seoul’s 80s? 서울의 80년대를 느끼고 싶나요? #seoulcafe #seoul #seoulkorea #seoultravel #seoultrip #seoul_korea #seoul🇰🇷 #서울 #서울데이트 #서울핫플레이스 #서울핫플 #서울카페 #서울카페추천 #welcometomydong #서울데이트코스 #서울카페투어 #서울여행 #카페 #카페투어 #cafe",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/teobangnae-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Cuv96ExtYBP/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "1CA83EC3-DE91-5D64-9087-50DDF16B4F03",
+          "order": 0,
+          "title": "Teobangnae",
+          "caption": "Want to feel Seoul’s 80s? 서울의 80년대를 느끼고 싶나요? #seoulcafe #seoul #seoulkorea #seoultravel #seoultrip #seoul_korea #seoul🇰🇷 #서울 #서울데이트 #서울핫플레이스 #서울핫플 #서울카페 #서울카페추천 #welcometomydong #서울데이트코스 #서울카페투어 #서울여행 #카페 #카페투어 #cafe",
+          "latitude": 37.50806,
+          "longitude": 126.96076,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/teobangnae-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.50806,
+      "centroidLongitude": 126.96076,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "38D67931-3B30-5B52-B93F-59A83F7BB19E"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+      "createdAt": "2026-10-26",
+      "title": "Chilgung",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Very few people know about this place. 이 장소를 아는 사람은 많이 없을 것 같아요! #칠궁 #궁정동 #서울 #서울여행 #서울가볼만한곳 #서울데이트코스 #서울핫플레이스 #서울데이트 #서울핫플 #청와대 #welcometomydong #bluehouse #seoul #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #seoultrip #seoulcity #seoul_official #seoul_korea #seoultou",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chilgung-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Cuics4Ju16P/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "1884DE09-F7A7-56BE-A53A-16CFA879EB0D",
+          "order": 0,
+          "title": "Chilgung",
+          "caption": "Very few people know about this place. 이 장소를 아는 사람은 많이 없을 것 같아요! #칠궁 #궁정동 #서울 #서울여행 #서울가볼만한곳 #서울데이트코스 #서울핫플레이스 #서울데이트 #서울핫플 #청와대 #welcometomydong #bluehouse #seoul #seoul🇰🇷 #seoullovers #seoulkorea #seoultravel #seoultrip #seoulcity #seoul_official #seoul_korea #seoultou",
+          "latitude": 37.58536,
+          "longitude": 126.9738,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chilgung-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.58536,
+      "centroidLongitude": 126.9738,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Hidden Gem",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "C0FB8DC8-27F8-516C-9630-191AB3AB0262",
+      "createdAt": "2026-10-26",
+      "title": "Majang-dong Livestock Market",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Welcome to the scariest market in Seoul. 서울에서 제일 무서운 시장에 오신 것을 환영합니다! Guide: @zenkimchi #마장 #마장동 #마장동축산물시장 #서울 #서울구경 #서울맛집 #서울핫플 #서울핫플레이스 #서울데이트 #서울데이트코스 #majang #meatmarket #seoul #welcometomydong #seoul🇰🇷 #seoulkorea #seoultravel #seoultrip #seoullovers #seoultour #시장",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/majang-dong-livestock-market-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/CtoQv36reOQ/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "982E16C4-E277-5976-9F62-20866F41A3C7",
+          "order": 0,
+          "title": "Majang-dong Livestock Market",
+          "caption": "Welcome to the scariest market in Seoul. 서울에서 제일 무서운 시장에 오신 것을 환영합니다! Guide: @zenkimchi #마장 #마장동 #마장동축산물시장 #서울 #서울구경 #서울맛집 #서울핫플 #서울핫플레이스 #서울데이트 #서울데이트코스 #majang #meatmarket #seoul #welcometomydong #seoul🇰🇷 #seoulkorea #seoultravel #seoultrip #seoullovers #seoultour #시장",
+          "latitude": 37.57097,
+          "longitude": 127.03799,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/majang-dong-livestock-market-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.57097,
+      "centroidLongitude": 127.03799,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "8A645DCB-68DE-5133-8DD6-31B3515A3E19",
+        "FAE18FD1-9ABE-5EC3-9D07-E78936BFEA25",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "B5A2F665-FE68-5593-AAD7-57AC872FD8B0",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Market",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8A645DCB-68DE-5133-8DD6-31B3515A3E19",
+      "createdAt": "2026-10-26",
+      "title": "Dongmyo Flea Market",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "I fell in love with this place: Dongmyo Flea Market. 동묘 벼룩시장과 사랑에 빠져 버렸어요! #동묘시장 #동묘구제시장 #동묘구제 #dongmyo #fleamarket #seoul #seoul🇰🇷 #seoulkorea #서울 #서울여행 #서울데이트 #서울데이트 #서울데이트코스 #서울핫플레이스 #seoultour #seoultravel #welcometomydong #seoul_korea",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dongmyo-flea-market-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Cqhw_07Lh5l/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "DAF4315F-395A-58D5-900F-58BEB7E8F803",
+          "order": 0,
+          "title": "Dongmyo Flea Market",
+          "caption": "I fell in love with this place: Dongmyo Flea Market. 동묘 벼룩시장과 사랑에 빠져 버렸어요! #동묘시장 #동묘구제시장 #동묘구제 #dongmyo #fleamarket #seoul #seoul🇰🇷 #seoulkorea #서울 #서울여행 #서울데이트 #서울데이트 #서울데이트코스 #서울핫플레이스 #seoultour #seoultravel #welcometomydong #seoul_korea",
+          "latitude": 37.57194,
+          "longitude": 127.01881,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dongmyo-flea-market-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.57194,
+      "centroidLongitude": 127.01881,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "FAE18FD1-9ABE-5EC3-9D07-E78936BFEA25",
+        "C0FB8DC8-27F8-516C-9630-191AB3AB0262",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "38D67931-3B30-5B52-B93F-59A83F7BB19E",
+        "23056721-45F1-5CA3-B1FE-0A4EF5B9E2B9",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Market",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "23056721-45F1-5CA3-B1FE-0A4EF5B9E2B9",
+      "createdAt": "2026-10-26",
+      "title": "Buruttrak",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Let me show you how unique this music store is in Myeongdong 이 명동의 음반 가게가 왜 특별한지 알려줄게 #서울 #서울핫플레이스 #서울데이트 #서울여행 #서울데이트코스 #명동 #명동데이트 #명동핫플 #myeongdong #seoul #seoultravel #seoulkorea #seoultrip #seoulcity #seoul🇰🇷 #seoultour #seoulstreet",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/buruttrak-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/CpZ-JfNszny/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "C91BEE87-F00B-5AFC-B2E1-11EB45DC0A83",
+          "order": 0,
+          "title": "Buruttrak",
+          "caption": "Let me show you how unique this music store is in Myeongdong 이 명동의 음반 가게가 왜 특별한지 알려줄게 #서울 #서울핫플레이스 #서울데이트 #서울여행 #서울데이트코스 #명동 #명동데이트 #명동핫플 #myeongdong #seoul #seoultravel #seoulkorea #seoultrip #seoulcity #seoul🇰🇷 #seoultour #seoulstreet",
+          "latitude": 37.56116,
+          "longitude": 126.98287,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/buruttrak-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.56116,
+      "centroidLongitude": 126.98287,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "38D67931-3B30-5B52-B93F-59A83F7BB19E",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7",
+        "4284FAA8-8202-5D61-8544-56473530B392"
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8E7A4D35-8709-53D8-B1A9-1CE8A3D8D710",
+      "createdAt": "2026-10-26",
+      "title": "Botasa Rock-carved Buddha",
+      "shortDescription": "A post by @igobart_ on Instagram.",
+      "longDescription": "Have you heard of the Hidden Buddha in Anam? 안암동에 숨겨진 불상에 대해 들어보셨나요? #Seoul #seoultrip #seoulkorea #seoultravel #buddha #서울 #서울구경 #서울여행 #안암동 #안암 #불상 #불교 #buddhastatue #서울데이트 #서울핫플레이스 #서울데이트코스 #서울감성스팟",
+      "makerId": "56D0629F-80B4-53EB-9868-090C5AEB5E19",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/botasa-rock-carved-buddha-igobart_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/CoZcSEzL1kL/",
+      "sourceAuthor": "@igobart_",
+      "stops": [
+        {
+          "id": "892551C6-D75C-50B1-8002-9353A1FB411F",
+          "order": 0,
+          "title": "Botasa Rock-carved Buddha",
+          "caption": "Have you heard of the Hidden Buddha in Anam? 안암동에 숨겨진 불상에 대해 들어보셨나요? #Seoul #seoultrip #seoulkorea #seoultravel #buddha #서울 #서울구경 #서울여행 #안암동 #안암 #불상 #불교 #buddhastatue #서울데이트 #서울핫플레이스 #서울데이트코스 #서울감성스팟",
+          "latitude": 37.59104,
+          "longitude": 127.03086,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/botasa-rock-carved-buddha-igobart_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.59104,
+      "centroidLongitude": 127.03086,
+      "city": "Seoul",
+      "country": "South Korea",
+      "relatedTourIds": [
+        "B0601329-CFF5-5B21-A6CF-3A0BA199A6F8",
+        "58304931-85B3-5CD9-A955-C114CCE8A1F3",
+        "ECD8C2A3-4665-5145-9214-6833E69D58FE",
+        "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B",
+        "6BA4E7DB-6CA9-59F9-A2FD-E9412EEC2D01",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83"
+      ],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Hidden Gem"
       ],
       "priceUSD": 0
     }
