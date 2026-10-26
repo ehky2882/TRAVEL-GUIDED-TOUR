@@ -13854,8 +13854,8 @@
         "C48B2BD7-9A7F-5D37-9CF8-FB1966F0F5E2",
         "4827e124-6873-4478-9cae-5cf5f965bbe1",
         "333EB30B-6B5A-5229-9C6B-FE4AFB35E177",
-        "3d117c47-6c6e-42b8-a0f9-9820796d85de",
-        "771c68bd-a100-482b-ba7d-cd4bbad137d3"
+        "1C7E02DA-1962-536F-81BC-BC0BDC97085A",
+        "3d117c47-6c6e-42b8-a0f9-9820796d85de"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -46141,8 +46141,8 @@
         "11378809-f986-505b-80c9-cad3c8aafb2d",
         "682428ed-8183-547b-a020-3ae35dbfeaba",
         "92655fdd-493b-564c-a19f-57ccce10e026",
-        "80df1e35-1f11-5505-823b-b81cf3768521",
-        "83c58cc1-9ec6-54d2-bce3-498a7bce51b0"
+        "11784987-DD5A-53D5-9C07-BC550C5E01A3",
+        "80df1e35-1f11-5505-823b-b81cf3768521"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -46306,7 +46306,7 @@
         "2c9fb701-2063-5c14-a418-c42f60e6dce0",
         "B6FFE1B1-3DC1-50D7-82CC-F029807CB922",
         "C7775855-C915-534D-9B39-530AC025702A",
-        "bc042fda-60f8-560f-92d4-3d478816d9ee"
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -46359,10 +46359,10 @@
         "89fa0677-9165-5507-9d25-a769338ed8df",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
         "80df1e35-1f11-5505-823b-b81cf3768521",
-        "0937722e-26f7-5453-88bf-bdf691fcdf43",
-        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
-        "E2D873FD-4A6E-58CE-A305-8A97E79568CD",
-        "745AD9DA-E8C8-5C4B-BB7B-5A3B18AFCB61"
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "52E7BDBA-05EF-5D20-8535-DD9C5E1E28F1",
+        "0937722e-26f7-5453-88bf-bdf691fcdf43"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -46469,12 +46469,12 @@
       "relatedTourIds": [
         "745AD9DA-E8C8-5C4B-BB7B-5A3B18AFCB61",
         "1C39542B-E87B-5215-A595-F7FF21D14545",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "9B11D6C0-AADF-5ED8-B487-FCCE8034AC59",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
         "be45d130-ef55-55e6-bb83-1f6669630cae",
-        "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "92655fdd-493b-564c-a19f-57ccce10e026",
-        "17d77b0d-070f-5414-b79b-5a22e78644ba",
-        "E2D873FD-4A6E-58CE-A305-8A97E79568CD",
-        "7c9541b3-d162-5655-8da1-de0286f43d21"
+        "A1662A00-D1A7-5764-967A-798CADEBAB90"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -46583,14 +46583,14 @@
       "city": "Paju",
       "country": "South Korea",
       "relatedTourIds": [
+        "076BC942-2D7E-533B-9586-C23B42C46DF6",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
         "17d77b0d-070f-5414-b79b-5a22e78644ba",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
-        "87C6E02C-AE70-5F7C-8FA6-F28D56845D1E",
-        "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "545368f1-0c52-56e9-8721-9c0b8e75c138",
-        "E2D873FD-4A6E-58CE-A305-8A97E79568CD",
-        "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
-        "4212828A-1D7B-58D5-9691-60D298F36F07"
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -46816,10 +46816,10 @@
         "cfbcb0a7-d377-5846-bca8-8073d3b36796",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
         "6b48cbd2-3f97-5887-9060-fde4750001d0",
+        "FAE18FD1-9ABE-5EC3-9D07-E78936BFEA25",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
         "dc3ac0b7-aa92-5036-a93b-64dc80dee56d",
-        "89fa0677-9165-5507-9d25-a769338ed8df",
-        "1d402527-2285-55a7-97db-67ed5071efc4",
-        "DC54CC4E-F8CD-571B-84FF-6D7DC6C7A42A"
+        "C0FB8DC8-27F8-516C-9630-191AB3AB0262"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -46871,11 +46871,11 @@
         "be6af98d-156a-5a62-9b18-ea7ed90b8686",
         "2490cc58-8b30-5331-9e8a-5650e038fd62",
         "80df1e35-1f11-5505-823b-b81cf3768521",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
         "d7bee72e-70d6-518f-acb3-ce3dd2babee4",
         "7c9541b3-d162-5655-8da1-de0286f43d21",
-        "17d77b0d-070f-5414-b79b-5a22e78644ba",
-        "8b8be0d5-7647-56a9-ac0d-1eb786a08ac1",
-        "E2D873FD-4A6E-58CE-A305-8A97E79568CD"
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+        "076BC942-2D7E-533B-9586-C23B42C46DF6"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -46989,8 +46989,8 @@
         "407f8416-3a6d-54c3-af84-775b448fd96f",
         "bc042fda-60f8-560f-92d4-3d478816d9ee",
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
-        "bd8db960-7dce-5efa-9d7b-6d56ae1dcea4",
-        "4fe03935-405b-53c8-9991-d21eba60c45c"
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "bd8db960-7dce-5efa-9d7b-6d56ae1dcea4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -47214,11 +47214,11 @@
         "FED40890-5ADF-5CD0-8751-732232799E8A",
         "bc042fda-60f8-560f-92d4-3d478816d9ee",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
+        "C0FB8DC8-27F8-516C-9630-191AB3AB0262",
+        "FAE18FD1-9ABE-5EC3-9D07-E78936BFEA25",
         "28427603-2539-5712-8d8f-33e5261fdc2a",
-        "6b48cbd2-3f97-5887-9060-fde4750001d0",
-        "C7775855-C915-534D-9B39-530AC025702A",
-        "dc3ac0b7-aa92-5036-a93b-64dc80dee56d",
-        "11378809-f986-505b-80c9-cad3c8aafb2d"
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "38D67931-3B30-5B52-B93F-59A83F7BB19E"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -47326,13 +47326,13 @@
       "country": "South Korea",
       "relatedTourIds": [
         "FED40890-5ADF-5CD0-8751-732232799E8A",
+        "C0FB8DC8-27F8-516C-9630-191AB3AB0262",
         "cfbcb0a7-d377-5846-bca8-8073d3b36796",
         "bc042fda-60f8-560f-92d4-3d478816d9ee",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
         "C7775855-C915-534D-9B39-530AC025702A",
-        "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "0538DFD8-C7CB-54DA-9487-8429AC9D2899",
-        "9FCF0920-A716-596C-8E36-0B45A0A026A0"
+        "B5A2F665-FE68-5593-AAD7-57AC872FD8B0",
+        "FAE18FD1-9ABE-5EC3-9D07-E78936BFEA25"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -47439,10 +47439,10 @@
         "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
         "92655fdd-493b-564c-a19f-57ccce10e026",
         "80df1e35-1f11-5505-823b-b81cf3768521",
-        "eec0af10-6d48-51af-8676-ed08cd3b6b8f",
-        "88f85bce-f765-5b54-b807-edcd0832ec8e",
-        "D97E831E-346D-567F-8068-1098A93B361E",
-        "11378809-f986-505b-80c9-cad3c8aafb2d"
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
+        "076BC942-2D7E-533B-9586-C23B42C46DF6",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "eec0af10-6d48-51af-8676-ed08cd3b6b8f"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -47553,10 +47553,10 @@
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
         "80df1e35-1f11-5505-823b-b81cf3768521",
         "D97E831E-346D-567F-8068-1098A93B361E",
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
         "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
-        "28427603-2539-5712-8d8f-33e5261fdc2a",
-        "eec0af10-6d48-51af-8676-ed08cd3b6b8f"
+        "28427603-2539-5712-8d8f-33e5261fdc2a"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -47662,12 +47662,12 @@
       "relatedTourIds": [
         "7c9541b3-d162-5655-8da1-de0286f43d21",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
+        "076BC942-2D7E-533B-9586-C23B42C46DF6",
         "92655fdd-493b-564c-a19f-57ccce10e026",
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
         "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
         "d7bee72e-70d6-518f-acb3-ce3dd2babee4",
-        "80df1e35-1f11-5505-823b-b81cf3768521",
-        "4fe03935-405b-53c8-9991-d21eba60c45c",
-        "D97E831E-346D-567F-8068-1098A93B361E"
+        "80df1e35-1f11-5505-823b-b81cf3768521"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -47720,12 +47720,12 @@
       "relatedTourIds": [
         "2490cc58-8b30-5331-9e8a-5650e038fd62",
         "EE51B458-1E2C-5ACE-A948-C08321368C3A",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
         "92655fdd-493b-564c-a19f-57ccce10e026",
-        "D97E831E-346D-567F-8068-1098A93B361E",
-        "d7bee72e-70d6-518f-acb3-ce3dd2babee4",
-        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
-        "80df1e35-1f11-5505-823b-b81cf3768521"
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+        "CEF440CC-76E0-520D-B7DD-27625F8F9DE6",
+        "D97E831E-346D-567F-8068-1098A93B361E"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -47773,14 +47773,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "804A2576-11B0-56E8-AFBB-675D13F48B08",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "9B11D6C0-AADF-5ED8-B487-FCCE8034AC59",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
         "92655fdd-493b-564c-a19f-57ccce10e026",
         "80df1e35-1f11-5505-823b-b81cf3768521",
         "be45d130-ef55-55e6-bb83-1f6669630cae",
-        "c758134d-e7a7-51e5-8e5b-fb2027b6fc0c",
-        "17d77b0d-070f-5414-b79b-5a22e78644ba",
-        "cf833db1-9801-5f5a-95c9-50355c243b71",
-        "89fa0677-9165-5507-9d25-a769338ed8df",
-        "976420fe-e66e-59bf-99e2-0071fe45a1ff"
+        "c758134d-e7a7-51e5-8e5b-fb2027b6fc0c"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -47940,13 +47940,13 @@
       "country": "South Korea",
       "relatedTourIds": [
         "28427603-2539-5712-8d8f-33e5261fdc2a",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
         "92655fdd-493b-564c-a19f-57ccce10e026",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
+        "076BC942-2D7E-533B-9586-C23B42C46DF6",
+        "E6BC80AB-D1F9-5122-AEBC-B5726EAAE55C",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "80df1e35-1f11-5505-823b-b81cf3768521",
-        "be6af98d-156a-5a62-9b18-ea7ed90b8686",
-        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
-        "7c9541b3-d162-5655-8da1-de0286f43d21"
+        "A4C45323-7A88-58A4-828E-83FED17DF01D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -48058,10 +48058,10 @@
         "0275501b-6d22-53de-b578-da36b7b9384e",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
         "d7bee72e-70d6-518f-acb3-ce3dd2babee4",
-        "80df1e35-1f11-5505-823b-b81cf3768521",
-        "a772c45c-deac-5b20-96df-6230e698ce00",
-        "79acccd5-bcde-5cd2-81fd-61c8bedbeda1",
-        "de18a5cb-04be-42dc-832a-6e4772a66bee"
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+        "6698108F-E886-5662-8DBB-159A3731BEE8",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "80df1e35-1f11-5505-823b-b81cf3768521"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -48111,11 +48111,11 @@
         "1d402527-2285-55a7-97db-67ed5071efc4",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "38D67931-3B30-5B52-B93F-59A83F7BB19E",
         "bc042fda-60f8-560f-92d4-3d478816d9ee",
-        "28427603-2539-5712-8d8f-33e5261fdc2a",
-        "FED40890-5ADF-5CD0-8751-732232799E8A",
-        "5aa36fa6-e57b-5d46-9061-6dd76cfd44a6",
-        "cfbcb0a7-d377-5846-bca8-8073d3b36796"
+        "28427603-2539-5712-8d8f-33e5261fdc2a"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -48165,14 +48165,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "ECD8C2A3-4665-5145-9214-6833E69D58FE",
+        "58304931-85B3-5CD9-A955-C114CCE8A1F3",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "B0601329-CFF5-5B21-A6CF-3A0BA199A6F8",
         "80df1e35-1f11-5505-823b-b81cf3768521",
         "2490cc58-8b30-5331-9e8a-5650e038fd62",
-        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
-        "7c9541b3-d162-5655-8da1-de0286f43d21",
-        "be6af98d-156a-5a62-9b18-ea7ed90b8686",
-        "92655fdd-493b-564c-a19f-57ccce10e026",
-        "eec0af10-6d48-51af-8676-ed08cd3b6b8f"
+        "4e3e8520-c950-5e89-8ffa-c480d369e60c"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -48221,12 +48221,12 @@
       "relatedTourIds": [
         "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "076BC942-2D7E-533B-9586-C23B42C46DF6",
         "92655fdd-493b-564c-a19f-57ccce10e026",
-        "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
-        "cf833db1-9801-5f5a-95c9-50355c243b71",
-        "80df1e35-1f11-5505-823b-b81cf3768521",
-        "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "4fe03935-405b-53c8-9991-d21eba60c45c"
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "E6BC80AB-D1F9-5122-AEBC-B5726EAAE55C",
+        "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -48277,11 +48277,11 @@
         "92655fdd-493b-564c-a19f-57ccce10e026",
         "745AD9DA-E8C8-5C4B-BB7B-5A3B18AFCB61",
         "28427603-2539-5712-8d8f-33e5261fdc2a",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
         "89fa0677-9165-5507-9d25-a769338ed8df",
-        "D97E831E-346D-567F-8068-1098A93B361E",
-        "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "0937722e-26f7-5453-88bf-bdf691fcdf43",
-        "80df1e35-1f11-5505-823b-b81cf3768521"
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "D97E831E-346D-567F-8068-1098A93B361E"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -149100,11 +149100,11 @@
         "831C19CB-0697-5B83-A9DE-DBA167ED90DC",
         "386E0B2C-272F-5078-971E-30E92700474E",
         "50CFB5A0-E6C2-54B0-952F-702397DBE263",
+        "466C7A8F-9107-56AC-822B-9934F46954C6",
         "AA9E76BD-0C20-534D-BBC0-5B4F914962CD",
         "1D3E90A9-32B0-5A73-AFD9-F71C59E750E7",
         "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
-        "B90E38B1-8141-5009-96B1-CD52B46204B9",
-        "CD5A2131-314F-563B-8F1D-5E07A0FDA174"
+        "B90E38B1-8141-5009-96B1-CD52B46204B9"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -150473,11 +150473,11 @@
         "26144511-5987-5259-AA11-3762F106408B",
         "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
+        "466C7A8F-9107-56AC-822B-9934F46954C6",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "BE8B80BD-771D-5CE4-801F-B81125261722",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
-        "31CDA6B4-E288-5599-B566-1BEB9413E432",
-        "6EECF5D5-FDB1-5BBD-8A63-2C92946479DF"
+        "31CDA6B4-E288-5599-B566-1BEB9413E432"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -158817,13 +158817,13 @@
       "country": "South Korea",
       "relatedTourIds": [
         "89aa9c49-b8b3-5cad-9751-2ce13b542c71",
+        "52E7BDBA-05EF-5D20-8535-DD9C5E1E28F1",
         "80df1e35-1f11-5505-823b-b81cf3768521",
         "2A83EDCE-B65C-591D-9B03-B13249F6DAE1",
         "856D117A-26F7-5B1F-B715-CDF2E2E0B662",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "83c58cc1-9ec6-54d2-bce3-498a7bce51b0",
-        "976420fe-e66e-59bf-99e2-0071fe45a1ff",
-        "6b48cbd2-3f97-5887-9060-fde4750001d0"
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "83c58cc1-9ec6-54d2-bce3-498a7bce51b0"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -197960,10 +197960,10 @@
         "2A83EDCE-B65C-591D-9B03-B13249F6DAE1",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
         "6b48cbd2-3f97-5887-9060-fde4750001d0",
-        "92655fdd-493b-564c-a19f-57ccce10e026",
-        "28427603-2539-5712-8d8f-33e5261fdc2a",
-        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
-        "bd8db960-7dce-5efa-9d7b-6d56ae1dcea4"
+        "23056721-45F1-5CA3-B1FE-0A4EF5B9E2B9",
+        "B0DD2A6F-C65D-55DE-857A-40316A0091F1",
+        "F989FFE1-8B71-53E1-AB1C-C53E1947F74F",
+        "92655fdd-493b-564c-a19f-57ccce10e026"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -206122,13 +206122,13 @@
       "country": "South Korea",
       "relatedTourIds": [
         "7c9541b3-d162-5655-8da1-de0286f43d21",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "B0601329-CFF5-5B21-A6CF-3A0BA199A6F8",
+        "ECD8C2A3-4665-5145-9214-6833E69D58FE",
         "2490cc58-8b30-5331-9e8a-5650e038fd62",
-        "d7bee72e-70d6-518f-acb3-ce3dd2babee4",
-        "D97E831E-346D-567F-8068-1098A93B361E",
-        "2A83EDCE-B65C-591D-9B03-B13249F6DAE1",
-        "92655fdd-493b-564c-a19f-57ccce10e026",
-        "cf833db1-9801-5f5a-95c9-50355c243b71",
-        "0937722e-26f7-5453-88bf-bdf691fcdf43"
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "58304931-85B3-5CD9-A955-C114CCE8A1F3",
+        "d7bee72e-70d6-518f-acb3-ce3dd2babee4"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -222996,7 +222996,7 @@
         "553EBE9B-7750-55A1-AB37-5AF764F9F577",
         "831C19CB-0697-5B83-A9DE-DBA167ED90DC",
         "644FE3D5-B93C-5209-8411-83C682BD33CF",
-        "EDABD84A-63A7-5F4E-9925-C17169884E58"
+        "466C7A8F-9107-56AC-822B-9934F46954C6"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -232502,13 +232502,13 @@
       "country": "United States",
       "relatedTourIds": [
         "26144511-5987-5259-AA11-3762F106408B",
+        "466C7A8F-9107-56AC-822B-9934F46954C6",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "5F8B2762-1CA1-57B1-83CE-99F963F6241F",
         "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "8CA1FDF4-64B1-5147-B63E-DBA3DA5EE2EB",
         "4B4E881E-7E0A-5F92-8E2D-D1255C864F09",
-        "6EECF5D5-FDB1-5BBD-8A63-2C92946479DF",
-        "031089F2-1BFA-55CF-8323-B13B22ADAEC3"
+        "6EECF5D5-FDB1-5BBD-8A63-2C92946479DF"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -232777,10 +232777,10 @@
         "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "5F8B2762-1CA1-57B1-83CE-99F963F6241F",
+        "466C7A8F-9107-56AC-822B-9934F46954C6",
         "6FAA314E-D6BF-5247-B77F-B22CE7C8D9FD",
         "031089F2-1BFA-55CF-8323-B13B22ADAEC3",
-        "A2FAAD55-8DC8-506F-B8DE-CFE68CCDAD48",
-        "4B4E881E-7E0A-5F92-8E2D-D1255C864F09"
+        "A2FAAD55-8DC8-506F-B8DE-CFE68CCDAD48"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -240577,14 +240577,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "1C7E02DA-1962-536F-81BC-BC0BDC97085A",
         "219D6C8F-CB76-5F59-9700-701C1B065F11",
         "3d117c47-6c6e-42b8-a0f9-9820796d85de",
         "771c68bd-a100-482b-ba7d-cd4bbad137d3",
         "83090c8c-ab5d-4311-a881-519b1e36183e",
         "21c1b7e3-b8fb-413b-83b7-0fa67693155c",
         "239E3759-DD45-5FB3-B33F-5AB6AF29FC0A",
-        "03AD1C89-9562-5923-B68A-1183E75D9DBE",
-        "6877114e-0d89-4271-a16b-dbabb95f42ae"
+        "03AD1C89-9562-5923-B68A-1183E75D9DBE"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -242591,12 +242591,12 @@
       "relatedTourIds": [
         "545368f1-0c52-56e9-8721-9c0b8e75c138",
         "1C39542B-E87B-5215-A595-F7FF21D14545",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
         "be45d130-ef55-55e6-bb83-1f6669630cae",
-        "92655fdd-493b-564c-a19f-57ccce10e026",
-        "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "be6af98d-156a-5a62-9b18-ea7ed90b8686",
-        "89fa0677-9165-5507-9d25-a769338ed8df",
-        "11378809-f986-505b-80c9-cad3c8aafb2d"
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -262680,6 +262680,7 @@
         "2DFCC005-BA39-5DE2-8C34-1B0BE711239A",
         "F3FA00B0-F388-50F6-891D-49C987DC9986",
         "4735A7C7-26CF-5192-904C-A5AA31F52915",
+        "466C7A8F-9107-56AC-822B-9934F46954C6",
         "FC26754D-7BB1-5A9C-94B2-D26D885C2D74"
       ],
       "primaryCategory": "foodAndDrink",
@@ -272207,13 +272208,13 @@
       "country": "United States",
       "relatedTourIds": [
         "26144511-5987-5259-AA11-3762F106408B",
+        "466C7A8F-9107-56AC-822B-9934F46954C6",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "5F8B2762-1CA1-57B1-83CE-99F963F6241F",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "BE8B80BD-771D-5CE4-801F-B81125261722",
         "98031BFE-B380-5D8C-BB40-0A4C572119BF",
-        "A90AECAF-CA4C-5FA5-9DD7-4C870F196AB9",
-        "01DDF36A-F835-5475-AF84-7908E12E9680"
+        "A90AECAF-CA4C-5FA5-9DD7-4C870F196AB9"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -278708,13 +278709,13 @@
       "country": "United States",
       "relatedTourIds": [
         "01DDF36A-F835-5475-AF84-7908E12E9680",
+        "466C7A8F-9107-56AC-822B-9934F46954C6",
         "8EC93489-08F1-5998-9982-A9732336BE81",
         "BBF4E808-1033-599B-A905-D8FC66AE9C00",
         "24EAE006-B7CE-55C0-9847-D4AB2B44BDE6",
         "4735A7C7-26CF-5192-904C-A5AA31F52915",
         "26144511-5987-5259-AA11-3762F106408B",
-        "EBE45797-87BC-5D11-8139-E0D35455EC60",
-        "831C19CB-0697-5B83-A9DE-DBA167ED90DC"
+        "EBE45797-87BC-5D11-8139-E0D35455EC60"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -295707,14 +295708,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
         "5C5D4FA4-AEBE-571B-B62B-B4BA27C66FB8",
         "4fe03935-405b-53c8-9991-d21eba60c45c",
+        "52E7BDBA-05EF-5D20-8535-DD9C5E1E28F1",
         "2A83EDCE-B65C-591D-9B03-B13249F6DAE1",
         "0937722e-26f7-5453-88bf-bdf691fcdf43",
-        "cf833db1-9801-5f5a-95c9-50355c243b71",
-        "976420fe-e66e-59bf-99e2-0071fe45a1ff",
-        "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "6b48cbd2-3f97-5887-9060-fde4750001d0"
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "cf833db1-9801-5f5a-95c9-50355c243b71"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -300846,12 +300847,12 @@
       "relatedTourIds": [
         "745AD9DA-E8C8-5C4B-BB7B-5A3B18AFCB61",
         "545368f1-0c52-56e9-8721-9c0b8e75c138",
-        "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "be6af98d-156a-5a62-9b18-ea7ed90b8686",
-        "E2D873FD-4A6E-58CE-A305-8A97E79568CD",
-        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
-        "7c9541b3-d162-5655-8da1-de0286f43d21",
-        "80df1e35-1f11-5505-823b-b81cf3768521"
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "52E7BDBA-05EF-5D20-8535-DD9C5E1E28F1"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -316005,9 +316006,9 @@
         "C7775855-C915-534D-9B39-530AC025702A",
         "DC54CC4E-F8CD-571B-84FF-6D7DC6C7A42A",
         "dc3ac0b7-aa92-5036-a93b-64dc80dee56d",
+        "FAE18FD1-9ABE-5EC3-9D07-E78936BFEA25",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "6b48cbd2-3f97-5887-9060-fde4750001d0",
-        "3310B7FB-17CD-56A1-B2E4-FE2E7A0E766B"
+        "C0FB8DC8-27F8-516C-9630-191AB3AB0262"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -339653,8 +339654,8 @@
         "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
         "88f85bce-f765-5b54-b807-edcd0832ec8e",
-        "eec0af10-6d48-51af-8676-ed08cd3b6b8f",
-        "83c58cc1-9ec6-54d2-bce3-498a7bce51b0"
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "eec0af10-6d48-51af-8676-ed08cd3b6b8f"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -339761,9 +339762,9 @@
         "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
         "D97E831E-346D-567F-8068-1098A93B361E",
         "80df1e35-1f11-5505-823b-b81cf3768521",
-        "17d77b0d-070f-5414-b79b-5a22e78644ba",
-        "F18C7173-BC4D-567F-9B5A-45E4BAEC5614",
-        "eec0af10-6d48-51af-8676-ed08cd3b6b8f"
+        "076BC942-2D7E-533B-9586-C23B42C46DF6",
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
+        "17d77b0d-070f-5414-b79b-5a22e78644ba"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -339811,14 +339812,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
+        "D997A4A9-7F50-542B-9523-A7A5C804BAE4",
         "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "6BA4E7DB-6CA9-59F9-A2FD-E9412EEC2D01",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
         "F18C7173-BC4D-567F-9B5A-45E4BAEC5614",
-        "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
-        "9FCF0920-A716-596C-8E36-0B45A0A026A0",
-        "D97E831E-346D-567F-8068-1098A93B361E",
-        "1d402527-2285-55a7-97db-67ed5071efc4",
-        "6D9E3117-91CA-5DAB-A561-CCC0A1869041"
+        "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -339868,12 +339869,12 @@
       "relatedTourIds": [
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
         "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
         "92655fdd-493b-564c-a19f-57ccce10e026",
+        "076BC942-2D7E-533B-9586-C23B42C46DF6",
         "80df1e35-1f11-5505-823b-b81cf3768521",
-        "D97E831E-346D-567F-8068-1098A93B361E",
-        "F18C7173-BC4D-567F-9B5A-45E4BAEC5614",
-        "17d77b0d-070f-5414-b79b-5a22e78644ba",
-        "28427603-2539-5712-8d8f-33e5261fdc2a"
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "D97E831E-346D-567F-8068-1098A93B361E"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -340077,8 +340078,8 @@
         "4e3e8520-c950-5e89-8ffa-c480d369e60c",
         "80df1e35-1f11-5505-823b-b81cf3768521",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "8fd2d042-3de2-5e89-ab0f-085df6533c51",
-        "5aa36fa6-e57b-5d46-9061-6dd76cfd44a6"
+        "23056721-45F1-5CA3-B1FE-0A4EF5B9E2B9",
+        "8fd2d042-3de2-5e89-ab0f-085df6533c51"
       ],
       "primaryCategory": "literature",
       "tags": [
@@ -353575,14 +353576,14 @@
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
+        "466C7A8F-9107-56AC-822B-9934F46954C6",
         "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
         "866EE87D-8E08-514D-B67F-5B9268257DF0",
         "4BDCA974-DD0D-536F-BB83-175659EC83C2",
         "5F8B2762-1CA1-57B1-83CE-99F963F6241F",
         "06C7250D-1112-5D87-A67E-097CA96C0311",
         "031089F2-1BFA-55CF-8323-B13B22ADAEC3",
-        "644FE3D5-B93C-5209-8411-83C682BD33CF",
-        "4B4E881E-7E0A-5F92-8E2D-D1255C864F09"
+        "644FE3D5-B93C-5209-8411-83C682BD33CF"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -354464,13 +354465,13 @@
       "country": "South Korea",
       "relatedTourIds": [
         "4fe03935-405b-53c8-9991-d21eba60c45c",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7",
+        "52E7BDBA-05EF-5D20-8535-DD9C5E1E28F1",
         "5C5D4FA4-AEBE-571B-B62B-B4BA27C66FB8",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
         "11378809-f986-505b-80c9-cad3c8aafb2d",
-        "80df1e35-1f11-5505-823b-b81cf3768521",
-        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
-        "AC7C3951-60AB-50B9-B8E0-2BF017E576CE",
-        "2490cc58-8b30-5331-9e8a-5650e038fd62",
-        "976420fe-e66e-59bf-99e2-0071fe45a1ff"
+        "F989FFE1-8B71-53E1-AB1C-C53E1947F74F",
+        "80df1e35-1f11-5505-823b-b81cf3768521"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -358006,9 +358007,9 @@
         "B6FFE1B1-3DC1-50D7-82CC-F029807CB922",
         "0538DFD8-C7CB-54DA-9487-8429AC9D2899",
         "FED40890-5ADF-5CD0-8751-732232799E8A",
-        "c758134d-e7a7-51e5-8e5b-fb2027b6fc0c",
-        "9FCF0920-A716-596C-8E36-0B45A0A026A0",
-        "bc042fda-60f8-560f-92d4-3d478816d9ee"
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "B5A2F665-FE68-5593-AAD7-57AC872FD8B0",
+        "c758134d-e7a7-51e5-8e5b-fb2027b6fc0c"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -358059,10 +358060,10 @@
         "C7775855-C915-534D-9B39-530AC025702A",
         "B6FFE1B1-3DC1-50D7-82CC-F029807CB922",
         "DC54CC4E-F8CD-571B-84FF-6D7DC6C7A42A",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
         "FED40890-5ADF-5CD0-8751-732232799E8A",
-        "9FCF0920-A716-596C-8E36-0B45A0A026A0",
-        "DC7E122A-A4FD-5306-AF45-8B485E8C2668",
-        "407f8416-3a6d-54c3-af84-775b448fd96f"
+        "B5A2F665-FE68-5593-AAD7-57AC872FD8B0",
+        "9FCF0920-A716-596C-8E36-0B45A0A026A0"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -358113,10 +358114,10 @@
         "0538DFD8-C7CB-54DA-9487-8429AC9D2899",
         "B6FFE1B1-3DC1-50D7-82CC-F029807CB922",
         "DC54CC4E-F8CD-571B-84FF-6D7DC6C7A42A",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
         "FED40890-5ADF-5CD0-8751-732232799E8A",
-        "6b48cbd2-3f97-5887-9060-fde4750001d0",
-        "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "cfbcb0a7-d377-5846-bca8-8073d3b36796"
+        "5B3A5411-41EE-5CDE-A482-B8CD1FEEC949",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -358379,12 +358380,12 @@
       "relatedTourIds": [
         "DC54CC4E-F8CD-571B-84FF-6D7DC6C7A42A",
         "C7775855-C915-534D-9B39-530AC025702A",
+        "23056721-45F1-5CA3-B1FE-0A4EF5B9E2B9",
         "0538DFD8-C7CB-54DA-9487-8429AC9D2899",
         "3310B7FB-17CD-56A1-B2E4-FE2E7A0E766B",
-        "cfbcb0a7-d377-5846-bca8-8073d3b36796",
-        "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "B3D63624-AD97-5962-9434-0113C816FF34",
-        "6b48cbd2-3f97-5887-9060-fde4750001d0"
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "38D67931-3B30-5B52-B93F-59A83F7BB19E",
+        "5B3A5411-41EE-5CDE-A482-B8CD1FEEC949"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -358815,9 +358816,9 @@
         "89fa0677-9165-5507-9d25-a769338ed8df",
         "cf833db1-9801-5f5a-95c9-50355c243b71",
         "0937722e-26f7-5453-88bf-bdf691fcdf43",
-        "D97E831E-346D-567F-8068-1098A93B361E",
-        "1C39542B-E87B-5215-A595-F7FF21D14545",
-        "C7775855-C915-534D-9B39-530AC025702A"
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "52E7BDBA-05EF-5D20-8535-DD9C5E1E28F1",
+        "D97E831E-346D-567F-8068-1098A93B361E"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -360132,8 +360133,8 @@
         "DC54CC4E-F8CD-571B-84FF-6D7DC6C7A42A",
         "FED40890-5ADF-5CD0-8751-732232799E8A",
         "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "cfbcb0a7-d377-5846-bca8-8073d3b36796",
-        "6b48cbd2-3f97-5887-9060-fde4750001d0"
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "cfbcb0a7-d377-5846-bca8-8073d3b36796"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -360281,14 +360282,14 @@
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
-        "3310B7FB-17CD-56A1-B2E4-FE2E7A0E766B",
-        "407f8416-3a6d-54c3-af84-775b448fd96f",
-        "C7775855-C915-534D-9B39-530AC025702A",
-        "0538DFD8-C7CB-54DA-9487-8429AC9D2899",
-        "B6FFE1B1-3DC1-50D7-82CC-F029807CB922",
-        "c758134d-e7a7-51e5-8e5b-fb2027b6fc0c",
-        "DC54CC4E-F8CD-571B-84FF-6D7DC6C7A42A",
-        "9FCF0920-A716-596C-8E36-0B45A0A026A0"
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "BFAF22DF-34CE-5D0D-891A-0A26D926D892"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -364817,7 +364818,7 @@
         "BFD11EA8-ECD0-58EB-A1E0-CCE2B9BEAE7F",
         "A3303827-10F5-5B55-AC6E-6A54A8F3C0F3",
         "3DADDCC8-0961-506C-B76C-35759D0D1CD9",
-        "051957C8-9EAC-5882-B79D-89AAE7996A29"
+        "2788BD41-03FF-5B1B-B0AB-FA00727EFF2D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -377539,6 +377540,16 @@
       "centroidLongitude": -73.96433,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "bd4d95e6-403e-4b9b-a894-efbc205668a5",
+        "01EF9E24-B23D-5B66-80D2-61335FA52C99",
+        "EA33657E-E198-5BBF-9ADC-7D7F57C87447",
+        "A0346E14-8B04-48FC-B174-483C6CB038DA",
+        "F70F0376-C237-5610-BA05-94F6478775E4",
+        "4890241F-C4EB-5B44-8282-8A13A3F4F8F4",
+        "D322F9B9-F1E5-57DB-90AE-FF84B7036A7D",
+        "2D9775A9-F265-5D5A-8995-76D87C5CC94E"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -377583,6 +377594,16 @@
       "centroidLongitude": -73.99806,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "80DAF3A7-1C66-50E1-B5E8-6B683CF4C60B",
+        "E1D5E7F1-D44C-5294-8941-3EE27F65B4B8",
+        "4890241F-C4EB-5B44-8282-8A13A3F4F8F4",
+        "3D4B6A06-78F0-5824-ADA3-9ECE57ACBECC",
+        "A3303827-10F5-5B55-AC6E-6A54A8F3C0F3",
+        "E1516B43-BB08-519E-86B2-4CC166F5F2E0",
+        "4C9D8D4C-16C3-5FAA-B3A4-5EB8FECC93D2",
+        "CFEC4A34-94D6-5ADE-B689-AF3D3518EB7F"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -377627,6 +377648,16 @@
       "centroidLongitude": -73.9961,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "333EB30B-6B5A-5229-9C6B-FE4AFB35E177",
+        "48149f3c-5cbd-4eb3-80f2-23ce84ff2fbe",
+        "5bb90e3a-a81f-492d-b761-b204fa5dc405",
+        "83090c8c-ab5d-4311-a881-519b1e36183e",
+        "cc251534-28cb-4f9b-bded-24602cef3a95",
+        "B63F5AE1-3D8D-4AA3-8D1B-9A82862D1AE6",
+        "21c1b7e3-b8fb-413b-83b7-0fa67693155c",
+        "1C45D0BE-B1E8-58D4-A38D-D85F5D126085"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -377671,6 +377702,16 @@
       "centroidLongitude": -73.98137,
       "city": "New York",
       "country": "United States",
+      "relatedTourIds": [
+        "26144511-5987-5259-AA11-3762F106408B",
+        "6BC74B6A-042E-52BB-8EAA-7CD098D6A549",
+        "4BDCA974-DD0D-536F-BB83-175659EC83C2",
+        "866EE87D-8E08-514D-B67F-5B9268257DF0",
+        "5F8B2762-1CA1-57B1-83CE-99F963F6241F",
+        "CD5A2131-314F-563B-8F1D-5E07A0FDA174",
+        "9AC8FFF4-4A82-5E0F-B000-1B778758EB54",
+        "06C7250D-1112-5D87-A67E-097CA96C0311"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -377715,6 +377756,16 @@
       "centroidLongitude": 126.96542,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "F989FFE1-8B71-53E1-AB1C-C53E1947F74F",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -377759,6 +377810,16 @@
       "centroidLongitude": 126.95493,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "8E7A4D35-8709-53D8-B1A9-1CE8A3D8D710",
+        "58304931-85B3-5CD9-A955-C114CCE8A1F3",
+        "ECD8C2A3-4665-5145-9214-6833E69D58FE",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "AE40AB59-4C91-5FF9-8C54-12C55D6D9856",
+        "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -377803,6 +377864,16 @@
       "centroidLongitude": 126.96807,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "B0DD2A6F-C65D-55DE-857A-40316A0091F1",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "52E7BDBA-05EF-5D20-8535-DD9C5E1E28F1",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -377847,6 +377918,16 @@
       "centroidLongitude": 126.97742,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "C0FB8DC8-27F8-516C-9630-191AB3AB0262",
+        "FAE18FD1-9ABE-5EC3-9D07-E78936BFEA25",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+        "BFAF22DF-34CE-5D0D-891A-0A26D926D892",
+        "38D67931-3B30-5B52-B93F-59A83F7BB19E",
+        "6BA4E7DB-6CA9-59F9-A2FD-E9412EEC2D01",
+        "8A645DCB-68DE-5133-8DD6-31B3515A3E19"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -377891,6 +377972,16 @@
       "centroidLongitude": 127.04681,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+        "38D67931-3B30-5B52-B93F-59A83F7BB19E"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Green Escape",
@@ -377935,6 +378026,16 @@
       "centroidLongitude": 127.08048,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "5CDB3A7E-3116-5015-A721-C21BD3062AE5",
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
+        "E6BC80AB-D1F9-5122-AEBC-B5726EAAE55C",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "6698108F-E886-5662-8DBB-159A3731BEE8",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Park",
@@ -377979,6 +378080,16 @@
       "centroidLongitude": 126.98567,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "076BC942-2D7E-533B-9586-C23B42C46DF6",
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "5CDB3A7E-3116-5015-A721-C21BD3062AE5",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Museum",
@@ -378023,6 +378134,16 @@
       "centroidLongitude": 127.02536,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "8A645DCB-68DE-5133-8DD6-31B3515A3E19",
+        "C0FB8DC8-27F8-516C-9630-191AB3AB0262",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "B5A2F665-FE68-5593-AAD7-57AC872FD8B0",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "38D67931-3B30-5B52-B93F-59A83F7BB19E"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Market",
@@ -378067,6 +378188,16 @@
       "centroidLongitude": 126.98032,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "E6BC80AB-D1F9-5122-AEBC-B5726EAAE55C",
+        "076BC942-2D7E-533B-9586-C23B42C46DF6",
+        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
+        "D997A4A9-7F50-542B-9523-A7A5C804BAE4",
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "4284FAA8-8202-5D61-8544-56473530B392"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Museum",
@@ -378111,6 +378242,16 @@
       "centroidLongitude": 126.98107,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7",
+        "B0DD2A6F-C65D-55DE-857A-40316A0091F1",
+        "4284FAA8-8202-5D61-8544-56473530B392"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -378155,6 +378296,16 @@
       "centroidLongitude": 127.05745,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "E6BC80AB-D1F9-5122-AEBC-B5726EAAE55C",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
+        "B0DD2A6F-C65D-55DE-857A-40316A0091F1",
+        "076BC942-2D7E-533B-9586-C23B42C46DF6"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Power",
@@ -378199,6 +378350,16 @@
       "centroidLongitude": 126.97176,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "CEF440CC-76E0-520D-B7DD-27625F8F9DE6",
+        "D997A4A9-7F50-542B-9523-A7A5C804BAE4",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B",
+        "AE40AB59-4C91-5FF9-8C54-12C55D6D9856",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Remembrance",
@@ -378244,6 +378405,16 @@
       "centroidLongitude": 126.97314,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "23056721-45F1-5CA3-B1FE-0A4EF5B9E2B9",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Commerce",
@@ -378288,6 +378459,16 @@
       "centroidLongitude": 126.98125,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "B5A2F665-FE68-5593-AAD7-57AC872FD8B0",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+        "C0FB8DC8-27F8-516C-9630-191AB3AB0262",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "DC7E122A-A4FD-5306-AF45-8B485E8C2668",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "DC54CC4E-F8CD-571B-84FF-6D7DC6C7A42A"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -378332,6 +378513,16 @@
       "centroidLongitude": 127.01032,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "3310B7FB-17CD-56A1-B2E4-FE2E7A0E766B",
+        "DC54CC4E-F8CD-571B-84FF-6D7DC6C7A42A",
+        "B5A2F665-FE68-5593-AAD7-57AC872FD8B0",
+        "FED40890-5ADF-5CD0-8751-732232799E8A",
+        "C7775855-C915-534D-9B39-530AC025702A",
+        "cfbcb0a7-d377-5846-bca8-8073d3b36796",
+        "9FCF0920-A716-596C-8E36-0B45A0A026A0"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food"
@@ -378375,6 +378566,16 @@
       "centroidLongitude": 126.89416,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "5CDB3A7E-3116-5015-A721-C21BD3062AE5",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Park",
@@ -378419,6 +378620,16 @@
       "centroidLongitude": 127.00718,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "5CDB3A7E-3116-5015-A721-C21BD3062AE5"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -378463,6 +378674,16 @@
       "centroidLongitude": 127.05729,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "58304931-85B3-5CD9-A955-C114CCE8A1F3",
+        "B0601329-CFF5-5B21-A6CF-3A0BA199A6F8",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "d7bee72e-70d6-518f-acb3-ce3dd2babee4",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "8E7A4D35-8709-53D8-B1A9-1CE8A3D8D710"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -378551,6 +378772,16 @@
       "centroidLongitude": 126.83499,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "4284FAA8-8202-5D61-8544-56473530B392",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building"
@@ -378638,6 +378869,16 @@
       "centroidLongitude": 126.84052,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+        "5CDB3A7E-3116-5015-A721-C21BD3062AE5"
+      ],
       "primaryCategory": "history",
       "tags": [
         "War",
@@ -378682,6 +378923,16 @@
       "centroidLongitude": 126.97904,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "E6BC80AB-D1F9-5122-AEBC-B5726EAAE55C",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Museum"
@@ -378725,6 +378976,16 @@
       "centroidLongitude": 126.95278,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+        "9B11D6C0-AADF-5ED8-B487-FCCE8034AC59"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -378769,6 +379030,16 @@
       "centroidLongitude": 126.89392,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "4284FAA8-8202-5D61-8544-56473530B392",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Park",
@@ -378813,6 +379084,16 @@
       "centroidLongitude": 126.88949,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "A4C45323-7A88-58A4-828E-83FED17DF01D"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Hidden Gem",
@@ -378857,6 +379138,16 @@
       "centroidLongitude": 126.91183,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B",
+        "DD44D40E-8D64-5A4F-9964-E9D09E353297",
+        "D997A4A9-7F50-542B-9523-A7A5C804BAE4",
+        "AE40AB59-4C91-5FF9-8C54-12C55D6D9856",
+        "50EA5E02-5C4A-56F3-BF88-E8A739D248E5",
+        "58304931-85B3-5CD9-A955-C114CCE8A1F3",
+        "6BA4E7DB-6CA9-59F9-A2FD-E9412EEC2D01",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Remembrance",
@@ -378901,6 +379192,16 @@
       "centroidLongitude": 126.97175,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "DD44D40E-8D64-5A4F-9964-E9D09E353297",
+        "D997A4A9-7F50-542B-9523-A7A5C804BAE4",
+        "CEF440CC-76E0-520D-B7DD-27625F8F9DE6",
+        "50EA5E02-5C4A-56F3-BF88-E8A739D248E5",
+        "AE40AB59-4C91-5FF9-8C54-12C55D6D9856",
+        "6BA4E7DB-6CA9-59F9-A2FD-E9412EEC2D01",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "58304931-85B3-5CD9-A955-C114CCE8A1F3"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -378945,6 +379246,16 @@
       "centroidLongitude": 126.95788,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "D997A4A9-7F50-542B-9523-A7A5C804BAE4",
+        "DD44D40E-8D64-5A4F-9964-E9D09E353297",
+        "AE40AB59-4C91-5FF9-8C54-12C55D6D9856",
+        "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B",
+        "CEF440CC-76E0-520D-B7DD-27625F8F9DE6",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "679D8232-A811-57F7-A8E5-C5CDBA7A9CB0",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Viewpoint",
@@ -378989,6 +379300,16 @@
       "centroidLongitude": 126.96425,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Green Escape"
@@ -379032,6 +379353,16 @@
       "centroidLongitude": 126.96601,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "E6BC80AB-D1F9-5122-AEBC-B5726EAAE55C",
+        "4e3e8520-c950-5e89-8ffa-c480d369e60c",
+        "6D9E3117-91CA-5DAB-A561-CCC0A1869041",
+        "4284FAA8-8202-5D61-8544-56473530B392",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "F6AEA2D7-915A-54C7-8E21-ED5F5A10D0A6"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Museum",
@@ -379076,6 +379407,16 @@
       "centroidLongitude": 126.98035,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Public Art",
@@ -379120,6 +379461,16 @@
       "centroidLongitude": 126.97612,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "23056721-45F1-5CA3-B1FE-0A4EF5B9E2B9",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Venue",
@@ -379164,6 +379515,16 @@
       "centroidLongitude": 127.0075,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B",
+        "50EA5E02-5C4A-56F3-BF88-E8A739D248E5",
+        "CEF440CC-76E0-520D-B7DD-27625F8F9DE6",
+        "D997A4A9-7F50-542B-9523-A7A5C804BAE4",
+        "AE40AB59-4C91-5FF9-8C54-12C55D6D9856",
+        "58304931-85B3-5CD9-A955-C114CCE8A1F3",
+        "6BA4E7DB-6CA9-59F9-A2FD-E9412EEC2D01",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Remembrance"
@@ -379207,6 +379568,16 @@
       "centroidLongitude": 126.98318,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "50EA5E02-5C4A-56F3-BF88-E8A739D248E5",
+        "D997A4A9-7F50-542B-9523-A7A5C804BAE4",
+        "CEF440CC-76E0-520D-B7DD-27625F8F9DE6",
+        "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B",
+        "DD44D40E-8D64-5A4F-9964-E9D09E353297",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "6BA4E7DB-6CA9-59F9-A2FD-E9412EEC2D01",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E"
+      ],
       "primaryCategory": "history",
       "tags": [
         "History",
@@ -379251,6 +379622,16 @@
       "centroidLongitude": 126.96704,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "50EA5E02-5C4A-56F3-BF88-E8A739D248E5",
+        "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B",
+        "CEF440CC-76E0-520D-B7DD-27625F8F9DE6",
+        "DD44D40E-8D64-5A4F-9964-E9D09E353297",
+        "AE40AB59-4C91-5FF9-8C54-12C55D6D9856",
+        "6BA4E7DB-6CA9-59F9-A2FD-E9412EEC2D01",
+        "A4C45323-7A88-58A4-828E-83FED17DF01D",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E"
+      ],
       "primaryCategory": "literature",
       "tags": [
         "Museum",
@@ -379295,6 +379676,16 @@
       "centroidLongitude": 127.12038,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "5CDB3A7E-3116-5015-A721-C21BD3062AE5",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -379339,6 +379730,16 @@
       "centroidLongitude": 127.11523,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7",
+        "27DDE40D-B724-5F93-834A-F66D12F11EEB",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Park",
@@ -379383,6 +379784,16 @@
       "centroidLongitude": 126.97409,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "804A2576-11B0-56E8-AFBB-675D13F48B08",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "5626CC92-E166-5EDE-A26B-B4A0FB31A663",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90"
+      ],
       "primaryCategory": "history",
       "tags": [
         "War",
@@ -379427,6 +379838,16 @@
       "centroidLongitude": 126.96343,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "679D8232-A811-57F7-A8E5-C5CDBA7A9CB0",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+        "58304931-85B3-5CD9-A955-C114CCE8A1F3",
+        "D997A4A9-7F50-542B-9523-A7A5C804BAE4"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Hidden Gem"
@@ -379470,6 +379891,16 @@
       "centroidLongitude": 126.99659,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "6BA4E7DB-6CA9-59F9-A2FD-E9412EEC2D01",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Venue",
@@ -379514,6 +379945,16 @@
       "centroidLongitude": 126.9861,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "C0FB8DC8-27F8-516C-9630-191AB3AB0262",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -379558,6 +379999,16 @@
       "centroidLongitude": 126.9952,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "5CDB3A7E-3116-5015-A721-C21BD3062AE5",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "4284FAA8-8202-5D61-8544-56473530B392",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -379603,6 +380054,16 @@
       "centroidLongitude": 126.99,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "ECD8C2A3-4665-5145-9214-6833E69D58FE",
+        "B0601329-CFF5-5B21-A6CF-3A0BA199A6F8",
+        "CEF440CC-76E0-520D-B7DD-27625F8F9DE6",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "D997A4A9-7F50-542B-9523-A7A5C804BAE4",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -379647,6 +380108,16 @@
       "centroidLongitude": 126.96076,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "38D67931-3B30-5B52-B93F-59A83F7BB19E"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -379691,6 +380162,16 @@
       "centroidLongitude": 126.9738,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7",
+        "1C372566-5A17-5124-9BF0-CD7F52E13E5E"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Hidden Gem",
@@ -379735,6 +380216,16 @@
       "centroidLongitude": 127.03799,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "8A645DCB-68DE-5133-8DD6-31B3515A3E19",
+        "FAE18FD1-9ABE-5EC3-9D07-E78936BFEA25",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "B5A2F665-FE68-5593-AAD7-57AC872FD8B0",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "29F2C096-25DC-5A5B-B8F3-A244C4934561",
+        "36C7E970-AC4B-5137-99C6-5B12D52CEC9C"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Market",
@@ -379779,6 +380270,16 @@
       "centroidLongitude": 127.01881,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "FAE18FD1-9ABE-5EC3-9D07-E78936BFEA25",
+        "C0FB8DC8-27F8-516C-9630-191AB3AB0262",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "38D67931-3B30-5B52-B93F-59A83F7BB19E",
+        "23056721-45F1-5CA3-B1FE-0A4EF5B9E2B9",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Market",
@@ -379823,6 +380324,16 @@
       "centroidLongitude": 126.98287,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "0E72CA7A-2494-5AC9-8902-C857CFCD0831",
+        "A1662A00-D1A7-5764-967A-798CADEBAB90",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "A68042FE-BE95-5CCF-80D2-ED571AB4BFAC",
+        "38D67931-3B30-5B52-B93F-59A83F7BB19E",
+        "B1FB0347-7238-5740-93E2-E1F9BFB91A9A",
+        "ECDD31A9-44B6-518A-BE27-6DD3DA6343E7",
+        "4284FAA8-8202-5D61-8544-56473530B392"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Commerce",
@@ -379867,6 +380378,16 @@
       "centroidLongitude": 127.03086,
       "city": "Seoul",
       "country": "South Korea",
+      "relatedTourIds": [
+        "B0601329-CFF5-5B21-A6CF-3A0BA199A6F8",
+        "58304931-85B3-5CD9-A955-C114CCE8A1F3",
+        "ECD8C2A3-4665-5145-9214-6833E69D58FE",
+        "E46EBFD4-ECF8-5416-9595-9DCCCA599B1B",
+        "6BA4E7DB-6CA9-59F9-A2FD-E9412EEC2D01",
+        "8C399069-1764-51C4-A14C-3A6FC77BDB8E",
+        "63AD77C6-5C0E-5262-8418-8576CF8E550F",
+        "E6BF2C85-DB00-585E-BE3C-22DC63612C83"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
