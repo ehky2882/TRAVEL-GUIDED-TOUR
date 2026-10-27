@@ -17814,7 +17814,7 @@
         "EB123E68-A754-458A-9D1C-F9920DC1D18B",
         "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1",
         "7A2C9E14-6B85-4F02-A1D3-8E4760B9C2F1",
-        "2DDA0046-686D-440B-8EEF-1E40E399CC34"
+        "aa220274-aadd-51cd-88c7-60654c1c13f1"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -56104,10 +56104,10 @@
         "03630b8a-2fcf-54b0-ae79-9b127072b9e0",
         "69f8d7d2-4246-5d8f-81f9-87e6b685473a",
         "699295da-c427-522e-9c4a-17c5057f2d3a",
+        "aa220274-aadd-51cd-88c7-60654c1c13f1",
         "2a7bfb4d-1d47-5f07-aa20-d0d6ede705d2",
         "0d0c581a-5e72-5aa4-a1e5-b8a70bf23f0d",
-        "a48cc6fe-7c4b-5a82-a91c-474c9964a648",
-        "dc2067a1-52d6-5ed2-a3e6-23ca35f8953c"
+        "a48cc6fe-7c4b-5a82-a91c-474c9964a648"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -84253,8 +84253,8 @@
         "3ad6f369-1a73-595e-8a78-26e67a7b139b",
         "136E6351-B1C3-4AA4-9153-460B6C1AE76B",
         "1b7d0be6-3d92-57a3-a364-bb72fe106875",
-        "1435E2BA-31B2-54A8-BAF1-EDF4A6420E68",
-        "16B250C0-EC16-4961-8B2A-3545CE21A230"
+        "e6c19c3e-c40d-5b9d-a494-859e3e157759",
+        "1435E2BA-31B2-54A8-BAF1-EDF4A6420E68"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -86110,8 +86110,8 @@
         "4bfcbed3-0d6c-5284-b693-6524fea060de",
         "27c19d0d-1922-5ab4-8882-719201aa04ed",
         "98961661-f2c5-5118-957f-7b2ae1f87a97",
-        "0814a997-e316-59d8-94ea-11074b646413",
-        "4f5eb672-dc6e-5d4d-a807-9f79771ba281"
+        "b6c95313-0eef-5e15-933f-acd5ef08ebe1",
+        "0814a997-e316-59d8-94ea-11074b646413"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -87555,13 +87555,13 @@
       "country": "South Africa",
       "relatedTourIds": [
         "17bcdc55-93ab-51b5-8279-43e265b08507",
+        "e6c19c3e-c40d-5b9d-a494-859e3e157759",
         "af71230e-eb66-5732-831b-f799b735f869",
+        "c71e0a14-95cf-5ed9-b843-e8cfdc8984c9",
         "136E6351-B1C3-4AA4-9153-460B6C1AE76B",
         "baeaa4fa-c80e-58b0-b0e9-c2df127af3df",
         "c2d24ddb-a962-53a1-a384-51764dc01f93",
-        "3ad6f369-1a73-595e-8a78-26e67a7b139b",
-        "7ad5059f-976e-4ecf-a17a-be8d5e907644",
-        "11d8ee10-2173-5c9c-8176-a089295becb3"
+        "3ad6f369-1a73-595e-8a78-26e67a7b139b"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -95704,9 +95704,9 @@
         "836b17d2-f688-593d-beee-fe3b12e2ae42",
         "0d1fde5b-178e-5409-a303-c9843fa36164",
         "b97319cb-e1cf-5d09-b58d-df94d19a8713",
-        "af027d67-cf8c-5667-a977-2b6a3554227d",
-        "05238c77-9ef3-5138-8a16-774cb27d0267",
-        "1bba7d45-498d-4885-ba93-c77a491727d3"
+        "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "af027d67-cf8c-5667-a977-2b6a3554227d"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -98623,10 +98623,10 @@
         "6c4581a9-2d5e-5089-a5af-7bcb86820351",
         "a25df491-7cb5-5aea-bf3e-21efae47956a",
         "B3CC1B62-7371-5BA2-AE69-E3C4F9BD284A",
+        "b6c95313-0eef-5e15-933f-acd5ef08ebe1",
         "5c3fd907-141d-5d71-97bb-f3c4a542ebc7",
         "bd6cb95b-0f40-5929-94b4-e8d88b8b1b4b",
-        "abfba41f-5a76-5e21-af32-53d5462109c9",
-        "121c5e14-92d3-524f-a947-cc7751d93a00"
+        "abfba41f-5a76-5e21-af32-53d5462109c9"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -104806,9 +104806,9 @@
         "2864f0e2-951e-54bb-afe1-bcc732f69d95",
         "102dd619-5937-5ef5-9de7-cbb90aaf1791",
         "7b1c6ffe-5aa3-5bea-af52-280aedeae9a1",
+        "1be1e2ce-089e-555e-895e-17b32cd46c35",
         "9583fac3-b270-5ba1-86cb-95ac19bb065c",
-        "86558F0B-4448-505A-8840-BD5127CA6199",
-        "07956ee2-9d07-5e0e-b29b-0e796389e7ed"
+        "86558F0B-4448-505A-8840-BD5127CA6199"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -112390,12 +112390,12 @@
       "relatedTourIds": [
         "7eb81622-24bb-5633-b4ee-a65cbb67828e",
         "615e0887-7b78-5d09-8d2c-80e87eae6e17",
+        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28",
         "cc1c1287-1399-52f8-a2a0-8d903d81b231",
         "fe2cbf01-fba7-57c4-8788-5ca761c33e81",
         "c83fc832-9dbd-5ef0-b4e1-7a35de0b1539",
         "ac20b4cb-8ed3-500c-bdfa-7f96b51ff4dd",
-        "99a765a9-b698-5534-8807-72fdaec4c06d",
-        "efe39735-c6a8-5bd3-bedd-594d78985b27"
+        "99a765a9-b698-5534-8807-72fdaec4c06d"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -122192,12 +122192,12 @@
       "relatedTourIds": [
         "8dfda96b-fc7f-5622-a867-aeef76fb9831",
         "c489df6d-1a96-533a-a7ec-9d652ed6c090",
+        "b6c95313-0eef-5e15-933f-acd5ef08ebe1",
         "64DE0FCC-52DB-59F1-808E-D401482EE5FA",
         "7a871c32-8514-51de-840f-3ab30d79b32d",
         "1b99637c-aec0-5714-b104-04849a1d97ee",
         "abfba41f-5a76-5e21-af32-53d5462109c9",
-        "AFE37C10-3F2B-4ACF-A781-EBCC3A9A4563",
-        "c4041071-0993-50d9-a14f-2f623fb387e3"
+        "AFE37C10-3F2B-4ACF-A781-EBCC3A9A4563"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -134856,9 +134856,9 @@
         "a4f793aa-8d15-5870-8aa8-9af1d4d867d3",
         "902d265e-753c-5d9a-bd63-a3e2c9ade741",
         "ff88b056-799b-5e5c-a7f8-f6f88d9d241e",
+        "b6c95313-0eef-5e15-933f-acd5ef08ebe1",
         "4f5eb672-dc6e-5d4d-a807-9f79771ba281",
-        "93d78b33-8933-5a44-8d77-0d6c233e96ad",
-        "cf499e05-7751-59fe-b83b-eece14040d16"
+        "93d78b33-8933-5a44-8d77-0d6c233e96ad"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -136130,7 +136130,16 @@
       "centroidLongitude": 4.518689550926258,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "c71e0a14-95cf-5ed9-b843-e8cfdc8984c9",
+        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
+        "45649895-32b8-51f6-a32e-ac3f14672c03",
+        "4183767a-c190-5856-9d5d-08bb50ec2c39",
+        "376ff378-1167-592e-b7c1-ae0fb460e38d",
+        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28",
+        "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
+        "c440159d-6649-5a76-bd06-9d51aaa7566d"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -136179,7 +136188,16 @@
       "centroidLongitude": 4.471001291401594,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
+        "ce087afc-f35d-5015-a403-41cfdc7f0684",
+        "27B39B0A-F6D6-584E-9F02-71AA6C694646",
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "45649895-32b8-51f6-a32e-ac3f14672c03",
+        "0f2d6f61-c96b-514a-bed6-57a9984ad9c6",
+        "ba3aee78-628c-5be7-b235-a877578ad6c2",
+        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Museum",
@@ -136228,7 +136246,16 @@
       "centroidLongitude": 4.431399222090184,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
+        "27B39B0A-F6D6-584E-9F02-71AA6C694646",
+        "ce087afc-f35d-5015-a403-41cfdc7f0684",
+        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28",
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
+        "45649895-32b8-51f6-a32e-ac3f14672c03"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Venue",
@@ -136276,7 +136303,16 @@
       "centroidLongitude": 4.4567940932541115,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ab52a8da-aa7b-5b1c-8de1-f769a7c18a23",
+        "228f7619-8dda-5f08-8697-6df45bc46e38",
+        "bcd23ad7-07d0-5b7b-8836-e2b7638ce8fd",
+        "6ec0a715-907b-569e-ba8b-739f86555504",
+        "420d32a9-9b69-51d1-a149-fd33ee07548e",
+        "a8eadaea-7af3-5309-b694-01cfa348b486",
+        "9583fac3-b270-5ba1-86cb-95ac19bb065c",
+        "aa220274-aadd-51cd-88c7-60654c1c13f1"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -136322,7 +136358,16 @@
       "centroidLongitude": 4.490259823942701,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "cf3d2457-3f66-5c09-a4f9-040670a436df",
+        "8a1265d9-2332-5373-a223-a8bc48744dee",
+        "228f7619-8dda-5f08-8697-6df45bc46e38",
+        "b14774d2-9640-507c-b304-cfa0a6fb9135",
+        "420d32a9-9b69-51d1-a149-fd33ee07548e",
+        "4183767a-c190-5856-9d5d-08bb50ec2c39",
+        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28",
+        "376ff378-1167-592e-b7c1-ae0fb460e38d"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -136369,7 +136414,16 @@
       "centroidLongitude": 4.474767313911857,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
+        "1be1e2ce-089e-555e-895e-17b32cd46c35",
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
+        "bcd23ad7-07d0-5b7b-8836-e2b7638ce8fd",
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28",
+        "420d32a9-9b69-51d1-a149-fd33ee07548e",
+        "b14774d2-9640-507c-b304-cfa0a6fb9135"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -136413,7 +136467,16 @@
       "centroidLongitude": 4.479409449073742,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "45649895-32b8-51f6-a32e-ac3f14672c03",
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
+        "376ff378-1167-592e-b7c1-ae0fb460e38d",
+        "ba3aee78-628c-5be7-b235-a877578ad6c2",
+        "c440159d-6649-5a76-bd06-9d51aaa7566d",
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
+        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28"
+      ],
       "primaryCategory": "literature",
       "tags": [
         "Notable Building",
@@ -136462,7 +136525,16 @@
       "centroidLongitude": 4.475531122090184,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28",
+        "228f7619-8dda-5f08-8697-6df45bc46e38",
+        "c440159d-6649-5a76-bd06-9d51aaa7566d",
+        "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
+        "420d32a9-9b69-51d1-a149-fd33ee07548e",
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Notable Building",
@@ -136509,7 +136581,16 @@
       "centroidLongitude": 4.488772169487383,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "1be1e2ce-089e-555e-895e-17b32cd46c35",
+        "6ec0a715-907b-569e-ba8b-739f86555504",
+        "228f7619-8dda-5f08-8697-6df45bc46e38",
+        "df321c7d-f281-5e9a-88f9-b059cb398978",
+        "B37CC844-4F3E-5598-91D0-1684B8E4DE22",
+        "52187B20-0857-4F93-AF49-CA085BDF288D",
+        "aa220274-aadd-51cd-88c7-60654c1c13f1",
+        "9583fac3-b270-5ba1-86cb-95ac19bb065c"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -136556,7 +136637,16 @@
       "centroidLongitude": 4.478536022090184,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
+        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
+        "c440159d-6649-5a76-bd06-9d51aaa7566d",
+        "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
+        "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
+        "2f97649f-4b0e-5cc5-9e6d-68c639a7b95d",
+        "228f7619-8dda-5f08-8697-6df45bc46e38"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -136604,7 +136694,16 @@
       "centroidLongitude": 4.518491027403635,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "df321c7d-f281-5e9a-88f9-b059cb398978",
+        "8a1265d9-2332-5373-a223-a8bc48744dee",
+        "4183767a-c190-5856-9d5d-08bb50ec2c39",
+        "420d32a9-9b69-51d1-a149-fd33ee07548e",
+        "228f7619-8dda-5f08-8697-6df45bc46e38",
+        "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
+        "b6c95313-0eef-5e15-933f-acd5ef08ebe1",
+        "bcd23ad7-07d0-5b7b-8836-e2b7638ce8fd"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -136649,7 +136748,16 @@
       "centroidLongitude": 4.468416977909816,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "45649895-32b8-51f6-a32e-ac3f14672c03",
+        "228f7619-8dda-5f08-8697-6df45bc46e38",
+        "c71e0a14-95cf-5ed9-b843-e8cfdc8984c9",
+        "2f97649f-4b0e-5cc5-9e6d-68c639a7b95d",
+        "0f2d6f61-c96b-514a-bed6-57a9984ad9c6",
+        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -136694,7 +136802,16 @@
       "centroidLongitude": 4.53517334274793,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "cf3d2457-3f66-5c09-a4f9-040670a436df",
+        "df321c7d-f281-5e9a-88f9-b059cb398978",
+        "4183767a-c190-5856-9d5d-08bb50ec2c39",
+        "b6c95313-0eef-5e15-933f-acd5ef08ebe1",
+        "376ff378-1167-592e-b7c1-ae0fb460e38d",
+        "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
+        "b14774d2-9640-507c-b304-cfa0a6fb9135",
+        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -136746,7 +136863,16 @@
       "centroidLongitude": 4.4843147,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "AFB5C454-4110-53FA-B529-AAD59AB3FE7A",
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "ce087afc-f35d-5015-a403-41cfdc7f0684",
+        "45649895-32b8-51f6-a32e-ac3f14672c03",
+        "ba3aee78-628c-5be7-b235-a877578ad6c2",
+        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
+        "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
+        "cdefd343-5849-51d5-bd99-5a9399656006"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Museum",
@@ -136796,7 +136922,16 @@
       "centroidLongitude": 4.499563991401593,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "376ff378-1167-592e-b7c1-ae0fb460e38d",
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
+        "2f97649f-4b0e-5cc5-9e6d-68c639a7b95d",
+        "ba3aee78-628c-5be7-b235-a877578ad6c2",
+        "228f7619-8dda-5f08-8697-6df45bc46e38",
+        "45649895-32b8-51f6-a32e-ac3f14672c03",
+        "f65d8e70-63a9-5410-9fce-9f7e38737c9a"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -136844,7 +136979,16 @@
       "centroidLongitude": 4.449296550926259,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "228f7619-8dda-5f08-8697-6df45bc46e38",
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "1be1e2ce-089e-555e-895e-17b32cd46c35",
+        "cf3d2457-3f66-5c09-a4f9-040670a436df",
+        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28",
+        "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
+        "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
+        "b14774d2-9640-507c-b304-cfa0a6fb9135"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -136890,7 +137034,16 @@
       "centroidLongitude": 4.482062513911857,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "45649895-32b8-51f6-a32e-ac3f14672c03",
+        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28",
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
+        "ba3aee78-628c-5be7-b235-a877578ad6c2",
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
+        "420d32a9-9b69-51d1-a149-fd33ee07548e",
+        "CFE6A911-141D-5403-A8CB-42D3B4B9DE17"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -136938,7 +137091,16 @@
       "centroidLongitude": 4.472625076057297,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e6c19c3e-c40d-5b9d-a494-859e3e157759",
+        "376ff378-1167-592e-b7c1-ae0fb460e38d",
+        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
+        "4183767a-c190-5856-9d5d-08bb50ec2c39",
+        "420d32a9-9b69-51d1-a149-fd33ee07548e",
+        "b14774d2-9640-507c-b304-cfa0a6fb9135",
+        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28",
+        "3d324428-9711-5480-9b5c-180374f3090c"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -136985,7 +137147,16 @@
       "centroidLongitude": 4.515543179902359,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "8a1265d9-2332-5373-a223-a8bc48744dee",
+        "cf3d2457-3f66-5c09-a4f9-040670a436df",
+        "df321c7d-f281-5e9a-88f9-b059cb398978",
+        "376ff378-1167-592e-b7c1-ae0fb460e38d",
+        "e6c19c3e-c40d-5b9d-a494-859e3e157759",
+        "b6c95313-0eef-5e15-933f-acd5ef08ebe1",
+        "c440159d-6649-5a76-bd06-9d51aaa7566d",
+        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -137036,7 +137207,16 @@
       "centroidLongitude": 4.486988485075782,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "420d32a9-9b69-51d1-a149-fd33ee07548e",
+        "c440159d-6649-5a76-bd06-9d51aaa7566d",
+        "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "228f7619-8dda-5f08-8697-6df45bc46e38",
+        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
+        "0f2d6f61-c96b-514a-bed6-57a9984ad9c6",
+        "ea9f0758-42ef-578f-bcbc-eb3cddabcfce"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Market",
@@ -137088,7 +137268,16 @@
       "centroidLongitude": 4.471576577909817,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ce087afc-f35d-5015-a403-41cfdc7f0684",
+        "2f97649f-4b0e-5cc5-9e6d-68c639a7b95d",
+        "c440159d-6649-5a76-bd06-9d51aaa7566d",
+        "B2ED674C-6EC4-5775-B90E-232C2CBD30F1",
+        "27B39B0A-F6D6-584E-9F02-71AA6C694646",
+        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce"
+      ],
       "primaryCategory": "literature",
       "tags": [
         "Venue",
@@ -137139,7 +137328,16 @@
       "centroidLongitude": 4.495178079762332,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "45649895-32b8-51f6-a32e-ac3f14672c03",
+        "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
+        "27B39B0A-F6D6-584E-9F02-71AA6C694646",
+        "0f2d6f61-c96b-514a-bed6-57a9984ad9c6",
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
+        "B2ED674C-6EC4-5775-B90E-232C2CBD30F1"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Museum",
@@ -137188,7 +137386,16 @@
       "centroidLongitude": 4.476754129256152,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28",
+        "228f7619-8dda-5f08-8697-6df45bc46e38",
+        "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "c440159d-6649-5a76-bd06-9d51aaa7566d",
+        "df321c7d-f281-5e9a-88f9-b059cb398978",
+        "cf3d2457-3f66-5c09-a4f9-040670a436df",
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -137235,7 +137442,16 @@
       "centroidLongitude": 4.46064334274793,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ab52a8da-aa7b-5b1c-8de1-f769a7c18a23",
+        "228f7619-8dda-5f08-8697-6df45bc46e38",
+        "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
+        "b14774d2-9640-507c-b304-cfa0a6fb9135",
+        "1be1e2ce-089e-555e-895e-17b32cd46c35",
+        "bcd23ad7-07d0-5b7b-8836-e2b7638ce8fd",
+        "420d32a9-9b69-51d1-a149-fd33ee07548e",
+        "538cad52-e2bd-5792-9427-992df3b72046"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -137281,7 +137497,16 @@
       "centroidLongitude": 4.488316835581963,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
+        "ce087afc-f35d-5015-a403-41cfdc7f0684",
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
+        "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
+        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
+        "ba3aee78-628c-5be7-b235-a877578ad6c2",
+        "45649895-32b8-51f6-a32e-ac3f14672c03",
+        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -137330,7 +137555,16 @@
       "centroidLongitude": 4.4631211,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
+        "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
+        "45649895-32b8-51f6-a32e-ac3f14672c03",
+        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
+        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28",
+        "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -137377,7 +137611,16 @@
       "centroidLongitude": 4.474155469731487,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "228f7619-8dda-5f08-8697-6df45bc46e38",
+        "df321c7d-f281-5e9a-88f9-b059cb398978",
+        "376ff378-1167-592e-b7c1-ae0fb460e38d",
+        "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
+        "6ec0a715-907b-569e-ba8b-739f86555504",
+        "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
+        "420d32a9-9b69-51d1-a149-fd33ee07548e",
+        "538cad52-e2bd-5792-9427-992df3b72046"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -137421,7 +137664,16 @@
       "centroidLongitude": 4.4644625509262585,
       "city": "Rotterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "376ff378-1167-592e-b7c1-ae0fb460e38d",
+        "cf3d2457-3f66-5c09-a4f9-040670a436df",
+        "8a1265d9-2332-5373-a223-a8bc48744dee",
+        "4183767a-c190-5856-9d5d-08bb50ec2c39",
+        "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
+        "df321c7d-f281-5e9a-88f9-b059cb398978",
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
+        "ba3aee78-628c-5be7-b235-a877578ad6c2"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -137469,7 +137721,16 @@
       "centroidLongitude": 4.897234635581963,
       "city": "Amsterdam",
       "country": "Netherlands",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ea06c347-180e-59a5-a6db-2604229a56de",
+        "A871E406-28BE-58FD-982B-907D1A347F0D",
+        "75921CF5-9489-58EF-801A-825BCEA02423",
+        "82B9FCC0-5263-5AB0-9494-9347B2A4DBC4",
+        "5A74F582-16EB-51BE-8813-4C283EF45FC2",
+        "B37CC844-4F3E-5598-91D0-1684B8E4DE22",
+        "C33E96B3-5AB4-5D1A-B512-663B1124D349",
+        "0913EF55-6EB1-501C-967E-F914B01EF82B"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -150223,11 +150484,13 @@
       "country": "Netherlands",
       "relatedTourIds": [
         "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
+        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
+        "ce087afc-f35d-5015-a403-41cfdc7f0684",
+        "45649895-32b8-51f6-a32e-ac3f14672c03",
         "B2ED674C-6EC4-5775-B90E-232C2CBD30F1",
-        "6BCA3704-C604-5639-A323-F4EBEFF1D76C",
-        "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
-        "7354C765-DAF5-5B08-91DE-2749969CC0BA",
-        "AFB5C454-4110-53FA-B529-AAD59AB3FE7A"
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "0f2d6f61-c96b-514a-bed6-57a9984ad9c6",
+        "ea9f0758-42ef-578f-bcbc-eb3cddabcfce"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -199049,14 +199312,14 @@
       "city": "Rotterdam",
       "country": "Netherlands",
       "relatedTourIds": [
+        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
         "27B39B0A-F6D6-584E-9F02-71AA6C694646",
+        "ce087afc-f35d-5015-a403-41cfdc7f0684",
         "B2ED674C-6EC4-5775-B90E-232C2CBD30F1",
+        "0f2d6f61-c96b-514a-bed6-57a9984ad9c6",
+        "538cad52-e2bd-5792-9427-992df3b72046",
         "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
-        "7354C765-DAF5-5B08-91DE-2749969CC0BA",
-        "6BCA3704-C604-5639-A323-F4EBEFF1D76C",
-        "AFB5C454-4110-53FA-B529-AAD59AB3FE7A",
-        "9E536417-737B-559B-8F5C-583D88EA24E4",
-        "11C562A0-2CA6-5344-BF9E-7ADCB721FF2B"
+        "ba3aee78-628c-5be7-b235-a877578ad6c2"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -199564,10 +199827,11 @@
         "7354C765-DAF5-5B08-91DE-2749969CC0BA",
         "11C562A0-2CA6-5344-BF9E-7ADCB721FF2B",
         "6BCA3704-C604-5639-A323-F4EBEFF1D76C",
+        "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
+        "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
+        "538cad52-e2bd-5792-9427-992df3b72046",
         "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
-        "27B39B0A-F6D6-584E-9F02-71AA6C694646",
-        "9E536417-737B-559B-8F5C-583D88EA24E4",
-        "B2ED674C-6EC4-5775-B90E-232C2CBD30F1"
+        "ba3aee78-628c-5be7-b235-a877578ad6c2"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -200823,7 +201087,11 @@
       "city": "Rotterdam",
       "country": "Netherlands",
       "relatedTourIds": [
+        "5f1bef3c-0cec-54af-9506-66f3a393ad2a",
+        "ce087afc-f35d-5015-a403-41cfdc7f0684",
+        "45649895-32b8-51f6-a32e-ac3f14672c03",
         "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
+        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
         "27B39B0A-F6D6-584E-9F02-71AA6C694646",
         "B2ED674C-6EC4-5775-B90E-232C2CBD30F1",
         "9E536417-737B-559B-8F5C-583D88EA24E4"
@@ -230884,10 +231152,13 @@
       "country": "Netherlands",
       "relatedTourIds": [
         "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
+        "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
         "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
         "7354C765-DAF5-5B08-91DE-2749969CC0BA",
         "27B39B0A-F6D6-584E-9F02-71AA6C694646",
-        "11C562A0-2CA6-5344-BF9E-7ADCB721FF2B"
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -239886,8 +240157,12 @@
       "relatedTourIds": [
         "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
         "7354C765-DAF5-5B08-91DE-2749969CC0BA",
-        "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
-        "6BCA3704-C604-5639-A323-F4EBEFF1D76C"
+        "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
+        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28",
+        "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "45649895-32b8-51f6-a32e-ac3f14672c03",
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -247494,7 +247769,8 @@
         "6BCA3704-C604-5639-A323-F4EBEFF1D76C",
         "9E536417-737B-559B-8F5C-583D88EA24E4",
         "27B39B0A-F6D6-584E-9F02-71AA6C694646",
-        "B2ED674C-6EC4-5775-B90E-232C2CBD30F1"
+        "538cad52-e2bd-5792-9427-992df3b72046",
+        "f65d8e70-63a9-5410-9fce-9f7e38737c9a"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -296471,9 +296747,13 @@
       "country": "Netherlands",
       "relatedTourIds": [
         "7354C765-DAF5-5B08-91DE-2749969CC0BA",
+        "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
+        "45649895-32b8-51f6-a32e-ac3f14672c03",
         "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
+        "376ff378-1167-592e-b7c1-ae0fb460e38d",
         "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
-        "AFB5C454-4110-53FA-B529-AAD59AB3FE7A"
+        "538cad52-e2bd-5792-9427-992df3b72046"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -317922,6 +318202,7 @@
         "A871E406-28BE-58FD-982B-907D1A347F0D",
         "0913EF55-6EB1-501C-967E-F914B01EF82B",
         "C33E96B3-5AB4-5D1A-B512-663B1124D349",
+        "aa220274-aadd-51cd-88c7-60654c1c13f1",
         "75921CF5-9489-58EF-801A-825BCEA02423",
         "B755F829-8291-53E1-B072-D558ED7D206C"
       ],
@@ -317973,11 +318254,11 @@
         "0913EF55-6EB1-501C-967E-F914B01EF82B",
         "B37CC844-4F3E-5598-91D0-1684B8E4DE22",
         "82B9FCC0-5263-5AB0-9494-9347B2A4DBC4",
+        "aa220274-aadd-51cd-88c7-60654c1c13f1",
         "C33E96B3-5AB4-5D1A-B512-663B1124D349",
         "5A74F582-16EB-51BE-8813-4C283EF45FC2",
         "B755F829-8291-53E1-B072-D558ED7D206C",
-        "6A1D48F0-617A-5928-AC0B-9EBB95306E06",
-        "75921CF5-9489-58EF-801A-825BCEA02423"
+        "6A1D48F0-617A-5928-AC0B-9EBB95306E06"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -318080,6 +318361,7 @@
       "relatedTourIds": [
         "82B9FCC0-5263-5AB0-9494-9347B2A4DBC4",
         "C33E96B3-5AB4-5D1A-B512-663B1124D349",
+        "aa220274-aadd-51cd-88c7-60654c1c13f1",
         "A871E406-28BE-58FD-982B-907D1A347F0D",
         "5A74F582-16EB-51BE-8813-4C283EF45FC2",
         "0913EF55-6EB1-501C-967E-F914B01EF82B",
@@ -335119,11 +335401,14 @@
       "city": "Rotterdam",
       "country": "Netherlands",
       "relatedTourIds": [
+        "45649895-32b8-51f6-a32e-ac3f14672c03",
         "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
         "27B39B0A-F6D6-584E-9F02-71AA6C694646",
-        "7354C765-DAF5-5B08-91DE-2749969CC0BA",
-        "AFB5C454-4110-53FA-B529-AAD59AB3FE7A",
-        "CFE6A911-141D-5403-A8CB-42D3B4B9DE17"
+        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
+        "ce087afc-f35d-5015-a403-41cfdc7f0684",
+        "c440159d-6649-5a76-bd06-9d51aaa7566d",
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
+        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28"
       ],
       "primaryCategory": "architecture",
       "tags": [
