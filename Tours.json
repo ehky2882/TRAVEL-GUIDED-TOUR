@@ -5651,6 +5651,16 @@
       "websiteURL": null
     },
     {
+      "id": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "displayName": "Atlas Studio NAP",
+      "platform": "dozent",
+      "handle": "atlas.nap",
+      "avatarURL": null,
+      "avatarEmoji": "🇮🇹",
+      "bio": "Atlas Studio's Naples bureau — a city of painted Greek tombs and Bourbon opera, star forts and station trattorias, where the Sanità's palazzi hide guesthouses and galleries, Rua Catalana still works in tin, and the pizza is sometimes paid for by a stranger.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -17812,9 +17822,9 @@
         "A017E8AC-74CB-56AD-A7F5-3FE7E4EA0DD2",
         "11B4526D-530F-4792-B2A0-CBBB23065AA0",
         "EB123E68-A754-458A-9D1C-F9920DC1D18B",
+        "01deaa74-c2af-5cab-b0bb-cbf71651d47b",
         "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1",
-        "7A2C9E14-6B85-4F02-A1D3-8E4760B9C2F1",
-        "aa220274-aadd-51cd-88c7-60654c1c13f1"
+        "7A2C9E14-6B85-4F02-A1D3-8E4760B9C2F1"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -80512,9 +80522,9 @@
         "364fbc84-62fe-590d-acbe-71fa035d5b87",
         "018ee302-8c42-54db-b72e-65509293b0db",
         "f804d469-7b35-5b77-8f0b-d2af04a8f68c",
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c",
         "aaa7a518-6a57-516d-83fc-7ad3f75324d9",
-        "41aacac4-17ed-412b-8a60-7c30ffdcb4f1",
-        "F610F8A2-2BB1-5A2C-B046-6915F55D0F48"
+        "41aacac4-17ed-412b-8a60-7c30ffdcb4f1"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -86729,10 +86739,10 @@
         "b41a133c-1564-503f-81e9-4e7fdd31e4d8",
         "e29a7aaf-39b8-5ca7-8729-4ffa562addeb",
         "f0ca6266-2db1-5c67-834e-886fe5c4e94c",
+        "27bd7b12-9203-53ec-8b49-0c0d70e0f790",
         "7CCF6F4C-D5D1-5A45-80CE-089337FB009B",
         "3A65A8B3-215D-5F84-A3F2-23FAAE6E0300",
-        "a17dbd1d-3491-4062-a62e-9b0059c678f7",
-        "D64452A1-08A9-59FF-941F-216C4E207B71"
+        "a17dbd1d-3491-4062-a62e-9b0059c678f7"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -89599,7 +89609,7 @@
         "a2e83e1e-21f6-5f2f-8416-f58e23f61fd7",
         "e22d016c-8f54-5600-a12b-8bf341649795",
         "BF3985C3-F0FA-5F1A-BEBA-44C418667C5B",
-        "8941e2d3-583e-553c-8625-817f7e2ac985"
+        "5fe721f4-2bf9-5d47-afcf-6eda222ac5a3"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -94202,7 +94212,7 @@
         "40a5cbe9-fb42-5101-9655-127f8f9d803c",
         "9ce70403-81e1-566e-8288-349f2be37e9c",
         "fb9c16a1-8a99-585a-abee-c5869052f50f",
-        "d6b330df-82a2-4048-9aaf-bbe28c5f53b0"
+        "b9994181-63a7-5869-b713-2a619339f314"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -132874,6 +132884,7 @@
         "c933fed3-eb24-5319-87df-7ce498c62100",
         "0378b836-089d-5f9e-8232-8e2e9afe3e09",
         "1BE97272-8B4C-5006-AB11-96DC56A46C92",
+        "d17e0a2d-1a53-55bd-bdd3-79b1e036de96",
         "4A883783-4A4B-5561-8564-49D5652089F2",
         "68686CC5-B16B-51FF-A983-51BAD53421BE"
       ],
@@ -136076,11 +136087,11 @@
         "e01770af-347d-5f43-a63e-1fa97ce3551d",
         "70a01d74-8edf-5f78-9d8b-a05850c0299a",
         "89443016-9aea-5422-a33a-be72636e89f1",
+        "47bc0a50-cd97-5013-9d84-352523ee74e6",
         "b4f87483-ebae-567e-896f-b7b4042ca34a",
+        "edc9261f-b648-5b4c-b1b6-609a5f976a5e",
         "6CD8B760-BD43-567C-97AE-E626351787F4",
-        "12FAAD05-1917-5E7A-B53E-98FCA2D83C70",
-        "AFE37C10-3F2B-4ACF-A781-EBCC3A9A4563",
-        "8587bca7-d0e8-55fe-a2c4-69fc3cf96cc7"
+        "12FAAD05-1917-5E7A-B53E-98FCA2D83C70"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -137736,6 +137747,1091 @@
         "Venue",
         "Food",
         "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4af8b8d2-8f67-54aa-b729-0b42ffa169f1",
+      "createdAt": "2026-10-27",
+      "title": "Atelier Inès Arts & Suites",
+      "shortDescription": "The money that built this house was earned in Brooklyn, by a carpenter who emigrated to America and came home to Naples with enough to buy a…",
+      "longDescription": "The money that built this house was earned in Brooklyn, by a carpenter who emigrated to America and came home to Naples with enough to buy a plot of land.\n\nThose gates, which are the place to begin, are made of American pitch pine, a wood so rich in resin that it barely rots, and they belong to the house's early life after 1947, when the carpenter's family ran a timber business from the ground floor. Until about 1930, this patch of the Sanità was an open air cinema and theatre, which feels rather fitting for a house whose owners keep no televisions in the rooms on the grounds that Naples is show enough.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-atelier-ines-arts-suites_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-atelier-ines-arts-suites_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-atelier-ines-arts-suites_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-atelier-ines-arts-suites_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-atelier-ines-arts-suites_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "fcbb948e-f4cf-58f9-bc5d-ce57501c3911",
+          "order": 0,
+          "title": "Atelier Inès Arts & Suites",
+          "caption": "On Via dei Cristallini in the Sanità, at the tall pitch-pine gates of the house.",
+          "latitude": 40.85788498233061,
+          "longitude": 14.254052087032377,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-atelier-ines-arts-suites.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-atelier-ines-arts-suites_hero.webp",
+          "transcriptText": "The money that built this house was earned in Brooklyn, by a carpenter who emigrated to America and came home to Naples with enough to buy a plot of land.\n\nVia dei Cristallini climbs gently here towards the hill of Capodimonte, and the building in front of you is Atelier Inès Arts and Suites, part guesthouse, part gallery and part working jewellery studio. Look for the tall wooden gates at street level, because they're the surest sign that you've found the right door.\n\nThose gates, which are the place to begin, are made of American pitch pine, a wood so rich in resin that it barely rots, and they belong to the house's early life after 1947, when the carpenter's family ran a timber business from the ground floor. Until about 1930, this patch of the Sanità was an open air cinema and theatre, which feels rather fitting for a house whose owners keep no televisions in the rooms on the grounds that Naples is show enough.\n\nThe family today are Vincenzo Oste and Inès Sellami, both jewellery designers, who opened the suites in 2017. Downstairs, the workshop is still a workshop, turning out jewellery and small decorative pieces by hand, and one napkin ring made here is said to have reached Giorgio Armani's house on Panarea. The sculpture and painting throughout the building are by Vincenzo's father, Annibale Oste, whose archive the couple are still putting together.\n\nWhat strikes me about this house is how little it has had to pretend. The street takes its name from the glassmakers who once worked along it, the neighbourhood was full of glovers and silk weavers, and the trade in this building has simply changed its material, from timber to metal and enamel and on to art.\n\nA few doors along, at number 133, a staircase leads down to painted Greek tombs more than two thousand years old, and if you've booked a visit, that's your natural next step."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.85788498233061,
+      "centroidLongitude": 14.254052087032377,
+      "city": "Naples",
+      "country": "Italy",
+      "relatedTourIds": [
+        "47bc0a50-cd97-5013-9d84-352523ee74e6",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "67255f44-ba3c-534b-9e05-d54959c5a11d",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c",
+        "4276d68a-9de8-5ba0-ab89-4befd72b0f5c",
+        "70db8bd2-ea84-5cef-9bb8-a3db8dc914e9"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "47bc0a50-cd97-5013-9d84-352523ee74e6",
+      "createdAt": "2026-10-27",
+      "title": "Casa D'Anna ai Cristallini",
+      "shortDescription": "There's a curious thing about the guest rooms in this old palazzo: every one of them is named after an island in the Bay of Naples.",
+      "longDescription": "There's a curious thing about the guest rooms in this old palazzo: every one of them is named after an island in the Bay of Naples.\n\nThe house itself occupies part of Palazzo Giannattasio, a building with centuries of history behind it, and the main rooms rise to ceilings about six metres high, crossed with chestnut beams. The guesthouse was created in 2013 by Davide D'Anna, an architect and artist, together with two friends, one Scottish and one French, and they filled it with what they had gathered on their travels: art books, paintings and sculpture, old opera glasses and ballet programmes.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-casa-danna-ai-cristallini_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-casa-danna-ai-cristallini_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-casa-danna-ai-cristallini_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-casa-danna-ai-cristallini_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-casa-danna-ai-cristallini_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2d2b7192-1b76-54b3-9c77-62026e695f20",
+          "order": 0,
+          "title": "Casa D'Anna ai Cristallini",
+          "caption": "Halfway along Via dei Cristallini, at the old palazzo doorway of Palazzo Giannattasio.",
+          "latitude": 40.85772519357631,
+          "longitude": 14.254034713911855,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-casa-danna-ai-cristallini.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-casa-danna-ai-cristallini_hero.webp",
+          "transcriptText": "There's a curious thing about the guest rooms in this old palazzo: every one of them is named after an island in the Bay of Naples.\n\nHalfway along Via dei Cristallini, behind one of the street's old palazzo doorways, sits Casa D'Anna ai Cristallini, a guesthouse of just five rooms. From the pavement you'll see little more than the entrance and shuttered windows, which suits a house that saves its best side for its guests.\n\nThe house itself occupies part of Palazzo Giannattasio, a building with centuries of history behind it, and the main rooms rise to ceilings about six metres high, crossed with chestnut beams. The guesthouse was created in 2013 by Davide D'Anna, an architect and artist, together with two friends, one Scottish and one French, and they filled it with what they had gathered on their travels: art books, paintings and sculpture, old opera glasses and ballet programmes.\n\nThe rooms carry the islands' names, Capri, Ischia, Procida, Palmarola and Nisida, and up on the top floor there's a terrace hung with bougainvillea and jasmine, where breakfast is served whenever the weather allows.\n\nSince 2020 the house has belonged to Alessandra Calise Martuscelli, and that's where the story takes a turn. Her husband's family owns the Ipogeo dei Cristallini, the painted Greek tombs about twenty metres from here, which came to them through an uncle who was a baron.\n\nThat, if you ask me, is the quiet charm of this corner of the Sanità, because the family looking after the living upstairs is also looking after the dead below. One house is full of other people's souvenirs, the other holds burial chambers carved and painted more than two thousand years ago, and both are being kept, carefully, by the same hands.\n\nIf you'd like to see the other half of that story, the tombs are visited in small groups by booking, and their entrance is just along this street, at number 133."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.85772519357631,
+      "centroidLongitude": 14.254034713911855,
+      "city": "Naples",
+      "country": "Italy",
+      "relatedTourIds": [
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c",
+        "4af8b8d2-8f67-54aa-b729-0b42ffa169f1",
+        "edc9261f-b648-5b4c-b1b6-609a5f976a5e",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "67255f44-ba3c-534b-9e05-d54959c5a11d",
+        "4276d68a-9de8-5ba0-ab89-4befd72b0f5c"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Notable Building",
+        "Art",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "70db8bd2-ea84-5cef-9bb8-a3db8dc914e9",
+      "createdAt": "2026-10-27",
+      "title": "Castel Sant'Elmo",
+      "shortDescription": "From up here the whole of Naples is laid out like a map, and that was rather the point of putting a castle on this hilltop.",
+      "longDescription": "From up here the whole of Naples is laid out like a map, and that was rather the point of putting a castle on this hilltop.\n\nThe shape is best appreciated from the air, because Castel Sant'Elmo is a six pointed star, drawn up between 1537 and 1547 by the military engineer Pedro Luis Escrivá for the Spanish viceroy, Pedro de Toledo. It replaced a smaller Angevin fortress called Belforte, and its name comes, by way of a few slurred centuries, from a tenth century church of Sant'Erasmo that once stood on the hill.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-castel-sant-elmo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-castel-sant-elmo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-castel-sant-elmo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-castel-sant-elmo_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2d12d413-b70f-5a41-b04a-8b12a491c36e",
+          "order": 0,
+          "title": "Castel Sant'Elmo",
+          "caption": "On the ramp across the moat to the main gate, with the Vomero behind you.",
+          "latitude": 40.84448403327832,
+          "longitude": 14.238909112268436,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-castel-sant-elmo.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-castel-sant-elmo_hero.webp",
+          "transcriptText": "From up here the whole of Naples is laid out like a map, and that was rather the point of putting a castle on this hilltop.\n\nThe ramp in front of you crosses the old moat to the castle's main gate, cut into walls of pale volcanic stone that rise sheer out of the ditch, with the imperial coat of arms carved above the entrance. Behind you lies the Vomero, the neighbourhood that grew up around the fortress much later.\n\nThe shape is best appreciated from the air, because Castel Sant'Elmo is a six pointed star, drawn up between 1537 and 1547 by the military engineer Pedro Luis Escrivá for the Spanish viceroy, Pedro de Toledo. It replaced a smaller Angevin fortress called Belforte, and its name comes, by way of a few slurred centuries, from a tenth century church of Sant'Erasmo that once stood on the hill.\n\nInside, the open parade ground known as the Piazza d'Armi now houses the Museo del Novecento, opened in 2010, with more than a hundred and seventy works by Neapolitan artists of the twentieth century. It's a peaceful use for a fortress with a violent past, since in 1587 lightning struck the gunpowder store and blew apart the church and the officers' quarters.\n\nThe interesting bit is who the castle was watching. For long stretches of its history its most important job was as a prison, holding the philosopher Tommaso Campanella in 1604 and patriots of the Neapolitan Republic of 1799, and it stayed a military prison until 1952. A star fort above a crowded city is a defence, certainly, but it's also a very good place from which to keep an eye on that city.\n\nClimb up to the ramparts and walk the full circuit if you can, since the views run from the islands round to Vesuvius and out to the Phlegraean Fields. The Certosa di San Martino next door offers another view, with a monastery attached."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.84448403327832,
+      "centroidLongitude": 14.238909112268436,
+      "city": "Naples",
+      "country": "Italy",
+      "relatedTourIds": [
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c",
+        "47bc0a50-cd97-5013-9d84-352523ee74e6",
+        "4af8b8d2-8f67-54aa-b729-0b42ffa169f1",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "4276d68a-9de8-5ba0-ab89-4befd72b0f5c",
+        "6acb103d-279a-5d60-a846-ab594bdc61e9"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "History",
+        "War",
+        "Power",
+        "Viewpoint",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Pedro Luis Escrivá"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c4dda1cf-5ada-5965-bf7d-3e280e7b2a7b",
+      "createdAt": "2026-10-27",
+      "title": "Doctor Vintage",
+      "shortDescription": "This little street in Chiaia is named after the man who taught the world to see the people of Pompeii.",
+      "longDescription": "This little street in Chiaia is named after the man who taught the world to see the people of Pompeii.\n\nThe name on the street sign belongs to Giuseppe Fiorelli, who directed the excavations at Pompeii in the 1860s, and it was his idea to pour plaster into the hollows that the bodies of the dead had left in the volcanic ash, which is why we can still see their shapes today. It's a rather moving namesake for a shopping street, since his career was about recovering what others had left behind.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-doctor-vintage_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-doctor-vintage_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-doctor-vintage_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1984000d-617d-5207-9526-9b6d0b751aa4",
+          "order": 0,
+          "title": "Doctor Vintage",
+          "caption": "On Via Giuseppe Fiorelli in Chiaia, at the small shopfront at number 12.",
+          "latitude": 40.8349908844937,
+          "longitude": 14.239130067750816,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-doctor-vintage.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-doctor-vintage_hero.webp",
+          "transcriptText": "This little street in Chiaia is named after the man who taught the world to see the people of Pompeii.\n\nAmong the cafés and boutiques of one of the smartest neighbourhoods in Naples, on the side street of Via Giuseppe Fiorelli, Doctor Vintage is the small shopfront at number 12, where you should be able to make out rails of clothing through the glass.\n\nThe name on the street sign belongs to Giuseppe Fiorelli, who directed the excavations at Pompeii in the 1860s, and it was his idea to pour plaster into the hollows that the bodies of the dead had left in the volcanic ash, which is why we can still see their shapes today. It's a rather moving namesake for a shopping street, since his career was about recovering what others had left behind.\n\nDoctor Vintage is a small independent business, run by its owner, Rosario Recano, and it deals in second hand and vintage clothing. That scale matters, because there's no head office deciding what arrives on these rails; the stock is whatever has been found, bought and chosen, so this week's find is unlikely to be there next time.\n\nChiaia is where Neapolitans have shopped for tailoring and labels for generations, with Via dei Mille and Via Filangieri a few minutes away. A vintage shop in the middle of all that makes a gentle counterpoint, with clothes that have already been worn, enjoyed and let go, and the pleasure lies in finding the one that suits its next owner.\n\nSeen from this pavement, the archaeologist and the shop are doing a version of the same job, giving things that had been put aside a second life in plain view.\n\nFrom here, Piazza dei Martiri is a short walk east, with its tall column and four stone lions, and the tailoring houses of Chiaia all around it if you'd like to compare new with well worn."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.8349908844937,
+      "centroidLongitude": 14.239130067750816,
+      "city": "Naples",
+      "country": "Italy",
+      "relatedTourIds": [
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "d17e0a2d-1a53-55bd-bdd3-79b1e036de96",
+        "67255f44-ba3c-534b-9e05-d54959c5a11d",
+        "d81c0dba-f5d8-52a0-bdec-6851d39a42e9",
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c",
+        "6acb103d-279a-5d60-a846-ab594bdc61e9",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Fashion",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b9994181-63a7-5869-b713-2a619339f314",
+      "createdAt": "2026-10-27",
+      "title": "Former Church of Santa Maria della Misericordia ai Vergini | Ex Chiesa di Santa Maria della Misericordia ai Vergini",
+      "shortDescription": "For years after the Second World War this church was a dumping ground, and the art that rescued it is still made inside.",
+      "longDescription": "For years after the Second World War this church was a dumping ground, and the art that rescued it is still made inside.\n\nThat stone is piperno, a volcanic rock quarried around Naples, and it's carved here in a playful rococo style that seems almost too light for such a heavy material.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-ex-chiesa-santa-maria-della-misericordia-ai-vergini_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-ex-chiesa-santa-maria-della-misericordia-ai-vergini_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-ex-chiesa-santa-maria-della-misericordia-ai-vergini_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-ex-chiesa-santa-maria-della-misericordia-ai-vergini_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-ex-chiesa-santa-maria-della-misericordia-ai-vergini_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2637657c-0243-5d7d-8c5c-b17f6905b93c",
+          "order": 0,
+          "title": "Former Church of Santa Maria della Misericordia ai Vergini | Ex Chiesa di Santa Maria della Misericordia ai Vergini",
+          "caption": "At the corner of Via Misericordiella, before the carved grey piperno doorway.",
+          "latitude": 40.856293027825096,
+          "longitude": 14.255473508598408,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-ex-chiesa-santa-maria-della-misericordia-ai-vergini.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-ex-chiesa-santa-maria-della-misericordia-ai-vergini_hero.webp",
+          "transcriptText": "For years after the Second World War this church was a dumping ground, and the art that rescued it is still made inside.\n\nAt the corner of Via Misericordiella, close to the old Porta San Gennaro, the church in front of you shows a tall, flat facade in two storeys, with pilasters below, a large window above and a triangular pediment on top that holds a round window at its centre. The doorway is the giveaway, framed in dark grey stone carved into curling eighteenth century shapes.\n\nThat stone is piperno, a volcanic rock quarried around Naples, and it's carved here in a playful rococo style that seems almost too light for such a heavy material.\n\nThe church itself is far older than its portal, and a tombstone dated 1358 turned up during sixteenth century renovations. In 1533 the building passed to the Theatine fathers, whose founder, Saint Gaetano da Thiene, stayed next door. By the early 1700s it had been filled with paintings by leading Neapolitan artists, among them a work by Giovanni Balducci on the corporal works of mercy, which means feeding the hungry, sheltering strangers and caring for the sick. Beneath the nave lies a burial chamber of the same size, where the confraternity laid its dead.\n\nWar damage closed it for decades, and that's when the rubbish arrived. Since 2015 it has been looked after by SMMAVE, a centre for contemporary art founded by the sculptor Christian Leperino, whose volunteers cleared and restored the building and now run exhibitions, concerts, workshops and studio places for young sculptors.\n\nWhat I find rather lovely is that the old dedication still fits, since a church built around works of mercy, rescued by volunteers, now spends its days teaching.\n\nWalk on into Via dei Vergini afterwards, with its morning street market, and look for the Palazzo dello Spagnolo, whose open double staircase by Ferdinando Sanfelice is one of the great sights of this quarter."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 123,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.856293027825096,
+      "centroidLongitude": 14.255473508598408,
+      "city": "Naples",
+      "country": "Italy",
+      "relatedTourIds": [
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c",
+        "70db8bd2-ea84-5cef-9bb8-a3db8dc914e9",
+        "d81c0dba-f5d8-52a0-bdec-6851d39a42e9",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "c4dda1cf-5ada-5965-bf7d-3e280e7b2a7b",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "4af8b8d2-8f67-54aa-b729-0b42ffa169f1",
+        "47bc0a50-cd97-5013-9d84-352523ee74e6"
+      ],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Art",
+        "Baroque",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d17e0a2d-1a53-55bd-bdd3-79b1e036de96",
+      "createdAt": "2026-10-27",
+      "title": "Ex Voto",
+      "shortDescription": "In Naples an ex voto is a thank you, usually a small silver heart, hand or leg left in a church once a prayer has been answered.",
+      "longDescription": "In Naples an ex voto is a thank you, usually a small silver heart, hand or leg left in a church once a prayer has been answered.\n\nThe street's namesake, Carlo Poerio, was a nineteenth century Neapolitan liberal who spent the best part of a decade in Bourbon prisons for his politics, and his name now sits on one of the most elegant shopping streets in the city, which says something about how Naples chose to remember him.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-ex-voto_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-ex-voto_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-ex-voto_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-ex-voto_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "73fd4ef7-c84c-54a4-9954-8d76dd1984ec",
+          "order": 0,
+          "title": "Ex Voto",
+          "caption": "At number 18A Via Carlo Poerio, one street in from the Riviera di Chiaia.",
+          "latitude": 40.83398511452311,
+          "longitude": 14.239965469731487,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-ex-voto.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-ex-voto_hero.webp",
+          "transcriptText": "In Naples an ex voto is a thank you, usually a small silver heart, hand or leg left in a church once a prayer has been answered.\n\nNumber 18A Via Carlo Poerio, one street in from the Riviera di Chiaia, is the address of Ex Voto, a boutique whose windows give the first hint of what lies inside: clothes cut by some of fashion's most uncompromising designers.\n\nThe street's namesake, Carlo Poerio, was a nineteenth century Neapolitan liberal who spent the best part of a decade in Bourbon prisons for his politics, and his name now sits on one of the most elegant shopping streets in the city, which says something about how Naples chose to remember him.\n\nInside the shop, the list of labels reads like a short history of fashion's awkward squad: Yohji Yamamoto, Comme des Garçons and Issey Miyake from Japan, Dries Van Noten from Belgium, Uma Wang from China and Sacai, alongside dozens of others. There's clothing for women, men and children, plus pieces for the home, and visits can be booked by appointment as well as made on the spur of the moment.\n\nThat's where the name stops being merely clever, because the shop describes its stock as timeless design that honours the people who make it and the places where it's made, and an ex voto does much the same thing, as a made object offered as thanks, with the skill of the silversmith built into the gratitude. Seen that way, a rail of carefully constructed clothes in a city of votive silver feels less like a joke and more like a family resemblance.\n\nTo see the originals, head into the old centre to the church of the Gesù Nuovo, where the rooms dedicated to Saint Giuseppe Moscati are lined with silver ex votos left by people giving thanks."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.83398511452311,
+      "centroidLongitude": 14.239965469731487,
+      "city": "Naples",
+      "country": "Italy",
+      "relatedTourIds": [
+        "c4dda1cf-5ada-5965-bf7d-3e280e7b2a7b",
+        "5fe721f4-2bf9-5d47-afcf-6eda222ac5a3",
+        "67255f44-ba3c-534b-9e05-d54959c5a11d",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "6acb103d-279a-5d60-a846-ab594bdc61e9",
+        "60a862cd-c25f-5ded-be3b-6eedb60fb67f",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Fashion",
+        "Commerce",
+        "Faith",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "01b5d1e0-dbf4-55c5-9258-629ec886a99c",
+      "createdAt": "2026-10-27",
+      "title": "Cristallini Hypogeum | Ipogeo dei Cristallini",
+      "shortDescription": "In 1889 a baron digging beneath his palazzo, looking for water and building stone, broke into a Greek cemetery instead.",
+      "longDescription": "In 1889 a baron digging beneath his palazzo, looking for water and building stone, broke into a Greek cemetery instead.\n\nBelow ground there are four tombs side by side, cut into the soft yellow tuff that Naples is built on, and each has two levels: an upper room where the family carried out funeral rites, and a burial chamber beneath it. They date back about two thousand three hundred years, to a time when this hillside lay outside the walls of the Greek city of Neapolis and served as its necropolis.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-ipogeo-dei-cristallini_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-ipogeo-dei-cristallini_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-ipogeo-dei-cristallini_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-ipogeo-dei-cristallini_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-ipogeo-dei-cristallini_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "23024075-3cdb-5dfa-8936-510adc01505e",
+          "order": 0,
+          "title": "Cristallini Hypogeum | Ipogeo dei Cristallini",
+          "caption": "At the doorway of number 133 Via dei Cristallini, where the guided groups gather.",
+          "latitude": 40.85788343467848,
+          "longitude": 14.253906927403635,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-ipogeo-dei-cristallini.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-ipogeo-dei-cristallini_hero.webp",
+          "transcriptText": "In 1889 a baron digging beneath his palazzo, looking for water and building stone, broke into a Greek cemetery instead.\n\nThe doorway of number 133 Via dei Cristallini, right in front of you, belongs to that same family palazzo, and the tombs lie underneath it, reached by a small staircase inside. Visits are guided and limited to groups of no more than eight, so the pavement out here is the right place to wait for yours.\n\nBelow ground there are four tombs side by side, cut into the soft yellow tuff that Naples is built on, and each has two levels: an upper room where the family carried out funeral rites, and a burial chamber beneath it. They date back about two thousand three hundred years, to a time when this hillside lay outside the walls of the Greek city of Neapolis and served as its necropolis.\n\nThe detail people remember is the furniture, because the dead were laid on beds carved out of the rock itself, and those beds were painted to look upholstered, with mattresses and double pillows in yellow, purple, blue and red. Elsewhere the walls carry painted garlands, vases and altars, and in one tomb a head of Medusa keeps watch, with figures of Dionysus and Ariadne close by.\n\nA restoration begun in 2020 with Italy's Central Institute for Restoration steadied the colours, and the site reopened in July 2022, with small groups to protect the paintings.\n\nThe people who made these rooms weren't picturing their dead as gone; they were picturing them at rest, in good company, on a well made bed. All that painted cushioning and false architecture is a family insisting on comfort, long before anyone could have guessed we'd come down the stairs to look.\n\nAfterwards, walk down to the Basilica of Santa Maria della Sanità, a few minutes away, where the catacombs of San Gaudioso carry this hillside's long story of burial on into early Christian times."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.85788343467848,
+      "centroidLongitude": 14.253906927403635,
+      "city": "Naples",
+      "country": "Italy",
+      "relatedTourIds": [
+        "47bc0a50-cd97-5013-9d84-352523ee74e6",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "70db8bd2-ea84-5cef-9bb8-a3db8dc914e9",
+        "d81c0dba-f5d8-52a0-bdec-6851d39a42e9",
+        "c4dda1cf-5ada-5965-bf7d-3e280e7b2a7b",
+        "67255f44-ba3c-534b-9e05-d54959c5a11d",
+        "4af8b8d2-8f67-54aa-b729-0b42ffa169f1",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "History",
+        "Art",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5fe721f4-2bf9-5d47-afcf-6eda222ac5a3",
+      "createdAt": "2026-10-27",
+      "title": "L'Antiquario",
+      "shortDescription": "Behind a discreet door on a narrow lane near the seafront, the bartenders still work in immaculate white jackets.",
+      "longDescription": "Behind a discreet door on a narrow lane near the seafront, the bartenders still work in immaculate white jackets.\n\nOnce you're through the door, red velvet, floral wallpaper and dark wood set the tone, somewhere between a gentlemen's club and a nineteen fifties jazz lounge, and on weeknights there's usually live music to go with it. The bar was opened in the middle of the 2010s by Alex Frezza, a Neapolitan bartender with a considerable local following, and this year it was placed twenty eighth in the list of Europe's fifty best bars.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-lantiquario_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-lantiquario_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-lantiquario_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-lantiquario_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bbeb1e5d-18bf-51ed-8d99-118dbad93aee",
+          "order": 0,
+          "title": "L'Antiquario",
+          "caption": "On the little lane of Vannella Gaetani, at the discreet door of number 2.",
+          "latitude": 40.833174952436856,
+          "longitude": 14.242179320237668,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-lantiquario.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-lantiquario_hero.webp",
+          "transcriptText": "Behind a discreet door on a narrow lane near the seafront, the bartenders still work in immaculate white jackets.\n\nVannella Gaetani is the little lane in front of you, tucked between the shops of Chiaia and the water, and L'Antiquario is at number 2, a speakeasy style bar that gives very little away from the street, which is rather the intention.\n\nOnce you're through the door, red velvet, floral wallpaper and dark wood set the tone, somewhere between a gentlemen's club and a nineteen fifties jazz lounge, and on weeknights there's usually live music to go with it. The bar was opened in the middle of the 2010s by Alex Frezza, a Neapolitan bartender with a considerable local following, and this year it was placed twenty eighth in the list of Europe's fifty best bars.\n\nThe menu is split into three parts: classic cocktails, modern drinks from the early twentieth century onwards, and the bar's own contemporary creations. The one that most belongs to this coastline is Un Grande Limone, built on gin, citron and limoncello, and if you'd rather keep things traditional, there's a trio of negronis that arrives on a custom silver tower.\n\nAnd here's the thing about that name: an antiquario is a dealer in antiques, someone who keeps old things in good condition and passes them on, and that's very much how this bar treats its drinks. The classic recipes are handled like heirlooms, polished and served with a little ceremony, while the new ones are kept few enough that they never crowd the old ones out.\n\nWhen you leave, it's a couple of minutes' walk down to Via Partenope and the seafront, where the Castel dell'Ovo sits out on its rock, and the lights along the water make a fine end to the evening."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.833174952436856,
+      "centroidLongitude": 14.242179320237668,
+      "city": "Naples",
+      "country": "Italy",
+      "relatedTourIds": [
+        "27bd7b12-9203-53ec-8b49-0c0d70e0f790",
+        "92041407-6b30-5d78-a03e-8802b4161918",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "d17e0a2d-1a53-55bd-bdd3-79b1e036de96",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "01deaa74-c2af-5cab-b0bb-cbf71651d47b",
+        "c4dda1cf-5ada-5965-bf7d-3e280e7b2a7b",
+        "e22d016c-8f54-5600-a12b-8bf341649795"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "90e0be12-a790-56b0-9b3f-e9323e42371c",
+      "createdAt": "2026-10-27",
+      "title": "Mimì alla Ferrovia",
+      "shortDescription": "It's the autumn of 1943, the war has only just moved on from Naples, and a couple called Emilio and Ida Giugliano are opening a trattoria near…",
+      "longDescription": "It's the autumn of 1943, the war has only just moved on from Naples, and a couple called Emilio and Ida Giugliano are opening a trattoria near the railway.\n\nHave a look at the walls once you're inside, because they're the first thing people remember. They're covered with photographs of the guests who have eaten here over the decades, among them Totò, Eduardo De Filippo, Marcello Mastroianni, Federico Fellini, Robert De Niro and Diego Maradona. Mimì was the name Emilio went by, and his restaurant has stayed in the family ever since, passing through his son and nephew to a third generation, with Salvatore Giugliano, born in 1991, now running the kitchen.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-mimi-alla-ferrovia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-mimi-alla-ferrovia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-mimi-alla-ferrovia_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-mimi-alla-ferrovia_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-mimi-alla-ferrovia_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c9780beb-f422-54a1-ac6d-557b0860c9ce",
+          "order": 0,
+          "title": "Mimì alla Ferrovia",
+          "caption": "On Via Alfonso d'Aragona near Napoli Centrale, under the restaurant's name over the door.",
+          "latitude": 40.853595914654136,
+          "longitude": 14.267203656239708,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-mimi-alla-ferrovia.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-mimi-alla-ferrovia_hero.webp",
+          "transcriptText": "It's the autumn of 1943, the war has only just moved on from Naples, and a couple called Emilio and Ida Giugliano are opening a trattoria near the railway.\n\nA few minutes' walk from Napoli Centrale, Mimì alla Ferrovia occupies numbers 19 to 21 Via Alfonso d'Aragona, with its name over the door, and the ferrovia in question is that main railway station.\n\nHave a look at the walls once you're inside, because they're the first thing people remember. They're covered with photographs of the guests who have eaten here over the decades, among them Totò, Eduardo De Filippo, Marcello Mastroianni, Federico Fellini, Robert De Niro and Diego Maradona. Mimì was the name Emilio went by, and his restaurant has stayed in the family ever since, passing through his son and nephew to a third generation, with Salvatore Giugliano, born in 1991, now running the kitchen.\n\nThe cooking is the Neapolitan repertoire done properly, so look out for candele alla genovese, long tubes of pasta in a sauce of onions and beef cooked down for hours, ziti with tomato, pancetta and pecorino, and a babà to finish. Salvatore is known for buying daily at the old city markets of Porta Nolana and Sant'Antonio Abate, so the menu follows what's good that morning.\n\nIn 2023 the restaurant turned eighty, received the Medal of the City of Naples, and became the first restaurant entered in Italy's register of historic brands of national interest.\n\nA station restaurant is meant to be somewhere you pass through on your way to somewhere else, and this one has spent eighty years persuading people to stay. That, more than any of the famous faces on the walls, is the real achievement of the place.\n\nIf you're here in the morning, walk ten minutes south to the Porta Nolana fish market, where the stalls spill out beneath an old city gate and you can see where tonight's dinner begins."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.853595914654136,
+      "centroidLongitude": 14.267203656239708,
+      "city": "Naples",
+      "country": "Italy",
+      "relatedTourIds": [
+        "60a862cd-c25f-5ded-be3b-6eedb60fb67f",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "01deaa74-c2af-5cab-b0bb-cbf71651d47b",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "4af8b8d2-8f67-54aa-b729-0b42ffa169f1",
+        "47bc0a50-cd97-5013-9d84-352523ee74e6",
+        "c4dda1cf-5ada-5965-bf7d-3e280e7b2a7b",
+        "5fe721f4-2bf9-5d47-afcf-6eda222ac5a3"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d81c0dba-f5d8-52a0-bdec-6851d39a42e9",
+      "createdAt": "2026-10-27",
+      "title": "Neapolitan Sacred Art di Fabio Paolella",
+      "shortDescription": "Most of the faces in this workshop have glass eyes, and every one of them has been painted by hand.",
+      "longDescription": "Most of the faces in this workshop have glass eyes, and every one of them has been painted by hand.\n\nPaolella makes terracotta pastori, the characters of the Neapolitan nativity scene, with glass eyes and fine painted detail, and his mother and sister make and fit their clothes. He also recreates devotional images in the styles of the seventeenth to nineteenth centuries, such as the sorrowing Madonna Addolorata and the Immacolata, along with ex votos and small church ornaments.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-neapolitan-sacred-art-fabio-paolella_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-neapolitan-sacred-art-fabio-paolella_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-neapolitan-sacred-art-fabio-paolella_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-neapolitan-sacred-art-fabio-paolella_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6791059f-1020-56c9-8915-f9d5885d793a",
+          "order": 0,
+          "title": "Neapolitan Sacred Art di Fabio Paolella",
+          "caption": "In the quiet lanes around Via Anticaglia, at the small workshop window full of figures.",
+          "latitude": 40.852919837851935,
+          "longitude": 14.256729527403634,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-neapolitan-sacred-art-fabio-paolella.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-neapolitan-sacred-art-fabio-paolella_hero.webp",
+          "transcriptText": "Most of the faces in this workshop have glass eyes, and every one of them has been painted by hand.\n\nUp the hill from San Gregorio Armeno, the famous street of crib makers, the lanes around Via Anticaglia are a good deal quieter, and the small workshop in front of you is Neapolitan Sacred Art, the bottega of Fabio Paolella, where figures dressed in brocade and lace share the space with painted Madonnas in old fashioned frames.\n\nPaolella makes terracotta pastori, the characters of the Neapolitan nativity scene, with glass eyes and fine painted detail, and his mother and sister make and fit their clothes. He also recreates devotional images in the styles of the seventeenth to nineteenth centuries, such as the sorrowing Madonna Addolorata and the Immacolata, along with ex votos and small church ornaments.\n\nHow he learned matters just as much, since he started at fifteen as an apprentice in local workshops and never went to art school, so everything he knows came from watching older hands and copying the old methods until they became his own. A fully dressed figure of his costs several hundred euros, and he has pointed out, quite plainly, that the difference from a cheap one shows once you've taken it home.\n\nInterestingly, he has also said that his most devoted customers tend to be collectors and scholars from abroad rather than Neapolitans themselves.\n\nThe busy street below keeps the crib making tradition visible to millions of visitors a year, and workshops like this one keep it slow. Both matter, though if you want to understand why Neapolitan nativity figures became collectors' pieces in the first place, you have to see one made the long way, one painted eye at a time.\n\nWhen you leave, walk along Via Anticaglia and look up at the brick arches spanning the street, which are the remains of the Roman theatre where the emperor Nero is said to have performed."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.852919837851935,
+      "centroidLongitude": 14.256729527403634,
+      "city": "Naples",
+      "country": "Italy",
+      "relatedTourIds": [
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c",
+        "c4dda1cf-5ada-5965-bf7d-3e280e7b2a7b",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "67255f44-ba3c-534b-9e05-d54959c5a11d",
+        "6acb103d-279a-5d60-a846-ab594bdc61e9",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "47bc0a50-cd97-5013-9d84-352523ee74e6"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Faith",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "92041407-6b30-5d78-a03e-8802b4161918",
+      "createdAt": "2026-10-27",
+      "title": "Officina Ba-Bar",
+      "shortDescription": "The sea is only a minute's walk from here, but for most of the history of Santa Lucia it came right up to the houses.",
+      "longDescription": "The sea is only a minute's walk from here, but for most of the history of Santa Lucia it came right up to the houses.\n\nThis was Santa Lucia, a quarter of fishermen and boatmen that gave its name to one of the best known Neapolitan songs, published in 1849 as a boatman's invitation to come out on the water. Much of the ground between here and today's seafront was reclaimed in the late nineteenth century, when the city pushed its shoreline outwards and laid the new promenade of Via Partenope along the edge.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-officina-ba-bar_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-officina-ba-bar_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-officina-ba-bar_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-officina-ba-bar_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-officina-ba-bar_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6d2b10e7-60b6-541c-a12c-64687b9bddf5",
+          "order": 0,
+          "title": "Officina Ba-Bar",
+          "caption": "At number 169 Via Santa Lucia, by the black-fronted bar and its pavement tables.",
+          "latitude": 40.830461372039146,
+          "longitude": 14.248845735581964,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-officina-ba-bar.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-officina-ba-bar_hero.webp",
+          "transcriptText": "The sea is only a minute's walk from here, but for most of the history of Santa Lucia it came right up to the houses.\n\nLook for a black fronted bar with tables set out on the pavement and, after dark, low lights glowing inside, because that's Officina Ba-Bar, at number 169 Via Santa Lucia.\n\nThis was Santa Lucia, a quarter of fishermen and boatmen that gave its name to one of the best known Neapolitan songs, published in 1849 as a boatman's invitation to come out on the water. Much of the ground between here and today's seafront was reclaimed in the late nineteenth century, when the city pushed its shoreline outwards and laid the new promenade of Via Partenope along the edge.\n\nAs for the bar, officina means workshop, and this one opened in 2016 as the seaside offshoot of Ba-Bar, a bar in the Chiaia street of Via Bisignano. Inside it's minimalist and dimly lit, with jazz in the background, and it runs from midday until late. The drinks list moves from an Aperol spritz to a whisky smash with basil, the wine list is longer than you'd expect, and plates of cured meats and cheeses come out to keep everyone steady.\n\nWhat's worth knowing, standing here, is that Santa Lucia has always been about evenings by the water. The boatmen in the old song were selling exactly that, a cool hour by the sea once the heat of the day had gone, and the tables outside a bar like this one are the modern version of the same offer, even if the water itself has moved a little further away.\n\nJust a few steps away, where this street meets the seafront, stands the Fontana del Gigante, a stone fountain of three arches, and from there the promenade runs west past the Castel dell'Ovo, with Vesuvius behind you across the bay."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.830461372039146,
+      "centroidLongitude": 14.248845735581964,
+      "city": "Naples",
+      "country": "Italy",
+      "relatedTourIds": [
+        "5fe721f4-2bf9-5d47-afcf-6eda222ac5a3",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "27bd7b12-9203-53ec-8b49-0c0d70e0f790",
+        "01deaa74-c2af-5cab-b0bb-cbf71651d47b",
+        "EB123E68-A754-458A-9D1C-F9920DC1D18B",
+        "1d7e97a5-3bff-5d27-bb3c-e299d03c732a",
+        "9f48ffaf-5128-5c14-b945-630978f6e185"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Maritime",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "01deaa74-c2af-5cab-b0bb-cbf71651d47b",
+      "createdAt": "2026-10-27",
+      "title": "Pescheria Azzurra",
+      "shortDescription": "The fish lying on the ice at this counter may well be the fish someone at the next table is about to eat.",
+      "longDescription": "The fish lying on the ice at this counter may well be the fish someone at the next table is about to eat.\n\nThe market around you, the Pignasecca, is usually described as the oldest market in Naples, and its name means dry pine cone, after a local story that the pine trees which once grew here lost their cones. It's still very much a working market, with fish, vegetables, cheese and housewares sold alongside some of the best fried street food in the city.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-pescheria-azzurra_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-pescheria-azzurra_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-pescheria-azzurra_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8988cf55-cd1d-5668-aa65-ffa9c2f4b9f2",
+          "order": 0,
+          "title": "Pescheria Azzurra",
+          "caption": "Where Via Portamedina meets the Pignasecca market, at the fish counters facing the street.",
+          "latitude": 40.846833408961544,
+          "longitude": 14.247054127403635,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-pescheria-azzurra.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-pescheria-azzurra_hero.webp",
+          "transcriptText": "The fish lying on the ice at this counter may well be the fish someone at the next table is about to eat.\n\nWhere Via Portamedina meets the Pignasecca market, a few steps from Montesanto station, Pescheria Azzurra occupies the shopfronts at numbers 3 to 5, with its counters of fish and shellfish facing straight out onto the street.\n\nThe market around you, the Pignasecca, is usually described as the oldest market in Naples, and its name means dry pine cone, after a local story that the pine trees which once grew here lost their cones. It's still very much a working market, with fish, vegetables, cheese and housewares sold alongside some of the best fried street food in the city.\n\nThe shop itself is run by the Gagliotta brothers as a fishmonger and a trattoria at the same time, so you can buy fish to take home or sit down and have it cooked for you. The menu takes in raw seafood, linguine with lobster, spaghetti with clams and crumbled tarallo, a pesto made with mussels, and the cuoppo, a paper cone of mixed fried fish that's eaten standing up as often as sitting down. Prices are modest, the room is noisy, and nobody is in any hurry to make it otherwise.\n\nMost restaurants keep the kitchen at a polite distance from the source of the food, and this one does the opposite, which makes it the shortest journey from sea to plate you're likely to find in the city. The noise and the queue are part of the deal, because a place this close to the market was never going to feel like a dining room.\n\nWhen you've eaten, the Montesanto funicular is just round the corner, and it will lift you up the hill to the Vomero, a short walk from Castel Sant'Elmo and its views right across the bay."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.846833408961544,
+      "centroidLongitude": 14.247054127403635,
+      "city": "Naples",
+      "country": "Italy",
+      "relatedTourIds": [
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "60a862cd-c25f-5ded-be3b-6eedb60fb67f",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "27bd7b12-9203-53ec-8b49-0c0d70e0f790",
+        "5fe721f4-2bf9-5d47-afcf-6eda222ac5a3",
+        "92041407-6b30-5d78-a03e-8802b4161918",
+        "aa220274-aadd-51cd-88c7-60654c1c13f1",
+        "defeef28-4159-4ad2-813a-111c64720889"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Market",
+        "Food",
+        "Commerce",
+        "Maritime"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "60a862cd-c25f-5ded-be3b-6eedb60fb67f",
+      "createdAt": "2026-10-27",
+      "title": "Pizzeria Concettina ai Tre Santi",
+      "shortDescription": "In 1951 the pizzas made here were sold on credit, out of a woman's home, to neighbours who would pay when they could.",
+      "longDescription": "In 1951 the pizzas made here were sold on credit, out of a woman's home, to neighbours who would pay when they could.\n\nThe woman in the name was Concetta Oliva, known as Concettina, who began making pizzas at home while her husband Antonio worked as a shoemaker, and the three saints are the figures in the neighbourhood shrine, an edicola where the Madonna was venerated together with Saint Anne and Saint Vincent.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-pizzeria-concettina-ai-tre-santi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-pizzeria-concettina-ai-tre-santi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-pizzeria-concettina-ai-tre-santi_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-pizzeria-concettina-ai-tre-santi_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "abd333f3-79c8-50b9-b247-e73990bc3d74",
+          "order": 0,
+          "title": "Pizzeria Concettina ai Tre Santi",
+          "caption": "On Via Arena della Sanità, where the small crowd waits outside the pizzeria.",
+          "latitude": 40.85762393529833,
+          "longitude": 14.252144306745889,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-pizzeria-concettina-ai-tre-santi.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-pizzeria-concettina-ai-tre-santi_hero.webp",
+          "transcriptText": "In 1951 the pizzas made here were sold on credit, out of a woman's home, to neighbours who would pay when they could.\n\nThe pizzeria in front of you, on Via Arena della Sanità, is Concettina ai Tre Santi, named after a street shrine close by, and at most mealtimes the small crowd waiting outside is a helpful clue that you've found it.\n\nThe woman in the name was Concetta Oliva, known as Concettina, who began making pizzas at home while her husband Antonio worked as a shoemaker, and the three saints are the figures in the neighbourhood shrine, an edicola where the Madonna was venerated together with Saint Anne and Saint Vincent.\n\nHer great grandson, Ciro Oliva, born in 1993, took charge while still in his early twenties, renovated the place, added a counter for fried food and turned a local pizzeria into one of the most talked about in Naples. Look for the montanarina, a little fried pizza topped with whipped ricotta and lemon, or the panino named after his father Antonio, with carrot, smoked provola and green olives.\n\nThe detail that tells you most, though, is the pizza sospesa. Customers can pay for an extra pizza that's kept for someone who can't afford one, in the same spirit as the Neapolitan habit of leaving a coffee paid for at the bar.\n\nSo the story comes full circle, from a grandmother's pizzas on credit to her great grandson's pizzas paid forward. Both rest on the same idea, that in a neighbourhood like the Sanità people look after one another, and that a pizza is a perfectly good way to do it.\n\nWhen you step back outside, look up towards the Ponte della Sanità, the bridge built across the valley in the early nineteenth century, which carried traffic over the top of this neighbourhood on its way to Capodimonte."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.85762393529833,
+      "centroidLongitude": 14.252144306745889,
+      "city": "Naples",
+      "country": "Italy",
+      "relatedTourIds": [
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "3C6E6A9E-9A59-5522-866D-315A1A9D7983",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "01deaa74-c2af-5cab-b0bb-cbf71651d47b",
+        "4af8b8d2-8f67-54aa-b729-0b42ffa169f1",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "d17e0a2d-1a53-55bd-bdd3-79b1e036de96",
+        "47bc0a50-cd97-5013-9d84-352523ee74e6"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6acb103d-279a-5d60-a846-ab594bdc61e9",
+      "createdAt": "2026-10-27",
+      "title": "Riccardo Dalisi, Rua Catalana",
+      "shortDescription": "For something like seven hundred years, this street has made its living out of metal.",
+      "longDescription": "For something like seven hundred years, this street has made its living out of metal.\n\nIn the fourteenth century the Angevin queen Joanna the First gave this stretch to Catalan merchants, who traded in metal goods such as pots, pans and tools, and the word rua is usually explained as a Neapolitan bending of the French rue, from the days when the city's rulers were French. Metalworkers have kept shops here ever since, though fewer than there once were.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-riccardo-dalisi-rua-catalana_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-riccardo-dalisi-rua-catalana_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "eb9ca404-2e5a-5b12-ab72-a4df13a8766f",
+          "order": 0,
+          "title": "Riccardo Dalisi, Rua Catalana",
+          "caption": "On narrow Rua Catalana, looking up at the iron and tin figures fixed to the palazzi.",
+          "latitude": 40.842423521112885,
+          "longitude": 14.253868227403634,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-riccardo-dalisi-rua-catalana.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-riccardo-dalisi-rua-catalana_hero.webp",
+          "transcriptText": "For something like seven hundred years, this street has made its living out of metal.\n\nNarrow and slightly crooked, Rua Catalana threads between the port and the old city, a couple of minutes' walk from the Maschio Angioino, and if you look up at the walls of the palazzi around you, you'll find figures in iron and tin fixed here and there to the stone.\n\nIn the fourteenth century the Angevin queen Joanna the First gave this stretch to Catalan merchants, who traded in metal goods such as pots, pans and tools, and the word rua is usually explained as a Neapolitan bending of the French rue, from the days when the city's rulers were French. Metalworkers have kept shops here ever since, though fewer than there once were.\n\nThe figures on the walls are the work of Riccardo Dalisi, the architect, designer and artist who was born in Potenza in 1931 and died in Naples in 2022. In 1979 the design firm Alessi asked him to rethink the traditional Neapolitan coffee pot, and he worked with the tinsmiths of streets like this one, making some two hundred tin models before the design was finished. That research won him the Compasso d'Oro, Italy's leading design prize, in 1981, and in 1997 he gave something back, fixing his sculptures to these walls in a project that brought architecture students to work alongside the craftsmen.\n\nMost designers take a craft out of the workshop and into a factory, and Dalisi did very nearly the opposite, taking his ideas back to the workshop and leaving them on the street where they'd been made. Years later he even founded a prize of his own, the Compasso di Latta, or tin compass, to encourage young designers to work the same way.\n\nFrom the end of the street, the Maschio Angioino is just ahead, and its white marble triumphal arch, squeezed between two dark stone towers, is well worth a closer look."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.842423521112885,
+      "centroidLongitude": 14.253868227403634,
+      "city": "Naples",
+      "country": "Italy",
+      "relatedTourIds": [
+        "c4dda1cf-5ada-5965-bf7d-3e280e7b2a7b",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "d17e0a2d-1a53-55bd-bdd3-79b1e036de96",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "d81c0dba-f5d8-52a0-bdec-6851d39a42e9",
+        "2B5A8608-74B4-53F8-8818-825A99B0733D",
+        "70db8bd2-ea84-5cef-9bb8-a3db8dc914e9"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "District",
+        "Public Art",
+        "Art",
+        "Commerce",
+        "History",
+        "Free to Visit",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "edc9261f-b648-5b4c-b1b6-609a5f976a5e",
+      "createdAt": "2026-10-27",
+      "title": "Royal Continental Hotel",
+      "shortDescription": "On the roof of this hotel there's a swimming pool filled with water pumped up from the Gulf of Naples.",
+      "longDescription": "On the roof of this hotel there's a swimming pool filled with water pumped up from the Gulf of Naples.\n\nThis was once the site of the Grand Hotel Royal des Étrangers, a nineteenth century hotel destroyed by German forces during the Second World War, and its replacement, the Hotel Royal, opened in 1955, designed by the Neapolitan architect Ferdinando Chiaramonte with the engineer Roberto Fernandes.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-royal-continental-hotel_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-royal-continental-hotel_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-royal-continental-hotel_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-royal-continental-hotel_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e9ba22b7-41ca-5a1b-88a0-1457c74a3bed",
+          "order": 0,
+          "title": "Royal Continental Hotel",
+          "caption": "On Via Partenope, facing the long modern block across the road from the Castel dell'Ovo.",
+          "latitude": 40.830279046636285,
+          "longitude": 14.246925013911858,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-royal-continental-hotel.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-royal-continental-hotel_hero.webp",
+          "transcriptText": "On the roof of this hotel there's a swimming pool filled with water pumped up from the Gulf of Naples.\n\nIn front of you, at numbers 38 to 44 Via Partenope, the long modern block facing the Castel dell'Ovo across the road is the Royal Continental.\n\nThis was once the site of the Grand Hotel Royal des Étrangers, a nineteenth century hotel destroyed by German forces during the Second World War, and its replacement, the Hotel Royal, opened in 1955, designed by the Neapolitan architect Ferdinando Chiaramonte with the engineer Roberto Fernandes.\n\nThen came the famous name: Gio Ponti, the Milanese architect who did more than almost anyone to define Italian design after the war, was brought in to design the furniture, the swimming pool and even the hotel's logo. The pool was moved up from a lower floor to the roof so that swimmers could look straight out over the bay, and in 1954 it appeared on the cover of Domus, the magazine Ponti had founded.\n\nIf you're staying or able to visit, look for the Ponti floor, where twenty four rooms on the first floor keep their original furniture: three drawer chests, round mirrors, wall units with fold down writing desks and Cassina's Leggera chairs in pale ash. In 2003 the hotel merged with its neighbour to become the Royal Continental, which now has nearly four hundred rooms.\n\nThe timing is the remarkable part, since barely ten years after the old hotel was blown up, Naples answered with a building full of lightness, and Leggera, the name of that slender chair, means exactly that, which makes it postwar optimism you can actually sit on.\n\nFrom the hotel's front door, cross the road and walk out along the causeway to the Castel dell'Ovo, where the small harbour of Borgo Marinari gives you the best view back towards this whole stretch of the seafront."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.830279046636285,
+      "centroidLongitude": 14.246925013911858,
+      "city": "Naples",
+      "country": "Italy",
+      "relatedTourIds": [
+        "47bc0a50-cd97-5013-9d84-352523ee74e6",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "67255f44-ba3c-534b-9e05-d54959c5a11d",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "70db8bd2-ea84-5cef-9bb8-a3db8dc914e9",
+        "4276d68a-9de8-5ba0-ab89-4befd72b0f5c",
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Modernist",
+        "Waterfront",
+        "War",
+        "Designed by a Master",
+        "Gio Ponti",
+        "Ferdinando Chiaramonte"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4276d68a-9de8-5ba0-ab89-4befd72b0f5c",
+      "createdAt": "2026-10-27",
+      "title": "San Carlo Theatre | Teatro di San Carlo",
+      "shortDescription": "This theatre had already been staging opera for more than forty years when La Scala opened in Milan.",
+      "longDescription": "This theatre had already been staging opera for more than forty years when La Scala opened in Milan.\n\nThat connection is the key to the whole building. The San Carlo opened on the fourth of November 1737, commissioned by King Charles of Bourbon and designed by the royal architect Giovanni Antonio Medrano, and it was built against the palace itself, so the opera was quite literally an extension of the court. It's generally described as the oldest opera house in the world still in continuous use, and its horseshoe shaped auditorium became a model for theatres across Europe.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-teatro-di-san-carlo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-teatro-di-san-carlo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-teatro-di-san-carlo_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f2aaf32e-0738-52ad-80da-32421d1bb8a6",
+          "order": 0,
+          "title": "San Carlo Theatre | Teatro di San Carlo",
+          "caption": "On Via San Carlo, between the theatre's arcaded front and the Galleria Umberto I.",
+          "latitude": 40.837634865948715,
+          "longitude": 14.249643185075781,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-teatro-di-san-carlo.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-teatro-di-san-carlo_hero.webp",
+          "transcriptText": "This theatre had already been staging opera for more than forty years when La Scala opened in Milan.\n\nStand on the pavement of Via San Carlo, with the arcaded front of the Teatro di San Carlo on one side and the glass roofed Galleria Umberto the First behind you; to the left of the theatre as you face it, the Royal Palace carries on the same long frontage.\n\nThat connection is the key to the whole building. The San Carlo opened on the fourth of November 1737, commissioned by King Charles of Bourbon and designed by the royal architect Giovanni Antonio Medrano, and it was built against the palace itself, so the opera was quite literally an extension of the court. It's generally described as the oldest opera house in the world still in continuous use, and its horseshoe shaped auditorium became a model for theatres across Europe.\n\nThe fire came next, when on the thirteenth of February 1816 flames gutted the theatre, and the architect Antonio Niccolini rebuilt it in about ten months, reopening it in January 1817, which is the kind of speed that tells you how much an opera house mattered to a capital city. The neoclassical front you're looking at is Niccolini's work.\n\nAs for the music, Gioachino Rossini ran the house from 1815 to 1822, Gaetano Donizetti followed him, and in 1835 Donizetti's Lucia di Lammermoor had its first performance here.\n\nStanding outside, it's striking how ordinary the theatre's position looks today, wedged between a palace and a shopping arcade. That's precisely the point, though, because Naples built its opera house in the middle of everything, and the city has never quite let it become a museum.\n\nIf you have time, book one of the guided tours of the auditorium, or walk round the corner to Piazza del Plebiscito, where the Royal Palace shows off its full length."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.837634865948715,
+      "centroidLongitude": 14.249643185075781,
+      "city": "Naples",
+      "country": "Italy",
+      "relatedTourIds": [
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "4af8b8d2-8f67-54aa-b729-0b42ffa169f1",
+        "47bc0a50-cd97-5013-9d84-352523ee74e6",
+        "70db8bd2-ea84-5cef-9bb8-a3db8dc914e9",
+        "edc9261f-b648-5b4c-b1b6-609a5f976a5e",
+        "3ABF8E27-EAD1-530F-9D99-44F0593F99C6",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "67255f44-ba3c-534b-9e05-d54959c5a11d"
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance",
+        "Architecture",
+        "Neoclassical",
+        "Power",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Giovanni Antonio Medrano",
+        "Antonio Niccolini"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5e459e99-b003-5daa-bc7e-19720898a6cd",
+      "createdAt": "2026-10-27",
+      "title": "ScottoJonno",
+      "shortDescription": "In 1883, under the new glass roof of this arcade, a café opened where Neapolitans could hear the latest songs while they drank.",
+      "longDescription": "In 1883, under the new glass roof of this arcade, a café opened where Neapolitans could hear the latest songs while they drank.\n\nThe man in the name, Vincenzo Scotto Jonno, was an entrepreneur from the island of Procida who modelled his café chantant on the café concerts of Paris, with singers performing between the tables. His first star, Ersilia Sampieri, was billed as the Sarah Bernhardt of the café concert, and for a while this was one of the places where Neapolitan song set its trends.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-scottojonno_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-scottojonno_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-scottojonno_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-scottojonno_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-scottojonno_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "872c8bf0-4a1f-512f-aaeb-7868033643bd",
+          "order": 0,
+          "title": "ScottoJonno",
+          "caption": "Inside the Galleria Principe di Napoli, across the road from the Archaeological Museum.",
+          "latitude": 40.852638423474374,
+          "longitude": 14.250380935581958,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-scottojonno.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-scottojonno_hero.webp",
+          "transcriptText": "In 1883, under the new glass roof of this arcade, a café opened where Neapolitans could hear the latest songs while they drank.\n\nThe Galleria Principe di Napoli is the arcade of iron, glass and pale stucco around you, across the road from the National Archaeological Museum, and ScottoJonno occupies rooms inside it, with a cocktail bar and café at ground level and more spaces above.\n\nThe man in the name, Vincenzo Scotto Jonno, was an entrepreneur from the island of Procida who modelled his café chantant on the café concerts of Paris, with singers performing between the tables. His first star, Ersilia Sampieri, was billed as the Sarah Bernhardt of the café concert, and for a while this was one of the places where Neapolitan song set its trends.\n\nA long silence followed, because after the First World War the rooms were turned into treasury offices for the Banco di Napoli, and they stayed that way until 2021, while the galleria itself, built between 1873 and 1883, fell out of use for much of the twentieth century.\n\nThe revival came from the entrepreneur Luca Iannuzzi, who worked with the artist Eugenio Tibaldi to bring the space back, and it reopened in 2023. Look closely at the walls, which were deliberately left weathered, with the traces of every earlier use still showing through. There's a library of around eighteen hundred books that anyone can sit and read, a stage for music and readings, and a dragonfly as the house emblem, chosen as a sign of rebirth.\n\nPlenty of restorations scrub a building back to a single moment, and this one refuses to, letting the café, the bank and the years of neglect all stay in the room together.\n\nWhen you step back into the arcade, look up at the glass roof, and then cross over to the Archaeological Museum, whose collections make even eighteen eighty three feel rather recent."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.852638423474374,
+      "centroidLongitude": 14.250380935581958,
+      "city": "Naples",
+      "country": "Italy",
+      "relatedTourIds": [
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "4276d68a-9de8-5ba0-ab89-4befd72b0f5c",
+        "60a862cd-c25f-5ded-be3b-6eedb60fb67f",
+        "4af8b8d2-8f67-54aa-b729-0b42ffa169f1",
+        "5fe721f4-2bf9-5d47-afcf-6eda222ac5a3",
+        "c4dda1cf-5ada-5965-bf7d-3e280e7b2a7b",
+        "6acb103d-279a-5d60-a846-ab594bdc61e9"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Performance",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "67255f44-ba3c-534b-9e05-d54959c5a11d",
+      "createdAt": "2026-10-27",
+      "title": "SuperOtium",
+      "shortDescription": "The Romans had a word, otium, for time that isn't spent working but isn't quite wasted either, and this small hotel has made it its name.",
+      "longDescription": "The Romans had a word, otium, for time that isn't spent working but isn't quite wasted either, and this small hotel has made it its name.\n\nSuperOtium was founded by Nicola Ciancio, a writer and curator, and Vincenzo Falcione, who works in ecology and environmental projects, and they describe it as an art hotel and a residency for artists and cultural professionals visiting Naples. The name joins two Latin words, super and otium, to suggest leisure that goes beyond the ordinary, the kind of free time in which ideas actually happen.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-superotium_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-superotium_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-superotium_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-superotium_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7f29251c-ab01-5a20-911f-90b1cbac3e78",
+          "order": 0,
+          "title": "SuperOtium",
+          "caption": "Beside the long red front of the National Archaeological Museum, at a modest street-level sign.",
+          "latitude": 40.85419151337744,
+          "longitude": 14.249448700420077,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-superotium.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-superotium_hero.webp",
+          "transcriptText": "The Romans had a word, otium, for time that isn't spent working but isn't quite wasted either, and this small hotel has made it its name.\n\nThe long red building beside you is the National Archaeological Museum, and SuperOtium occupies a nineteenth century apartment in the building that overlooks its exhibition halls, a private address with only a modest sign at street level.\n\nSuperOtium was founded by Nicola Ciancio, a writer and curator, and Vincenzo Falcione, who works in ecology and environmental projects, and they describe it as an art hotel and a residency for artists and cultural professionals visiting Naples. The name joins two Latin words, super and otium, to suggest leisure that goes beyond the ordinary, the kind of free time in which ideas actually happen.\n\nThe apartment covers about three hundred and seventy square metres, with five bedrooms, a suite and a large shared space built around a central kitchen, where breakfast is served at a common table. The interiors were designed by the studio Hypereden, and the fabrics on the canopies and screens carry patterns taken from the Pompeian mosaics in the museum next door, while the bedrooms borrow their colours from different sections of its galleries.\n\nMuch of the art arrives with the guests, too, since many of the works on the walls were left by artists who came here on residencies.\n\nThe Romans set otium against negotium, the business of earning a living, and Naples is usually sold to visitors through its food and its views. Here, a stone's throw from one of the great collections of ancient art, someone has built a place that asks you to slow down and make something instead.\n\nNext door, the museum's Farnese collection is the obvious first stop, and the Farnese Hercules, resting on his club after his labours, is about as fine a portrait of well earned otium as you'll find anywhere."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.85419151337744,
+      "centroidLongitude": 14.249448700420077,
+      "city": "Naples",
+      "country": "Italy",
+      "relatedTourIds": [
+        "c4dda1cf-5ada-5965-bf7d-3e280e7b2a7b",
+        "4af8b8d2-8f67-54aa-b729-0b42ffa169f1",
+        "47bc0a50-cd97-5013-9d84-352523ee74e6",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c",
+        "d17e0a2d-1a53-55bd-bdd3-79b1e036de96",
+        "edc9261f-b648-5b4c-b1b6-609a5f976a5e",
+        "b9994181-63a7-5869-b713-2a619339f314"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Notable Building",
+        "Art",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "27bd7b12-9203-53ec-8b49-0c0d70e0f790",
+      "createdAt": "2026-10-27",
+      "title": "Vineria Bandita",
+      "shortDescription": "Up on the Vomero, one of the most respectable neighbourhoods in Naples, there's a wine bar that has named itself after an outlaw.",
+      "longDescription": "Up on the Vomero, one of the most respectable neighbourhoods in Naples, there's a wine bar that has named itself after an outlaw.\n\nThe name on the sign, bandita, means a woman outlaw, and the bar's logo, by the illustrator Gianluca Cannizzo, shows exactly that figure. The owners are Giuliano Granata and Federica Palumbo, partners in life and in business, who opened in 2019 and modelled the room on the small wine bars of France, where tables sit close together and conversation drifts between them.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-vineria-bandita_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-vineria-bandita_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-vineria-bandita_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e7ab3b69-5ffb-5cfc-8828-86509b6a9ac7",
+          "order": 0,
+          "title": "Vineria Bandita",
+          "caption": "At number 57 Via Michele Kerbaker, on one of the Vomero's busy shopping streets.",
+          "latitude": 40.8446668473943,
+          "longitude": 14.232597927403635,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-vineria-bandita.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-vineria-bandita_hero.webp",
+          "transcriptText": "Up on the Vomero, one of the most respectable neighbourhoods in Naples, there's a wine bar that has named itself after an outlaw.\n\nOn Via Michele Kerbaker, one of the busy shopping streets of the hill, Vineria Bandita sits at number 57, a small bar with shelves of bottles behind the counter and a handful of little round tables.\n\nThe name on the sign, bandita, means a woman outlaw, and the bar's logo, by the illustrator Gianluca Cannizzo, shows exactly that figure. The owners are Giuliano Granata and Federica Palumbo, partners in life and in business, who opened in 2019 and modelled the room on the small wine bars of France, where tables sit close together and conversation drifts between them.\n\nThe wine is entirely natural, made by small producers with as little added as possible. There are more than a hundred and fifty labels in rotation, mostly Italian and especially from Campania, with about a third from elsewhere in Europe, France above all, and glasses that won't break the bank.\n\nThe food follows the same thinking, with up to fifteen small dishes and no set order to eat them in: burrata, anchovies from Cetara with buckwheat bread, or a Neapolitan panzanella, all built on seasonal ingredients from local producers and cooked as little as they need.\n\nThe owners have said they don't much care what the wine is called, natural or otherwise, because to them it's simply wine, and that's the gentle joke inside the name. What once looked like an outlaw on the wine list has settled very comfortably into the Vomero, and nobody here seems to be on the run.\n\nIf you arrive early, walk up through the Vomero to Castel Sant'Elmo, about fifteen minutes away, and catch the late light over the bay from its ramparts before you come back down for a glass."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.8446668473943,
+      "centroidLongitude": 14.232597927403635,
+      "city": "Naples",
+      "country": "Italy",
+      "relatedTourIds": [
+        "5fe721f4-2bf9-5d47-afcf-6eda222ac5a3",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "01deaa74-c2af-5cab-b0bb-cbf71651d47b",
+        "d17e0a2d-1a53-55bd-bdd3-79b1e036de96",
+        "92041407-6b30-5d78-a03e-8802b4161918",
+        "7bfcc300-43fe-5571-95d8-d266733feb23",
+        "3A65A8B3-215D-5F84-A3F2-23FAAE6E0300",
+        "347dab13-ec7d-5f13-811a-40fdd9c2f9e3"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark"
       ],
       "priceUSD": 0
     }
@@ -284595,6 +285691,8 @@
       "city": "Naples",
       "country": "Italy",
       "relatedTourIds": [
+        "60a862cd-c25f-5ded-be3b-6eedb60fb67f",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
         "3ABF8E27-EAD1-530F-9D99-44F0593F99C6"
       ],
       "primaryCategory": "foodAndDrink",
@@ -323180,7 +324278,13 @@
       "city": "Naples",
       "country": "Italy",
       "relatedTourIds": [
-        "3C6E6A9E-9A59-5522-866D-315A1A9D7983"
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "3C6E6A9E-9A59-5522-866D-315A1A9D7983",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "4276d68a-9de8-5ba0-ab89-4befd72b0f5c",
+        "d81c0dba-f5d8-52a0-bdec-6851d39a42e9",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "60a862cd-c25f-5ded-be3b-6eedb60fb67f"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -323276,6 +324380,12 @@
       "centroidLongitude": 14.26127,
       "city": "Naples",
       "country": "Italy",
+      "relatedTourIds": [
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "6acb103d-279a-5d60-a846-ab594bdc61e9",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "60a862cd-c25f-5ded-be3b-6eedb60fb67f"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Food",
@@ -323368,6 +324478,10 @@
       "centroidLongitude": 14.25115,
       "city": "Naples",
       "country": "Italy",
+      "relatedTourIds": [
+        "67255f44-ba3c-534b-9e05-d54959c5a11d",
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Art",
