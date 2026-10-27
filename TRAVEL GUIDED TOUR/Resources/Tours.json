@@ -16881,11 +16881,11 @@
         "c5e8b1f4-9a27-4e60-8d03-2f7a6c4e8b91",
         "b429a81a-88bf-494c-b48d-bde2b519b4bc",
         "a8c3e1f7-4d92-4b60-8e05-3f7a2c6d9b14",
+        "C8A2F430-B7E7-5188-BE83-C30A97A75B5C",
         "2f9dad4b-6c41-497e-a363-f8a6f5813ad7",
         "b6d9f3c1-8a27-4e64-9d05-3f8a2c7e6b41",
         "7f06e7fa-85ae-499d-87e6-c1a1cf391975",
-        "4fa2eeb0-1436-4cf0-8ca5-66eebe9159a3",
-        "e9c3b7a2-8d61-4f54-9a06-3c8e7b2d1f95"
+        "4fa2eeb0-1436-4cf0-8ca5-66eebe9159a3"
       ],
       "walkingDistanceMeters": null
     },
@@ -18086,11 +18086,11 @@
         "95F3221B-DD69-4CB2-8F84-C37B02E313AA",
         "3A61D9A3-8787-4AD2-B754-F33B3FFB03EB",
         "CEF594AA-F070-5228-9047-15D8318EE9E4",
+        "3F66A2A6-CE5D-5042-9526-A0453C5D7AB4",
         "03A50FE4-0B29-470E-820F-95EA3905A7D1",
         "58B564E6-267F-5F53-806F-1B25FA318976",
-        "B8C51640-E596-5728-9545-FF31CA13AB67",
-        "37532F5D-0593-57FC-846A-2F749FCF531F",
-        "F4F21197-296D-5965-86C7-CF2D497B8C59"
+        "341B9D57-1C9B-50A4-8B9E-F12C4B67C668",
+        "B8C51640-E596-5728-9545-FF31CA13AB67"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -19117,13 +19117,13 @@
       "country": "Portugal",
       "relatedTourIds": [
         "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "E20EE90C-E0CA-5200-9774-E0B40CD52BE8",
         "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "3F66A2A6-CE5D-5042-9526-A0453C5D7AB4",
+        "E0D48C43-EABC-536F-957D-8FF068FA9513",
         "95F3221B-DD69-4CB2-8F84-C37B02E313AA",
         "E743D100-97B3-43CC-948F-BFBF029EFB89",
-        "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1",
-        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
-        "421D7599-EBF8-4898-9F80-14B63783C74E",
-        "65053BA1-BC85-5480-8952-CBBAEC547D79"
+        "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -19344,14 +19344,14 @@
       "city": "Almada",
       "country": "Portugal",
       "relatedTourIds": [
+        "909C9225-AFAE-57CF-B0C0-6B66C91353A9",
         "defeef28-4159-4ad2-813a-111c64720889",
         "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
         "73c6f127-c1c7-49af-abd2-f889b57dc214",
         "58B564E6-267F-5F53-806F-1B25FA318976",
         "799af2cb-a13a-501d-845f-5a051627b7a7",
         "e25e5718-6f18-4f7c-8d5a-174662f1a953",
-        "dc4d6896-7b5d-53be-89c3-de907226a589",
-        "2DDA0046-686D-440B-8EEF-1E40E399CC34"
+        "dc4d6896-7b5d-53be-89c3-de907226a589"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -24118,8 +24118,8 @@
         "e9c3b7a2-8d61-4f54-9a06-3c8e7b2d1f95",
         "a1b8d5ec-1a9e-4245-82ff-4ec3ca828d39",
         "f2c8b6a3-9d41-4e64-8a05-3c9e8b1d7f42",
-        "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb",
-        "2f9dad4b-6c41-497e-a363-f8a6f5813ad7"
+        "C8A2F430-B7E7-5188-BE83-C30A97A75B5C",
+        "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb"
       ],
       "walkingDistanceMeters": null
     },
@@ -105354,11 +105354,11 @@
         "64b5ec25-e709-5022-b2d5-044553817e03",
         "761fda34-6b55-5052-8379-fc9259b73894",
         "3d8b68e7-4690-5287-8df7-5f5c6b72c977",
+        "DBAF5E23-4061-5578-9873-948AAF02E60E",
         "7536637e-9a4e-5d4e-92a2-7eba2992c6d8",
         "4c570421-db7b-5820-89b0-f802c0f76516",
         "AB1D064F-09A2-5575-8546-53E1DA06EA50",
-        "cbf06aa9-60c7-529f-a446-662122035379",
-        "8c58a4a8-5c31-51d7-9bbb-6ee82e699726"
+        "cbf06aa9-60c7-529f-a446-662122035379"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -105579,10 +105579,10 @@
         "e05b47e0-6a31-5c6b-95bc-41cb4505347b",
         "761fda34-6b55-5052-8379-fc9259b73894",
         "fb61aaeb-83fb-587c-b320-ca1e749cf342",
+        "DBAF5E23-4061-5578-9873-948AAF02E60E",
         "64b5ec25-e709-5022-b2d5-044553817e03",
         "AB1D064F-09A2-5575-8546-53E1DA06EA50",
-        "4c0ede4e-e564-54e6-9b39-4d21a9f2aa79",
-        "d546b26b-e5c7-5e65-955b-6c760801e8cd"
+        "4c0ede4e-e564-54e6-9b39-4d21a9f2aa79"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -113040,14 +113040,14 @@
       "city": "Tbilisi",
       "country": "Georgia",
       "relatedTourIds": [
+        "2512CDFF-FA89-59F5-8C9B-E7DA0D332251",
+        "0D0AC3B5-4F89-551E-8B93-9461E3A62990",
         "dadc086c-e8c3-5a4f-a94e-59451e665ccd",
         "6e4bd7ab-1f41-56b6-9b90-6db600c31de8",
         "a00108c0-4f6a-5b55-a692-026b0ee96ccd",
         "1cf50ba8-aa01-5dc1-af81-d9b5d8cc1c84",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
-        "46ae1b3d-591c-513f-bb30-318a1333c60b",
-        "8fa5fad9-82ff-5181-9522-a00513326aef",
-        "efe39735-c6a8-5bd3-bedd-594d78985b27"
+        "46ae1b3d-591c-513f-bb30-318a1333c60b"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -113306,14 +113306,14 @@
       "city": "Wrocław",
       "country": "Poland",
       "relatedTourIds": [
+        "6BBFE2C6-E407-5C57-8CD0-3A60536D5D0E",
+        "06DA67BF-4A27-52B6-8B8C-069C8B7D6700",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
         "a8a4bbf9-093a-5da1-a573-46de26cefe94",
         "a9cbc1f6-9acd-5072-b743-f801f3b1eb21",
         "762c63b0-84e1-5636-87a9-a5d8ab11157c",
         "3c4e26eb-859c-5ce9-b896-b00cbc0ab157",
-        "bf2abda0-745b-577c-bc92-676f0dc0de92",
-        "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
-        "f8e28067-d6d6-5e7a-bfcb-3534241ae088"
+        "bf2abda0-745b-577c-bc92-676f0dc0de92"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -114412,12 +114412,12 @@
       "relatedTourIds": [
         "4105a64a-6820-572f-8728-ed2d40816367",
         "58911C0B-7619-50F2-BD4D-7201A2D3622E",
+        "0D0AC3B5-4F89-551E-8B93-9461E3A62990",
         "5e8698d6-cae7-5264-ad40-31fdbbaceb3b",
         "6e4bd7ab-1f41-56b6-9b90-6db600c31de8",
+        "2512CDFF-FA89-59F5-8C9B-E7DA0D332251",
         "8fa5fad9-82ff-5181-9522-a00513326aef",
-        "1cf50ba8-aa01-5dc1-af81-d9b5d8cc1c84",
-        "0e81ef76-f1a1-5477-b09d-45c1372b14a7",
-        "2d5545c6-9f84-5bdb-bac9-30f1cb2214d0"
+        "1cf50ba8-aa01-5dc1-af81-d9b5d8cc1c84"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -114792,10 +114792,10 @@
         "dadc086c-e8c3-5a4f-a94e-59451e665ccd",
         "58911C0B-7619-50F2-BD4D-7201A2D3622E",
         "b238299d-5745-5bef-a0b5-7fac4aca5c37",
+        "0D0AC3B5-4F89-551E-8B93-9461E3A62990",
         "de7a0c3d-0ea4-53ac-8a87-6e7653a2eb13",
         "6e4bd7ab-1f41-56b6-9b90-6db600c31de8",
-        "4105a64a-6820-572f-8728-ed2d40816367",
-        "ce456ec3-1071-5475-bcce-e0973b88d945"
+        "4105a64a-6820-572f-8728-ed2d40816367"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -114847,10 +114847,10 @@
         "726a0fba-a5fd-5771-9d83-677c11a89309",
         "bf2abda0-745b-577c-bc92-676f0dc0de92",
         "a8a4bbf9-093a-5da1-a573-46de26cefe94",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
         "46ae1b3d-591c-513f-bb30-318a1333c60b",
-        "0042d665-7040-5fee-86ae-dfbce0cb5f54",
-        "a0aa6ff3-fc2f-5d6c-83be-b6575ed0c866"
+        "0042d665-7040-5fee-86ae-dfbce0cb5f54"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -115285,13 +115285,13 @@
       "country": "Georgia",
       "relatedTourIds": [
         "a00108c0-4f6a-5b55-a692-026b0ee96ccd",
+        "2512CDFF-FA89-59F5-8C9B-E7DA0D332251",
+        "0D0AC3B5-4F89-551E-8B93-9461E3A62990",
         "dadc086c-e8c3-5a4f-a94e-59451e665ccd",
         "4105a64a-6820-572f-8728-ed2d40816367",
         "5e8698d6-cae7-5264-ad40-31fdbbaceb3b",
         "58911C0B-7619-50F2-BD4D-7201A2D3622E",
-        "1cf50ba8-aa01-5dc1-af81-d9b5d8cc1c84",
-        "8fa5fad9-82ff-5181-9522-a00513326aef",
-        "efe39735-c6a8-5bd3-bedd-594d78985b27"
+        "1cf50ba8-aa01-5dc1-af81-d9b5d8cc1c84"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -115395,13 +115395,13 @@
       "country": "Georgia",
       "relatedTourIds": [
         "6e4bd7ab-1f41-56b6-9b90-6db600c31de8",
+        "2512CDFF-FA89-59F5-8C9B-E7DA0D332251",
+        "0D0AC3B5-4F89-551E-8B93-9461E3A62990",
         "5e8698d6-cae7-5264-ad40-31fdbbaceb3b",
         "a9cbc1f6-9acd-5072-b743-f801f3b1eb21",
         "9d0433ff-5d6d-5324-93c7-89d577809253",
         "378df5f3-87f4-5795-98af-f67d53a89a50",
-        "5f8ecfcf-6841-5878-a76f-fa63c55b6d25",
-        "e10b22c1-874e-5efe-a683-4aa37a64e974",
-        "06c23128-ddce-5c2f-b727-ddd2c286871f"
+        "5f8ecfcf-6841-5878-a76f-fa63c55b6d25"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -120574,11 +120574,11 @@
         "dadc086c-e8c3-5a4f-a94e-59451e665ccd",
         "58911C0B-7619-50F2-BD4D-7201A2D3622E",
         "6e4bd7ab-1f41-56b6-9b90-6db600c31de8",
+        "0D0AC3B5-4F89-551E-8B93-9461E3A62990",
         "1cf50ba8-aa01-5dc1-af81-d9b5d8cc1c84",
         "2d5545c6-9f84-5bdb-bac9-30f1cb2214d0",
         "0e81ef76-f1a1-5477-b09d-45c1372b14a7",
-        "8fa5fad9-82ff-5181-9522-a00513326aef",
-        "219f9236-c058-5b7a-9a29-7b7332317402"
+        "8fa5fad9-82ff-5181-9522-a00513326aef"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -120688,12 +120688,12 @@
       "relatedTourIds": [
         "8fa5fad9-82ff-5181-9522-a00513326aef",
         "4105a64a-6820-572f-8728-ed2d40816367",
+        "0D0AC3B5-4F89-551E-8B93-9461E3A62990",
         "dadc086c-e8c3-5a4f-a94e-59451e665ccd",
         "0e81ef76-f1a1-5477-b09d-45c1372b14a7",
         "ce456ec3-1071-5475-bcce-e0973b88d945",
         "455f7e84-75fe-5909-a6be-7a806f27f3e6",
-        "58911C0B-7619-50F2-BD4D-7201A2D3622E",
-        "53d6f0cf-3ba9-59da-860b-7656148a54a1"
+        "58911C0B-7619-50F2-BD4D-7201A2D3622E"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -121181,8 +121181,8 @@
         "2e042406-4c16-5fdc-a906-86694f87341c",
         "1cf50ba8-aa01-5dc1-af81-d9b5d8cc1c84",
         "de7a0c3d-0ea4-53ac-8a87-6e7653a2eb13",
-        "BFD585C3-B120-56DE-A5FE-28CB97DA404D",
-        "ce456ec3-1071-5475-bcce-e0973b88d945"
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
+        "BFD585C3-B120-56DE-A5FE-28CB97DA404D"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -121969,8 +121969,8 @@
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
         "b238299d-5745-5bef-a0b5-7fac4aca5c37",
         "096a3cba-09b6-57e7-8379-2e49f3a7b507",
-        "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
-        "eae0eca2-4d76-565f-9deb-a59ed081580f"
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
+        "1f3b0f44-9600-589f-ad00-a73f4844c2bf"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -130475,7 +130475,7 @@
         "ee5be70b-02db-5294-aef8-be93d4304251",
         "71dbdc42-1df9-5f3f-b005-9ffa760652ca",
         "0042d665-7040-5fee-86ae-dfbce0cb5f54",
-        "c9ac6e32-28fd-50e4-9fbb-9c5a85cae554"
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -130759,9 +130759,9 @@
         "bf2abda0-745b-577c-bc92-676f0dc0de92",
         "71dbdc42-1df9-5f3f-b005-9ffa760652ca",
         "a9cbc1f6-9acd-5072-b743-f801f3b1eb21",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
-        "9504178e-9883-5bc9-86ea-774619774b7c",
-        "762c63b0-84e1-5636-87a9-a5d8ab11157c"
+        "9504178e-9883-5bc9-86ea-774619774b7c"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -131141,10 +131141,10 @@
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
         "bf2abda0-745b-577c-bc92-676f0dc0de92",
         "c9ac6e32-28fd-50e4-9fbb-9c5a85cae554",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "71dbdc42-1df9-5f3f-b005-9ffa760652ca",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
-        "f8e28067-d6d6-5e7a-bfcb-3534241ae088",
-        "20f7005b-57d9-50ca-9229-cdd2c6dacfed"
+        "f8e28067-d6d6-5e7a-bfcb-3534241ae088"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -131200,9 +131200,9 @@
         "8d7ffae6-757f-521c-b399-f935897483d3",
         "d7574936-364f-5015-ad5c-0202b5a26888",
         "95de4cb3-d951-5f60-91a5-69e7dff43901",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "c9ac6e32-28fd-50e4-9fbb-9c5a85cae554",
-        "20f7005b-57d9-50ca-9229-cdd2c6dacfed",
-        "8C161438-70DC-5AC5-9A72-99E670FC77A9"
+        "20f7005b-57d9-50ca-9229-cdd2c6dacfed"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -131311,7 +131311,7 @@
         "ad217467-ce14-5c5c-ac81-bb3ccc21ae71",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
-        "c9ac6e32-28fd-50e4-9fbb-9c5a85cae554"
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -131419,11 +131419,11 @@
         "a9cbc1f6-9acd-5072-b743-f801f3b1eb21",
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
         "762c63b0-84e1-5636-87a9-a5d8ab11157c",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "E5EA1925-C0D0-581B-9985-3F5C67755978",
         "bf2abda0-745b-577c-bc92-676f0dc0de92",
         "20f7005b-57d9-50ca-9229-cdd2c6dacfed",
-        "30234cc2-792a-5ef5-9588-e7646e04c81d",
-        "a8a4bbf9-093a-5da1-a573-46de26cefe94"
+        "30234cc2-792a-5ef5-9588-e7646e04c81d"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -131530,14 +131530,14 @@
       "city": "Warsaw",
       "country": "Poland",
       "relatedTourIds": [
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
         "20f7005b-57d9-50ca-9229-cdd2c6dacfed",
         "0042d665-7040-5fee-86ae-dfbce0cb5f54",
         "d7574936-364f-5015-ad5c-0202b5a26888",
         "a8a4bbf9-093a-5da1-a573-46de26cefe94",
         "c9ac6e32-28fd-50e4-9fbb-9c5a85cae554",
-        "ee5be70b-02db-5294-aef8-be93d4304251",
-        "E5EA1925-C0D0-581B-9985-3F5C67755978"
+        "ee5be70b-02db-5294-aef8-be93d4304251"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -131593,10 +131593,10 @@
         "0042d665-7040-5fee-86ae-dfbce0cb5f54",
         "bf2abda0-745b-577c-bc92-676f0dc0de92",
         "20f7005b-57d9-50ca-9229-cdd2c6dacfed",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "726a0fba-a5fd-5771-9d83-677c11a89309",
         "ee5be70b-02db-5294-aef8-be93d4304251",
-        "8d7ffae6-757f-521c-b399-f935897483d3",
-        "3c4e26eb-859c-5ce9-b896-b00cbc0ab157"
+        "8d7ffae6-757f-521c-b399-f935897483d3"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -131650,12 +131650,12 @@
       "relatedTourIds": [
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
         "20f7005b-57d9-50ca-9229-cdd2c6dacfed",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "ee5be70b-02db-5294-aef8-be93d4304251",
         "c9ac6e32-28fd-50e4-9fbb-9c5a85cae554",
         "bf2abda0-745b-577c-bc92-676f0dc0de92",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
-        "ad217467-ce14-5c5c-ac81-bb3ccc21ae71",
-        "726a0fba-a5fd-5771-9d83-677c11a89309"
+        "ad217467-ce14-5c5c-ac81-bb3ccc21ae71"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -131826,13 +131826,13 @@
       "country": "Poland",
       "relatedTourIds": [
         "bf2abda0-745b-577c-bc92-676f0dc0de92",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
         "20f7005b-57d9-50ca-9229-cdd2c6dacfed",
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
         "bd159290-2586-5fff-a2cf-fc993dde8084",
         "3c4e26eb-859c-5ce9-b896-b00cbc0ab157",
-        "726a0fba-a5fd-5771-9d83-677c11a89309",
-        "762c63b0-84e1-5636-87a9-a5d8ab11157c"
+        "726a0fba-a5fd-5771-9d83-677c11a89309"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -131890,7 +131890,7 @@
         "3c4e26eb-859c-5ce9-b896-b00cbc0ab157",
         "ad217467-ce14-5c5c-ac81-bb3ccc21ae71",
         "ee5be70b-02db-5294-aef8-be93d4304251",
-        "762c63b0-84e1-5636-87a9-a5d8ab11157c"
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -132057,12 +132057,12 @@
       "relatedTourIds": [
         "ee5be70b-02db-5294-aef8-be93d4304251",
         "3c4e26eb-859c-5ce9-b896-b00cbc0ab157",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "bf2abda0-745b-577c-bc92-676f0dc0de92",
         "762c63b0-84e1-5636-87a9-a5d8ab11157c",
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
         "20f7005b-57d9-50ca-9229-cdd2c6dacfed",
-        "c9ac6e32-28fd-50e4-9fbb-9c5a85cae554",
-        "8d7ffae6-757f-521c-b399-f935897483d3"
+        "c9ac6e32-28fd-50e4-9fbb-9c5a85cae554"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -132111,13 +132111,13 @@
       "country": "Poland",
       "relatedTourIds": [
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "3c4e26eb-859c-5ce9-b896-b00cbc0ab157",
         "20f7005b-57d9-50ca-9229-cdd2c6dacfed",
         "a8a4bbf9-093a-5da1-a573-46de26cefe94",
         "ad217467-ce14-5c5c-ac81-bb3ccc21ae71",
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
-        "46ae1b3d-591c-513f-bb30-318a1333c60b",
-        "d7574936-364f-5015-ad5c-0202b5a26888"
+        "46ae1b3d-591c-513f-bb30-318a1333c60b"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -132170,12 +132170,12 @@
       "relatedTourIds": [
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
         "762c63b0-84e1-5636-87a9-a5d8ab11157c",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
         "E5EA1925-C0D0-581B-9985-3F5C67755978",
         "726a0fba-a5fd-5771-9d83-677c11a89309",
         "bf2abda0-745b-577c-bc92-676f0dc0de92",
-        "0042d665-7040-5fee-86ae-dfbce0cb5f54",
-        "a8a4bbf9-093a-5da1-a573-46de26cefe94"
+        "0042d665-7040-5fee-86ae-dfbce0cb5f54"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -132346,8 +132346,8 @@
         "3c4e26eb-859c-5ce9-b896-b00cbc0ab157",
         "ad217467-ce14-5c5c-ac81-bb3ccc21ae71",
         "daa173c2-95ff-5cf7-93fc-854e933f9c14",
-        "726a0fba-a5fd-5771-9d83-677c11a89309",
-        "0042d665-7040-5fee-86ae-dfbce0cb5f54"
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
+        "726a0fba-a5fd-5771-9d83-677c11a89309"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -136523,10 +136523,10 @@
         "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
         "376ff378-1167-592e-b7c1-ae0fb460e38d",
         "ba3aee78-628c-5be7-b235-a877578ad6c2",
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
         "c440159d-6649-5a76-bd06-9d51aaa7566d",
         "538cad52-e2bd-5792-9427-992df3b72046",
-        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
-        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28"
+        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582"
       ],
       "primaryCategory": "literature",
       "tags": [
@@ -136583,8 +136583,8 @@
         "228f7619-8dda-5f08-8697-6df45bc46e38",
         "c440159d-6649-5a76-bd06-9d51aaa7566d",
         "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
-        "420d32a9-9b69-51d1-a149-fd33ee07548e",
-        "e40f6459-82c8-57fd-afaf-49ad58ad31ce"
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
+        "420d32a9-9b69-51d1-a149-fd33ee07548e"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -136696,7 +136696,7 @@
         "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
         "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
         "2f97649f-4b0e-5cc5-9e6d-68c639a7b95d",
-        "228f7619-8dda-5f08-8697-6df45bc46e38"
+        "DCDD71E1-293B-53E9-8048-4110B33272F4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -136752,8 +136752,8 @@
         "420d32a9-9b69-51d1-a149-fd33ee07548e",
         "228f7619-8dda-5f08-8697-6df45bc46e38",
         "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
-        "b6c95313-0eef-5e15-933f-acd5ef08ebe1",
-        "bcd23ad7-07d0-5b7b-8836-e2b7638ce8fd"
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
+        "b6c95313-0eef-5e15-933f-acd5ef08ebe1"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -136861,7 +136861,7 @@
         "376ff378-1167-592e-b7c1-ae0fb460e38d",
         "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
         "b14774d2-9640-507c-b304-cfa0a6fb9135",
-        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28"
+        "DCDD71E1-293B-53E9-8048-4110B33272F4"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -136980,8 +136980,8 @@
         "2f97649f-4b0e-5cc5-9e6d-68c639a7b95d",
         "ba3aee78-628c-5be7-b235-a877578ad6c2",
         "228f7619-8dda-5f08-8697-6df45bc46e38",
-        "45649895-32b8-51f6-a32e-ac3f14672c03",
-        "f65d8e70-63a9-5410-9fce-9f7e38737c9a"
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
+        "45649895-32b8-51f6-a32e-ac3f14672c03"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -137088,12 +137088,12 @@
       "relatedTourIds": [
         "45649895-32b8-51f6-a32e-ac3f14672c03",
         "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28",
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
         "538cad52-e2bd-5792-9427-992df3b72046",
         "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
         "ba3aee78-628c-5be7-b235-a877578ad6c2",
         "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
-        "420d32a9-9b69-51d1-a149-fd33ee07548e",
-        "CFE6A911-141D-5403-A8CB-42D3B4B9DE17"
+        "420d32a9-9b69-51d1-a149-fd33ee07548e"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -137608,13 +137608,13 @@
       "country": "Netherlands",
       "relatedTourIds": [
         "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
         "538cad52-e2bd-5792-9427-992df3b72046",
         "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
         "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
         "45649895-32b8-51f6-a32e-ac3f14672c03",
         "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
-        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28",
-        "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F"
+        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -137719,11 +137719,11 @@
         "376ff378-1167-592e-b7c1-ae0fb460e38d",
         "cf3d2457-3f66-5c09-a4f9-040670a436df",
         "8a1265d9-2332-5373-a223-a8bc48744dee",
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
         "4183767a-c190-5856-9d5d-08bb50ec2c39",
         "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
         "df321c7d-f281-5e9a-88f9-b059cb398978",
-        "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
-        "ba3aee78-628c-5be7-b235-a877578ad6c2"
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -173156,6 +173156,7 @@
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
         "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
+        "98D29A22-8F9D-5B7D-BE3B-B06B62323328",
         "A94E4477-2234-5766-B07C-5FD2A7E3B214",
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
         "B2495278-DEEA-5D59-B655-65523FFF4DC4",
@@ -180173,9 +180174,9 @@
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
         "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
         "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
+        "98D29A22-8F9D-5B7D-BE3B-B06B62323328",
         "A94E4477-2234-5766-B07C-5FD2A7E3B214",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688",
-        "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD"
+        "4A239611-BDB6-5D48-982A-35E2F8E44688"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -200963,11 +200964,11 @@
         "7354C765-DAF5-5B08-91DE-2749969CC0BA",
         "11C562A0-2CA6-5344-BF9E-7ADCB721FF2B",
         "6BCA3704-C604-5639-A323-F4EBEFF1D76C",
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
         "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
         "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
         "538cad52-e2bd-5792-9427-992df3b72046",
-        "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
-        "ba3aee78-628c-5be7-b235-a877578ad6c2"
+        "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -213014,14 +213015,14 @@
       "city": "Warsaw",
       "country": "Poland",
       "relatedTourIds": [
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
         "a9cbc1f6-9acd-5072-b743-f801f3b1eb21",
         "0042d665-7040-5fee-86ae-dfbce0cb5f54",
         "30234cc2-792a-5ef5-9588-e7646e04c81d",
         "ad217467-ce14-5c5c-ac81-bb3ccc21ae71",
-        "762c63b0-84e1-5636-87a9-a5d8ab11157c",
-        "8C161438-70DC-5AC5-9A72-99E670FC77A9"
+        "762c63b0-84e1-5636-87a9-a5d8ab11157c"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -218765,13 +218766,13 @@
       "country": "United Kingdom",
       "relatedTourIds": [
         "51E1861F-5F79-5321-AC7C-4341FCFDF393",
+        "3AF6916F-394A-58B9-9866-F76A7DB929B7",
         "EC258C38-D815-5811-BF38-60F8DCEA7161",
         "5AA6D233-6CE2-5E60-A390-5918AF904644",
         "137087D6-8A24-501E-9072-B74F125AE5BB",
         "248A491A-36DA-5495-89A7-62823EC88231",
         "EB342381-1F96-50CE-954F-BD61D670F584",
-        "16EF62BA-687D-56B3-8D73-40DFCFB6D4C7",
-        "4C8C3D32-2CDE-5C38-8FFC-0022FADCB4D5"
+        "16EF62BA-687D-56B3-8D73-40DFCFB6D4C7"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -223855,7 +223856,7 @@
         "248A491A-36DA-5495-89A7-62823EC88231",
         "4C8C3D32-2CDE-5C38-8FFC-0022FADCB4D5",
         "D7617C05-6FAA-513C-A66F-7D78E0948487",
-        "6D865179-B079-5289-8023-1539720EC934"
+        "80BE7983-C83C-54D6-819C-DB6BFBF28140"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -232288,13 +232289,13 @@
       "country": "Netherlands",
       "relatedTourIds": [
         "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
         "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
         "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
         "538cad52-e2bd-5792-9427-992df3b72046",
         "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
         "7354C765-DAF5-5B08-91DE-2749969CC0BA",
-        "27B39B0A-F6D6-584E-9F02-71AA6C694646",
-        "e40f6459-82c8-57fd-afaf-49ad58ad31ce"
+        "27B39B0A-F6D6-584E-9F02-71AA6C694646"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -233988,12 +233989,12 @@
       "relatedTourIds": [
         "726a0fba-a5fd-5771-9d83-677c11a89309",
         "0042d665-7040-5fee-86ae-dfbce0cb5f54",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "E5EA1925-C0D0-581B-9985-3F5C67755978",
         "d7574936-364f-5015-ad5c-0202b5a26888",
         "A0ED14D9-895E-51F7-9A59-D4EC0B592B1A",
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
-        "D60A6703-8281-593A-B1AA-9F7B4306341A",
-        "a9cbc1f6-9acd-5072-b743-f801f3b1eb21"
+        "D60A6703-8281-593A-B1AA-9F7B4306341A"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -248901,12 +248902,12 @@
       "relatedTourIds": [
         "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
         "11C562A0-2CA6-5344-BF9E-7ADCB721FF2B",
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
         "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
         "6BCA3704-C604-5639-A323-F4EBEFF1D76C",
         "9E536417-737B-559B-8F5C-583D88EA24E4",
         "27B39B0A-F6D6-584E-9F02-71AA6C694646",
-        "538cad52-e2bd-5792-9427-992df3b72046",
-        "f65d8e70-63a9-5410-9fce-9f7e38737c9a"
+        "538cad52-e2bd-5792-9427-992df3b72046"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -250344,6 +250345,7 @@
         "8C161438-70DC-5AC5-9A72-99E670FC77A9",
         "a0aa6ff3-fc2f-5d6c-83be-b6575ed0c866",
         "3c4e26eb-859c-5ce9-b896-b00cbc0ab157",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "0042d665-7040-5fee-86ae-dfbce0cb5f54"
       ],
       "primaryCategory": "architecture",
@@ -251875,9 +251877,9 @@
         "66D2B202-D8AF-5A75-BDEC-4BDBF444252B",
         "407B19A1-2EB4-5903-ACFD-E037CAD6EFB8",
         "7f16bf79-a24f-566b-b645-8533d88f66c4",
+        "C8E8C2CD-659C-5DB5-847F-5DCD8E55AB52",
         "EBDFA4FD-5534-5EF5-B931-372306D9FB12",
-        "BFD585C3-B120-56DE-A5FE-28CB97DA404D",
-        "0D3CC7A4-C4AC-51E7-AB4A-BC3DECC8E293"
+        "BFD585C3-B120-56DE-A5FE-28CB97DA404D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -252274,11 +252276,11 @@
         "59ECCB77-8473-573B-A3BE-480A97CF4407",
         "DBB452EB-86BD-5C6C-A09C-C99464661FAA",
         "897714DB-D2A7-521B-A2CD-7E673522E2C3",
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
         "EBDFA4FD-5534-5EF5-B931-372306D9FB12",
         "BFD585C3-B120-56DE-A5FE-28CB97DA404D",
         "9940ADDF-DEFD-5F96-9943-A16A1BB12B8A",
-        "0D3CC7A4-C4AC-51E7-AB4A-BC3DECC8E293",
-        "407B19A1-2EB4-5903-ACFD-E037CAD6EFB8"
+        "0D3CC7A4-C4AC-51E7-AB4A-BC3DECC8E293"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -252484,13 +252486,13 @@
       "country": "Czech Republic",
       "relatedTourIds": [
         "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6",
+        "C8E8C2CD-659C-5DB5-847F-5DCD8E55AB52",
         "85D07EAB-88C2-5456-B3C8-492B743D534C",
         "59ECCB77-8473-573B-A3BE-480A97CF4407",
         "EE222938-8598-5552-9C04-917A16BA4268",
         "0D3CC7A4-C4AC-51E7-AB4A-BC3DECC8E293",
         "40D59D0B-4481-5747-A3E3-1F7C9373F512",
-        "7f16bf79-a24f-566b-b645-8533d88f66c4",
-        "BFD585C3-B120-56DE-A5FE-28CB97DA404D"
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -252542,10 +252544,10 @@
         "40D59D0B-4481-5747-A3E3-1F7C9373F512",
         "9F76D644-5FCA-5708-BA65-1C8EC1EF2167",
         "1B94C1BC-1DF4-5124-BFF4-62D45B046268",
+        "C8E8C2CD-659C-5DB5-847F-5DCD8E55AB52",
         "59ECCB77-8473-573B-A3BE-480A97CF4407",
-        "DBB452EB-86BD-5C6C-A09C-C99464661FAA",
-        "85D07EAB-88C2-5456-B3C8-492B743D534C",
-        "BFD585C3-B120-56DE-A5FE-28CB97DA404D"
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
+        "DBB452EB-86BD-5C6C-A09C-C99464661FAA"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -253060,13 +253062,13 @@
       "country": "Czech Republic",
       "relatedTourIds": [
         "59ECCB77-8473-573B-A3BE-480A97CF4407",
+        "C8E8C2CD-659C-5DB5-847F-5DCD8E55AB52",
         "897714DB-D2A7-521B-A2CD-7E673522E2C3",
         "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6",
         "66D2B202-D8AF-5A75-BDEC-4BDBF444252B",
         "407B19A1-2EB4-5903-ACFD-E037CAD6EFB8",
         "85D07EAB-88C2-5456-B3C8-492B743D534C",
-        "7f16bf79-a24f-566b-b645-8533d88f66c4",
-        "DBB452EB-86BD-5C6C-A09C-C99464661FAA"
+        "7f16bf79-a24f-566b-b645-8533d88f66c4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -253693,7 +253695,7 @@
         "E4A74305-3EA6-5C6E-BBFA-720EBDEC9DD2",
         "FB6A520E-1FAA-5873-8D06-61BD10D2248B",
         "06B8BCDE-F3FF-53DB-9D6C-709E0D9C9950",
-        "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6"
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -253801,8 +253803,8 @@
         "FB6A520E-1FAA-5873-8D06-61BD10D2248B",
         "E4A74305-3EA6-5C6E-BBFA-720EBDEC9DD2",
         "F7CD83C9-82ED-5B97-AD15-4FFDE1C18658",
-        "59ECCB77-8473-573B-A3BE-480A97CF4407",
-        "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6"
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
+        "59ECCB77-8473-573B-A3BE-480A97CF4407"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -253907,11 +253909,11 @@
         "3BF94D20-990C-530F-A5B1-DA6396F1FAB7",
         "0C09E16D-9BFC-5E4D-974C-89327DAFE51F",
         "BFD585C3-B120-56DE-A5FE-28CB97DA404D",
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
         "EE222938-8598-5552-9C04-917A16BA4268",
         "E4A74305-3EA6-5C6E-BBFA-720EBDEC9DD2",
         "8E0B80FA-9993-53FD-8819-3A9BEDC7A75A",
-        "FB6A520E-1FAA-5873-8D06-61BD10D2248B",
-        "59ECCB77-8473-573B-A3BE-480A97CF4407"
+        "FB6A520E-1FAA-5873-8D06-61BD10D2248B"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -254072,8 +254074,8 @@
         "E4A74305-3EA6-5C6E-BBFA-720EBDEC9DD2",
         "BFD585C3-B120-56DE-A5FE-28CB97DA404D",
         "32ECD33F-21F5-5EE5-B216-8AD7C80B62A1",
-        "06B8BCDE-F3FF-53DB-9D6C-709E0D9C9950",
-        "59ECCB77-8473-573B-A3BE-480A97CF4407"
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
+        "06B8BCDE-F3FF-53DB-9D6C-709E0D9C9950"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -254230,13 +254232,13 @@
       "country": "Czech Republic",
       "relatedTourIds": [
         "FB6A520E-1FAA-5873-8D06-61BD10D2248B",
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
         "DDDC862F-F5E5-5E44-AD68-BCC86BC15280",
         "64DAC586-0DC0-523C-91C7-FB3C6F3B380A",
         "BFD585C3-B120-56DE-A5FE-28CB97DA404D",
         "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6",
         "F7CD83C9-82ED-5B97-AD15-4FFDE1C18658",
-        "0D3CC7A4-C4AC-51E7-AB4A-BC3DECC8E293",
-        "06B8BCDE-F3FF-53DB-9D6C-709E0D9C9950"
+        "0D3CC7A4-C4AC-51E7-AB4A-BC3DECC8E293"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -254285,13 +254287,13 @@
       "country": "Czech Republic",
       "relatedTourIds": [
         "E4A74305-3EA6-5C6E-BBFA-720EBDEC9DD2",
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
         "BFD585C3-B120-56DE-A5FE-28CB97DA404D",
         "DDDC862F-F5E5-5E44-AD68-BCC86BC15280",
         "EBDFA4FD-5534-5EF5-B931-372306D9FB12",
         "5799C6C1-AF5A-5BA6-A982-1480F4A03B91",
         "59ECCB77-8473-573B-A3BE-480A97CF4407",
-        "64DAC586-0DC0-523C-91C7-FB3C6F3B380A",
-        "66D2B202-D8AF-5A75-BDEC-4BDBF444252B"
+        "64DAC586-0DC0-523C-91C7-FB3C6F3B380A"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -254454,9 +254456,9 @@
         "E4A74305-3EA6-5C6E-BBFA-720EBDEC9DD2",
         "EBDFA4FD-5534-5EF5-B931-372306D9FB12",
         "DDDC862F-F5E5-5E44-AD68-BCC86BC15280",
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
         "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6",
-        "59ECCB77-8473-573B-A3BE-480A97CF4407",
-        "F7CD83C9-82ED-5B97-AD15-4FFDE1C18658"
+        "59ECCB77-8473-573B-A3BE-480A97CF4407"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -254558,14 +254560,14 @@
       "city": "Prague",
       "country": "Czech Republic",
       "relatedTourIds": [
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
         "EBDFA4FD-5534-5EF5-B931-372306D9FB12",
         "F7CD83C9-82ED-5B97-AD15-4FFDE1C18658",
         "DDDC862F-F5E5-5E44-AD68-BCC86BC15280",
         "5799C6C1-AF5A-5BA6-A982-1480F4A03B91",
         "1B94C1BC-1DF4-5124-BFF4-62D45B046268",
         "FB6A520E-1FAA-5873-8D06-61BD10D2248B",
-        "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6",
-        "59ECCB77-8473-573B-A3BE-480A97CF4407"
+        "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -274353,6 +274355,7 @@
       "city": "New Canaan",
       "country": "United States",
       "relatedTourIds": [
+        "F490D545-FC94-50FD-A263-882B1062BF53",
         "DBF80726-D135-54CE-9C33-E10023D59AB6",
         "86B587FA-58B7-540B-B337-74E036D0258F"
       ],
@@ -279087,12 +279090,12 @@
       "relatedTourIds": [
         "D7617C05-6FAA-513C-A66F-7D78E0948487",
         "248A491A-36DA-5495-89A7-62823EC88231",
+        "3AF6916F-394A-58B9-9866-F76A7DB929B7",
         "137087D6-8A24-501E-9072-B74F125AE5BB",
         "EC258C38-D815-5811-BF38-60F8DCEA7161",
         "EB342381-1F96-50CE-954F-BD61D670F584",
         "6D865179-B079-5289-8023-1539720EC934",
-        "B20873F1-4517-5996-B4C8-6C84C9C53574",
-        "81BB1124-1144-5AFA-B763-E426C80FA178"
+        "B20873F1-4517-5996-B4C8-6C84C9C53574"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -292859,14 +292862,14 @@
       "city": "Lisbon",
       "country": "Portugal",
       "relatedTourIds": [
+        "C11E30EC-4CE1-56DD-9472-9DE286BA0175",
         "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
         "A3B59914-35AC-5EF7-A431-D762A5A86247",
         "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
         "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
         "EBC4B750-A1D8-5A77-83AE-D695305607BD",
         "F4F21197-296D-5965-86C7-CF2D497B8C59",
-        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
-        "248572EA-69A0-54BF-BFB9-1A27E5D2311E"
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -297429,6 +297432,7 @@
         "8C161438-70DC-5AC5-9A72-99E670FC77A9",
         "762c63b0-84e1-5636-87a9-a5d8ab11157c",
         "E5EA1925-C0D0-581B-9985-3F5C67755978",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
         "0042d665-7040-5fee-86ae-dfbce0cb5f54",
         "ad217467-ce14-5c5c-ac81-bb3ccc21ae71",
@@ -320120,9 +320124,9 @@
         "F67B46D2-DD17-5FD0-BA59-F0143A0BD682",
         "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
         "2FFD9301-AA36-5A76-A75E-1B4FE9B1FDE9",
+        "341B9D57-1C9B-50A4-8B9E-F12C4B67C668",
         "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
-        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
-        "0D27D67A-1D0D-5669-951E-46029B279041"
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -336560,9 +336564,9 @@
         "27B39B0A-F6D6-584E-9F02-71AA6C694646",
         "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
         "ce087afc-f35d-5015-a403-41cfdc7f0684",
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
         "c440159d-6649-5a76-bd06-9d51aaa7566d",
-        "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
-        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28"
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -342102,14 +342106,14 @@
       "city": "Lisbon",
       "country": "Portugal",
       "relatedTourIds": [
+        "3F66A2A6-CE5D-5042-9526-A0453C5D7AB4",
         "95F3221B-DD69-4CB2-8F84-C37B02E313AA",
+        "341B9D57-1C9B-50A4-8B9E-F12C4B67C668",
         "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
         "4EBD63F9-5F28-5B0B-A6A2-B82B23042C41",
         "37532F5D-0593-57FC-846A-2F749FCF531F",
         "0D27D67A-1D0D-5669-951E-46029B279041",
-        "B8C51640-E596-5728-9545-FF31CA13AB67",
-        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
-        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570"
+        "B8C51640-E596-5728-9545-FF31CA13AB67"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -344221,6 +344225,9 @@
       "centroidLongitude": -9.419295,
       "city": "Cascais",
       "country": "Portugal",
+      "relatedTourIds": [
+        "FA8CF54A-512D-5FA0-82DF-6249F256339F"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -356463,14 +356470,14 @@
       "city": "Prague",
       "country": "Czech Republic",
       "relatedTourIds": [
+        "C8E8C2CD-659C-5DB5-847F-5DCD8E55AB52",
         "DDDC862F-F5E5-5E44-AD68-BCC86BC15280",
         "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6",
         "59ECCB77-8473-573B-A3BE-480A97CF4407",
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
         "BFD585C3-B120-56DE-A5FE-28CB97DA404D",
         "32ECD33F-21F5-5EE5-B216-8AD7C80B62A1",
-        "E4A74305-3EA6-5C6E-BBFA-720EBDEC9DD2",
-        "DBB452EB-86BD-5C6C-A09C-C99464661FAA",
-        "84A18555-120D-583C-A8DB-A93DAF3ADF4F"
+        "E4A74305-3EA6-5C6E-BBFA-720EBDEC9DD2"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -357084,7 +357091,7 @@
         "7F16B267-C619-5B18-9AD1-690E70A3F81B",
         "EE222938-8598-5552-9C04-917A16BA4268",
         "DDDC862F-F5E5-5E44-AD68-BCC86BC15280",
-        "66D2B202-D8AF-5A75-BDEC-4BDBF444252B"
+        "C8E8C2CD-659C-5DB5-847F-5DCD8E55AB52"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -367444,7 +367451,9 @@
       "country": "Georgia",
       "relatedTourIds": [
         "dadc086c-e8c3-5a4f-a94e-59451e665ccd",
+        "0D0AC3B5-4F89-551E-8B93-9461E3A62990",
         "4105a64a-6820-572f-8728-ed2d40816367",
+        "2512CDFF-FA89-59F5-8C9B-E7DA0D332251",
         "6e4bd7ab-1f41-56b6-9b90-6db600c31de8"
       ],
       "primaryCategory": "visualArt",
@@ -383265,6 +383274,14 @@
       "centroidLongitude": 44.771065,
       "city": "Tbilisi",
       "country": "Georgia",
+      "relatedTourIds": [
+        "0D0AC3B5-4F89-551E-8B93-9461E3A62990",
+        "a00108c0-4f6a-5b55-a692-026b0ee96ccd",
+        "5e8698d6-cae7-5264-ad40-31fdbbaceb3b",
+        "6e4bd7ab-1f41-56b6-9b90-6db600c31de8",
+        "58911C0B-7619-50F2-BD4D-7201A2D3622E",
+        "dadc086c-e8c3-5a4f-a94e-59451e665ccd"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Architecture",
@@ -383359,6 +383376,15 @@
       "centroidLongitude": 44.769119,
       "city": "Tbilisi",
       "country": "Georgia",
+      "relatedTourIds": [
+        "2512CDFF-FA89-59F5-8C9B-E7DA0D332251",
+        "58911C0B-7619-50F2-BD4D-7201A2D3622E",
+        "5e8698d6-cae7-5264-ad40-31fdbbaceb3b",
+        "a00108c0-4f6a-5b55-a692-026b0ee96ccd",
+        "6e4bd7ab-1f41-56b6-9b90-6db600c31de8",
+        "dadc086c-e8c3-5a4f-a94e-59451e665ccd",
+        "4105a64a-6820-572f-8728-ed2d40816367"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Architecture",
@@ -383405,6 +383431,16 @@
       "centroidLongitude": -9.139,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "5CB08592-2BFB-5149-A964-D292C29E436B",
+        "E20EE90C-E0CA-5200-9774-E0B40CD52BE8",
+        "5283D40F-854A-5450-B874-88A6BAADC810",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "F67B46D2-DD17-5FD0-BA59-F0143A0BD682"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -383449,6 +383485,16 @@
       "centroidLongitude": 14.41455,
       "city": "Prague",
       "country": "Czech Republic",
+      "relatedTourIds": [
+        "0D3CC7A4-C4AC-51E7-AB4A-BC3DECC8E293",
+        "59ECCB77-8473-573B-A3BE-480A97CF4407",
+        "9F76D644-5FCA-5708-BA65-1C8EC1EF2167",
+        "DBB452EB-86BD-5C6C-A09C-C99464661FAA",
+        "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6",
+        "897714DB-D2A7-521B-A2CD-7E673522E2C3",
+        "407B19A1-2EB4-5903-ACFD-E037CAD6EFB8",
+        "DDDC862F-F5E5-5E44-AD68-BCC86BC15280"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Architecture",
@@ -383495,6 +383541,10 @@
       "centroidLongitude": 17.058332,
       "city": "Wrocław",
       "country": "Poland",
+      "relatedTourIds": [
+        "3525df3c-992a-5ca4-8c84-4c05e8dfc452",
+        "06DA67BF-4A27-52B6-8B8C-069C8B7D6700"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Architecture",
@@ -383542,6 +383592,16 @@
       "centroidLongitude": 21.008984,
       "city": "Warsaw",
       "country": "Poland",
+      "relatedTourIds": [
+        "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
+        "E5EA1925-C0D0-581B-9985-3F5C67755978",
+        "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
+        "bf2abda0-745b-577c-bc92-676f0dc0de92",
+        "ad217467-ce14-5c5c-ac81-bb3ccc21ae71",
+        "a8a4bbf9-093a-5da1-a573-46de26cefe94",
+        "0042d665-7040-5fee-86ae-dfbce0cb5f54",
+        "a9cbc1f6-9acd-5072-b743-f801f3b1eb21"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Architecture",
@@ -383589,6 +383649,9 @@
       "centroidLongitude": -9.421781,
       "city": "Cascais",
       "country": "Portugal",
+      "relatedTourIds": [
+        "65C02328-0252-563C-AD51-2F78EDD38E15"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -383677,6 +383740,9 @@
       "centroidLongitude": -8.483781,
       "city": "Coimbra",
       "country": "Portugal",
+      "relatedTourIds": [
+        "AC067B15-5514-5429-BF40-E6613AA1E9C3"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -383721,6 +383787,16 @@
       "centroidLongitude": 4.4884,
       "city": "Rotterdam",
       "country": "Netherlands",
+      "relatedTourIds": [
+        "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
+        "c440159d-6649-5a76-bd06-9d51aaa7566d",
+        "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
+        "6BCA3704-C604-5639-A323-F4EBEFF1D76C",
+        "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
+        "7354C765-DAF5-5B08-91DE-2749969CC0BA",
+        "45649895-32b8-51f6-a32e-ac3f14672c03"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Architecture",
@@ -383767,6 +383843,12 @@
       "centroidLongitude": -0.07643,
       "city": "London",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "61885E4F-9150-53F1-948A-BFB69CC14F0F",
+        "2D5C9958-DB17-56CF-BBC6-2E397D11827A",
+        "0491F82F-B3C5-5FBE-856D-D217DEC823C5",
+        "70a6cf56-ba03-4be2-b569-dda7b08ef7a4"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Museum",
@@ -383856,6 +383938,10 @@
       "centroidLongitude": -8.410942,
       "city": "Coimbra",
       "country": "Portugal",
+      "relatedTourIds": [
+        "8956BA2E-9325-5E94-B2AB-93D202E01572",
+        "BD66B94B-4DC3-5BBD-B1FE-C92BC01AF6F5"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -383900,6 +383986,16 @@
       "centroidLongitude": 14.415935,
       "city": "Prague",
       "country": "Czech Republic",
+      "relatedTourIds": [
+        "BFD585C3-B120-56DE-A5FE-28CB97DA404D",
+        "FB6A520E-1FAA-5873-8D06-61BD10D2248B",
+        "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6",
+        "E4A74305-3EA6-5C6E-BBFA-720EBDEC9DD2",
+        "59ECCB77-8473-573B-A3BE-480A97CF4407",
+        "EBDFA4FD-5534-5EF5-B931-372306D9FB12",
+        "0D3CC7A4-C4AC-51E7-AB4A-BC3DECC8E293",
+        "DDDC862F-F5E5-5E44-AD68-BCC86BC15280"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -383946,6 +384042,9 @@
       "centroidLongitude": -8.430145,
       "city": "Coimbra",
       "country": "Portugal",
+      "relatedTourIds": [
+        "AC067B15-5514-5429-BF40-E6613AA1E9C3"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -383990,6 +384089,16 @@
       "centroidLongitude": -9.152961,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "CEF594AA-F070-5228-9047-15D8318EE9E4",
+        "BA77614A-359F-5633-9EC2-2E1ECAA64026",
+        "341B9D57-1C9B-50A4-8B9E-F12C4B67C668",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "248572EA-69A0-54BF-BFB9-1A27E5D2311E",
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -384078,6 +384187,16 @@
       "centroidLongitude": -9.154867,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "BA77614A-359F-5633-9EC2-2E1ECAA64026",
+        "4BC27710-1D95-56ED-A2F1-92F10C6DD1E1",
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "E20EE90C-E0CA-5200-9774-E0B40CD52BE8",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "CEF594AA-F070-5228-9047-15D8318EE9E4",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -384122,6 +384241,16 @@
       "centroidLongitude": -3.193685,
       "city": "Edinburgh",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "248A491A-36DA-5495-89A7-62823EC88231",
+        "B3FADEB1-F2FF-5268-AD69-231B49574BAE",
+        "7FE7B7F5-2859-55F0-BBDC-2B55962FBCDA",
+        "2361AAF5-5AD2-5BBB-8FAA-DB527D539E42",
+        "D7617C05-6FAA-513C-A66F-7D78E0948487",
+        "16EF62BA-687D-56B3-8D73-40DFCFB6D4C7",
+        "9A385977-8651-5647-B550-4CB9B0372224",
+        "51E1861F-5F79-5321-AC7C-4341FCFDF393"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Museum",
@@ -384212,6 +384341,16 @@
       "centroidLongitude": -9.153449,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "CEF594AA-F070-5228-9047-15D8318EE9E4",
+        "3F66A2A6-CE5D-5042-9526-A0453C5D7AB4",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
+        "B53DE4AD-A534-503C-BBE3-565E7BC04CF1",
+        "F8D2226A-8F3A-5EF4-A506-E22C39B3E3F6",
+        "F67B46D2-DD17-5FD0-BA59-F0143A0BD682"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -384256,6 +384395,16 @@
       "centroidLongitude": -9.151163,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "248572EA-69A0-54BF-BFB9-1A27E5D2311E",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "E0D48C43-EABC-536F-957D-8FF068FA9513",
+        "E20EE90C-E0CA-5200-9774-E0B40CD52BE8"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -384301,6 +384450,16 @@
       "centroidLongitude": 11.253773,
       "city": "Florence",
       "country": "Italy",
+      "relatedTourIds": [
+        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
+        "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA",
+        "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
+        "A94E4477-2234-5766-B07C-5FD2A7E3B214",
+        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
+        "D765D19F-658C-5795-B7D4-4812075FB9E7",
+        "4A239611-BDB6-5D48-982A-35E2F8E44688",
+        "22729270-A072-5E55-845D-D5FBB3FBED84"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Library",
@@ -384346,6 +384505,10 @@
       "centroidLongitude": -3.19695,
       "city": "Edinburgh",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "EC258C38-D815-5811-BF38-60F8DCEA7161",
+        "3F5B3E3B-88B3-56E7-A735-CC446A6AD03A"
+      ],
       "primaryCategory": "history",
       "tags": [
         "History",
@@ -384480,6 +384643,9 @@
       "centroidLongitude": -9.237965,
       "city": "Almada",
       "country": "Portugal",
+      "relatedTourIds": [
+        "EB123E68-A754-458A-9D1C-F9920DC1D18B"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Engineering",
@@ -384571,6 +384737,16 @@
       "centroidLongitude": -9.155854,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "3F66A2A6-CE5D-5042-9526-A0453C5D7AB4",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "F67B46D2-DD17-5FD0-BA59-F0143A0BD682",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "E0D48C43-EABC-536F-957D-8FF068FA9513"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -384615,6 +384791,10 @@
       "centroidLongitude": 17.126857,
       "city": "Wrocław",
       "country": "Poland",
+      "relatedTourIds": [
+        "6BBFE2C6-E407-5C57-8CD0-3A60536D5D0E",
+        "3525df3c-992a-5ca4-8c84-4c05e8dfc452"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Architecture",
@@ -384705,6 +384885,16 @@
       "centroidLongitude": -4.259123,
       "city": "Glasgow",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "d546b26b-e5c7-5e65-955b-6c760801e8cd",
+        "254b8f80-ea0e-5ace-b244-a99136a83375",
+        "761fda34-6b55-5052-8379-fc9259b73894",
+        "AB1D064F-09A2-5575-8546-53E1DA06EA50",
+        "64b5ec25-e709-5022-b2d5-044553817e03",
+        "7536637e-9a4e-5d4e-92a2-7eba2992c6d8",
+        "E52AF21B-9A0D-5E2B-A9F3-E573B0F86224",
+        "fb61aaeb-83fb-587c-b320-ca1e749cf342"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Architecture",
@@ -384794,6 +384984,16 @@
       "centroidLongitude": -0.099511,
       "city": "London",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "aa22f015-7b43-41ca-9fe3-282519b7f5d3",
+        "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb",
+        "c5e8b1f4-9a27-4e60-8d03-2f7a6c4e8b91",
+        "d8f2a6c1-7b39-4e64-8a05-3c9e7b1d4f82",
+        "f2c8b6a3-9d41-4e64-8a05-3c9e8b1d7f42",
+        "e1c4b8a3-9d42-4f54-8a06-3c9e7b2d1f97",
+        "a8c3e1f7-4d92-4b60-8e05-3f7a2c6d9b14",
+        "4e8b2a91-6d3c-4f57-8a1e-9c0b5d7e2f43"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -384839,6 +385039,16 @@
       "centroidLongitude": -9.135417,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "A3B59914-35AC-5EF7-A431-D762A5A86247",
+        "341B9D57-1C9B-50A4-8B9E-F12C4B67C668",
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "F89EC46A-B4EA-538D-B548-B1BEFF7C8618",
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -384883,6 +385093,9 @@
       "centroidLongitude": -73.512642,
       "city": "New Canaan",
       "country": "United States",
+      "relatedTourIds": [
+        "FF01D80B-17E1-569B-AA99-E07022709F76"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Architecture",
