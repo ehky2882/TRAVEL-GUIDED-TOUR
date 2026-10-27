@@ -349,6 +349,7 @@ Full text for every one of them is in
 - [HANDOFF-261006-onboarding.md](HANDOFF-261006-onboarding.md) — **First-run onboarding + five navigation guides (PR #1093, TestFlight 179–182)**, handed to a local session for Simulator iteration; not merged.
 - [HANDOFF-261006-onboarding-2.md](HANDOFF-261006-onboarding-2.md) — **Onboarding rounds 1–4**: Reels-style taps, real accounts + sign-up checks, six faces, the send-off guide, no-zoom first launch; #1093 merged and **1.1.4 (build 190) submitted to App Review** 2026-10-25.
 - [HANDOFF-261027-rotterdam.md](HANDOFF-261027-rotterdam.md) — **Rotterdam launches:** Atlas Studio RTM 🇳🇱, the 53rd studio, 28 singles + Portugalia Tasca for AMS + 6 architect tags; two place questions (Depot Boijmans, FENIX).
+- [HANDOFF-261027-naples.md](HANDOFF-261027-naples.md) — **Naples launches:** Atlas Studio NAP 🇮🇹, the 54th studio, 19 singles + 4 architect tags; no place questions.
 - [HANDOFF-261026-igobart-seoul.md](HANDOFF-261026-igobart-seoul.md) — **54 link pins from a 71-link triage**, mostly @igobart_'s Seoul history reels; 2 held, 15 skipped, 9 coordinates site-level.
 - [HANDOFF-260923-foodranger-fatmap.md](HANDOFF-260923-foodranger-fatmap.md) — **21 link pins** (@thefoodranger, @the_fatmap, @klaudia.paris, @sashi_trip_tip) from 31 triaged; Shwi left to Edward as a place question.
 - `HANDOFF-260925-miami-staging.md` — Miami staged: 30 scripts, 30 derived + audited coordinates, sized geofences, 74 hero/gallery images live. Three picks and four tours still owed.
