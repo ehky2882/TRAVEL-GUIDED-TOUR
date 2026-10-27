@@ -17822,9 +17822,9 @@
         "A017E8AC-74CB-56AD-A7F5-3FE7E4EA0DD2",
         "11B4526D-530F-4792-B2A0-CBBB23065AA0",
         "EB123E68-A754-458A-9D1C-F9920DC1D18B",
+        "01deaa74-c2af-5cab-b0bb-cbf71651d47b",
         "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1",
-        "7A2C9E14-6B85-4F02-A1D3-8E4760B9C2F1",
-        "aa220274-aadd-51cd-88c7-60654c1c13f1"
+        "7A2C9E14-6B85-4F02-A1D3-8E4760B9C2F1"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -80522,9 +80522,9 @@
         "364fbc84-62fe-590d-acbe-71fa035d5b87",
         "018ee302-8c42-54db-b72e-65509293b0db",
         "f804d469-7b35-5b77-8f0b-d2af04a8f68c",
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c",
         "aaa7a518-6a57-516d-83fc-7ad3f75324d9",
-        "41aacac4-17ed-412b-8a60-7c30ffdcb4f1",
-        "F610F8A2-2BB1-5A2C-B046-6915F55D0F48"
+        "41aacac4-17ed-412b-8a60-7c30ffdcb4f1"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -86739,10 +86739,10 @@
         "b41a133c-1564-503f-81e9-4e7fdd31e4d8",
         "e29a7aaf-39b8-5ca7-8729-4ffa562addeb",
         "f0ca6266-2db1-5c67-834e-886fe5c4e94c",
+        "27bd7b12-9203-53ec-8b49-0c0d70e0f790",
         "7CCF6F4C-D5D1-5A45-80CE-089337FB009B",
         "3A65A8B3-215D-5F84-A3F2-23FAAE6E0300",
-        "a17dbd1d-3491-4062-a62e-9b0059c678f7",
-        "D64452A1-08A9-59FF-941F-216C4E207B71"
+        "a17dbd1d-3491-4062-a62e-9b0059c678f7"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -89609,7 +89609,7 @@
         "a2e83e1e-21f6-5f2f-8416-f58e23f61fd7",
         "e22d016c-8f54-5600-a12b-8bf341649795",
         "BF3985C3-F0FA-5F1A-BEBA-44C418667C5B",
-        "8941e2d3-583e-553c-8625-817f7e2ac985"
+        "5fe721f4-2bf9-5d47-afcf-6eda222ac5a3"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -94212,7 +94212,7 @@
         "40a5cbe9-fb42-5101-9655-127f8f9d803c",
         "9ce70403-81e1-566e-8288-349f2be37e9c",
         "fb9c16a1-8a99-585a-abee-c5869052f50f",
-        "d6b330df-82a2-4048-9aaf-bbe28c5f53b0"
+        "b9994181-63a7-5869-b713-2a619339f314"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -132884,6 +132884,7 @@
         "c933fed3-eb24-5319-87df-7ce498c62100",
         "0378b836-089d-5f9e-8232-8e2e9afe3e09",
         "1BE97272-8B4C-5006-AB11-96DC56A46C92",
+        "d17e0a2d-1a53-55bd-bdd3-79b1e036de96",
         "4A883783-4A4B-5561-8564-49D5652089F2",
         "68686CC5-B16B-51FF-A983-51BAD53421BE"
       ],
@@ -136086,11 +136087,11 @@
         "e01770af-347d-5f43-a63e-1fa97ce3551d",
         "70a01d74-8edf-5f78-9d8b-a05850c0299a",
         "89443016-9aea-5422-a33a-be72636e89f1",
+        "47bc0a50-cd97-5013-9d84-352523ee74e6",
         "b4f87483-ebae-567e-896f-b7b4042ca34a",
+        "edc9261f-b648-5b4c-b1b6-609a5f976a5e",
         "6CD8B760-BD43-567C-97AE-E626351787F4",
-        "12FAAD05-1917-5E7A-B53E-98FCA2D83C70",
-        "AFE37C10-3F2B-4ACF-A781-EBCC3A9A4563",
-        "8587bca7-d0e8-55fe-a2c4-69fc3cf96cc7"
+        "12FAAD05-1917-5E7A-B53E-98FCA2D83C70"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -137787,7 +137788,16 @@
       "centroidLongitude": 14.254052087032377,
       "city": "Naples",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "47bc0a50-cd97-5013-9d84-352523ee74e6",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "67255f44-ba3c-534b-9e05-d54959c5a11d",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c",
+        "4276d68a-9de8-5ba0-ab89-4befd72b0f5c",
+        "70db8bd2-ea84-5cef-9bb8-a3db8dc914e9"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Venue",
@@ -137835,7 +137845,16 @@
       "centroidLongitude": 14.254034713911855,
       "city": "Naples",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c",
+        "4af8b8d2-8f67-54aa-b729-0b42ffa169f1",
+        "edc9261f-b648-5b4c-b1b6-609a5f976a5e",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "67255f44-ba3c-534b-9e05-d54959c5a11d",
+        "4276d68a-9de8-5ba0-ab89-4befd72b0f5c"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Notable Building",
@@ -137882,7 +137901,16 @@
       "centroidLongitude": 14.238909112268436,
       "city": "Naples",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c",
+        "47bc0a50-cd97-5013-9d84-352523ee74e6",
+        "4af8b8d2-8f67-54aa-b729-0b42ffa169f1",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "4276d68a-9de8-5ba0-ab89-4befd72b0f5c",
+        "6acb103d-279a-5d60-a846-ab594bdc61e9"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Museum",
@@ -137932,7 +137960,16 @@
       "centroidLongitude": 14.239130067750816,
       "city": "Naples",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "d17e0a2d-1a53-55bd-bdd3-79b1e036de96",
+        "67255f44-ba3c-534b-9e05-d54959c5a11d",
+        "d81c0dba-f5d8-52a0-bdec-6851d39a42e9",
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c",
+        "6acb103d-279a-5d60-a846-ab594bdc61e9",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Venue",
@@ -137980,7 +138017,16 @@
       "centroidLongitude": 14.255473508598408,
       "city": "Naples",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c",
+        "70db8bd2-ea84-5cef-9bb8-a3db8dc914e9",
+        "d81c0dba-f5d8-52a0-bdec-6851d39a42e9",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "c4dda1cf-5ada-5965-bf7d-3e280e7b2a7b",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "4af8b8d2-8f67-54aa-b729-0b42ffa169f1",
+        "47bc0a50-cd97-5013-9d84-352523ee74e6"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -138029,7 +138075,16 @@
       "centroidLongitude": 14.239965469731487,
       "city": "Naples",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "c4dda1cf-5ada-5965-bf7d-3e280e7b2a7b",
+        "5fe721f4-2bf9-5d47-afcf-6eda222ac5a3",
+        "67255f44-ba3c-534b-9e05-d54959c5a11d",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "6acb103d-279a-5d60-a846-ab594bdc61e9",
+        "60a862cd-c25f-5ded-be3b-6eedb60fb67f",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Venue",
@@ -138078,7 +138133,16 @@
       "centroidLongitude": 14.253906927403635,
       "city": "Naples",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "47bc0a50-cd97-5013-9d84-352523ee74e6",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "70db8bd2-ea84-5cef-9bb8-a3db8dc914e9",
+        "d81c0dba-f5d8-52a0-bdec-6851d39a42e9",
+        "c4dda1cf-5ada-5965-bf7d-3e280e7b2a7b",
+        "67255f44-ba3c-534b-9e05-d54959c5a11d",
+        "4af8b8d2-8f67-54aa-b729-0b42ffa169f1",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Museum",
@@ -138125,7 +138189,16 @@
       "centroidLongitude": 14.242179320237668,
       "city": "Naples",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "27bd7b12-9203-53ec-8b49-0c0d70e0f790",
+        "92041407-6b30-5d78-a03e-8802b4161918",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "d17e0a2d-1a53-55bd-bdd3-79b1e036de96",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "01deaa74-c2af-5cab-b0bb-cbf71651d47b",
+        "c4dda1cf-5ada-5965-bf7d-3e280e7b2a7b",
+        "e22d016c-8f54-5600-a12b-8bf341649795"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -138173,7 +138246,16 @@
       "centroidLongitude": 14.267203656239708,
       "city": "Naples",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "60a862cd-c25f-5ded-be3b-6eedb60fb67f",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "01deaa74-c2af-5cab-b0bb-cbf71651d47b",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "4af8b8d2-8f67-54aa-b729-0b42ffa169f1",
+        "47bc0a50-cd97-5013-9d84-352523ee74e6",
+        "c4dda1cf-5ada-5965-bf7d-3e280e7b2a7b",
+        "5fe721f4-2bf9-5d47-afcf-6eda222ac5a3"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -138220,7 +138302,16 @@
       "centroidLongitude": 14.256729527403634,
       "city": "Naples",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c",
+        "c4dda1cf-5ada-5965-bf7d-3e280e7b2a7b",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "67255f44-ba3c-534b-9e05-d54959c5a11d",
+        "6acb103d-279a-5d60-a846-ab594bdc61e9",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "47bc0a50-cd97-5013-9d84-352523ee74e6"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Venue",
@@ -138269,7 +138360,16 @@
       "centroidLongitude": 14.248845735581964,
       "city": "Naples",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "5fe721f4-2bf9-5d47-afcf-6eda222ac5a3",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "27bd7b12-9203-53ec-8b49-0c0d70e0f790",
+        "01deaa74-c2af-5cab-b0bb-cbf71651d47b",
+        "EB123E68-A754-458A-9D1C-F9920DC1D18B",
+        "1d7e97a5-3bff-5d27-bb3c-e299d03c732a",
+        "9f48ffaf-5128-5c14-b945-630978f6e185"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -138315,7 +138415,16 @@
       "centroidLongitude": 14.247054127403635,
       "city": "Naples",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "60a862cd-c25f-5ded-be3b-6eedb60fb67f",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "27bd7b12-9203-53ec-8b49-0c0d70e0f790",
+        "5fe721f4-2bf9-5d47-afcf-6eda222ac5a3",
+        "92041407-6b30-5d78-a03e-8802b4161918",
+        "aa220274-aadd-51cd-88c7-60654c1c13f1",
+        "defeef28-4159-4ad2-813a-111c64720889"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Market",
@@ -138362,7 +138471,16 @@
       "centroidLongitude": 14.252144306745889,
       "city": "Naples",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "3C6E6A9E-9A59-5522-866D-315A1A9D7983",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "01deaa74-c2af-5cab-b0bb-cbf71651d47b",
+        "4af8b8d2-8f67-54aa-b729-0b42ffa169f1",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "d17e0a2d-1a53-55bd-bdd3-79b1e036de96",
+        "47bc0a50-cd97-5013-9d84-352523ee74e6"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -138407,7 +138525,16 @@
       "centroidLongitude": 14.253868227403634,
       "city": "Naples",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "c4dda1cf-5ada-5965-bf7d-3e280e7b2a7b",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "d17e0a2d-1a53-55bd-bdd3-79b1e036de96",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "d81c0dba-f5d8-52a0-bdec-6851d39a42e9",
+        "2B5A8608-74B4-53F8-8818-825A99B0733D",
+        "70db8bd2-ea84-5cef-9bb8-a3db8dc914e9"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "District",
@@ -138457,7 +138584,16 @@
       "centroidLongitude": 14.246925013911858,
       "city": "Naples",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "47bc0a50-cd97-5013-9d84-352523ee74e6",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "67255f44-ba3c-534b-9e05-d54959c5a11d",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "70db8bd2-ea84-5cef-9bb8-a3db8dc914e9",
+        "4276d68a-9de8-5ba0-ab89-4befd72b0f5c",
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -138507,7 +138643,16 @@
       "centroidLongitude": 14.249643185075781,
       "city": "Naples",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "4af8b8d2-8f67-54aa-b729-0b42ffa169f1",
+        "47bc0a50-cd97-5013-9d84-352523ee74e6",
+        "70db8bd2-ea84-5cef-9bb8-a3db8dc914e9",
+        "edc9261f-b648-5b4c-b1b6-609a5f976a5e",
+        "3ABF8E27-EAD1-530F-9D99-44F0593F99C6",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "67255f44-ba3c-534b-9e05-d54959c5a11d"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Venue",
@@ -138560,7 +138705,16 @@
       "centroidLongitude": 14.250380935581958,
       "city": "Naples",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "4276d68a-9de8-5ba0-ab89-4befd72b0f5c",
+        "60a862cd-c25f-5ded-be3b-6eedb60fb67f",
+        "4af8b8d2-8f67-54aa-b729-0b42ffa169f1",
+        "5fe721f4-2bf9-5d47-afcf-6eda222ac5a3",
+        "c4dda1cf-5ada-5965-bf7d-3e280e7b2a7b",
+        "6acb103d-279a-5d60-a846-ab594bdc61e9"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -138608,7 +138762,16 @@
       "centroidLongitude": 14.249448700420077,
       "city": "Naples",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "c4dda1cf-5ada-5965-bf7d-3e280e7b2a7b",
+        "4af8b8d2-8f67-54aa-b729-0b42ffa169f1",
+        "47bc0a50-cd97-5013-9d84-352523ee74e6",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c",
+        "d17e0a2d-1a53-55bd-bdd3-79b1e036de96",
+        "edc9261f-b648-5b4c-b1b6-609a5f976a5e",
+        "b9994181-63a7-5869-b713-2a619339f314"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Notable Building",
@@ -138654,7 +138817,16 @@
       "centroidLongitude": 14.232597927403635,
       "city": "Naples",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "5fe721f4-2bf9-5d47-afcf-6eda222ac5a3",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "01deaa74-c2af-5cab-b0bb-cbf71651d47b",
+        "d17e0a2d-1a53-55bd-bdd3-79b1e036de96",
+        "92041407-6b30-5d78-a03e-8802b4161918",
+        "7bfcc300-43fe-5571-95d8-d266733feb23",
+        "3A65A8B3-215D-5F84-A3F2-23FAAE6E0300",
+        "347dab13-ec7d-5f13-811a-40fdd9c2f9e3"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -285519,6 +285691,8 @@
       "city": "Naples",
       "country": "Italy",
       "relatedTourIds": [
+        "60a862cd-c25f-5ded-be3b-6eedb60fb67f",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
         "3ABF8E27-EAD1-530F-9D99-44F0593F99C6"
       ],
       "primaryCategory": "foodAndDrink",
@@ -324104,7 +324278,13 @@
       "city": "Naples",
       "country": "Italy",
       "relatedTourIds": [
-        "3C6E6A9E-9A59-5522-866D-315A1A9D7983"
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "3C6E6A9E-9A59-5522-866D-315A1A9D7983",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "4276d68a-9de8-5ba0-ab89-4befd72b0f5c",
+        "d81c0dba-f5d8-52a0-bdec-6851d39a42e9",
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "60a862cd-c25f-5ded-be3b-6eedb60fb67f"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -324200,6 +324380,12 @@
       "centroidLongitude": 14.26127,
       "city": "Naples",
       "country": "Italy",
+      "relatedTourIds": [
+        "90e0be12-a790-56b0-9b3f-e9323e42371c",
+        "6acb103d-279a-5d60-a846-ab594bdc61e9",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "60a862cd-c25f-5ded-be3b-6eedb60fb67f"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Food",
@@ -324292,6 +324478,10 @@
       "centroidLongitude": 14.25115,
       "city": "Naples",
       "country": "Italy",
+      "relatedTourIds": [
+        "67255f44-ba3c-534b-9e05-d54959c5a11d",
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Art",
