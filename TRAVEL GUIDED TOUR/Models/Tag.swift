@@ -234,6 +234,7 @@ enum Tag {
             "Eliel Saarinen", "Herman Gesellius", "Armas Lindgren", "Selim A. Lindqvist", "JKMM Architects", "ILO Architects", "Einar Flinckenberg", "Tuomas Toivonen", "Nene Tsuboi", "Pekka Littow", "Väinö Vähäkallio",
             "Julien Destrée", "Bernard Tschumi", "Louis-Marie Cordonnier", "Charles Benvignat", "César Joly", "Charles Leroy", "Pierre-Louis Carlier", "Édouard Bérard", "Fernand Delmas", "Jean-Marc Ibos", "Myrto Vitart", "Robert Mallet-Stevens",
             "H. F. Mertens", "Jo Vegter", "Jo Coenen", "Stok & Kanters", "Zondervan Architectuur", "De Roos & Overeijnder",
+            "Pedro Luis Escrivá", "Giovanni Antonio Medrano", "Antonio Niccolini", "Ferdinando Chiaramonte",
         ]),
     ]
 
