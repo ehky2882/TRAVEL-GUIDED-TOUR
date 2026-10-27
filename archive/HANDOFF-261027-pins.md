@@ -29,9 +29,10 @@ triage first. They approved: pin the clear ones, drop same-venue repeats, skip t
 - Contributor said skip: Sauda III thesis (`DesDKccO9BZ`, unbuilt design proposal), Lenin statue
   (`DZucYBhsFZf`, moved Tjuchem → Oostwold Aug 2026, moving again), O Brasas (`DWEbhbFAchz`, no
   address found anywhere).
-- **Open with the contributor:** Rio de Mel (`DSID1aGjecd`, 38.753432,-9.142439) and Churrasqueira
+- **Added in a follow-up PR (contributor said yes):** Rio de Mel and Churrasqueira O Galaró. The Galaró branch was settled from the video: a takeaway shopfront on a main road matches the Rua de Lisboa (Brejos de Azeitão) branch, not the Aldeia de Irmãos restaurant. No listing confirmed it.
+- ~~**Open with the contributor:** Rio de Mel (`DSID1aGjecd`, 38.753432,-9.142439) and Churrasqueira
   O Galaró (`DSYEW1JjRiu`, 38.538189,-9.025087 — a second branch exists 3 km south). I miscounted the
-  "five to skip", so these two were held back rather than guessed; mint them if the contributor says so.
+  "five to skip", so these two were held back rather than guessed; mint them if the contributor says so.~~
 
 ## For the owner
 `status/owner/place-batch-261027.md`: six place questions, plus an existing @insightcities Nová Scéna

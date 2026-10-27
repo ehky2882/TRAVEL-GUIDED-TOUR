@@ -385105,6 +385105,94 @@
         "Designed by a Master"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "5784A22E-7B69-5CA9-ABCA-E5AEB2F8AF7F",
+      "createdAt": "2026-10-27",
+      "title": "Rio de Mel",
+      "shortDescription": "A post by @globalfoodquest on Instagram.",
+      "longDescription": "Ep 4 Of The Piri Piri 100 Quest Locals FLOCK for this fiery piri piri 🔥 Alvalade’s Rio de Mel IS just minutes from the airport, serving pure chicken grill eye-candy 🍗 If you want real Lisbon flavour, come along for the next stop on the Piri Piri 100 👀 #piripiri #piriPiriChicken #lisbon #lisbonfood #portugalfood #frangoassado #lisbonrestaurants #lisbonfoodguide #lisbonfoodies #globalfoodquest",
+      "makerId": "5EF4C75F-8D40-52BA-A8C6-413C4D22AB5E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rio-de-mel-globalfoodquest_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DSID1aGjecd/",
+      "sourceAuthor": "@globalfoodquest",
+      "stops": [
+        {
+          "id": "40CB6B73-05AC-5BBE-9887-3975A1496372",
+          "order": 0,
+          "title": "Rio de Mel",
+          "caption": "Ep 4 Of The Piri Piri 100 Quest Locals FLOCK for this fiery piri piri 🔥 Alvalade’s Rio de Mel IS just minutes from the airport, serving pure chicken grill eye-candy 🍗 If you want real Lisbon flavour, come along for the next stop on the Piri Piri 100 👀 #piripiri #piriPiriChicken #lisbon #lisbonfood #portugalfood #frangoassado #lisbonrestaurants #lisbonfoodguide #lisbonfoodies #globalfoodquest",
+          "latitude": 38.753432,
+          "longitude": -9.142439,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rio-de-mel-globalfoodquest_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.753432,
+      "centroidLongitude": -9.142439,
+      "city": "Lisbon",
+      "country": "Portugal",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0418D909-216C-54AE-9519-52C14A89EE27",
+      "createdAt": "2026-10-27",
+      "title": "Churrasqueira O Galaró",
+      "shortDescription": "A post by @globalfoodquest on Instagram.",
+      "longDescription": "So. Much. Chicken. 🔥🍗 This grill in Azeitão is the busiest we’ve seen. Episode 5 of the Piri Piri 100 takes us to Churrasqueira O Galaró - homemade piri piri first, then grills stacked with frango na brasa, cold beer, curly fries… and rice pudding if you somehow still have room. Simple setup. Serious flavour. Worth the drive? Watch till the score 👀 Save this if you’re hunting real piri piri. #piripiri #frangoassado #portugalfood #azeitao #portugaleats #lisboneats",
+      "makerId": "5EF4C75F-8D40-52BA-A8C6-413C4D22AB5E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/churrasqueira-o-galaro-globalfoodquest_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DSYEW1JjRiu/",
+      "sourceAuthor": "@globalfoodquest",
+      "stops": [
+        {
+          "id": "D8D65C3F-EA63-50B0-BC40-B4F80C387922",
+          "order": 0,
+          "title": "Churrasqueira O Galaró",
+          "caption": "So. Much. Chicken. 🔥🍗 This grill in Azeitão is the busiest we’ve seen. Episode 5 of the Piri Piri 100 takes us to Churrasqueira O Galaró - homemade piri piri first, then grills stacked with frango na brasa, cold beer, curly fries… and rice pudding if you somehow still have room. Simple setup. Serious flavour. Worth the drive? Watch till the score 👀 Save this if you’re hunting real piri piri. #piripiri #frangoassado #portugalfood #azeitao #portugaleats #lisboneats",
+          "latitude": 38.538189,
+          "longitude": -9.025087,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/churrasqueira-o-galaro-globalfoodquest_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.538189,
+      "centroidLongitude": -9.025087,
+      "city": "Setúbal",
+      "country": "Portugal",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
     }
   ]
 }
