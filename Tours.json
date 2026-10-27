@@ -7199,6 +7199,46 @@
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.instagram.com/bohun_story/"
+    },
+    {
+      "id": "5EF4C75F-8D40-52BA-A8C6-413C4D22AB5E",
+      "displayName": "Instagram @globalfoodquest",
+      "platform": "instagram",
+      "handle": "globalfoodquest",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/globalfoodquest/"
+    },
+    {
+      "id": "290997BB-32E4-53EA-8497-CBD4829361B2",
+      "displayName": "Instagram @historianaisha",
+      "platform": "instagram",
+      "handle": "historianaisha",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/historianaisha/"
+    },
+    {
+      "id": "E2B71B50-5590-5C75-9FB0-574E6E112DF8",
+      "displayName": "Instagram @floating_foreigner",
+      "platform": "instagram",
+      "handle": "floating_foreigner",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/floating_foreigner/"
+    },
+    {
+      "id": "2FDAD5DB-A909-5CC8-9BBE-D1EAC65B8034",
+      "displayName": "Instagram @_robbiethompson",
+      "platform": "instagram",
+      "handle": "_robbiethompson",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/_robbiethompson/"
     }
   ],
   "tours": [
@@ -16841,11 +16881,11 @@
         "c5e8b1f4-9a27-4e60-8d03-2f7a6c4e8b91",
         "b429a81a-88bf-494c-b48d-bde2b519b4bc",
         "a8c3e1f7-4d92-4b60-8e05-3f7a2c6d9b14",
+        "C8A2F430-B7E7-5188-BE83-C30A97A75B5C",
         "2f9dad4b-6c41-497e-a363-f8a6f5813ad7",
         "b6d9f3c1-8a27-4e64-9d05-3f8a2c7e6b41",
         "7f06e7fa-85ae-499d-87e6-c1a1cf391975",
-        "4fa2eeb0-1436-4cf0-8ca5-66eebe9159a3",
-        "e9c3b7a2-8d61-4f54-9a06-3c8e7b2d1f95"
+        "4fa2eeb0-1436-4cf0-8ca5-66eebe9159a3"
       ],
       "walkingDistanceMeters": null
     },
@@ -18046,11 +18086,11 @@
         "95F3221B-DD69-4CB2-8F84-C37B02E313AA",
         "3A61D9A3-8787-4AD2-B754-F33B3FFB03EB",
         "CEF594AA-F070-5228-9047-15D8318EE9E4",
+        "3F66A2A6-CE5D-5042-9526-A0453C5D7AB4",
         "03A50FE4-0B29-470E-820F-95EA3905A7D1",
         "58B564E6-267F-5F53-806F-1B25FA318976",
-        "B8C51640-E596-5728-9545-FF31CA13AB67",
-        "37532F5D-0593-57FC-846A-2F749FCF531F",
-        "F4F21197-296D-5965-86C7-CF2D497B8C59"
+        "341B9D57-1C9B-50A4-8B9E-F12C4B67C668",
+        "B8C51640-E596-5728-9545-FF31CA13AB67"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -19077,13 +19117,13 @@
       "country": "Portugal",
       "relatedTourIds": [
         "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "E20EE90C-E0CA-5200-9774-E0B40CD52BE8",
         "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "3F66A2A6-CE5D-5042-9526-A0453C5D7AB4",
+        "E0D48C43-EABC-536F-957D-8FF068FA9513",
         "95F3221B-DD69-4CB2-8F84-C37B02E313AA",
         "E743D100-97B3-43CC-948F-BFBF029EFB89",
-        "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1",
-        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
-        "421D7599-EBF8-4898-9F80-14B63783C74E",
-        "65053BA1-BC85-5480-8952-CBBAEC547D79"
+        "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -19304,14 +19344,14 @@
       "city": "Almada",
       "country": "Portugal",
       "relatedTourIds": [
+        "909C9225-AFAE-57CF-B0C0-6B66C91353A9",
         "defeef28-4159-4ad2-813a-111c64720889",
         "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
         "73c6f127-c1c7-49af-abd2-f889b57dc214",
         "58B564E6-267F-5F53-806F-1B25FA318976",
         "799af2cb-a13a-501d-845f-5a051627b7a7",
         "e25e5718-6f18-4f7c-8d5a-174662f1a953",
-        "dc4d6896-7b5d-53be-89c3-de907226a589",
-        "2DDA0046-686D-440B-8EEF-1E40E399CC34"
+        "dc4d6896-7b5d-53be-89c3-de907226a589"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -24078,8 +24118,8 @@
         "e9c3b7a2-8d61-4f54-9a06-3c8e7b2d1f95",
         "a1b8d5ec-1a9e-4245-82ff-4ec3ca828d39",
         "f2c8b6a3-9d41-4e64-8a05-3c9e8b1d7f42",
-        "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb",
-        "2f9dad4b-6c41-497e-a363-f8a6f5813ad7"
+        "C8A2F430-B7E7-5188-BE83-C30A97A75B5C",
+        "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb"
       ],
       "walkingDistanceMeters": null
     },
@@ -105314,11 +105354,11 @@
         "64b5ec25-e709-5022-b2d5-044553817e03",
         "761fda34-6b55-5052-8379-fc9259b73894",
         "3d8b68e7-4690-5287-8df7-5f5c6b72c977",
+        "DBAF5E23-4061-5578-9873-948AAF02E60E",
         "7536637e-9a4e-5d4e-92a2-7eba2992c6d8",
         "4c570421-db7b-5820-89b0-f802c0f76516",
         "AB1D064F-09A2-5575-8546-53E1DA06EA50",
-        "cbf06aa9-60c7-529f-a446-662122035379",
-        "8c58a4a8-5c31-51d7-9bbb-6ee82e699726"
+        "cbf06aa9-60c7-529f-a446-662122035379"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -105539,10 +105579,10 @@
         "e05b47e0-6a31-5c6b-95bc-41cb4505347b",
         "761fda34-6b55-5052-8379-fc9259b73894",
         "fb61aaeb-83fb-587c-b320-ca1e749cf342",
+        "DBAF5E23-4061-5578-9873-948AAF02E60E",
         "64b5ec25-e709-5022-b2d5-044553817e03",
         "AB1D064F-09A2-5575-8546-53E1DA06EA50",
-        "4c0ede4e-e564-54e6-9b39-4d21a9f2aa79",
-        "d546b26b-e5c7-5e65-955b-6c760801e8cd"
+        "4c0ede4e-e564-54e6-9b39-4d21a9f2aa79"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -113000,14 +113040,14 @@
       "city": "Tbilisi",
       "country": "Georgia",
       "relatedTourIds": [
+        "2512CDFF-FA89-59F5-8C9B-E7DA0D332251",
+        "0D0AC3B5-4F89-551E-8B93-9461E3A62990",
         "dadc086c-e8c3-5a4f-a94e-59451e665ccd",
         "6e4bd7ab-1f41-56b6-9b90-6db600c31de8",
         "a00108c0-4f6a-5b55-a692-026b0ee96ccd",
         "1cf50ba8-aa01-5dc1-af81-d9b5d8cc1c84",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
-        "46ae1b3d-591c-513f-bb30-318a1333c60b",
-        "8fa5fad9-82ff-5181-9522-a00513326aef",
-        "efe39735-c6a8-5bd3-bedd-594d78985b27"
+        "46ae1b3d-591c-513f-bb30-318a1333c60b"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -113266,14 +113306,14 @@
       "city": "Wrocław",
       "country": "Poland",
       "relatedTourIds": [
+        "6BBFE2C6-E407-5C57-8CD0-3A60536D5D0E",
+        "06DA67BF-4A27-52B6-8B8C-069C8B7D6700",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
         "a8a4bbf9-093a-5da1-a573-46de26cefe94",
         "a9cbc1f6-9acd-5072-b743-f801f3b1eb21",
         "762c63b0-84e1-5636-87a9-a5d8ab11157c",
         "3c4e26eb-859c-5ce9-b896-b00cbc0ab157",
-        "bf2abda0-745b-577c-bc92-676f0dc0de92",
-        "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
-        "f8e28067-d6d6-5e7a-bfcb-3534241ae088"
+        "bf2abda0-745b-577c-bc92-676f0dc0de92"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -114372,12 +114412,12 @@
       "relatedTourIds": [
         "4105a64a-6820-572f-8728-ed2d40816367",
         "58911C0B-7619-50F2-BD4D-7201A2D3622E",
+        "0D0AC3B5-4F89-551E-8B93-9461E3A62990",
         "5e8698d6-cae7-5264-ad40-31fdbbaceb3b",
         "6e4bd7ab-1f41-56b6-9b90-6db600c31de8",
+        "2512CDFF-FA89-59F5-8C9B-E7DA0D332251",
         "8fa5fad9-82ff-5181-9522-a00513326aef",
-        "1cf50ba8-aa01-5dc1-af81-d9b5d8cc1c84",
-        "0e81ef76-f1a1-5477-b09d-45c1372b14a7",
-        "2d5545c6-9f84-5bdb-bac9-30f1cb2214d0"
+        "1cf50ba8-aa01-5dc1-af81-d9b5d8cc1c84"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -114752,10 +114792,10 @@
         "dadc086c-e8c3-5a4f-a94e-59451e665ccd",
         "58911C0B-7619-50F2-BD4D-7201A2D3622E",
         "b238299d-5745-5bef-a0b5-7fac4aca5c37",
+        "0D0AC3B5-4F89-551E-8B93-9461E3A62990",
         "de7a0c3d-0ea4-53ac-8a87-6e7653a2eb13",
         "6e4bd7ab-1f41-56b6-9b90-6db600c31de8",
-        "4105a64a-6820-572f-8728-ed2d40816367",
-        "ce456ec3-1071-5475-bcce-e0973b88d945"
+        "4105a64a-6820-572f-8728-ed2d40816367"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -114807,10 +114847,10 @@
         "726a0fba-a5fd-5771-9d83-677c11a89309",
         "bf2abda0-745b-577c-bc92-676f0dc0de92",
         "a8a4bbf9-093a-5da1-a573-46de26cefe94",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
         "46ae1b3d-591c-513f-bb30-318a1333c60b",
-        "0042d665-7040-5fee-86ae-dfbce0cb5f54",
-        "a0aa6ff3-fc2f-5d6c-83be-b6575ed0c866"
+        "0042d665-7040-5fee-86ae-dfbce0cb5f54"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -115245,13 +115285,13 @@
       "country": "Georgia",
       "relatedTourIds": [
         "a00108c0-4f6a-5b55-a692-026b0ee96ccd",
+        "2512CDFF-FA89-59F5-8C9B-E7DA0D332251",
+        "0D0AC3B5-4F89-551E-8B93-9461E3A62990",
         "dadc086c-e8c3-5a4f-a94e-59451e665ccd",
         "4105a64a-6820-572f-8728-ed2d40816367",
         "5e8698d6-cae7-5264-ad40-31fdbbaceb3b",
         "58911C0B-7619-50F2-BD4D-7201A2D3622E",
-        "1cf50ba8-aa01-5dc1-af81-d9b5d8cc1c84",
-        "8fa5fad9-82ff-5181-9522-a00513326aef",
-        "efe39735-c6a8-5bd3-bedd-594d78985b27"
+        "1cf50ba8-aa01-5dc1-af81-d9b5d8cc1c84"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -115355,13 +115395,13 @@
       "country": "Georgia",
       "relatedTourIds": [
         "6e4bd7ab-1f41-56b6-9b90-6db600c31de8",
+        "2512CDFF-FA89-59F5-8C9B-E7DA0D332251",
+        "0D0AC3B5-4F89-551E-8B93-9461E3A62990",
         "5e8698d6-cae7-5264-ad40-31fdbbaceb3b",
         "a9cbc1f6-9acd-5072-b743-f801f3b1eb21",
         "9d0433ff-5d6d-5324-93c7-89d577809253",
         "378df5f3-87f4-5795-98af-f67d53a89a50",
-        "5f8ecfcf-6841-5878-a76f-fa63c55b6d25",
-        "e10b22c1-874e-5efe-a683-4aa37a64e974",
-        "06c23128-ddce-5c2f-b727-ddd2c286871f"
+        "5f8ecfcf-6841-5878-a76f-fa63c55b6d25"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -120534,11 +120574,11 @@
         "dadc086c-e8c3-5a4f-a94e-59451e665ccd",
         "58911C0B-7619-50F2-BD4D-7201A2D3622E",
         "6e4bd7ab-1f41-56b6-9b90-6db600c31de8",
+        "0D0AC3B5-4F89-551E-8B93-9461E3A62990",
         "1cf50ba8-aa01-5dc1-af81-d9b5d8cc1c84",
         "2d5545c6-9f84-5bdb-bac9-30f1cb2214d0",
         "0e81ef76-f1a1-5477-b09d-45c1372b14a7",
-        "8fa5fad9-82ff-5181-9522-a00513326aef",
-        "219f9236-c058-5b7a-9a29-7b7332317402"
+        "8fa5fad9-82ff-5181-9522-a00513326aef"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -120648,12 +120688,12 @@
       "relatedTourIds": [
         "8fa5fad9-82ff-5181-9522-a00513326aef",
         "4105a64a-6820-572f-8728-ed2d40816367",
+        "0D0AC3B5-4F89-551E-8B93-9461E3A62990",
         "dadc086c-e8c3-5a4f-a94e-59451e665ccd",
         "0e81ef76-f1a1-5477-b09d-45c1372b14a7",
         "ce456ec3-1071-5475-bcce-e0973b88d945",
         "455f7e84-75fe-5909-a6be-7a806f27f3e6",
-        "58911C0B-7619-50F2-BD4D-7201A2D3622E",
-        "53d6f0cf-3ba9-59da-860b-7656148a54a1"
+        "58911C0B-7619-50F2-BD4D-7201A2D3622E"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -121141,8 +121181,8 @@
         "2e042406-4c16-5fdc-a906-86694f87341c",
         "1cf50ba8-aa01-5dc1-af81-d9b5d8cc1c84",
         "de7a0c3d-0ea4-53ac-8a87-6e7653a2eb13",
-        "BFD585C3-B120-56DE-A5FE-28CB97DA404D",
-        "ce456ec3-1071-5475-bcce-e0973b88d945"
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
+        "BFD585C3-B120-56DE-A5FE-28CB97DA404D"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -121929,8 +121969,8 @@
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
         "b238299d-5745-5bef-a0b5-7fac4aca5c37",
         "096a3cba-09b6-57e7-8379-2e49f3a7b507",
-        "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
-        "eae0eca2-4d76-565f-9deb-a59ed081580f"
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
+        "1f3b0f44-9600-589f-ad00-a73f4844c2bf"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -130435,7 +130475,7 @@
         "ee5be70b-02db-5294-aef8-be93d4304251",
         "71dbdc42-1df9-5f3f-b005-9ffa760652ca",
         "0042d665-7040-5fee-86ae-dfbce0cb5f54",
-        "c9ac6e32-28fd-50e4-9fbb-9c5a85cae554"
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -130719,9 +130759,9 @@
         "bf2abda0-745b-577c-bc92-676f0dc0de92",
         "71dbdc42-1df9-5f3f-b005-9ffa760652ca",
         "a9cbc1f6-9acd-5072-b743-f801f3b1eb21",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
-        "9504178e-9883-5bc9-86ea-774619774b7c",
-        "762c63b0-84e1-5636-87a9-a5d8ab11157c"
+        "9504178e-9883-5bc9-86ea-774619774b7c"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -131101,10 +131141,10 @@
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
         "bf2abda0-745b-577c-bc92-676f0dc0de92",
         "c9ac6e32-28fd-50e4-9fbb-9c5a85cae554",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "71dbdc42-1df9-5f3f-b005-9ffa760652ca",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
-        "f8e28067-d6d6-5e7a-bfcb-3534241ae088",
-        "20f7005b-57d9-50ca-9229-cdd2c6dacfed"
+        "f8e28067-d6d6-5e7a-bfcb-3534241ae088"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -131160,9 +131200,9 @@
         "8d7ffae6-757f-521c-b399-f935897483d3",
         "d7574936-364f-5015-ad5c-0202b5a26888",
         "95de4cb3-d951-5f60-91a5-69e7dff43901",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "c9ac6e32-28fd-50e4-9fbb-9c5a85cae554",
-        "20f7005b-57d9-50ca-9229-cdd2c6dacfed",
-        "8C161438-70DC-5AC5-9A72-99E670FC77A9"
+        "20f7005b-57d9-50ca-9229-cdd2c6dacfed"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -131271,7 +131311,7 @@
         "ad217467-ce14-5c5c-ac81-bb3ccc21ae71",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
-        "c9ac6e32-28fd-50e4-9fbb-9c5a85cae554"
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -131379,11 +131419,11 @@
         "a9cbc1f6-9acd-5072-b743-f801f3b1eb21",
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
         "762c63b0-84e1-5636-87a9-a5d8ab11157c",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "E5EA1925-C0D0-581B-9985-3F5C67755978",
         "bf2abda0-745b-577c-bc92-676f0dc0de92",
         "20f7005b-57d9-50ca-9229-cdd2c6dacfed",
-        "30234cc2-792a-5ef5-9588-e7646e04c81d",
-        "a8a4bbf9-093a-5da1-a573-46de26cefe94"
+        "30234cc2-792a-5ef5-9588-e7646e04c81d"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -131490,14 +131530,14 @@
       "city": "Warsaw",
       "country": "Poland",
       "relatedTourIds": [
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
         "20f7005b-57d9-50ca-9229-cdd2c6dacfed",
         "0042d665-7040-5fee-86ae-dfbce0cb5f54",
         "d7574936-364f-5015-ad5c-0202b5a26888",
         "a8a4bbf9-093a-5da1-a573-46de26cefe94",
         "c9ac6e32-28fd-50e4-9fbb-9c5a85cae554",
-        "ee5be70b-02db-5294-aef8-be93d4304251",
-        "E5EA1925-C0D0-581B-9985-3F5C67755978"
+        "ee5be70b-02db-5294-aef8-be93d4304251"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -131553,10 +131593,10 @@
         "0042d665-7040-5fee-86ae-dfbce0cb5f54",
         "bf2abda0-745b-577c-bc92-676f0dc0de92",
         "20f7005b-57d9-50ca-9229-cdd2c6dacfed",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "726a0fba-a5fd-5771-9d83-677c11a89309",
         "ee5be70b-02db-5294-aef8-be93d4304251",
-        "8d7ffae6-757f-521c-b399-f935897483d3",
-        "3c4e26eb-859c-5ce9-b896-b00cbc0ab157"
+        "8d7ffae6-757f-521c-b399-f935897483d3"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -131610,12 +131650,12 @@
       "relatedTourIds": [
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
         "20f7005b-57d9-50ca-9229-cdd2c6dacfed",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "ee5be70b-02db-5294-aef8-be93d4304251",
         "c9ac6e32-28fd-50e4-9fbb-9c5a85cae554",
         "bf2abda0-745b-577c-bc92-676f0dc0de92",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
-        "ad217467-ce14-5c5c-ac81-bb3ccc21ae71",
-        "726a0fba-a5fd-5771-9d83-677c11a89309"
+        "ad217467-ce14-5c5c-ac81-bb3ccc21ae71"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -131786,13 +131826,13 @@
       "country": "Poland",
       "relatedTourIds": [
         "bf2abda0-745b-577c-bc92-676f0dc0de92",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
         "20f7005b-57d9-50ca-9229-cdd2c6dacfed",
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
         "bd159290-2586-5fff-a2cf-fc993dde8084",
         "3c4e26eb-859c-5ce9-b896-b00cbc0ab157",
-        "726a0fba-a5fd-5771-9d83-677c11a89309",
-        "762c63b0-84e1-5636-87a9-a5d8ab11157c"
+        "726a0fba-a5fd-5771-9d83-677c11a89309"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -131850,7 +131890,7 @@
         "3c4e26eb-859c-5ce9-b896-b00cbc0ab157",
         "ad217467-ce14-5c5c-ac81-bb3ccc21ae71",
         "ee5be70b-02db-5294-aef8-be93d4304251",
-        "762c63b0-84e1-5636-87a9-a5d8ab11157c"
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -132017,12 +132057,12 @@
       "relatedTourIds": [
         "ee5be70b-02db-5294-aef8-be93d4304251",
         "3c4e26eb-859c-5ce9-b896-b00cbc0ab157",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "bf2abda0-745b-577c-bc92-676f0dc0de92",
         "762c63b0-84e1-5636-87a9-a5d8ab11157c",
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
         "20f7005b-57d9-50ca-9229-cdd2c6dacfed",
-        "c9ac6e32-28fd-50e4-9fbb-9c5a85cae554",
-        "8d7ffae6-757f-521c-b399-f935897483d3"
+        "c9ac6e32-28fd-50e4-9fbb-9c5a85cae554"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -132071,13 +132111,13 @@
       "country": "Poland",
       "relatedTourIds": [
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "3c4e26eb-859c-5ce9-b896-b00cbc0ab157",
         "20f7005b-57d9-50ca-9229-cdd2c6dacfed",
         "a8a4bbf9-093a-5da1-a573-46de26cefe94",
         "ad217467-ce14-5c5c-ac81-bb3ccc21ae71",
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
-        "46ae1b3d-591c-513f-bb30-318a1333c60b",
-        "d7574936-364f-5015-ad5c-0202b5a26888"
+        "46ae1b3d-591c-513f-bb30-318a1333c60b"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -132130,12 +132170,12 @@
       "relatedTourIds": [
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
         "762c63b0-84e1-5636-87a9-a5d8ab11157c",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
         "E5EA1925-C0D0-581B-9985-3F5C67755978",
         "726a0fba-a5fd-5771-9d83-677c11a89309",
         "bf2abda0-745b-577c-bc92-676f0dc0de92",
-        "0042d665-7040-5fee-86ae-dfbce0cb5f54",
-        "a8a4bbf9-093a-5da1-a573-46de26cefe94"
+        "0042d665-7040-5fee-86ae-dfbce0cb5f54"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -132306,8 +132346,8 @@
         "3c4e26eb-859c-5ce9-b896-b00cbc0ab157",
         "ad217467-ce14-5c5c-ac81-bb3ccc21ae71",
         "daa173c2-95ff-5cf7-93fc-854e933f9c14",
-        "726a0fba-a5fd-5771-9d83-677c11a89309",
-        "0042d665-7040-5fee-86ae-dfbce0cb5f54"
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
+        "726a0fba-a5fd-5771-9d83-677c11a89309"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -136483,10 +136523,10 @@
         "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
         "376ff378-1167-592e-b7c1-ae0fb460e38d",
         "ba3aee78-628c-5be7-b235-a877578ad6c2",
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
         "c440159d-6649-5a76-bd06-9d51aaa7566d",
         "538cad52-e2bd-5792-9427-992df3b72046",
-        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
-        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28"
+        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582"
       ],
       "primaryCategory": "literature",
       "tags": [
@@ -136543,8 +136583,8 @@
         "228f7619-8dda-5f08-8697-6df45bc46e38",
         "c440159d-6649-5a76-bd06-9d51aaa7566d",
         "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
-        "420d32a9-9b69-51d1-a149-fd33ee07548e",
-        "e40f6459-82c8-57fd-afaf-49ad58ad31ce"
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
+        "420d32a9-9b69-51d1-a149-fd33ee07548e"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -136656,7 +136696,7 @@
         "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
         "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
         "2f97649f-4b0e-5cc5-9e6d-68c639a7b95d",
-        "228f7619-8dda-5f08-8697-6df45bc46e38"
+        "DCDD71E1-293B-53E9-8048-4110B33272F4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -136712,8 +136752,8 @@
         "420d32a9-9b69-51d1-a149-fd33ee07548e",
         "228f7619-8dda-5f08-8697-6df45bc46e38",
         "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
-        "b6c95313-0eef-5e15-933f-acd5ef08ebe1",
-        "bcd23ad7-07d0-5b7b-8836-e2b7638ce8fd"
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
+        "b6c95313-0eef-5e15-933f-acd5ef08ebe1"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -136821,7 +136861,7 @@
         "376ff378-1167-592e-b7c1-ae0fb460e38d",
         "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
         "b14774d2-9640-507c-b304-cfa0a6fb9135",
-        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28"
+        "DCDD71E1-293B-53E9-8048-4110B33272F4"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -136940,8 +136980,8 @@
         "2f97649f-4b0e-5cc5-9e6d-68c639a7b95d",
         "ba3aee78-628c-5be7-b235-a877578ad6c2",
         "228f7619-8dda-5f08-8697-6df45bc46e38",
-        "45649895-32b8-51f6-a32e-ac3f14672c03",
-        "f65d8e70-63a9-5410-9fce-9f7e38737c9a"
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
+        "45649895-32b8-51f6-a32e-ac3f14672c03"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -137048,12 +137088,12 @@
       "relatedTourIds": [
         "45649895-32b8-51f6-a32e-ac3f14672c03",
         "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28",
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
         "538cad52-e2bd-5792-9427-992df3b72046",
         "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
         "ba3aee78-628c-5be7-b235-a877578ad6c2",
         "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
-        "420d32a9-9b69-51d1-a149-fd33ee07548e",
-        "CFE6A911-141D-5403-A8CB-42D3B4B9DE17"
+        "420d32a9-9b69-51d1-a149-fd33ee07548e"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -137568,13 +137608,13 @@
       "country": "Netherlands",
       "relatedTourIds": [
         "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
         "538cad52-e2bd-5792-9427-992df3b72046",
         "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
         "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
         "45649895-32b8-51f6-a32e-ac3f14672c03",
         "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
-        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28",
-        "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F"
+        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -137679,11 +137719,11 @@
         "376ff378-1167-592e-b7c1-ae0fb460e38d",
         "cf3d2457-3f66-5c09-a4f9-040670a436df",
         "8a1265d9-2332-5373-a223-a8bc48744dee",
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
         "4183767a-c190-5856-9d5d-08bb50ec2c39",
         "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
         "df321c7d-f281-5e9a-88f9-b059cb398978",
-        "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
-        "ba3aee78-628c-5be7-b235-a877578ad6c2"
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -173116,6 +173156,7 @@
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
         "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
+        "98D29A22-8F9D-5B7D-BE3B-B06B62323328",
         "A94E4477-2234-5766-B07C-5FD2A7E3B214",
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
         "B2495278-DEEA-5D59-B655-65523FFF4DC4",
@@ -180133,9 +180174,9 @@
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
         "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
         "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
+        "98D29A22-8F9D-5B7D-BE3B-B06B62323328",
         "A94E4477-2234-5766-B07C-5FD2A7E3B214",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688",
-        "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD"
+        "4A239611-BDB6-5D48-982A-35E2F8E44688"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -200923,11 +200964,11 @@
         "7354C765-DAF5-5B08-91DE-2749969CC0BA",
         "11C562A0-2CA6-5344-BF9E-7ADCB721FF2B",
         "6BCA3704-C604-5639-A323-F4EBEFF1D76C",
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
         "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
         "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
         "538cad52-e2bd-5792-9427-992df3b72046",
-        "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
-        "ba3aee78-628c-5be7-b235-a877578ad6c2"
+        "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -212974,14 +213015,14 @@
       "city": "Warsaw",
       "country": "Poland",
       "relatedTourIds": [
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
         "a9cbc1f6-9acd-5072-b743-f801f3b1eb21",
         "0042d665-7040-5fee-86ae-dfbce0cb5f54",
         "30234cc2-792a-5ef5-9588-e7646e04c81d",
         "ad217467-ce14-5c5c-ac81-bb3ccc21ae71",
-        "762c63b0-84e1-5636-87a9-a5d8ab11157c",
-        "8C161438-70DC-5AC5-9A72-99E670FC77A9"
+        "762c63b0-84e1-5636-87a9-a5d8ab11157c"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -218725,13 +218766,13 @@
       "country": "United Kingdom",
       "relatedTourIds": [
         "51E1861F-5F79-5321-AC7C-4341FCFDF393",
+        "3AF6916F-394A-58B9-9866-F76A7DB929B7",
         "EC258C38-D815-5811-BF38-60F8DCEA7161",
         "5AA6D233-6CE2-5E60-A390-5918AF904644",
         "137087D6-8A24-501E-9072-B74F125AE5BB",
         "248A491A-36DA-5495-89A7-62823EC88231",
         "EB342381-1F96-50CE-954F-BD61D670F584",
-        "16EF62BA-687D-56B3-8D73-40DFCFB6D4C7",
-        "4C8C3D32-2CDE-5C38-8FFC-0022FADCB4D5"
+        "16EF62BA-687D-56B3-8D73-40DFCFB6D4C7"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -223815,7 +223856,7 @@
         "248A491A-36DA-5495-89A7-62823EC88231",
         "4C8C3D32-2CDE-5C38-8FFC-0022FADCB4D5",
         "D7617C05-6FAA-513C-A66F-7D78E0948487",
-        "6D865179-B079-5289-8023-1539720EC934"
+        "80BE7983-C83C-54D6-819C-DB6BFBF28140"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -232248,13 +232289,13 @@
       "country": "Netherlands",
       "relatedTourIds": [
         "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
         "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
         "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
         "538cad52-e2bd-5792-9427-992df3b72046",
         "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
         "7354C765-DAF5-5B08-91DE-2749969CC0BA",
-        "27B39B0A-F6D6-584E-9F02-71AA6C694646",
-        "e40f6459-82c8-57fd-afaf-49ad58ad31ce"
+        "27B39B0A-F6D6-584E-9F02-71AA6C694646"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -233948,12 +233989,12 @@
       "relatedTourIds": [
         "726a0fba-a5fd-5771-9d83-677c11a89309",
         "0042d665-7040-5fee-86ae-dfbce0cb5f54",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "E5EA1925-C0D0-581B-9985-3F5C67755978",
         "d7574936-364f-5015-ad5c-0202b5a26888",
         "A0ED14D9-895E-51F7-9A59-D4EC0B592B1A",
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
-        "D60A6703-8281-593A-B1AA-9F7B4306341A",
-        "a9cbc1f6-9acd-5072-b743-f801f3b1eb21"
+        "D60A6703-8281-593A-B1AA-9F7B4306341A"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -248861,12 +248902,12 @@
       "relatedTourIds": [
         "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
         "11C562A0-2CA6-5344-BF9E-7ADCB721FF2B",
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
         "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
         "6BCA3704-C604-5639-A323-F4EBEFF1D76C",
         "9E536417-737B-559B-8F5C-583D88EA24E4",
         "27B39B0A-F6D6-584E-9F02-71AA6C694646",
-        "538cad52-e2bd-5792-9427-992df3b72046",
-        "f65d8e70-63a9-5410-9fce-9f7e38737c9a"
+        "538cad52-e2bd-5792-9427-992df3b72046"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -250304,6 +250345,7 @@
         "8C161438-70DC-5AC5-9A72-99E670FC77A9",
         "a0aa6ff3-fc2f-5d6c-83be-b6575ed0c866",
         "3c4e26eb-859c-5ce9-b896-b00cbc0ab157",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "0042d665-7040-5fee-86ae-dfbce0cb5f54"
       ],
       "primaryCategory": "architecture",
@@ -251835,9 +251877,9 @@
         "66D2B202-D8AF-5A75-BDEC-4BDBF444252B",
         "407B19A1-2EB4-5903-ACFD-E037CAD6EFB8",
         "7f16bf79-a24f-566b-b645-8533d88f66c4",
+        "C8E8C2CD-659C-5DB5-847F-5DCD8E55AB52",
         "EBDFA4FD-5534-5EF5-B931-372306D9FB12",
-        "BFD585C3-B120-56DE-A5FE-28CB97DA404D",
-        "0D3CC7A4-C4AC-51E7-AB4A-BC3DECC8E293"
+        "BFD585C3-B120-56DE-A5FE-28CB97DA404D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -252234,11 +252276,11 @@
         "59ECCB77-8473-573B-A3BE-480A97CF4407",
         "DBB452EB-86BD-5C6C-A09C-C99464661FAA",
         "897714DB-D2A7-521B-A2CD-7E673522E2C3",
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
         "EBDFA4FD-5534-5EF5-B931-372306D9FB12",
         "BFD585C3-B120-56DE-A5FE-28CB97DA404D",
         "9940ADDF-DEFD-5F96-9943-A16A1BB12B8A",
-        "0D3CC7A4-C4AC-51E7-AB4A-BC3DECC8E293",
-        "407B19A1-2EB4-5903-ACFD-E037CAD6EFB8"
+        "0D3CC7A4-C4AC-51E7-AB4A-BC3DECC8E293"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -252444,13 +252486,13 @@
       "country": "Czech Republic",
       "relatedTourIds": [
         "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6",
+        "C8E8C2CD-659C-5DB5-847F-5DCD8E55AB52",
         "85D07EAB-88C2-5456-B3C8-492B743D534C",
         "59ECCB77-8473-573B-A3BE-480A97CF4407",
         "EE222938-8598-5552-9C04-917A16BA4268",
         "0D3CC7A4-C4AC-51E7-AB4A-BC3DECC8E293",
         "40D59D0B-4481-5747-A3E3-1F7C9373F512",
-        "7f16bf79-a24f-566b-b645-8533d88f66c4",
-        "BFD585C3-B120-56DE-A5FE-28CB97DA404D"
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -252502,10 +252544,10 @@
         "40D59D0B-4481-5747-A3E3-1F7C9373F512",
         "9F76D644-5FCA-5708-BA65-1C8EC1EF2167",
         "1B94C1BC-1DF4-5124-BFF4-62D45B046268",
+        "C8E8C2CD-659C-5DB5-847F-5DCD8E55AB52",
         "59ECCB77-8473-573B-A3BE-480A97CF4407",
-        "DBB452EB-86BD-5C6C-A09C-C99464661FAA",
-        "85D07EAB-88C2-5456-B3C8-492B743D534C",
-        "BFD585C3-B120-56DE-A5FE-28CB97DA404D"
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
+        "DBB452EB-86BD-5C6C-A09C-C99464661FAA"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -253020,13 +253062,13 @@
       "country": "Czech Republic",
       "relatedTourIds": [
         "59ECCB77-8473-573B-A3BE-480A97CF4407",
+        "C8E8C2CD-659C-5DB5-847F-5DCD8E55AB52",
         "897714DB-D2A7-521B-A2CD-7E673522E2C3",
         "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6",
         "66D2B202-D8AF-5A75-BDEC-4BDBF444252B",
         "407B19A1-2EB4-5903-ACFD-E037CAD6EFB8",
         "85D07EAB-88C2-5456-B3C8-492B743D534C",
-        "7f16bf79-a24f-566b-b645-8533d88f66c4",
-        "DBB452EB-86BD-5C6C-A09C-C99464661FAA"
+        "7f16bf79-a24f-566b-b645-8533d88f66c4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -253653,7 +253695,7 @@
         "E4A74305-3EA6-5C6E-BBFA-720EBDEC9DD2",
         "FB6A520E-1FAA-5873-8D06-61BD10D2248B",
         "06B8BCDE-F3FF-53DB-9D6C-709E0D9C9950",
-        "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6"
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -253761,8 +253803,8 @@
         "FB6A520E-1FAA-5873-8D06-61BD10D2248B",
         "E4A74305-3EA6-5C6E-BBFA-720EBDEC9DD2",
         "F7CD83C9-82ED-5B97-AD15-4FFDE1C18658",
-        "59ECCB77-8473-573B-A3BE-480A97CF4407",
-        "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6"
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
+        "59ECCB77-8473-573B-A3BE-480A97CF4407"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -253867,11 +253909,11 @@
         "3BF94D20-990C-530F-A5B1-DA6396F1FAB7",
         "0C09E16D-9BFC-5E4D-974C-89327DAFE51F",
         "BFD585C3-B120-56DE-A5FE-28CB97DA404D",
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
         "EE222938-8598-5552-9C04-917A16BA4268",
         "E4A74305-3EA6-5C6E-BBFA-720EBDEC9DD2",
         "8E0B80FA-9993-53FD-8819-3A9BEDC7A75A",
-        "FB6A520E-1FAA-5873-8D06-61BD10D2248B",
-        "59ECCB77-8473-573B-A3BE-480A97CF4407"
+        "FB6A520E-1FAA-5873-8D06-61BD10D2248B"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -254032,8 +254074,8 @@
         "E4A74305-3EA6-5C6E-BBFA-720EBDEC9DD2",
         "BFD585C3-B120-56DE-A5FE-28CB97DA404D",
         "32ECD33F-21F5-5EE5-B216-8AD7C80B62A1",
-        "06B8BCDE-F3FF-53DB-9D6C-709E0D9C9950",
-        "59ECCB77-8473-573B-A3BE-480A97CF4407"
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
+        "06B8BCDE-F3FF-53DB-9D6C-709E0D9C9950"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -254190,13 +254232,13 @@
       "country": "Czech Republic",
       "relatedTourIds": [
         "FB6A520E-1FAA-5873-8D06-61BD10D2248B",
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
         "DDDC862F-F5E5-5E44-AD68-BCC86BC15280",
         "64DAC586-0DC0-523C-91C7-FB3C6F3B380A",
         "BFD585C3-B120-56DE-A5FE-28CB97DA404D",
         "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6",
         "F7CD83C9-82ED-5B97-AD15-4FFDE1C18658",
-        "0D3CC7A4-C4AC-51E7-AB4A-BC3DECC8E293",
-        "06B8BCDE-F3FF-53DB-9D6C-709E0D9C9950"
+        "0D3CC7A4-C4AC-51E7-AB4A-BC3DECC8E293"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -254245,13 +254287,13 @@
       "country": "Czech Republic",
       "relatedTourIds": [
         "E4A74305-3EA6-5C6E-BBFA-720EBDEC9DD2",
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
         "BFD585C3-B120-56DE-A5FE-28CB97DA404D",
         "DDDC862F-F5E5-5E44-AD68-BCC86BC15280",
         "EBDFA4FD-5534-5EF5-B931-372306D9FB12",
         "5799C6C1-AF5A-5BA6-A982-1480F4A03B91",
         "59ECCB77-8473-573B-A3BE-480A97CF4407",
-        "64DAC586-0DC0-523C-91C7-FB3C6F3B380A",
-        "66D2B202-D8AF-5A75-BDEC-4BDBF444252B"
+        "64DAC586-0DC0-523C-91C7-FB3C6F3B380A"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -254414,9 +254456,9 @@
         "E4A74305-3EA6-5C6E-BBFA-720EBDEC9DD2",
         "EBDFA4FD-5534-5EF5-B931-372306D9FB12",
         "DDDC862F-F5E5-5E44-AD68-BCC86BC15280",
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
         "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6",
-        "59ECCB77-8473-573B-A3BE-480A97CF4407",
-        "F7CD83C9-82ED-5B97-AD15-4FFDE1C18658"
+        "59ECCB77-8473-573B-A3BE-480A97CF4407"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -254518,14 +254560,14 @@
       "city": "Prague",
       "country": "Czech Republic",
       "relatedTourIds": [
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
         "EBDFA4FD-5534-5EF5-B931-372306D9FB12",
         "F7CD83C9-82ED-5B97-AD15-4FFDE1C18658",
         "DDDC862F-F5E5-5E44-AD68-BCC86BC15280",
         "5799C6C1-AF5A-5BA6-A982-1480F4A03B91",
         "1B94C1BC-1DF4-5124-BFF4-62D45B046268",
         "FB6A520E-1FAA-5873-8D06-61BD10D2248B",
-        "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6",
-        "59ECCB77-8473-573B-A3BE-480A97CF4407"
+        "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -274313,6 +274355,7 @@
       "city": "New Canaan",
       "country": "United States",
       "relatedTourIds": [
+        "F490D545-FC94-50FD-A263-882B1062BF53",
         "DBF80726-D135-54CE-9C33-E10023D59AB6",
         "86B587FA-58B7-540B-B337-74E036D0258F"
       ],
@@ -279047,12 +279090,12 @@
       "relatedTourIds": [
         "D7617C05-6FAA-513C-A66F-7D78E0948487",
         "248A491A-36DA-5495-89A7-62823EC88231",
+        "3AF6916F-394A-58B9-9866-F76A7DB929B7",
         "137087D6-8A24-501E-9072-B74F125AE5BB",
         "EC258C38-D815-5811-BF38-60F8DCEA7161",
         "EB342381-1F96-50CE-954F-BD61D670F584",
         "6D865179-B079-5289-8023-1539720EC934",
-        "B20873F1-4517-5996-B4C8-6C84C9C53574",
-        "81BB1124-1144-5AFA-B763-E426C80FA178"
+        "B20873F1-4517-5996-B4C8-6C84C9C53574"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -292819,14 +292862,14 @@
       "city": "Lisbon",
       "country": "Portugal",
       "relatedTourIds": [
+        "C11E30EC-4CE1-56DD-9472-9DE286BA0175",
         "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
         "A3B59914-35AC-5EF7-A431-D762A5A86247",
         "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
         "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
         "EBC4B750-A1D8-5A77-83AE-D695305607BD",
         "F4F21197-296D-5965-86C7-CF2D497B8C59",
-        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
-        "248572EA-69A0-54BF-BFB9-1A27E5D2311E"
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -297389,6 +297432,7 @@
         "8C161438-70DC-5AC5-9A72-99E670FC77A9",
         "762c63b0-84e1-5636-87a9-a5d8ab11157c",
         "E5EA1925-C0D0-581B-9985-3F5C67755978",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
         "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
         "0042d665-7040-5fee-86ae-dfbce0cb5f54",
         "ad217467-ce14-5c5c-ac81-bb3ccc21ae71",
@@ -320080,9 +320124,9 @@
         "F67B46D2-DD17-5FD0-BA59-F0143A0BD682",
         "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
         "2FFD9301-AA36-5A76-A75E-1B4FE9B1FDE9",
+        "341B9D57-1C9B-50A4-8B9E-F12C4B67C668",
         "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
-        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
-        "0D27D67A-1D0D-5669-951E-46029B279041"
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -336520,9 +336564,9 @@
         "27B39B0A-F6D6-584E-9F02-71AA6C694646",
         "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
         "ce087afc-f35d-5015-a403-41cfdc7f0684",
+        "DCDD71E1-293B-53E9-8048-4110B33272F4",
         "c440159d-6649-5a76-bd06-9d51aaa7566d",
-        "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
-        "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28"
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -342062,14 +342106,14 @@
       "city": "Lisbon",
       "country": "Portugal",
       "relatedTourIds": [
+        "3F66A2A6-CE5D-5042-9526-A0453C5D7AB4",
         "95F3221B-DD69-4CB2-8F84-C37B02E313AA",
+        "341B9D57-1C9B-50A4-8B9E-F12C4B67C668",
         "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
         "4EBD63F9-5F28-5B0B-A6A2-B82B23042C41",
         "37532F5D-0593-57FC-846A-2F749FCF531F",
         "0D27D67A-1D0D-5669-951E-46029B279041",
-        "B8C51640-E596-5728-9545-FF31CA13AB67",
-        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
-        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570"
+        "B8C51640-E596-5728-9545-FF31CA13AB67"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -344181,6 +344225,9 @@
       "centroidLongitude": -9.419295,
       "city": "Cascais",
       "country": "Portugal",
+      "relatedTourIds": [
+        "FA8CF54A-512D-5FA0-82DF-6249F256339F"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -356423,14 +356470,14 @@
       "city": "Prague",
       "country": "Czech Republic",
       "relatedTourIds": [
+        "C8E8C2CD-659C-5DB5-847F-5DCD8E55AB52",
         "DDDC862F-F5E5-5E44-AD68-BCC86BC15280",
         "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6",
         "59ECCB77-8473-573B-A3BE-480A97CF4407",
+        "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
         "BFD585C3-B120-56DE-A5FE-28CB97DA404D",
         "32ECD33F-21F5-5EE5-B216-8AD7C80B62A1",
-        "E4A74305-3EA6-5C6E-BBFA-720EBDEC9DD2",
-        "DBB452EB-86BD-5C6C-A09C-C99464661FAA",
-        "84A18555-120D-583C-A8DB-A93DAF3ADF4F"
+        "E4A74305-3EA6-5C6E-BBFA-720EBDEC9DD2"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -357044,7 +357091,7 @@
         "7F16B267-C619-5B18-9AD1-690E70A3F81B",
         "EE222938-8598-5552-9C04-917A16BA4268",
         "DDDC862F-F5E5-5E44-AD68-BCC86BC15280",
-        "66D2B202-D8AF-5A75-BDEC-4BDBF444252B"
+        "C8E8C2CD-659C-5DB5-847F-5DCD8E55AB52"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -367404,7 +367451,9 @@
       "country": "Georgia",
       "relatedTourIds": [
         "dadc086c-e8c3-5a4f-a94e-59451e665ccd",
+        "0D0AC3B5-4F89-551E-8B93-9461E3A62990",
         "4105a64a-6820-572f-8728-ed2d40816367",
+        "2512CDFF-FA89-59F5-8C9B-E7DA0D332251",
         "6e4bd7ab-1f41-56b6-9b90-6db600c31de8"
       ],
       "primaryCategory": "visualArt",
@@ -383185,6 +383234,1875 @@
       "tags": [
         "Religious Building",
         "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2512CDFF-FA89-59F5-8C9B-E7DA0D332251",
+      "createdAt": "2026-10-27",
+      "title": "Bank of Georgia Headquarters",
+      "shortDescription": "A post by @urban_garbagebin on Instagram.",
+      "longDescription": "Soviet-time heritage is rarely appreciated in post-Soviet countries, and buildings are the most visible, most striking leftovers of a past both painful and unerasable. It is therefore a delight to see the headquarters of the former Ministry of Highway Design in Tbilisi in such great shape, renovated and appreciated worldwide. Now, unfortunately, it’s The Bank of Georgia (aka corruption paradise), and recording there was a living hell due to the amount of cars around it and a very persistent bodyguard. But we would do everything for the content. #bankofgeorgia #sovietarchitecture #postsoviet #georgianarchitecture #tbilisi #georgia🇬🇪 #georgechakhava #zurabjalaghania #structuralism #brutalism #architecture #communism #sovietdesign",
+      "makerId": "26F4148A-4987-5521-B6CF-E5D6069470F0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bank-of-georgia-headquarters-urbangarbagebin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DMV1NxViDjX/",
+      "sourceAuthor": "@urban_garbagebin",
+      "stops": [
+        {
+          "id": "4D08C508-E350-5A80-8834-D8E3F623310C",
+          "order": 0,
+          "title": "Bank of Georgia Headquarters",
+          "caption": "Soviet-time heritage is rarely appreciated in post-Soviet countries, and buildings are the most visible, most striking leftovers of a past both painful and unerasable. It is therefore a delight to see the headquarters of the former Ministry of Highway Design in Tbilisi in such great shape, renovated and appreciated worldwide. Now, unfortunately, it’s The Bank of Georgia (aka corruption paradise), and recording there was a living hell due to the amount of cars around it and a very persistent bodyguard. But we would do everything for the content. #bankofgeorgia #sovietarchitecture #postsoviet #georgianarchitecture #tbilisi #georgia🇬🇪 #georgechakhava #zurabjalaghania #structuralism #brutalism #architecture #communism #sovietdesign",
+          "latitude": 41.735758,
+          "longitude": 44.771065,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bank-of-georgia-headquarters-urbangarbagebin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.735758,
+      "centroidLongitude": 44.771065,
+      "city": "Tbilisi",
+      "country": "Georgia",
+      "relatedTourIds": [
+        "0D0AC3B5-4F89-551E-8B93-9461E3A62990",
+        "a00108c0-4f6a-5b55-a692-026b0ee96ccd",
+        "5e8698d6-cae7-5264-ad40-31fdbbaceb3b",
+        "6e4bd7ab-1f41-56b6-9b90-6db600c31de8",
+        "58911C0B-7619-50F2-BD4D-7201A2D3622E",
+        "dadc086c-e8c3-5a4f-a94e-59451e665ccd"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Architecture",
+        "Notable Building",
+        "Brutalist",
+        "George Chakhava",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6C40A403-3D3A-5AB3-A32D-8B21BFF9F65A",
+      "createdAt": "2026-10-27",
+      "title": "Terneuzen City Hall",
+      "shortDescription": "A post by @urban_garbagebin on Instagram.",
+      "longDescription": "Terneuzen is so brutal🥵 𝗖𝗶𝘁𝘆 𝗛𝗮𝗹𝗹 𝗧𝗲𝗿𝗻𝗲𝘂𝘇𝗲𝗻 Architect: Jaap Bakema Building year: 1972 (yes I said it wrong in the video) Location: Terneuzen, Netherlands When you think of brutalist architecture, the Netherlands probably isn’t the first place that comes to mind — and you wouldn’t be wrong. But little brutalist gems can be found in the most unexpected places... even in Terneuzen. Set on the windy seashore among ships and tankers, the building itself resembles a battleship. Luckily, unlike many massive concrete monsters, Terneuzen’s city hall doesn’t have to fight for its survival or appreciation, and will most probably continue to fulfill its purpose of serving the local people– and the architecture freaks. Dank je wel, Manuel, for showing us around! #brutalism #architecture #terneuzen #bijlmermeer #dutcharchitecture #jaapbakema #terneuzeninbeeld #stadhuisterneuzen #zeeland #dutchbrutalism",
+      "makerId": "26F4148A-4987-5521-B6CF-E5D6069470F0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/terneuzen-city-hall-urbangarbagebin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DNEO8G6iTew/",
+      "sourceAuthor": "@urban_garbagebin",
+      "stops": [
+        {
+          "id": "9D99E4C8-6A55-5C2A-8634-D323F3EB51D9",
+          "order": 0,
+          "title": "Terneuzen City Hall",
+          "caption": "Terneuzen is so brutal🥵 𝗖𝗶𝘁𝘆 𝗛𝗮𝗹𝗹 𝗧𝗲𝗿𝗻𝗲𝘂𝘇𝗲𝗻 Architect: Jaap Bakema Building year: 1972 (yes I said it wrong in the video) Location: Terneuzen, Netherlands When you think of brutalist architecture, the Netherlands probably isn’t the first place that comes to mind — and you wouldn’t be wrong. But little brutalist gems can be found in the most unexpected places... even in Terneuzen. Set on the windy seashore among ships and tankers, the building itself resembles a battleship. Luckily, unlike many massive concrete monsters, Terneuzen’s city hall doesn’t have to fight for its survival or appreciation, and will most probably continue to fulfill its purpose of serving the local people– and the architecture freaks. Dank je wel, Manuel, for showing us around! #brutalism #architecture #terneuzen #bijlmermeer #dutcharchitecture #jaapbakema #terneuzeninbeeld #stadhuisterneuzen #zeeland #dutchbrutalism",
+          "latitude": 51.337809,
+          "longitude": 3.830474,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/terneuzen-city-hall-urbangarbagebin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.337809,
+      "centroidLongitude": 3.830474,
+      "city": "Terneuzen",
+      "country": "Netherlands",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Architecture",
+        "Notable Building",
+        "Brutalist",
+        "Civic",
+        "Waterfront"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0D0AC3B5-4F89-551E-8B93-9461E3A62990",
+      "createdAt": "2026-10-27",
+      "title": "Industrial Pedagogical Technicum",
+      "shortDescription": "A post by @urban_garbagebin on Instagram.",
+      "longDescription": "𝗧𝗵𝗲 𝗜𝗻𝗱𝘂𝘀𝘁𝗿𝗶𝗮𝗹 𝗣𝗲𝗱𝗮𝗴𝗼𝗴𝗶𝗰𝗮𝗹 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝘂𝗺 Architect: Nikoloz Lasareishvili Building year: 1978 Location: Tbilisi, Georgia 🇬🇪 There's not much to see here – at least not anymore. The Technical University's auditorium in Tbilisi is a wreck, and it seems like authorities want to forget it's still standing. There has clearly not been any effort put into maintaining the old university complex, and it's not only shameful for the reason that parts of it deserve monument status. What's more alarming is that people live in some of its buildings. Refugees from the war in Abkhazia and the Russian invasion of Georgia still inhabit the deteriorating complex that was supposed to be temporary accommodation... Still a decade ago a remarkable facade was decorating the auditorium, but – somewhere around 2018 – the relief started disappearing piece by piece. #sovietarchitecture #postsoviet #georgianarchitecture #tbilisi #georgia🇬🇪 #georgechakhava #nikolozlasareishivili #structuralism #brutalism #architecture #communism #sovietdesign #auditoriumtbilisi #batman #whereisbatman #socialistmodernism",
+      "makerId": "26F4148A-4987-5521-B6CF-E5D6069470F0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/industrial-pedagogical-technicum-urbangarbagebin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DPY3qKriIXp/",
+      "sourceAuthor": "@urban_garbagebin",
+      "stops": [
+        {
+          "id": "E79ED36F-4491-53A6-88AC-B9F7D01012EE",
+          "order": 0,
+          "title": "Industrial Pedagogical Technicum",
+          "caption": "𝗧𝗵𝗲 𝗜𝗻𝗱𝘂𝘀𝘁𝗿𝗶𝗮𝗹 𝗣𝗲𝗱𝗮𝗴𝗼𝗴𝗶𝗰𝗮𝗹 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝘂𝗺 Architect: Nikoloz Lasareishvili Building year: 1978 Location: Tbilisi, Georgia 🇬🇪 There's not much to see here – at least not anymore. The Technical University's auditorium in Tbilisi is a wreck, and it seems like authorities want to forget it's still standing. There has clearly not been any effort put into maintaining the old university complex, and it's not only shameful for the reason that parts of it deserve monument status. What's more alarming is that people live in some of its buildings. Refugees from the war in Abkhazia and the Russian invasion of Georgia still inhabit the deteriorating complex that was supposed to be temporary accommodation... Still a decade ago a remarkable facade was decorating the auditorium, but – somewhere around 2018 – the relief started disappearing piece by piece. #sovietarchitecture #postsoviet #georgianarchitecture #tbilisi #georgia🇬🇪 #georgechakhava #nikolozlasareishivili #structuralism #brutalism #architecture #communism #sovietdesign #auditoriumtbilisi #batman #whereisbatman #socialistmodernism",
+          "latitude": 41.740998,
+          "longitude": 44.769119,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/industrial-pedagogical-technicum-urbangarbagebin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.740998,
+      "centroidLongitude": 44.769119,
+      "city": "Tbilisi",
+      "country": "Georgia",
+      "relatedTourIds": [
+        "2512CDFF-FA89-59F5-8C9B-E7DA0D332251",
+        "58911C0B-7619-50F2-BD4D-7201A2D3622E",
+        "5e8698d6-cae7-5264-ad40-31fdbbaceb3b",
+        "a00108c0-4f6a-5b55-a692-026b0ee96ccd",
+        "6e4bd7ab-1f41-56b6-9b90-6db600c31de8",
+        "dadc086c-e8c3-5a4f-a94e-59451e665ccd",
+        "4105a64a-6820-572f-8728-ed2d40816367"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Architecture",
+        "Notable Building",
+        "Modernist",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "C11E30EC-4CE1-56DD-9472-9DE286BA0175",
+      "createdAt": "2026-10-27",
+      "title": "The Capsule",
+      "shortDescription": "A post by @globalfoodquest on Instagram.",
+      "longDescription": "Bone Marrow Beef tartare with bonito flakes from @thecapsule.lisbon by @chef.alex.horbenko",
+      "makerId": "5EF4C75F-8D40-52BA-A8C6-413C4D22AB5E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-capsule-globalfoodquest_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DQGfhLjDjtr/",
+      "sourceAuthor": "@globalfoodquest",
+      "stops": [
+        {
+          "id": "A7D24D1D-8D53-55C3-ADBC-18C93D557C33",
+          "order": 0,
+          "title": "The Capsule",
+          "caption": "Bone Marrow Beef tartare with bonito flakes from @thecapsule.lisbon by @chef.alex.horbenko",
+          "latitude": 38.710438,
+          "longitude": -9.139,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-capsule-globalfoodquest_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.710438,
+      "centroidLongitude": -9.139,
+      "city": "Lisbon",
+      "country": "Portugal",
+      "relatedTourIds": [
+        "5CB08592-2BFB-5149-A964-D292C29E436B",
+        "E20EE90C-E0CA-5200-9774-E0B40CD52BE8",
+        "5283D40F-854A-5450-B874-88A6BAADC810",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "F67B46D2-DD17-5FD0-BA59-F0143A0BD682"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "C8E8C2CD-659C-5DB5-847F-5DCD8E55AB52",
+      "createdAt": "2026-10-27",
+      "title": "Nová scéna",
+      "shortDescription": "A post by @urban_garbagebin on Instagram.",
+      "longDescription": "𝗡𝗼𝘃á 𝗦𝗰é𝗻𝗮 𝗼𝗳 𝘁𝗵𝗲 𝗡𝗮𝘁𝗶𝗼𝗻𝗮𝗹 𝗧𝗵𝗲𝗮𝘁𝗲𝗿 Architect: Karel Prager Building year: 1983 Location: Prague, Czech Republic 🇨🇿 Music: Hello Marcel - Král silnic Prague is famous for being a collage of architectural styles, but even within this kaleidoscope of forms and motifs, there are buildings that stand out – urban aliens. The Nová Scéna is a sober, modern counterpart to the neo-Renaissance National Theatre with all its grandeur and opulence. The building looms heavily over the busy Národní Třída, standing in stark contrast to the elegance and decor of its surroundings. The Nová Scéna is a solid piece of brutalism, with a repetitive glass façade and thick, short concrete pillars lifting it ever so slightly above the ground. Although of rather dominating size, the building maintains a subtle dialogue with its older, more classical self – a constant reflection of the new in the old, and the old in the new. Different historical periods facing each other, without the need to demolish one of them. I wish this could be done more often. #praguearchitecture #praguebrutalism #brutalism #brutalistarchitecture #karelprager #stanislavlibenský #czecharchitecture #czechthisout #novascena #praguebuildings #communism #capitalism #czechrepublic #czechia #pivo #weloveprague #charlesbridge #narodnidivadlo",
+      "makerId": "26F4148A-4987-5521-B6CF-E5D6069470F0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nova-scena-urbangarbagebin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DQkApa-iG-J/",
+      "sourceAuthor": "@urban_garbagebin",
+      "stops": [
+        {
+          "id": "D7BEB882-EFAE-54C7-897D-F132341AEBCF",
+          "order": 0,
+          "title": "Nová scéna",
+          "caption": "𝗡𝗼𝘃á 𝗦𝗰é𝗻𝗮 𝗼𝗳 𝘁𝗵𝗲 𝗡𝗮𝘁𝗶𝗼𝗻𝗮𝗹 𝗧𝗵𝗲𝗮𝘁𝗲𝗿 Architect: Karel Prager Building year: 1983 Location: Prague, Czech Republic 🇨🇿 Music: Hello Marcel - Král silnic Prague is famous for being a collage of architectural styles, but even within this kaleidoscope of forms and motifs, there are buildings that stand out – urban aliens. The Nová Scéna is a sober, modern counterpart to the neo-Renaissance National Theatre with all its grandeur and opulence. The building looms heavily over the busy Národní Třída, standing in stark contrast to the elegance and decor of its surroundings. The Nová Scéna is a solid piece of brutalism, with a repetitive glass façade and thick, short concrete pillars lifting it ever so slightly above the ground. Although of rather dominating size, the building maintains a subtle dialogue with its older, more classical self – a constant reflection of the new in the old, and the old in the new. Different historical periods facing each other, without the need to demolish one of them. I wish this could be done more often. #praguearchitecture #praguebrutalism #brutalism #brutalistarchitecture #karelprager #stanislavlibenský #czecharchitecture #czechthisout #novascena #praguebuildings #communism #capitalism #czechrepublic #czechia #pivo #weloveprague #charlesbridge #narodnidivadlo",
+          "latitude": 50.081213,
+          "longitude": 14.41455,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nova-scena-urbangarbagebin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.081213,
+      "centroidLongitude": 14.41455,
+      "city": "Prague",
+      "country": "Czech Republic",
+      "relatedTourIds": [
+        "0D3CC7A4-C4AC-51E7-AB4A-BC3DECC8E293",
+        "59ECCB77-8473-573B-A3BE-480A97CF4407",
+        "9F76D644-5FCA-5708-BA65-1C8EC1EF2167",
+        "DBB452EB-86BD-5C6C-A09C-C99464661FAA",
+        "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6",
+        "897714DB-D2A7-521B-A2CD-7E673522E2C3",
+        "407B19A1-2EB4-5903-ACFD-E037CAD6EFB8",
+        "DDDC862F-F5E5-5E44-AD68-BCC86BC15280"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Architecture",
+        "Notable Building",
+        "Brutalist",
+        "Performance"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6BBFE2C6-E407-5C57-8CD0-3A60536D5D0E",
+      "createdAt": "2026-10-27",
+      "title": "Sedesowce",
+      "shortDescription": "A post by @urban_garbagebin on Instagram.",
+      "longDescription": "𝗦𝗲𝗱𝗲𝘀𝗼𝘄𝗰𝗲 / 𝗠𝗮𝗻𝗵𝗮𝘁𝘁𝗮𝗻 𝗼𝗳 𝗪𝗿𝗼𝗰𝗹𝗮𝘄 Architect: Jadwiga Grabowska-Hawrylak Building year: 1973 Location: Wrocław, Poland 🇵🇱 Music: Mam Dosc - Kryzys You know what they say about the eastern bloc. You’ve seen pictures of identical concrete boxes. They’re gray. Identical. Depressing. But are they all? (Re-edit of our first video) #brutalism #modernism #architecture #architectureexplained #wrocław",
+      "makerId": "26F4148A-4987-5521-B6CF-E5D6069470F0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sedesowce-urbangarbagebin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DS4twmTCCqn/",
+      "sourceAuthor": "@urban_garbagebin",
+      "stops": [
+        {
+          "id": "AE41D6AE-FC4C-5AA2-82FD-37B672C1386D",
+          "order": 0,
+          "title": "Sedesowce",
+          "caption": "𝗦𝗲𝗱𝗲𝘀𝗼𝘄𝗰𝗲 / 𝗠𝗮𝗻𝗵𝗮𝘁𝘁𝗮𝗻 𝗼𝗳 𝗪𝗿𝗼𝗰𝗹𝗮𝘄 Architect: Jadwiga Grabowska-Hawrylak Building year: 1973 Location: Wrocław, Poland 🇵🇱 Music: Mam Dosc - Kryzys You know what they say about the eastern bloc. You’ve seen pictures of identical concrete boxes. They’re gray. Identical. Depressing. But are they all? (Re-edit of our first video) #brutalism #modernism #architecture #architectureexplained #wrocław",
+          "latitude": 51.111438,
+          "longitude": 17.058332,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sedesowce-urbangarbagebin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.111438,
+      "centroidLongitude": 17.058332,
+      "city": "Wrocław",
+      "country": "Poland",
+      "relatedTourIds": [
+        "3525df3c-992a-5ca4-8c84-4c05e8dfc452",
+        "06DA67BF-4A27-52B6-8B8C-069C8B7D6700"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Architecture",
+        "Notable Building",
+        "Modernist",
+        "Jadwiga Grabowska-Hawrylak",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "DEC5417D-5A76-53EE-A578-23D91E859ACC",
+      "createdAt": "2026-10-27",
+      "title": "Museum of Modern Art in Warsaw",
+      "shortDescription": "A post by @urban_garbagebin on Instagram.",
+      "longDescription": "𝗠𝘂𝘀𝗲𝘂𝗺 𝗼𝗳 𝗠𝗼𝗱𝗲𝗿𝗻 𝗔𝗿𝘁 🇵🇱 Architect: Thomas Phifer Building year: 2024 Location: Warsaw, Poland Music: High Beam - Just what I said (Everything In It's Right Place) There have been few modern buildings in Poland that have sparked as much backlash as the Museum of Modern Art in Warsaw. Built in 2024 on the historic Plac Defilad in the centre of Poland’s capital, it shocked the public not only because of its radical minimalism, but mainly because of where it stands. The square itself is a controversial space. Dominated by the giant Palace of Culture and Science (Stalin’s “gift”), it has a history of political significance from communist times and, with the Christmas market taking place there right now, still carries a certain totalitarian atmosphere. The surroundings are marked by a mix of architectural styles, none of which seem to fit together. So what kind of building would make sense in this chaos? #warsaw #thomasphifer #museumofmodernartwarsaw #architecture #modernarchitechture #placdefilad #shoebox #muzeumsztukinowoczesnejwwarszawie #poland #warszawa #warsawarchitecture #warsawarchitecturelovers #communism #palaceofculture #stalintower #neutralarchitecture #palackulturyinaukiwarszawa #controversial",
+      "makerId": "26F4148A-4987-5521-B6CF-E5D6069470F0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-of-modern-art-in-warsaw-urbangarbagebin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DSCmkPjCDc3/",
+      "sourceAuthor": "@urban_garbagebin",
+      "stops": [
+        {
+          "id": "09A4BC57-0E99-5040-B8E7-AD6CF3D89020",
+          "order": 0,
+          "title": "Museum of Modern Art in Warsaw",
+          "caption": "𝗠𝘂𝘀𝗲𝘂𝗺 𝗼𝗳 𝗠𝗼𝗱𝗲𝗿𝗻 𝗔𝗿𝘁 🇵🇱 Architect: Thomas Phifer Building year: 2024 Location: Warsaw, Poland Music: High Beam - Just what I said (Everything In It's Right Place) There have been few modern buildings in Poland that have sparked as much backlash as the Museum of Modern Art in Warsaw. Built in 2024 on the historic Plac Defilad in the centre of Poland’s capital, it shocked the public not only because of its radical minimalism, but mainly because of where it stands. The square itself is a controversial space. Dominated by the giant Palace of Culture and Science (Stalin’s “gift”), it has a history of political significance from communist times and, with the Christmas market taking place there right now, still carries a certain totalitarian atmosphere. The surroundings are marked by a mix of architectural styles, none of which seem to fit together. So what kind of building would make sense in this chaos? #warsaw #thomasphifer #museumofmodernartwarsaw #architecture #modernarchitechture #placdefilad #shoebox #muzeumsztukinowoczesnejwwarszawie #poland #warszawa #warsawarchitecture #warsawarchitecturelovers #communism #palaceofculture #stalintower #neutralarchitecture #palackulturyinaukiwarszawa #controversial",
+          "latitude": 52.233129,
+          "longitude": 21.008984,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-of-modern-art-in-warsaw-urbangarbagebin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.233129,
+      "centroidLongitude": 21.008984,
+      "city": "Warsaw",
+      "country": "Poland",
+      "relatedTourIds": [
+        "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
+        "E5EA1925-C0D0-581B-9985-3F5C67755978",
+        "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
+        "bf2abda0-745b-577c-bc92-676f0dc0de92",
+        "ad217467-ce14-5c5c-ac81-bb3ccc21ae71",
+        "a8a4bbf9-093a-5da1-a573-46de26cefe94",
+        "0042d665-7040-5fee-86ae-dfbce0cb5f54",
+        "a9cbc1f6-9acd-5072-b743-f801f3b1eb21"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Architecture",
+        "Museum",
+        "Contemporary",
+        "Thomas Phifer",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "FA8CF54A-512D-5FA0-82DF-6249F256339F",
+      "createdAt": "2026-10-27",
+      "title": "Malacopa Taco Bar",
+      "shortDescription": "A post by @globalfoodquest on Instagram.",
+      "longDescription": "Forget the sugar cubes— @malacopa_tacobar do things a little differently. 🌶️🍬 ​coffee comes with a side of \"sweet FIRE\" Taste the authentic heat of their chili gummies alongside a fresh brew. It’s sweet, it’s spicy, and it’s 100% Mexican. ​Anyone ever tried these? ​#MexicanFoodie #ChiliGummy #SpicyLife #CoffeeBreak #MexicanRestaurant SweetAndSpicy SpicyGummies",
+      "makerId": "5EF4C75F-8D40-52BA-A8C6-413C4D22AB5E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/malacopa-taco-bar-globalfoodquest_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DSmZ2OxDZyT/",
+      "sourceAuthor": "@globalfoodquest",
+      "stops": [
+        {
+          "id": "57788CE7-BDDF-5DEB-BB81-E06789015300",
+          "order": 0,
+          "title": "Malacopa Taco Bar",
+          "caption": "Forget the sugar cubes— @malacopa_tacobar do things a little differently. 🌶️🍬 ​coffee comes with a side of \"sweet FIRE\" Taste the authentic heat of their chili gummies alongside a fresh brew. It’s sweet, it’s spicy, and it’s 100% Mexican. ​Anyone ever tried these? ​#MexicanFoodie #ChiliGummy #SpicyLife #CoffeeBreak #MexicanRestaurant SweetAndSpicy SpicyGummies",
+          "latitude": 38.698261,
+          "longitude": -9.421781,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/malacopa-taco-bar-globalfoodquest_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.698261,
+      "centroidLongitude": -9.421781,
+      "city": "Cascais",
+      "country": "Portugal",
+      "relatedTourIds": [
+        "65C02328-0252-563C-AD51-2F78EDD38E15"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "C4ACA892-93D8-56C3-BE80-57DA8AFCA7CF",
+      "createdAt": "2026-10-27",
+      "title": "Pastelaria Cego",
+      "shortDescription": "A post by @globalfoodquest on Instagram.",
+      "longDescription": "A cake with a name that sounds like a lamb 🐑 And a crunch you hear before you taste. This is the mémé – a new pastry from Pastelaria Cego, a 124-year-old bakery in Azeitão. Created by José Augusto Pinto, who’s been running the shop for 44 years. Not very sweet. Ricotta inside. Egg custard on top. A pastry so crisp it crackles when you bite. Would you order this? #PieceOfCake #PortuguesePastries #FoodPortugal #LisbonFood #PortugalEats",
+      "makerId": "5EF4C75F-8D40-52BA-A8C6-413C4D22AB5E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pastelaria-cego-globalfoodquest_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DT0AhjVjdRg/",
+      "sourceAuthor": "@globalfoodquest",
+      "stops": [
+        {
+          "id": "F0168041-4A00-5E13-8D6D-D507D5F05522",
+          "order": 0,
+          "title": "Pastelaria Cego",
+          "caption": "A cake with a name that sounds like a lamb 🐑 And a crunch you hear before you taste. This is the mémé – a new pastry from Pastelaria Cego, a 124-year-old bakery in Azeitão. Created by José Augusto Pinto, who’s been running the shop for 44 years. Not very sweet. Ricotta inside. Egg custard on top. A pastry so crisp it crackles when you bite. Would you order this? #PieceOfCake #PortuguesePastries #FoodPortugal #LisbonFood #PortugalEats",
+          "latitude": 38.516872,
+          "longitude": -9.018303,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pastelaria-cego-globalfoodquest_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.516872,
+      "centroidLongitude": -9.018303,
+      "city": "Setúbal",
+      "country": "Portugal",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8956BA2E-9325-5E94-B2AB-93D202E01572",
+      "createdAt": "2026-10-27",
+      "title": "Churrasqueira da Cidreira",
+      "shortDescription": "A post by @globalfoodquest on Instagram.",
+      "longDescription": "Smoky piri-piri chicken done perfectly. 🔥🍗 White tablecloths, a makeshift alfresco park setup, and herby heat just outside Coimbra. Episode 6 of our Piri Piri 100 - cheaper than Lisbon and now #2 in our rankings. Chips or crisps… OR BOTH? #piripirichicken #frangoassado #portugalfood #coimbra",
+      "makerId": "5EF4C75F-8D40-52BA-A8C6-413C4D22AB5E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/churrasqueira-da-cidreira-globalfoodquest_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DTfjJZcjWs2/",
+      "sourceAuthor": "@globalfoodquest",
+      "stops": [
+        {
+          "id": "FB28E583-A7B8-56D7-BFA0-6E51527D3854",
+          "order": 0,
+          "title": "Churrasqueira da Cidreira",
+          "caption": "Smoky piri-piri chicken done perfectly. 🔥🍗 White tablecloths, a makeshift alfresco park setup, and herby heat just outside Coimbra. Episode 6 of our Piri Piri 100 - cheaper than Lisbon and now #2 in our rankings. Chips or crisps… OR BOTH? #piripirichicken #frangoassado #portugalfood #coimbra",
+          "latitude": 40.240456,
+          "longitude": -8.483781,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/churrasqueira-da-cidreira-globalfoodquest_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.240456,
+      "centroidLongitude": -8.483781,
+      "city": "Coimbra",
+      "country": "Portugal",
+      "relatedTourIds": [
+        "AC067B15-5514-5429-BF40-E6613AA1E9C3"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "DCDD71E1-293B-53E9-8048-4110B33272F4",
+      "createdAt": "2026-10-27",
+      "title": "Floating Office Rotterdam",
+      "shortDescription": "A post by @urban_garbagebin on Instagram.",
+      "longDescription": "𝗙𝗹𝗼𝗮𝘁𝗶𝗻𝗴 𝗢𝗳𝗳𝗶𝗰𝗲 𝗥𝗼𝘁𝘁𝗲𝗿𝗱𝗮𝗺 (𝗙𝗢𝗥) Designed by: Powerhouse Company Building year: 2021 Location: Rotterdam, Netherlands 🇳🇱 Music: Tourist - Bunny Is building on water the future? Floating Office Rotterdam (FOR) is a compelling example of sustainable design done right. Designed by Powerhouse Company, FOR is elegant and deceptively simple, while integrating a range of high-tech sustainable solutions. It also doesn’t bulldoze its way into the city like so many buildings often do. Instead, FOR blends in with its surroundings and respects the site's history. It’s timber, it floats, it’s future-proof. How cool is that? #architecture #powerhousecompany #sustainabledesign #sustainablearchitecture #ad",
+      "makerId": "26F4148A-4987-5521-B6CF-E5D6069470F0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/floating-office-rotterdam-urbangarbagebin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DTiEbifiGtm/",
+      "sourceAuthor": "@urban_garbagebin",
+      "stops": [
+        {
+          "id": "8EBC5064-1DC2-55E4-BA27-C53FBD97C994",
+          "order": 0,
+          "title": "Floating Office Rotterdam",
+          "caption": "𝗙𝗹𝗼𝗮𝘁𝗶𝗻𝗴 𝗢𝗳𝗳𝗶𝗰𝗲 𝗥𝗼𝘁𝘁𝗲𝗿𝗱𝗮𝗺 (𝗙𝗢𝗥) Designed by: Powerhouse Company Building year: 2021 Location: Rotterdam, Netherlands 🇳🇱 Music: Tourist - Bunny Is building on water the future? Floating Office Rotterdam (FOR) is a compelling example of sustainable design done right. Designed by Powerhouse Company, FOR is elegant and deceptively simple, while integrating a range of high-tech sustainable solutions. It also doesn’t bulldoze its way into the city like so many buildings often do. Instead, FOR blends in with its surroundings and respects the site's history. It’s timber, it floats, it’s future-proof. How cool is that? #architecture #powerhousecompany #sustainabledesign #sustainablearchitecture #ad",
+          "latitude": 51.904057,
+          "longitude": 4.4884,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/floating-office-rotterdam-urbangarbagebin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.904057,
+      "centroidLongitude": 4.4884,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [
+        "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
+        "c440159d-6649-5a76-bd06-9d51aaa7566d",
+        "CFE6A911-141D-5403-A8CB-42D3B4B9DE17",
+        "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
+        "6BCA3704-C604-5639-A323-F4EBEFF1D76C",
+        "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
+        "7354C765-DAF5-5B08-91DE-2749969CC0BA",
+        "45649895-32b8-51f6-a32e-ac3f14672c03"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Architecture",
+        "Notable Building",
+        "Contemporary",
+        "Waterfront"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "A9BB5999-2B54-5653-920C-2E01FA0CAC75",
+      "createdAt": "2026-10-27",
+      "title": "Museum of the Home",
+      "shortDescription": "A post by @historianaisha on Instagram.",
+      "longDescription": "In the Museum of the Home in Hackney, London is this stunning cabinet. Commissioned by Mary Evelyn for her husband John, its place in history has been cemented as one of two possible cabinets in which John Evelyn's famous diary was discovered in the 19th century - the other is in the V&A (W.24:1 to 32-1977). Sources: Margaret Willes, The Curious World of Samuel Pepys and John Evelyn, 2017 Anthony Radcliffe and Peter Thornton, 'John Evelyn's Cabinet', Connoisseur, April 1978 #history #17thcentury #literature #furniturehistory #museumofthehome",
+      "makerId": "290997BB-32E4-53EA-8497-CBD4829361B2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-of-the-home-historianaisha_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DToDSYVAQ5s/",
+      "sourceAuthor": "@historianaisha",
+      "stops": [
+        {
+          "id": "2BE2888F-14A2-5B89-AA3B-F4EA3350C184",
+          "order": 0,
+          "title": "Museum of the Home",
+          "caption": "In the Museum of the Home in Hackney, London is this stunning cabinet. Commissioned by Mary Evelyn for her husband John, its place in history has been cemented as one of two possible cabinets in which John Evelyn's famous diary was discovered in the 19th century - the other is in the V&A (W.24:1 to 32-1977). Sources: Margaret Willes, The Curious World of Samuel Pepys and John Evelyn, 2017 Anthony Radcliffe and Peter Thornton, 'John Evelyn's Cabinet', Connoisseur, April 1978 #history #17thcentury #literature #furniturehistory #museumofthehome",
+          "latitude": 51.531524,
+          "longitude": -0.07643,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-of-the-home-historianaisha_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.531524,
+      "centroidLongitude": -0.07643,
+      "city": "London",
+      "country": "United Kingdom",
+      "relatedTourIds": [
+        "61885E4F-9150-53F1-948A-BFB69CC14F0F",
+        "2D5C9958-DB17-56CF-BBC6-2E397D11827A",
+        "0491F82F-B3C5-5FBE-856D-D217DEC823C5",
+        "70a6cf56-ba03-4be2-b569-dda7b08ef7a4"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "34B430CA-F19D-5260-A17E-9FD85ED0910F",
+      "createdAt": "2026-10-27",
+      "title": "Watts Cemetery Chapel",
+      "shortDescription": "A post by @historianaisha on Instagram.",
+      "longDescription": "The Watts Mortuary Chapel, also known as the Watts Cemetery Chapel, is one of the greatest Arts and Crafts buildings still in existence. Nestled in Compton, Surrey, the Chapel is a testament to community art, the talent of local artisans and the brilliance of Mary Seton Watts. Her design is rich in symbolism, drawing on Celtic, Art Nouveau and Romanesque styles and motifs and taking inspiration from cultures and religions from around the world. It’s well worth the trip and can be combined with a visit to Watts Gallery and Limnerslease, the home of Mary and her husband G. F. Watts - both just up the road from the Chapel. #historygram #arthistory #exploresurrey #artsandcraftsmovement",
+      "makerId": "290997BB-32E4-53EA-8497-CBD4829361B2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/watts-cemetery-chapel-historianaisha_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DU5_H65DFku/",
+      "sourceAuthor": "@historianaisha",
+      "stops": [
+        {
+          "id": "70A696A7-0132-56EF-A3B9-74E2EB79CA77",
+          "order": 0,
+          "title": "Watts Cemetery Chapel",
+          "caption": "The Watts Mortuary Chapel, also known as the Watts Cemetery Chapel, is one of the greatest Arts and Crafts buildings still in existence. Nestled in Compton, Surrey, the Chapel is a testament to community art, the talent of local artisans and the brilliance of Mary Seton Watts. Her design is rich in symbolism, drawing on Celtic, Art Nouveau and Romanesque styles and motifs and taking inspiration from cultures and religions from around the world. It’s well worth the trip and can be combined with a visit to Watts Gallery and Limnerslease, the home of Mary and her husband G. F. Watts - both just up the road from the Chapel. #historygram #arthistory #exploresurrey #artsandcraftsmovement",
+          "latitude": 51.217774,
+          "longitude": -0.632086,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/watts-cemetery-chapel-historianaisha_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.217774,
+      "centroidLongitude": -0.632086,
+      "city": "Compton",
+      "country": "United Kingdom",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Art",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "AC067B15-5514-5429-BF40-E6613AA1E9C3",
+      "createdAt": "2026-10-27",
+      "title": "Churrasqueira Prestige",
+      "shortDescription": "A post by @globalfoodquest on Instagram.",
+      "longDescription": "Restaurant 7 of 100 on the Piri-Piri 100. Coimbra delivered. House-made piri-piri with real depth. Fresh fried sides. A homemade sweet bread we didn’t expect - but it absolutely works with the chicken. This one moved the rankings. 📍 Churrasqueira Prestige, Coimbra #PiriPiri100 #PiriPiri #PortugueseFood #FoodInPortugal #Coimbra",
+      "makerId": "5EF4C75F-8D40-52BA-A8C6-413C4D22AB5E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/churrasqueira-prestige-globalfoodquest_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DUF5jgHjYfG/",
+      "sourceAuthor": "@globalfoodquest",
+      "stops": [
+        {
+          "id": "2C7BE87A-2A77-5DD1-A79B-8CA93D411500",
+          "order": 0,
+          "title": "Churrasqueira Prestige",
+          "caption": "Restaurant 7 of 100 on the Piri-Piri 100. Coimbra delivered. House-made piri-piri with real depth. Fresh fried sides. A homemade sweet bread we didn’t expect - but it absolutely works with the chicken. This one moved the rankings. 📍 Churrasqueira Prestige, Coimbra #PiriPiri100 #PiriPiri #PortugueseFood #FoodInPortugal #Coimbra",
+          "latitude": 40.203571,
+          "longitude": -8.410942,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/churrasqueira-prestige-globalfoodquest_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.203571,
+      "centroidLongitude": -8.410942,
+      "city": "Coimbra",
+      "country": "Portugal",
+      "relatedTourIds": [
+        "8956BA2E-9325-5E94-B2AB-93D202E01572",
+        "BD66B94B-4DC3-5BBD-B1FE-C92BC01AF6F5"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9E95C937-F812-5E6D-8F8E-A8A5532787B9",
+      "createdAt": "2026-10-27",
+      "title": "Prague Metronome",
+      "shortDescription": "A post by @urban_garbagebin on Instagram.",
+      "longDescription": "𝗠𝗼𝗻𝘂𝗺𝗲𝗻𝘁 𝘁𝗼 𝗦𝘁𝗮𝗹𝗶𝗻 (Stalinův pomnik) Building year: 1955 Artist: Otakar Švec Location: Prague, Czech Republic 🇨🇿 Music: На Дне - Molchat Doma 𝗠𝗲𝘁𝗿𝗼𝗻𝗼𝗺𝗲 Artist: Vratislav Karel Novák Building year: 1991 Amid the heavy marijuana smoke of Letná Park in Prague, historical shadows dance to the rhythm of a ticking red metronome. There, overlooking the Czech capital, the world’s largest statue of Josef Stalin once stood proudly in all its glory and gloom. It was the life’s work - or rather, the death work - of sculptor Otakar Švec, who took his own life just days before the monument’s unveiling. Why did he do it? Why was this colossal statue blown up only a few years after its completion? And above all, what does the red metronome have to do with this story? This video is dedicated to all artists who live and create under dictatorship. May your minds and your work remain bastions of freedom. #praguearchitecture #communism #stalinstatue #stalinmonument #letnapark",
+      "makerId": "26F4148A-4987-5521-B6CF-E5D6069470F0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/prague-metronome-urbangarbagebin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DUGrFxxCOba/",
+      "sourceAuthor": "@urban_garbagebin",
+      "stops": [
+        {
+          "id": "45A99F40-5EA9-5D58-96B3-1BE397EDC168",
+          "order": 0,
+          "title": "Prague Metronome",
+          "caption": "𝗠𝗼𝗻𝘂𝗺𝗲𝗻𝘁 𝘁𝗼 𝗦𝘁𝗮𝗹𝗶𝗻 (Stalinův pomnik) Building year: 1955 Artist: Otakar Švec Location: Prague, Czech Republic 🇨🇿 Music: На Дне - Molchat Doma 𝗠𝗲𝘁𝗿𝗼𝗻𝗼𝗺𝗲 Artist: Vratislav Karel Novák Building year: 1991 Amid the heavy marijuana smoke of Letná Park in Prague, historical shadows dance to the rhythm of a ticking red metronome. There, overlooking the Czech capital, the world’s largest statue of Josef Stalin once stood proudly in all its glory and gloom. It was the life’s work - or rather, the death work - of sculptor Otakar Švec, who took his own life just days before the monument’s unveiling. Why did he do it? Why was this colossal statue blown up only a few years after its completion? And above all, what does the red metronome have to do with this story? This video is dedicated to all artists who live and create under dictatorship. May your minds and your work remain bastions of freedom. #praguearchitecture #communism #stalinstatue #stalinmonument #letnapark",
+          "latitude": 50.094741,
+          "longitude": 14.415935,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/prague-metronome-urbangarbagebin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.094741,
+      "centroidLongitude": 14.415935,
+      "city": "Prague",
+      "country": "Czech Republic",
+      "relatedTourIds": [
+        "BFD585C3-B120-56DE-A5FE-28CB97DA404D",
+        "FB6A520E-1FAA-5873-8D06-61BD10D2248B",
+        "16FE3AFB-DDEC-51B4-9AD3-84B6B497B5C6",
+        "E4A74305-3EA6-5C6E-BBFA-720EBDEC9DD2",
+        "59ECCB77-8473-573B-A3BE-480A97CF4407",
+        "EBDFA4FD-5534-5EF5-B931-372306D9FB12",
+        "0D3CC7A4-C4AC-51E7-AB4A-BC3DECC8E293",
+        "DDDC862F-F5E5-5E44-AD68-BCC86BC15280"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "Viewpoint",
+        "Public Art",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "BD66B94B-4DC3-5BBD-B1FE-C92BC01AF6F5",
+      "createdAt": "2026-10-27",
+      "title": "Zé Manel dos Ossos",
+      "shortDescription": "A post by @globalfoodquest on Instagram.",
+      "longDescription": "We queued AN HOUR For BONES 🦴 Tucked into the old streets of Coimbra is one of Portugal’s most famous tascas. Zé Manel dos Ossos is known for one dish above all else – boiled pork neck bones, cooked until the meat collapses off the bone. Hot. Salty. Deeply comforting. No frills. It’s small, loud, chaotic, and brutally hard to get a table. Locals guard it. Tourists hunt it down. People try to pay their way in – and get turned away. We spent time with the owner, who talked about how tough it is to keep places like this alive, and why tradition still matters. If you want to understand Coimbra – and Portugal – this is essential eating. #PortugalFood #Coimbra #EatLikeALocal #Tasca #FoodCulture",
+      "makerId": "5EF4C75F-8D40-52BA-A8C6-413C4D22AB5E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ze-manel-dos-ossos-globalfoodquest_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DUVs6FyDURg/",
+      "sourceAuthor": "@globalfoodquest",
+      "stops": [
+        {
+          "id": "2E12446E-F17C-59A5-A2F3-AFA31B4B7E22",
+          "order": 0,
+          "title": "Zé Manel dos Ossos",
+          "caption": "We queued AN HOUR For BONES 🦴 Tucked into the old streets of Coimbra is one of Portugal’s most famous tascas. Zé Manel dos Ossos is known for one dish above all else – boiled pork neck bones, cooked until the meat collapses off the bone. Hot. Salty. Deeply comforting. No frills. It’s small, loud, chaotic, and brutally hard to get a table. Locals guard it. Tourists hunt it down. People try to pay their way in – and get turned away. We spent time with the owner, who talked about how tough it is to keep places like this alive, and why tradition still matters. If you want to understand Coimbra – and Portugal – this is essential eating. #PortugalFood #Coimbra #EatLikeALocal #Tasca #FoodCulture",
+          "latitude": 40.207848,
+          "longitude": -8.430145,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ze-manel-dos-ossos-globalfoodquest_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.207848,
+      "centroidLongitude": -8.430145,
+      "city": "Coimbra",
+      "country": "Portugal",
+      "relatedTourIds": [
+        "AC067B15-5514-5429-BF40-E6613AA1E9C3"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3717F561-8C1F-5303-B1A1-4A74DD676332",
+      "createdAt": "2026-10-27",
+      "title": "Astro Ramen",
+      "shortDescription": "A post by @globalfoodquest on Instagram.",
+      "longDescription": "What makes a great ramen? 🍜 According to Chef David - it starts and ends with the broth. We followed Google Maps to Astro Ramen, a 4.9-star spot with 300+ reviews, and found a Portuguese chef who honed his ramen craft in Australia, now cooking Japanese-style ramen that genuinely delivers. Sweet heat. Deep pork undertones. Soy cutting through. Freshness from the herbs. A broth that stays with you. Portugal once gave tempura to Japan. Now Japan sends ramen back. If you’re in central Lisbon and craving proper ramen, this one’s worth the stop. Hashtags: #ramen #ramenlisbon #lisboneats #foodinlisbon #japanesefood foodadventure",
+      "makerId": "5EF4C75F-8D40-52BA-A8C6-413C4D22AB5E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/astro-ramen-globalfoodquest_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DUlHbKBjaE0/",
+      "sourceAuthor": "@globalfoodquest",
+      "stops": [
+        {
+          "id": "639AA2AF-76F8-5356-904B-96B38AE25C25",
+          "order": 0,
+          "title": "Astro Ramen",
+          "caption": "What makes a great ramen? 🍜 According to Chef David - it starts and ends with the broth. We followed Google Maps to Astro Ramen, a 4.9-star spot with 300+ reviews, and found a Portuguese chef who honed his ramen craft in Australia, now cooking Japanese-style ramen that genuinely delivers. Sweet heat. Deep pork undertones. Soy cutting through. Freshness from the herbs. A broth that stays with you. Portugal once gave tempura to Japan. Now Japan sends ramen back. If you’re in central Lisbon and craving proper ramen, this one’s worth the stop. Hashtags: #ramen #ramenlisbon #lisboneats #foodinlisbon #japanesefood foodadventure",
+          "latitude": 38.714208,
+          "longitude": -9.152961,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/astro-ramen-globalfoodquest_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.714208,
+      "centroidLongitude": -9.152961,
+      "city": "Lisbon",
+      "country": "Portugal",
+      "relatedTourIds": [
+        "CEF594AA-F070-5228-9047-15D8318EE9E4",
+        "BA77614A-359F-5633-9EC2-2E1ECAA64026",
+        "341B9D57-1C9B-50A4-8B9E-F12C4B67C668",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "248572EA-69A0-54BF-BFB9-1A27E5D2311E",
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "EC96DB17-641E-56A5-80DC-A7669610416E",
+      "createdAt": "2026-10-27",
+      "title": "Restaurante Mugasa",
+      "shortDescription": "A post by @globalfoodquest on Instagram.",
+      "longDescription": "Leitão in Bairrada, Portugal 🇵🇹 Milk-fed suckling pig under 6kg. Roasted slowly over vine cuttings. Crisp skin. Tender meat. Savoury garlic and white pepper sauce. 📍 Restaurante Mugasa If you’re travelling to Portugal, this is essential. #Portugal #Leitao #Bairrada #PortugueseFood #FoodTravel VisitPortugal",
+      "makerId": "5EF4C75F-8D40-52BA-A8C6-413C4D22AB5E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/restaurante-mugasa-globalfoodquest_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DUqQW7RDdkb/",
+      "sourceAuthor": "@globalfoodquest",
+      "stops": [
+        {
+          "id": "AE8FFBC8-1716-5371-9BD9-7A885815B458",
+          "order": 0,
+          "title": "Restaurante Mugasa",
+          "caption": "Leitão in Bairrada, Portugal 🇵🇹 Milk-fed suckling pig under 6kg. Roasted slowly over vine cuttings. Crisp skin. Tender meat. Savoury garlic and white pepper sauce. 📍 Restaurante Mugasa If you’re travelling to Portugal, this is essential. #Portugal #Leitao #Bairrada #PortugueseFood #FoodTravel VisitPortugal",
+          "latitude": 40.483072,
+          "longitude": -8.492465,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/restaurante-mugasa-globalfoodquest_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.483072,
+      "centroidLongitude": -8.492465,
+      "city": "Anadia",
+      "country": "Portugal",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E0D48C43-EABC-536F-957D-8FF068FA9513",
+      "createdAt": "2026-10-27",
+      "title": "XXL by Olivier",
+      "shortDescription": "A post by @globalfoodquest on Instagram.",
+      "longDescription": "Today is exactly 28 years since one chef fed 15,000 people on a 5km-long table on the Vasco da Gama Bridge. March 22, 1998. Michel da Costa - Portugal's first Michelin-starred chef - didn't cook for a gala. He cooked for an entire nation. A 5km-long table. Feijoada. The biggest dining event in history. His son Olivier carried that legacy into one of Lisbon's most celebrated restaurants, where entrecote steak with Café de Paris sauce became the dish of the city. Now Olivier's son Mateus is rewriting the rule book - taking that iconic steak dish and turning it into a delivery sandwich. Steak frites. Café de Paris sauce. In a baguette. Delivered to your door. We had to know: can a dish this legendary survive a delivery box? The verdict? The dynasty is very much in safe hands. 🙌 📍 XXL Restaurant, Lisbon #PortugalFood #LisbonFood #PortugueseFood #FoodHistory #LisbonRestaurants",
+      "makerId": "5EF4C75F-8D40-52BA-A8C6-413C4D22AB5E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/xxl-by-olivier-globalfoodquest_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DWL-cOajfhj/",
+      "sourceAuthor": "@globalfoodquest",
+      "stops": [
+        {
+          "id": "2E4CF916-BFE8-5EC3-9B27-4512E5F4A1F5",
+          "order": 0,
+          "title": "XXL by Olivier",
+          "caption": "Today is exactly 28 years since one chef fed 15,000 people on a 5km-long table on the Vasco da Gama Bridge. March 22, 1998. Michel da Costa - Portugal's first Michelin-starred chef - didn't cook for a gala. He cooked for an entire nation. A 5km-long table. Feijoada. The biggest dining event in history. His son Olivier carried that legacy into one of Lisbon's most celebrated restaurants, where entrecote steak with Café de Paris sauce became the dish of the city. Now Olivier's son Mateus is rewriting the rule book - taking that iconic steak dish and turning it into a delivery sandwich. Steak frites. Café de Paris sauce. In a baguette. Delivered to your door. We had to know: can a dish this legendary survive a delivery box? The verdict? The dynasty is very much in safe hands. 🙌 📍 XXL Restaurant, Lisbon #PortugalFood #LisbonFood #PortugueseFood #FoodHistory #LisbonRestaurants",
+          "latitude": 38.712055,
+          "longitude": -9.154867,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/xxl-by-olivier-globalfoodquest_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.712055,
+      "centroidLongitude": -9.154867,
+      "city": "Lisbon",
+      "country": "Portugal",
+      "relatedTourIds": [
+        "BA77614A-359F-5633-9EC2-2E1ECAA64026",
+        "4BC27710-1D95-56ED-A2F1-92F10C6DD1E1",
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "E20EE90C-E0CA-5200-9774-E0B40CD52BE8",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "CEF594AA-F070-5228-9047-15D8318EE9E4",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3AF6916F-394A-58B9-9866-F76A7DB929B7",
+      "createdAt": "2026-10-27",
+      "title": "Gladstone's Land",
+      "shortDescription": "A post by @historianaisha on Instagram.",
+      "longDescription": "Edinburgh is multi-layered in every possible way - and this can be seen clearly in Gladstone’s Land on the Royal Mile, run by the @nationaltrustforscotland, where you can explore over 300 years of the city’s history. #visitedinburgh #history #historicbuildings",
+      "makerId": "290997BB-32E4-53EA-8497-CBD4829361B2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gladstone-s-land-historianaisha_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DX963_7N6dA/",
+      "sourceAuthor": "@historianaisha",
+      "stops": [
+        {
+          "id": "49EA487F-FC06-5999-8FAD-17707506E521",
+          "order": 0,
+          "title": "Gladstone's Land",
+          "caption": "Edinburgh is multi-layered in every possible way - and this can be seen clearly in Gladstone’s Land on the Royal Mile, run by the @nationaltrustforscotland, where you can explore over 300 years of the city’s history. #visitedinburgh #history #historicbuildings",
+          "latitude": 55.949429,
+          "longitude": -3.193685,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gladstone-s-land-historianaisha_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 55.949429,
+      "centroidLongitude": -3.193685,
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "relatedTourIds": [
+        "248A491A-36DA-5495-89A7-62823EC88231",
+        "B3FADEB1-F2FF-5268-AD69-231B49574BAE",
+        "7FE7B7F5-2859-55F0-BBDC-2B55962FBCDA",
+        "2361AAF5-5AD2-5BBB-8FAA-DB527D539E42",
+        "D7617C05-6FAA-513C-A66F-7D78E0948487",
+        "16EF62BA-687D-56B3-8D73-40DFCFB6D4C7",
+        "9A385977-8651-5647-B550-4CB9B0372224",
+        "51E1861F-5F79-5321-AC7C-4341FCFDF393"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "023BC850-BC65-5A96-861A-9A425C9704ED",
+      "createdAt": "2026-10-27",
+      "title": "Strawberry Hill House",
+      "shortDescription": "A post by @historianaisha on Instagram.",
+      "longDescription": "Horace Walpole was a trend setter. Whilst others turned to Ancient Greece and Rome for their design inspiration, Walpole looked to the medieval period. Strawberry Hill sparked a Gothic revival in Britain that lasted for well over a century, and it was here that he wrote ‘The Castle of Otranto’, kickstarting the Gothic genre of literature. Whilst the house survives and was lovingly restored by the Strawberry Hill Trust, Walpole’s great collection has not. It was dispersed in a sale in 1842 that lasted for 24 days when its owner George Waldegrave was heavily in debt (and had been imprisoned for six months for assaulting a police officer in Kingston…). Currently on display in the Red Bedchamber is a painting of the house commissioned by Walpole from his artist-in-residence at Strawberry Hill, Johann Heinrich Müntz. Whilst it never hung in the house it shows, it is a key part of Strawberry Hill’s history, depicting the earliest form of the house before the Gallery and Round Tower were added. @strawbhillhouse is running an appeal to raise £85,000 to acquire the painting, and it is a rare opportunity for a piece of art directly connected to Walpole and the house to find a home there. Donations are being match funded so even a small amount will go a long way. For more info, visit strawberryhillhouse.org.uk/muntz-strawberry-hill (link also in @strawbhillhouse bio). I was very kindly gifted tickets to promote this campaign and had a wonderful time visiting. If you too fancy a free visit, you can get entry with a National Art Pass @artfund (only £10 for students!). #arthistory #gothic #18thcentury #visitlondon",
+      "makerId": "290997BB-32E4-53EA-8497-CBD4829361B2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/strawberry-hill-house-historianaisha_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DXyzXstsoFx/",
+      "sourceAuthor": "@historianaisha",
+      "stops": [
+        {
+          "id": "F6C538F0-D818-5840-A2B1-E04F8887821A",
+          "order": 0,
+          "title": "Strawberry Hill House",
+          "caption": "Horace Walpole was a trend setter. Whilst others turned to Ancient Greece and Rome for their design inspiration, Walpole looked to the medieval period. Strawberry Hill sparked a Gothic revival in Britain that lasted for well over a century, and it was here that he wrote ‘The Castle of Otranto’, kickstarting the Gothic genre of literature. Whilst the house survives and was lovingly restored by the Strawberry Hill Trust, Walpole’s great collection has not. It was dispersed in a sale in 1842 that lasted for 24 days when its owner George Waldegrave was heavily in debt (and had been imprisoned for six months for assaulting a police officer in Kingston…). Currently on display in the Red Bedchamber is a painting of the house commissioned by Walpole from his artist-in-residence at Strawberry Hill, Johann Heinrich Müntz. Whilst it never hung in the house it shows, it is a key part of Strawberry Hill’s history, depicting the earliest form of the house before the Gallery and Round Tower were added. @strawbhillhouse is running an appeal to raise £85,000 to acquire the painting, and it is a rare opportunity for a piece of art directly connected to Walpole and the house to find a home there. Donations are being match funded so even a small amount will go a long way. For more info, visit strawberryhillhouse.org.uk/muntz-strawberry-hill (link also in @strawbhillhouse bio). I was very kindly gifted tickets to promote this campaign and had a wonderful time visiting. If you too fancy a free visit, you can get entry with a National Art Pass @artfund (only £10 for students!). #arthistory #gothic #18thcentury #visitlondon",
+          "latitude": 51.438195,
+          "longitude": -0.334729,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/strawberry-hill-house-historianaisha_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.438195,
+      "centroidLongitude": -0.334729,
+      "city": "Twickenham",
+      "country": "United Kingdom",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Architecture",
+        "Notable Building",
+        "Gothic",
+        "Literature"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "341B9D57-1C9B-50A4-8B9E-F12C4B67C668",
+      "createdAt": "2026-10-27",
+      "title": "Barra Cascabel",
+      "shortDescription": "A post by @globalfoodquest on Instagram.",
+      "longDescription": "Two Michelin-starred chefs walked into a department store. What they built upstairs is no joke. Hidden above Lisbon's El Corte Inglés, José Avillez and Roberto Ruiz have created a Portuguese-Mexican collision that works on every level. Avillez, Portugal's most celebrated chef. Ruiz, the first Mexican chef cooking Mexican food to earn a Michelin star in Europe. Together, they're pulling Atlantic seafood through smoke, spice and citrus in ways that genuinely surprised us. Tuna tostadas hitting the pass. Margaritas flying out. Big flavours, loud colours, and a kitchen running on serious energy. Portugal brings the best fresh ingredients the Atlantic has to offer. Mexico brings the culture, the heat and the soul. In the middle: food that has no business being this good above a shopping centre. From the chefs to the front of house team, there's a real passion behind this place. If you're in Lisbon and think you know where to eat, add this one to the list. #LisbonRestaurants #JoseAvillez #LisbonFoodGuide #MichelinStarRestaurant #LisbonHiddenGems",
+      "makerId": "5EF4C75F-8D40-52BA-A8C6-413C4D22AB5E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barra-cascabel-globalfoodquest_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DY4WNXdtOPm/",
+      "sourceAuthor": "@globalfoodquest",
+      "stops": [
+        {
+          "id": "E75EFE33-E35C-55A4-AF5B-6BABC0A5F873",
+          "order": 0,
+          "title": "Barra Cascabel",
+          "caption": "Two Michelin-starred chefs walked into a department store. What they built upstairs is no joke. Hidden above Lisbon's El Corte Inglés, José Avillez and Roberto Ruiz have created a Portuguese-Mexican collision that works on every level. Avillez, Portugal's most celebrated chef. Ruiz, the first Mexican chef cooking Mexican food to earn a Michelin star in Europe. Together, they're pulling Atlantic seafood through smoke, spice and citrus in ways that genuinely surprised us. Tuna tostadas hitting the pass. Margaritas flying out. Big flavours, loud colours, and a kitchen running on serious energy. Portugal brings the best fresh ingredients the Atlantic has to offer. Mexico brings the culture, the heat and the soul. In the middle: food that has no business being this good above a shopping centre. From the chefs to the front of house team, there's a real passion behind this place. If you're in Lisbon and think you know where to eat, add this one to the list. #LisbonRestaurants #JoseAvillez #LisbonFoodGuide #MichelinStarRestaurant #LisbonHiddenGems",
+          "latitude": 38.733022,
+          "longitude": -9.153449,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barra-cascabel-globalfoodquest_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.733022,
+      "centroidLongitude": -9.153449,
+      "city": "Lisbon",
+      "country": "Portugal",
+      "relatedTourIds": [
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "CEF594AA-F070-5228-9047-15D8318EE9E4",
+        "3F66A2A6-CE5D-5042-9526-A0453C5D7AB4",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
+        "B53DE4AD-A534-503C-BBE3-565E7BC04CF1",
+        "F8D2226A-8F3A-5EF4-A506-E22C39B3E3F6",
+        "F67B46D2-DD17-5FD0-BA59-F0143A0BD682"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "BA77614A-359F-5633-9EC2-2E1ECAA64026",
+      "createdAt": "2026-10-27",
+      "title": "After Dark",
+      "shortDescription": "A post by @globalfoodquest on Instagram.",
+      "longDescription": "This might be the most chaotic dish in Lisbon. It's called \"Chaos.\" Obviously. Príncipe Real. Chef Matheus at After Dark. An overflowing gunkan. Wagyu, tuna, uni, roe, cured quails egg. Stacked high, spilling over, no rules on how to eat it. Hands, chopsticks, whatever you want. Matheus grew up in São Paulo, trained at Cordon Bleu in Melbourne Australia, he now cooks in Lisbon. He took a dish from a Japanese izakaya and made it completely his own. Traditional sushi, made in the most nontraditional way possible. Every ingredient he loves, in one dish. Every restaurant has one dish that says who they are. The dish the chef would stake their name on. We're going to find it. This is The Signature. And this one said everything. Know someone who needs to eat here? Send them this. #GFQSignature #LisbonFood #SignatureDish #PrincipeReal #JapaneseFusion",
+      "makerId": "5EF4C75F-8D40-52BA-A8C6-413C4D22AB5E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/after-dark-globalfoodquest_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DYMjaYythWG/",
+      "sourceAuthor": "@globalfoodquest",
+      "stops": [
+        {
+          "id": "E7E0BA4F-E9E7-594D-9C8F-25B32D48BC1F",
+          "order": 0,
+          "title": "After Dark",
+          "caption": "This might be the most chaotic dish in Lisbon. It's called \"Chaos.\" Obviously. Príncipe Real. Chef Matheus at After Dark. An overflowing gunkan. Wagyu, tuna, uni, roe, cured quails egg. Stacked high, spilling over, no rules on how to eat it. Hands, chopsticks, whatever you want. Matheus grew up in São Paulo, trained at Cordon Bleu in Melbourne Australia, he now cooks in Lisbon. He took a dish from a Japanese izakaya and made it completely his own. Traditional sushi, made in the most nontraditional way possible. Every ingredient he loves, in one dish. Every restaurant has one dish that says who they are. The dish the chef would stake their name on. We're going to find it. This is The Signature. And this one said everything. Know someone who needs to eat here? Send them this. #GFQSignature #LisbonFood #SignatureDish #PrincipeReal #JapaneseFusion",
+          "latitude": 38.716631,
+          "longitude": -9.151163,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/after-dark-globalfoodquest_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.716631,
+      "centroidLongitude": -9.151163,
+      "city": "Lisbon",
+      "country": "Portugal",
+      "relatedTourIds": [
+        "248572EA-69A0-54BF-BFB9-1A27E5D2311E",
+        "A3B59914-35AC-5EF7-A431-D762A5A86247",
+        "CE8D05FA-7B8B-5AD1-BC8F-BB39847F584F",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "E0D48C43-EABC-536F-957D-8FF068FA9513",
+        "E20EE90C-E0CA-5200-9774-E0B40CD52BE8"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "98D29A22-8F9D-5B7D-BE3B-B06B62323328",
+      "createdAt": "2026-10-27",
+      "title": "Laurentian Library",
+      "shortDescription": "A post by @historianaisha on Instagram.",
+      "longDescription": "Did you know that Michelangelo was an architect as well as a sculptor and painter? #historicbuildings #renaissance #arthistory #michelangelo #visitflorence",
+      "makerId": "290997BB-32E4-53EA-8497-CBD4829361B2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/laurentian-library-historianaisha_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DYsTJ4rNrLc/",
+      "sourceAuthor": "@historianaisha",
+      "stops": [
+        {
+          "id": "2F533A0F-2CF9-53B5-A58E-D31E7DDF24FC",
+          "order": 0,
+          "title": "Laurentian Library",
+          "caption": "Did you know that Michelangelo was an architect as well as a sculptor and painter? #historicbuildings #renaissance #arthistory #michelangelo #visitflorence",
+          "latitude": 43.774421,
+          "longitude": 11.253773,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/laurentian-library-historianaisha_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.774421,
+      "centroidLongitude": 11.253773,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
+        "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA",
+        "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
+        "A94E4477-2234-5766-B07C-5FD2A7E3B214",
+        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
+        "D765D19F-658C-5795-B7D4-4812075FB9E7",
+        "4A239611-BDB6-5D48-982A-35E2F8E44688",
+        "22729270-A072-5E55-845D-D5FBB3FBED84"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Library",
+        "Architecture",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "80BE7983-C83C-54D6-819C-DB6BFBF28140",
+      "createdAt": "2026-10-27",
+      "title": "Flodden Wall",
+      "shortDescription": "A post by @historianaisha on Instagram.",
+      "longDescription": "I first learned about the Battle of Flodden back in A Level History, so when I moved to Edinburgh and kept hearing about the “Flodden Wall”, I had to find out if the two were actually connected — surely it couldn’t be a coincidence? The Battle of Flodden, fought in 1513, was the largest battle ever between Scotland and England. It ended in a devastating defeat for the Scots. King James IV was killed, along with much of Scotland’s political and religious elite: twelve earls, the Archbishop of St Andrews, two bishops, two abbots, fourteen lords, and countless knights and servants. The Flodden Wall has usually been seen as Edinburgh’s response to the disaster, built to strengthen the city’s defences against a feared English invasion. But as Historic Environment Scotland notes, parts of the wall followed the line of several city gates that are documented at least eight years before the Battle of Flodden. The wall-building project was likely then to have already been in motion before the battle took place. The Flodden Wall, like other medieval town walls, served a wider purpose: regulating trade, collecting customs duties, and controlling who and what entered Edinburgh. #visitedinburgh #scottishhistory #Edinburgh #historicbuildings #history",
+      "makerId": "290997BB-32E4-53EA-8497-CBD4829361B2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flodden-wall-historianaisha_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DaBG1XlNfGw/",
+      "sourceAuthor": "@historianaisha",
+      "stops": [
+        {
+          "id": "75E615C2-1E66-59EE-BE80-7E3742E0DFA4",
+          "order": 0,
+          "title": "Flodden Wall",
+          "caption": "I first learned about the Battle of Flodden back in A Level History, so when I moved to Edinburgh and kept hearing about the “Flodden Wall”, I had to find out if the two were actually connected — surely it couldn’t be a coincidence? The Battle of Flodden, fought in 1513, was the largest battle ever between Scotland and England. It ended in a devastating defeat for the Scots. King James IV was killed, along with much of Scotland’s political and religious elite: twelve earls, the Archbishop of St Andrews, two bishops, two abbots, fourteen lords, and countless knights and servants. The Flodden Wall has usually been seen as Edinburgh’s response to the disaster, built to strengthen the city’s defences against a feared English invasion. But as Historic Environment Scotland notes, parts of the wall followed the line of several city gates that are documented at least eight years before the Battle of Flodden. The wall-building project was likely then to have already been in motion before the battle took place. The Flodden Wall, like other medieval town walls, served a wider purpose: regulating trade, collecting customs duties, and controlling who and what entered Edinburgh. #visitedinburgh #scottishhistory #Edinburgh #historicbuildings #history",
+          "latitude": 55.946184,
+          "longitude": -3.19695,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flodden-wall-historianaisha_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 55.946184,
+      "centroidLongitude": -3.19695,
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "relatedTourIds": [
+        "EC258C38-D815-5811-BF38-60F8DCEA7161",
+        "3F5B3E3B-88B3-56E7-A735-CC446A6AD03A"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "History",
+        "War",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "582227BB-3DF4-52E4-A66F-AD90F5587B19",
+      "createdAt": "2026-10-27",
+      "title": "L-Flat",
+      "shortDescription": "A post by @floating_foreigner on Instagram.",
+      "longDescription": "The longest apartment building in the Netherlands. Watch the full video on YouTube: Floating Foreigner",
+      "makerId": "E2B71B50-5590-5C75-9FB0-574E6E112DF8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/l-flat-floatingforeigner_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbD5PZVDP6Z/",
+      "sourceAuthor": "@floating_foreigner",
+      "stops": [
+        {
+          "id": "8AE19C73-3F3A-50B9-B494-A83013E777BE",
+          "order": 0,
+          "title": "L-Flat",
+          "caption": "The longest apartment building in the Netherlands. Watch the full video on YouTube: Floating Foreigner",
+          "latitude": 52.10164,
+          "longitude": 5.23271,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/l-flat-floatingforeigner_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.10164,
+      "centroidLongitude": 5.23271,
+      "city": "Zeist",
+      "country": "Netherlands",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Architecture",
+        "Notable Building",
+        "Modernist"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "CAE89CA4-4A3C-5F23-A356-147E07929831",
+      "createdAt": "2026-10-27",
+      "title": "Churrasqueira Solar do Sal",
+      "shortDescription": "A post by @globalfoodquest on Instagram.",
+      "longDescription": "Ep 9/100 🌶️ A new number 1, and the reason is salt from a sea that dried up 200 million years ago 🇵🇹 At Salinas de Rio Maior the salt is not harvested from the ocean. It comes up through an underground spring running over a 200 million year old salt deposit, water around seven times saltier than the Atlantic, worked by hand in the same pans for centuries. The pans sit in a village of wooden huts that looks more like a Swiss chalet than Portugal. Inside one of those huts is Churrasqueira Solar do Sal. The frango assado arrives under a marinade you can smell before it lands, and a charred, salty crust we have not found anywhere else in this series. The piri piri is instant heat and it never takes over the chicken. Straight to the top of the leaderboard. 9 down, 91 to go, and we ordered another one on the spot. Where should we take the Piri Piri 100 next? Drop it in the comments. #PiriPiri100 #FrangoAssado #PiriPiriChicken #PeriPeri #Portugal",
+      "makerId": "5EF4C75F-8D40-52BA-A8C6-413C4D22AB5E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/churrasqueira-solar-do-sal-globalfoodquest_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbTE0aht535/",
+      "sourceAuthor": "@globalfoodquest",
+      "stops": [
+        {
+          "id": "ED969320-A7F7-589D-B37B-22518B337A40",
+          "order": 0,
+          "title": "Churrasqueira Solar do Sal",
+          "caption": "Ep 9/100 🌶️ A new number 1, and the reason is salt from a sea that dried up 200 million years ago 🇵🇹 At Salinas de Rio Maior the salt is not harvested from the ocean. It comes up through an underground spring running over a 200 million year old salt deposit, water around seven times saltier than the Atlantic, worked by hand in the same pans for centuries. The pans sit in a village of wooden huts that looks more like a Swiss chalet than Portugal. Inside one of those huts is Churrasqueira Solar do Sal. The frango assado arrives under a marinade you can smell before it lands, and a charred, salty crust we have not found anywhere else in this series. The piri piri is instant heat and it never takes over the chicken. Straight to the top of the leaderboard. 9 down, 91 to go, and we ordered another one on the spot. Where should we take the Piri Piri 100 next? Drop it in the comments. #PiriPiri100 #FrangoAssado #PiriPiriChicken #PeriPeri #Portugal",
+          "latitude": 39.364314,
+          "longitude": -8.945585,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/churrasqueira-solar-do-sal-globalfoodquest_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.364314,
+      "centroidLongitude": -8.945585,
+      "city": "Rio Maior",
+      "country": "Portugal",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "909C9225-AFAE-57CF-B0C0-6B66C91353A9",
+      "createdAt": "2026-10-27",
+      "title": "Silos da Trafaria",
+      "shortDescription": "A post by @globalfoodquest on Instagram.",
+      "longDescription": "Across the river from Belém, this giant feeds more than half of Portugal. Bread, beer, livestock feed, it all starts here. The Silos da Trafaria take ships from Brazil and the Black Sea, nearly 350m long, and unload 3,000 tonnes of grain an hour. Four double decker buses of grain every single minute, day after day. What almost nobody knows is what stood here before. In 1565 this exact spot was a quarantine station, a plague barrier holding ships back from Lisbon just across the water. Later it was a fort. Later still a prison, where political prisoners were held during the dictatorship. A plague shield, a bread basket, a prison. Four and a half centuries of standing between Lisbon and disaster. So next time you are in Belém admiring the view, look across the river. That is the reason Portugal eats. Had you ever noticed it? Tell us in the comments. #FoodHistory #PortugueseFood #VisitPortugal #Lisbon #Portugal",
+      "makerId": "5EF4C75F-8D40-52BA-A8C6-413C4D22AB5E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/silos-da-trafaria-globalfoodquest_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbavWujttUr/",
+      "sourceAuthor": "@globalfoodquest",
+      "stops": [
+        {
+          "id": "AD6A72DD-12C5-5438-8073-23BE4042C9CA",
+          "order": 0,
+          "title": "Silos da Trafaria",
+          "caption": "Across the river from Belém, this giant feeds more than half of Portugal. Bread, beer, livestock feed, it all starts here. The Silos da Trafaria take ships from Brazil and the Black Sea, nearly 350m long, and unload 3,000 tonnes of grain an hour. Four double decker buses of grain every single minute, day after day. What almost nobody knows is what stood here before. In 1565 this exact spot was a quarantine station, a plague barrier holding ships back from Lisbon just across the water. Later it was a fort. Later still a prison, where political prisoners were held during the dictatorship. A plague shield, a bread basket, a prison. Four and a half centuries of standing between Lisbon and disaster. So next time you are in Belém admiring the view, look across the river. That is the reason Portugal eats. Had you ever noticed it? Tell us in the comments. #FoodHistory #PortugueseFood #VisitPortugal #Lisbon #Portugal",
+          "latitude": 38.672089,
+          "longitude": -9.237965,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/silos-da-trafaria-globalfoodquest_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.672089,
+      "centroidLongitude": -9.237965,
+      "city": "Almada",
+      "country": "Portugal",
+      "relatedTourIds": [
+        "EB123E68-A754-458A-9D1C-F9920DC1D18B"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Engineering",
+        "Waterfront",
+        "Hidden Gem",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8E19813A-FE7B-558B-88AD-2B6C4D529EEB",
+      "createdAt": "2026-10-27",
+      "title": "Monument to the Heroes of the Red Banners",
+      "shortDescription": "A post by @urban_garbagebin on Instagram.",
+      "longDescription": "What should Poland do with its Soviet monuments? 📍 Pomnik Bohaterom Czerwonych Sztandarów, Dąbrowa Górnicza We dive even deeper into this topic in our YouTube video, link in bio.",
+      "makerId": "26F4148A-4987-5521-B6CF-E5D6069470F0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/red-banners-monument-dabrowa-urbangarbagebin_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DbgOKXMqi3t/",
+      "sourceAuthor": "@urban_garbagebin",
+      "stops": [
+        {
+          "id": "324E05E4-71D2-5A4C-BF1D-FCFA9072D71C",
+          "order": 0,
+          "title": "Monument to the Heroes of the Red Banners",
+          "caption": "What should Poland do with its Soviet monuments? 📍 Pomnik Bohaterom Czerwonych Sztandarów, Dąbrowa Górnicza We dive even deeper into this topic in our YouTube video, link in bio.",
+          "latitude": 50.3257,
+          "longitude": 19.187351,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/red-banners-monument-dabrowa-urbangarbagebin_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 50.3257,
+      "centroidLongitude": 19.187351,
+      "city": "Dąbrowa Górnicza",
+      "country": "Poland",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "Brutalist",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E20EE90C-E0CA-5200-9774-E0B40CD52BE8",
+      "createdAt": "2026-10-27",
+      "title": "Familjen",
+      "shortDescription": "A post by @globalfoodquest on Instagram.",
+      "longDescription": "The Signature, ep 2. A steak tartare in Lisbon that should not work, and absolutely does. Familjen sits up the hill from Santos in Madragoa, the old fishwives' quarter. Swedish chef Petter Nyström has spent 25 years in Nordic kitchens, so you walk in braced for restraint. What arrives is the opposite. It looks like a classic steak tartare. Then the spice hits you before the fork does. Sweet, salty, fragrant pepper notes, chilli and heat running underneath, horseradish cream pulling it back to Europe. He told a magazine his food is spice, spice, spice and pepper, and he means it. It turns the whole concept of beef tartare on its head. Nordic room, African and Indian spice, Portuguese beef. Perhaps the finest tartare either of us has ever eaten. Also worth reading: the graffiti in the toilet. Someone got there before us. Which Lisbon signature dish should we chase next? Tell us in the comments. #GFQsignature #SteakTartare #LisbonFood #Lisbon #Portugal",
+      "makerId": "5EF4C75F-8D40-52BA-A8C6-413C4D22AB5E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/familjen-globalfoodquest_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcLljzhtE-D/",
+      "sourceAuthor": "@globalfoodquest",
+      "stops": [
+        {
+          "id": "231CA43F-E079-572C-B778-EC64B5BB6CD8",
+          "order": 0,
+          "title": "Familjen",
+          "caption": "The Signature, ep 2. A steak tartare in Lisbon that should not work, and absolutely does. Familjen sits up the hill from Santos in Madragoa, the old fishwives' quarter. Swedish chef Petter Nyström has spent 25 years in Nordic kitchens, so you walk in braced for restraint. What arrives is the opposite. It looks like a classic steak tartare. Then the spice hits you before the fork does. Sweet, salty, fragrant pepper notes, chilli and heat running underneath, horseradish cream pulling it back to Europe. He told a magazine his food is spice, spice, spice and pepper, and he means it. It turns the whole concept of beef tartare on its head. Nordic room, African and Indian spice, Portuguese beef. Perhaps the finest tartare either of us has ever eaten. Also worth reading: the graffiti in the toilet. Someone got there before us. Which Lisbon signature dish should we chase next? Tell us in the comments. #GFQsignature #SteakTartare #LisbonFood #Lisbon #Portugal",
+          "latitude": 38.708897,
+          "longitude": -9.155854,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/familjen-globalfoodquest_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.708897,
+      "centroidLongitude": -9.155854,
+      "city": "Lisbon",
+      "country": "Portugal",
+      "relatedTourIds": [
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "3F66A2A6-CE5D-5042-9526-A0453C5D7AB4",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "F67B46D2-DD17-5FD0-BA59-F0143A0BD682",
+        "37532F5D-0593-57FC-846A-2F749FCF531F",
+        "E0D48C43-EABC-536F-957D-8FF068FA9513"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "06DA67BF-4A27-52B6-8B8C-069C8B7D6700",
+      "createdAt": "2026-10-27",
+      "title": "Blok Statek",
+      "shortDescription": "A post by @floating_foreigner on Instagram.",
+      "longDescription": "This might be the strangest building in Poland... 📍 Wrocław, Poland 📹 Watch the full video on YouTube: Floating Foreigner",
+      "makerId": "E2B71B50-5590-5C75-9FB0-574E6E112DF8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/blok-statek-floatingforeigner_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DcYi2oWDJOF/",
+      "sourceAuthor": "@floating_foreigner",
+      "stops": [
+        {
+          "id": "811ACF41-8EE4-58EC-99D4-53C8EA532EB9",
+          "order": 0,
+          "title": "Blok Statek",
+          "caption": "This might be the strangest building in Poland... 📍 Wrocław, Poland 📹 Watch the full video on YouTube: Floating Foreigner",
+          "latitude": 51.146237,
+          "longitude": 17.126857,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/blok-statek-floatingforeigner_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.146237,
+      "centroidLongitude": 17.126857,
+      "city": "Wrocław",
+      "country": "Poland",
+      "relatedTourIds": [
+        "6BBFE2C6-E407-5C57-8CD0-3A60536D5D0E",
+        "3525df3c-992a-5ca4-8c84-4c05e8dfc452"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Architecture",
+        "Notable Building",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "26B084F5-4ED1-55CE-B051-141EA2255738",
+      "createdAt": "2026-10-27",
+      "title": "Mercados de Olhão",
+      "shortDescription": "A post by @globalfoodquest on Instagram.",
+      "longDescription": "The Beating Heart of the Algarve 🇵🇹 Portugal’s market culture is on another level. 🐟 These historic red brick buildings in Olhão have been standing since 1916, feeding thousands of locals and travelers every single day with over ten tons of fresh seafood right off the Ria Formosa. It’s not just a food market—it’s heritage, culture, and a way of life that you just have to experience in person. Have you ever visited Olhão Food Market? Let us know in the comments! 👇 #Olhao #AlgarveFood #PortugalTravel #RiaFormosa #GlobalFoodQuest",
+      "makerId": "5EF4C75F-8D40-52BA-A8C6-413C4D22AB5E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mercados-de-olhao-globalfoodquest_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DdlhBL9tZrb/",
+      "sourceAuthor": "@globalfoodquest",
+      "stops": [
+        {
+          "id": "2FD50FC2-3651-5D8B-AD47-72BD09B4AA0B",
+          "order": 0,
+          "title": "Mercados de Olhão",
+          "caption": "The Beating Heart of the Algarve 🇵🇹 Portugal’s market culture is on another level. 🐟 These historic red brick buildings in Olhão have been standing since 1916, feeding thousands of locals and travelers every single day with over ten tons of fresh seafood right off the Ria Formosa. It’s not just a food market—it’s heritage, culture, and a way of life that you just have to experience in person. Have you ever visited Olhão Food Market? Let us know in the comments! 👇 #Olhao #AlgarveFood #PortugalTravel #RiaFormosa #GlobalFoodQuest",
+          "latitude": 37.02373,
+          "longitude": -7.840559,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mercados-de-olhao-globalfoodquest_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.02373,
+      "centroidLongitude": -7.840559,
+      "city": "Olhão",
+      "country": "Portugal",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Market",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "DBAF5E23-4061-5578-9873-948AAF02E60E",
+      "createdAt": "2026-10-27",
+      "title": "Holmwood House",
+      "shortDescription": "A post by @historianaisha on Instagram.",
+      "longDescription": "When you think Glasgow architect, Charles Rennie Mackintosh probably comes to mind, but Alexander 'Greek' Thomson deserves his fair share of the praise and Holmwood House is good evidence as to why. With surviving interiors as well as exteriors, it's a cracking example of Thomson's work and well worth a visit! #historicbuildings #glasgowarchitecture #visitglasgow #alexandergreekthomson",
+      "makerId": "290997BB-32E4-53EA-8497-CBD4829361B2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/holmwood-house-historianaisha_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/De2Lv5MhHVR/",
+      "sourceAuthor": "@historianaisha",
+      "stops": [
+        {
+          "id": "72E65AC0-0050-5A93-96D2-D151EE5058F0",
+          "order": 0,
+          "title": "Holmwood House",
+          "caption": "When you think Glasgow architect, Charles Rennie Mackintosh probably comes to mind, but Alexander 'Greek' Thomson deserves his fair share of the praise and Holmwood House is good evidence as to why. With surviving interiors as well as exteriors, it's a cracking example of Thomson's work and well worth a visit! #historicbuildings #glasgowarchitecture #visitglasgow #alexandergreekthomson",
+          "latitude": 55.809776,
+          "longitude": -4.259123,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/holmwood-house-historianaisha_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 55.809776,
+      "centroidLongitude": -4.259123,
+      "city": "Glasgow",
+      "country": "United Kingdom",
+      "relatedTourIds": [
+        "d546b26b-e5c7-5e65-955b-6c760801e8cd",
+        "254b8f80-ea0e-5ace-b244-a99136a83375",
+        "761fda34-6b55-5052-8379-fc9259b73894",
+        "AB1D064F-09A2-5575-8546-53E1DA06EA50",
+        "64b5ec25-e709-5022-b2d5-044553817e03",
+        "7536637e-9a4e-5d4e-92a2-7eba2992c6d8",
+        "E52AF21B-9A0D-5E2B-A9F3-E573B0F86224",
+        "fb61aaeb-83fb-587c-b320-ca1e749cf342"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Architecture",
+        "Notable Building",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "D2034A3C-5389-5933-90FE-02CA7F962FCF",
+      "createdAt": "2026-10-27",
+      "title": "Frankie's Fish & Chips",
+      "shortDescription": "A post by @_robbiethompson on Instagram.",
+      "longDescription": "The UK’s most isolated fish & chip shop. Stunning 🫍 📍 Frankie’s, 1 Grunnablett, Brae, Shetland ZE2 9QJ",
+      "makerId": "2FDAD5DB-A909-5CC8-9BBE-D1EAC65B8034",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/frankie-s-fish-chips-robbiethompson_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/De9t80luVi8/",
+      "sourceAuthor": "@_robbiethompson",
+      "stops": [
+        {
+          "id": "8B6CBE53-2E39-5AE0-AAF7-93D4BFD9E18D",
+          "order": 0,
+          "title": "Frankie's Fish & Chips",
+          "caption": "The UK’s most isolated fish & chip shop. Stunning 🫍 📍 Frankie’s, 1 Grunnablett, Brae, Shetland ZE2 9QJ",
+          "latitude": 60.39309,
+          "longitude": -1.350826,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/frankie-s-fish-chips-robbiethompson_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 60.39309,
+      "centroidLongitude": -1.350826,
+      "city": "Brae",
+      "country": "United Kingdom",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "C8A2F430-B7E7-5188-BE83-C30A97A75B5C",
+      "createdAt": "2026-10-27",
+      "title": "Temple Bar",
+      "shortDescription": "A post by @historianaisha on Instagram.",
+      "longDescription": "Temple Bar is the last gateway into the City of London to still survive. Its history is long and winding and takes you to places you’d never expect! The first recorded mention of Temple Bar was in 1293, when it was probably little more than a chain, or bar, between two wooden posts. By 1351, an actual wooden gate had been built. It took its name from its surrounding area, Temple, home to the City’s lawyers. The eight gates and wall around the City of London helped to control the flow of people and goods in and out and importantly, aided with the collection of taxes. During the Great Fire, over 80% of the walled area of the City was destroyed and over 65,000 people lost their homes. Amongst others, the architect Christopher Wren, the diarist John Evelyn, and the scientist Robert Hooke submitted plans envisioning new layouts for the City of London. Whilst none of these bold plans went ahead, King Charles II and the City did appoint six Commissioners including Wren to oversee the rebuilding project. This is probably why many claim Wren as the architect of the current Temple Bar, but whilst he certainly had an input, this attribution is disputed amongst architectural historians. What can’t be denied is that it is a miracle survival. All other seven gates and the medieval wall were demolished in the eighteenth century to accommodate London’s expansion, but Temple Bar managed to cling on. It continued to be used in royal and state ceremonies such as the funeral of the Duke of Wellington and Queen Victoria’s first state visit to the City. However by the 1870s, it was structurally unsound and propped up on wooden beams, effectively on its last legs. An act of mercy by the City of London Corporation to carefully dismantle and number the stones, and the wealth and whims of Valerie and Henry Meux helped to ensure Temple Bar’s existence into the 21st century. #historicbuildings #londonhistory #visitlondon #greatfireoflondon",
+      "makerId": "290997BB-32E4-53EA-8497-CBD4829361B2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/temple-bar-historianaisha_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DeRyyfVscmt/",
+      "sourceAuthor": "@historianaisha",
+      "stops": [
+        {
+          "id": "83906600-1AC6-5503-8CEC-28BFA6397CA3",
+          "order": 0,
+          "title": "Temple Bar",
+          "caption": "Temple Bar is the last gateway into the City of London to still survive. Its history is long and winding and takes you to places you’d never expect! The first recorded mention of Temple Bar was in 1293, when it was probably little more than a chain, or bar, between two wooden posts. By 1351, an actual wooden gate had been built. It took its name from its surrounding area, Temple, home to the City’s lawyers. The eight gates and wall around the City of London helped to control the flow of people and goods in and out and importantly, aided with the collection of taxes. During the Great Fire, over 80% of the walled area of the City was destroyed and over 65,000 people lost their homes. Amongst others, the architect Christopher Wren, the diarist John Evelyn, and the scientist Robert Hooke submitted plans envisioning new layouts for the City of London. Whilst none of these bold plans went ahead, King Charles II and the City did appoint six Commissioners including Wren to oversee the rebuilding project. This is probably why many claim Wren as the architect of the current Temple Bar, but whilst he certainly had an input, this attribution is disputed amongst architectural historians. What can’t be denied is that it is a miracle survival. All other seven gates and the medieval wall were demolished in the eighteenth century to accommodate London’s expansion, but Temple Bar managed to cling on. It continued to be used in royal and state ceremonies such as the funeral of the Duke of Wellington and Queen Victoria’s first state visit to the City. However by the 1870s, it was structurally unsound and propped up on wooden beams, effectively on its last legs. An act of mercy by the City of London Corporation to carefully dismantle and number the stones, and the wealth and whims of Valerie and Henry Meux helped to ensure Temple Bar’s existence into the 21st century. #historicbuildings #londonhistory #visitlondon #greatfireoflondon",
+          "latitude": 51.514257,
+          "longitude": -0.099511,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/temple-bar-historianaisha_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.514257,
+      "centroidLongitude": -0.099511,
+      "city": "London",
+      "country": "United Kingdom",
+      "relatedTourIds": [
+        "aa22f015-7b43-41ca-9fe3-282519b7f5d3",
+        "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb",
+        "c5e8b1f4-9a27-4e60-8d03-2f7a6c4e8b91",
+        "d8f2a6c1-7b39-4e64-8a05-3c9e7b1d4f82",
+        "f2c8b6a3-9d41-4e64-8a05-3c9e8b1d7f42",
+        "e1c4b8a3-9d42-4f54-8a06-3c9e7b2d1f97",
+        "a8c3e1f7-4d92-4b60-8e05-3f7a2c6d9b14",
+        "4e8b2a91-6d3c-4f57-8a1e-9c0b5d7e2f43"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3F66A2A6-CE5D-5042-9526-A0453C5D7AB4",
+      "createdAt": "2026-10-27",
+      "title": "O Velho Eurico",
+      "shortDescription": "A post by @globalfoodquest on Instagram.",
+      "longDescription": "Save this place. In a city evolving as fast as Lisbon, Chef Zé Paulo Rocha and his young team at O Velho Eurico are doing something special. They took over a 40-year-old neighborhood tasca and turned it into a high-energy celebration of Portuguese food culture. They aren't serving standard tourist fare—they grab classic traditional flavors and innovate from there, bringing vibrant new energy to time-honored dishes. Noisy, unpretentious, steeped in culture, and completely unique. 📍 O Velho Eurico (Mouraria, Lisbon) Have you tried modern Portuguese tasca cooking yet? #ovelhoeurico #lisbon #portugueseculture #lisbonfood #tasca visitlisbon globalfoodquest lisboneats",
+      "makerId": "5EF4C75F-8D40-52BA-A8C6-413C4D22AB5E",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/o-velho-eurico-globalfoodquest_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Detwvrntrxt/",
+      "sourceAuthor": "@globalfoodquest",
+      "stops": [
+        {
+          "id": "13D2978D-427D-5358-B9B9-F0B24CB25067",
+          "order": 0,
+          "title": "O Velho Eurico",
+          "caption": "Save this place. In a city evolving as fast as Lisbon, Chef Zé Paulo Rocha and his young team at O Velho Eurico are doing something special. They took over a 40-year-old neighborhood tasca and turned it into a high-energy celebration of Portuguese food culture. They aren't serving standard tourist fare—they grab classic traditional flavors and innovate from there, bringing vibrant new energy to time-honored dishes. Noisy, unpretentious, steeped in culture, and completely unique. 📍 O Velho Eurico (Mouraria, Lisbon) Have you tried modern Portuguese tasca cooking yet? #ovelhoeurico #lisbon #portugueseculture #lisbonfood #tasca visitlisbon globalfoodquest lisboneats",
+          "latitude": 38.712715,
+          "longitude": -9.135417,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/o-velho-eurico-globalfoodquest_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.712715,
+      "centroidLongitude": -9.135417,
+      "city": "Lisbon",
+      "country": "Portugal",
+      "relatedTourIds": [
+        "A3B59914-35AC-5EF7-A431-D762A5A86247",
+        "341B9D57-1C9B-50A4-8B9E-F12C4B67C668",
+        "F4F21197-296D-5965-86C7-CF2D497B8C59",
+        "095EE7C6-CDDD-54E7-AE71-56F0823F5ECD",
+        "F89EC46A-B4EA-538D-B548-B1BEFF7C8618",
+        "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Venue"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F490D545-FC94-50FD-A263-882B1062BF53",
+      "createdAt": "2026-10-27",
+      "title": "Grace Farms",
+      "shortDescription": "A post by @archiwhisperer on Instagram.",
+      "longDescription": "Episode 24 — Restorative Design • Grace Farms This is how you blur the boundary between architecture and nature. At Grace Farms in New Canaan, Connecticut, Japanese studio SANAA designed a building that flows across the landscape like a river. Instead of concentrating everything into one large object, the River Building follows the site’s rolling contours beneath a single, undulating roof. Below it, transparent pavilions contain a sanctuary, library, gymnasium, and dining room. But perhaps the most important space is the journey between them. As you follow the path, the roof constantly changes. It lifts to reveal the sky, drops to shelter you, and expands around rooms before narrowing again. Inside and outside usually feel like two separate worlds. Here, that boundary is deliberately softened. Curved glass reflects the meadow and trees, while still allowing you to see through each pavilion into the landscape beyond. This could easily feel ambiguous. But the continuous roof and path hold everything together, while the curves conceal just enough for new spaces and views to appear gradually. You’re protected by the roof, but never separated from the landscape. Perhaps that’s why Grace Farms feels so peaceful: shelter never means separation, and discovery never means feeling lost. Architecture and nature simply flow together. Architecture: SANAA Executive Architecture: Handel Architects @handelarchitects Landscape Architecture: OLIN @olininsta Related Research Kaplan, S. (1995). The restorative benefits of nature: Toward an integrative framework. Journal of Environmental Psychology, 15(3), 169–182. Attention Restoration Theory suggests that coherent environments rich in gently fascinating natural experiences can replenish our capacity for focused attention. #architecture #neuroarchitecture #gracefarms #sanaa #restorativedesign",
+      "makerId": "6A3F5761-C3CF-552B-895E-8FEDEF8B62D7",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/grace-farms-archiwhisperer_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DfAZqQlPOs_/",
+      "sourceAuthor": "@archiwhisperer",
+      "stops": [
+        {
+          "id": "C7EB8543-8F8C-5927-A530-C2983DAA3A41",
+          "order": 0,
+          "title": "Grace Farms",
+          "caption": "Episode 24 — Restorative Design • Grace Farms This is how you blur the boundary between architecture and nature. At Grace Farms in New Canaan, Connecticut, Japanese studio SANAA designed a building that flows across the landscape like a river. Instead of concentrating everything into one large object, the River Building follows the site’s rolling contours beneath a single, undulating roof. Below it, transparent pavilions contain a sanctuary, library, gymnasium, and dining room. But perhaps the most important space is the journey between them. As you follow the path, the roof constantly changes. It lifts to reveal the sky, drops to shelter you, and expands around rooms before narrowing again. Inside and outside usually feel like two separate worlds. Here, that boundary is deliberately softened. Curved glass reflects the meadow and trees, while still allowing you to see through each pavilion into the landscape beyond. This could easily feel ambiguous. But the continuous roof and path hold everything together, while the curves conceal just enough for new spaces and views to appear gradually. You’re protected by the roof, but never separated from the landscape. Perhaps that’s why Grace Farms feels so peaceful: shelter never means separation, and discovery never means feeling lost. Architecture and nature simply flow together. Architecture: SANAA Executive Architecture: Handel Architects @handelarchitects Landscape Architecture: OLIN @olininsta Related Research Kaplan, S. (1995). The restorative benefits of nature: Toward an integrative framework. Journal of Environmental Psychology, 15(3), 169–182. Attention Restoration Theory suggests that coherent environments rich in gently fascinating natural experiences can replenish our capacity for focused attention. #architecture #neuroarchitecture #gracefarms #sanaa #restorativedesign",
+          "latitude": 41.196273,
+          "longitude": -73.512642,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/grace-farms-archiwhisperer_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.196273,
+      "centroidLongitude": -73.512642,
+      "city": "New Canaan",
+      "country": "United States",
+      "relatedTourIds": [
+        "FF01D80B-17E1-569B-AA99-E07022709F76"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Architecture",
+        "Notable Building",
+        "Contemporary",
+        "SANAA",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     }
