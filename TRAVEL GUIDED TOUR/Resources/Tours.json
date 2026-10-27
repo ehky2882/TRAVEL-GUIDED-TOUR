@@ -5641,6 +5641,16 @@
       "websiteURL": null
     },
     {
+      "id": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "displayName": "Atlas Studio RTM",
+      "platform": "dozent",
+      "handle": "atlas.rtm",
+      "avatarURL": null,
+      "avatarEmoji": "🇳🇱",
+      "bio": "Atlas Studio's Rotterdam bureau — the port city that rebuilt itself after 1940 and never stopped experimenting, where coffee and tea warehouses have become museums and hotels, a market hall wears apartments for a roof, and the kitchens run from a Middellandstraat bakery to a hidden basement speakeasy.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -136081,6 +136091,1390 @@
         "Iconic Landmark",
         "Designed by a Master",
         "Robert Mallet-Stevens"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e6c19c3e-c40d-5b9d-a494-859e3e157759",
+      "createdAt": "2026-10-27",
+      "title": "Arboretum Trompenburg",
+      "shortDescription": "Most museums keep their collection safely behind glass, but the one around you has to be watered, pruned, and now and then rescued from a storm.",
+      "longDescription": "Most museums keep their collection safely behind glass, but the one around you has to be watered, pruned, and now and then rescued from a storm.\n\nThose labels are the key to the whole place. Trompenburg is registered as a museum, and every tree here is catalogued much as a painting would be, with its species and origin noted down. The oaks are the headline act, kept alongside the beeches, the hollies and the hostas as registered Dutch national plant collections, and oak specialists from abroad come specifically to walk these paths.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-arboretum-trompenburg_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-arboretum-trompenburg_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-arboretum-trompenburg_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bbb34a25-ea51-5ad0-836b-dd3f8eca6783",
+          "order": 0,
+          "title": "Arboretum Trompenburg",
+          "caption": "At the entrance pavilion on the Honingerdijk, where the paths begin to fan out between the lawns.",
+          "latitude": 51.91921531919475,
+          "longitude": 4.518689550926258,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-arboretum-trompenburg.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-arboretum-trompenburg_hero.webp",
+          "transcriptText": "Most museums keep their collection safely behind glass, but the one around you has to be watered, pruned, and now and then rescued from a storm.\n\nStep through the entrance pavilion on the Honingerdijk and pause where the paths begin to fan out, with the traffic of Kralingen already fading behind you. Lawns run away between single specimen trees, each with a small label at its foot, and somewhere beyond them the pond catches whatever light the sky is offering.\n\nThose labels are the key to the whole place. Trompenburg is registered as a museum, and every tree here is catalogued much as a painting would be, with its species and origin noted down. The oaks are the headline act, kept alongside the beeches, the hollies and the hostas as registered Dutch national plant collections, and oak specialists from abroad come specifically to walk these paths.\n\nThe garden is older than almost anything growing in it. Planting began around 1820 in the English landscape manner of curving paths and borrowed views, and in 1870 the landscape architect Zocher added a western section stocked with exotic trees. The Smith family, later the van Hoey Smiths, owned the estate and simply could not stop collecting, generation after generation.\n\nPrivate obsession, rather than any civic plan, is what built Trompenburg, because one family's appetite for unfamiliar trees became something the city could not bear to lose, and so in 1958 a foundation took the estate on to make sure it would survive the family that made it.\n\nBefore you leave, find the desert greenhouse, where cacti and succulents grow happily under glass on ground that was marshland two centuries ago, which strikes me as a fine piece of Dutch stubbornness. And if you can come back in spring, the rhododendrons turn these lawns into something else entirely."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.91921531919475,
+      "centroidLongitude": 4.518689550926258,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Green Escape",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582",
+      "createdAt": "2026-10-27",
+      "title": "Depot Boijmans Van Beuningen",
+      "shortDescription": "Every big museum has a back room where most of its collection waits out of sight, and this is the first one in the world built so that you can…",
+      "longDescription": "Every big museum has a back room where most of its collection waits out of sight, and this is the first one in the world built so that you can walk straight in.\n\nCount the panels if you have the patience: there are one thousand six hundred and sixty-four of them, covering a building almost forty metres tall, designed by Winy Maas of MVRDV and opened in November 2021. The mirrors are a kind of good manners, since a storage block this size could easily have loomed over the park, and instead it hands the park back to you.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-depot-boijmans-van-beuningen_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-depot-boijmans-van-beuningen_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-depot-boijmans-van-beuningen_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-depot-boijmans-van-beuningen_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-depot-boijmans-van-beuningen_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-depot-boijmans-van-beuningen_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "573ccd6b-3032-59d4-b16a-1d0eb7190894",
+          "order": 0,
+          "title": "Depot Boijmans Van Beuningen",
+          "caption": "On the Museumpark lawn, far enough back to catch your reflection in the mirrored bowl.",
+          "latitude": 51.91393683358763,
+          "longitude": 4.471001291401594,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-depot-boijmans-van-beuningen.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-depot-boijmans-van-beuningen_hero.webp",
+          "transcriptText": "Every big museum has a back room where most of its collection waits out of sight, and this is the first one in the world built so that you can walk straight in.\n\nThat mirrored bowl rising out of the Museumpark lawn is the Depot, and it is worth stepping back far enough to catch your own reflection in it. The building narrows towards the ground and widens towards the top, so the trees, the paths and the passing cyclists all bend across its surface like a fairground mirror.\n\nCount the panels if you have the patience: there are one thousand six hundred and sixty-four of them, covering a building almost forty metres tall, designed by Winy Maas of MVRDV and opened in November 2021. The mirrors are a kind of good manners, since a storage block this size could easily have loomed over the park, and instead it hands the park back to you.\n\nInside are more than one hundred and fifty thousand objects from the collection of Museum Boijmans Van Beuningen, and here is the lovely oddity: they are arranged by the climate they need rather than by period or artist. Paintings, metal, plastics and photographs each live in their own conditions, so an old master can end up a corridor away from a piece of modern furniture, with conservators at work in restoration studios inside the building.\n\nThe real argument of this building is about who gets to see what. Museums have always shown a small fraction of what they own, and the Depot turns the hidden back room into the main event, so storage itself becomes the exhibition.\n\nTake the lift right to the top before you go, where a small forest of birch trees and pines grows on the roof beside the restaurant. From up there the city spreads out in every direction, and the building underneath you, for once, is the only thing you cannot see."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.91393683358763,
+      "centroidLongitude": 4.471001291401594,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Contemporary",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "MVRDV"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0f2d6f61-c96b-514a-bed6-57a9984ad9c6",
+      "createdAt": "2026-10-27",
+      "title": "Atelier Van Lieshout",
+      "shortDescription": "Some artists rent a studio, but Joep van Lieshout set up an entire workshop in the old port and at one point declared a small independent state…",
+      "longDescription": "Some artists rent a studio, but Joep van Lieshout set up an entire workshop in the old port and at one point declared a small independent state there.\n\nAtelier Van Lieshout was founded in Rotterdam in 1995, and its output is deliberately hard to pin down: sculpture, furniture, machines, buildings and installations, often circling the same big themes of power, self-sufficiency, life and death. In 2001, the year Rotterdam was European Capital of Culture, the studio launched AVL-Ville in the harbour, a free state with its own flag, constitution and currency.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-atelier-van-lieshout_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-atelier-van-lieshout_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-atelier-van-lieshout_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e024c758-3744-51d2-9c69-e6fd0dbe16e2",
+          "order": 0,
+          "title": "Atelier Van Lieshout",
+          "caption": "On the Keileweg in Merwe-Vierhavens, by the long port sheds that house Brutus.",
+          "latitude": 51.90933359592339,
+          "longitude": 4.431399222090184,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-atelier-van-lieshout.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-atelier-van-lieshout_hero.webp",
+          "transcriptText": "Some artists rent a studio, but Joep van Lieshout set up an entire workshop in the old port and at one point declared a small independent state there.\n\nKeileweg, out in the former harbour district of Merwe-Vierhavens, puts low warehouses and open yards all around you. The long former port sheds housing Brutus, the space van Lieshout founded, are the ones to look for, and in the garden and yard you may find large works waiting outside, depending on what has been made, shipped out or brought home that season.\n\nAtelier Van Lieshout was founded in Rotterdam in 1995, and its output is deliberately hard to pin down: sculpture, furniture, machines, buildings and installations, often circling the same big themes of power, self-sufficiency, life and death. In 2001, the year Rotterdam was European Capital of Culture, the studio launched AVL-Ville in the harbour, a free state with its own flag, constitution and currency.\n\nThe work has a talent for causing a stir. A sculpture called Domestikator, two buildings locked together in an unmistakably intimate pose, was withdrawn from a Louvre exhibition in the Tuileries Garden in 2017 because it stood near a playground, and it found a home instead outside the Pompidou Centre.\n\nBrutus states its own purpose with refreshing bluntness, offering around six thousand square metres for art that is too big, too unwieldy, too noisy or too difficult for a conventional museum, and that list tells you why it sits out here rather than in a polished gallery district: work made at an industrial scale needs a place that still feels industrial.\n\nCheck the opening days before you set off, because the exhibition spaces keep shorter hours than the garden. Then walk on towards the water afterwards, where the old harbour basins of this district are slowly being remade, and you can see the next chapter of the port arriving one warehouse at a time."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.90933359592339,
+      "centroidLongitude": 4.431399222090184,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Public Art",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1be1e2ce-089e-555e-895e-17b32cd46c35",
+      "createdAt": "2026-10-27",
+      "title": "Bakehouse",
+      "shortDescription": "French patisserie, Dutch strawberry cream cake and Moroccan chebakia all share the same counter here, and the counter is open from six in the…",
+      "longDescription": "French patisserie, Dutch strawberry cream cake and Moroccan chebakia all share the same counter here, and the counter is open from six in the morning.\n\nThe bread comes first, because that is the backbone of the place, with loaves and rolls baked fresh every day and filled sandwiches made up for people heading to work. The shop calls itself the world baker of Rotterdam, and the range behind the glass explains the title: croissants and French pastries alongside the honey-soaked, sesame-covered chebakia that turn up on Moroccan tables, especially around Ramadan.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-bakehouse_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-bakehouse_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-bakehouse_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-bakehouse_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "471678fd-dcda-5326-82c8-f4eff87cdf3f",
+          "order": 0,
+          "title": "Bakehouse",
+          "caption": "At numbers 18 to 22 on the 2e Middellandstraat, in front of the wide bakery counters.",
+          "latitude": 51.91765525843609,
+          "longitude": 4.4567940932541115,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-bakehouse.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-bakehouse_hero.webp",
+          "transcriptText": "French patisserie, Dutch strawberry cream cake and Moroccan chebakia all share the same counter here, and the counter is open from six in the morning.\n\nHalfway along the 2e Middellandstraat, at numbers eighteen to twenty-two, the wide bakery front with its counters of bread and pastry is the one you are after. This is one of the busiest shopping streets in Rotterdam West, lined with grocers, butchers and bakers whose owners and customers have roots all over the world, and Bakehouse sits right in the middle of that mix.\n\nThe bread comes first, because that is the backbone of the place, with loaves and rolls baked fresh every day and filled sandwiches made up for people heading to work. The shop calls itself the world baker of Rotterdam, and the range behind the glass explains the title: croissants and French pastries alongside the honey-soaked, sesame-covered chebakia that turn up on Moroccan tables, especially around Ramadan.\n\nThe coffee corner is the second thing to notice. Plenty of customers never sit down, but there is room to stay for breakfast or lunch, and the long hours, starting at dawn and running into the evening, mean the bakery quietly serves the whole rhythm of the street, from the early shift to the after-school rush.\n\nThere is one more detail worth knowing, which is that the bakery offers learning and work places for young people, so the trade behind the counter is being passed on as well as sold. The deeper point is that a neighbourhood bakery here does not have to choose a single tradition, because the people buying the bread never had to either.\n\nPick something from each end of the counter if you can, one familiar and one not, and eat them as you walk. The Middellandstraat runs on in both directions, and almost every shopfront along it has another version of the same quiet story."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.91765525843609,
+      "centroidLongitude": 4.4567940932541115,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Immigration",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "df321c7d-f281-5e9a-88f9-b059cb398978",
+      "createdAt": "2026-10-27",
+      "title": "Bar Alaska",
+      "shortDescription": "The little river at the end of this street gave Rotterdam its name, and these days it gives this bar its terrace.",
+      "longDescription": "The little river at the end of this street gave Rotterdam its name, and these days it gives this bar its terrace.\n\nThe bar opened in 2023, from the same people behind Café Marseille and Bar Bilbao, and they describe it as a tribute to Rotterdam and Crooswijk, inspired by the small international eating houses of Berlin. In practice that means cold beer, cocktails and decent wine, with a kitchen that changes its offerings rather than sticking to a fixed pub menu.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-bar-alaska_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-bar-alaska_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-bar-alaska_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "60a50f7e-9778-51c1-a566-a01e3b3a7f71",
+          "order": 0,
+          "title": "Bar Alaska",
+          "caption": "Where the Kerkhoflaan meets the Rotte in Crooswijk, by the terrace on the water.",
+          "latitude": 51.93599618057405,
+          "longitude": 4.490259823942701,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-bar-alaska.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-bar-alaska_hero.webp",
+          "transcriptText": "The little river at the end of this street gave Rotterdam its name, and these days it gives this bar its terrace.\n\nWhere the Kerkhoflaan meets the water of the Rotte, in the old neighbourhood of Crooswijk, the corner building with tables spilling out towards the river is Bar Alaska. With the bar at your back, the Rotte runs to your left and right, narrow and slow, with boats moored along its edges and the city centre somewhere off downstream.\n\nThe bar opened in 2023, from the same people behind Café Marseille and Bar Bilbao, and they describe it as a tribute to Rotterdam and Crooswijk, inspired by the small international eating houses of Berlin. In practice that means cold beer, cocktails and decent wine, with a kitchen that changes its offerings rather than sticking to a fixed pub menu.\n\nThe food is where the neighbourhood really shows itself, with meatball sandwiches made with meat from a local butcher, a Crooswijk fish soup served with bread, and on Sundays the oysters have been known to go for a single euro each, which is reason enough to plan a weekend around. Look out too for the Cape Verdean evenings with live music, a nod to the city's large Cape Verdean community.\n\nAnd the river is what holds it all together. Back in the thirteenth century a dam was thrown across the Rotte, and the settlement that grew beside it became Rotterdam, so a drink on this terrace puts you beside the very water that started the whole city, now doing nothing more demanding than reflecting the evening.\n\nIf you have time before or after, walk the path along the Rotte in either direction, because it is one of the gentlest walks in the city. The bar also teams up with a local boat company for food trips along the river, if you fancy seeing it from the water."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.93599618057405,
+      "centroidLongitude": 4.490259823942701,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Waterfront",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "228f7619-8dda-5f08-8697-6df45bc46e38",
+      "createdAt": "2026-10-27",
+      "title": "Bertmans",
+      "shortDescription": "Breakfast runs straight into lunch here, lunch slides into dinner, and the menu changes with the seasons rather than the clock.",
+      "longDescription": "Breakfast runs straight into lunch here, lunch slides into dinner, and the menu changes with the seasons rather than the clock.\n\nThe menu is unusually honest about what it is for, since Bertmans calls itself an all-day restaurant, built around fresh, seasonal and largely organic ingredients with flavours borrowed from kitchens around the world, and a large share of the dishes are vegan or vegetarian without making a sermon of it.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-bertmans_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-bertmans_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-bertmans_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-bertmans_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-bertmans_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "25844bd3-4ea0-5795-8e19-6d6485d36e62",
+          "order": 0,
+          "title": "Bertmans",
+          "caption": "On the Karel Doormanstraat, a short walk from the Schouwburgplein, by the big windows and terrace.",
+          "latitude": 51.92113513093998,
+          "longitude": 4.474767313911857,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-bertmans.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-bertmans_hero.webp",
+          "transcriptText": "Breakfast runs straight into lunch here, lunch slides into dinner, and the menu changes with the seasons rather than the clock.\n\nFind the Karel Doormanstraat side of the block, a short walk from the Schouwburgplein, and the restaurant with the big windows and the terrace out front is Bertmans. To one side you have the shopping streets of the post-war centre, and to the other the open square with its theatre and cinema, so you are standing right at the meeting point of the city's shopping and its evenings out.\n\nThe menu is unusually honest about what it is for, since Bertmans calls itself an all-day restaurant, built around fresh, seasonal and largely organic ingredients with flavours borrowed from kitchens around the world, and a large share of the dishes are vegan or vegetarian without making a sermon of it.\n\nThe signature I would point you to is the buckwheat pancake, made with almond milk and served with apple, maple syrup and a cashew vanilla cream, which manages to feel indulgent and virtuous at the same time. There is avocado and poached egg on spelt toast for the traditionalists, and on weekday mornings an early breakfast deal for people on their way somewhere.\n\nThis part of Rotterdam was rebuilt after the bombing of 1940 with speed and efficiency in mind, and the nearby Lijnbaan, opened in 1953, was among the first purpose-built pedestrian shopping streets in Europe. A place that asks you to slow down and eat what the season offers sits rather nicely against that backdrop, like a long lunch in a city designed for errands.\n\nOnce you have eaten, step out onto the Schouwburgplein and look up at the tall red lamp-posts that lean over the square like a row of harbour cranes. Then wander the Lijnbaan, where the low shops and the flats behind them still show how the reconstruction planners imagined everyday life."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.92113513093998,
+      "centroidLongitude": 4.474767313911857,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2f97649f-4b0e-5cc5-9e6d-68c639a7b95d",
+      "createdAt": "2026-10-27",
+      "title": "Donner Bookshop | Boekhandel Donner",
+      "shortDescription": "This bank was begun during the war, finished after liberation, and rescued many years later by the people who wanted to keep reading in it.",
+      "longDescription": "This bank was begun during the war, finished after liberation, and rescued many years later by the people who wanted to keep reading in it.\n\nHave a look at those carvings first, because they are by the sculptor Heman and show the port, shipping, fishing, farming and livestock, the whole economy a Rotterdam bank of the 1940s depended on. Higher up, around a round window, the architect placed figures for war, death and madness on one side and peace, fertility and prosperity on the other, a statement in stone from people who knew exactly what they had lived through.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-boekhandel-donner_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-boekhandel-donner_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-boekhandel-donner_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0d617def-94a0-5db4-92f9-5a471bd76b06",
+          "order": 0,
+          "title": "Donner Bookshop | Boekhandel Donner",
+          "caption": "On the Coolsingel pavement, a few steps back from the carved central entrance.",
+          "latitude": 51.918974271751374,
+          "longitude": 4.479409449073742,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-boekhandel-donner.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-boekhandel-donner_hero.webp",
+          "transcriptText": "This bank was begun during the war, finished after liberation, and rescued many years later by the people who wanted to keep reading in it.\n\nCoolsingel 119, with its red brick, pale stone and a copper roof gone green, is the building to look at, ideally from a few steps back on the pavement. Above the central entrance, carved figures stand in the stonework, and the name over the door now belongs to Donner, one of the best-loved bookshops in the Netherlands.\n\nHave a look at those carvings first, because they are by the sculptor Heman and show the port, shipping, fishing, farming and livestock, the whole economy a Rotterdam bank of the 1940s depended on. Higher up, around a round window, the architect placed figures for war, death and madness on one side and peace, fertility and prosperity on the other, a statement in stone from people who knew exactly what they had lived through.\n\nThe bank was designed by H.F. Mertens, and its first foundation pile went in during the spring of 1941, in a city centre that had been flattened the year before. Work stopped in 1942 and only resumed after liberation, so the building is a sort of promise kept late.\n\nDonner's own story turns out to be just as stubborn as the building's. The shop dates back to 1912, and when it was dragged into bankruptcy in 2014, five employees set out to save it, with some seventeen hundred and fifty book lovers buying shares. In 2018 it moved in here, which means a bank built on hope in wartime now holds a bookshop owned in part by its readers.\n\nGo inside and climb the main staircase, where a large window of sandblasted glass by the designer Copier lights the way up. Then take your time, because the high ceilings of the old banking hall make it very easy to lose an afternoon among the shelves."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 123,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.918974271751374,
+      "centroidLongitude": 4.479409449073742,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "literature",
+      "tags": [
+        "Notable Building",
+        "Literature",
+        "History",
+        "War",
+        "Designed by a Master",
+        "H. F. Mertens"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f65d8e70-63a9-5410-9fce-9f7e38737c9a",
+      "createdAt": "2026-10-27",
+      "title": "CityHub Rotterdam",
+      "shortDescription": "This hotel gives you a smaller room than almost anywhere in town, and quietly bets that you will spend most of your stay outside it anyway.",
+      "longDescription": "This hotel gives you a smaller room than almost anywhere in town, and quietly bets that you will spend most of your stay outside it anyway.\n\nThe hubs themselves are the first surprise: instead of typical rooms, guests sleep in compact sleeping units, each with its own lighting and connectivity, and the whole place is designed for travellers who live through their phones, from the digital check-in to the self-service bar.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-cityhub-rotterdam_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-cityhub-rotterdam_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-cityhub-rotterdam_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-cityhub-rotterdam_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "716bdc84-24a4-5b51-9716-fa727daa9eaf",
+          "order": 0,
+          "title": "CityHub Rotterdam",
+          "caption": "Partway along the Witte de Withstraat, at the single entrance between three neighbouring buildings.",
+          "latitude": 51.91542144044195,
+          "longitude": 4.475531122090184,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-cityhub-rotterdam.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-cityhub-rotterdam_hero.webp",
+          "transcriptText": "This hotel gives you a smaller room than almost anywhere in town, and quietly bets that you will spend most of your stay outside it anyway.\n\nWitte de Withstraat runs between the Museumpark side of town and the old harbour basins, and it is the street for galleries, bars and late dinners. Partway along, three neighbouring buildings with a single entrance between them make up CityHub, and through the glass a bright communal space shows where a conventional reception desk would normally be.\n\nThe hubs themselves are the first surprise: instead of typical rooms, guests sleep in compact sleeping units, each with its own lighting and connectivity, and the whole place is designed for travellers who live through their phones, from the digital check-in to the self-service bar.\n\nThe interior is by the Amsterdam design studio Modijefsky, completed in 2018, and the clever trick is in the joins. Three older buildings were stitched together while keeping their individual character, with traces of the original walls left visible, and a long linear chandelier of light runs through all three to guide you around. The colours are worth noticing too, shifting floor by floor and growing lighter the higher you go, as the daylight increases.\n\nThe bathrooms add a small joke of their own, with mixed tiles and playful colour schemes deliberately chosen to ignore the usual pink and blue conventions. What CityHub really sells, if you ask me, is not the bed but the street: by shrinking the private space, it pushes its guests out into one of the liveliest strips in Rotterdam, which is exactly where the designers seem to think they belong.\n\nWalk the length of Witte de Withstraat in either direction, and look out for Kunstinstituut Melly, the contemporary art space a short way along. In the evening the terraces fill up, and the whole street turns into the communal lounge this hotel was imagining."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.91542144044195,
+      "centroidLongitude": 4.475531122090184,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Notable Building",
+        "Commerce",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ab52a8da-aa7b-5b1c-8de1-f769a7c18a23",
+      "createdAt": "2026-10-27",
+      "title": "Crave Coffee & Bakery",
+      "shortDescription": "The croissants in the window here contain no butter at all, which, in a country this fond of dairy, is a fairly bold thing to attempt.",
+      "longDescription": "The croissants in the window here contain no butter at all, which, in a country this fond of dairy, is a fairly bold thing to attempt.\n\nEverything on the counter is plant-based, and that is the whole point of the place. Crave opened in the summer of 2023, set up by Yunlai Ye, who also runs the Tea Lab and Backyard, and the team spent months testing recipes before the doors opened, because making a flaky, layered pastry without butter is much harder than it looks.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-crave-coffee-bakery_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-crave-coffee-bakery_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-crave-coffee-bakery_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-crave-coffee-bakery_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c7ce0f69-fb57-5168-b7f3-0e85288b421d",
+          "order": 0,
+          "title": "Crave Coffee & Bakery",
+          "caption": "On Vogelenzang, a short street in the Maho quarter behind the Hoogstraat.",
+          "latitude": 51.92314537521975,
+          "longitude": 4.488772169487383,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-crave-coffee-bakery.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-crave-coffee-bakery_hero.webp",
+          "transcriptText": "The croissants in the window here contain no butter at all, which, in a country this fond of dairy, is a fairly bold thing to attempt.\n\nTucked into Vogelenzang, a short street in the old Maho quarter behind the Hoogstraat, Crave is the small café with the pastry counter right up against the window. The streets around you are small and tucked away from the big shopping routes, so the bakery feels more like a neighbourhood shop than a city-centre café.\n\nEverything on the counter is plant-based, and that is the whole point of the place. Crave opened in the summer of 2023, set up by Yunlai Ye, who also runs the Tea Lab and Backyard, and the team spent months testing recipes before the doors opened, because making a flaky, layered pastry without butter is much harder than it looks.\n\nThe pastry to try is the cruffin, a croissant baked in a muffin shape, and the pistachio version is the one regulars keep coming back for. There are dark chocolate babkas and cardamom rolls too, and the coffee comes from Rotterdam roasters, with oat milk as the default rather than the alternative.\n\nCrave's real ambition is not to prove that vegan baking is worthy, but to make sure nobody notices the difference. The founder has said he wants plant-based eating to feel easy and normal, and a bakery is a rather sly place to make that argument, since most people judge a croissant long before they ask what is in it.\n\nTake your pastry and wander a couple of minutes towards the Markthal and the old harbour, where the city opens up again. Or stay put by the window, which on a quiet morning is one of the nicer places in town to watch this neighbourhood wake up."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.92314537521975,
+      "centroidLongitude": 4.488772169487383,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ba3aee78-628c-5be7-b235-a877578ad6c2",
+      "createdAt": "2026-10-27",
+      "title": "De Bijenkorf",
+      "shortDescription": "Bijenkorf means beehive, and the architect took the name so seriously that he wrapped the whole building in honeycomb.",
+      "longDescription": "Bijenkorf means beehive, and the architect took the name so seriously that he wrapped the whole building in honeycomb.\n\nThe facade was designed by Marcel Breuer, one of the great names of the Bauhaus, and built between 1955 and 1957, clad in travertine laid mostly in a honeycomb pattern. The tiny vertical slit windows are deliberate, because a department store wants its walls for displays rather than views, so Breuer gave the shoppers light where they needed it and the city a sealed, textured box.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-de-bijenkorf_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-de-bijenkorf_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-de-bijenkorf_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-de-bijenkorf_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-de-bijenkorf_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "25740926-20e7-57fd-8cd7-bdd000ae919d",
+          "order": 0,
+          "title": "De Bijenkorf",
+          "caption": "On the Coolsingel, far enough back to take in the store and the sculpture beside it.",
+          "latitude": 51.920471484087734,
+          "longitude": 4.478536022090184,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-de-bijenkorf.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-de-bijenkorf_hero.webp",
+          "transcriptText": "Bijenkorf means beehive, and the architect took the name so seriously that he wrapped the whole building in honeycomb.\n\nStand back on the Coolsingel pavement far enough to take in both the department store and the strange, soaring sculpture beside it. The store is the long, near-windowless block clad in pale stone, and the sculpture is the twisting, ribbed tower of bronze-coloured metal rising from a polished black base out towards the street.\n\nThe facade was designed by Marcel Breuer, one of the great names of the Bauhaus, and built between 1955 and 1957, clad in travertine laid mostly in a honeycomb pattern. The tiny vertical slit windows are deliberate, because a department store wants its walls for displays rather than views, so Breuer gave the shoppers light where they needed it and the city a sealed, textured box.\n\nThe sculpture is by Naum Gabo, the Russian-born constructivist, and it stands more than twenty-six metres tall, built from steel ribs coated in bronze and threaded with black copper wire. It was unveiled in May 1957, made at a steelworks just outside the city, and Rotterdammers have long called it Het Ding, which simply means The Thing.\n\nThere is a sad prequel standing just out of sight. The earlier Bijenkorf, designed by Willem Dudok and opened in 1930, was badly damaged in the bombing of 1940 and finally cleared for the metro, so the store in front of you is a statement of confidence from a city still rebuilding itself, choosing the most modern architect it could find.\n\nWalk round the sculpture slowly before you go in, because it changes shape as you move and looks entirely different from each side. Then carry on along the Coolsingel, where the reconstruction-era city keeps unfolding, one bold post-war building after another."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.920471484087734,
+      "centroidLongitude": 4.478536022090184,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Commerce",
+        "Modernist",
+        "Public Art",
+        "Designed by a Master",
+        "Marcel Breuer"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cf3d2457-3f66-5c09-a4f9-040670a436df",
+      "createdAt": "2026-10-27",
+      "title": "de Maaskantine",
+      "shortDescription": "Rotterdam spends most of its time treating the river as a motorway for ships, but on this particular stretch of shore it is mainly something to…",
+      "longDescription": "Rotterdam spends most of its time treating the river as a motorway for ships, but on this particular stretch of shore it is mainly something to sit beside.\n\nThe name is a small Dutch pun, joining the Maas, the river, to kantine, a canteen, and the idea is exactly that unfussy. It is billed as beach, bar and barbecue, with food inspired by the American East Coast: chicken wings and cauliflower wings, burgers, bread with dips, and vegan bitterballen for anyone who wants the classic Dutch bar snack without the meat.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-de-maaskantine_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-de-maaskantine_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "52e89c19-9b0b-59ea-b911-116c2eb14839",
+          "order": 0,
+          "title": "de Maaskantine",
+          "caption": "On the Esch in Rotterdam East, on the strip of sand in front of the canteen, facing the Maas.",
+          "latitude": 51.91245900110185,
+          "longitude": 4.518491027403635,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-de-maaskantine.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-de-maaskantine_hero.webp",
+          "transcriptText": "Rotterdam spends most of its time treating the river as a motorway for ships, but on this particular stretch of shore it is mainly something to sit beside.\n\nDown on the Esch, the green spit of land in Rotterdam East where the city thins out into parks and allotments, the bright, painted canteen with a strip of sand in front of it is de Maaskantine. With your back to the bar, the Nieuwe Maas is right ahead of you, wide and grey-green, with barges sliding past on their way to and from the port.\n\nThe name is a small Dutch pun, joining the Maas, the river, to kantine, a canteen, and the idea is exactly that unfussy. It is billed as beach, bar and barbecue, with food inspired by the American East Coast: chicken wings and cauliflower wings, burgers, bread with dips, and vegan bitterballen for anyone who wants the classic Dutch bar snack without the meat.\n\nTake a look at the building itself too, because it is covered in colourful artwork by the Rotterdam artist Jelmer Konjo, which gives the whole place the look of a beach hut that has wandered into a comic strip. On summer evenings there are open-air films, from cult classics to blockbusters, along with quiz nights and game nights.\n\nHere the city's usual relationship with its river is quietly turned on its head. For centuries the Maas has been about trade, tonnage and getting cargo somewhere else, and here, a short ride from the centre, it becomes simply a view to enjoy with your feet in the sand and a drink in your hand.\n\nThis is very much a warm-weather place, so it pays to look up the opening days before making the trip. Afterwards, follow the riverside paths east along the Esch, where the view opens towards the bridges and the water traffic heading upstream."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.91245900110185,
+      "centroidLongitude": 4.518491027403635,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Waterfront",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "376ff378-1167-592e-b7c1-ae0fb460e38d",
+      "createdAt": "2026-10-27",
+      "title": "Dudok in het Park",
+      "shortDescription": "This house is older than the park around it, and for a long time it stood at the edge of the polders, well outside the city.",
+      "longDescription": "This house is older than the park around it, and for a long time it stood at the edge of the polders, well outside the city.\n\nNobody knows the exact building date of the house, but it went up around 1750, and it appears on a map of 1784 as the main building of a country estate called De Heuvel, which simply means the hill. One of its residents was Jan Jacob Elsevier, a former mayor of Rotterdam, and the estate belonged to that world of wealthy merchants who kept a house in the green country just beyond the town walls.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-dudok-in-het-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-dudok-in-het-park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-dudok-in-het-park_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0b309b1b-1edb-5e79-b19b-679892c924b3",
+          "order": 0,
+          "title": "Dudok in het Park",
+          "caption": "At the edge of Het Park, facing the pale house of De Heuvel across the lawns.",
+          "latitude": 51.90699908596998,
+          "longitude": 4.468416977909816,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-dudok-in-het-park.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-dudok-in-het-park_hero.webp",
+          "transcriptText": "This house is older than the park around it, and for a long time it stood at the edge of the polders, well outside the city.\n\nBetween the trees at the edge of Het Park, a pale, symmetrical house with tall windows and a decorated doorway faces out over the lawns, and that is the old Heerenhuys De Heuvel, home today to Dudok in het Park. If the Euromast is visible above the treetops, you are in the right corner of the park.\n\nNobody knows the exact building date of the house, but it went up around 1750, and it appears on a map of 1784 as the main building of a country estate called De Heuvel, which simply means the hill. One of its residents was Jan Jacob Elsevier, a former mayor of Rotterdam, and the estate belonged to that world of wealthy merchants who kept a house in the green country just beyond the town walls.\n\nEventually the city caught up with it, when Rotterdam bought the property in 1875, and over the following years the park laid out by the landscape architect Zocher was joined to the old estate, which is why the house now sits so comfortably among the lawns.\n\nThe modern chapter is a rescue, because a heritage foundation acquired the building in 1995 and restored it, removing later steel fire escapes, and it reopened as Dudok in het Park in 2017, after earlier lives as a café and a restaurant.\n\nSeen this way, the house is a small lesson in how cities grow: a country retreat built to escape the town ends up as a quiet café in the middle of it.\n\nSettle in with a coffee if you have the time, and then follow the paths down towards the Euromast and the river, where the park opens out onto the water and the ships passing by."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.90699908596998,
+      "centroidLongitude": 4.468416977909816,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "History",
+        "Park"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8a1265d9-2332-5373-a223-a8bc48744dee",
+      "createdAt": "2026-10-27",
+      "title": "Van Brienenoord Island | Eiland van Brienenoord",
+      "shortDescription": "Directly above you, one of the busiest motorway bridges in the country carries traffic over the river, and directly below it, Highland cattle…",
+      "longDescription": "Directly above you, one of the busiest motorway bridges in the country carries traffic over the river, and directly below it, Highland cattle are grazing.\n\nThe island has had a long working life as a base for salmon fishing and shipbuilding, and allotment gardens have been here since the Second World War. Look out for an old flooded dock where sections of the Rotterdam metro tunnel were built, with rusting machine parts still lying about.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-eiland-van-brienenoord_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-eiland-van-brienenoord_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-eiland-van-brienenoord_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b22ec0bd-47b8-5c27-ba55-ee6e988490f6",
+          "order": 0,
+          "title": "Van Brienenoord Island | Eiland van Brienenoord",
+          "caption": "On the island's main path, with the span of the Van Brienenoord Bridge overhead.",
+          "latitude": 51.899434593304186,
+          "longitude": 4.53517334274793,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-eiland-van-brienenoord.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-eiland-van-brienenoord_hero.webp",
+          "transcriptText": "Directly above you, one of the busiest motorway bridges in the country carries traffic over the river, and directly below it, Highland cattle are grazing.\n\nCross either of the two small bridges onto the island, and stop once you are on the main path with the great span of the Van Brienenoord Bridge overhead. The Nieuwe Maas wraps around you on all sides, with willows and poplars along the paths and river traffic moving steadily past.\n\nThe island has had a long working life as a base for salmon fishing and shipbuilding, and allotment gardens have been here since the Second World War. Look out for an old flooded dock where sections of the Rotterdam metro tunnel were built, with rusting machine parts still lying about.\n\nThe newest chapter is the tidal park, completed in 2023. The city added new bridges and nearly two kilometres of nature-friendly shoreline so that the river could move in and out properly, and the result won a special prize at the Gulden Feniks awards. Look for the branching tidal creek near the bridge, where the water rises and falls by about a metre and a half, driven by tides arriving from the North Sea more than thirty kilometres away.\n\nThe grazing is done by a small herd of Scottish Highland cattle, here since 2021 to keep the vegetation in check, and they are wild animals, so give them plenty of room.\n\nThe interesting bit is this: Rotterdam has spent centuries pushing the river into straight lines and hard edges, and here, under one of its busiest roads, it has deliberately let the tide back in. The rough nature around you was not left over, but invited back.\n\nFollow the walking route round the island, which is about five kilometres, and find one of the small sandy beaches on the far side. Sitting there, with the barges going by and the bridge humming overhead, is a very Rotterdam kind of peace."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.899434593304186,
+      "centroidLongitude": 4.53517334274793,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Waterfront",
+        "Maritime",
+        "Green Escape",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5f1bef3c-0cec-54af-9506-66f3a393ad2a",
+      "createdAt": "2026-10-27",
+      "title": "FENIX",
+      "shortDescription": "Cargo on its way across the world once filled this warehouse, and now it holds the stories of people who made that same journey.",
+      "longDescription": "Cargo on its way across the world once filled this warehouse, and now it holds the stories of people who made that same journey.\n\nThe warehouse was built in 1923 as the San Francisco warehouse, around three hundred metres long and once said to be the largest in the world, and it stored goods for the Holland America Line, whose ships carried millions of migrants from this harbour across the Atlantic, which makes it a fitting home for a museum about migration.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-fenix_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-fenix_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-fenix_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-fenix_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-fenix_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-fenix_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-fenix_7.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-fenix_8.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5b23bdb5-1e89-56c1-8ae0-c1f4851e2cc0",
+          "order": 0,
+          "title": "FENIX",
+          "caption": "On the Katendrecht waterfront, looking up at the Tornado bursting through the warehouse roof.",
+          "latitude": 51.9020903,
+          "longitude": 4.4843147,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-fenix.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-fenix_hero.webp",
+          "transcriptText": "Cargo on its way across the world once filled this warehouse, and now it holds the stories of people who made that same journey.\n\nThe long brick warehouse on the Katendrecht waterfront, with a gleaming, twisting structure bursting out through its roof, is FENIX. Look up and you will see it: a double spiral of polished steel and wood, climbing from inside the building to a viewing platform high above the harbour.\n\nThe warehouse was built in 1923 as the San Francisco warehouse, around three hundred metres long and once said to be the largest in the world, and it stored goods for the Holland America Line, whose ships carried millions of migrants from this harbour across the Atlantic, which makes it a fitting home for a museum about migration.\n\nThe spiral is called the Tornado, designed by the Chinese studio MAD, and it is two helical staircases spliced together, built with help from a rollercoaster specialist and suspended so that it needs as few supports as possible. Climb it and the river, the bridges and the skyline turn slowly around you.\n\nInside, two installations are well worth finding: The Family of Migrants gathers around two hundred photographs of departures, journeys and arrivals from dozens of countries, and the Suitcase Labyrinth asks you to find your way through two thousand donated suitcases, each carrying a story of someone who left home.\n\nPut simply, FENIX turns a building made for goods into a building about people, giving the travellers the space this warehouse once gave to their cargo.\n\nClimb the Tornado all the way to the top if it is open, and look out over the water towards the Wilhelminapier, where the old Holland America Line headquarters still stands. From up there, the route those migrants took begins to make sense."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.9020903,
+      "centroidLongitude": 4.4843147,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "Immigration",
+        "Maritime",
+        "Architecture",
+        "Contemporary",
+        "Viewpoint",
+        "Designed by a Master",
+        "MAD Architects"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e40f6459-82c8-57fd-afaf-49ad58ad31ce",
+      "createdAt": "2026-10-27",
+      "title": "Fletcher Boutique Hotel Slaak",
+      "shortDescription": "For the first decades of its life this building smelled of ink, because it was where a big part of Rotterdam's news was printed.",
+      "longDescription": "For the first decades of its life this building smelled of ink, because it was where a big part of Rotterdam's news was printed.\n\nIt went up between 1952 and 1954, during the long reconstruction after the bombing of 1940, as a printing house for the social democratic newspaper Voorwaarts and the socialist daily Het Vrije Volk. The architect was Jo Vegter, working with Pieter Arend Leupen, and the building became a national monument in 2010 for its part in Rotterdam's recovery.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-fletcher-hotel-slaak_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-fletcher-hotel-slaak_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-fletcher-hotel-slaak_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c9cc28bf-73fe-5550-a02b-ef7800783531",
+          "order": 0,
+          "title": "Fletcher Boutique Hotel Slaak",
+          "caption": "On the pavement of the Slaak opposite, taking in the full width of the 1950s printing house.",
+          "latitude": 51.924211789043994,
+          "longitude": 4.499563991401593,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-fletcher-hotel-slaak.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-fletcher-hotel-slaak_hero.webp",
+          "transcriptText": "For the first decades of its life this building smelled of ink, because it was where a big part of Rotterdam's news was printed.\n\nOn the Slaak, in Kralingen-West, the solid post-war building with its long rows of windows and a lobby lined in strips of natural stone is now the Fletcher Boutique Hotel Slaak. Pause on the pavement opposite and take in the full width of it, because the proportions belong to the 1950s, when this was a working industrial building rather than a place to stay.\n\nIt went up between 1952 and 1954, during the long reconstruction after the bombing of 1940, as a printing house for the social democratic newspaper Voorwaarts and the socialist daily Het Vrije Volk. The architect was Jo Vegter, working with Pieter Arend Leupen, and the building became a national monument in 2010 for its part in Rotterdam's recovery.\n\nThe stonework in the lobby is worth a look, because the style is a very Dutch post-war blend of plain, functional design softened with natural materials, so the building does its job without ever looking cold.\n\nAfter the presses stopped, the building had several lives, as offices and for a while as a place for art exhibitions, before it was renovated and opened as a hotel in 2017.\n\nThere is a continuity underneath all this change that I rather like. In the 1950s this building helped a battered city follow its own rebuilding day by day, through the papers rolling off its presses, and today it houses people who have come to see the city that rebuilding produced.\n\nFrom the hotel, walk south-west towards the Oostplein, where the old windmill De Noord still stands at the edge of the reconstruction city. It is a good stretch for seeing how differently the older and newer halves of Rotterdam grew."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.924211789043994,
+      "centroidLongitude": 4.499563991401593,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History",
+        "Modernist",
+        "Designed by a Master",
+        "Jo Vegter"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "bcd23ad7-07d0-5b7b-8836-e2b7638ce8fd",
+      "createdAt": "2026-10-27",
+      "title": "Restaurant Frits",
+      "shortDescription": "You will not be handed a menu at this restaurant, because the decision about dinner has already been made for you, and it changes every week.",
+      "longDescription": "You will not be handed a menu at this restaurant, because the decision about dinner has already been made for you, and it changes every week.\n\nFrits has been a table d'hôte restaurant since 2005, run by Ilja and Robbert, and the format is beautifully simple: everyone eats the same five-course dinner, created fresh each week, with optional wine pairings or a non-alcoholic version poured alongside. Allergies and dietary needs are handled with a so-called shadow menu, as long as you let them know ahead of time.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-restaurant-frits_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-restaurant-frits_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-restaurant-frits_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3f39bc8a-b469-5d07-8b7b-e2246f5e0a29",
+          "order": 0,
+          "title": "Restaurant Frits",
+          "caption": "At Piet Heynsplein 25, on the little square where historic Delfshaven begins.",
+          "latitude": 51.90785072594021,
+          "longitude": 4.449296550926259,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-restaurant-frits.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-restaurant-frits_hero.webp",
+          "transcriptText": "You will not be handed a menu at this restaurant, because the decision about dinner has already been made for you, and it changes every week.\n\nPiet Heynsplein, in historic Delfshaven, is the little square where the old harbour district begins. Restaurant Frits is at number twenty-five, an intimate dining room in one of the older buildings, with the gables of old Delfshaven gathering just beyond the square.\n\nFrits has been a table d'hôte restaurant since 2005, run by Ilja and Robbert, and the format is beautifully simple: everyone eats the same five-course dinner, created fresh each week, with optional wine pairings or a non-alcoholic version poured alongside. Allergies and dietary needs are handled with a so-called shadow menu, as long as you let them know ahead of time.\n\nReviewers have described the room as more French than France, with patterned wallpaper, chandeliers and a wooden floor that creaks companionably as you cross it. It is open in the evenings from Thursday to Saturday, so this is a place you book rather than stumble into.\n\nThe square has history too, since Piet Heyn, the naval commander who famously captured a Spanish silver fleet in 1628, was born in Delfshaven, and a statue of him by the sculptor Graven was unveiled here in 1870 with the king present.\n\nIn a city of endless choice, Frits offers the pleasure of giving the choice away. There is something rather freeing about sitting down and simply trusting the kitchen, and the weekly change means regulars never quite eat the same evening twice.\n\nBefore or after dinner, walk a few minutes into the heart of Delfshaven, along the old harbour, where the Pilgrim Fathers' church and the brewery buildings line the water. It is one of the few parts of Rotterdam that looks much as it did centuries ago."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.90785072594021,
+      "centroidLongitude": 4.449296550926259,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c440159d-6649-5a76-bd06-9d51aaa7566d",
+      "createdAt": "2026-10-27",
+      "title": "HAY Rotterdam",
+      "shortDescription": "Good design should be affordable, according to the company behind this shop, and it has found a home inside a building that looks assembled from…",
+      "longDescription": "Good design should be affordable, according to the company behind this shop, and it has found a home inside a building that looks assembled from glass building blocks.\n\nHAY itself was founded in Denmark in 2002 by Rolf Hay, and it built its name on furniture, lighting and accessories that are well designed, practical and priced within reach. The Rotterdam store was the brand's second in the Netherlands, after Amsterdam, and when it opened it was billed as the longest design supermarket in the city, complete with a minimarket of colourful small things that are very hard to leave without.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-hay-rotterdam_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-hay-rotterdam_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-hay-rotterdam_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-hay-rotterdam_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "935433b0-840d-598f-9aa3-222948b4799d",
+          "order": 0,
+          "title": "HAY Rotterdam",
+          "caption": "Where the Meent meets the Haagseveer, beneath the stacked glass boxes of the Timmerhuis.",
+          "latitude": 51.92224609502269,
+          "longitude": 4.482062513911857,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-hay-rotterdam.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-hay-rotterdam_hero.webp",
+          "transcriptText": "Good design should be affordable, according to the company behind this shop, and it has found a home inside a building that looks assembled from glass building blocks.\n\nLook for the corner where the Meent meets the Haagseveer, and you will find HAY on the ground floor of the Timmerhuis. Above the shop, the building steps up and back in a stack of glass boxes, while behind it a wing from the 1950s survives, folded right into the newer structure.\n\nHAY itself was founded in Denmark in 2002 by Rolf Hay, and it built its name on furniture, lighting and accessories that are well designed, practical and priced within reach. The Rotterdam store was the brand's second in the Netherlands, after Amsterdam, and when it opened it was billed as the longest design supermarket in the city, complete with a minimarket of colourful small things that are very hard to leave without.\n\nThe building itself, the Timmerhuis, was completed in 2015 by OMA, the Rotterdam practice founded by Rem Koolhaas, and its glass extension is made of cubes measuring about seven metres by seven by three and a half, repeated across fifteen storeys. The effect is pixelated, breaking a very large building into something that feels almost light on its feet.\n\nThere is a neat match between the two, since HAY makes design small enough to take home, and the Timmerhuis breaks architecture down into small, repeatable pieces, so both are really about scale and about making big ideas feel approachable.\n\nCross the street afterwards and look at how the old 1950s wing meets the new glass, because the two are literally joined, the older facade now sitting inside the newer building. Then head along the Meent, one of the city's best streets for independent shops."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.92224609502269,
+      "centroidLongitude": 4.482062513911857,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Commerce",
+        "Contemporary",
+        "Designed by a Master",
+        "Rem Koolhaas"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c71e0a14-95cf-5ed9-b843-e8cfdc8984c9",
+      "createdAt": "2026-10-27",
+      "title": "Schoonoord Historic Garden | Historische Tuin Schoonoord",
+      "shortDescription": "Within a few hundred metres of the busiest museums in Rotterdam lies a garden that it is very easy to walk past without suspecting it is there.",
+      "longDescription": "Within a few hundred metres of the busiest museums in Rotterdam lies a garden that it is very easy to walk past without suspecting it is there.\n\nThe land was meadow outside the city until about 1700, when it was protected by dykes, and a country estate called Rust en Lust was established here in 1706. It took the name Schoonoord in 1816, and in 1860 its owners commissioned the garden you see now, laid out in the English landscape style with the pond, the beech trees and the cedars of Lebanon, which are the stars of the show.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-historische-tuin-schoonoord_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-historische-tuin-schoonoord_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-historische-tuin-schoonoord_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5eff5fbc-e4ce-5a86-bfd6-281fc8504d7b",
+          "order": 0,
+          "title": "Schoonoord Historic Garden | Historische Tuin Schoonoord",
+          "caption": "Just inside the gate on the Kievitslaan, where the winding path leads on towards the pond.",
+          "latitude": 51.90879612280536,
+          "longitude": 4.472625076057297,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-historische-tuin-schoonoord.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-historische-tuin-schoonoord_hero.webp",
+          "transcriptText": "Within a few hundred metres of the busiest museums in Rotterdam lies a garden that it is very easy to walk past without suspecting it is there.\n\nBehind a gate on the Kievitslaan, Schoonoord opens out as a small, quiet landscape of lawns, old trees and water. Once through the entrance, a winding path leads on ahead, mature cedars and beeches stand on either side, and the pond lies somewhere just beyond, with the noise of the city already muffled by the planting.\n\nThe land was meadow outside the city until about 1700, when it was protected by dykes, and a country estate called Rust en Lust was established here in 1706. It took the name Schoonoord in 1816, and in 1860 its owners commissioned the garden you see now, laid out in the English landscape style with the pond, the beech trees and the cedars of Lebanon, which are the stars of the show.\n\nThose cedars spread their branches wide and flat, almost like layered shelves, and give the garden its old-world, country-house feeling.\n\nThe banker Jacob Mees bought the main part of the estate in 1927, his heirs opened the garden to the public in 1973, and it has been a protected national monument since 2000. There is also a memorial plaque to David Mees, who was shot here in the garden on Liberation Day in 1945, and it is worth pausing at it quietly.\n\nMore than anything, Schoonoord gives the city a kind of privacy that has been shared out, so anyone can now sit in what was once a family's own green world.\n\nLeave by the Kievitslaan gate and turn towards the Museumpark, a few minutes away. The contrast between this hidden garden and the bold modern museums down the road is one of the nicest surprises in this part of town."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.90879612280536,
+      "centroidLongitude": 4.472625076057297,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Green Escape",
+        "Hidden Gem",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4183767a-c190-5856-9d5d-08bb50ec2c39",
+      "createdAt": "2026-10-27",
+      "title": "Kralingen Lake | Kralingse Plas",
+      "shortDescription": "This lake was dug out by hand, a spadeful at a time, by people who were burning the ground beneath them to keep Rotterdam warm.",
+      "longDescription": "This lake was dug out by hand, a spadeful at a time, by people who were burning the ground beneath them to keep Rotterdam warm.\n\nIn the seventeenth century, Rotterdam's growing population and its brick and pipe industries needed fuel, and peat dug from this land was the obvious source. The peat was cut away, the holes filled with water, and the lake you are looking at is the result, about a hundred hectares of it, with a walk of around four kilometres to go all the way round.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-kralingse-plas_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-kralingse-plas_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-kralingse-plas_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "47f30a03-193b-536f-86ea-af4195b5467a",
+          "order": 0,
+          "title": "Kralingen Lake | Kralingse Plas",
+          "caption": "On the shore path, with the lake spread out ahead and the two windmills along the edge.",
+          "latitude": 51.93537660064947,
+          "longitude": 4.515543179902359,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-kralingse-plas.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-kralingse-plas_hero.webp",
+          "transcriptText": "This lake was dug out by hand, a spadeful at a time, by people who were burning the ground beneath them to keep Rotterdam warm.\n\nFrom the shore path, the water spreads out wide in front of you, with sailing boats, rowing boats and the occasional swimmer, and woodland wrapping around the far side. Somewhere along the edge of the lake, the sails of two windmills rise a little apart from each other on the shore.\n\nIn the seventeenth century, Rotterdam's growing population and its brick and pipe industries needed fuel, and peat dug from this land was the obvious source. The peat was cut away, the holes filled with water, and the lake you are looking at is the result, about a hundred hectares of it, with a walk of around four kilometres to go all the way round.\n\nThe woods came later, laid out in the early twentieth century on material dredged from the harbour, so the trees are growing on the port's own leftovers.\n\nAs for the mills, De Lelie, the lily, dates from 1740, and De Ster, the star, from 1886, and both still grind spices, a survival from the old Dutch trade in pepper, cinnamon and cloves.\n\nA louder memory belongs here too, because in 1970 the woods around the lake hosted the Holland Pop Festival, the first big pop festival in the Netherlands, and a monument in the woods remembers it.\n\nStep back and the pattern is clear: even Rotterdam's nature is man-made, and the lake, the forest and the mills, all products of hard work, have somehow become the city's favourite place to do nothing at all.\n\nWalk at least part of the circuit towards the mills, and if you can, time it for late afternoon, when the light comes low across the water and the city skyline appears over the trees."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.93537660064947,
+      "centroidLongitude": 4.515543179902359,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Waterfront",
+        "History",
+        "Green Escape",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3a3ac1ca-a24a-55b4-b0db-14fe8d53af28",
+      "createdAt": "2026-10-27",
+      "title": "Market Hall | Markthal",
+      "shortDescription": "The people who live in this building look down through their windows onto a food market, which is about as Rotterdam a solution as you could…",
+      "longDescription": "The people who live in this building look down through their windows onto a food market, which is about as Rotterdam a solution as you could wish for.\n\nThe mural is called Hoorn des Overvloeds, the Horn of Plenty, created by the artists Arno Coenen and Iris Roskam, and it covers around eleven thousand square metres. The giant produce is a nod to Dutch still-life painting of the seventeenth century, blown up to the scale of a cathedral.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-markthal_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-markthal_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-markthal_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-markthal_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-markthal_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-markthal_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-markthal_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6c3b0aba-c333-578c-a98b-e1ecad606d8e",
+          "order": 0,
+          "title": "Market Hall | Markthal",
+          "caption": "Inside the arch, among the stalls, under the painted Horn of Plenty ceiling.",
+          "latitude": 51.920135402333884,
+          "longitude": 4.486988485075782,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-markthal.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-markthal_hero.webp",
+          "transcriptText": "The people who live in this building look down through their windows onto a food market, which is about as Rotterdam a solution as you could wish for.\n\nInside the arch, with the stalls at ground level and that vast painted ceiling curving overhead, is the place to begin. Look straight up and the colours of fruit, flowers, fish and insects stretch away above you, and along the sides of the arch you can make out rows of windows looking in.\n\nThe mural is called Hoorn des Overvloeds, the Horn of Plenty, created by the artists Arno Coenen and Iris Roskam, and it covers around eleven thousand square metres. The giant produce is a nod to Dutch still-life painting of the seventeenth century, blown up to the scale of a cathedral.\n\nThe arch was designed by MVRDV and opened by Queen Máxima on the first of October 2014; it rises about forty metres, and those windows belong to two hundred and twenty-eight apartments wrapped into the curve. The glass walls at each end are hung from a net of pre-stressed steel cables, so the hall stays open while the weather stays out.\n\nDown at ground level there are around a hundred fresh food stalls, with restaurants and shops along the edges.\n\nAnd here's the clever part: the city needed a covered market, the old outdoor market had to meet stricter hygiene rules, and the planners wanted more people living in the centre. Rather than building three separate things, MVRDV wrapped the homes around the market, so the building solves its problems by stacking them.\n\nDown at the lower level, find the time stairs, where objects found during the excavation are displayed in the order they were dug up. Then step outside onto the Binnenrotte, where the open-air market still sets up on Tuesdays and Saturdays."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.920135402333884,
+      "centroidLongitude": 4.486988485075782,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Market",
+        "Food",
+        "Architecture",
+        "Contemporary",
+        "Public Art",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "MVRDV"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "45649895-32b8-51f6-a32e-ac3f14672c03",
+      "createdAt": "2026-10-27",
+      "title": "NAI Booksellers",
+      "shortDescription": "A city that had to rebuild itself almost from scratch was always going to need a very good architecture bookshop, and this is where Rotterdam…",
+      "longDescription": "A city that had to rebuild itself almost from scratch was always going to need a very good architecture bookshop, and this is where Rotterdam keeps one.\n\nNAI Booksellers was founded in 1993, at what was then the Netherlands Architecture Institute, and it specialises in architecture, urban planning, design and landscape architecture. The shelves carry everything from big monographs to academic texts and city guides, from Dutch publishers and from all over the world.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-nai-booksellers_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-nai-booksellers_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-nai-booksellers_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-nai-booksellers_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-nai-booksellers_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ab318295-28b0-5f3c-af9f-bebf6fd465aa",
+          "order": 0,
+          "title": "NAI Booksellers",
+          "caption": "In the lobby of Het Nieuwe Instituut on the Museumpark, beside the pond.",
+          "latitude": 51.914870456388165,
+          "longitude": 4.471576577909817,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-nai-booksellers.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-nai-booksellers_hero.webp",
+          "transcriptText": "A city that had to rebuild itself almost from scratch was always going to need a very good architecture bookshop, and this is where Rotterdam keeps one.\n\nHead into the lobby of Het Nieuwe Instituut on the Museumpark, and the bookshop is right there, open to anyone, with no museum ticket needed. Before you go in, look back at the building itself: a long, low run of glass and dark structure beside a pond, with a raised archive wing standing on columns above the street behind.\n\nNAI Booksellers was founded in 1993, at what was then the Netherlands Architecture Institute, and it specialises in architecture, urban planning, design and landscape architecture. The shelves carry everything from big monographs to academic texts and city guides, from Dutch publishers and from all over the world.\n\nThe building around it opened the same year, designed by the architect Jo Coenen and opened by Queen Beatrix, and since 2013 it has been Het Nieuwe Instituut, the national institute for architecture, design and digital culture. Its archive holds the national collection for Dutch architecture and urban planning, more than eighteen kilometres of drawings, models and papers, including the personal archives of many Dutch architects.\n\nSo the books on these shelves are about buildings, while the drawings behind a great many real Dutch buildings are kept under the same roof.\n\nThe setting, to my mind, could hardly be more fitting, since Rotterdam is the city where modern Dutch architecture has had the most room to experiment, and here is the shop that sends those ideas back out into the world, one book at a time.\n\nLeave time to walk round to the Sonneveld House next door, a beautifully preserved 1930s family home that belongs to the institute. And if you are here on a Thursday, the shop stays open into the evening, which suits a slow browse rather well."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.914870456388165,
+      "centroidLongitude": 4.471576577909817,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "literature",
+      "tags": [
+        "Venue",
+        "Literature",
+        "Architecture",
+        "Contemporary",
+        "Designed by a Master",
+        "Jo Coenen"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ce087afc-f35d-5015-a403-41cfdc7f0684",
+      "createdAt": "2026-10-27",
+      "title": "Dutch National Museum of Photography | Nederlands Fotomuseum",
+      "shortDescription": "This warehouse was built to store Brazilian coffee, and it now holds more than six and a half million photographs.",
+      "longDescription": "This warehouse was built to store Brazilian coffee, and it now holds more than six and a half million photographs.\n\nThe building is called Pakhuis Santos, after the Brazilian port the coffee came from, and it was built in 1902, designed by the architects Stok and Kanters. For most of the twentieth century it did the slow, heavy work of the port, storing sacks of beans until they were needed, and it is now a protected monument.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-nederlands-fotomuseum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-nederlands-fotomuseum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-nederlands-fotomuseum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-nederlands-fotomuseum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-nederlands-fotomuseum_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-nederlands-fotomuseum_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a3788ae0-1d64-58b3-a0dc-3364dc6be310",
+          "order": 0,
+          "title": "Dutch National Museum of Photography | Nederlands Fotomuseum",
+          "caption": "On the Katendrecht side of the Rijnhaven, facing the tall brick Santos warehouse.",
+          "latitude": 51.902927883266244,
+          "longitude": 4.495178079762332,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-nederlands-fotomuseum.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-nederlands-fotomuseum_hero.webp",
+          "transcriptText": "This warehouse was built to store Brazilian coffee, and it now holds more than six and a half million photographs.\n\nFacing the Rijnhaven from the Katendrecht side, the tall brick warehouse with its rows of windows and the name Santos on it is the one you want. Nine storeys high, it dominates this stretch of the quay, and if you look right up to the top, you can see where a rooftop restaurant now looks out over the harbour.\n\nThe building is called Pakhuis Santos, after the Brazilian port the coffee came from, and it was built in 1902, designed by the architects Stok and Kanters. For most of the twentieth century it did the slow, heavy work of the port, storing sacks of beans until they were needed, and it is now a protected monument.\n\nIn February 2026 it reopened as the new home of the Nederlands Fotomuseum, the national museum of photography. The collection runs from daguerreotypes of the 1840s to the present day, with more than one hundred and seventy-five complete archives of Dutch photographers, and inside there are exhibition spaces, a photography library, a working darkroom and conservation rooms you can see into through glass walls.\n\nThe heart of the museum is the Gallery of Honour of Dutch Photography, a permanent selection of ninety-nine images that together tell the story of photography in the Netherlands, and it is the place to start if you only have a little time.\n\nThe change of cargo is the part that stays with me, because a building made to keep a commodity cool and dark now keeps something much more fragile in the same conditions, and the warehouse turns out to be rather good at both.\n\nAfterwards, walk along the Rijnhaven quay to FENIX, the migration museum in another old warehouse, or cross into Katendrecht, the old sailors' quarter, which has become one of the liveliest eating districts in Rotterdam."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.902927883266244,
+      "centroidLongitude": 4.495178079762332,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Maritime",
+        "History",
+        "Stok & Kanters"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "420d32a9-9b69-51d1-a149-fd33ee07548e",
+      "createdAt": "2026-10-27",
+      "title": "OX Rotterdam",
+      "shortDescription": "You won't find the door to this restaurant by looking at the street, because the directions only arrive by email once you have booked.",
+      "longDescription": "You won't find the door to this restaurant by looking at the street, because the directions only arrive by email once you have booked.\n\nOX is a Chinese restaurant in the speakeasy style, drawing on dishes from across China and Malaysia, served as small plates to share. Expect things like oysters, cold and hot small dishes, and dumplings filled with pork, prawn, shiitake and eel, with cocktails inspired by Chinese culture and a long list of natural wines alongside.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-ox-rotterdam_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-ox-rotterdam_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-ox-rotterdam_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-ox-rotterdam_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-ox-rotterdam_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "129ff1b0-9236-5d1d-8bd9-b6136b56db94",
+          "order": 0,
+          "title": "OX Rotterdam",
+          "caption": "At Schiekade 189, beneath the Schieblock, a few minutes' walk from Rotterdam Centraal.",
+          "latitude": 51.92566478529582,
+          "longitude": 4.476754129256152,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-ox-rotterdam.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-ox-rotterdam_hero.webp",
+          "transcriptText": "You won't find the door to this restaurant by looking at the street, because the directions only arrive by email once you have booked.\n\nSchiekade 189 is the address, and the building above is the Schieblock, a former office block with a long, plain facade facing the busy road, a few minutes' walk from Rotterdam Centraal. OX lives in the basement, hidden away beneath all of it, which is exactly how it likes to be found.\n\nOX is a Chinese restaurant in the speakeasy style, drawing on dishes from across China and Malaysia, served as small plates to share. Expect things like oysters, cold and hot small dishes, and dumplings filled with pork, prawn, shiitake and eel, with cocktails inspired by Chinese culture and a long list of natural wines alongside.\n\nThe building above is a story of its own, because the local architects ZUS turned it into a laboratory for the city, full of small businesses, with a rooftop field billed as the first urban farming roof in Europe.\n\nRunning out from it is the Luchtsingel, a bright yellow wooden footbridge about four hundred metres long, which links three districts that busy roads and railway lines had cut apart. It was paid for partly by the public, with more than eight thousand planks sold at twenty-five euros each, every one carrying the buyer's name.\n\nMy favourite thing about the Schieblock is that almost everything interesting happens above or below eye level, with a farm on the roof, a public bridge in the air and a hidden dining room in the basement.\n\nBefore your reservation, walk up onto the Luchtsingel and read a few of the names on the planks, then cross it towards the Hofplein. The bridge gives you a view of this part of the city that very few streets can."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.92566478529582,
+      "centroidLongitude": 4.476754129256152,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6ec0a715-907b-569e-ba8b-739f86555504",
+      "createdAt": "2026-10-27",
+      "title": "Phil",
+      "shortDescription": "This café calls itself your favourite neighbour, which is a bold promise to make on a street already full of neighbours.",
+      "longDescription": "This café calls itself your favourite neighbour, which is a bold promise to make on a street already full of neighbours.\n\nPhil's coffee comes with an Asian twist, so alongside the usual espresso there is an iced blueberry hojicha, made with roasted Japanese green tea, and an iced yuzu americano, with plant-based milks on offer. The food carries the same idea, with an avocado smash topped with feta and kimchi, a pairing that sounds unlikely and turns out to make perfect sense on a slice of toast, and açaí bowls with granola for anyone who wants something lighter.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-phil_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-phil_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-phil_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-phil_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f7d1828f-4f4d-52e7-9244-a46d19a64815",
+          "order": 0,
+          "title": "Phil",
+          "caption": "At Stadhoudersweg 96D in Blijdorp, at the bright café and shop.",
+          "latitude": 51.9308453118982,
+          "longitude": 4.46064334274793,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-phil.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-phil_hero.webp",
+          "transcriptText": "This café calls itself your favourite neighbour, which is a bold promise to make on a street already full of neighbours.\n\nOn the Stadhoudersweg, at number ninety-six D in the leafy district of Blijdorp, Phil is the café and shop sharing one bright room. The wide street is lined with the solid brick housing of Blijdorp, a district laid out largely in the 1930s, and the zoo and the parks lie just beyond.\n\nPhil's coffee comes with an Asian twist, so alongside the usual espresso there is an iced blueberry hojicha, made with roasted Japanese green tea, and an iced yuzu americano, with plant-based milks on offer. The food carries the same idea, with an avocado smash topped with feta and kimchi, a pairing that sounds unlikely and turns out to make perfect sense on a slice of toast, and açaí bowls with granola for anyone who wants something lighter.\n\nThe space used to be a café called Breakfast for seven years, and in 2025 it was renovated and reopened as Phil, a lifestyle shop and café rolled into one. Along with the coffee there is artwork by the artist Roeqie, second-hand fashion from the Slowdown Store, and design pieces and gifts.\n\nPhil's real trick is how much of a neighbourhood it fits into one room. You can have breakfast, buy a present, pick up a jacket someone else has already loved, and leave with a print for the wall, which is very much the way a good local shop used to work.\n\nWhen you have finished, find your way to the Vroesenpark, one of the most loved green spaces in this part of town, or to Diergaarde Blijdorp, the city zoo, which is only a short walk away."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.9308453118982,
+      "centroidLongitude": 4.46064334274793,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "538cad52-e2bd-5792-9427-992df3b72046",
+      "createdAt": "2026-10-27",
+      "title": "Room Mate Bruno",
+      "shortDescription": "Painted on the walls of this old warehouse are the names of islands half a world away.",
+      "longDescription": "Painted on the walls of this old warehouse are the names of islands half a world away.\n\nThe building's name comes from Pakhuismeesteren van de Thee, the company founded in 1818 that took over the warehousing work of the old Dutch East India Company in Rotterdam. This warehouse was first built in 1891, burnt down in 1937, and was rebuilt on its original wooden piles, storing tea and other goods from the colonial trade.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-room-mate-bruno_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-room-mate-bruno_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-room-mate-bruno_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-room-mate-bruno_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-room-mate-bruno_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "838f7331-4caa-5f8a-888c-b91ee896fe42",
+          "order": 0,
+          "title": "Room Mate Bruno",
+          "caption": "With your back to the Rijnhaven, looking up at the Pakhuismeesteren warehouse on the Wilhelminakade.",
+          "latitude": 51.90637245421174,
+          "longitude": 4.488316835581963,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-room-mate-bruno.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-room-mate-bruno_hero.webp",
+          "transcriptText": "Painted on the walls of this old warehouse are the names of islands half a world away.\n\nWith your back to the Rijnhaven, look up at the brick warehouse on the Wilhelminakade, with its green loading doors and old hoisting beams still in place. This is the Pakhuismeesteren building, and Room Mate Bruno occupies much of it, with a food hall on the ground floor and rooms above.\n\nThe building's name comes from Pakhuismeesteren van de Thee, the company founded in 1818 that took over the warehousing work of the old Dutch East India Company in Rotterdam. This warehouse was first built in 1891, burnt down in 1937, and was rebuilt on its original wooden piles, storing tea and other goods from the colonial trade.\n\nLook for the painted lettering on the facade naming Celebes, Borneo, Java and Sumatra. They are a reminder of where the cargo came from, and of a colonial history the Netherlands is still working through.\n\nThe building stood empty from the 1980s until restoration began in 2015, when the architects restored the old fabric and added a light court and extra floors. The hotel inside has two hundred and seventeen rooms, and the designers drew on spices, Spanish warmth and the bold primary colours of the Dutch De Stijl movement, so the interiors are about as far from a sober warehouse as you can get.\n\nThe story here is one of reuse with the past left visible. Instead of scrubbing the warehouse clean of its history, the restoration kept the names, the doors and the beams, so the building wears its old life on the outside while doing something entirely new within.\n\nStep into the food hall on the ground floor before you go, then cross the Rijnhaven bridge to Katendrecht, the old sailors' quarter, where the waterfront is lined with places to eat and the views back across the harbour are hard to beat."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.90637245421174,
+      "centroidLongitude": 4.488316835581963,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Maritime",
+        "Commerce",
+        "Waterfront"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ea9f0758-42ef-578f-bcbc-eb3cddabcfce",
+      "createdAt": "2026-10-27",
+      "title": "Supernova Hotel",
+      "shortDescription": "Two buildings that had run out of reasons to exist, an empty childcare centre and a tired old hotel, were stitched together to make this one.",
+      "longDescription": "Two buildings that had run out of reasons to exist, an empty childcare centre and a tired old hotel, were stitched together to make this one.\n\nThe building tells you a lot about how Rotterdam likes to work. The architects, Zondervan Architectuur, took the vacant childcare centre and the outdated hotel beside it, stripped them both right back and joined them into one, and the result won the Entree Award for best hotel design in 2019.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-supernova-hotel_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-supernova-hotel_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-supernova-hotel_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-supernova-hotel_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-supernova-hotel_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3df1ca3a-6c7f-5c85-b1ba-0c9d6a64b254",
+          "order": 0,
+          "title": "Supernova Hotel",
+          "caption": "At 's-Gravendijkwal 68, by the hotel's bright, eclectic front.",
+          "latitude": 51.916468,
+          "longitude": 4.4631211,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-supernova-hotel.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-supernova-hotel_hero.webp",
+          "transcriptText": "Two buildings that had run out of reasons to exist, an empty childcare centre and a tired old hotel, were stitched together to make this one.\n\nThe 's-Gravendijkwal is the wide boulevard on the western side of the centre, with the approach road to the Maastunnel running down its middle. Supernova is at number sixty-eight, where the bright, eclectic front of the hotel stands out among the older brick buildings on this stretch.\n\nThe building tells you a lot about how Rotterdam likes to work. The architects, Zondervan Architectuur, took the vacant childcare centre and the outdated hotel beside it, stripped them both right back and joined them into one, and the result won the Entree Award for best hotel design in 2019.\n\nInside, the interior was designed with the creative agency Containr Affairs, and the idea is that the hotel should reflect the many cultures that make up Rotterdam. There are thirty-eight rooms, and no two are the same, ranging from compact micro-lofts with beds up a level to family rooms, with vintage furniture, pieces by local artists and here and there a record player.\n\nThe public spaces are the real draw, with a vinyl lounge, a cocktail bar, a small concept store and a garden, and everything is meant to feel playful and lived-in rather than polished.\n\nIn its own small way, Supernova sums up a city that would rather rework what it has than start over. Two tired buildings, given new purpose, have turned into one of the more characterful places to stay in town, which feels like a fair summary of modern Rotterdam itself.\n\nOn your way out, follow the boulevard south towards the river, where the Maastunnel takes cars, cyclists and pedestrians underneath the water. The cyclists' tunnel, with its long wooden escalators, is well worth a look."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.916468,
+      "centroidLongitude": 4.4631211,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Contemporary",
+        "Zondervan Architectuur"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b14774d2-9640-507c-b304-cfa0a6fb9135",
+      "createdAt": "2026-10-27",
+      "title": "TorenTuin",
+      "shortDescription": "The Dutch word ontmoeten means to meet, and if you split it with a hyphen it also hints at being free of things you must do, which is the joke…",
+      "longDescription": "The Dutch word ontmoeten means to meet, and if you split it with a hyphen it also hints at being free of things you must do, which is the joke this café is built on.\n\nThe church has housed a Protestant congregation for decades, and in 2023 a local resident, Arie-Jan Baan, set out to turn an unused part of it into a meeting place for the whole neighbourhood. TorenTuin opened that summer, run by a non-profit foundation with nearly fifty volunteers, and its name simply means tower garden.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-torentuin_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-torentuin_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-torentuin_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-torentuin_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d6c5c31e-a78b-5185-b24d-4a41330e7ebc",
+          "order": 0,
+          "title": "TorenTuin",
+          "caption": "Across the Lisplein from the pond, at the terrace of the Church of the Resurrection.",
+          "latitude": 51.93961382059483,
+          "longitude": 4.474155469731487,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-torentuin.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-torentuin_hero.webp",
+          "transcriptText": "The Dutch word ontmoeten means to meet, and if you split it with a hyphen it also hints at being free of things you must do, which is the joke this café is built on.\n\nAcross the Lisplein from the pond, in the Liskwartier of Rotterdam Noord, TorenTuin occupies part of the Church of the Resurrection, a post-war church building completed in 1961. Look for the entrance and the south-facing terrace, with its planted garden beds where neighbours grow things together.\n\nThe church has housed a Protestant congregation for decades, and in 2023 a local resident, Arie-Jan Baan, set out to turn an unused part of it into a meeting place for the whole neighbourhood. TorenTuin opened that summer, run by a non-profit foundation with nearly fifty volunteers, and its name simply means tower garden.\n\nThe terrace beds out front are looked after by people from the area, and the harvest is shared out among the neighbourhood, so the vegetables on the plate and the people at the next table may well have something in common.\n\nThe café keeps short hours, usually from Wednesday to Saturday, and serves coffee roasted on Goeree-Overflakkee, an island in the south of the province, with breakfast and lunch in a homely setting. There are children's workshops, weekend breakfasts, live music and lunches for local networks, all designed to get people who live a few doors apart to finally say hello.\n\nAnd here is the real point: in a big city it is easy to live surrounded by people you never meet, and TorenTuin treats that as a problem worth solving with coffee, vegetables and an open door. The church building, built for one kind of gathering, has found room for another.\n\nThe opening hours are limited, so it is worth checking them before you come, and afterwards take a slow walk round the Lisvijver, the pond in front of the church, which is one of the quietest corners of Rotterdam Noord."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.93961382059483,
+      "centroidLongitude": 4.474155469731487,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Religious Building",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b6c95313-0eef-5e15-933f-acd5ef08ebe1",
+      "createdAt": "2026-10-27",
+      "title": "Van Maanenbad",
+      "shortDescription": "The roof over this swimming pool was built to slide open, so on a warm day the indoor pool could become an outdoor one.",
+      "longDescription": "The roof over this swimming pool was built to slide open, so on a warm day the indoor pool could become an outdoor one.\n\nThat word above the door tells the story, because the Sportfondsen movement was founded in 1923 by Han Bierenbroodspot, who came up with a savings scheme that let ordinary people help fund new swimming pools, and this one, opened in 1937 as the Sportfondsenbad Rotterdam-Noord, was built that way.",
+      "makerId": "27b0e3b7-f067-5907-bd1f-ecc08cef3718",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-van-maanenbad_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-van-maanenbad_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c2be39d9-a5f0-5d4e-b0fb-4040c188e251",
+          "order": 0,
+          "title": "Van Maanenbad",
+          "caption": "At the Van Maanenstraat entrance, under the iron letters that spell Sportfondsenbad.",
+          "latitude": 51.932259383622856,
+          "longitude": 4.4644625509262585,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-van-maanenbad.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rtm-van-maanenbad_hero.webp",
+          "transcriptText": "The roof over this swimming pool was built to slide open, so on a warm day the indoor pool could become an outdoor one.\n\nFrom the Van Maanenstraat entrance, look up above the doors, where the original iron letters still spell out Sportfondsenbad. Behind the solid brick front, out of sight from the street, the outdoor pool and sunbathing lawns stretch away.\n\nThat word above the door tells the story, because the Sportfondsen movement was founded in 1923 by Han Bierenbroodspot, who came up with a savings scheme that let ordinary people help fund new swimming pools, and this one, opened in 1937 as the Sportfondsenbad Rotterdam-Noord, was built that way.\n\nInside, the main pool is twenty-five metres long, and the gabled roof above it splits into two halves that slide apart on rails, so swimmers could look up at the open sky, which was a remarkably modern idea for the 1930s.\n\nThe outdoor pool is fifty metres long, and today it is the only outdoor pool in central Rotterdam, so on a summer afternoon it is about as close to a beach as the city centre gets. The architects were De Roos and Overeijnder, and the whole complex has been a national monument since 2002.\n\nCarefully restored and reopened in 2015, it remains a serious lap-swimming pool, with no slides or wave machines in sight.\n\nThe way it was paid for is what moves me most, since it was not a gift from a city or a rich patron, but the result of ordinary people saving together for something they wanted to share, and it is still doing exactly that job nearly ninety years later.\n\nBring your swimming things if you can, and try the outdoor pool on a fine day, or else walk on into the streets of Blijdorp and Bergpolder around you, where the 1930s architecture makes this whole neighbourhood feel of a piece with the pool."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.932259383622856,
+      "centroidLongitude": 4.4644625509262585,
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Art Deco",
+        "Designed by a Master",
+        "De Roos & Overeijnder"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "aa220274-aadd-51cd-88c7-60654c1c13f1",
+      "createdAt": "2026-10-27",
+      "title": "Portugalia Tasca",
+      "shortDescription": "In Portugal a tasca is a small, cosy neighbourhood restaurant where families gather around honest food, and this one has brought the idea to a…",
+      "longDescription": "In Portugal a tasca is a small, cosy neighbourhood restaurant where families gather around honest food, and this one has brought the idea to a quiet lane in the middle of Amsterdam.\n\nThe menu reads like a tour of Portuguese home cooking. There is bacalhau à brás, shredded salt cod with eggs, olives and fine strips of fried potato; caldo verde, the kale, potato and sausage soup; and polvo à lagareiro, slow-cooked octopus finished with garlic and plenty of olive oil.",
+      "makerId": "946d6338-4459-5061-8206-4dc57784629f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ams-portugalia-tasca_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ams-portugalia-tasca_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ams-portugalia-tasca_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ams-portugalia-tasca_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a42759be-b1d7-575a-a5c3-defa797aed36",
+          "order": 0,
+          "title": "Portugalia Tasca",
+          "caption": "At Bakkersstraat 12, on the short lane between the Rembrandtplein and the Amstel.",
+          "latitude": 52.36695649883764,
+          "longitude": 4.897234635581963,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ams-portugalia-tasca.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ams-portugalia-tasca_hero.webp",
+          "transcriptText": "In Portugal a tasca is a small, cosy neighbourhood restaurant where families gather around honest food, and this one has brought the idea to a quiet lane in the middle of Amsterdam.\n\nBakkersstraat is a short street between the busy Rembrandtplein and the river Amstel, and Portugalia Tasca is at number twelve. The noise of the square sits at one end and the water at the other, with this small restaurant tucked in between, open every day from midday until late.\n\nThe menu reads like a tour of Portuguese home cooking. There is bacalhau à brás, shredded salt cod with eggs, olives and fine strips of fried potato; caldo verde, the kale, potato and sausage soup; and polvo à lagareiro, slow-cooked octopus finished with garlic and plenty of olive oil.\n\nFor something quicker, try the pastéis de bacalhau, crispy cod fritters that the restaurant recommends as the perfect start to any Portuguese meal, or a prego no pão, a steak sandwich with garlic butter, which is about as satisfying as lunch can get.\n\nThe Portuguese link to this part of town is far older than the restaurant. In the seventeenth century, many Jewish families who had fled Portugal settled in Amsterdam and helped build its trade, and their great synagogue, the Portuguese Synagogue, still stands not far from here across the Amstel. A plate of salt cod in this neighbourhood is, in its own small way, part of a very long conversation between the two countries.\n\nWith lunch done, walk down to the end of the street and along the Amstel, where the bridges and the houseboats line up beautifully towards the Magere Brug. It is one of the best short walks in the city, and the right pace after a long lunch."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 52.36695649883764,
+      "centroidLongitude": 4.897234635581963,
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
       ],
       "priceUSD": 0
     }
