@@ -342111,9 +342111,9 @@
         "341B9D57-1C9B-50A4-8B9E-F12C4B67C668",
         "ACD0B381-BCCF-5FCF-92BB-BB89857028D6",
         "4EBD63F9-5F28-5B0B-A6A2-B82B23042C41",
+        "5784A22E-7B69-5CA9-ABCA-E5AEB2F8AF7F",
         "37532F5D-0593-57FC-846A-2F749FCF531F",
-        "0D27D67A-1D0D-5669-951E-46029B279041",
-        "B8C51640-E596-5728-9545-FF31CA13AB67"
+        "0D27D67A-1D0D-5669-951E-46029B279041"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -383696,6 +383696,9 @@
       "centroidLongitude": -9.018303,
       "city": "Setúbal",
       "country": "Portugal",
+      "relatedTourIds": [
+        "0418D909-216C-54AE-9519-52C14A89EE27"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -385143,6 +385146,16 @@
       "centroidLongitude": -9.142439,
       "city": "Lisbon",
       "country": "Portugal",
+      "relatedTourIds": [
+        "CE5B3B41-AC0F-5CFF-8EEA-5D8527361570",
+        "4EBD63F9-5F28-5B0B-A6A2-B82B23042C41",
+        "7141AC28-ED20-5C21-81EA-F6188C6E0A5A",
+        "F89EC46A-B4EA-538D-B548-B1BEFF7C8618",
+        "E63C614F-9534-56D8-A9BC-60C62DC17BA9",
+        "245E5403-F316-5077-A805-18A02EA7C862",
+        "58B564E6-267F-5F53-806F-1B25FA318976",
+        "0D27D67A-1D0D-5669-951E-46029B279041"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -385187,6 +385200,9 @@
       "centroidLongitude": -9.025087,
       "city": "Setúbal",
       "country": "Portugal",
+      "relatedTourIds": [
+        "C4ACA892-93D8-56C3-BE80-57DA8AFCA7CF"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
