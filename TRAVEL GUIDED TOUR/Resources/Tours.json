@@ -42418,14 +42418,14 @@
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
+        "9D8DAF66-2057-56E8-A5B3-81B4215743EB",
         "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
         "39e4f325-e903-51dd-8032-aea6bb824ed1",
         "9f048578-4538-5dec-ab87-406d4eed58c7",
         "24bf9ae1-e4d1-5cf0-8767-be2b003e0e00",
         "a25850de-dd2c-586d-ab03-2bfd72d358db",
         "43421C52-997D-567B-B860-C0EC0B72BE8F",
-        "29e01aee-c177-552b-aba8-4533f3ed2935",
-        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a"
+        "29e01aee-c177-552b-aba8-4533f3ed2935"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -71230,14 +71230,14 @@
       "city": "Niterói",
       "country": "Brazil",
       "relatedTourIds": [
+        "D7E89D2D-E7B2-5E22-B04A-60796CC4A84A",
         "0084aa82-782f-5fc3-9b5d-3806d1946319",
         "DC0E9AA7-11B4-5131-BA7B-48C380C1C0F8",
         "62ce120d-8f20-514c-b657-fcf679eab005",
         "b2fc43ad-dfe1-511f-a6c6-9755f84ed95f",
         "f4ce5978-958d-572f-8280-f4b06e9266b1",
         "dcf0d9c4-4d40-587b-a06b-d8053f34a6a7",
-        "7A2C9E14-6B85-4F02-A1D3-8E4760B9C2F1",
-        "072961ee-05fb-5ff8-a5f8-f7d11de71664"
+        "7A2C9E14-6B85-4F02-A1D3-8E4760B9C2F1"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -72297,14 +72297,14 @@
       "city": "Niterói",
       "country": "Brazil",
       "relatedTourIds": [
+        "D7E89D2D-E7B2-5E22-B04A-60796CC4A84A",
         "7694e539-478c-5663-971f-53b3c63e28f8",
         "DC0E9AA7-11B4-5131-BA7B-48C380C1C0F8",
         "62ce120d-8f20-514c-b657-fcf679eab005",
         "758481c1-1925-5d9a-8377-638c51c74ffb",
         "b2fc43ad-dfe1-511f-a6c6-9755f84ed95f",
         "3f835ead-9829-5521-97f1-00d9ad78cfb0",
-        "7A2DD70F-D234-50C7-BCB4-F46584CCF85E",
-        "5404b9ea-2908-5786-a909-52be5647a954"
+        "7A2DD70F-D234-50C7-BCB4-F46584CCF85E"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -75549,7 +75549,7 @@
         "893d656a-6ec8-5520-b5f8-fd63c60ae4b5",
         "6acafe2f-3283-5ecb-b6c6-5b50c0b6f120",
         "e3f6f384-4168-5656-a35b-1546b03fe0f0",
-        "642ec68c-5148-5833-a9f9-c7825e295c2d"
+        "5B26C34B-9449-5CC7-B50F-E32114E99140"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -75834,8 +75834,8 @@
         "6c8c4fd5-a437-56fc-a1b6-aa6c92944200",
         "29a5b521-2761-53cb-b0e6-c1ac6552bb2d",
         "76127777-fee0-53a2-809c-d00386c0f2fe",
-        "521a1966-6aba-501e-98b5-08cce92555ad",
-        "17b809c4-9de8-564c-ab43-c09a9c9cc2c9"
+        "47963E4D-DFC3-55FE-AEDD-C53F19B5D336",
+        "521a1966-6aba-501e-98b5-08cce92555ad"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -76340,7 +76340,7 @@
         "7b5b2774-3bb5-5d36-983d-6a551b7fd72f",
         "5a785271-81bb-52db-bf2f-2ca084f5e81c",
         "893d656a-6ec8-5520-b5f8-fd63c60ae4b5",
-        "03c0f1c1-0a74-521c-88b3-87927f33f954"
+        "5B26C34B-9449-5CC7-B50F-E32114E99140"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -87641,7 +87641,7 @@
         "136E6351-B1C3-4AA4-9153-460B6C1AE76B",
         "baeaa4fa-c80e-58b0-b0e9-c2df127af3df",
         "c2d24ddb-a962-53a1-a384-51764dc01f93",
-        "3ad6f369-1a73-595e-8a78-26e67a7b139b"
+        "0DE94AD6-31ED-5E02-9065-08DB79B11F69"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -163904,10 +163904,10 @@
         "881874E4-08F9-57C4-8713-150D3F47C8C0",
         "0CA51A97-EDCC-53DB-89D5-6891E48080FF",
         "CDB5BEDA-E282-5736-9101-989E8D905FCC",
+        "997FD413-AB0C-569C-803D-77901FFEC974",
         "226624D7-DD64-5C3A-8578-68E9216FC18A",
         "A37B1327-C690-54B1-9EAA-B374DBFEAA2E",
-        "C7934243-8A39-5E68-82FE-91B18D01E5D6",
-        "61A2C149-FD52-54AB-BDBC-A78D047EB773"
+        "C7934243-8A39-5E68-82FE-91B18D01E5D6"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -164009,6 +164009,7 @@
       "country": "Ireland",
       "relatedTourIds": [
         "E67F81FF-B083-58A9-B4EB-9AE1E21BE548",
+        "AC28CE6E-E8BF-54DF-B472-E7F8CF46455F",
         "68F5884F-BBCE-5F31-B293-79B43A7A3308",
         "A36EEFD8-F7D3-58FC-9D93-E25952FF6F4E",
         "E4EFB78D-CAC8-5A1A-8041-674D06534099"
@@ -227154,10 +227155,10 @@
         "c307eabb-fb36-57ce-8be7-c30d5093b561",
         "5a785271-81bb-52db-bf2f-2ca084f5e81c",
         "29a5b521-2761-53cb-b0e6-c1ac6552bb2d",
+        "5B26C34B-9449-5CC7-B50F-E32114E99140",
         "3ce34aaa-d077-54a2-8bde-15bb3a1f8e98",
         "76127777-fee0-53a2-809c-d00386c0f2fe",
-        "7c71d31b-4dc9-5ae8-a30a-38114d13b31e",
-        "dc88f86f-d38c-5344-9c53-26e4ef9f97bf"
+        "7c71d31b-4dc9-5ae8-a30a-38114d13b31e"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -242573,9 +242574,9 @@
         "03e5c64c-8ea5-57b5-8d9d-0ec003b4f1ed",
         "32DC7EE6-8D6C-5D56-A7FC-8BA893F5D726",
         "e3f6f384-4168-5656-a35b-1546b03fe0f0",
+        "5B26C34B-9449-5CC7-B50F-E32114E99140",
         "76127777-fee0-53a2-809c-d00386c0f2fe",
-        "3ce34aaa-d077-54a2-8bde-15bb3a1f8e98",
-        "29a5b521-2761-53cb-b0e6-c1ac6552bb2d"
+        "3ce34aaa-d077-54a2-8bde-15bb3a1f8e98"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -264054,13 +264055,13 @@
       "country": "Germany",
       "relatedTourIds": [
         "687F4A2B-9D33-5C72-B67C-7BFA5BDD8F5E",
+        "5B26C34B-9449-5CC7-B50F-E32114E99140",
         "617424dc-7a1f-5a43-9a8b-22c0cb714a2b",
         "76127777-fee0-53a2-809c-d00386c0f2fe",
         "521a1966-6aba-501e-98b5-08cce92555ad",
+        "C9382E12-2315-55D2-9AC4-A13D32F2113C",
         "c056c499-76ae-5306-a407-b4eb22663f2e",
-        "9ef33a0e-d5bb-530d-a43e-5c601ec99fe1",
-        "3ce34aaa-d077-54a2-8bde-15bb3a1f8e98",
-        "7b5b2774-3bb5-5d36-983d-6a551b7fd72f"
+        "9ef33a0e-d5bb-530d-a43e-5c601ec99fe1"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -274453,6 +274454,7 @@
       "city": "Niterói",
       "country": "Brazil",
       "relatedTourIds": [
+        "D7E89D2D-E7B2-5E22-B04A-60796CC4A84A",
         "7694e539-478c-5663-971f-53b3c63e28f8",
         "0084aa82-782f-5fc3-9b5d-3806d1946319"
       ],
@@ -314373,6 +314375,7 @@
       "city": "Isle of Skye",
       "country": "United Kingdom",
       "relatedTourIds": [
+        "793ACE83-BA27-5CED-A625-4C8711D92BC0",
         "D4B662A7-CE49-53CA-A6BA-2C76CE048BB5"
       ],
       "primaryCategory": "culturalHeritage",
@@ -316736,7 +316739,8 @@
       "city": "Isle of Skye",
       "country": "United Kingdom",
       "relatedTourIds": [
-        "03035654-CC5F-52F9-85FC-9D0124E572DD"
+        "03035654-CC5F-52F9-85FC-9D0124E572DD",
+        "793ACE83-BA27-5CED-A625-4C8711D92BC0"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -327607,7 +327611,9 @@
         "8D83F42B-25BE-5492-94AC-11C7E8655DB5",
         "96439E5B-5600-5913-B68F-B2827A54412C",
         "BB54A49E-7934-56C3-9F28-8022326F7F02",
-        "C468C1FF-4E33-5561-A136-C2056782E9F2"
+        "C468C1FF-4E33-5561-A136-C2056782E9F2",
+        "1AEDBC19-301B-5B23-9801-A8D3E07F8BB7",
+        "3ABF74B7-4BC0-5D2F-A85B-81015A66C6B5"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -327822,7 +327828,9 @@
         "C468C1FF-4E33-5561-A136-C2056782E9F2",
         "625634AA-A697-540B-8165-4A80182E60E7",
         "96439E5B-5600-5913-B68F-B2827A54412C",
-        "BB54A49E-7934-56C3-9F28-8022326F7F02"
+        "BB54A49E-7934-56C3-9F28-8022326F7F02",
+        "1AEDBC19-301B-5B23-9801-A8D3E07F8BB7",
+        "3ABF74B7-4BC0-5D2F-A85B-81015A66C6B5"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -329863,7 +329871,8 @@
         "625634AA-A697-540B-8165-4A80182E60E7",
         "BB54A49E-7934-56C3-9F28-8022326F7F02",
         "96439E5B-5600-5913-B68F-B2827A54412C",
-        "C11E22EC-AD1C-5FF8-BFCA-3C563EA4D295"
+        "C11E22EC-AD1C-5FF8-BFCA-3C563EA4D295",
+        "1AEDBC19-301B-5B23-9801-A8D3E07F8BB7"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -331707,7 +331716,8 @@
         "68F5884F-BBCE-5F31-B293-79B43A7A3308",
         "E67F81FF-B083-58A9-B4EB-9AE1E21BE548",
         "674E7EE2-AF9F-52B6-B0C3-372BE40908FC",
-        "A36EEFD8-F7D3-58FC-9D93-E25952FF6F4E"
+        "A36EEFD8-F7D3-58FC-9D93-E25952FF6F4E",
+        "38DDBD64-BA6D-5466-97A5-43686BC809F7"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -331759,6 +331769,8 @@
         "E67F81FF-B083-58A9-B4EB-9AE1E21BE548",
         "674E7EE2-AF9F-52B6-B0C3-372BE40908FC",
         "A36EEFD8-F7D3-58FC-9D93-E25952FF6F4E",
+        "AC28CE6E-E8BF-54DF-B472-E7F8CF46455F",
+        "38DDBD64-BA6D-5466-97A5-43686BC809F7",
         "5C5F30EE-E2A5-5428-A6A0-8670D5A2484B"
       ],
       "primaryCategory": "foodAndDrink",
@@ -331915,7 +331927,9 @@
         "625634AA-A697-540B-8165-4A80182E60E7",
         "C11E22EC-AD1C-5FF8-BFCA-3C563EA4D295",
         "C468C1FF-4E33-5561-A136-C2056782E9F2",
-        "BB54A49E-7934-56C3-9F28-8022326F7F02"
+        "BB54A49E-7934-56C3-9F28-8022326F7F02",
+        "1AEDBC19-301B-5B23-9801-A8D3E07F8BB7",
+        "3ABF74B7-4BC0-5D2F-A85B-81015A66C6B5"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -331967,7 +331981,9 @@
         "BB54A49E-7934-56C3-9F28-8022326F7F02",
         "C468C1FF-4E33-5561-A136-C2056782E9F2",
         "96439E5B-5600-5913-B68F-B2827A54412C",
-        "8D83F42B-25BE-5492-94AC-11C7E8655DB5"
+        "8D83F42B-25BE-5492-94AC-11C7E8655DB5",
+        "1AEDBC19-301B-5B23-9801-A8D3E07F8BB7",
+        "3ABF74B7-4BC0-5D2F-A85B-81015A66C6B5"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -332019,7 +332035,8 @@
         "8D83F42B-25BE-5492-94AC-11C7E8655DB5",
         "C11E22EC-AD1C-5FF8-BFCA-3C563EA4D295",
         "C468C1FF-4E33-5561-A136-C2056782E9F2",
-        "96439E5B-5600-5913-B68F-B2827A54412C"
+        "96439E5B-5600-5913-B68F-B2827A54412C",
+        "1AEDBC19-301B-5B23-9801-A8D3E07F8BB7"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -332329,7 +332346,9 @@
       "city": "Kinsale",
       "country": "Ireland",
       "relatedTourIds": [
-        "859A559D-1FEF-5807-892B-D4B820337752"
+        "56DACDD5-B418-5426-8BDF-720129AE1267",
+        "859A559D-1FEF-5807-892B-D4B820337752",
+        "60E69A29-8E23-5AA1-8728-2B603591EE31"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -333870,7 +333889,8 @@
         "E67F81FF-B083-58A9-B4EB-9AE1E21BE548",
         "A36EEFD8-F7D3-58FC-9D93-E25952FF6F4E",
         "E4EFB78D-CAC8-5A1A-8041-674D06534099",
-        "740ADD76-ABBE-5DFE-981D-083C02CA23BB"
+        "740ADD76-ABBE-5DFE-981D-083C02CA23BB",
+        "AC28CE6E-E8BF-54DF-B472-E7F8CF46455F"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -334143,7 +334163,9 @@
         "C11E22EC-AD1C-5FF8-BFCA-3C563EA4D295",
         "C468C1FF-4E33-5561-A136-C2056782E9F2",
         "BB54A49E-7934-56C3-9F28-8022326F7F02",
-        "625634AA-A697-540B-8165-4A80182E60E7"
+        "625634AA-A697-540B-8165-4A80182E60E7",
+        "1AEDBC19-301B-5B23-9801-A8D3E07F8BB7",
+        "3ABF74B7-4BC0-5D2F-A85B-81015A66C6B5"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -334470,7 +334492,9 @@
         "E4EFB78D-CAC8-5A1A-8041-674D06534099",
         "674E7EE2-AF9F-52B6-B0C3-372BE40908FC",
         "740ADD76-ABBE-5DFE-981D-083C02CA23BB",
-        "5C5F30EE-E2A5-5428-A6A0-8670D5A2484B"
+        "5C5F30EE-E2A5-5428-A6A0-8670D5A2484B",
+        "AC28CE6E-E8BF-54DF-B472-E7F8CF46455F",
+        "38DDBD64-BA6D-5466-97A5-43686BC809F7"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -336590,6 +336614,7 @@
         "68F5884F-BBCE-5F31-B293-79B43A7A3308",
         "674E7EE2-AF9F-52B6-B0C3-372BE40908FC",
         "E4EFB78D-CAC8-5A1A-8041-674D06534099",
+        "AC28CE6E-E8BF-54DF-B472-E7F8CF46455F",
         "5C5F30EE-E2A5-5428-A6A0-8670D5A2484B",
         "740ADD76-ABBE-5DFE-981D-083C02CA23BB"
       ],
@@ -337868,7 +337893,9 @@
         "674E7EE2-AF9F-52B6-B0C3-372BE40908FC",
         "E4EFB78D-CAC8-5A1A-8041-674D06534099",
         "5C5F30EE-E2A5-5428-A6A0-8670D5A2484B",
-        "740ADD76-ABBE-5DFE-981D-083C02CA23BB"
+        "740ADD76-ABBE-5DFE-981D-083C02CA23BB",
+        "AC28CE6E-E8BF-54DF-B472-E7F8CF46455F",
+        "38DDBD64-BA6D-5466-97A5-43686BC809F7"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -360125,10 +360152,10 @@
         "b6196bb9-f791-5066-9e90-7f50ad321f74",
         "5a785271-81bb-52db-bf2f-2ca084f5e81c",
         "32DC7EE6-8D6C-5D56-A7FC-8BA893F5D726",
+        "5B26C34B-9449-5CC7-B50F-E32114E99140",
         "8E05C1D6-D270-5DD8-A8A0-8B351111D59F",
         "8168961E-46D5-56AE-8517-9FCDDE67F720",
-        "6AD137CA-4C30-5ED6-B02F-28E8AB52ACC2",
-        "325C0D25-4C68-5D93-831E-5E5CCAEFB5B1"
+        "6AD137CA-4C30-5ED6-B02F-28E8AB52ACC2"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -360401,8 +360428,8 @@
         "535508D8-DA71-56DE-B2F2-0DA0013FEF5D",
         "CDF648C2-37D8-5BD8-88AA-C4281023C1E5",
         "8688C6BC-4564-51D8-8F77-574CDA2D3CCD",
-        "8E05C1D6-D270-5DD8-A8A0-8B351111D59F",
-        "B0EFD8ED-9E30-5ABC-A03E-5596AC6AF57B"
+        "A0C3F870-A567-50F6-A588-2F99D30F0AEB",
+        "8E05C1D6-D270-5DD8-A8A0-8B351111D59F"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -360501,14 +360528,14 @@
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
+        "997FD413-AB0C-569C-803D-77901FFEC974",
         "B522B7A5-C0A9-505E-808E-4E649A4F9D1E",
         "c4c8a6e1-9d46-4e54-8a06-3c9e7b2d1f9b",
         "c5e8b1f4-9a27-4e60-8d03-2f7a6c4e8b91",
         "B2340D29-2C0E-5730-92DE-6C1742BBCA2E",
         "e1c4b8a3-9d42-4f54-8a06-3c9e7b2d1f97",
         "634E7A45-3154-5017-90B8-8D6B871361E2",
-        "26826453-4AC0-5D78-A942-C82189EAE53C",
-        "7fa917ae-1898-4f8c-a5b7-de75f8fa54bb"
+        "26826453-4AC0-5D78-A942-C82189EAE53C"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -378211,11 +378238,11 @@
         "6CF7A2F4-13D2-5419-8EDE-325C57B90603",
         "23F99407-E1A5-54E5-B612-D109362FFA16",
         "92fd22a4-08dc-574a-ad6b-c39bc7a987fb",
+        "6BE58CBE-0EE8-51F3-8031-A4ABEEFE4121",
         "EA93D02F-202E-5A04-A092-245E23C894F0",
         "f748fea4-fee0-5ad1-ad40-52bc21575422",
         "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
-        "9FBA6174-676B-5E6C-A095-96F965D11D1C",
-        "2D4E671B-5A63-5991-9AE6-5B68A591966D"
+        "9FBA6174-676B-5E6C-A095-96F965D11D1C"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -379327,8 +379354,8 @@
         "FD3BD9A8-9D7B-5667-85C2-24CC92E8CB7B",
         "C996FCBD-F3AF-5DFA-A13E-14CA648A2451",
         "0F959B55-34AA-538E-AD98-AA233E3248DD",
-        "EA93D02F-202E-5A04-A092-245E23C894F0",
-        "23F99407-E1A5-54E5-B612-D109362FFA16"
+        "6BE58CBE-0EE8-51F3-8031-A4ABEEFE4121",
+        "EA93D02F-202E-5A04-A092-245E23C894F0"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -379492,12 +379519,12 @@
       "relatedTourIds": [
         "559D7FD1-1540-5730-8636-D27F8FAEC5BA",
         "9CE74801-4D3D-5FAE-9BB9-A51804B12575",
+        "6BE58CBE-0EE8-51F3-8031-A4ABEEFE4121",
         "B7B16BF4-860C-54DC-9528-23B7EF427885",
         "92fd22a4-08dc-574a-ad6b-c39bc7a987fb",
         "EA93D02F-202E-5A04-A092-245E23C894F0",
         "23F99407-E1A5-54E5-B612-D109362FFA16",
-        "53369C7D-614F-5726-9B7B-EF422652D651",
-        "E3FD5BC0-A5CC-5D12-B546-350F6233481C"
+        "53369C7D-614F-5726-9B7B-EF422652D651"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -381174,14 +381201,14 @@
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
+        "6BE58CBE-0EE8-51F3-8031-A4ABEEFE4121",
         "56E4DEEB-0F1A-5E03-BEFB-9C2BC222E382",
         "8DA482EA-E980-5536-964C-5F68F1B79EAC",
         "3BE8ED61-A8DB-593A-B2B3-B5D31A795644",
         "00D66B5A-E5F2-582A-B4BB-904CB3A097D4",
         "f748fea4-fee0-5ad1-ad40-52bc21575422",
         "9FBA6174-676B-5E6C-A095-96F965D11D1C",
-        "94420BA9-D9A2-54F1-8B13-9EF0E9E33E72",
-        "2A1EFC1C-DC6B-5DD4-B5C4-83DC812D6A83"
+        "94420BA9-D9A2-54F1-8B13-9EF0E9E33E72"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -387707,6 +387734,16 @@
       "centroidLongitude": 2.31587,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "5167a3d3-dea3-55c9-a471-c5b402ca7472",
+        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
+        "c5ef9a16-82d1-5366-a9d7-696ddd67b7ad",
+        "9f048578-4538-5dec-ab87-406d4eed58c7",
+        "8996fb24-7274-5e1f-8033-6f2d2ffd8fd8",
+        "30300459-7c37-5aba-a5c7-b204827f4139",
+        "24bf9ae1-e4d1-5cf0-8767-be2b003e0e00",
+        "fe851682-ace4-5556-ae62-956ea14e0e66"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Museum",
@@ -387752,6 +387789,16 @@
       "centroidLongitude": 16.35846,
       "city": "Vienna",
       "country": "Austria",
+      "relatedTourIds": [
+        "030CDFEF-64F3-50DE-9C71-0D49C96D8915",
+        "2D4E671B-5A63-5991-9AE6-5B68A591966D",
+        "6CF7A2F4-13D2-5419-8EDE-325C57B90603",
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432",
+        "559D7FD1-1540-5730-8636-D27F8FAEC5BA",
+        "F465A9A2-46FA-57EB-8E5E-81548C9BD93D",
+        "E3FD5BC0-A5CC-5D12-B546-350F6233481C",
+        "B2A1F987-5E61-5104-99D6-8EAE7E431C6A"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Civic",
@@ -387799,6 +387846,11 @@
       "centroidLongitude": -43.12587,
       "city": "Niterói",
       "country": "Brazil",
+      "relatedTourIds": [
+        "7694e539-478c-5663-971f-53b3c63e28f8",
+        "0084aa82-782f-5fc3-9b5d-3806d1946319",
+        "DC0E9AA7-11B4-5131-BA7B-48C380C1C0F8"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Museum",
@@ -387847,6 +387899,16 @@
       "centroidLongitude": -0.3377,
       "city": "London",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "B522B7A5-C0A9-505E-808E-4E649A4F9D1E",
+        "634E7A45-3154-5017-90B8-8D6B871361E2",
+        "51B4444B-409E-595B-9204-FCF663ED4406",
+        "881874E4-08F9-57C4-8713-150D3F47C8C0",
+        "e1c4b8a3-9d42-4f54-8a06-3c9e7b2d1f97",
+        "c4c8a6e1-9d46-4e54-8a06-3c9e7b2d1f9b",
+        "a6ebc456-5ae4-45b6-b58d-39ee0e2d0feb",
+        "fc7430f8-c9a6-44b7-beec-0d375f346135"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -387938,6 +388000,16 @@
       "centroidLongitude": 13.42274,
       "city": "Berlin",
       "country": "Germany",
+      "relatedTourIds": [
+        "3ce34aaa-d077-54a2-8bde-15bb3a1f8e98",
+        "6efc770b-65bf-5922-9c04-eee3ef893620",
+        "e3f6f384-4168-5656-a35b-1546b03fe0f0",
+        "8688C6BC-4564-51D8-8F77-574CDA2D3CCD",
+        "473588d6-0f26-51c0-94a4-73dd22922a01",
+        "687F4A2B-9D33-5C72-B67C-7BFA5BDD8F5E",
+        "8E05C1D6-D270-5DD8-A8A0-8B351111D59F",
+        "29a5b521-2761-53cb-b0e6-c1ac6552bb2d"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -387983,6 +388055,12 @@
       "centroidLongitude": 2.28718,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "78182D2A-5866-5AA4-943D-875E9B3FCBE1",
+        "d24962af-60ab-52f4-9ad1-efa18d201a34",
+        "322cd311-c0e7-5fac-95cd-ff4825da045b",
+        "e218cea4-0041-57b0-8ddf-194dab7f93c7"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -388074,6 +388152,16 @@
       "centroidLongitude": 13.39306,
       "city": "Berlin",
       "country": "Germany",
+      "relatedTourIds": [
+        "5B26C34B-9449-5CC7-B50F-E32114E99140",
+        "c056c499-76ae-5306-a407-b4eb22663f2e",
+        "6c8c4fd5-a437-56fc-a1b6-aa6c92944200",
+        "76127777-fee0-53a2-809c-d00386c0f2fe",
+        "8688C6BC-4564-51D8-8F77-574CDA2D3CCD",
+        "B0EFD8ED-9E30-5ABC-A03E-5596AC6AF57B",
+        "B0AE8151-2127-5B92-BC69-CF29F4BB962C",
+        "872b4591-c599-5182-ba13-f08a36163a72"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -388119,6 +388207,16 @@
       "centroidLongitude": 13.38745,
       "city": "Berlin",
       "country": "Germany",
+      "relatedTourIds": [
+        "c056c499-76ae-5306-a407-b4eb22663f2e",
+        "C9382E12-2315-55D2-9AC4-A13D32F2113C",
+        "8688C6BC-4564-51D8-8F77-574CDA2D3CCD",
+        "6c8c4fd5-a437-56fc-a1b6-aa6c92944200",
+        "617424dc-7a1f-5a43-9a8b-22c0cb714a2b",
+        "76127777-fee0-53a2-809c-d00386c0f2fe",
+        "5a785271-81bb-52db-bf2f-2ca084f5e81c",
+        "c1ba17f2-6e78-550f-ab25-fa44ed1d6eee"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -388164,6 +388262,16 @@
       "centroidLongitude": 13.33461,
       "city": "Berlin",
       "country": "Germany",
+      "relatedTourIds": [
+        "6acafe2f-3283-5ecb-b6c6-5b50c0b6f120",
+        "642ec68c-5148-5833-a9f9-c7825e295c2d",
+        "c056c499-76ae-5306-a407-b4eb22663f2e",
+        "521a1966-6aba-501e-98b5-08cce92555ad",
+        "B0EFD8ED-9E30-5ABC-A03E-5596AC6AF57B",
+        "8688C6BC-4564-51D8-8F77-574CDA2D3CCD",
+        "e3f6f384-4168-5656-a35b-1546b03fe0f0",
+        "6c8c4fd5-a437-56fc-a1b6-aa6c92944200"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Religious Building",
@@ -388301,6 +388409,9 @@
       "centroidLongitude": -6.16461,
       "city": "Malahide",
       "country": "Ireland",
+      "relatedTourIds": [
+        "F79C4F3C-F2C9-5DB9-988D-98CB344A3A61"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -388437,6 +388548,9 @@
       "centroidLongitude": -8.71123,
       "city": "Kilcrea",
       "country": "Ireland",
+      "relatedTourIds": [
+        "0CE73422-18A4-5F28-91FB-2E4948110BA8"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -388482,6 +388596,10 @@
       "centroidLongitude": -6.34699,
       "city": "Isle of Skye",
       "country": "United Kingdom",
+      "relatedTourIds": [
+        "03035654-CC5F-52F9-85FC-9D0124E572DD",
+        "D4B662A7-CE49-53CA-A6BA-2C76CE048BB5"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -388573,6 +388691,13 @@
       "centroidLongitude": -6.35652,
       "city": "Dublin",
       "country": "Ireland",
+      "relatedTourIds": [
+        "E67F81FF-B083-58A9-B4EB-9AE1E21BE548",
+        "E4EFB78D-CAC8-5A1A-8041-674D06534099",
+        "68F5884F-BBCE-5F31-B293-79B43A7A3308",
+        "AC28CE6E-E8BF-54DF-B472-E7F8CF46455F",
+        "740ADD76-ABBE-5DFE-981D-083C02CA23BB"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -388976,6 +389101,9 @@
       "centroidLongitude": -9.86269,
       "city": "Ballynahinch",
       "country": "Ireland",
+      "relatedTourIds": [
+        "8F798323-CE13-5B8E-955F-402D22E71B4D"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -389474,6 +389602,9 @@
       "centroidLongitude": -9.86364,
       "city": "Ballynahinch",
       "country": "Ireland",
+      "relatedTourIds": [
+        "46612230-8C55-5143-A3B3-38A0921D9C68"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -389654,6 +389785,10 @@
       "centroidLongitude": -8.53466,
       "city": "Kinsale",
       "country": "Ireland",
+      "relatedTourIds": [
+        "56DACDD5-B418-5426-8BDF-720129AE1267",
+        "0EE69AA6-933D-5F41-9C75-5BC4483A7963"
+      ],
       "primaryCategory": "history",
       "tags": [
         "History",
@@ -389832,6 +389967,9 @@
       "centroidLongitude": -9.75871,
       "city": "Goleen",
       "country": "Ireland",
+      "relatedTourIds": [
+        "0D32F2CE-E912-57A7-9C29-DA7195A869C1"
+      ],
       "primaryCategory": "history",
       "tags": [
         "History",
@@ -390102,6 +390240,16 @@
       "centroidLongitude": -8.74253,
       "city": "Limerick",
       "country": "Ireland",
+      "relatedTourIds": [
+        "3ABF74B7-4BC0-5D2F-A85B-81015A66C6B5",
+        "625634AA-A697-540B-8165-4A80182E60E7",
+        "C11E22EC-AD1C-5FF8-BFCA-3C563EA4D295",
+        "8D83F42B-25BE-5492-94AC-11C7E8655DB5",
+        "00D87156-4B23-5A96-973E-F5B45D181A3C",
+        "96439E5B-5600-5913-B68F-B2827A54412C",
+        "BB54A49E-7934-56C3-9F28-8022326F7F02",
+        "C468C1FF-4E33-5561-A136-C2056782E9F2"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -390147,6 +390295,10 @@
       "centroidLongitude": -8.49891,
       "city": "Kinsale",
       "country": "Ireland",
+      "relatedTourIds": [
+        "60E69A29-8E23-5AA1-8728-2B603591EE31",
+        "0EE69AA6-933D-5F41-9C75-5BC4483A7963"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -390330,6 +390482,15 @@
       "centroidLongitude": -6.33033,
       "city": "Dublin",
       "country": "Ireland",
+      "relatedTourIds": [
+        "5C5F30EE-E2A5-5428-A6A0-8670D5A2484B",
+        "A36EEFD8-F7D3-58FC-9D93-E25952FF6F4E",
+        "68F5884F-BBCE-5F31-B293-79B43A7A3308",
+        "E67F81FF-B083-58A9-B4EB-9AE1E21BE548",
+        "674E7EE2-AF9F-52B6-B0C3-372BE40908FC",
+        "E4EFB78D-CAC8-5A1A-8041-674D06534099",
+        "38DDBD64-BA6D-5466-97A5-43686BC809F7"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -390512,6 +390673,9 @@
       "centroidLongitude": -6.16461,
       "city": "Malahide",
       "country": "Ireland",
+      "relatedTourIds": [
+        "47F72EA2-2164-5CD1-B96B-82908BEAA92F"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -390557,6 +390721,14 @@
       "centroidLongitude": -8.55705,
       "city": "Limerick",
       "country": "Ireland",
+      "relatedTourIds": [
+        "1AEDBC19-301B-5B23-9801-A8D3E07F8BB7",
+        "625634AA-A697-540B-8165-4A80182E60E7",
+        "00D87156-4B23-5A96-973E-F5B45D181A3C",
+        "8D83F42B-25BE-5492-94AC-11C7E8655DB5",
+        "96439E5B-5600-5913-B68F-B2827A54412C",
+        "C11E22EC-AD1C-5FF8-BFCA-3C563EA4D295"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -390647,6 +390819,9 @@
       "centroidLongitude": -8.71842,
       "city": "Kilcrea",
       "country": "Ireland",
+      "relatedTourIds": [
+        "1E083C99-305D-59AD-A182-4833D2A81E3B"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -390737,6 +390912,9 @@
       "centroidLongitude": -9.82927,
       "city": "Goleen",
       "country": "Ireland",
+      "relatedTourIds": [
+        "04C54C9D-7CE0-59FD-B032-C88AA8490AD9"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
