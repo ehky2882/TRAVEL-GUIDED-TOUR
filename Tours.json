@@ -5661,6 +5661,16 @@
       "websiteURL": null
     },
     {
+      "id": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "displayName": "Atlas Studio TRN",
+      "platform": "dozent",
+      "handle": "atlas.trn",
+      "avatarURL": null,
+      "avatarEmoji": "🇮🇹",
+      "bio": "Atlas Studio's Turin bureau — a city of baroque arcades and mirrored cafés, a synagogue that became a cinema museum and a house one slice of polenta wide, where the tramezzino and the gelato on a stick were born, and the Alps close the end of every street.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -21749,9 +21759,9 @@
         "3A61D9A3-8787-4AD2-B754-F33B3FFB03EB",
         "EC39474D-A865-4751-84B5-27F7895109AA",
         "8ED8CB10-3E8A-4C09-AFFD-356102F75948",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
         "00b0f205-5245-58a1-82a3-6b47cc7261d9",
-        "134fbab2-b008-50b8-9ba2-8f125361c291",
-        "62dd8d54-a529-5b72-b3f7-1f153f01b9d1"
+        "ca8653b9-d853-5818-b9ef-e6ca04c3c2b4"
       ],
       "primaryCategory": "literature",
       "tags": [
@@ -84196,9 +84206,9 @@
         "b57293ab-8421-54c1-b750-580af0a53a30",
         "bbcbc067-bfa6-5231-aa5b-3cd1f3314d93",
         "80c212ca-621d-529f-afe1-f8c5113acbe8",
+        "21d9cacc-6eb1-5377-ad13-d5dbd0c4654c",
         "208aaf33-21e8-50d7-9f4f-a3708857c8d9",
-        "D8CB27A9-261D-53D4-A36A-40AC957CBAF6",
-        "726AB861-8269-51C3-AAE8-2D23395974A5"
+        "D8CB27A9-261D-53D4-A36A-40AC957CBAF6"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -85451,8 +85461,8 @@
         "9583fac3-b270-5ba1-86cb-95ac19bb065c",
         "7e57138e-a046-5278-8a01-136788c3574c",
         "DDF3D7F8-9208-5CED-9E04-8A4CCAC8239B",
-        "BE967E94-F10E-5FF8-9515-8A979C0692A1",
-        "68d19f6a-8ce3-5f8f-b038-52dbee13a72f"
+        "5e03d190-77dd-5e59-9348-1010cb412f63",
+        "BE967E94-F10E-5FF8-9515-8A979C0692A1"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -94208,7 +94218,7 @@
         "726b2a64-0a04-5a1a-a431-d8a879f17e45",
         "e858fbf5-ad82-52c7-9224-64b918276554",
         "ea0cf211-37a9-50db-b1f8-8d21176d4793",
-        "48CB9ED5-63B7-5AAC-A0DE-E2F11068D665"
+        "2521ac27-0a45-5dbd-84be-4eff7aa65133"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -132931,12 +132941,12 @@
       "relatedTourIds": [
         "268691cd-719a-5243-a758-d205cfbe90cb",
         "5FD518A0-2202-5313-83AD-7D49AE9D915F",
+        "2521ac27-0a45-5dbd-84be-4eff7aa65133",
         "c933fed3-eb24-5319-87df-7ce498c62100",
         "0378b836-089d-5f9e-8232-8e2e9afe3e09",
         "1BE97272-8B4C-5006-AB11-96DC56A46C92",
         "d17e0a2d-1a53-55bd-bdd3-79b1e036de96",
-        "4A883783-4A4B-5561-8564-49D5652089F2",
-        "68686CC5-B16B-51FF-A983-51BAD53421BE"
+        "4A883783-4A4B-5561-8564-49D5652089F2"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -136137,11 +136147,11 @@
         "e01770af-347d-5f43-a63e-1fa97ce3551d",
         "70a01d74-8edf-5f78-9d8b-a05850c0299a",
         "89443016-9aea-5422-a33a-be72636e89f1",
+        "ad1e75de-62e8-50df-84a0-4fbf77031178",
         "47bc0a50-cd97-5013-9d84-352523ee74e6",
         "b4f87483-ebae-567e-896f-b7b4042ca34a",
         "edc9261f-b648-5b4c-b1b6-609a5f976a5e",
-        "6CD8B760-BD43-567C-97AE-E626351787F4",
-        "12FAAD05-1917-5E7A-B53E-98FCA2D83C70"
+        "6CD8B760-BD43-567C-97AE-E626351787F4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -138882,6 +138892,1655 @@
         "Venue",
         "Food",
         "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "21d9cacc-6eb1-5377-ad13-d5dbd0c4654c",
+      "createdAt": "2026-10-29",
+      "title": "Caffè-Gelateria Pepino",
+      "shortDescription": "The world's first chocolate-covered gelato on a stick was patented in 1939, and the shop that patented it is still trading on the square in…",
+      "longDescription": "The world's first chocolate-covered gelato on a stick was patented in 1939, and the shop that patented it is still trading on the square in front of you.\n\nBegin at the freezer, where small foil-wrapped bars are stacked, because that's the Pinguino — the penguin — a stick of gelato dipped in a hard shell of chocolate. The patent behind it, number 58033, is still part of the shop's own story, it comes in five flavours, and it has quietly become as much a Turin emblem as the bicerin.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-caffe-gelateria-pepino_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-caffe-gelateria-pepino_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-caffe-gelateria-pepino_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-caffe-gelateria-pepino_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-caffe-gelateria-pepino_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4a5101a3-3f64-5858-957d-a01e6556450d",
+          "order": 0,
+          "title": "Caffè-Gelateria Pepino",
+          "caption": "At number 8 Piazza Carignano, facing the curving brick front of Palazzo Carignano.",
+          "latitude": 45.069237734028796,
+          "longitude": 7.684635622090184,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-caffe-gelateria-pepino.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-caffe-gelateria-pepino_hero.webp",
+          "transcriptText": "The world's first chocolate-covered gelato on a stick was patented in 1939, and the shop that patented it is still trading on the square in front of you.\n\nThe brick palace curving along one side of the square is Palazzo Carignano, and Pepino sits directly opposite it at number eight, with its tables set out on the cobbles and its windows full of cones. The Teatro Carignano is right next door, which is why the after-show crowd has been wandering in here for generations.\n\nBegin at the freezer, where small foil-wrapped bars are stacked, because that's the Pinguino — the penguin — a stick of gelato dipped in a hard shell of chocolate. The patent behind it, number 58033, is still part of the shop's own story, it comes in five flavours, and it has quietly become as much a Turin emblem as the bicerin.\n\nStep inside next and have a look at the room itself, with its wood panelling, its mirrors and its velvet seats, all very much of the early twentieth century. The business goes back to 1884, when Domenico Pepino brought what he called true Neapolitan gelato north to Turin; in 1916 he sold the name and the recipes, the Cavagnino family has looked after them ever since, and the shop has stood on this square since 1929.\n\nThere's a pleasing contrast in all of this, because Palazzo Carignano is where the Kingdom of Italy was proclaimed in 1861, so the square was built for very large ideas — and yet what most people carry away from it is a penguin on a stick. That's a rather Italian arrangement: grand history on one side, serious gelato on the other, and nobody asked to choose.\n\nIf you take your Pinguino for a walk, follow the curve of that brick facade to the end of the palace and round onto Piazza Carlo Alberto, where the same building wears a completely different, far more formal face."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 123,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.069237734028796,
+      "centroidLongitude": 7.684635622090184,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "7419a796-822c-562c-aef9-00474ae31b92",
+        "5e03d190-77dd-5e59-9348-1010cb412f63",
+        "6fbbe02e-cd3f-54b0-8611-e997b9bc5689",
+        "b9df2310-90b6-575e-a6c6-3a8b26839594",
+        "b77aa43b-70d5-5f5a-9a40-c774615f6a2c",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5e03d190-77dd-5e59-9348-1010cb412f63",
+      "createdAt": "2026-10-29",
+      "title": "Caffè Mulassano",
+      "shortDescription": "The tramezzino — that soft, crustless sandwich sold in practically every bar in Italy — was invented in a room smaller than a decent hotel…",
+      "longDescription": "The tramezzino — that soft, crustless sandwich sold in practically every bar in Italy — was invented in a room smaller than a decent hotel suite, and you're about to look inside it.\n\nPeer through the glass at the interior, which is about thirty-one square metres in all. An engineer named Antonio Vandone fitted it out in marble, bronze and carved wood, then lined it with mirrors so that the tiny space seems to repeat itself in every direction; it's a trick, and a very elegant one.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-caffe-mulassano_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-caffe-mulassano_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-caffe-mulassano_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2c715a65-79a4-5a01-bd94-f850af9a3f5b",
+          "order": 0,
+          "title": "Caffè Mulassano",
+          "caption": "Under the arcades of Piazza Castello, a few doors from the entrance to the Galleria Subalpina.",
+          "latitude": 45.07004493183511,
+          "longitude": 7.686826222090185,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-caffe-mulassano.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-caffe-mulassano_hero.webp",
+          "transcriptText": "The tramezzino — that soft, crustless sandwich sold in practically every bar in Italy — was invented in a room smaller than a decent hotel suite, and you're about to look inside it.\n\nUnder the arcades on the south-east side of Piazza Castello, a few doors along from the entrance to the Galleria Subalpina, there's a narrow café front with Mulassano written above it. Palazzo Madama is across the square behind you, and through the glass you'll catch the glint of brass, polished wood and a great many mirrors.\n\nPeer through the glass at the interior, which is about thirty-one square metres in all. An engineer named Antonio Vandone fitted it out in marble, bronze and carved wood, then lined it with mirrors so that the tiny space seems to repeat itself in every direction; it's a trick, and a very elegant one.\n\nThe sandwich counter carries the real story, which belongs to Angela Demichelis Nebiolo. She had emigrated to America as a teenager and run restaurants in Detroit with her husband, and after the couple came home and took over this café in 1925, she began serving soft white bread, untoasted and with the crusts cut away, filled with things like butter and anchovies; a brass plaque on the display case records the year as 1926.\n\nThe name came from Gabriele D'Annunzio, the poet and a regular here, who wanted an Italian word for what was essentially an American idea, and he settled on tramezzino, roughly a little something in between.\n\nWhat lingers, standing here, is how much of a nation's everyday habit can begin in one small room, since the sandwich went everywhere, the name went everywhere, and the room stayed exactly the size it was.\n\nMulassano makes more than thirty kinds now, including lobster, truffle and bagna cauda, so go in and order at the counter like a regular. Afterwards, slip next door into the Galleria Subalpina, where the glass roof turns the light silvery even on a grey afternoon."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.07004493183511,
+      "centroidLongitude": 7.686826222090185,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "b9df2310-90b6-575e-a6c6-3a8b26839594",
+        "21d9cacc-6eb1-5377-ad13-d5dbd0c4654c",
+        "6fbbe02e-cd3f-54b0-8611-e997b9bc5689",
+        "99646b99-6159-56e5-bba3-de0670a1810d",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "7419a796-822c-562c-aef9-00474ae31b92",
+        "e16e6d26-40e9-5d13-9903-6e7890b91d10",
+        "1e32bae4-e0f0-569f-b46a-a5f27db9f611"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b9df2310-90b6-575e-a6c6-3a8b26839594",
+      "createdAt": "2026-10-29",
+      "title": "Caffè Platti",
+      "shortDescription": "On the first of November 1897, a group of schoolboys from the nearby D'Azeglio high school decided to start a football club, and the story goes…",
+      "longDescription": "On the first of November 1897, a group of schoolboys from the nearby D'Azeglio high school decided to start a football club, and the story goes that they did it right in front of these windows; the club became Juventus.\n\nTake a good look at the furnishings, because many of them have been here for generations. The café opened in 1875 as a liquor shop called Principe Umberto, and the brothers Ernesto and Pietro Platti turned it into the room you can see now; much of the furniture is original Louis the Sixteenth style by the Turin firm Valabrega, and the inlaid wooden counter dates from the nineteen twenties.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-caffe-platti_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-caffe-platti_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-caffe-platti_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-caffe-platti_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-caffe-platti_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1af86a58-7d0e-5b88-852f-1aa82235ac38",
+          "order": 0,
+          "title": "Caffè Platti",
+          "caption": "On the corner of Corso Vittorio Emanuele II and Corso Re Umberto, under the gold lettering.",
+          "latitude": 45.06477635764646,
+          "longitude": 7.674482735581962,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-caffe-platti.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-caffe-platti_hero.webp",
+          "transcriptText": "On the first of November 1897, a group of schoolboys from the nearby D'Azeglio high school decided to start a football club, and the story goes that they did it right in front of these windows; the club became Juventus.\n\nTwo broad avenues meet at this corner — Corso Vittorio Emanuele the Second and Corso Re Umberto — and Platti occupies the angle between them, with its name in gold above long windows. Through the glass you'll be able to make out chandeliers, mirrors and a long wooden counter.\n\nTake a good look at the furnishings, because many of them have been here for generations. The café opened in 1875 as a liquor shop called Principe Umberto, and the brothers Ernesto and Pietro Platti turned it into the room you can see now; much of the furniture is original Louis the Sixteenth style by the Turin firm Valabrega, and the inlaid wooden counter dates from the nineteen twenties.\n\nPicture, too, the people who used to sit at these tables. The writer Cesare Pavese met the publisher Giulio Einaudi here, the economist Luigi Einaudi, later President of Italy, was a customer, and so was the industrialist Giovanni Agnelli, which makes this corner a fair snapshot of twentieth-century Turin: books, money, cars and, out on the pavement, football.\n\nHere's what strikes me about Platti: it grew up alongside the institutions people now associate with this city, and it never needed to shout about it. The chandeliers and the counter did the talking, and they still do, a hundred and fifty years on.\n\nGo in for the house cake, the Torta Plattina, or one of the soft tramezzini made fresh each day. Then take a stroll along Corso Re Umberto, where trees line the avenue, and imagine those schoolboys arguing over what colour their shirts should be."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.06477635764646,
+      "centroidLongitude": 7.674482735581962,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "5e03d190-77dd-5e59-9348-1010cb412f63",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "6fbbe02e-cd3f-54b0-8611-e997b9bc5689",
+        "21d9cacc-6eb1-5377-ad13-d5dbd0c4654c",
+        "1e32bae4-e0f0-569f-b46a-a5f27db9f611",
+        "ce9726a5-3c7a-58cf-bd88-75eccb2bcadc",
+        "0186db17-6a40-54f0-a461-c7760b19dcda",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Literature"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ad1e75de-62e8-50df-84a0-4fbf77031178",
+      "createdAt": "2026-10-29",
+      "title": "Casa Mollino",
+      "shortDescription": "Carlo Mollino spent eight years designing an apartment in this building, filled it with his own furniture and symbols, and then, as far as…",
+      "longDescription": "Carlo Mollino spent eight years designing an apartment in this building, filled it with his own furniture and symbols, and then, as far as anyone knows, never lived in it.\n\nIt's worth turning first to that view across the water. Mollino — architect, designer, photographer, racing driver and skier — reworked the flat between 1960 and 1968, and he chose rooms that face the river and the green hill opposite, which matters once you know what he had in mind.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-casa-mollino_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-casa-mollino_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-casa-mollino_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ec5a25ca-c2ac-5f58-a043-b034e083cef0",
+          "order": 0,
+          "title": "Casa Mollino",
+          "caption": "At the street door on Via Napione, close to the river, below the villa's tall upper windows.",
+          "latitude": 45.06625001982473,
+          "longitude": 7.6994893914015945,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-casa-mollino.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-casa-mollino_hero.webp",
+          "transcriptText": "Carlo Mollino spent eight years designing an apartment in this building, filled it with his own furniture and symbols, and then, as far as anyone knows, never lived in it.\n\nOn Via Napione, close to where it meets the river, stands a late nineteenth-century villa built in 1888 in a French style, with tall upper windows looking straight out over the Po. Behind those windows, on one floor of the villa, is the apartment that became Museo Casa Mollino, and the street door here is the way in for visitors.\n\nIt's worth turning first to that view across the water. Mollino — architect, designer, photographer, racing driver and skier — reworked the flat between 1960 and 1968, and he chose rooms that face the river and the green hill opposite, which matters once you know what he had in mind.\n\nThe interior, which you can only see on a booked visit, is full of references to ancient Egypt and to the passage from this life to the next. There's a nineteenth-century bed shaped like a boat, the vessel that carries the soul onward; there's an oval table that recalls a funerary monument, and the walls carry painted butterflies, an old symbol of resurrection.\n\nThe surprising part is that this isn't really a home at all, but something closer to a private tomb in the Egyptian sense, a house prepared for an afterlife. The man who now runs it, Fulvio Ferrari, describes it as Mollino's final thesis on existence, and so the city with the great Egyptian Museum ended up with a quietly Egyptian apartment as well.\n\nVisits are by appointment only, in small groups of about six, and they last around two hours, so it's worth booking ahead. Whether or not you go in, walk down to the embankment and look back up at those windows, because that was the view Mollino designed for."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.06625001982473,
+      "centroidLongitude": 7.6994893914015945,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "e16e6d26-40e9-5d13-9903-6e7890b91d10",
+        "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "041846a5-bcfa-5472-99c8-a0ef4444fad0",
+        "ca8653b9-d853-5818-b9ef-e6ca04c3c2b4",
+        "b77aa43b-70d5-5f5a-9a40-c774615f6a2c",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "7e98950e-dc6e-5d54-b121-83d4a11e185c"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Architecture",
+        "Art",
+        "Modernist",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Carlo Mollino"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "99646b99-6159-56e5-bba3-de0670a1810d",
+      "createdAt": "2026-10-29",
+      "title": "Casa Scaccabarozzi",
+      "shortDescription": "The building in front of you is nine floors tall, and at its narrowest point it measures just fifty-four centimetres across.",
+      "longDescription": "The building in front of you is nine floors tall, and at its narrowest point it measures just fifty-four centimetres across.\n\nLook closely at that narrow end, because it explains the nickname. Turin calls this the Fetta di Polenta, the slice of polenta, for its colour and its shape; it widens to just over four metres at the far end, and it runs sixteen metres along Via Giulia di Barolo.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-casa-scaccabarozzi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-casa-scaccabarozzi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-casa-scaccabarozzi_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b573cb3c-5dea-50d6-b120-f21dbbed5b2e",
+          "order": 0,
+          "title": "Casa Scaccabarozzi",
+          "caption": "At the corner of Corso San Maurizio and Via Giulia di Barolo, facing the block's narrow end.",
+          "latitude": 45.067919982702605,
+          "longitude": 7.696903177909816,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-casa-scaccabarozzi.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-casa-scaccabarozzi_hero.webp",
+          "transcriptText": "The building in front of you is nine floors tall, and at its narrowest point it measures just fifty-four centimetres across.\n\nFind the corner of Corso San Maurizio and Via Giulia di Barolo, in the Vanchiglia neighbourhood, and face the narrow end of the tall, pale yellow block standing there, so that the whole thing tapers away from you like a wedge sliced off the end of the street.\n\nLook closely at that narrow end, because it explains the nickname. Turin calls this the Fetta di Polenta, the slice of polenta, for its colour and its shape; it widens to just over four metres at the far end, and it runs sixteen metres along Via Giulia di Barolo.\n\nNow lift your eyes up the facade to the roofline. The architect was Alessandro Antonelli, the man who built the Mole, and he was given this awkward triangle of land as part of his payment for planning the Vanchiglia district in the eighteen forties. Unable to buy the plot next door, he simply went upwards, starting in 1840 and adding the top floor in 1881, until he had seven storeys above ground and two below.\n\nThe building's official name honours his wife, Francesca Scaccabarozzi, and it's said that Antonelli moved in himself to convince doubtful neighbours that it wouldn't fall down, which it never has; it came through the explosion of the gunpowder store in Borgo Dora in 1852, the earthquake of 1887 and the bombing of the Second World War without serious damage.\n\nAntonelli spent his career treating limits as a dare, and this is the Mole's instinct turned sideways: one building shot up into the sky, while this one squeezed a whole house into a sliver of leftover land.\n\nIt's a private home, so admire it from the pavement. Then head a few streets west along Corso San Maurizio, watching for the spire of the Mole rising over the rooftops, the bigger sibling of the slice you've just seen."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.067919982702605,
+      "centroidLongitude": 7.696903177909816,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "8e99b116-dbf1-54e7-bbc6-fe2be54cca3b",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "23d0d7f7-a546-5c29-ba11-ac3a39370ede",
+        "52d67632-abb5-51a6-911a-5c0184f7e461",
+        "041846a5-bcfa-5472-99c8-a0ef4444fad0",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "5e03d190-77dd-5e59-9348-1010cb412f63",
+        "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Engineering",
+        "Free to Visit",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Alessandro Antonelli"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "bef3180f-0f10-59df-803d-416b00e8fb93",
+      "createdAt": "2026-10-29",
+      "title": "Balôn Flea Market | Mercato del Balôn",
+      "shortDescription": "People have been buying and selling second-hand things in these streets, on and off, since 1857, which makes the Balôn one of the oldest flea…",
+      "longDescription": "People have been buying and selling second-hand things in these streets, on and off, since 1857, which makes the Balôn one of the oldest flea markets in Italy.\n\nGlance first at the shops behind the stalls, because there are around fifty permanent ones in these few streets — Via Borgo Dora, Via Lanino, Via Mameli and Via Canale Molassi among them — and they're the reason the neighbourhood smells faintly of beeswax and old paper even on a weekday.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-balon_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-balon_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-balon_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-balon_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-balon_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b3ece06e-17a4-567a-8c1a-e80b5ce11f5c",
+          "order": 0,
+          "title": "Balôn Flea Market | Mercato del Balôn",
+          "caption": "On Via Borgo Dora, among the stalls and dealers' shops running down towards the Cortile del Maglio.",
+          "latitude": 45.0799076257148,
+          "longitude": 7.682934877909815,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-balon.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-balon_hero.webp",
+          "transcriptText": "People have been buying and selling second-hand things in these streets, on and off, since 1857, which makes the Balôn one of the oldest flea markets in Italy.\n\nVia Borgo Dora runs downhill here from the Porta Palazzo end towards the river, and on a Saturday it's lined with stalls, awnings and shopfronts piled with furniture, lamps, frames and boxes of old postcards. Off to one side is the Cortile del Maglio, a large covered courtyard where more dealers set up under a high roof.\n\nGlance first at the shops behind the stalls, because there are around fifty permanent ones in these few streets — Via Borgo Dora, Via Lanino, Via Mameli and Via Canale Molassi among them — and they're the reason the neighbourhood smells faintly of beeswax and old paper even on a weekday.\n\nOn a Saturday the stalls themselves take over, with something like two hundred and fifty to three hundred sellers: serious antique dealers, vintage specialists, house-clearance traders and craftspeople. The joy of it is that a silver teapot and a box of mismatched forks can end up on the same table.\n\nThe second Sunday of every month brings the Gran Balôn, a bigger gathering of more than two hundred and fifty antique dealers and artisans, and the dealers will tell you that the serious collectors arrive early.\n\nOver the years the market has grown so famous that its name has almost swallowed the neighbourhood, and plenty of people in Turin say they're going to the Balôn rather than to Borgo Dora. That tells you something about how a weekly habit, kept up for long enough, can quietly redraw a map.\n\nFollow Via Borgo Dora down to the Cortile del Maglio and wander through it, then climb back uphill to Porta Palazzo, the enormous food market at the top of the street, for a coffee among the fruit stalls."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.0799076257148,
+      "centroidLongitude": 7.682934877909815,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "0186db17-6a40-54f0-a461-c7760b19dcda",
+        "ca8653b9-d853-5818-b9ef-e6ca04c3c2b4",
+        "2521ac27-0a45-5dbd-84be-4eff7aa65133",
+        "f0840caa-0844-5cc4-8db0-13f511bf22d5",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+        "1e32bae4-e0f0-569f-b46a-a5f27db9f611",
+        "2651ed20-51a2-5890-8cfe-c83dbddc5dce"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "District",
+        "Commerce",
+        "History",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6fbbe02e-cd3f-54b0-8611-e997b9bc5689",
+      "createdAt": "2026-10-29",
+      "title": "Ferrero1947",
+      "shortDescription": "The name over this door has nothing at all to do with chocolate hazelnut spread, which is the first thing worth clearing up.",
+      "longDescription": "The name over this door has nothing at all to do with chocolate hazelnut spread, which is the first thing worth clearing up.\n\nTake in those windows for a moment, because they show what the shop is really about. Ferrero1947 is a furniture and interior design business, founded in 1947 and still carrying the family name, and it deals in contemporary Italian and international design; it's a stockist for Cappellini, one of the Italian names that helped turn modern furniture into something people collect.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-ferrero1947_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-ferrero1947_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-ferrero1947_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-ferrero1947_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-ferrero1947_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "dfa7571e-fbcb-5c28-baa3-d2aceb984b7c",
+          "order": 0,
+          "title": "Ferrero1947",
+          "caption": "Outside number 15 Corso Matteotti, by the showroom windows set out like rooms.",
+          "latitude": 45.06602426505616,
+          "longitude": 7.675523664418037,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-ferrero1947.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-ferrero1947_hero.webp",
+          "transcriptText": "The name over this door has nothing at all to do with chocolate hazelnut spread, which is the first thing worth clearing up.\n\nStop outside number fifteen on Corso Matteotti, a broad avenue in the centre of town, where a showroom with Ferrero1947 above the door has big windows full of chairs, tables, sofas and lamps, arranged more like rooms than displays.\n\nTake in those windows for a moment, because they show what the shop is really about. Ferrero1947 is a furniture and interior design business, founded in 1947 and still carrying the family name, and it deals in contemporary Italian and international design; it's a stockist for Cappellini, one of the Italian names that helped turn modern furniture into something people collect.\n\nLook out, too, for pieces that don't come from the big brands. Since 2015 the shop has been designing and producing its own furniture collection, led by the designer Luca Montrucchio, so some of what's in front of you was conceived close to here rather than in a factory catalogue.\n\nAnd here's the reason the name is worth a second thought. Ferrero the confectioner started in Alba in the nineteen forties too, and visitors understandably assume this is a chocolate shop, but this Ferrero has spent nearly eighty years selling something else entirely: the idea that a sofa or a lamp can carry as much care and invention as anything you'd find in a gallery. It's a very Turin story, in its way, because this is a city that has long been as proud of its designers and engineers as of its sweets.\n\nIf you fancy more of the same, Turin's design shops are dotted all through the centre, and the streets around Piazza Solferino are a good place to keep looking; that broad square is only a short walk away."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.06602426505616,
+      "centroidLongitude": 7.675523664418037,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "7419a796-822c-562c-aef9-00474ae31b92",
+        "b9df2310-90b6-575e-a6c6-3a8b26839594",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+        "21d9cacc-6eb1-5377-ad13-d5dbd0c4654c",
+        "1c90f99e-c6d0-5210-ad52-142328d6ab07",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "2521ac27-0a45-5dbd-84be-4eff7aa65133",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "697d709c-8316-538b-8445-ae55ffd65b10",
+      "createdAt": "2026-10-29",
+      "title": "Floris House",
+      "shortDescription": "There's no big shop sign on the outside of this place, and that's quite deliberate, because the surprise is meant to happen once you're through…",
+      "longDescription": "There's no big shop sign on the outside of this place, and that's quite deliberate, because the surprise is meant to happen once you're through the door.\n\nThe shop floor comes first, and it's part perfumery and part home store, with creams and make-up, scented candles, silk flowers and fresh ones, and objects for the house, gathered from big beauty names like Laura Mercier as well as small artisan producers such as Officina delle Spezie. Everything is arranged in bright clusters, so the room feels less like a shop and more like a conservatory that someone has filled with presents.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-floris-house_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5862afc5-cf02-574c-a8d2-76b50f4a7793",
+          "order": 0,
+          "title": "Floris House",
+          "caption": "At the discreet stone doorway of a nineteenth-century palazzo in the historic centre.",
+          "latitude": 45.070402039375196,
+          "longitude": 7.68450023558196,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-floris-house.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-floris-house_hero.webp",
+          "transcriptText": "There's no big shop sign on the outside of this place, and that's quite deliberate, because the surprise is meant to happen once you're through the door.\n\nFloris House is set into a late nineteenth-century palazzo in the historic centre, and from the street you'll see a handsome stone frontage, tall windows and a doorway that gives very little away; only when you step inside does the colour start.\n\nThe shop floor comes first, and it's part perfumery and part home store, with creams and make-up, scented candles, silk flowers and fresh ones, and objects for the house, gathered from big beauty names like Laura Mercier as well as small artisan producers such as Officina delle Spezie. Everything is arranged in bright clusters, so the room feels less like a shop and more like a conservatory that someone has filled with presents.\n\nFurther in, you'll find the café, which lives in a room lined with mirrors. It serves breakfast, tea and light meals through the day, and the mirrors do what mirrors in Turin's cafés have always done, which is to double the light and make a modest room feel generous.\n\nThe clever thing about Floris House is that it's built for lingering. It mixes scent, flowers, food and furniture so that buying something becomes almost incidental, and in a city famous for its historic cafés it offers a modern version of the same old pleasure: a beautiful room where you can sit for rather longer than you meant to.\n\nFloris House closes on Mondays, so plan around that. When you come out, wander towards Piazza Carignano, a few minutes away, where Turin's grandest brick palace and its oldest gelato shop face each other across the cobbles, and where a Pinguino makes a fine follow-up to afternoon tea."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.070402039375196,
+      "centroidLongitude": 7.68450023558196,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+        "e16e6d26-40e9-5d13-9903-6e7890b91d10",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "2521ac27-0a45-5dbd-84be-4eff7aa65133",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "0186db17-6a40-54f0-a461-c7760b19dcda",
+        "2651ed20-51a2-5890-8cfe-c83dbddc5dce",
+        "ad1e75de-62e8-50df-84a0-4fbf77031178"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "041846a5-bcfa-5472-99c8-a0ef4444fad0",
+      "createdAt": "2026-10-29",
+      "title": "Sandretto Re Rebaudengo Foundation | Fondazione Sandretto Re Rebaudengo",
+      "shortDescription": "Some of the most adventurous contemporary art in Italy is shown in a quiet residential street on the western side of Turin, a long way from the…",
+      "longDescription": "Some of the most adventurous contemporary art in Italy is shown in a quiet residential street on the western side of Turin, a long way from the baroque squares most visitors stick to.\n\nThe building deserves a proper look before you go in. The architect Claudio Silvestrin designed it, and it opened in 2002 in a district that grew up around Turin's factories; the plainness is the point, because the rooms are meant to step back and let whatever is being shown take over.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-fondazione-sandretto-re-rebaudengo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-fondazione-sandretto-re-rebaudengo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-fondazione-sandretto-re-rebaudengo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-fondazione-sandretto-re-rebaudengo_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d8013b55-8cef-5bd0-9fd8-3ce6c702160f",
+          "order": 0,
+          "title": "Sandretto Re Rebaudengo Foundation | Fondazione Sandretto Re Rebaudengo",
+          "caption": "At number 16 Via Modane in Borgo San Paolo, before the long, low, plain building.",
+          "latitude": 45.05767085726737,
+          "longitude": 7.652398896959145,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-fondazione-sandretto-re-rebaudengo.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-fondazione-sandretto-re-rebaudengo_hero.webp",
+          "transcriptText": "Some of the most adventurous contemporary art in Italy is shown in a quiet residential street on the western side of Turin, a long way from the baroque squares most visitors stick to.\n\nOut here in Borgo San Paolo, an old working neighbourhood, Via Modane is lined with apartment blocks, and at number sixteen the Fondazione Sandretto Re Rebaudengo stands apart from them as a long, low, deliberately plain building with very little decoration at all. The entrance is at street level, and there's a café and bookshop inside.\n\nThe building deserves a proper look before you go in. The architect Claudio Silvestrin designed it, and it opened in 2002 in a district that grew up around Turin's factories; the plainness is the point, because the rooms are meant to step back and let whatever is being shown take over.\n\nBehind the collection is one person's eye: Patrizia Sandretto Re Rebaudengo began collecting in 1992 and set up the foundation in 1995, and she has tended to buy the work of artists early, often while they were still young and largely unknown, working directly with them rather than through the safer routes of the market.\n\nThe foundation also runs a strong education programme, with mediators in the galleries whose job is to talk with visitors about the work, and that's free during exhibitions.\n\nWhat makes this place matter is its choice of address. It could easily have taken a palazzo in the centre, and instead it planted itself in a neighbourhood shaped by industry, which says something clear about who contemporary art is meant to be for.\n\nExhibitions change through the year and the opening days are limited, so check what's on before making the trip. Once you're out here, walk the surrounding streets of Borgo San Paolo, where traces of the old workshops and factory buildings still give the district its character."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.05767085726737,
+      "centroidLongitude": 7.652398896959145,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "ad1e75de-62e8-50df-84a0-4fbf77031178",
+        "f0840caa-0844-5cc4-8db0-13f511bf22d5",
+        "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "697d709c-8316-538b-8445-ae55ffd65b10"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Contemporary",
+        "Designed by a Master",
+        "Claudio Silvestrin"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f0840caa-0844-5cc4-8db0-13f511bf22d5",
+      "createdAt": "2026-10-29",
+      "title": "Galleria Gilibert",
+      "shortDescription": "Walk through this door and you leave the twenty-first century more or less behind, because the walls inside are covered almost to the ceiling…",
+      "longDescription": "Walk through this door and you leave the twenty-first century more or less behind, because the walls inside are covered almost to the ceiling with old maps and prints.\n\nYour eye will go straight to the walls, where prints and maps hang in close rows: framed views of cities and mountains, and the occasional botanical plate. The bookcases below are dark wood and properly old, which gives the whole room the feel of a library in a Victorian novel.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-galleria-gilibert_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-galleria-gilibert_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c460a02b-2ba7-5228-81bb-96c068fd11d6",
+          "order": 0,
+          "title": "Galleria Gilibert",
+          "caption": "Inside the Galleria Subalpina at number 17, by the dark wood and old glass shopfront.",
+          "latitude": 45.069385533627134,
+          "longitude": 7.68663485092626,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-galleria-gilibert.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-galleria-gilibert_hero.webp",
+          "transcriptText": "Walk through this door and you leave the twenty-first century more or less behind, because the walls inside are covered almost to the ceiling with old maps and prints.\n\nInside the Galleria Subalpina, the covered arcade linking Piazza Castello with Piazza Carlo Alberto, look for number seventeen, where a shopfront of dark wood and old glass belongs to Galleria Gilibert, an antiquarian bookshop. Position yourself so you can see in through the window, with the arcade's iron and glass roof above you.\n\nYour eye will go straight to the walls, where prints and maps hang in close rows: framed views of cities and mountains, and the occasional botanical plate. The bookcases below are dark wood and properly old, which gives the whole room the feel of a library in a Victorian novel.\n\nThe shelves reveal a shop with particular passions. Alfredo Gilibert, a lifelong collector, opened it in 1992 with his son Massimo, who runs it today, and alongside European literature they specialise in local history, art, gastronomy and mountaineering — an unusually Turinese mix, in a city that can see the Alps from the end of its streets.\n\nThere's also an upstairs room where they hold book launches, talks and small exhibitions, so the shop works as a gathering place as well as a store.\n\nGilibert's real charm lies in how personal it feels. Much of what's here began as one family's collecting habit, and the shop has the slightly obsessive quality of a private library opened to the public, the kind of place where the person behind the desk can tell you exactly why a particular map is worth your attention.\n\nOn your way out, walk the length of the arcade and look up at that glass roof. At the far end, close to Piazza Carlo Alberto, a much bigger international bookshop has a door opening onto the arcade, if one bookshop simply isn't enough."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.069385533627134,
+      "centroidLongitude": 7.68663485092626,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "ca8653b9-d853-5818-b9ef-e6ca04c3c2b4",
+        "041846a5-bcfa-5472-99c8-a0ef4444fad0",
+        "2521ac27-0a45-5dbd-84be-4eff7aa65133",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "ce9726a5-3c7a-58cf-bd88-75eccb2bcadc"
+      ],
+      "primaryCategory": "literature",
+      "tags": [
+        "Venue",
+        "Literature",
+        "Commerce",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e16e6d26-40e9-5d13-9903-6e7890b91d10",
+      "createdAt": "2026-10-29",
+      "title": "Hotel Victoria",
+      "shortDescription": "It's 1961, and on a quiet side street a few minutes from Turin's grand squares, a small hotel opens with an unusual ambition: to feel like a…",
+      "longDescription": "It's 1961, and on a quiet side street a few minutes from Turin's grand squares, a small hotel opens with an unusual ambition: to feel like a Victorian English house that has wandered somewhere sunnier.\n\nThe lobby and the sitting rooms off it set the tone. The owners, Mia Rolla and Riccardo Vallinotto, have filled them with what they love — Victorian comfort, French and Italian art, and touches borrowed from colonial interiors — so there are deep sofas, floral fabrics, oriental pieces and books left out for guests, and each room has its own decorative theme.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-hotel-victoria_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-hotel-victoria_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-hotel-victoria_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-hotel-victoria_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-hotel-victoria_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5ee7130d-3fc3-5585-8343-fc25f90b5c65",
+          "order": 0,
+          "title": "Hotel Victoria",
+          "caption": "On the far pavement of quiet Via Nino Costa, facing the frontage of number 4.",
+          "latitude": 45.06521392277764,
+          "longitude": 7.685588785075783,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-hotel-victoria.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-hotel-victoria_hero.webp",
+          "transcriptText": "It's 1961, and on a quiet side street a few minutes from Turin's grand squares, a small hotel opens with an unusual ambition: to feel like a Victorian English house that has wandered somewhere sunnier.\n\nCross to the far pavement of Via Nino Costa, a short and peaceful street, and face number four, where Hotel Victoria has a frontage that looks more like a private residence than a hotel. Through the door you'll glimpse the lobby, all warm colours and soft lamplight.\n\nThe lobby and the sitting rooms off it set the tone. The owners, Mia Rolla and Riccardo Vallinotto, have filled them with what they love — Victorian comfort, French and Italian art, and touches borrowed from colonial interiors — so there are deep sofas, floral fabrics, oriental pieces and books left out for guests, and each room has its own decorative theme.\n\nPicture next the breakfast room, which is designed as an indoor winter garden. Its showpiece is a historic panel of Zuber wallpaper, one of the French scenic papers printed from carved wooden blocks that were once the height of fashion in grand houses.\n\nDownstairs is the third surprise, the Iside Spa, named after the Egyptian goddess Isis as a nod to the Egyptian Museum nearby, with a heated pool long enough to swim proper lengths in, which is a rarity in a city-centre hotel.\n\nThe idea that ties all this together is that a hotel can be a collection rather than a product. Nothing here comes from a corporate design manual; it's the accumulated taste of particular people, and that has become rather unusual in the world of hotels.\n\nFrom the door, it's a short walk to Via Lagrange, one of the city's elegant pedestrian shopping streets, and from there the Egyptian Museum that inspired the spa is only a few minutes further north."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.06521392277764,
+      "centroidLongitude": 7.685588785075783,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "ad1e75de-62e8-50df-84a0-4fbf77031178",
+        "ca8653b9-d853-5818-b9ef-e6ca04c3c2b4",
+        "52d67632-abb5-51a6-911a-5c0184f7e461",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Art",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "23d0d7f7-a546-5c29-ba11-ac3a39370ede",
+      "createdAt": "2026-10-29",
+      "title": "Intesa Sanpaolo Skyscraper | Grattacielo Intesa Sanpaolo",
+      "shortDescription": "This tower is a hundred and sixty-six metres tall, and that number was very carefully judged, because the Mole Antonelliana, the symbol of the…",
+      "longDescription": "This tower is a hundred and sixty-six metres tall, and that number was very carefully judged, because the Mole Antonelliana, the symbol of the city, stands at a hundred and sixty-seven.\n\nLook first at those broad faces, which have a double skin of glass with rows of glass louvres inside it that open and close according to the weather outside, letting the building breathe rather than relying entirely on air conditioning; the south face, meanwhile, carries around sixteen hundred square metres of solar panels.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-intesa-sanpaolo-skyscraper_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-intesa-sanpaolo-skyscraper_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-intesa-sanpaolo-skyscraper_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-intesa-sanpaolo-skyscraper_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-intesa-sanpaolo-skyscraper_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0031e1c0-bfcd-5693-8c5c-627817cdfcfe",
+          "order": 0,
+          "title": "Intesa Sanpaolo Skyscraper | Grattacielo Intesa Sanpaolo",
+          "caption": "On the raised plaza beside Corso Inghilterra, with Porta Susa station's glass roof to the north-east.",
+          "latitude": 45.069811655265674,
+          "longitude": 7.662868322090186,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-intesa-sanpaolo-skyscraper.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-intesa-sanpaolo-skyscraper_hero.webp",
+          "transcriptText": "This tower is a hundred and sixty-six metres tall, and that number was very carefully judged, because the Mole Antonelliana, the symbol of the city, stands at a hundred and sixty-seven.\n\nThe glass tower rising from the raised plaza beside Corso Inghilterra is the one you want, with the curved glass roof of Porta Susa station just to the north-east and the tower's broad faces turned east and west. Right at the top you can make out a crown of glass and green, and that's a greenhouse.\n\nLook first at those broad faces, which have a double skin of glass with rows of glass louvres inside it that open and close according to the weather outside, letting the building breathe rather than relying entirely on air conditioning; the south face, meanwhile, carries around sixteen hundred square metres of solar panels.\n\nRaise your eyes to the summit, where the upper three floors form a bioclimatic greenhouse, a garden in the sky, with a restaurant on the thirty-fifth floor, exhibition space above it and a panoramic terrace at the very top that looks out to the Alps on clear days.\n\nDown at the base sits the auditorium, which seats three hundred and sixty-four people and can be rearranged into a concert hall or an exhibition space.\n\nRenzo Piano's studio won the competition in 2006 and finished the building in 2015, and its gentle deference to the Mole is the most telling thing about it. A bank's headquarters could easily have tried to dominate the skyline; instead, it stops just short and lets the nineteenth-century landmark keep the crown.\n\nIf you'd like to see that greenhouse up close, the restaurant and lounge bar at the top can be booked. Otherwise, walk round the plaza to the far side and look up the full height of the glass, where the louvres catch the light."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.069811655265674,
+      "centroidLongitude": 7.662868322090186,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "52d67632-abb5-51a6-911a-5c0184f7e461",
+        "99646b99-6159-56e5-bba3-de0670a1810d",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "8e99b116-dbf1-54e7-bbc6-fe2be54cca3b",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "e16e6d26-40e9-5d13-9903-6e7890b91d10",
+        "0186db17-6a40-54f0-a461-c7760b19dcda",
+        "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Engineering",
+        "Contemporary",
+        "Viewpoint",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Renzo Piano"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "668f0e85-d032-57a2-b906-1654caf1f6c2",
+      "createdAt": "2026-10-29",
+      "title": "Libreria Internazionale Luxemburg",
+      "shortDescription": "This bookshop has been selling books in Turin since 1872, and in January 2025 it moved house, about fifty metres down the street.",
+      "longDescription": "This bookshop has been selling books in Turin since 1872, and in January 2025 it moved house, about fifty metres down the street.\n\nThe history is the place to begin, because the shop started life as the Libreria Beuf, a Turin branch of a Genoa bookseller, and later became the Luxemburg, an international bookshop where you could find newspapers and novels from across Europe. Antonio Pittarelli and Gigi Ràiola have run it since 2002.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-libreria-internazionale-luxemburg_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-libreria-internazionale-luxemburg_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "090a7c61-c023-5254-84f1-dc397f1ec318",
+          "order": 0,
+          "title": "Libreria Internazionale Luxemburg",
+          "caption": "At the corner of Via Accademia delle Scienze and Via Cesare Battisti, by the windows of books.",
+          "latitude": 45.069483510608805,
+          "longitude": 7.686339979762333,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-libreria-internazionale-luxemburg.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-libreria-internazionale-luxemburg_hero.webp",
+          "transcriptText": "This bookshop has been selling books in Turin since 1872, and in January 2025 it moved house, about fifty metres down the street.\n\nAt the corner of Via Accademia delle Scienze and Via Cesare Battisti, the Libreria Internazionale Luxemburg has two entrances: one on Via Battisti, and another opening straight into the Galleria Subalpina, the arcade beside it. From the corner you'll see the windows stacked with books in several languages.\n\nThe history is the place to begin, because the shop started life as the Libreria Beuf, a Turin branch of a Genoa bookseller, and later became the Luxemburg, an international bookshop where you could find newspapers and novels from across Europe. Antonio Pittarelli and Gigi Ràiola have run it since 2002.\n\nStep inside to see the new rooms, where three spaces were joined together, more than two hundred square metres in all, and where the designers Barbara Brondi and Marco Rainò kept the old wooden shelving and set it against exposed brick vaults and dark walls, so the old shop came along and simply got more room.\n\nLook for the counter at the centre, too, because there's a small café now, created with the ceramics firm Mutina and the historic Turin coffee house Baratti and Milano, with a ceramic counter by the designers Ronan and Erwan Bouroullec.\n\nSeen from the street, this is simply a bookshop that moved fifty metres, but seen from inside it's a small piece of the city's civic memory. It helped launch Turin's international book fair, and in the nineteen seventies it was connected with FUORI, one of Italy's first gay rights movements, founded by Angelo Pezzana; art, design and LGBTQ literature remain among its specialities today.\n\nWhen you've finished browsing, take the door into the Galleria Subalpina and walk through towards Piazza Castello. On the way you'll pass an antiquarian bookshop whose walls are hung with old maps, which makes a rather nice pair with this one."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.069483510608805,
+      "centroidLongitude": 7.686339979762333,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "ca8653b9-d853-5818-b9ef-e6ca04c3c2b4",
+        "f0840caa-0844-5cc4-8db0-13f511bf22d5",
+        "b9df2310-90b6-575e-a6c6-3a8b26839594",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6",
+        "7419a796-822c-562c-aef9-00474ae31b92",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70"
+      ],
+      "primaryCategory": "literature",
+      "tags": [
+        "Venue",
+        "Literature",
+        "Commerce",
+        "History",
+        "LGBTQ+"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ca8653b9-d853-5818-b9ef-e6ca04c3c2b4",
+      "createdAt": "2026-10-29",
+      "title": "Libreria L'ibrida Bottega",
+      "shortDescription": "Across the river from the old centre, just past one of Turin's grandest churches, there's a bookshop where the books hang from the ceiling.",
+      "longDescription": "Across the river from the old centre, just past one of Turin's grandest churches, there's a bookshop where the books hang from the ceiling.\n\nLook in through the window and you'll see books and lights suspended from the ceiling on threads, so that the room seems to float, which gives it a gentle, lantern-lit feel once you're inside.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-libreria-librida-bottega_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-libreria-librida-bottega_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-libreria-librida-bottega_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "332bfa4c-9c1b-5eac-a40c-ea9612173738",
+          "order": 0,
+          "title": "Libreria L'ibrida Bottega",
+          "caption": "On Corso Casale at Via Felice Romani in Borgo Po, a few steps from the Gran Madre di Dio.",
+          "latitude": 45.06353317149532,
+          "longitude": 7.699542835581963,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-libreria-librida-bottega.mp3",
+          "audioDurationSeconds": 96,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-libreria-librida-bottega_hero.webp",
+          "transcriptText": "Across the river from the old centre, just past one of Turin's grandest churches, there's a bookshop where the books hang from the ceiling.\n\nOn Corso Casale, where it meets Via Felice Romani in Borgo Po, L'ibrida Bottega has a small shopfront a few steps from the great domed church of the Gran Madre di Dio. Behind you, the bridge leads back across the Po to Piazza Vittorio Veneto, and above you rises the green slope of the hill.\n\nLook in through the window and you'll see books and lights suspended from the ceiling on threads, so that the room seems to float, which gives it a gentle, lantern-lit feel once you're inside.\n\nThe shelves explain the name, which means the hybrid workshop, because the shop mixes books, mostly from independent publishers rather than the bestseller lists, with handmade things: bags, backpacks and jewellery by local makers sit beside the novels and picture books.\n\nThis is also very much a neighbourhood place, with book-crossing shelves where you can leave one book and take another, a vote for the books that changed customers' lives, and readings, small theatre shows and games for children.\n\nWhat a shop like this does, really, is give a neighbourhood a living room. The grand church a few steps away is built for ceremony, while this little bookshop is built for conversation, and Borgo Po is the richer for having both on the same corner.\n\nBefore heading back over the bridge, climb the steps of the Gran Madre and turn round, because the view across the river to Piazza Vittorio and the Mole is one of the best in the city. If you've more energy, the road up the hill behind leads to the Monte dei Cappuccini."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 96,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.06353317149532,
+      "centroidLongitude": 7.699542835581963,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "f0840caa-0844-5cc4-8db0-13f511bf22d5",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+        "e16e6d26-40e9-5d13-9903-6e7890b91d10",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "bef3180f-0f10-59df-803d-416b00e8fb93",
+        "ad1e75de-62e8-50df-84a0-4fbf77031178"
+      ],
+      "primaryCategory": "literature",
+      "tags": [
+        "Venue",
+        "Literature",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+      "createdAt": "2026-10-29",
+      "title": "Madamadorè",
+      "shortDescription": "Behind this shopfront is a quietly old-fashioned trade — dressing a room in fabric — carried on in a city that has always taken its interiors…",
+      "longDescription": "Behind this shopfront is a quietly old-fashioned trade — dressing a room in fabric — carried on in a city that has always taken its interiors seriously.\n\nThe walls and the sample books are the heart of it. Madamadorè specialises in textiles and wallpapers for the home, drawn from high-end makers, and it's one of the Turin stockists of Pierre Frey, the French family firm known for richly patterned fabrics and papers; some of the designs on display are the sort you'd normally see in a chateau or a grand hotel.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-madamadore_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-madamadore_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-madamadore_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2d21b2a5-8ffc-598d-9404-69848009ef21",
+          "order": 0,
+          "title": "Madamadorè",
+          "caption": "At number 43 Via Giolitti, by windows full of fabric swatches and rolls of wallpaper.",
+          "latitude": 45.06413853267377,
+          "longitude": 7.692494013211726,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-madamadore.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-madamadore_hero.webp",
+          "transcriptText": "Behind this shopfront is a quietly old-fashioned trade — dressing a room in fabric — carried on in a city that has always taken its interiors seriously.\n\nMadamadorè's windows, at number forty-three Via Giolitti in the Borgo Nuovo, are full of fabric swatches, rolls of wallpaper and the odd upholstered chair. Stand where you can see in, and you'll notice books of samples piled on the tables inside.\n\nThe walls and the sample books are the heart of it. Madamadorè specialises in textiles and wallpapers for the home, drawn from high-end makers, and it's one of the Turin stockists of Pierre Frey, the French family firm known for richly patterned fabrics and papers; some of the designs on display are the sort you'd normally see in a chateau or a grand hotel.\n\nJust as important is the work that happens around the samples. The showroom collaborates with seamstresses, upholsterers and decorators, so this is a place where you choose a fabric and someone then turns it into curtains, cushions or a recovered sofa.\n\nThat's worth pausing on, because Turin was a royal capital for centuries, and its palaces were lined with silk, damask and painted paper. The skills that kept those rooms looking their best — measuring, cutting, stitching and stretching fabric over a frame — haven't disappeared; they've moved into shops like this one, serving apartments rather than palaces.\n\nSo the real story of Madamadorè isn't fashion at all, but continuity: the same appetite for beautiful rooms that built the royal residences, scaled down to the size of a living room on a Turin side street.\n\nThe showroom is closed on Sundays and Mondays. From the door, wander a few minutes north to Piazza Cavour, a small square with a garden laid out on a gentle mound, and then on towards Via Po, where the long arcades lead down to the river."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.06413853267377,
+      "centroidLongitude": 7.692494013211726,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "1c90f99e-c6d0-5210-ad52-142328d6ab07",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "e16e6d26-40e9-5d13-9903-6e7890b91d10",
+        "2651ed20-51a2-5890-8cfe-c83dbddc5dce",
+        "6fbbe02e-cd3f-54b0-8611-e997b9bc5689",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "ca8653b9-d853-5818-b9ef-e6ca04c3c2b4",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2651ed20-51a2-5890-8cfe-c83dbddc5dce",
+      "createdAt": "2026-10-29",
+      "title": "Marco Polo",
+      "shortDescription": "To find this place you have to know it's there, because it's tucked into the inner courtyard of a Turin palazzo, well away from the shopfronts…",
+      "longDescription": "To find this place you have to know it's there, because it's tucked into the inner courtyard of a Turin palazzo, well away from the shopfronts on the street.\n\nThe furniture and objects make the first impression. The owner, Monica Bruno, opened Marco Polo in January 2016 after years running a consignment business and working the city's markets, and she likes to mix opposites: Chinese vases beside plush sofas, Buddha heads beside high heels, Eames chairs and rattan armchairs on the same floor, and lacquered papier-mâché shelving painted with Chinese motifs.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-marco-polo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-marco-polo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-marco-polo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-marco-polo_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "882475bb-c4d8-5198-b513-2f68c93849b7",
+          "order": 0,
+          "title": "Marco Polo",
+          "caption": "Through the carriage arch of number 86 Corso Vittorio Emanuele II, in the inner courtyard.",
+          "latitude": 45.0661078,
+          "longitude": 7.6703748,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-marco-polo.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-marco-polo_hero.webp",
+          "transcriptText": "To find this place you have to know it's there, because it's tucked into the inner courtyard of a Turin palazzo, well away from the shopfronts on the street.\n\nGo through the carriage arch of the building and into the courtyard beyond, and you'll find the entrance to Marco Polo, a gallery and shop whose windows show a jumble of furniture, art, clothes and lamps. Stand in the courtyard where you can see through the glass, with the walls of the palazzo rising around you.\n\nThe furniture and objects make the first impression. The owner, Monica Bruno, opened Marco Polo in January 2016 after years running a consignment business and working the city's markets, and she likes to mix opposites: Chinese vases beside plush sofas, Buddha heads beside high heels, Eames chairs and rattan armchairs on the same floor, and lacquered papier-mâché shelving painted with Chinese motifs.\n\nThe clothes are just as eclectic, with high-end vintage fashion — Chanel, Yves Saint Laurent, Issey Miyake and Louboutin have all passed through — alongside dresses and suits from Turin's own tailors of the nineteen fifties and sixties, a local tradition the gallery has celebrated with exhibitions.\n\nThe name, Monica has explained, is about travel: a journey through beauty and through time, with more than a hint of the East in the things she chooses. She describes the result as having the warmth of a home, the energy of a souk and the refinement of a boudoir, and that's a fair summary.\n\nThe key to Marco Polo is that nothing here is arranged by category, because everything is chosen by one eye. That's the difference between a shop and a gallery; you come to browse a point of view as much as to buy a chair.\n\nMarco Polo opens Tuesday to Saturday, with a break at lunchtime, so time your visit. Once you're back on the street, glance into the other courtyards along the way, because Turin hides a surprising amount behind its carriage arches."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.0661078,
+      "centroidLongitude": 7.6703748,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "2521ac27-0a45-5dbd-84be-4eff7aa65133",
+        "6fbbe02e-cd3f-54b0-8611-e997b9bc5689",
+        "7419a796-822c-562c-aef9-00474ae31b92",
+        "0186db17-6a40-54f0-a461-c7760b19dcda",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Fashion",
+        "Art",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8e99b116-dbf1-54e7-bbc6-fe2be54cca3b",
+      "createdAt": "2026-10-29",
+      "title": "Mole Antonelliana",
+      "shortDescription": "The building above you was meant to be a synagogue, and you'll find it on the back of every Italian two-cent coin.",
+      "longDescription": "The building above you was meant to be a synagogue, and you'll find it on the back of every Italian two-cent coin.\n\nBegin at the base, where the story starts. In 1863 Turin's Jewish community commissioned the architect Alessandro Antonelli to build their new synagogue, and he kept changing the design, raising it from forty-seven metres towards the height you see now; the costs rose with it, and in 1877 the community handed the unfinished building to the city.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-mole-antonelliana_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-mole-antonelliana_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-mole-antonelliana_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-mole-antonelliana_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4d6380ab-fee2-5005-a759-befc16137df5",
+          "order": 0,
+          "title": "Mole Antonelliana",
+          "caption": "On the far side of Via Montebello, backed up far enough to take in the whole dome and spire.",
+          "latitude": 45.069348797336694,
+          "longitude": 7.69326846441804,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-mole-antonelliana.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-mole-antonelliana_hero.webp",
+          "transcriptText": "The building above you was meant to be a synagogue, and you'll find it on the back of every Italian two-cent coin.\n\nBack up against the buildings on the far side of Via Montebello until the whole height fits into view: a square base, a tall, steep, ribbed dome above it, and then a slender spire climbing to a point a hundred and sixty-seven metres above the street.\n\nBegin at the base, where the story starts. In 1863 Turin's Jewish community commissioned the architect Alessandro Antonelli to build their new synagogue, and he kept changing the design, raising it from forty-seven metres towards the height you see now; the costs rose with it, and in 1877 the community handed the unfinished building to the city.\n\nTrace the dome upwards to the spire, which has had a rough time. A winged statue, the Genius, was placed at the very top in 1900, until a storm on the eleventh of August 1904 knocked it down and it was replaced by a star, and in 1953 another violent storm brought down more than half the spire, which took until 1961 to rebuild.\n\nThat same year a panoramic lift was installed, and today it rises up through the middle of the great hall to a viewing terrace. Since 2000 the building has been home to the National Cinema Museum, with the old temple hall turned into a vast space for watching films.\n\nThe Mole is what happens when one architect refuses to stop and a city decides to adopt the consequences. It began as a place of worship, became a civic monument, and ended up as a cathedral to the cinema, which is quite a career for one building.\n\nTake the lift to the terrace if you've time, for the view over the rooftops to the Alps. Otherwise, walk down Via Montebello to Via Po and look back from the arcades, where the spire appears suddenly between the buildings."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.069348797336694,
+      "centroidLongitude": 7.69326846441804,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "99646b99-6159-56e5-bba3-de0670a1810d",
+        "23d0d7f7-a546-5c29-ba11-ac3a39370ede",
+        "52d67632-abb5-51a6-911a-5c0184f7e461",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "b77aa43b-70d5-5f5a-9a40-c774615f6a2c",
+        "7e98950e-dc6e-5d54-b121-83d4a11e185c",
+        "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6",
+        "ad1e75de-62e8-50df-84a0-4fbf77031178"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Museum",
+        "Architecture",
+        "Engineering",
+        "Faith",
+        "Performance",
+        "Viewpoint",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Alessandro Antonelli"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6",
+      "createdAt": "2026-10-29",
+      "title": "Egyptian Museum | Museo Egizio",
+      "shortDescription": "The oldest museum in the world devoted entirely to ancient Egypt isn't in Cairo, London or Paris, but here, behind this baroque brick front in…",
+      "longDescription": "The oldest museum in the world devoted entirely to ancient Egypt isn't in Cairo, London or Paris, but here, behind this baroque brick front in the middle of Turin.\n\nThe building has a history of its own, having been built in 1679 as the Collegio dei Nobili, a school for the sons of the aristocracy, and the museum came into being after King Carlo Felice bought the great collection of Bernardino Drovetti in 1824, the founding moment of the Museo Egizio.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-museo-egizio_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-museo-egizio_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-museo-egizio_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-museo-egizio_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-museo-egizio_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7bce423b-9cd9-593c-8320-30c55c002fd1",
+          "order": 0,
+          "title": "Egyptian Museum | Museo Egizio",
+          "caption": "At number 6 Via Accademia delle Scienze, before the long baroque brick front beside Piazza Carignano.",
+          "latitude": 45.06861379045189,
+          "longitude": 7.684407435581962,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-museo-egizio.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-museo-egizio_hero.webp",
+          "transcriptText": "The oldest museum in the world devoted entirely to ancient Egypt isn't in Cairo, London or Paris, but here, behind this baroque brick front in the middle of Turin.\n\nThe long brick building at number six Via Accademia delle Scienze, beside Piazza Carignano, is the Museo Egizio, with its main entrance on the street. It shares the building with the Academy of Sciences, so the whole block rising above you belongs to learning of one kind or another.\n\nThe building has a history of its own, having been built in 1679 as the Collegio dei Nobili, a school for the sons of the aristocracy, and the museum came into being after King Carlo Felice bought the great collection of Bernardino Drovetti in 1824, the founding moment of the Museo Egizio.\n\nOne man did more than anyone to fill it further. Ernesto Schiaparelli, director in the early twentieth century, led excavations in Egypt that brought around thirty thousand objects back to Turin between 1903 and 1937, and today the collection runs to roughly forty thousand pieces across more than twelve thousand square metres.\n\nInside, the gallery of statues is the moment most visitors remember. In 2006 the film designer Dante Ferretti, who worked with Fellini and Scorsese, rearranged the great figures of kings and gods in dim light against mirrors, so that they seem to loom out of the dark.\n\nThe French scholar Champollion, who deciphered hieroglyphs, is said to have remarked that the road to Memphis and Thebes passes through Turin, and that still holds. A city in the far north-west of Italy became one of the world's great places for ancient Egypt, almost by accident of royal shopping.\n\nTickets are best booked in advance, because the queues can be long. Afterwards, walk round the corner into Piazza Carignano for a gelato at Pepino, which has been on that square since 1929."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.06861379045189,
+      "centroidLongitude": 7.684407435581962,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "b77aa43b-70d5-5f5a-9a40-c774615f6a2c",
+        "7e98950e-dc6e-5d54-b121-83d4a11e185c",
+        "ad1e75de-62e8-50df-84a0-4fbf77031178",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "7419a796-822c-562c-aef9-00474ae31b92",
+        "041846a5-bcfa-5472-99c8-a0ef4444fad0",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "b9df2310-90b6-575e-a6c6-3a8b26839594"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "History",
+        "Art",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b77aa43b-70d5-5f5a-9a40-c774615f6a2c",
+      "createdAt": "2026-10-29",
+      "title": "National Museum of the Italian Risorgimento | Museo Nazionale del Risorgimento Italiano",
+      "shortDescription": "Inside this building there's a parliament chamber where a clock and a calendar still record the moment of its last session: half past two in the…",
+      "longDescription": "Inside this building there's a parliament chamber where a clock and a calendar still record the moment of its last session: half past two in the afternoon, on the twenty-eighth of December 1860.\n\nThis facade is the first thing to take in. The wing was built after 1861 to house the hall of the first Italian parliament, but the capital moved to Florence in 1865 and the hall was never used for its purpose, which makes this whole grand front a monument to a plan that changed.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-museo-nazionale-del-risorgimento_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-museo-nazionale-del-risorgimento_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-museo-nazionale-del-risorgimento_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-museo-nazionale-del-risorgimento_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-museo-nazionale-del-risorgimento_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e3bfc81b-7703-540e-938a-425dde73d690",
+          "order": 0,
+          "title": "National Museum of the Italian Risorgimento | Museo Nazionale del Risorgimento Italiano",
+          "caption": "In Piazza Carlo Alberto, by the king's statue, facing the columned back of Palazzo Carignano.",
+          "latitude": 45.068962989410316,
+          "longitude": 7.6860483932541115,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-museo-nazionale-del-risorgimento.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-museo-nazionale-del-risorgimento_hero.webp",
+          "transcriptText": "Inside this building there's a parliament chamber where a clock and a calendar still record the moment of its last session: half past two in the afternoon, on the twenty-eighth of December 1860.\n\nKing Carlo Alberto sits on horseback in the middle of the square around you, and the vast building along one side is the back of Palazzo Carignano, its grand nineteenth-century facade lined with columns. The entrance to the Museo Nazionale del Risorgimento Italiano is here, at number eight Piazza Carlo Alberto.\n\nThis facade is the first thing to take in. The wing was built after 1861 to house the hall of the first Italian parliament, but the capital moved to Florence in 1865 and the hall was never used for its purpose, which makes this whole grand front a monument to a plan that changed.\n\nOn the far side is the older building. The front of Palazzo Carignano, facing Piazza Carignano, was designed by Guarino Guarini and begun in 1679, with a famous curving facade in brick, and in 1848 its central hall became the chamber of the Subalpine Parliament, the elected assembly of the Kingdom of Sardinia.\n\nThat chamber is Room 16 of the museum, and it's described as the only parliamentary chamber from 1848 still intact in Europe. The benches are ivory-coloured, the boxes are lined with red velvet, and figures like Cavour, Gioberti and D'Azeglio sat here while the case for a united Italy was argued out.\n\nThe Risorgimento, the movement that unified the country, still means different things to different people across Italy, and this museum, founded in 1878, is one of the places where that story is laid out in its fullest form, for visitors to weigh up for themselves.\n\nRound the side of the palace, on Piazza Carignano, Guarini's rippling brick front is waiting, the older face of the same building, and the two make a fascinating comparison."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.068962989410316,
+      "centroidLongitude": 7.6860483932541115,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6",
+        "7e98950e-dc6e-5d54-b121-83d4a11e185c",
+        "8e99b116-dbf1-54e7-bbc6-fe2be54cca3b",
+        "ad1e75de-62e8-50df-84a0-4fbf77031178",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "041846a5-bcfa-5472-99c8-a0ef4444fad0",
+        "21d9cacc-6eb1-5377-ad13-d5dbd0c4654c",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "History",
+        "Power",
+        "Baroque",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Guarino Guarini"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7e98950e-dc6e-5d54-b121-83d4a11e185c",
+      "createdAt": "2026-10-29",
+      "title": "National Mountain Museum | Museo Nazionale della Montagna",
+      "shortDescription": "On a clear day, from the terrace on this little hill, you can see something like four hundred kilometres of the Alps laid out in a single sweep.",
+      "longDescription": "On a clear day, from the terrace on this little hill, you can see something like four hundred kilometres of the Alps laid out in a single sweep.\n\nPick out the Mole's spire among the rooftops first, then lift your eyes to the white wall of peaks beyond it, which runs most of the way round the western horizon when the air is clean.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-museo-nazionale-della-montagna_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-museo-nazionale-della-montagna_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-museo-nazionale-della-montagna_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-museo-nazionale-della-montagna_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-museo-nazionale-della-montagna_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2f949744-cff6-5c40-8016-cef0b4a2ed44",
+          "order": 0,
+          "title": "National Mountain Museum | Museo Nazionale della Montagna",
+          "caption": "On the terrace before the Capuchin church at the top of Monte dei Cappuccini, looking west.",
+          "latitude": 45.05973452423842,
+          "longitude": 7.6971701355819615,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-museo-nazionale-della-montagna.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-museo-nazionale-della-montagna_hero.webp",
+          "transcriptText": "On a clear day, from the terrace on this little hill, you can see something like four hundred kilometres of the Alps laid out in a single sweep.\n\nMake your way to the open terrace in front of the old Capuchin church at the top of Monte dei Cappuccini, the wooded hill just across the Po from the city centre. The Museo Nazionale della Montagna is in the buildings beside the church, the city is spread out below you with the river nearest, and the mountains stretch along the far horizon.\n\nPick out the Mole's spire among the rooftops first, then lift your eyes to the white wall of peaks beyond it, which runs most of the way round the western horizon when the air is clean.\n\nThe reason the museum is up here goes back to 1874, when the Italian Alpine Club set up an observation post on this hill with a telescope, so that people in Turin could study the mountains they were planning to climb. It was inaugurated on the ninth of August that year, and the first museum rooms followed in 1877.\n\nThe museum takes its name from Prince Luigi of Savoy, Duke of the Abruzzi, an explorer and mountaineer who gave it the equipment from his expeditions in 1901. Today it covers climbing, skiing, tourism and the lives of the people who live in the mountains, and it also holds the Alpine Club's national library.\n\nThis city has always had the Alps in its line of sight, and the museum turns that view into a subject, treating the mountains not as scenery but as neighbours that have shaped how Turin thinks about itself.\n\nThe museum's own viewing terrace, at the top of the building, is higher still and has the best of the panorama. Coming down, take the winding footpath back towards the river and the bridge to Piazza Vittorio, catching glimpses of the city through the trees."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.05973452423842,
+      "centroidLongitude": 7.6971701355819615,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6",
+        "b77aa43b-70d5-5f5a-9a40-c774615f6a2c",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "8e99b116-dbf1-54e7-bbc6-fe2be54cca3b",
+        "ca8653b9-d853-5818-b9ef-e6ca04c3c2b4",
+        "ad1e75de-62e8-50df-84a0-4fbf77031178",
+        "99646b99-6159-56e5-bba3-de0670a1810d",
+        "041846a5-bcfa-5472-99c8-a0ef4444fad0"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "History",
+        "Viewpoint",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7419a796-822c-562c-aef9-00474ae31b92",
+      "createdAt": "2026-10-29",
+      "title": "Pfatisch Pastry Shop | Pasticceria Pfatisch",
+      "shortDescription": "Underneath this pastry shop, down a staircase from the back room, there's a small museum of old chocolate-making machines.",
+      "longDescription": "Underneath this pastry shop, down a staircase from the back room, there's a small museum of old chocolate-making machines.\n\nThe shop's history starts in 1915, when the master pastry chef Gustavo Pfatisch opened here, and the business went on to become a supplier to the royal household, a title given to a select few Turin shops that still carries some weight in this city.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-pfatisch_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-pfatisch_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-pfatisch_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-pfatisch_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-pfatisch_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e6e7d17a-cf02-5ae9-a69f-b31be8e49a57",
+          "order": 0,
+          "title": "Pfatisch Pastry Shop | Pasticceria Pfatisch",
+          "caption": "Across from number 42 Via Sacchi, south of Porta Nuova, below the Art Nouveau curves and ironwork.",
+          "latitude": 45.05799666457508,
+          "longitude": 7.67380335092626,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-pfatisch.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-pfatisch_hero.webp",
+          "transcriptText": "Underneath this pastry shop, down a staircase from the back room, there's a small museum of old chocolate-making machines.\n\nNumber forty-two Via Sacchi, a short walk south of Porta Nuova station, is an elegant Art Nouveau building designed by Pietro Fenoglio, the architect who brought that flowing, decorative style to Turin, and Pfatisch has its name above the windows on the ground floor. From the opposite pavement you'll see the building's curves and ironwork, and the cakes lined up in the window.\n\nThe shop's history starts in 1915, when the master pastry chef Gustavo Pfatisch opened here, and the business went on to become a supplier to the royal household, a title given to a select few Turin shops that still carries some weight in this city.\n\nIn the window and on the counter, look for the Festivo, the best known of the cakes, created in the nineteen sixties with layers of cocoa meringue and chocolate cream. The savoury pastries are serious too, and in 2023 the guide Gambero Rosso named them the best in Italy.\n\nDown in the basement, the chocolate museum holds machines from the late nineteenth and early twentieth centuries, a reminder that Turin was one of Europe's great chocolate cities long before it became famous for cars.\n\nRecent years haven't been easy for Pfatisch, since in 2020 the family that ran it went into voluntary bankruptcy and the premises went to auction, and the city held its breath a little, because places like this are woven into Turin's identity; happily, the shop carried on under new owners, and it's still making the Festivo.\n\nAsk inside whether the chocolate museum is open, because it's worth the short climb down. Then walk north along Via Sacchi towards Porta Nuova, and within a few minutes you'll reach Piazza Carlo Felice and its gardens."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.05799666457508,
+      "centroidLongitude": 7.67380335092626,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "21d9cacc-6eb1-5377-ad13-d5dbd0c4654c",
+        "6fbbe02e-cd3f-54b0-8611-e997b9bc5689",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6",
+        "0186db17-6a40-54f0-a461-c7760b19dcda",
+        "2651ed20-51a2-5890-8cfe-c83dbddc5dce",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Designed by a Master",
+        "Pietro Fenoglio"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1c90f99e-c6d0-5210-ad52-142328d6ab07",
+      "createdAt": "2026-10-29",
+      "title": "Pavia & Pavia International Design",
+      "shortDescription": "A good deal of the furniture in this showroom was made by hand in Italian workshops, which puts it in a rather different league from most of…",
+      "longDescription": "A good deal of the furniture in this showroom was made by hand in Italian workshops, which puts it in a rather different league from most of what's sold as design today.\n\nThe materials reward a closer look, and they're the core of the business: Pavia and Pavia was founded in 1987, and it designs, produces and distributes its own collections, all of them made in Italy by skilled artisans using precious woods, lacquer and fine fabrics; look for the deep shine on the lacquered surfaces, which takes layer upon layer to achieve.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-pavia-pavia-international-design_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-pavia-pavia-international-design_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-pavia-pavia-international-design_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-pavia-pavia-international-design_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "cbeba814-eb66-5a4b-aebe-a7872642e904",
+          "order": 0,
+          "title": "Pavia & Pavia International Design",
+          "caption": "At number 1 Piazza Bodoni, beside the gardens and the Verdi Conservatory.",
+          "latitude": 45.06382119475914,
+          "longitude": 7.683828864418036,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-pavia-pavia-international-design.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-pavia-pavia-international-design_hero.webp",
+          "transcriptText": "A good deal of the furniture in this showroom was made by hand in Italian workshops, which puts it in a rather different league from most of what's sold as design today.\n\nGardens fill the middle of Piazza Bodoni, the Giuseppe Verdi Conservatory lines one side, and at number one you'll find Pavia and Pavia International Design, its windows showing sofas, cabinets and tables in polished wood and lacquer, arranged as though in an elegant apartment.\n\nThe materials reward a closer look, and they're the core of the business: Pavia and Pavia was founded in 1987, and it designs, produces and distributes its own collections, all of them made in Italy by skilled artisans using precious woods, lacquer and fine fabrics; look for the deep shine on the lacquered surfaces, which takes layer upon layer to achieve.\n\nThe mix of styles is the other thing to notice, because the collections blend contemporary lines with a more classical tradition, so a sofa that seems quite modern might sit beside a cabinet that wouldn't look out of place in one of the city's old palazzi.\n\nThe firm also works as an interior designer, handling everything from floor plans and materials to lighting and project management, for clients across Europe.\n\nIn a sense, a showroom like this keeps alive the old idea that furniture is made rather than manufactured. Turin has a long tradition of cabinet-makers who fitted out royal residences and grand apartments, and the craft behind those polished surfaces is the same kind of patient work, carried into the present.\n\nWhile you're here, stay a moment in Piazza Bodoni and listen, because students practising at the conservatory can often be heard through the open windows. Then head north up Via Carlo Alberto towards the centre, a pleasant pedestrian street lined with shops."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.06382119475914,
+      "centroidLongitude": 7.683828864418036,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+        "6fbbe02e-cd3f-54b0-8611-e997b9bc5689",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "2521ac27-0a45-5dbd-84be-4eff7aa65133",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "041846a5-bcfa-5472-99c8-a0ef4444fad0",
+        "ca8653b9-d853-5818-b9ef-e6ca04c3c2b4"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Art",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "52d67632-abb5-51a6-911a-5c0184f7e461",
+      "createdAt": "2026-10-29",
+      "title": "Piano 35 Lounge Bar",
+      "shortDescription": "You're about a hundred and fifty metres above Turin, in a garden made of glass, and the bar around you is the highest space in the building.",
+      "longDescription": "You're about a hundred and fifty metres above Turin, in a garden made of glass, and the bar around you is the highest space in the building.\n\nThat double view is the heart of the place. The greenhouse rises over three floors, and from here you're looking down into its planting as well as out over the rooftops, which gives the odd, pleasant feeling of being in a conservatory and on a mountain at the same time.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-piano-35-lounge-bar_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-piano-35-lounge-bar_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-piano-35-lounge-bar_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2bbddd98-e4b6-536b-b5a9-af44b38d80bb",
+          "order": 0,
+          "title": "Piano 35 Lounge Bar",
+          "caption": "At the top of the Intesa Sanpaolo skyscraper, on the greenhouse's uppermost level.",
+          "latitude": 45.069850386763406,
+          "longitude": 7.662805650926258,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-piano-35-lounge-bar.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-piano-35-lounge-bar_hero.webp",
+          "transcriptText": "You're about a hundred and fifty metres above Turin, in a garden made of glass, and the bar around you is the highest space in the building.\n\nPiano 35 occupies the top of the Intesa Sanpaolo skyscraper, inside the bioclimatic greenhouse that crowns the tower, and the lounge bar is on the greenhouse's uppermost level. Look around and you'll see two views at once: on one side the plants and trees of the winter garden below you, and on the other, through the glass, the whole city.\n\nThat double view is the heart of the place. The greenhouse rises over three floors, and from here you're looking down into its planting as well as out over the rooftops, which gives the odd, pleasant feeling of being in a conservatory and on a mountain at the same time.\n\nThere's also a walkway suspended along three sides of the tower, the highest of the building's hanging walkways, so stroll along it and watch the city change as you turn each corner, from the old centre and the Mole on one side to the Alps on the other.\n\nThe bar itself has a drinks list built around the idea of art and emotion, and in the evenings there's a food station with street-food dishes and some of the restaurant's best-known plates; the restaurant is run by the Michelin-starred chef Marco Sacco with the resident chef Christian Balzo.\n\nThe skyscraper below you was designed by Renzo Piano to stop just short of the Mole's height, and up here you can see why that mattered. You're looking across at the city's old symbol from not far beneath the tip of its spire, and it still has the last word on the skyline.\n\nBooking is recommended, especially for sunset, which is the moment to come. On a clear evening, look west for the outline of the Alps turning pink, and then east again for the Mole lit up against the dark."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.069850386763406,
+      "centroidLongitude": 7.662805650926258,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "23d0d7f7-a546-5c29-ba11-ac3a39370ede",
+        "ce9726a5-3c7a-58cf-bd88-75eccb2bcadc",
+        "99646b99-6159-56e5-bba3-de0670a1810d",
+        "8e99b116-dbf1-54e7-bbc6-fe2be54cca3b",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "e16e6d26-40e9-5d13-9903-6e7890b91d10",
+        "7419a796-822c-562c-aef9-00474ae31b92"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark",
+        "Viewpoint",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0186db17-6a40-54f0-a461-c7760b19dcda",
+      "createdAt": "2026-10-29",
+      "title": "Porta Palazzo",
+      "shortDescription": "More than a thousand traders, around a hundred thousand shoppers a week, and over fifty thousand square metres of stalls make Porta Palazzo the…",
+      "longDescription": "More than a thousand traders, around a hundred thousand shoppers a week, and over fifty thousand square metres of stalls make Porta Palazzo the biggest open-air market in Europe.\n\nThe square itself is older than the market. In the eighteenth century the architect Filippo Juvarra laid it out for the House of Savoy as a grand military square, and you can still see his ambition in those curving buildings around the edge, even if the drilling soldiers have long since given way to boxes of peaches.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-porta-palazzo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-porta-palazzo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-porta-palazzo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-porta-palazzo_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "49681ae3-accf-5d2a-bada-30b08a66418e",
+          "order": 0,
+          "title": "Porta Palazzo",
+          "caption": "Among the stalls of Piazza della Repubblica, near the iron clock pavilion.",
+          "latitude": 45.077598316000355,
+          "longitude": 7.683317735581963,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-porta-palazzo.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-porta-palazzo_hero.webp",
+          "transcriptText": "More than a thousand traders, around a hundred thousand shoppers a week, and over fifty thousand square metres of stalls make Porta Palazzo the biggest open-air market in Europe.\n\nAcross the whole of Piazza della Repubblica, inside a ring of curved, arcaded buildings, rows of stalls stretch away under their awnings. On one side stands a long iron pavilion with a clock on it, and on another, the covered halls of the fish and food markets.\n\nThe square itself is older than the market. In the eighteenth century the architect Filippo Juvarra laid it out for the House of Savoy as a grand military square, and you can still see his ambition in those curving buildings around the edge, even if the drilling soldiers have long since given way to boxes of peaches.\n\nThe clock pavilion is the Mercato dell'Orologio, a metal structure from 1916, while the market itself goes back to 1835, when the first covered stalls were put up here; the pavilions of the food and fish markets grew around it over the following decades.\n\nListen as you walk along the rows, because Porta Palazzo has always been a crossroads, and today you'll hear Italian, Arabic, Romanian, Chinese and plenty more, see Piedmontese cheeses next to North African spices, and smell fresh herbs beside the fishmongers' counters.\n\nIts size is impressive, but the deeper point is the way it has absorbed every wave of newcomers to Turin, from the southern Italians who came north to work in the factories to more recent arrivals, and turned all of them into customers and traders on the same square.\n\nCome in the morning for the best of the produce, and look for the farmers' section, where growers from the surrounding countryside sell their own vegetables. Then walk downhill along Via Borgo Dora into the Balôn, the old flea market district just behind the square."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.077598316000355,
+      "centroidLongitude": 7.683317735581963,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "bef3180f-0f10-59df-803d-416b00e8fb93",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "ce9726a5-3c7a-58cf-bd88-75eccb2bcadc",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "2521ac27-0a45-5dbd-84be-4eff7aa65133",
+        "1e32bae4-e0f0-569f-b46a-a5f27db9f611",
+        "7419a796-822c-562c-aef9-00474ae31b92"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Market",
+        "Public Square",
+        "Food",
+        "Commerce",
+        "Immigration",
+        "Baroque",
+        "Free to Visit",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Filippo Juvarra"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+      "createdAt": "2026-10-29",
+      "title": "San Carlo dal 1973",
+      "shortDescription": "Some of Turin's most interesting fashion is sold in a converted stable, hidden in a courtyard off the city's grandest square.",
+      "longDescription": "Some of Turin's most interesting fashion is sold in a converted stable, hidden in a courtyard off the city's grandest square.\n\nThe courtyard is where the surprise lies, because the shop moved here in 2019 and the architect Jeannot Cerutti turned the space into around five hundred square metres on several levels, linking an old stable building to the rest with a structure covered in climbing plants, so the greenery is the first thing you notice.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-san-carlo-dal-1973_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-san-carlo-dal-1973_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-san-carlo-dal-1973_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-san-carlo-dal-1973_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c7202a0d-6065-5b08-a877-eacba6f6700b",
+          "order": 0,
+          "title": "San Carlo dal 1973",
+          "caption": "Under the arcades of Piazza San Carlo at number 161, through into the courtyard of Palazzo Villa.",
+          "latitude": 45.06800232761915,
+          "longitude": 7.683311706745888,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-san-carlo-dal-1973.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-san-carlo-dal-1973_hero.webp",
+          "transcriptText": "Some of Turin's most interesting fashion is sold in a converted stable, hidden in a courtyard off the city's grandest square.\n\nHead for number one hundred and sixty-one under the arcades of Piazza San Carlo — the square with the bronze horseman in the middle and twin baroque churches at its southern end — and go through into the courtyard of Palazzo Villa, where the boutique San Carlo dal 1973 has its home.\n\nThe courtyard is where the surprise lies, because the shop moved here in 2019 and the architect Jeannot Cerutti turned the space into around five hundred square metres on several levels, linking an old stable building to the rest with a structure covered in climbing plants, so the greenery is the first thing you notice.\n\nGiorgina Siviero founded San Carlo in 1973, and the shop built its reputation on a carefully chosen mix of clothing, accessories and objects, the kind of edit that makes a shop feel like the taste of a particular person rather than a list of brands.\n\nIt does a good deal more than sell clothes, hosting book launches, talks on cinema, art, music and food, and the occasional concert, so the courtyard sometimes feels more like a salon than a store.\n\nAnd that's where the shop is cleverest, because Turin's grand squares were built to impress from the outside, while this one turns the trick inside out, using the hidden space behind a famous facade to create something intimate, which is perhaps the most Turinese move of all.\n\nBack in Piazza San Carlo, take a minute with the statue of Duke Emanuele Filiberto in the middle, and then wander south to the twin churches of San Carlo and Santa Cristina. Beyond them, Via Roma carries on towards Porta Nuova under its long arcades."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.06800232761915,
+      "centroidLongitude": 7.683311706745888,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "0186db17-6a40-54f0-a461-c7760b19dcda",
+        "041846a5-bcfa-5472-99c8-a0ef4444fad0",
+        "2521ac27-0a45-5dbd-84be-4eff7aa65133",
+        "2651ed20-51a2-5890-8cfe-c83dbddc5dce",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "7419a796-822c-562c-aef9-00474ae31b92"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Fashion",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6751d279-8123-552e-a43d-9980dcd7c0e0",
+      "createdAt": "2026-10-29",
+      "title": "Tomdesign",
+      "shortDescription": "In a quiet stretch of the Vanchiglia neighbourhood, an architect's studio and a design shop share the same front door.",
+      "longDescription": "In a quiet stretch of the Vanchiglia neighbourhood, an architect's studio and a design shop share the same front door.\n\nThose lamps include pieces from Bocci, the Canadian studio known for glass pendants that look like blown bubbles, alongside furniture from Scandinavian and European brands such as HAY, Gubi and Fredericia, with classics and new names mixed together.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-tomdesign_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-tomdesign_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-tomdesign_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-tomdesign_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-tomdesign_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5b0c3360-95d3-5705-9886-656d87a90f26",
+          "order": 0,
+          "title": "Tomdesign",
+          "caption": "At number 73B Corso San Maurizio in Vanchiglia, by windows full of lamps.",
+          "latitude": 45.06679047349724,
+          "longitude": 7.698020293254112,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-tomdesign.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-tomdesign_hero.webp",
+          "transcriptText": "In a quiet stretch of the Vanchiglia neighbourhood, an architect's studio and a design shop share the same front door.\n\nLamps fill the windows at number seventy-three B Corso San Maurizio — some hanging, some standing, some sitting on desks — among chairs, tables and sofas, and that's Tomdesign. Stand in front of the window and let your eye travel upwards to the lights.\n\nThose lamps include pieces from Bocci, the Canadian studio known for glass pendants that look like blown bubbles, alongside furniture from Scandinavian and European brands such as HAY, Gubi and Fredericia, with classics and new names mixed together.\n\nThe people behind it are architects, since Tomdesign is also an architecture practice, led by the architect Laura Maria Marchesi, which handles renovations, interior design, lighting plans and custom furniture, often in historic Turin apartments, so the shop isn't just a showroom but a working library of the things they use in real homes.\n\nThat combination says something about how Turin lives. Many of its apartments are in old buildings with high ceilings and tall windows, and the challenge is to bring in modern furniture and light without fighting the architecture; a shop run by architects is designed to solve exactly that problem.\n\nIt says something about Vanchiglia as well, which has changed from a working-class district into one of the city's more creative neighbourhoods, with studios and small shops filling the ground floors.\n\nA short way along Corso San Maurizio, at the corner with Via Giulia di Barolo, stands the Fetta di Polenta, a nine-storey house only a little over half a metre wide at its narrow end, and it's one of the strangest buildings in the city, well worth the detour if you want to see a corner plot pushed to its absolute limit."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.06679047349724,
+      "centroidLongitude": 7.698020293254112,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "99646b99-6159-56e5-bba3-de0670a1810d",
+        "23d0d7f7-a546-5c29-ba11-ac3a39370ede",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "e16e6d26-40e9-5d13-9903-6e7890b91d10",
+        "041846a5-bcfa-5472-99c8-a0ef4444fad0",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Architecture",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ce9726a5-3c7a-58cf-bd88-75eccb2bcadc",
+      "createdAt": "2026-10-29",
+      "title": "Tre Galli",
+      "shortDescription": "This is a restaurant at lunchtime and a wine and cocktail bar by night, and on a summer evening its tables spill out onto one of the liveliest…",
+      "longDescription": "This is a restaurant at lunchtime and a wine and cocktail bar by night, and on a summer evening its tables spill out onto one of the liveliest corners of the old Roman quarter.\n\nThe streets around you are worth a glance first, because the Quadrilatero follows the grid of the Roman city, Augusta Taurinorum, and the narrow, straight lanes you can see in each direction are the descendants of streets laid out two thousand years ago.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-tre-galli_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-tre-galli_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-tre-galli_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-tre-galli_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-tre-galli_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bd365e83-99de-58c6-b449-e6f169a2a24e",
+          "order": 0,
+          "title": "Tre Galli",
+          "caption": "At number 25 Via Sant'Agostino in the Quadrilatero Romano, by the tables under the street lamps.",
+          "latitude": 45.07620145018521,
+          "longitude": 7.680725977839803,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-tre-galli.mp3",
+          "audioDurationSeconds": 99,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-tre-galli_hero.webp",
+          "transcriptText": "This is a restaurant at lunchtime and a wine and cocktail bar by night, and on a summer evening its tables spill out onto one of the liveliest corners of the old Roman quarter.\n\nHere in the Quadrilatero Romano, the grid of narrow streets in the oldest part of Turin, Tre Galli has its tables at number twenty-five Via Sant'Agostino, set out under the street lamps in front of a long, warmly lit room. From across the street you'll see shelves of bottles inside.\n\nThe streets around you are worth a glance first, because the Quadrilatero follows the grid of the Roman city, Augusta Taurinorum, and the narrow, straight lanes you can see in each direction are the descendants of streets laid out two thousand years ago.\n\nTre Galli itself serves traditional regional cooking at lunch and dinner, with both meat and fish, and in the evening it's known for its wine, especially Nebbiolo, Piedmont's great red grape, alongside Champagne, cocktails and a serious list of grappas and liqueurs.\n\nThe atmosphere is often described as more Parisian than Alpine, with people standing outside with a glass at aperitivo time, and the place stays open until two in the morning, from Monday to Saturday.\n\nIt's a small sign of how the neighbourhood has changed. The Quadrilatero was once one of the shabbier parts of central Turin, and places like this helped turn it into the quarter where the city goes out at night, without losing the old streets that give it its character.\n\nWander along Via Sant'Agostino to the church of the same name, before carrying on to Via Bellezia, where another restaurant with a very similar name has been serving Piedmontese food for a long time; just don't mix them up when you book."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 99,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.07620145018521,
+      "centroidLongitude": 7.680725977839803,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "1e32bae4-e0f0-569f-b46a-a5f27db9f611",
+        "52d67632-abb5-51a6-911a-5c0184f7e461",
+        "0186db17-6a40-54f0-a461-c7760b19dcda",
+        "b9df2310-90b6-575e-a6c6-3a8b26839594",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "f0840caa-0844-5cc4-8db0-13f511bf22d5",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "697d709c-8316-538b-8445-ae55ffd65b10"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1e32bae4-e0f0-569f-b46a-a5f27db9f611",
+      "createdAt": "2026-10-29",
+      "title": "Tre Galline",
+      "shortDescription": "The story goes that in 1592 three sisters ran an inn near here, and because most of their customers couldn't read, they painted three hens on…",
+      "longDescription": "The story goes that in 1592 three sisters ran an inn near here, and because most of their customers couldn't read, they painted three hens on the wall instead of a sign.\n\nAccording to the legend, the sisters' painted hens gave their name both to the inn and to the street it stood on, and the restaurant has kept the story — and a small flock of china and ceramic hens — ever since.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-tre-galline_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-tre-galline_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-tre-galline_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "720e28fc-2a34-5122-959a-22c16a9656f3",
+          "order": 0,
+          "title": "Tre Galline",
+          "caption": "At number 37 Via Bellezia, below the name painted in red over the doorway.",
+          "latitude": 45.07605645769563,
+          "longitude": 7.681853368717239,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-tre-galline.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-tre-galline_hero.webp",
+          "transcriptText": "The story goes that in 1592 three sisters ran an inn near here, and because most of their customers couldn't read, they painted three hens on the wall instead of a sign.\n\nPainted in red above a doorway at number thirty-seven Via Bellezia, in the old Roman quarter, the name Tre Galline — the three hens — marks the restaurant you're looking for. Through the windows you'll see a warm, wood-panelled dining room, and perhaps a few hen figurines near the entrance.\n\nAccording to the legend, the sisters' painted hens gave their name both to the inn and to the street it stood on, and the restaurant has kept the story — and a small flock of china and ceramic hens — ever since.\n\nThe room is almost entirely wood, with parquet floors that creak a little, panelled walls and exposed beams overhead, and red accents and furniture that give it a slightly theatrical air.\n\nThe food is why people come, because this is where you eat like the Turinese. The menu is Piedmontese: vitello tonnato, made here without mayonnaise, agnolotti in roast meat sauce, finanziera, the old Turin stew of offal and mushrooms, and bollito misto, a selection of boiled meats served at the table from a trolley, with a cheese trolley and a grappa cart to follow.\n\nWhether or not the sisters existed exactly as the story says, the tale tells you what this place is for. Turin's food was never really court cooking; it was hearty, practical and shared, and that's what Tre Galline still serves.\n\nDinner fills up, so it's wise to reserve, and before or after your meal you could walk a few steps north to Porta Palazzo, the huge market where much of this cooking begins, or wander the Quadrilatero's lanes to find the restaurant's near-namesake, Tre Galli."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.07605645769563,
+      "centroidLongitude": 7.681853368717239,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "ce9726a5-3c7a-58cf-bd88-75eccb2bcadc",
+        "b9df2310-90b6-575e-a6c6-3a8b26839594",
+        "0186db17-6a40-54f0-a461-c7760b19dcda",
+        "f0840caa-0844-5cc4-8db0-13f511bf22d5",
+        "5e03d190-77dd-5e59-9348-1010cb412f63",
+        "6fbbe02e-cd3f-54b0-8611-e997b9bc5689",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2521ac27-0a45-5dbd-84be-4eff7aa65133",
+      "createdAt": "2026-10-29",
+      "title": "Verdelilla",
+      "shortDescription": "This boutique is stocked by people who've spent their working lives in fashion, and it's built around the idea that a shop should feel like…",
+      "longDescription": "This boutique is stocked by people who've spent their working lives in fashion, and it's built around the idea that a shop should feel like being dressed by a friend with very good taste.\n\nThe clothes come first, and Verdelilla describes its stock as unique pieces chosen by fashion professionals, and the labels are mostly independent designers from around the world rather than big fashion houses, with names like Apuntob, Barbara Tani, Giorgio Brato, Mother Denim, Absolut Cashmere and Injiri.",
+      "makerId": "dbf1ef30-789b-5776-abd3-5b220023c9df",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-verdelilla_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-verdelilla_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-verdelilla_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d3be7535-1e40-52c1-82b4-0b0326cf790c",
+          "order": 0,
+          "title": "Verdelilla",
+          "caption": "At number 17 Via Assietta, a quiet street of apartment buildings near Porta Nuova.",
+          "latitude": 45.0629894634496,
+          "longitude": 7.673181577909815,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trn-verdelilla.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trn-verdelilla_hero.webp",
+          "transcriptText": "This boutique is stocked by people who've spent their working lives in fashion, and it's built around the idea that a shop should feel like being dressed by a friend with very good taste.\n\nLook for number seventeen on Via Assietta, a quiet street of elegant apartment buildings close to Porta Nuova, where Verdelilla's windows show a carefully chosen handful of clothes, bags and shoes rather than a crowded display. Inside, the space is calm, light and uncluttered.\n\nThe clothes come first, and Verdelilla describes its stock as unique pieces chosen by fashion professionals, and the labels are mostly independent designers from around the world rather than big fashion houses, with names like Apuntob, Barbara Tani, Giorgio Brato, Mother Denim, Absolut Cashmere and Injiri.\n\nThe accessories and smaller things — the jewellery, bags, shoes and lifestyle pieces — are chosen in the same spirit, and several of the brands work with recycled materials or artisanal production, so the emphasis is on things made with care rather than in vast quantities.\n\nThe shop sums up its approach as a matter of people, taste and choice, and says that its customers are what give meaning to those choices, which is a rather generous way for a shop to describe itself.\n\nA boutique like this stands for a very different idea of shopping from the big chains on Via Roma, just a few streets away. It's slow, personal and selective, and in a city with a long tailoring tradition, that approach feels entirely at home.\n\nFrom here, walk a few minutes east to Porta Nuova station, then turn north up Via Roma, Turin's main arcaded shopping street, which leads all the way to Piazza San Carlo and on to Piazza Castello, past one shop window after another."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.0629894634496,
+      "centroidLongitude": 7.673181577909815,
+      "city": "Turin",
+      "country": "Italy",
+      "relatedTourIds": [
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "1c90f99e-c6d0-5210-ad52-142328d6ab07",
+        "6fbbe02e-cd3f-54b0-8611-e997b9bc5689",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+        "2651ed20-51a2-5890-8cfe-c83dbddc5dce",
+        "0186db17-6a40-54f0-a461-c7760b19dcda",
+        "f0840caa-0844-5cc4-8db0-13f511bf22d5"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Fashion",
+        "Commerce"
       ],
       "priceUSD": 0
     }
