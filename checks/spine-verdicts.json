@@ -2140,5 +2140,32 @@
     "date": "2026-10-14",
     "note": "Deliberately at the main gate, not the subject's centre: a whole 1,000-hectare forest has no single honest point, and the tour's script opens at the gate (\"you're most likely at a gate off Kiambu Road or Limuru Road\"). Moved there at the contributor's request on 2026-10-14; Wikidata's point is the centre of the forest.",
     "verdict": "extended-feature"
+  },
+  "Fota House": {
+    "at": [
+      51.89543,
+      -8.30189
+    ],
+    "date": "2026-10-29",
+    "note": "Our point is 50 m from Wikidata's 'Fota House-Garden Building' (Q30161047), i.e. on the house; the 'Fota House' item matched at 1.5 km is a coarser/other point on the estate. NOT MOVED.",
+    "verdict": "wikidata-elsewhere"
+  },
+  "Clifden Castle": {
+    "at": [
+      53.49176,
+      -10.05669
+    ],
+    "date": "2026-10-29",
+    "note": "Our point is OSM's mapped historic=castle 'Clifden Castle' on Sky Road; Wikidata Q5132502 carries a 3-decimal coordinate (53.492,-10.066) that reverse-geocodes to Lower Sky Road. NOT MOVED.",
+    "verdict": "wikidata-wrong"
+  },
+  "Kinnitty Castle": {
+    "at": [
+      53.10235,
+      -7.69684
+    ],
+    "date": "2026-10-29",
+    "note": "Our point is OSM's mapped Kinnitty Castle Hotel building; Wikidata Q281195 is rounded to one decimal (53.1,-7.7). NOT MOVED.",
+    "verdict": "wikidata-wrong"
   }
 }
