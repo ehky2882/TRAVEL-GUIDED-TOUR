@@ -3,7 +3,7 @@
 **What shipped:** a new studio, **Atlas Studio TRN**, the 55th, with 29 single-stop audio tours of Turin and no walks.
 - **Maker:** platform `dozent`, handle `atlas.trn`, uuid5 `atlas-maker:trn` = `dbf1ef30-789b-5776-abd3-5b220023c9df`.
 - **Ids:** `atlas-tour:trn:trn-<slug>`, stops `atlas-stop:trn:trn-<slug>:1`.
-- **Catalogue:** tours 2216 → 2245, makers 724 → 725, stops 2675 → 2704, cities 1015 → 1016 (Turin is new: nothing in
+- **Catalogue:** tours 2216 → 2245, makers 725 → 726, stops 2675 → 2704, cities 1025 → 1026 (on top of #1163) (Turin is new: nothing in
   the catalogue sat within 10 km of it). Countries (103) and places (507) did not move.
 
 **Source:** a Dropbox drop from arthur.yung (the contributor, not the owner), 29 folders numbered 01–30. Triage went to
