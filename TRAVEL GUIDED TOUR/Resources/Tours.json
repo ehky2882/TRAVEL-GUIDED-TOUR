@@ -21759,9 +21759,9 @@
         "3A61D9A3-8787-4AD2-B754-F33B3FFB03EB",
         "EC39474D-A865-4751-84B5-27F7895109AA",
         "8ED8CB10-3E8A-4C09-AFFD-356102F75948",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
         "00b0f205-5245-58a1-82a3-6b47cc7261d9",
-        "134fbab2-b008-50b8-9ba2-8f125361c291",
-        "62dd8d54-a529-5b72-b3f7-1f153f01b9d1"
+        "ca8653b9-d853-5818-b9ef-e6ca04c3c2b4"
       ],
       "primaryCategory": "literature",
       "tags": [
@@ -84206,9 +84206,9 @@
         "b57293ab-8421-54c1-b750-580af0a53a30",
         "bbcbc067-bfa6-5231-aa5b-3cd1f3314d93",
         "80c212ca-621d-529f-afe1-f8c5113acbe8",
+        "21d9cacc-6eb1-5377-ad13-d5dbd0c4654c",
         "208aaf33-21e8-50d7-9f4f-a3708857c8d9",
-        "D8CB27A9-261D-53D4-A36A-40AC957CBAF6",
-        "726AB861-8269-51C3-AAE8-2D23395974A5"
+        "D8CB27A9-261D-53D4-A36A-40AC957CBAF6"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -85461,8 +85461,8 @@
         "9583fac3-b270-5ba1-86cb-95ac19bb065c",
         "7e57138e-a046-5278-8a01-136788c3574c",
         "DDF3D7F8-9208-5CED-9E04-8A4CCAC8239B",
-        "BE967E94-F10E-5FF8-9515-8A979C0692A1",
-        "68d19f6a-8ce3-5f8f-b038-52dbee13a72f"
+        "5e03d190-77dd-5e59-9348-1010cb412f63",
+        "BE967E94-F10E-5FF8-9515-8A979C0692A1"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -94218,7 +94218,7 @@
         "726b2a64-0a04-5a1a-a431-d8a879f17e45",
         "e858fbf5-ad82-52c7-9224-64b918276554",
         "ea0cf211-37a9-50db-b1f8-8d21176d4793",
-        "48CB9ED5-63B7-5AAC-A0DE-E2F11068D665"
+        "2521ac27-0a45-5dbd-84be-4eff7aa65133"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -132941,12 +132941,12 @@
       "relatedTourIds": [
         "268691cd-719a-5243-a758-d205cfbe90cb",
         "5FD518A0-2202-5313-83AD-7D49AE9D915F",
+        "2521ac27-0a45-5dbd-84be-4eff7aa65133",
         "c933fed3-eb24-5319-87df-7ce498c62100",
         "0378b836-089d-5f9e-8232-8e2e9afe3e09",
         "1BE97272-8B4C-5006-AB11-96DC56A46C92",
         "d17e0a2d-1a53-55bd-bdd3-79b1e036de96",
-        "4A883783-4A4B-5561-8564-49D5652089F2",
-        "68686CC5-B16B-51FF-A983-51BAD53421BE"
+        "4A883783-4A4B-5561-8564-49D5652089F2"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -136147,11 +136147,11 @@
         "e01770af-347d-5f43-a63e-1fa97ce3551d",
         "70a01d74-8edf-5f78-9d8b-a05850c0299a",
         "89443016-9aea-5422-a33a-be72636e89f1",
+        "ad1e75de-62e8-50df-84a0-4fbf77031178",
         "47bc0a50-cd97-5013-9d84-352523ee74e6",
         "b4f87483-ebae-567e-896f-b7b4042ca34a",
         "edc9261f-b648-5b4c-b1b6-609a5f976a5e",
-        "6CD8B760-BD43-567C-97AE-E626351787F4",
-        "12FAAD05-1917-5E7A-B53E-98FCA2D83C70"
+        "6CD8B760-BD43-567C-97AE-E626351787F4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -138933,7 +138933,16 @@
       "centroidLongitude": 7.684635622090184,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "7419a796-822c-562c-aef9-00474ae31b92",
+        "5e03d190-77dd-5e59-9348-1010cb412f63",
+        "6fbbe02e-cd3f-54b0-8611-e997b9bc5689",
+        "b9df2310-90b6-575e-a6c6-3a8b26839594",
+        "b77aa43b-70d5-5f5a-9a40-c774615f6a2c",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -138979,7 +138988,16 @@
       "centroidLongitude": 7.686826222090185,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b9df2310-90b6-575e-a6c6-3a8b26839594",
+        "21d9cacc-6eb1-5377-ad13-d5dbd0c4654c",
+        "6fbbe02e-cd3f-54b0-8611-e997b9bc5689",
+        "99646b99-6159-56e5-bba3-de0670a1810d",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "7419a796-822c-562c-aef9-00474ae31b92",
+        "e16e6d26-40e9-5d13-9903-6e7890b91d10",
+        "1e32bae4-e0f0-569f-b46a-a5f27db9f611"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -139027,7 +139045,16 @@
       "centroidLongitude": 7.674482735581962,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "5e03d190-77dd-5e59-9348-1010cb412f63",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "6fbbe02e-cd3f-54b0-8611-e997b9bc5689",
+        "21d9cacc-6eb1-5377-ad13-d5dbd0c4654c",
+        "1e32bae4-e0f0-569f-b46a-a5f27db9f611",
+        "ce9726a5-3c7a-58cf-bd88-75eccb2bcadc",
+        "0186db17-6a40-54f0-a461-c7760b19dcda",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -139073,7 +139100,16 @@
       "centroidLongitude": 7.6994893914015945,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e16e6d26-40e9-5d13-9903-6e7890b91d10",
+        "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "041846a5-bcfa-5472-99c8-a0ef4444fad0",
+        "ca8653b9-d853-5818-b9ef-e6ca04c3c2b4",
+        "b77aa43b-70d5-5f5a-9a40-c774615f6a2c",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "7e98950e-dc6e-5d54-b121-83d4a11e185c"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Museum",
@@ -139122,7 +139158,16 @@
       "centroidLongitude": 7.696903177909816,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "8e99b116-dbf1-54e7-bbc6-fe2be54cca3b",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "23d0d7f7-a546-5c29-ba11-ac3a39370ede",
+        "52d67632-abb5-51a6-911a-5c0184f7e461",
+        "041846a5-bcfa-5472-99c8-a0ef4444fad0",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "5e03d190-77dd-5e59-9348-1010cb412f63",
+        "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -139173,7 +139218,16 @@
       "centroidLongitude": 7.682934877909815,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "0186db17-6a40-54f0-a461-c7760b19dcda",
+        "ca8653b9-d853-5818-b9ef-e6ca04c3c2b4",
+        "2521ac27-0a45-5dbd-84be-4eff7aa65133",
+        "f0840caa-0844-5cc4-8db0-13f511bf22d5",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+        "1e32bae4-e0f0-569f-b46a-a5f27db9f611",
+        "2651ed20-51a2-5890-8cfe-c83dbddc5dce"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Market",
@@ -139222,7 +139276,16 @@
       "centroidLongitude": 7.675523664418037,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "7419a796-822c-562c-aef9-00474ae31b92",
+        "b9df2310-90b6-575e-a6c6-3a8b26839594",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+        "21d9cacc-6eb1-5377-ad13-d5dbd0c4654c",
+        "1c90f99e-c6d0-5210-ad52-142328d6ab07",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "2521ac27-0a45-5dbd-84be-4eff7aa65133",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Venue",
@@ -139265,7 +139328,16 @@
       "centroidLongitude": 7.68450023558196,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+        "e16e6d26-40e9-5d13-9903-6e7890b91d10",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "2521ac27-0a45-5dbd-84be-4eff7aa65133",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "0186db17-6a40-54f0-a461-c7760b19dcda",
+        "2651ed20-51a2-5890-8cfe-c83dbddc5dce",
+        "ad1e75de-62e8-50df-84a0-4fbf77031178"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Venue",
@@ -139312,7 +139384,16 @@
       "centroidLongitude": 7.652398896959145,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "ad1e75de-62e8-50df-84a0-4fbf77031178",
+        "f0840caa-0844-5cc4-8db0-13f511bf22d5",
+        "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "697d709c-8316-538b-8445-ae55ffd65b10"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Museum",
@@ -139358,7 +139439,16 @@
       "centroidLongitude": 7.68663485092626,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "ca8653b9-d853-5818-b9ef-e6ca04c3c2b4",
+        "041846a5-bcfa-5472-99c8-a0ef4444fad0",
+        "2521ac27-0a45-5dbd-84be-4eff7aa65133",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "ce9726a5-3c7a-58cf-bd88-75eccb2bcadc"
+      ],
       "primaryCategory": "literature",
       "tags": [
         "Venue",
@@ -139407,7 +139497,16 @@
       "centroidLongitude": 7.685588785075783,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "ad1e75de-62e8-50df-84a0-4fbf77031178",
+        "ca8653b9-d853-5818-b9ef-e6ca04c3c2b4",
+        "52d67632-abb5-51a6-911a-5c0184f7e461",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Venue",
@@ -139454,7 +139553,16 @@
       "centroidLongitude": 7.662868322090186,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "52d67632-abb5-51a6-911a-5c0184f7e461",
+        "99646b99-6159-56e5-bba3-de0670a1810d",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "8e99b116-dbf1-54e7-bbc6-fe2be54cca3b",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "e16e6d26-40e9-5d13-9903-6e7890b91d10",
+        "0186db17-6a40-54f0-a461-c7760b19dcda",
+        "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Tower",
@@ -139503,7 +139611,16 @@
       "centroidLongitude": 7.686339979762333,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ca8653b9-d853-5818-b9ef-e6ca04c3c2b4",
+        "f0840caa-0844-5cc4-8db0-13f511bf22d5",
+        "b9df2310-90b6-575e-a6c6-3a8b26839594",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6",
+        "7419a796-822c-562c-aef9-00474ae31b92",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70"
+      ],
       "primaryCategory": "literature",
       "tags": [
         "Venue",
@@ -139550,7 +139667,16 @@
       "centroidLongitude": 7.699542835581963,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "f0840caa-0844-5cc4-8db0-13f511bf22d5",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+        "e16e6d26-40e9-5d13-9903-6e7890b91d10",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "bef3180f-0f10-59df-803d-416b00e8fb93",
+        "ad1e75de-62e8-50df-84a0-4fbf77031178"
+      ],
       "primaryCategory": "literature",
       "tags": [
         "Venue",
@@ -139596,7 +139722,16 @@
       "centroidLongitude": 7.692494013211726,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "1c90f99e-c6d0-5210-ad52-142328d6ab07",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "e16e6d26-40e9-5d13-9903-6e7890b91d10",
+        "2651ed20-51a2-5890-8cfe-c83dbddc5dce",
+        "6fbbe02e-cd3f-54b0-8611-e997b9bc5689",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "ca8653b9-d853-5818-b9ef-e6ca04c3c2b4",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Venue",
@@ -139643,7 +139778,16 @@
       "centroidLongitude": 7.6703748,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "2521ac27-0a45-5dbd-84be-4eff7aa65133",
+        "6fbbe02e-cd3f-54b0-8611-e997b9bc5689",
+        "7419a796-822c-562c-aef9-00474ae31b92",
+        "0186db17-6a40-54f0-a461-c7760b19dcda",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Venue",
@@ -139691,7 +139835,16 @@
       "centroidLongitude": 7.69326846441804,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "99646b99-6159-56e5-bba3-de0670a1810d",
+        "23d0d7f7-a546-5c29-ba11-ac3a39370ede",
+        "52d67632-abb5-51a6-911a-5c0184f7e461",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "b77aa43b-70d5-5f5a-9a40-c774615f6a2c",
+        "7e98950e-dc6e-5d54-b121-83d4a11e185c",
+        "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6",
+        "ad1e75de-62e8-50df-84a0-4fbf77031178"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Tower",
@@ -139745,7 +139898,16 @@
       "centroidLongitude": 7.684407435581962,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b77aa43b-70d5-5f5a-9a40-c774615f6a2c",
+        "7e98950e-dc6e-5d54-b121-83d4a11e185c",
+        "ad1e75de-62e8-50df-84a0-4fbf77031178",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "7419a796-822c-562c-aef9-00474ae31b92",
+        "041846a5-bcfa-5472-99c8-a0ef4444fad0",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "b9df2310-90b6-575e-a6c6-3a8b26839594"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Museum",
@@ -139793,7 +139955,16 @@
       "centroidLongitude": 7.6860483932541115,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6",
+        "7e98950e-dc6e-5d54-b121-83d4a11e185c",
+        "8e99b116-dbf1-54e7-bbc6-fe2be54cca3b",
+        "ad1e75de-62e8-50df-84a0-4fbf77031178",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "041846a5-bcfa-5472-99c8-a0ef4444fad0",
+        "21d9cacc-6eb1-5377-ad13-d5dbd0c4654c",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Museum",
@@ -139844,7 +140015,16 @@
       "centroidLongitude": 7.6971701355819615,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6",
+        "b77aa43b-70d5-5f5a-9a40-c774615f6a2c",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "8e99b116-dbf1-54e7-bbc6-fe2be54cca3b",
+        "ca8653b9-d853-5818-b9ef-e6ca04c3c2b4",
+        "ad1e75de-62e8-50df-84a0-4fbf77031178",
+        "99646b99-6159-56e5-bba3-de0670a1810d",
+        "041846a5-bcfa-5472-99c8-a0ef4444fad0"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Museum",
@@ -139892,7 +140072,16 @@
       "centroidLongitude": 7.67380335092626,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "21d9cacc-6eb1-5377-ad13-d5dbd0c4654c",
+        "6fbbe02e-cd3f-54b0-8611-e997b9bc5689",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "d8a5a390-c3c7-5dbb-a30d-ea46fd23b8e6",
+        "0186db17-6a40-54f0-a461-c7760b19dcda",
+        "2651ed20-51a2-5890-8cfe-c83dbddc5dce",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -139940,7 +140129,16 @@
       "centroidLongitude": 7.683828864418036,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+        "6fbbe02e-cd3f-54b0-8611-e997b9bc5689",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "2521ac27-0a45-5dbd-84be-4eff7aa65133",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "041846a5-bcfa-5472-99c8-a0ef4444fad0",
+        "ca8653b9-d853-5818-b9ef-e6ca04c3c2b4"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Venue",
@@ -139986,7 +140184,16 @@
       "centroidLongitude": 7.662805650926258,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "23d0d7f7-a546-5c29-ba11-ac3a39370ede",
+        "ce9726a5-3c7a-58cf-bd88-75eccb2bcadc",
+        "99646b99-6159-56e5-bba3-de0670a1810d",
+        "8e99b116-dbf1-54e7-bbc6-fe2be54cca3b",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "e16e6d26-40e9-5d13-9903-6e7890b91d10",
+        "7419a796-822c-562c-aef9-00474ae31b92"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -140034,7 +140241,16 @@
       "centroidLongitude": 7.683317735581963,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "bef3180f-0f10-59df-803d-416b00e8fb93",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "ce9726a5-3c7a-58cf-bd88-75eccb2bcadc",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "2521ac27-0a45-5dbd-84be-4eff7aa65133",
+        "1e32bae4-e0f0-569f-b46a-a5f27db9f611",
+        "7419a796-822c-562c-aef9-00474ae31b92"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Market",
@@ -140087,7 +140303,16 @@
       "centroidLongitude": 7.683311706745888,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "0186db17-6a40-54f0-a461-c7760b19dcda",
+        "041846a5-bcfa-5472-99c8-a0ef4444fad0",
+        "2521ac27-0a45-5dbd-84be-4eff7aa65133",
+        "2651ed20-51a2-5890-8cfe-c83dbddc5dce",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "7419a796-822c-562c-aef9-00474ae31b92"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Venue",
@@ -140135,7 +140360,16 @@
       "centroidLongitude": 7.698020293254112,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "99646b99-6159-56e5-bba3-de0670a1810d",
+        "23d0d7f7-a546-5c29-ba11-ac3a39370ede",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "e16e6d26-40e9-5d13-9903-6e7890b91d10",
+        "041846a5-bcfa-5472-99c8-a0ef4444fad0",
+        "668f0e85-d032-57a2-b906-1654caf1f6c2",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Venue",
@@ -140183,7 +140417,16 @@
       "centroidLongitude": 7.680725977839803,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "1e32bae4-e0f0-569f-b46a-a5f27db9f611",
+        "52d67632-abb5-51a6-911a-5c0184f7e461",
+        "0186db17-6a40-54f0-a461-c7760b19dcda",
+        "b9df2310-90b6-575e-a6c6-3a8b26839594",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "f0840caa-0844-5cc4-8db0-13f511bf22d5",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "697d709c-8316-538b-8445-ae55ffd65b10"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -140229,7 +140472,16 @@
       "centroidLongitude": 7.681853368717239,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ce9726a5-3c7a-58cf-bd88-75eccb2bcadc",
+        "b9df2310-90b6-575e-a6c6-3a8b26839594",
+        "0186db17-6a40-54f0-a461-c7760b19dcda",
+        "f0840caa-0844-5cc4-8db0-13f511bf22d5",
+        "5e03d190-77dd-5e59-9348-1010cb412f63",
+        "6fbbe02e-cd3f-54b0-8611-e997b9bc5689",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -140274,7 +140526,16 @@
       "centroidLongitude": 7.673181577909815,
       "city": "Turin",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "fde5b6b1-14ea-5467-bec1-1c181ad627e5",
+        "697d709c-8316-538b-8445-ae55ffd65b10",
+        "1c90f99e-c6d0-5210-ad52-142328d6ab07",
+        "6fbbe02e-cd3f-54b0-8611-e997b9bc5689",
+        "e7cb9a79-ed8e-5753-91dd-7dc784623d70",
+        "2651ed20-51a2-5890-8cfe-c83dbddc5dce",
+        "0186db17-6a40-54f0-a461-c7760b19dcda",
+        "f0840caa-0844-5cc4-8db0-13f511bf22d5"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Venue",
