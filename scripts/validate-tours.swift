@@ -413,6 +413,7 @@ let architectTags: Set<String> = [
     "H. F. Mertens", "Jo Vegter", "Jo Coenen", "Stok & Kanters", "Zondervan Architectuur", "De Roos & Overeijnder",
     "Pedro Luis Escrivá", "Giovanni Antonio Medrano", "Antonio Niccolini", "Ferdinando Chiaramonte",
     "Alessandro Antonelli", "Carlo Mollino", "Claudio Silvestrin", "Guarino Guarini", "Pietro Fenoglio", "Filippo Juvarra",
+    "Smiljan Radić", "Cazú Zegers", "Izquierdo Lehmann", "Martín Correa", "Gabriel Guarda", "Eduardo Costabal Zegers",
 ]
 let validTags: Set<String> = placeTypeTags
     .union(themeTags).union(styleEraTags)
