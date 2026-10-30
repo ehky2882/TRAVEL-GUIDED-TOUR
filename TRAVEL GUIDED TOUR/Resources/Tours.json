@@ -12759,10 +12759,10 @@
         "00bc47f9-639f-44d9-9735-65c8ac608144",
         "9d7c66f0-1c4a-4f00-966c-4f5bb41615de",
         "5a01f367-5ded-54b3-9f65-6587be265184",
+        "f5fbccad-9389-501a-96e6-f9a322f7ec6a",
         "6b30022e-2630-489d-80ea-02e6931b4ae0",
         "63b7938f-7011-53b8-9dae-47d17a36910b",
-        "d6b330df-82a2-4048-9aaf-bbe28c5f53b0",
-        "e25e5718-6f18-4f7c-8d5a-174662f1a953"
+        "d6b330df-82a2-4048-9aaf-bbe28c5f53b0"
       ],
       "walkingDistanceMeters": null
     },
@@ -13681,10 +13681,10 @@
         "62ce120d-8f20-514c-b657-fcf679eab005",
         "5e78d185-f167-5bb9-bfe2-9106957897ac",
         "3B78F99C-A031-4EF7-A55B-10D9D7C550A4",
+        "37f30f44-7a45-5398-9e86-6bed363415f7",
         "177b12c2-4081-5680-8c04-938ee5c232e9",
         "b344b334-4402-55c1-808a-a192e52effc7",
-        "51BB962E-016A-4ABD-8E61-7E83D45E59FF",
-        "868AE974-7EE5-4C95-9259-005771357CBA"
+        "51BB962E-016A-4ABD-8E61-7E83D45E59FF"
       ],
       "walkingDistanceMeters": null
     },
@@ -60299,9 +60299,9 @@
         "40341544-5463-55DB-93AF-1D7C25671F4A",
         "42029080-B37C-5A05-AF62-D4460BC113DF",
         "b64abb45-ca9f-5d0b-bb7e-707efef29fa7",
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
         "26ed9a65-a11a-5980-9789-f5c3cae990f8",
-        "15d75927-2c50-588e-a526-e210c4d5d660",
-        "893d851c-15b1-50b5-9572-0b43a723b1c3"
+        "15d75927-2c50-588e-a526-e210c4d5d660"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -73571,7 +73571,7 @@
         "6D37E1F5-0083-5F5C-9364-EE17AC1C5CCB",
         "d45f87a0-f5ae-5b56-9521-ab36ac1ebe57",
         "04413D73-0775-5D97-8946-7FAE009DC00B",
-        "364fbc84-62fe-590d-acbe-71fa035d5b87"
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -78921,8 +78921,8 @@
         "b6723c09-a77e-51ca-8ccd-0065488e1438",
         "9838e17f-1d06-5893-bc37-a6292843e792",
         "ca135f56-0930-502e-8696-a1e5264741ab",
-        "f60b4552-901f-5f54-bf53-05de9929f512",
-        "7e60a953-1f61-5b07-a49a-d026c459c634"
+        "59387ac3-5340-5f61-910c-dcb255898752",
+        "f60b4552-901f-5f54-bf53-05de9929f512"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -79761,11 +79761,11 @@
         "12cb1aa6-51d0-5867-9956-9f52dfc8b68f",
         "437230c6-4c99-5789-aa7b-8473f369f195",
         "7098bf1f-89cd-550a-90ee-6f1a7839a53d",
+        "a63e587d-64d7-58cf-9c86-d14c14e183dc",
         "6dd34b79-17f1-5b88-be50-d26628f4e5cd",
         "4bd57de1-6494-5b3d-af3a-808ee518c111",
         "0b630034-6ee5-4940-a70a-0aec90884dd5",
-        "398425bf-adad-567f-b0cc-2b68980da1a3",
-        "b4f87483-ebae-567e-896f-b7b4042ca34a"
+        "398425bf-adad-567f-b0cc-2b68980da1a3"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -80273,7 +80273,7 @@
         "a58601e7-a4aa-4c63-942b-e9191d64da5c",
         "3619ca6e-f14c-50a3-a659-14ac5216160d",
         "12cb1aa6-51d0-5867-9956-9f52dfc8b68f",
-        "dbe47843-3004-5e33-b09b-2ca8c522a3c8"
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -86818,11 +86818,11 @@
         "9b664129-d7b4-540a-99c5-9f3f469ae70d",
         "b41a133c-1564-503f-81e9-4e7fdd31e4d8",
         "e29a7aaf-39b8-5ca7-8729-4ffa562addeb",
+        "59387ac3-5340-5f61-910c-dcb255898752",
         "f0ca6266-2db1-5c67-834e-886fe5c4e94c",
         "27bd7b12-9203-53ec-8b49-0c0d70e0f790",
         "7CCF6F4C-D5D1-5A45-80CE-089337FB009B",
-        "3A65A8B3-215D-5F84-A3F2-23FAAE6E0300",
-        "a17dbd1d-3491-4062-a62e-9b0059c678f7"
+        "3A65A8B3-215D-5F84-A3F2-23FAAE6E0300"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -87806,10 +87806,10 @@
         "05238c77-9ef3-5138-8a16-774cb27d0267",
         "834F6D65-422B-51A6-8100-E807C2D0B0CB",
         "1c1b956a-4b83-5a3f-8f89-c29965091c1f",
+        "0c842ae3-c162-5bc1-a537-d8c6ed2f77c7",
         "368610E5-7E7C-5DFF-9F63-664D82AD2DB5",
         "CB462ED4-4B28-56C7-AA6E-62435D878E24",
-        "7c09f2ac-10b4-5506-98ff-6c1d0b910b53",
-        "DCB030BC-A4F2-5317-B6DF-1028ECFEEF4D"
+        "7c09f2ac-10b4-5506-98ff-6c1d0b910b53"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -87973,11 +87973,11 @@
         "6f98734d-a213-59ee-92fe-11dac9e5dabb",
         "f7c8a6e1-9d49-4e54-8a06-3c9e7b2d1f9e",
         "F5344049-A11D-5976-B6D6-6749DE4C1CFB",
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
         "20d42a62-3c4f-5cc1-8be6-f130b6a3637c",
         "06caa939-25fe-4f25-8936-5ac6b4993db8",
         "2f9dad4b-6c41-497e-a363-f8a6f5813ad7",
-        "e4581b3f-3f5b-5690-ae6f-9f10fe29c87f",
-        "f68fb5ac-aaf0-54f1-bde5-ea002037e44e"
+        "e4581b3f-3f5b-5690-ae6f-9f10fe29c87f"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -88089,9 +88089,9 @@
         "7d7fab04-6091-5c08-b4aa-b454144ee7c7",
         "E74E3767-D0DB-573F-B297-A61D773CF294",
         "c022fd6a-83b2-57c3-911c-55cba9e8d884",
+        "c86dfaae-433d-56c7-855b-bde656ca117c",
         "f6d23796-5e22-56fd-9717-4c93464ac8fe",
-        "c764921a-4010-5ad7-9828-6ef156ec9ef9",
-        "88caa1ed-80b7-5ea0-b3c4-b479bf96278f"
+        "c764921a-4010-5ad7-9828-6ef156ec9ef9"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -90865,8 +90865,8 @@
         "42927d59-4ee8-5f54-85b1-5cd07bfcdb40",
         "19452F7C-FDF6-5BF2-881E-3688C0594C1B",
         "8F9BB8DE-8222-4616-B65A-6193F393EE9A",
-        "f96868b2-2502-5add-961f-a19245b0fdfa",
-        "e25e5718-6f18-4f7c-8d5a-174662f1a953"
+        "f5fbccad-9389-501a-96e6-f9a322f7ec6a",
+        "f96868b2-2502-5add-961f-a19245b0fdfa"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -105954,10 +105954,10 @@
         "b0ce19d9-4e87-5b27-ba5c-784e9528933c",
         "368fdb00-475f-5f33-9006-24162ccb6be0",
         "f0ca6266-2db1-5c67-834e-886fe5c4e94c",
+        "59387ac3-5340-5f61-910c-dcb255898752",
         "19ba1c62-05e0-52dc-ba26-261f7f00dbac",
         "A85DFD9B-B406-5A93-B7EC-0ABEEC88955E",
-        "7CCF6F4C-D5D1-5A45-80CE-089337FB009B",
-        "e58cf695-db2a-58bb-96aa-106dbe675832"
+        "7CCF6F4C-D5D1-5A45-80CE-089337FB009B"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -117059,10 +117059,10 @@
         "80a47940-55b3-506f-b20c-e734de5e589f",
         "0d3607c7-9b1a-57f0-a882-b698cfda1c54",
         "7104efd6-180e-56b7-9cd3-1ed218fe179d",
+        "a09bf7d7-dab7-5d42-9d4c-4daa9cdd4e94",
         "758b216b-8d7b-547a-b90a-9e518da7fe21",
         "677FDF98-F58A-5042-A564-2A99EA6B7F3E",
-        "8aa3d5d7-cd39-5bdc-bac2-4feba1e8c45a",
-        "b36072b2-2d64-505c-aa5e-93f8b72c4fa3"
+        "8aa3d5d7-cd39-5bdc-bac2-4feba1e8c45a"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -119990,14 +119990,14 @@
       "city": "Havana",
       "country": "Cuba",
       "relatedTourIds": [
+        "86b3cec0-752c-550b-8c1c-c4585171168e",
         "3261bd51-24b5-5a79-a691-a1e1a868ccfb",
         "d9553133-f19c-5246-af3b-35214ddde5fe",
         "4bd57de1-6494-5b3d-af3a-808ee518c111",
         "60de976a-a8da-4dfc-a1cc-9d2a26fea2fc",
         "21cee03a-e920-5018-adff-7b2f10f5ff91",
         "fb2eb675-600d-5884-b5c0-2db5f8f887e4",
-        "b20c0664-7644-5bac-aa79-36d7fb275722",
-        "dfca8058-fdfb-5473-b44d-07dac56a3042"
+        "b20c0664-7644-5bac-aa79-36d7fb275722"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -122671,11 +122671,11 @@
         "645337e8-dc86-562f-b955-0065574dfa4e",
         "20d42a62-3c4f-5cc1-8be6-f130b6a3637c",
         "0165232e-3d55-5685-a448-a7bf5afece8f",
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0",
         "affd41b0-a978-5626-91ec-e884f2827c35",
+        "21939587-adc2-5623-98ba-5d0df9142f5b",
         "3cac5404-3830-5006-ad9a-8c34cc795b5d",
-        "455f7e84-75fe-5909-a6be-7a806f27f3e6",
-        "936F09F0-CE46-5A4C-9DA9-B271B5FBB147",
-        "52f82136-e260-594b-986a-6857f36d63a2"
+        "455f7e84-75fe-5909-a6be-7a806f27f3e6"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -135292,8 +135292,8 @@
         "4feadb69-9ce2-566a-92f1-4cc76882304a",
         "5230cc32-e47b-51e7-a81c-ad53a8b3a3fa",
         "4a89091e-b6e7-5395-968d-3dbef6f63daf",
-        "924fb37f-f106-5626-9112-e89b3ececd84",
-        "54ea68c0-e852-5264-b867-9a651c1eb4d1"
+        "59387ac3-5340-5f61-910c-dcb255898752",
+        "924fb37f-f106-5626-9112-e89b3ececd84"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -138448,7 +138448,7 @@
         "01deaa74-c2af-5cab-b0bb-cbf71651d47b",
         "EB123E68-A754-458A-9D1C-F9920DC1D18B",
         "1d7e97a5-3bff-5d27-bb3c-e299d03c732a",
-        "9f48ffaf-5128-5c14-b945-630978f6e185"
+        "59387ac3-5340-5f61-910c-dcb255898752"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -138903,9 +138903,9 @@
         "01deaa74-c2af-5cab-b0bb-cbf71651d47b",
         "d17e0a2d-1a53-55bd-bdd3-79b1e036de96",
         "92041407-6b30-5d78-a03e-8802b4161918",
+        "59387ac3-5340-5f61-910c-dcb255898752",
         "7bfcc300-43fe-5571-95d8-d266733feb23",
-        "3A65A8B3-215D-5F84-A3F2-23FAAE6E0300",
-        "347dab13-ec7d-5f13-811a-40fdd9c2f9e3"
+        "3A65A8B3-215D-5F84-A3F2-23FAAE6E0300"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -140602,7 +140602,16 @@
       "centroidLongitude": -70.61029417790981,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "a8871a9b-95d3-53e3-9539-860b54b331c8",
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+        "4a9cea47-36a6-5f13-9471-e8dc2db95be0",
+        "0c842ae3-c162-5bc1-a537-d8c6ed2f77c7",
+        "f0ff8c57-b498-53d5-9738-58f3f4904243",
+        "7d6a30e1-ccae-5194-ae05-682f5af3884d",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "c86dfaae-433d-56c7-855b-bde656ca117c"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -140651,7 +140660,16 @@
       "centroidLongitude": -70.51357547790982,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "21939587-adc2-5623-98ba-5d0df9142f5b",
+        "37f30f44-7a45-5398-9e86-6bed363415f7",
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0",
+        "8b5f4585-4160-5355-9998-4507a211bd01",
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+        "40efe125-4d5e-5b0a-8b92-cc39aa010112",
+        "74a84ae4-100b-538d-952d-d37259e970a3"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Religious Building",
@@ -140704,7 +140722,16 @@
       "centroidLongitude": -70.58397972023768,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+        "a8871a9b-95d3-53e3-9539-860b54b331c8",
+        "a09bf7d7-dab7-5d42-9d4c-4daa9cdd4e94",
+        "0c842ae3-c162-5bc1-a537-d8c6ed2f77c7",
+        "59387ac3-5340-5f61-910c-dcb255898752",
+        "7d6a30e1-ccae-5194-ae05-682f5af3884d",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "c86dfaae-433d-56c7-855b-bde656ca117c"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -140748,7 +140775,16 @@
       "centroidLongitude": -70.60724302181013,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "a63e587d-64d7-58cf-9c86-d14c14e183dc",
+        "7d6a30e1-ccae-5194-ae05-682f5af3884d",
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "21939587-adc2-5623-98ba-5d0df9142f5b",
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+        "37f30f44-7a45-5398-9e86-6bed363415f7",
+        "8b5f4585-4160-5355-9998-4507a211bd01"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Tower",
@@ -140800,7 +140836,16 @@
       "centroidLongitude": -70.6521952,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "21939587-adc2-5623-98ba-5d0df9142f5b",
+        "8b5f4585-4160-5355-9998-4507a211bd01",
+        "86b3cec0-752c-550b-8c1c-c4585171168e",
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "7d6a30e1-ccae-5194-ae05-682f5af3884d",
+        "37f30f44-7a45-5398-9e86-6bed363415f7",
+        "f5fbccad-9389-501a-96e6-f9a322f7ec6a"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Museum",
@@ -140848,7 +140893,16 @@
       "centroidLongitude": -70.61125923516188,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "a63e587d-64d7-58cf-9c86-d14c14e183dc",
+        "86b3cec0-752c-550b-8c1c-c4585171168e",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0",
+        "59387ac3-5340-5f61-910c-dcb255898752",
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+        "a8871a9b-95d3-53e3-9539-860b54b331c8",
+        "21939587-adc2-5623-98ba-5d0df9142f5b"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Notable Building",
@@ -140897,7 +140951,16 @@
       "centroidLongitude": -70.59844086889132,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+        "4a9cea47-36a6-5f13-9471-e8dc2db95be0",
+        "a8871a9b-95d3-53e3-9539-860b54b331c8",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "0c842ae3-c162-5bc1-a537-d8c6ed2f77c7",
+        "f0ff8c57-b498-53d5-9738-58f3f4904243",
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+        "c86dfaae-433d-56c7-855b-bde656ca117c"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -140945,7 +141008,16 @@
       "centroidLongitude": -70.58510142656348,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "59387ac3-5340-5f61-910c-dcb255898752",
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+        "a8871a9b-95d3-53e3-9539-860b54b331c8",
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "a09bf7d7-dab7-5d42-9d4c-4daa9cdd4e94",
+        "19db0319-d356-56e9-81bb-e818c20278c5",
+        "37f30f44-7a45-5398-9e86-6bed363415f7"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Venue",
@@ -140993,7 +141065,16 @@
       "centroidLongitude": -70.64466817976232,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "37f30f44-7a45-5398-9e86-6bed363415f7",
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0",
+        "f0ff8c57-b498-53d5-9738-58f3f4904243",
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+        "86b3cec0-752c-550b-8c1c-c4585171168e",
+        "f5fbccad-9389-501a-96e6-f9a322f7ec6a"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -141044,7 +141125,16 @@
       "centroidLongitude": -70.59821822023767,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "4a9cea47-36a6-5f13-9471-e8dc2db95be0",
+        "a09bf7d7-dab7-5d42-9d4c-4daa9cdd4e94",
+        "a8871a9b-95d3-53e3-9539-860b54b331c8",
+        "0c842ae3-c162-5bc1-a537-d8c6ed2f77c7",
+        "59387ac3-5340-5f61-910c-dcb255898752",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "7d6a30e1-ccae-5194-ae05-682f5af3884d",
+        "f0ff8c57-b498-53d5-9738-58f3f4904243"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -141092,7 +141182,16 @@
       "centroidLongitude": -70.59765956441804,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "37f30f44-7a45-5398-9e86-6bed363415f7",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "a8871a9b-95d3-53e3-9539-860b54b331c8",
+        "59387ac3-5340-5f61-910c-dcb255898752",
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+        "4a9cea47-36a6-5f13-9471-e8dc2db95be0",
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Venue",
@@ -141140,7 +141239,16 @@
       "centroidLongitude": -70.59705076256552,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "59387ac3-5340-5f61-910c-dcb255898752",
+        "4a9cea47-36a6-5f13-9471-e8dc2db95be0",
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+        "a09bf7d7-dab7-5d42-9d4c-4daa9cdd4e94",
+        "0c842ae3-c162-5bc1-a537-d8c6ed2f77c7",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "c86dfaae-433d-56c7-855b-bde656ca117c",
+        "f0ff8c57-b498-53d5-9738-58f3f4904243"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -141186,7 +141294,16 @@
       "centroidLongitude": -70.6011321,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "7d6a30e1-ccae-5194-ae05-682f5af3884d",
+        "86b3cec0-752c-550b-8c1c-c4585171168e",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "a8871a9b-95d3-53e3-9539-860b54b331c8",
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "4a9cea47-36a6-5f13-9471-e8dc2db95be0",
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+        "37f30f44-7a45-5398-9e86-6bed363415f7"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Market",
@@ -141235,7 +141352,16 @@
       "centroidLongitude": -70.60001026627054,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "8b5f4585-4160-5355-9998-4507a211bd01",
+        "f3e87d25-bf60-5b79-9fc1-4d6f936899b3",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "40efe125-4d5e-5b0a-8b92-cc39aa010112",
+        "21939587-adc2-5623-98ba-5d0df9142f5b",
+        "86b3cec0-752c-550b-8c1c-c4585171168e",
+        "f5fbccad-9389-501a-96e6-f9a322f7ec6a"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Venue",
@@ -141283,7 +141409,16 @@
       "centroidLongitude": -70.62573500698998,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "c86dfaae-433d-56c7-855b-bde656ca117c",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+        "37f30f44-7a45-5398-9e86-6bed363415f7",
+        "19db0319-d356-56e9-81bb-e818c20278c5",
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0",
+        "8b5f4585-4160-5355-9998-4507a211bd01",
+        "f0ff8c57-b498-53d5-9738-58f3f4904243"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Venue",
@@ -141332,7 +141467,16 @@
       "centroidLongitude": -70.59807759957994,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "c86dfaae-433d-56c7-855b-bde656ca117c",
+        "19db0319-d356-56e9-81bb-e818c20278c5",
+        "f5fbccad-9389-501a-96e6-f9a322f7ec6a",
+        "8b5f4585-4160-5355-9998-4507a211bd01",
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0",
+        "a8871a9b-95d3-53e3-9539-860b54b331c8"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Venue",
@@ -141380,7 +141524,16 @@
       "centroidLongitude": -70.6505,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0",
+        "40efe125-4d5e-5b0a-8b92-cc39aa010112",
+        "f5fbccad-9389-501a-96e6-f9a322f7ec6a",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "86b3cec0-752c-550b-8c1c-c4585171168e",
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+        "7d6a30e1-ccae-5194-ae05-682f5af3884d",
+        "8b5f4585-4160-5355-9998-4507a211bd01"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Public Square",
@@ -141428,7 +141581,16 @@
       "centroidLongitude": -70.64331184232785,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "21939587-adc2-5623-98ba-5d0df9142f5b",
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+        "f3e87d25-bf60-5b79-9fc1-4d6f936899b3",
+        "8b5f4585-4160-5355-9998-4507a211bd01",
+        "f5fbccad-9389-501a-96e6-f9a322f7ec6a",
+        "86b3cec0-752c-550b-8c1c-c4585171168e",
+        "a8871a9b-95d3-53e3-9539-860b54b331c8"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -141477,7 +141639,16 @@
       "centroidLongitude": -70.48313432064766,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0",
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "37f30f44-7a45-5398-9e86-6bed363415f7",
+        "f5fbccad-9389-501a-96e6-f9a322f7ec6a",
+        "21939587-adc2-5623-98ba-5d0df9142f5b",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "86b3cec0-752c-550b-8c1c-c4585171168e"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Museum",
@@ -141526,7 +141697,16 @@
       "centroidLongitude": -70.64074120143243,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "f0ff8c57-b498-53d5-9738-58f3f4904243",
+        "19db0319-d356-56e9-81bb-e818c20278c5",
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+        "37f30f44-7a45-5398-9e86-6bed363415f7",
+        "40efe125-4d5e-5b0a-8b92-cc39aa010112",
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Venue",
@@ -141573,7 +141753,16 @@
       "centroidLongitude": -70.32902072209019,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+        "40efe125-4d5e-5b0a-8b92-cc39aa010112",
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "8b5f4585-4160-5355-9998-4507a211bd01",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "0165232e-3d55-5685-a448-a7bf5afece8f",
+        "9ce96adc-fe36-5c7a-ad76-f116e58202ff",
+        "80b3a6ed-988c-5b95-bbb0-ee2c35f82ea5"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Monument",
@@ -141625,7 +141814,16 @@
       "centroidLongitude": -70.6104877067459,
       "city": "Santiago",
       "country": "Chile",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+        "4a9cea47-36a6-5f13-9471-e8dc2db95be0",
+        "a8871a9b-95d3-53e3-9539-860b54b331c8",
+        "59387ac3-5340-5f61-910c-dcb255898752",
+        "a09bf7d7-dab7-5d42-9d4c-4daa9cdd4e94",
+        "1d7e97a5-3bff-5d27-bb3c-e299d03c732a",
+        "C5AB955F-0F6B-5DA2-AD52-EF315E63D5E1",
+        "b36072b2-2d64-505c-aa5e-93f8b72c4fa3"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
