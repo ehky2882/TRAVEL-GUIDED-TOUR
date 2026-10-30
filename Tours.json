@@ -5671,6 +5671,16 @@
       "websiteURL": null
     },
     {
+      "id": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "displayName": "Atlas Studio SCL",
+      "platform": "dozent",
+      "handle": "atlas.scl",
+      "avatarURL": null,
+      "avatarEmoji": "🇨🇱",
+      "bio": "Atlas Studio's Santiago bureau — a colonial square laid over an Inca settlement, a hill turned pleasure garden, restaurants holding up their roofs on boulders and cooking from Chile's own wild larder, the tallest tower in South America, and the Andes at the end of every street.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -12749,10 +12759,10 @@
         "00bc47f9-639f-44d9-9735-65c8ac608144",
         "9d7c66f0-1c4a-4f00-966c-4f5bb41615de",
         "5a01f367-5ded-54b3-9f65-6587be265184",
+        "f5fbccad-9389-501a-96e6-f9a322f7ec6a",
         "6b30022e-2630-489d-80ea-02e6931b4ae0",
         "63b7938f-7011-53b8-9dae-47d17a36910b",
-        "d6b330df-82a2-4048-9aaf-bbe28c5f53b0",
-        "e25e5718-6f18-4f7c-8d5a-174662f1a953"
+        "d6b330df-82a2-4048-9aaf-bbe28c5f53b0"
       ],
       "walkingDistanceMeters": null
     },
@@ -13671,10 +13681,10 @@
         "62ce120d-8f20-514c-b657-fcf679eab005",
         "5e78d185-f167-5bb9-bfe2-9106957897ac",
         "3B78F99C-A031-4EF7-A55B-10D9D7C550A4",
+        "37f30f44-7a45-5398-9e86-6bed363415f7",
         "177b12c2-4081-5680-8c04-938ee5c232e9",
         "b344b334-4402-55c1-808a-a192e52effc7",
-        "51BB962E-016A-4ABD-8E61-7E83D45E59FF",
-        "868AE974-7EE5-4C95-9259-005771357CBA"
+        "51BB962E-016A-4ABD-8E61-7E83D45E59FF"
       ],
       "walkingDistanceMeters": null
     },
@@ -60289,9 +60299,9 @@
         "40341544-5463-55DB-93AF-1D7C25671F4A",
         "42029080-B37C-5A05-AF62-D4460BC113DF",
         "b64abb45-ca9f-5d0b-bb7e-707efef29fa7",
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
         "26ed9a65-a11a-5980-9789-f5c3cae990f8",
-        "15d75927-2c50-588e-a526-e210c4d5d660",
-        "893d851c-15b1-50b5-9572-0b43a723b1c3"
+        "15d75927-2c50-588e-a526-e210c4d5d660"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -73561,7 +73571,7 @@
         "6D37E1F5-0083-5F5C-9364-EE17AC1C5CCB",
         "d45f87a0-f5ae-5b56-9521-ab36ac1ebe57",
         "04413D73-0775-5D97-8946-7FAE009DC00B",
-        "364fbc84-62fe-590d-acbe-71fa035d5b87"
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -78911,8 +78921,8 @@
         "b6723c09-a77e-51ca-8ccd-0065488e1438",
         "9838e17f-1d06-5893-bc37-a6292843e792",
         "ca135f56-0930-502e-8696-a1e5264741ab",
-        "f60b4552-901f-5f54-bf53-05de9929f512",
-        "7e60a953-1f61-5b07-a49a-d026c459c634"
+        "59387ac3-5340-5f61-910c-dcb255898752",
+        "f60b4552-901f-5f54-bf53-05de9929f512"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -79751,11 +79761,11 @@
         "12cb1aa6-51d0-5867-9956-9f52dfc8b68f",
         "437230c6-4c99-5789-aa7b-8473f369f195",
         "7098bf1f-89cd-550a-90ee-6f1a7839a53d",
+        "a63e587d-64d7-58cf-9c86-d14c14e183dc",
         "6dd34b79-17f1-5b88-be50-d26628f4e5cd",
         "4bd57de1-6494-5b3d-af3a-808ee518c111",
         "0b630034-6ee5-4940-a70a-0aec90884dd5",
-        "398425bf-adad-567f-b0cc-2b68980da1a3",
-        "b4f87483-ebae-567e-896f-b7b4042ca34a"
+        "398425bf-adad-567f-b0cc-2b68980da1a3"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -80263,7 +80273,7 @@
         "a58601e7-a4aa-4c63-942b-e9191d64da5c",
         "3619ca6e-f14c-50a3-a659-14ac5216160d",
         "12cb1aa6-51d0-5867-9956-9f52dfc8b68f",
-        "dbe47843-3004-5e33-b09b-2ca8c522a3c8"
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -86808,11 +86818,11 @@
         "9b664129-d7b4-540a-99c5-9f3f469ae70d",
         "b41a133c-1564-503f-81e9-4e7fdd31e4d8",
         "e29a7aaf-39b8-5ca7-8729-4ffa562addeb",
+        "59387ac3-5340-5f61-910c-dcb255898752",
         "f0ca6266-2db1-5c67-834e-886fe5c4e94c",
         "27bd7b12-9203-53ec-8b49-0c0d70e0f790",
         "7CCF6F4C-D5D1-5A45-80CE-089337FB009B",
-        "3A65A8B3-215D-5F84-A3F2-23FAAE6E0300",
-        "a17dbd1d-3491-4062-a62e-9b0059c678f7"
+        "3A65A8B3-215D-5F84-A3F2-23FAAE6E0300"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -87796,10 +87806,10 @@
         "05238c77-9ef3-5138-8a16-774cb27d0267",
         "834F6D65-422B-51A6-8100-E807C2D0B0CB",
         "1c1b956a-4b83-5a3f-8f89-c29965091c1f",
+        "0c842ae3-c162-5bc1-a537-d8c6ed2f77c7",
         "368610E5-7E7C-5DFF-9F63-664D82AD2DB5",
         "CB462ED4-4B28-56C7-AA6E-62435D878E24",
-        "7c09f2ac-10b4-5506-98ff-6c1d0b910b53",
-        "DCB030BC-A4F2-5317-B6DF-1028ECFEEF4D"
+        "7c09f2ac-10b4-5506-98ff-6c1d0b910b53"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -87963,11 +87973,11 @@
         "6f98734d-a213-59ee-92fe-11dac9e5dabb",
         "f7c8a6e1-9d49-4e54-8a06-3c9e7b2d1f9e",
         "F5344049-A11D-5976-B6D6-6749DE4C1CFB",
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
         "20d42a62-3c4f-5cc1-8be6-f130b6a3637c",
         "06caa939-25fe-4f25-8936-5ac6b4993db8",
         "2f9dad4b-6c41-497e-a363-f8a6f5813ad7",
-        "e4581b3f-3f5b-5690-ae6f-9f10fe29c87f",
-        "f68fb5ac-aaf0-54f1-bde5-ea002037e44e"
+        "e4581b3f-3f5b-5690-ae6f-9f10fe29c87f"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -88079,9 +88089,9 @@
         "7d7fab04-6091-5c08-b4aa-b454144ee7c7",
         "E74E3767-D0DB-573F-B297-A61D773CF294",
         "c022fd6a-83b2-57c3-911c-55cba9e8d884",
+        "c86dfaae-433d-56c7-855b-bde656ca117c",
         "f6d23796-5e22-56fd-9717-4c93464ac8fe",
-        "c764921a-4010-5ad7-9828-6ef156ec9ef9",
-        "88caa1ed-80b7-5ea0-b3c4-b479bf96278f"
+        "c764921a-4010-5ad7-9828-6ef156ec9ef9"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -90855,8 +90865,8 @@
         "42927d59-4ee8-5f54-85b1-5cd07bfcdb40",
         "19452F7C-FDF6-5BF2-881E-3688C0594C1B",
         "8F9BB8DE-8222-4616-B65A-6193F393EE9A",
-        "f96868b2-2502-5add-961f-a19245b0fdfa",
-        "e25e5718-6f18-4f7c-8d5a-174662f1a953"
+        "f5fbccad-9389-501a-96e6-f9a322f7ec6a",
+        "f96868b2-2502-5add-961f-a19245b0fdfa"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -105944,10 +105954,10 @@
         "b0ce19d9-4e87-5b27-ba5c-784e9528933c",
         "368fdb00-475f-5f33-9006-24162ccb6be0",
         "f0ca6266-2db1-5c67-834e-886fe5c4e94c",
+        "59387ac3-5340-5f61-910c-dcb255898752",
         "19ba1c62-05e0-52dc-ba26-261f7f00dbac",
         "A85DFD9B-B406-5A93-B7EC-0ABEEC88955E",
-        "7CCF6F4C-D5D1-5A45-80CE-089337FB009B",
-        "e58cf695-db2a-58bb-96aa-106dbe675832"
+        "7CCF6F4C-D5D1-5A45-80CE-089337FB009B"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -117049,10 +117059,10 @@
         "80a47940-55b3-506f-b20c-e734de5e589f",
         "0d3607c7-9b1a-57f0-a882-b698cfda1c54",
         "7104efd6-180e-56b7-9cd3-1ed218fe179d",
+        "a09bf7d7-dab7-5d42-9d4c-4daa9cdd4e94",
         "758b216b-8d7b-547a-b90a-9e518da7fe21",
         "677FDF98-F58A-5042-A564-2A99EA6B7F3E",
-        "8aa3d5d7-cd39-5bdc-bac2-4feba1e8c45a",
-        "b36072b2-2d64-505c-aa5e-93f8b72c4fa3"
+        "8aa3d5d7-cd39-5bdc-bac2-4feba1e8c45a"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -119980,14 +119990,14 @@
       "city": "Havana",
       "country": "Cuba",
       "relatedTourIds": [
+        "86b3cec0-752c-550b-8c1c-c4585171168e",
         "3261bd51-24b5-5a79-a691-a1e1a868ccfb",
         "d9553133-f19c-5246-af3b-35214ddde5fe",
         "4bd57de1-6494-5b3d-af3a-808ee518c111",
         "60de976a-a8da-4dfc-a1cc-9d2a26fea2fc",
         "21cee03a-e920-5018-adff-7b2f10f5ff91",
         "fb2eb675-600d-5884-b5c0-2db5f8f887e4",
-        "b20c0664-7644-5bac-aa79-36d7fb275722",
-        "dfca8058-fdfb-5473-b44d-07dac56a3042"
+        "b20c0664-7644-5bac-aa79-36d7fb275722"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -122661,11 +122671,11 @@
         "645337e8-dc86-562f-b955-0065574dfa4e",
         "20d42a62-3c4f-5cc1-8be6-f130b6a3637c",
         "0165232e-3d55-5685-a448-a7bf5afece8f",
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0",
         "affd41b0-a978-5626-91ec-e884f2827c35",
+        "21939587-adc2-5623-98ba-5d0df9142f5b",
         "3cac5404-3830-5006-ad9a-8c34cc795b5d",
-        "455f7e84-75fe-5909-a6be-7a806f27f3e6",
-        "936F09F0-CE46-5A4C-9DA9-B271B5FBB147",
-        "52f82136-e260-594b-986a-6857f36d63a2"
+        "455f7e84-75fe-5909-a6be-7a806f27f3e6"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -135282,8 +135292,8 @@
         "4feadb69-9ce2-566a-92f1-4cc76882304a",
         "5230cc32-e47b-51e7-a81c-ad53a8b3a3fa",
         "4a89091e-b6e7-5395-968d-3dbef6f63daf",
-        "924fb37f-f106-5626-9112-e89b3ececd84",
-        "54ea68c0-e852-5264-b867-9a651c1eb4d1"
+        "59387ac3-5340-5f61-910c-dcb255898752",
+        "924fb37f-f106-5626-9112-e89b3ececd84"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -138438,7 +138448,7 @@
         "01deaa74-c2af-5cab-b0bb-cbf71651d47b",
         "EB123E68-A754-458A-9D1C-F9920DC1D18B",
         "1d7e97a5-3bff-5d27-bb3c-e299d03c732a",
-        "9f48ffaf-5128-5c14-b945-630978f6e185"
+        "59387ac3-5340-5f61-910c-dcb255898752"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -138893,9 +138903,9 @@
         "01deaa74-c2af-5cab-b0bb-cbf71651d47b",
         "d17e0a2d-1a53-55bd-bdd3-79b1e036de96",
         "92041407-6b30-5d78-a03e-8802b4161918",
+        "59387ac3-5340-5f61-910c-dcb255898752",
         "7bfcc300-43fe-5571-95d8-d266733feb23",
-        "3A65A8B3-215D-5F84-A3F2-23FAAE6E0300",
-        "347dab13-ec7d-5f13-811a-40fdd9c2f9e3"
+        "3A65A8B3-215D-5F84-A3F2-23FAAE6E0300"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -140551,6 +140561,1273 @@
         "Venue",
         "Fashion",
         "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "59387ac3-5340-5f61-910c-dcb255898752",
+      "createdAt": "2026-10-30",
+      "title": "Baco",
+      "shortDescription": "Not long ago, ordering wine in Santiago meant choosing a bottle from a handful of big names, and this relaxed corner of Providencia is one of…",
+      "longDescription": "Not long ago, ordering wine in Santiago meant choosing a bottle from a handful of big names, and this relaxed corner of Providencia is one of the places that quietly changed the habit.\n\nStart with the list, which runs to more than two hundred bottles with around twenty-five open by the glass at any one time. That glass matters, because Baco is credited with helping to pioneer wine by the glass in Santiago, and the choice leans towards small and sometimes esoteric growers — cool coastal Sauvignon Blanc, say, or old-vine Carignan from the Maule Valley — rather than the labels you'd find in duty free.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-baco_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-baco_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-baco_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-baco_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-baco_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1465f259-bdab-59dc-a534-4152089dc910",
+          "order": 0,
+          "title": "Baco",
+          "caption": "At number 113 Nueva de Lyon in Providencia, by the patio tables and the wine shop next door.",
+          "latitude": -33.420540681033735,
+          "longitude": -70.61029417790981,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-baco.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-baco_hero.webp",
+          "transcriptText": "Not long ago, ordering wine in Santiago meant choosing a bottle from a handful of big names, and this relaxed corner of Providencia is one of the places that quietly changed the habit.\n\nNueva de Lyon, a short stroll north of Avenida Providencia, is your street, and the address is number one hundred and thirteen: a low, airy frontage with tables spilling onto a broad outdoor patio, and next door a small wine shop belonging to the same house. The name, Baco, is simply Spanish for Bacchus, the Roman god of wine, which seems fair enough.\n\nStart with the list, which runs to more than two hundred bottles with around twenty-five open by the glass at any one time. That glass matters, because Baco is credited with helping to pioneer wine by the glass in Santiago, and the choice leans towards small and sometimes esoteric growers — cool coastal Sauvignon Blanc, say, or old-vine Carignan from the Maule Valley — rather than the labels you'd find in duty free.\n\nThe kitchen is French in spirit with a strong Basque and Spanish accent, so expect salmon tartare, baby squid and grilled hake, a proper board of French cheeses and, when they're in season, angulas, the tiny baby eels that the Basque Country treats as a delicacy.\n\nWhat I like most is the shop next door, where a bottle you enjoyed at the table can go home with you, and where Chilean winemakers have been known to drop by and open their own work, so the place feels less like a restaurant than a long-running tasting club.\n\nIt's a modest room doing a fairly large job, helping a country famous for exporting wine to discover, one glass at a time, how much variety it has at home.\n\nBefore you go, ask in the shop what's newly arrived from the small producers of the south, then wander two blocks down to Avenida Providencia, where the old Drugstore arcade is waiting with its bookshops and cafés."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.420540681033735,
+      "centroidLongitude": -70.61029417790981,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "a8871a9b-95d3-53e3-9539-860b54b331c8",
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+        "4a9cea47-36a6-5f13-9471-e8dc2db95be0",
+        "0c842ae3-c162-5bc1-a537-d8c6ed2f77c7",
+        "f0ff8c57-b498-53d5-9738-58f3f4904243",
+        "7d6a30e1-ccae-5194-ae05-682f5af3884d",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "c86dfaae-433d-56c7-855b-bde656ca117c"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f5fbccad-9389-501a-96e6-f9a322f7ec6a",
+      "createdAt": "2026-10-30",
+      "title": "Benedictine Monastery of the Holy Trinity | Monasterio Benedictino de la Santísima Trinidad",
+      "shortDescription": "There's no stained glass in this church, no gilding and no painted saints, and that absence is precisely the design.",
+      "longDescription": "There's no stained glass in this church, no gilding and no painted saints, and that absence is precisely the design.\n\nThe architects, Martín Correa and Gabriel Guarda, were, rather unusually, both monks of this community, and they designed the church between 1962 and 1964; Guarda went on to become one of Chile's most respected historians, winning the National History Prize in 1984, and the monastery remained his home.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-benedictine-monastery-las-condes_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-benedictine-monastery-las-condes_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-benedictine-monastery-las-condes_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-benedictine-monastery-las-condes_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-benedictine-monastery-las-condes_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-benedictine-monastery-las-condes_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-benedictine-monastery-las-condes_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "be796876-61fc-56cf-b9ee-ebec035dc22d",
+          "order": 0,
+          "title": "Benedictine Monastery of the Holy Trinity | Monasterio Benedictino de la Santísima Trinidad",
+          "caption": "On the path up the hillside off Montecassino, just below the stepped white volumes of the church.",
+          "latitude": -33.38418980796201,
+          "longitude": -70.51357547790982,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-benedictine-monastery-las-condes.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-benedictine-monastery-las-condes_hero.webp",
+          "transcriptText": "There's no stained glass in this church, no gilding and no painted saints, and that absence is precisely the design.\n\nFollow the path up the hillside on Montecassino, high on the eastern edge of Las Condes, until the monastery church sits just above you: a cluster of plain white volumes stepped into the slope, with the city falling away behind you to the west. If the doors are open and you go in, keep your voice low, because this is a working Benedictine monastery and the monks still pray here through the day.\n\nThe architects, Martín Correa and Gabriel Guarda, were, rather unusually, both monks of this community, and they designed the church between 1962 and 1964; Guarda went on to become one of Chile's most respected historians, winning the National History Prize in 1984, and the monastery remained his home.\n\nThen look at the shape, which is cleverer than it first appears: the church is essentially two cubes joined at their corners, one for the altar and one for the congregation, so the space turns on a diagonal and you're never quite squared up to a flat wall.\n\nThe materials are almost nothing at all, just concrete and lime with no ornament anywhere. The interesting bit is this: the light was always meant to be the protagonist, entering indirectly so that you seldom see its source, washing across the white surfaces and shifting as the hours pass, which means the interior is never quite the same twice.\n\nChile declared it a national monument in 1981, and it later became the first Chilean building to receive a Getty Foundation conservation grant, which puts a small hillside church in the same company as the Sydney Opera House.\n\nBefore you leave, find a place at the edge of the hill and look east to the Andes, because on a clear winter morning, with fresh snow on the peaks, you'll understand why anyone would choose to pray up here."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.38418980796201,
+      "centroidLongitude": -70.51357547790982,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "21939587-adc2-5623-98ba-5d0df9142f5b",
+        "37f30f44-7a45-5398-9e86-6bed363415f7",
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0",
+        "8b5f4585-4160-5355-9998-4507a211bd01",
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+        "40efe125-4d5e-5b0a-8b92-cc39aa010112",
+        "74a84ae4-100b-538d-952d-d37259e970a3"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Religious Building",
+        "Architecture",
+        "Faith",
+        "Modernist",
+        "Viewpoint",
+        "Free to Visit",
+        "Designed by a Master",
+        "Martín Correa",
+        "Gabriel Guarda"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4a9cea47-36a6-5f13-9471-e8dc2db95be0",
+      "createdAt": "2026-10-30",
+      "title": "Boragó",
+      "shortDescription": "More than two hundred foragers, fishers and small growers, scattered from the northern desert to Patagonia, supply the restaurant in front of…",
+      "longDescription": "More than two hundred foragers, fishers and small growers, scattered from the northern desert to Patagonia, supply the restaurant in front of you.\n\nThe chef is Rodolfo Guzmán, who opened Boragó in 2006 with an idea that seemed eccentric at the time: to cook only from Chile's own larder, including plants, seaweeds and fruits that grow nowhere else, many of them barely known even to Chileans.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-borago_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-borago_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-borago_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-borago_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-borago_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "84707280-9397-5df0-b0b4-16adb783b3fd",
+          "order": 0,
+          "title": "Boragó",
+          "caption": "At number 5970 Avenida San José María Escrivá de Balaguer in Vitacura, with Cerro Manquehue to the north.",
+          "latitude": -33.38225083404118,
+          "longitude": -70.58397972023768,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-borago.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-borago_hero.webp",
+          "transcriptText": "More than two hundred foragers, fishers and small growers, scattered from the northern desert to Patagonia, supply the restaurant in front of you.\n\nSet back from the long Avenida San José María Escrivá de Balaguer, at number five thousand nine hundred and seventy, Boragó keeps a quiet frontage here in Vitacura, with the rounded bulk of Cerro Manquehue rising to the north. It only opens in the evening, so by day you may find little sign of life, which rather suits a kitchen that prefers the food to do the talking.\n\nThe chef is Rodolfo Guzmán, who opened Boragó in 2006 with an idea that seemed eccentric at the time: to cook only from Chile's own larder, including plants, seaweeds and fruits that grow nowhere else, many of them barely known even to Chileans.\n\nThere's just one menu, called Endémica, which runs to somewhere between twelve and eighteen small courses and changes through the year, and Guzmán draws heavily on Mapuche food traditions, with a research centre alongside that catalogues and tests new ingredients. During the long pandemic closure the team even launched Muumami, a burger built from native ingredients, which tells you how seriously they take the idea.\n\nHere's what strikes me about the whole project: fine dining has usually borrowed its prestige from elsewhere, from French technique and imported luxuries, whereas Boragó built its reputation by looking inward, and the world followed, placing it on the World's 50 Best list every year since 2015 and giving Guzmán Latin America's Icon Award in 2025.\n\nA country's wild hillsides and cold coastline, served as a tasting menu, turned out to be the most persuasive case for Chilean cooking that anyone had made.\n\nIf you're not eating here tonight, the walking trails on Cerro Manquehue begin a short drive north, and the scrubby, scented plants along them are a good introduction to the kind of wild Chile that ends up on these plates."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.38225083404118,
+      "centroidLongitude": -70.58397972023768,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+        "a8871a9b-95d3-53e3-9539-860b54b331c8",
+        "a09bf7d7-dab7-5d42-9d4c-4daa9cdd4e94",
+        "0c842ae3-c162-5bc1-a537-d8c6ed2f77c7",
+        "59387ac3-5340-5f61-910c-dcb255898752",
+        "7d6a30e1-ccae-5194-ae05-682f5af3884d",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "c86dfaae-433d-56c7-855b-bde656ca117c"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "86b3cec0-752c-550b-8c1c-c4585171168e",
+      "createdAt": "2026-10-30",
+      "title": "Gran Torre Costanera",
+      "shortDescription": "Three hundred metres of glass and steel rise out of this shopping centre, and the tower in front of you is the tallest building in South America.",
+      "longDescription": "Three hundred metres of glass and steel rise out of this shopping centre, and the tower in front of you is the tallest building in South America.\n\nThe tower, designed by the Argentine-born architect César Pelli, has sixty-two floors, and the last two are given over to Sky Costanera, an observation deck that opened in 2015 with the full sweep of the city and the Andes on a clear day.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-gran-torre-costanera_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-gran-torre-costanera_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-gran-torre-costanera_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9abe4b78-903c-5e86-bd5a-fe6e1da5a77c",
+          "order": 0,
+          "title": "Gran Torre Costanera",
+          "caption": "On the pavement of Avenida Andrés Bello, with the Mapocho and its park behind you and the tower ahead.",
+          "latitude": -33.417200970875555,
+          "longitude": -70.60724302181013,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-gran-torre-costanera.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-gran-torre-costanera_hero.webp",
+          "transcriptText": "Three hundred metres of glass and steel rise out of this shopping centre, and the tower in front of you is the tallest building in South America.\n\nTip your head right back from the pavement on Avenida Andrés Bello, with the Mapocho river and its park behind you, and the Gran Torre Costanera fills the sky ahead, a tapering glass shaft rising out of the mall's long, low base. The mall itself, now branded Cenco Costanera, is the six-storey block you'd walk into at street level.\n\nThe tower, designed by the Argentine-born architect César Pelli, has sixty-two floors, and the last two are given over to Sky Costanera, an observation deck that opened in 2015 with the full sweep of the city and the Andes on a clear day.\n\nWhat's easy to forget is that construction began in 2006, but in January 2009 the global financial crisis brought it to a halt, leaving a half-built skeleton on the skyline until work resumed at the end of that year, and the tower finally reached its full height in February 2012.\n\nThe mall below opened that June and is often described as the largest in South America, with six floors of shops and restaurants and a vast Jumbo hypermarket.\n\nAnd here's the thing about it: the building that redrew Santiago's skyline wasn't commissioned by a government or a bank, but by Cencosud, the retail group behind those Jumbo supermarkets, which says a good deal about how modern Santiago grew.\n\nLove it or not, and people here have argued about it from the start, it's now the landmark most of the city uses to find its bearings.\n\nIf the sky is clear, it's worth a ticket for the viewing deck late in the afternoon, when the low sun turns the Andes pink; otherwise, cross over into the riverside park and look back, because the tower makes far more sense from a distance than from directly underneath."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.417200970875555,
+      "centroidLongitude": -70.60724302181013,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "a63e587d-64d7-58cf-9c86-d14c14e183dc",
+        "7d6a30e1-ccae-5194-ae05-682f5af3884d",
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "21939587-adc2-5623-98ba-5d0df9142f5b",
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+        "37f30f44-7a45-5398-9e86-6bed363415f7",
+        "8b5f4585-4160-5355-9998-4507a211bd01"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Commerce",
+        "Contemporary",
+        "Viewpoint",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "César Pelli"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f963b19a-dd2f-5d44-89ab-526a8532ada0",
+      "createdAt": "2026-10-30",
+      "title": "Chilean Museum of Pre-Columbian Art | Museo Chileno de Arte Precolombino",
+      "shortDescription": "Chilean history, as most of us learn it, begins in 1541 with a Spanish captain and a new city, yet the building in front of you tells a story…",
+      "longDescription": "Chilean history, as most of us learn it, begins in 1541 with a Spanish captain and a new city, yet the building in front of you tells a story thousands of years older.\n\nSergio Larraín García-Moreno, the man behind it, was an architect who spent close to fifty years collecting pre-Columbian objects, and in December 1981 he opened this museum to give his collection a permanent public home; it now holds more than three thousand pieces from around a hundred cultures, from Mesoamerica to the southern Andes.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-museo-chileno-de-arte-precolombino_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-museo-chileno-de-arte-precolombino_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-museo-chileno-de-arte-precolombino_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-museo-chileno-de-arte-precolombino_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-museo-chileno-de-arte-precolombino_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "638c7784-0c89-5f3f-aea0-f83aefd0fb44",
+          "order": 0,
+          "title": "Chilean Museum of Pre-Columbian Art | Museo Chileno de Arte Precolombino",
+          "caption": "At the entrance on Bandera, number 361, at the corner of Compañía, a block west of the Plaza de Armas.",
+          "latitude": -33.4390245,
+          "longitude": -70.6521952,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-museo-chileno-de-arte-precolombino.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-museo-chileno-de-arte-precolombino_hero.webp",
+          "transcriptText": "Chilean history, as most of us learn it, begins in 1541 with a Spanish captain and a new city, yet the building in front of you tells a story thousands of years older.\n\nThe long, pale colonial building at the corner of Bandera and Compañía, one block west of the Plaza de Armas and just behind the cathedral, is the old Royal Customs House, built between 1805 and 1807, and the museum's entrance is on Bandera, at number three hundred and sixty-one.\n\nSergio Larraín García-Moreno, the man behind it, was an architect who spent close to fifty years collecting pre-Columbian objects, and in December 1981 he opened this museum to give his collection a permanent public home; it now holds more than three thousand pieces from around a hundred cultures, from Mesoamerica to the southern Andes.\n\nThen head downstairs, into space that the architect Smiljan Radić created beneath the old building in a renovation completed in 2014, which enlarged the museum by roughly seventy per cent. Down there is the permanent display called Chile Before Chile, and the title is the point.\n\nAmong its most moving pieces are those of the Chinchorro people of the northern coast, who were preparing their dead with great care some seven thousand years ago, among the earliest such practices known anywhere and older than Egypt's; nearby stand chemamüll, tall carved wooden figures from Mapuche funerary tradition.\n\nThe curators' argument is gentle but firm, namely that the country's story didn't begin with a founding date on a plaque, and that the diversity of everything that came before is something to be proud of rather than tidied away.\n\nIt's a museum that quietly moves the start of the story back by several thousand years.\n\nOn your way out, look for the Inca quipu, the knotted cords used to keep records without writing, then walk round to the Plaza de Armas, where the official version of the founding sits in bronze, on horseback."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.4390245,
+      "centroidLongitude": -70.6521952,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "21939587-adc2-5623-98ba-5d0df9142f5b",
+        "8b5f4585-4160-5355-9998-4507a211bd01",
+        "86b3cec0-752c-550b-8c1c-c4585171168e",
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "7d6a30e1-ccae-5194-ae05-682f5af3884d",
+        "37f30f44-7a45-5398-9e86-6bed363415f7",
+        "f5fbccad-9389-501a-96e6-f9a322f7ec6a"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "History",
+        "Art",
+        "Colonial",
+        "Designed by a Master",
+        "Smiljan Radić"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7d6a30e1-ccae-5194-ae05-682f5af3884d",
+      "createdAt": "2026-10-30",
+      "title": "Drugstore",
+      "shortDescription": "Long before Santiago had shopping malls it had arcades, and this is one of the few from that era that still feels properly alive.",
+      "longDescription": "Long before Santiago had shopping malls it had arcades, and this is one of the few from that era that still feels properly alive.\n\nIt opened in the late 1960s, the creation of two families, the Yaconis and the Santa Cruzes, who had admired the shopping arcades of Europe and wanted something similar for a Providencia that was fast becoming the city's fashionable address.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-drugstore_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-drugstore_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-drugstore_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "09ec6339-1f12-5db8-aada-1183372825be",
+          "order": 0,
+          "title": "Drugstore",
+          "caption": "At the passage opening off Avenida Providencia at number 2124, near Los Leones metro station.",
+          "latitude": -33.421999096149655,
+          "longitude": -70.61125923516188,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-drugstore.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-drugstore_hero.webp",
+          "transcriptText": "Long before Santiago had shopping malls it had arcades, and this is one of the few from that era that still feels properly alive.\n\nThat passage opening off Avenida Providencia in front of you, at number two thousand one hundred and twenty-four, near Los Leones metro station, is the Drugstore, a warren of small shops, cafés and bookshops tucked in behind the street frontage.\n\nIt opened in the late 1960s, the creation of two families, the Yaconis and the Santa Cruzes, who had admired the shopping arcades of Europe and wanted something similar for a Providencia that was fast becoming the city's fashionable address.\n\nBy the 1980s it was one of the places to be seen in Santiago, with record shops such as Fusión drawing the young and design shops drawing everybody else, and that thread of design and culture has never really snapped.\n\nHave a wander and you'll find bookshops including Altamira and Takk, cafés where people settle in to read or work, and dozens of small labels; more than sixty per cent of the units are independent or collaborative ventures, and the management has been championing Chilean design for over twenty years.\n\nWhat's worth knowing, standing here, is that Providencia's arcades were a kind of experiment before the big malls arrived, and the municipality now marks them as part of its hidden urban heritage. Most were overtaken by the giants, but the Drugstore survived by doing the opposite of a mall, staying small, local and a little bit slow.\n\nIt's the sort of place where you can still meet the person who made the thing you're buying.\n\nWhen you're done, pick up a book by a Chilean author if one catches your eye, then step back out onto Providencia and look east, where the Gran Torre Costanera rises above the rooftops, the age of the mega-mall in a single silhouette, barely fifteen minutes' walk away."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.421999096149655,
+      "centroidLongitude": -70.61125923516188,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "a63e587d-64d7-58cf-9c86-d14c14e183dc",
+        "86b3cec0-752c-550b-8c1c-c4585171168e",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0",
+        "59387ac3-5340-5f61-910c-dcb255898752",
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+        "a8871a9b-95d3-53e3-9539-860b54b331c8",
+        "21939587-adc2-5623-98ba-5d0df9142f5b"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Notable Building",
+        "Commerce",
+        "Fashion",
+        "Literature",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a09bf7d7-dab7-5d42-9d4c-4daa9cdd4e94",
+      "createdAt": "2026-10-30",
+      "title": "Fukasawa",
+      "shortDescription": "This restaurant is named after a teacher, which is not something you can say about many places.",
+      "longDescription": "This restaurant is named after a teacher, which is not something you can say about many places.\n\nThe chef is Marcos Baeza, a veteran of Santiago's Japanese kitchens, who opened Fukasawa in December 2022 and cooks here alongside his twin sons, Marcus and Lucas. The name honours Naoki Fukasawa, the Japanese chef who mentored Baeza when they worked together years ago, so every booking is, in a small way, a thank-you note.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-fukasawa_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-fukasawa_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-fukasawa_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-fukasawa_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-fukasawa_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "457de148-1678-5736-9b08-3770dc9f71f8",
+          "order": 0,
+          "title": "Fukasawa",
+          "caption": "At the CasaCostanera complex on Avenida Nueva Costanera; the restaurant is on the fourth-floor roof.",
+          "latitude": -33.39854213837088,
+          "longitude": -70.59844086889132,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-fukasawa.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-fukasawa_hero.webp",
+          "transcriptText": "This restaurant is named after a teacher, which is not something you can say about many places.\n\nHead for the CasaCostanera complex on Avenida Nueva Costanera and take the lift right to the top, because Fukasawa occupies the fourth-floor rooftop, a space the building simply calls Roof, with a terrace that looks east towards the Andes.\n\nThe chef is Marcos Baeza, a veteran of Santiago's Japanese kitchens, who opened Fukasawa in December 2022 and cooks here alongside his twin sons, Marcus and Lucas. The name honours Naoki Fukasawa, the Japanese chef who mentored Baeza when they worked together years ago, so every booking is, in a small way, a thank-you note.\n\nThe menu brings Japanese technique to the Chilean coast, with touches of Nikkei, the cooking of Peru's Japanese community, and a very local larder: Patagonian king crab, lobster, truffles and caviar from Chilean sturgeon farms, alongside gyoza filled with lamb and foie gras.\n\nIf you'd rather hand the decisions over entirely, there's an omakase, the Japanese custom of letting the chef choose for you, which seems especially fitting in a kitchen built on trust between master and pupil.\n\nIt's worth noticing how naturally the pairing works, because Chile's long Pacific coastline produces some remarkable seafood, and Japanese cooking is, at heart, about respecting exactly that kind of raw material, so the marriage here feels less like fusion than an old friendship made official.\n\nA teacher's name over the door, and a father and his sons at the counter, make for a restaurant that wears its lineage rather proudly.\n\nIf you're up on the roof around sunset, wait until the last light has gone off the mountains before you leave, then stroll a block over to Alonso de Córdova, where the galleries and design shops make for a pleasant evening walk."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.39854213837088,
+      "centroidLongitude": -70.59844086889132,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+        "4a9cea47-36a6-5f13-9471-e8dc2db95be0",
+        "a8871a9b-95d3-53e3-9539-860b54b331c8",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "0c842ae3-c162-5bc1-a537-d8c6ed2f77c7",
+        "f0ff8c57-b498-53d5-9738-58f3f4904243",
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+        "c86dfaae-433d-56c7-855b-bde656ca117c"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Viewpoint",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f0ff8c57-b498-53d5-9738-58f3f4904243",
+      "createdAt": "2026-10-30",
+      "title": "Hotel Bidasoa",
+      "shortDescription": "The Bidasoa is a river on the far side of the world, the short stretch of water that marks the border between Spain's Basque Country and France…",
+      "longDescription": "The Bidasoa is a river on the far side of the world, the short stretch of water that marks the border between Spain's Basque Country and France, and this hotel carries its name for a reason.\n\nIts founder, Mauricio Sanz, was born near that river in 1932 and left Spain as a small child during the Civil War, eventually settling in Santiago. His family's name was already known here through Pinpilinpausha, a Basque restaurant that opened downtown in 1940 and became a meeting place for business people, artists and intellectuals for decades; the name, rather sweetly, means butterfly in Basque.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-hotel-bidasoa_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-hotel-bidasoa_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-hotel-bidasoa_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-hotel-bidasoa_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-hotel-bidasoa_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "968dcc2d-245b-5c23-8138-1265dfd9028e",
+          "order": 0,
+          "title": "Hotel Bidasoa",
+          "caption": "At number 4873 Avenida Vitacura, before the gardens, the original house and the newer tower alongside.",
+          "latitude": -33.39823090751306,
+          "longitude": -70.58510142656348,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-hotel-bidasoa.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-hotel-bidasoa_hero.webp",
+          "transcriptText": "The Bidasoa is a river on the far side of the world, the short stretch of water that marks the border between Spain's Basque Country and France, and this hotel carries its name for a reason.\n\nAvenida Vitacura, number four thousand eight hundred and seventy-three, is the spot: a family-run hotel set among gardens, with a newer eight-storey tower alongside the original house.\n\nIts founder, Mauricio Sanz, was born near that river in 1932 and left Spain as a small child during the Civil War, eventually settling in Santiago. His family's name was already known here through Pinpilinpausha, a Basque restaurant that opened downtown in 1940 and became a meeting place for business people, artists and intellectuals for decades; the name, rather sweetly, means butterfly in Basque.\n\nIn 1989, at the age of fifty-six, Sanz opened this hotel with thirty-five rooms, wanting, as his son has put it, to make it a home for visitors from abroad and to bring a little of his Spain to Chile.\n\nFrom 2014 the family bought up neighbouring plots, added the tower and multiplied the floor space roughly sixfold, to more than a hundred rooms, while the original house became Casa Sanz, a plant-based restaurant with music and cultural events; the gardens, meanwhile, are looked after by the family matriarch, María Elena Raab.\n\nSeen that way, this isn't really a boutique hotel at all, but the latest chapter in a family story about exile and hospitality, about a boy who crossed an ocean and spent his life making strangers feel at home.\n\nThree of his seven children now run the hotel, and Pinpilinpausha lives on too, in a newer home in the El Golf district.\n\nIf you have time, wander into the garden or call into Casa Sanz for a coffee, then follow Avenida Vitacura west for twenty minutes or so to Parque Bicentenario, where the lagoons and lawns make a fine end to the walk."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.39823090751306,
+      "centroidLongitude": -70.58510142656348,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "59387ac3-5340-5f61-910c-dcb255898752",
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+        "a8871a9b-95d3-53e3-9539-860b54b331c8",
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "a09bf7d7-dab7-5d42-9d4c-4daa9cdd4e94",
+        "19db0319-d356-56e9-81bb-e818c20278c5",
+        "37f30f44-7a45-5398-9e86-6bed363415f7"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Immigration",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "19db0319-d356-56e9-81bb-e818c20278c5",
+      "createdAt": "2026-10-30",
+      "title": "Hotel Magnolia",
+      "shortDescription": "Look up past the old stone façade and the building seems to repeat itself, upside down, in glass.",
+      "longDescription": "Look up past the old stone façade and the building seems to repeat itself, upside down, in glass.\n\nThe house was built in 1929, designed by Eduardo Costabal Zegers for Ana Zegers García Huidobro, a prominent society figure and the daughter of the politician Julio Zegers.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-hotel-magnolia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-hotel-magnolia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-hotel-magnolia_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-hotel-magnolia_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-hotel-magnolia_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "81427c09-546f-5cc7-ab5c-0ca8a08d8d7e",
+          "order": 0,
+          "title": "Hotel Magnolia",
+          "caption": "Outside number 539 Huérfanos, a block from the foot of Santa Lucía Hill, looking up at the glass floors.",
+          "latitude": -33.43867809403928,
+          "longitude": -70.64466817976232,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-hotel-magnolia.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-hotel-magnolia_hero.webp",
+          "transcriptText": "Look up past the old stone façade and the building seems to repeat itself, upside down, in glass.\n\nOutside number five hundred and thirty-nine on Huérfanos, a block from the foot of Santa Lucía Hill, you should see a three-storey mansion with Art Deco details in its stonework, and above it three newer floors clad in glass.\n\nThe house was built in 1929, designed by Eduardo Costabal Zegers for Ana Zegers García Huidobro, a prominent society figure and the daughter of the politician Julio Zegers.\n\nGenerations later, when it was turned into a hotel, the job went to the architect Cazú Zegers, who discovered during the project that the original architect was one of her own forebears. Working with the interior designer Carolina Delpiano, she restored the house, replicated its stonework where needed and added the three new floors, and the Hotel Magnolia opened in 2016.\n\nNow look at that glass extension again, because the gift is printed on it: an upside-down photograph of the floors below, so the new storeys announce themselves and disappear into the old house at the same time.\n\nHere's what I love about this corner: rather than pretending the addition is old or shouting that it's new, the design simply lets the 1929 house look at its own reflection, which is a graceful way of making peace with the past.\n\nInside, the old mansion now holds DeMo Magnolia, a restaurant with only fifteen seats that has made Latin America's 50 Best list, and up top there's a roof terrace with views across the city to the Andes.\n\nWhen you've had your look, walk a couple of minutes east and climb Santa Lucía Hill, and from the terraces see whether you can pick out the Magnolia's glass floors among the rooftops."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.43867809403928,
+      "centroidLongitude": -70.64466817976232,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "37f30f44-7a45-5398-9e86-6bed363415f7",
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0",
+        "f0ff8c57-b498-53d5-9738-58f3f4904243",
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+        "86b3cec0-752c-550b-8c1c-c4585171168e",
+        "f5fbccad-9389-501a-96e6-f9a322f7ec6a"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Food",
+        "Art Deco",
+        "Contemporary",
+        "Designed by a Master",
+        "Cazú Zegers",
+        "Eduardo Costabal Zegers"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+      "createdAt": "2026-10-30",
+      "title": "La Calma",
+      "shortDescription": "The Pacific is the best part of two hours' drive from here, and yet nothing in this kitchen comes out of a freezer.",
+      "longDescription": "The Pacific is the best part of two hours' drive from here, and yet nothing in this kitchen comes out of a freezer.\n\nThe chef is Ignacio Ovalle, known to everyone as Nacho, and the rules are simple and strict: the menu follows the day's catch, there's no frozen product at all, and the fish is bought through fair-trade relationships with the people who land it rather than at whatever the wholesale price happens to be.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-la-calma_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-la-calma_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-la-calma_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-la-calma_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d02d7493-f6cf-5200-a571-fff8245417c1",
+          "order": 0,
+          "title": "La Calma",
+          "caption": "Behind the terrace canopies at number 3832 Avenida Nueva Costanera, near the CasaCostanera complex.",
+          "latitude": -33.39968660998885,
+          "longitude": -70.59821822023767,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-la-calma.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-la-calma_hero.webp",
+          "transcriptText": "The Pacific is the best part of two hours' drive from here, and yet nothing in this kitchen comes out of a freezer.\n\nBehind the terrace canopies at number three thousand eight hundred and thirty-two on Avenida Nueva Costanera, close to the CasaCostanera complex, is La Calma, a calm and sunlit dining room with a covered terrace for warmer days.\n\nThe chef is Ignacio Ovalle, known to everyone as Nacho, and the rules are simple and strict: the menu follows the day's catch, there's no frozen product at all, and the fish is bought through fair-trade relationships with the people who land it rather than at whatever the wholesale price happens to be.\n\nSo the real gift is the menu itself, which shifts with whatever the boats bring in. Look out for Chilean oysters, sea bass slowly confited in olive oil, Patagonian king crab, linguine with crabmeat and grilled octopus, and if you're with company, the La Calma platter, which puts a good share of the coastline on a single table.\n\nThere's a quiet confidence in the cooking that reviewers keep coming back to, the sense that the kitchen trusts its raw material and doesn't bury it, and that restraint has made La Calma one of the hardest tables in Santiago to book and a regular fixture on the extended list of Latin America's 50 Best.\n\nCalm, it turns out, is a technique, because if you leave good fish alone it will do most of the work for you.\n\nIf you can't get a table, it's worth making the journey to the coast itself, to the fishing coves around Valparaíso, where you'll see the same kind of catch come ashore; closer to hand, the restaurant's neighbours on Nueva Costanera include the rooftop terrace of Fukasawa, a short walk away."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 102,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.39968660998885,
+      "centroidLongitude": -70.59821822023767,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "4a9cea47-36a6-5f13-9471-e8dc2db95be0",
+        "a09bf7d7-dab7-5d42-9d4c-4daa9cdd4e94",
+        "a8871a9b-95d3-53e3-9539-860b54b331c8",
+        "0c842ae3-c162-5bc1-a537-d8c6ed2f77c7",
+        "59387ac3-5340-5f61-910c-dcb255898752",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "7d6a30e1-ccae-5194-ae05-682f5af3884d",
+        "f0ff8c57-b498-53d5-9738-58f3f4904243"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Maritime"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c86dfaae-433d-56c7-855b-bde656ca117c",
+      "createdAt": "2026-10-30",
+      "title": "Cristián Donoso Atelier & La Clé",
+      "shortDescription": "There's a curious thing about this address on Alonso de Córdova: it began as a furniture showroom and grew into something closer to a private…",
+      "longDescription": "There's a curious thing about this address on Alonso de Córdova: it began as a furniture showroom and grew into something closer to a private world.\n\nCristián Donoso came to woodwork by a roundabout route, spending around fifteen years abroad, including time in India and in Ecuador, where he learned the craft, and his training is rooted in classical and colonial furniture-making.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-cristian-donoso-atelier_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-cristian-donoso-atelier_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-cristian-donoso-atelier_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-cristian-donoso-atelier_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-cristian-donoso-atelier_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-cristian-donoso-atelier_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6ea008b6-f88c-5c93-b20f-70e12ff1d496",
+          "order": 0,
+          "title": "Cristián Donoso Atelier & La Clé",
+          "caption": "At number 2860 Alonso de Córdova in Vitacura, by the showroom of handmade wooden furniture.",
+          "latitude": -33.40159095646185,
+          "longitude": -70.59765956441804,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-cristian-donoso-atelier.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-cristian-donoso-atelier_hero.webp",
+          "transcriptText": "There's a curious thing about this address on Alonso de Córdova: it began as a furniture showroom and grew into something closer to a private world.\n\nAlonso de Córdova, Vitacura's long street of galleries and design houses, runs right past you, and the atelier sits at number two thousand eight hundred and sixty, a short walk from the corner with Nueva Costanera. What you're looking for is a showroom of handmade wooden furniture, the work of the cabinetmaker whose name is over the door.\n\nCristián Donoso came to woodwork by a roundabout route, spending around fifteen years abroad, including time in India and in Ecuador, where he learned the craft, and his training is rooted in classical and colonial furniture-making.\n\nLook closely at the finishes, because that's where the craft shows. He works in sustainable timbers such as lenga, the southern beech of Patagonia, and walnut root, using traditional techniques like shellac alongside modern lacquers, and he mixes classical and modern lines because, as he has observed, most clients would rather combine styles than commit to one.\n\nThe gift detail is La Clé, a members' café and bistro that shares the premises with the workshop, where each member receives a small key-shaped brooch designed by his wife, the jeweller Victoria Oddó.\n\nIf you ask me, the pairing makes perfect sense, and Donoso has drawn the line himself: a cabinetmaker and a cook both work with their hands, choose their raw materials with care and fuss over presentation, so a beautiful table is only half the job without a good meal on it.\n\nHis stated aim for the place is a room so harmonious that only good things can happen in it, which is a fine brief for any piece of furniture.\n\nIf the showroom is open, spend a moment with the grain and the joints, then walk a few minutes north to Espoz, where the Patricia Ready gallery's concrete courtyard is well worth the detour."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.40159095646185,
+      "centroidLongitude": -70.59765956441804,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "37f30f44-7a45-5398-9e86-6bed363415f7",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "a8871a9b-95d3-53e3-9539-860b54b331c8",
+        "59387ac3-5340-5f61-910c-dcb255898752",
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+        "4a9cea47-36a6-5f13-9471-e8dc2db95be0",
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Art",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a8871a9b-95d3-53e3-9539-860b54b331c8",
+      "createdAt": "2026-10-30",
+      "title": "La Mesa",
+      "shortDescription": "Olive trees and a kitchen garden greet you at the door here, which tells you most of what you need to know about the cooking inside.",
+      "longDescription": "Olive trees and a kitchen garden greet you at the door here, which tells you most of what you need to know about the cooking inside.\n\nThe chef, Álvaro Romero, describes his approach as simple but refined cooking built on local produce, and the name is the manifesto, since La Mesa just means the table, the place where you want guests to feel at home and to come back.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-la-mesa_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-la-mesa_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-la-mesa_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-la-mesa_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-la-mesa_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c8a94954-fab7-5881-ae50-b70ac29b0891",
+          "order": 0,
+          "title": "La Mesa",
+          "caption": "At number 2767 Alonso de Córdova, at the entrance framed by olive trees and a kitchen garden.",
+          "latitude": -33.40074311383144,
+          "longitude": -70.59705076256552,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-la-mesa.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-la-mesa_hero.webp",
+          "transcriptText": "Olive trees and a kitchen garden greet you at the door here, which tells you most of what you need to know about the cooking inside.\n\nWalk along Alonso de Córdova until you reach number two thousand seven hundred and sixty-seven, and look for the entrance framed by greenery: an urban garden, olive trees, and beyond them a dining room with plants spilling out onto an outdoor area.\n\nThe chef, Álvaro Romero, describes his approach as simple but refined cooking built on local produce, and the name is the manifesto, since La Mesa just means the table, the place where you want guests to feel at home and to come back.\n\nThe surprise is in the kitchen, which runs entirely on electricity as part of a broader commitment to sustainability that extends to buying from small producers on fair terms. Try the sea urchin ceviche, a very Chilean pleasure, or the grilled scallops, and if vegetables are more your thing, there's a vegetable tartare as well.\n\nThe wine list follows the same instinct, with a house wine called Leonera from the Itata Valley in the south, one of Chile's oldest wine regions, and a newer wine bar alongside, Masal, which concentrates on small producers from Chile and further afield.\n\nPut another way, this is a restaurant that has built an argument out of modesty, with no theatre and no grand gestures, simply good things from nearby, cooked carefully, in a room that feels like someone's home.\n\nThat's harder to pull off than it sounds, and it has earned La Mesa a place on the 50 Best Discovery list.\n\nTake a proper look at the planting by the door, then drift along Alonso de Córdova and its side streets, where small galleries open their doors most afternoons and the walk is as good as any gallery itself."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 102,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.40074311383144,
+      "centroidLongitude": -70.59705076256552,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "59387ac3-5340-5f61-910c-dcb255898752",
+        "4a9cea47-36a6-5f13-9471-e8dc2db95be0",
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+        "a09bf7d7-dab7-5d42-9d4c-4daa9cdd4e94",
+        "0c842ae3-c162-5bc1-a537-d8c6ed2f77c7",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "c86dfaae-433d-56c7-855b-bde656ca117c",
+        "f0ff8c57-b498-53d5-9738-58f3f4904243"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a63e587d-64d7-58cf-9c86-d14c14e183dc",
+      "createdAt": "2026-10-30",
+      "title": "Mercado Urbano Tobalaba (MUT)",
+      "shortDescription": "Beneath your feet is the busiest metro station in Chile, and somebody decided to build a market on top of it.",
+      "longDescription": "Beneath your feet is the busiest metro station in Chile, and somebody decided to build a market on top of it.\n\nIt opened in stages from July 2023, developed by Territoria, and the idea is right there in the name, an urban market spread over several levels around the station, with shops above ground, a food market two floors down and plenty of bicycle parking.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-mercado-urbano-tobalaba_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-mercado-urbano-tobalaba_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-mercado-urbano-tobalaba_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-mercado-urbano-tobalaba_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-mercado-urbano-tobalaba_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0e6f8c9c-874b-57ac-98a4-a2b04c0cf6d4",
+          "order": 0,
+          "title": "Mercado Urbano Tobalaba (MUT)",
+          "caption": "Above Tobalaba metro station on Avenida Apoquindo, where Lines One and Four meet.",
+          "latitude": -33.4172801,
+          "longitude": -70.6011321,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-mercado-urbano-tobalaba.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-mercado-urbano-tobalaba_hero.webp",
+          "transcriptText": "Beneath your feet is the busiest metro station in Chile, and somebody decided to build a market on top of it.\n\nIf you came up from Tobalaba station, where Lines One and Four meet, you're already inside it: the Mercado Urbano Tobalaba, usually just called MUT, wraps around the station, with its office towers rising overhead and a large clock in a nineteenth-century style marking the way through from the metro.\n\nIt opened in stages from July 2023, developed by Territoria, and the idea is right there in the name, an urban market spread over several levels around the station, with shops above ground, a food market two floors down and plenty of bicycle parking.\n\nHead up to the third level for the part people love most, El Jardín, a planted garden walk that its creators compared to New York's High Line, with timber walkways threaded between the trees.\n\nBehind the scenes, the green credentials are serious, from geothermal climate control and grey water for irrigation to some eighty-eight thousand square metres of green and common space across a site of almost three hectares.\n\nStep back and the bigger idea comes into focus. Many of Santiago's big shopping centres were designed around the car, whereas this one was designed around a metro station, and in 2025 the Urban Land Institute named it among the ten best urban developments in the Americas, the only winner from outside the United States and Canada that year.\n\nA market whose front door is a train platform is a rather hopeful thing to find in a city of this size.\n\nRide the escalators down to the food market and pick up something to eat, then carry it back up to the garden, because a picnic among the trees above a metro station is very much the point of the place."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.4172801,
+      "centroidLongitude": -70.6011321,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "7d6a30e1-ccae-5194-ae05-682f5af3884d",
+        "86b3cec0-752c-550b-8c1c-c4585171168e",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "a8871a9b-95d3-53e3-9539-860b54b331c8",
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "4a9cea47-36a6-5f13-9471-e8dc2db95be0",
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+        "37f30f44-7a45-5398-9e86-6bed363415f7"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Market",
+        "Architecture",
+        "Commerce",
+        "Contemporary",
+        "Green Escape",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+      "createdAt": "2026-10-30",
+      "title": "Mestizo",
+      "shortDescription": "Those great grey boulders are not decoration, because they are holding up the roof.",
+      "longDescription": "Those great grey boulders are not decoration, because they are holding up the roof.\n\nThe architect is Smiljan Radić, who won the Pritzker Prize, architecture's highest honour, in 2026, and whose international reputation took off with his Serpentine Pavilion in London in 2014; this restaurant is one of the buildings that made his name at home.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-mestizo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-mestizo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-mestizo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-mestizo_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "eeea52f1-ee6a-5237-8ff0-b7d0c0485467",
+          "order": 0,
+          "title": "Mestizo",
+          "caption": "On Avenida Bicentenario at the northern edge of Parque Bicentenario, before the row of granite boulders.",
+          "latitude": -33.39406129764672,
+          "longitude": -70.60001026627054,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-mestizo.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-mestizo_hero.webp",
+          "transcriptText": "Those great grey boulders are not decoration, because they are holding up the roof.\n\nAlong the northern edge of Parque Bicentenario, on Avenida Bicentenario, sits the restaurant: a long, low pavilion partly sunk into the ground, its roof resting on a row of enormous rounded stones, with glass between them looking out over the park.\n\nThe architect is Smiljan Radić, who won the Pritzker Prize, architecture's highest honour, in 2026, and whose international reputation took off with his Serpentine Pavilion in London in 2014; this restaurant is one of the buildings that made his name at home.\n\nThe stones are a granite the quarrymen call ala de mosca, or fly's wing, brought from Pirque, south of the city, and some of them weigh around ten tonnes. Their tops and bottoms were cut flat so they could carry the roof beams, while the rest was left looking much like the natural rocks you might find in the park.\n\nThe engineers made sure each stone carries only a small fraction of what granite can bear, and the back of the building takes the earthquake loads, so the effect of rocks casually propping up a roof is really careful engineering dressed as nonchalance.\n\nI always think this is Radić's great trick, taking something primitive, a stone or a simple shelter, and making it feel both ancient and quite new. Critics have compared the boulders to the carved maidens that hold up the roofs of Greek temples, except that here nobody has carved them into anything at all.\n\nThe food, appropriately, is upmarket Chilean cooking, eaten in the shade of rocks rather older than the country.\n\nOnce you've had a good look, walk into the park itself, past the lagoons, and then turn round: from a distance the restaurant almost sinks into the slope, which is rather the point of it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.39406129764672,
+      "centroidLongitude": -70.60001026627054,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "8b5f4585-4160-5355-9998-4507a211bd01",
+        "f3e87d25-bf60-5b79-9fc1-4d6f936899b3",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "40efe125-4d5e-5b0a-8b92-cc39aa010112",
+        "21939587-adc2-5623-98ba-5d0df9142f5b",
+        "86b3cec0-752c-550b-8c1c-c4585171168e",
+        "f5fbccad-9389-501a-96e6-f9a322f7ec6a"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Food",
+        "Architecture",
+        "Contemporary",
+        "Designed by a Master",
+        "Smiljan Radić"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "74a84ae4-100b-538d-952d-d37259e970a3",
+      "createdAt": "2026-10-30",
+      "title": "Mestizo Italia",
+      "shortDescription": "Most architects are hired to make things new, but here a Pritzker Prize winner was asked to make an old warehouse last a little longer.",
+      "longDescription": "Most architects are hired to make things new, but here a Pritzker Prize winner was asked to make an old warehouse last a little longer.\n\nThe building is more than forty years old and once housed the design workshop of Arturo Murúa, whose family also owns the original Mestizo in Parque Bicentenario; Ignacio Murúa, an engineer and artist, drove this second location, and the architect, once again, is Smiljan Radić.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-mestizo-italia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-mestizo-italia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-mestizo-italia_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7d6a62cb-12e7-5ae2-b49a-899428a07e2e",
+          "order": 0,
+          "title": "Mestizo Italia",
+          "caption": "In Barrio Italia, between Avenida Italia, Marín and Santa Isabel, by the green column and the olive tree.",
+          "latitude": -33.44482899604722,
+          "longitude": -70.62573500698998,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-mestizo-italia.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-mestizo-italia_hero.webp",
+          "transcriptText": "Most architects are hired to make things new, but here a Pritzker Prize winner was asked to make an old warehouse last a little longer.\n\nIn the block between Avenida Italia and the streets of Marín and Santa Isabel, in the heart of Barrio Italia, the restaurant occupies a converted warehouse, and its entrance patio is marked by a tall green column and an olive tree.\n\nThe building is more than forty years old and once housed the design workshop of Arturo Murúa, whose family also owns the original Mestizo in Parque Bicentenario; Ignacio Murúa, an engineer and artist, drove this second location, and the architect, once again, is Smiljan Radić.\n\nRadić described the job as a basic repair of a fragile, run-down structure, and he meant it. The warehouse was scanned with drones to decide what could be saved, cracks were left on show, and everything new, from the floors to the kitchen, is marked out in green concrete so you can always tell old from new. That six-metre green column at the entrance is by the sculptor Marcela Correa, his long-time creative partner.\n\nInside, light filters down through skylights in the old roof, a tall pole carries a round lamp that stands in for the sun, the olive tree is said to be around a century old, and the tables and folding chairs were rescued from antique dealers in the neighbourhood.\n\nThe real story, then, is restraint: in a city where old buildings are easily replaced, a Pritzker laureate chose to mend, and to make the mending visible, which feels right in a neighbourhood that has long lived on restoring old furniture.\n\nSome visitors find the cracks unsettling and others find them beautiful, and both reactions are rather the point.\n\nAfterwards, wander along Avenida Italia itself, where the antique and restoration workshops that supplied these tables still trade, and the side streets hide courtyards full of small designers and cafés."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.44482899604722,
+      "centroidLongitude": -70.62573500698998,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "c86dfaae-433d-56c7-855b-bde656ca117c",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+        "37f30f44-7a45-5398-9e86-6bed363415f7",
+        "19db0319-d356-56e9-81bb-e818c20278c5",
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0",
+        "8b5f4585-4160-5355-9998-4507a211bd01",
+        "f0ff8c57-b498-53d5-9738-58f3f4904243"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Food",
+        "Architecture",
+        "Contemporary",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Smiljan Radić"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "37f30f44-7a45-5398-9e86-6bed363415f7",
+      "createdAt": "2026-10-30",
+      "title": "Patricia Ready Gallery | Galería Patricia Ready",
+      "shortDescription": "This is one of Santiago's larger private galleries, and its architects spent most of their effort making the building disappear.",
+      "longDescription": "This is one of Santiago's larger private galleries, and its architects spent most of their effort making the building disappear.\n\nThe gallery was founded by Patricia Ready, an art restorer by training who has been championing Chilean artists since 1981; it moved into this building in 2008 after several years in La Dehesa, and she also publishes La Panera, a magazine about art and culture.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-galeria-patricia-ready_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-galeria-patricia-ready_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-galeria-patricia-ready_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3028aafd-6070-5473-9c88-73964623be58",
+          "order": 0,
+          "title": "Patricia Ready Gallery | Galería Patricia Ready",
+          "caption": "At number 3125 Espoz in Vitacura, before the long, low building of bare concrete.",
+          "latitude": -33.396457801494286,
+          "longitude": -70.59807759957994,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-galeria-patricia-ready.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-galeria-patricia-ready_hero.webp",
+          "transcriptText": "This is one of Santiago's larger private galleries, and its architects spent most of their effort making the building disappear.\n\nConcrete, glass and a courtyard are what greet you at number three thousand one hundred and twenty-five on Espoz, a quiet Vitacura street close to Alonso de Córdova: a long, low building in bare concrete, with tall windows opening onto an inner court.\n\nThe gallery was founded by Patricia Ready, an art restorer by training who has been championing Chilean artists since 1981; it moved into this building in 2008 after several years in La Dehesa, and she also publishes La Panera, a magazine about art and culture.\n\nThe building is by the architects Izquierdo Lehmann, working with Elton Léniz, and their stated aim was to remove from view anything that might compete with the art, so the materials are deliberately few: exposed concrete, travertine floors, and a ceiling of translucent glass and steel that hides its lighting and needs no columns.\n\nNow find the freestanding partition that hangs a little over three metres back from the tall courtyard windows, because it's the clever bit, filtering the glare and giving the main room its edge so that daylight reaches the work without ever flooding it.\n\nNotice what that does to the classic white cube. Galleries often seal themselves off from the city, whereas this one opens its main room onto a sculpture courtyard, so contemplation and street life sit side by side, and with a café, a bookshop and a ninety-nine-seat auditorium downstairs, it behaves more like a small public institution than a shop.\n\nIt's a building that does its best work by staying out of the way.\n\nDo go in and give the main room a slow lap, then finish in the courtyard, where the sculpture changes with each exhibition and the light changes with the hour."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.396457801494286,
+      "centroidLongitude": -70.59807759957994,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "c86dfaae-433d-56c7-855b-bde656ca117c",
+        "19db0319-d356-56e9-81bb-e818c20278c5",
+        "f5fbccad-9389-501a-96e6-f9a322f7ec6a",
+        "8b5f4585-4160-5355-9998-4507a211bd01",
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0",
+        "a8871a9b-95d3-53e3-9539-860b54b331c8"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Architecture",
+        "Contemporary",
+        "Free to Visit",
+        "Designed by a Master",
+        "Izquierdo Lehmann"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "21939587-adc2-5623-98ba-5d0df9142f5b",
+      "createdAt": "2026-10-30",
+      "title": "Plaza de Armas",
+      "shortDescription": "It's February 1541, and a Spanish expedition led by Pedro de Valdivia is marking out a new city on the banks of the Mapocho, beginning with this…",
+      "longDescription": "It's February 1541, and a Spanish expedition led by Pedro de Valdivia is marking out a new city on the banks of the Mapocho, beginning with this square.\n\nThe grid came first, laid out by Pedro de Gamboa as a chequerboard of blocks with this square at its heart, and the streets around you still follow those colonial lines almost five centuries on.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-plaza-de-armas_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-plaza-de-armas_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bedb9795-02da-5570-aadf-067431088b6f",
+          "order": 0,
+          "title": "Plaza de Armas",
+          "caption": "In the square, facing north towards the Central Post Office, with the cathedral on your left.",
+          "latitude": -33.4379,
+          "longitude": -70.6505,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-plaza-de-armas.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-plaza-de-armas_hero.webp",
+          "transcriptText": "It's February 1541, and a Spanish expedition led by Pedro de Valdivia is marking out a new city on the banks of the Mapocho, beginning with this square.\n\nFace towards the ornate front of the Central Post Office and the square lays out its history for you: on your left, along the western side, the long stone front of the Metropolitan Cathedral, and ahead of you, along the northern edge, the post office, the old Royal Court building and the town hall.\n\nThe grid came first, laid out by Pedro de Gamboa as a chequerboard of blocks with this square at its heart, and the streets around you still follow those colonial lines almost five centuries on.\n\nThe cathedral is the fifth church to stand on its site, its predecessors lost to fire and earthquake; along the north side, the old Royal Court now houses the National History Museum, and the town hall has governed from the same side since 1895.\n\nThen look for the statues, which tell two founding stories at once. There's Valdivia on horseback, and not far away a monument to Chile's Indigenous peoples, a great carved stone face, and since how the conquest should be remembered is still debated in Chile, the square holds both readings without settling the argument.\n\nWhich brings us to what this square really means. Archaeological evidence suggests that an Inca settlement lay beneath the colonial city, so the square that announced a beginning was, in all likelihood, built on top of an older one.\n\nEvery layer of Santiago, from Inca and colonial to republican and modern, meets in this one square.\n\nSpare a minute for the chess players who gather around the square with their boards, then walk round behind the cathedral to Bandera street, where the Pre-Columbian Art Museum tells the much longer story."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.4379,
+      "centroidLongitude": -70.6505,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0",
+        "40efe125-4d5e-5b0a-8b92-cc39aa010112",
+        "f5fbccad-9389-501a-96e6-f9a322f7ec6a",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "86b3cec0-752c-550b-8c1c-c4585171168e",
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+        "7d6a30e1-ccae-5194-ae05-682f5af3884d",
+        "8b5f4585-4160-5355-9998-4507a211bd01"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Public Square",
+        "History",
+        "Power",
+        "Colonial",
+        "Iconic Landmark",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "40efe125-4d5e-5b0a-8b92-cc39aa010112",
+      "createdAt": "2026-10-30",
+      "title": "Santa Lucía Hill | Cerro Santa Lucía",
+      "shortDescription": "Before there was a city here, there was this rocky outcrop, which the Mapuche knew as Huelén.",
+      "longDescription": "Before there was a city here, there was this rocky outcrop, which the Mapuche knew as Huelén.\n\nThe Spanish conqueror Pedro de Valdivia took the hill on the thirteenth of December 1540, the feast day of Saint Lucy, which is how it got its present name, and two months later the new city was founded at its foot.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-cerro-santa-lucia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-cerro-santa-lucia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-cerro-santa-lucia_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8066ed12-0403-52df-95a8-842e589c1f54",
+          "order": 0,
+          "title": "Santa Lucía Hill | Cerro Santa Lucía",
+          "caption": "At the Neptune Terrace on the Alameda, the hill's grand entrance of twin staircases around a fountain.",
+          "latitude": -33.4394357334977,
+          "longitude": -70.64331184232785,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-cerro-santa-lucia.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-cerro-santa-lucia_hero.webp",
+          "transcriptText": "Before there was a city here, there was this rocky outcrop, which the Mapuche knew as Huelén.\n\nFacing you from the Alameda is the hill's grandest entrance, the Neptune Terrace, a theatrical sweep of twin staircases and balustrades around a great fountain, painted in the yellow and white you'll see all the way up to the summit.\n\nThe Spanish conqueror Pedro de Valdivia took the hill on the thirteenth of December 1540, the feast day of Saint Lucy, which is how it got its present name, and two months later the new city was founded at its foot.\n\nOver the following centuries it served as a lookout and a fortress, with the Hidalgo fort completed in 1820, and, rather unexpectedly, as an observatory, set up in 1849 by an American astronomer, James Gilliss, whose instruments went on to form the nucleus of Chile's national observatory.\n\nWhat you're looking at, though, is mostly the work of one restless man, the city's intendant Benjamín Vicuña Mackenna, who from 1872 turned a bare rock into a romantic public park, with winding paths, fountains, a chapel lit by gas and these yellow and white façades.\n\nIt's worth sitting with that for a moment, because a hill first known by its Mapuche name, then a conqueror's foothold and a fort, ended up as a pleasure garden for the whole city, and it still is.\n\nIt keeps time, too, since a cannon on the hill traditionally fires at noon, so if you hear a bang at midday, nothing is wrong.\n\nClimb on up through the terraces to the summit lookout, where the final steps get narrow and steep, and the view runs from the Andes to the towers of Providencia; on the way down, the cafés of the Lastarria neighbourhood are just across the road."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.4394357334977,
+      "centroidLongitude": -70.64331184232785,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "21939587-adc2-5623-98ba-5d0df9142f5b",
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+        "f3e87d25-bf60-5b79-9fc1-4d6f936899b3",
+        "8b5f4585-4160-5355-9998-4507a211bd01",
+        "f5fbccad-9389-501a-96e6-f9a322f7ec6a",
+        "86b3cec0-752c-550b-8c1c-c4585171168e",
+        "a8871a9b-95d3-53e3-9539-860b54b331c8"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Viewpoint",
+        "Green Escape",
+        "Free to Visit",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8b5f4585-4160-5355-9998-4507a211bd01",
+      "createdAt": "2026-10-30",
+      "title": "Taller Roca Negra",
+      "shortDescription": "High in the Cajón del Maipo, with the river below and mountains on every side, one of Chile's great sculptors chose to build a world of concrete.",
+      "longDescription": "High in the Cajón del Maipo, with the river below and mountains on every side, one of Chile's great sculptors chose to build a world of concrete.\n\nThe sculptor is Federico Assler, born in 1929, a winner of Chile's National Prize for Visual Arts and three times of the Altazor award, and one of the generation of the 1950s who pushed Chilean sculpture towards abstraction.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-taller-roca-negra_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-taller-roca-negra_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-taller-roca-negra_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-taller-roca-negra_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "112ccd32-b376-58f5-ba9e-d8302575648b",
+          "order": 0,
+          "title": "Taller Roca Negra",
+          "caption": "On the road up the Maipo valley in San José de Maipo; a private home, so please look from the roadside.",
+          "latitude": -33.59014465292053,
+          "longitude": -70.48313432064766,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-taller-roca-negra.mp3",
+          "audioDurationSeconds": 122,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-taller-roca-negra_hero.webp",
+          "transcriptText": "High in the Cajón del Maipo, with the river below and mountains on every side, one of Chile's great sculptors chose to build a world of concrete.\n\nThe road up the Maipo valley, in the commune of San José de Maipo, brings you to Roca Negra, with the artist's house on one side and, across the road, the workshop and museum: a double-height studio behind a portico of red-pigmented concrete, and terraces of sculpture stepping up the slope. This is a private home and archive, so visits are by arrangement, and unless you've been invited in, please enjoy it from the roadside.\n\nThe sculptor is Federico Assler, born in 1929, a winner of Chile's National Prize for Visual Arts and three times of the Altazor award, and one of the generation of the 1950s who pushed Chilean sculpture towards abstraction.\n\nHis material is concrete, which he has worked since the 1970s using moulds cut from expanded polystyrene, which lets enormous weights take on soft, organic forms; he has said that his sculptures are made for people, to be touched and felt and even walked into.\n\nWith his partner, Francisca Délano, he settled here in 1993, turned a former inn into a house museum and built eleven terraces into the landscape, and the archive now runs to more than a thousand pieces, along with some two hundred numbered sketchbooks, each a record of how a work began.\n\nThe lovely part came in April 2026, when Chile declared the whole ensemble a national monument, and the decree protects not only the buildings and terraces but the relationship between them, the valley and the mountains, which means the law now recognises a view.\n\nFew artists get to see their working life turned into a landscape worth protecting.\n\nIf you can't visit, look for Assler's concrete works back in Santiago, in the Parque de las Esculturas in Providencia beside the Mapocho, where you'll recognise the same instinct to make heavy things feel light."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 122,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.59014465292053,
+      "centroidLongitude": -70.48313432064766,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0",
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "37f30f44-7a45-5398-9e86-6bed363415f7",
+        "f5fbccad-9389-501a-96e6-f9a322f7ec6a",
+        "21939587-adc2-5623-98ba-5d0df9142f5b",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "86b3cec0-752c-550b-8c1c-c4585171168e"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Public Art",
+        "Viewpoint",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+      "createdAt": "2026-10-30",
+      "title": "The Singular Santiago",
+      "shortDescription": "Some new buildings shout, but this one arrived in Santiago's old bohemian quarter wearing a dark suit and keeping its voice down.",
+      "longDescription": "Some new buildings shout, but this one arrived in Santiago's old bohemian quarter wearing a dark suit and keeping its voice down.\n\nIt opened in 2014 as the city sister of The Singular Patagonia, and it's the work of Felipe Sahli, whose family has been in Chilean hospitality since his grandparents arrived from Switzerland in 1913.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-the-singular-santiago_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-the-singular-santiago_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-the-singular-santiago_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-the-singular-santiago_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-the-singular-santiago_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "176ce52f-f203-5577-8344-c01b6fb349ce",
+          "order": 0,
+          "title": "The Singular Santiago",
+          "caption": "Outside number 294 Merced in Lastarria, by the black façade and its understated signage.",
+          "latitude": -33.437103420555324,
+          "longitude": -70.64074120143243,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-the-singular-santiago.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-the-singular-santiago_hero.webp",
+          "transcriptText": "Some new buildings shout, but this one arrived in Santiago's old bohemian quarter wearing a dark suit and keeping its voice down.\n\nEasy to miss, the black façade with understated signage at number two hundred and ninety-four on Merced is The Singular, a few steps from the cafés and bookshops of Lastarria and a short walk from Santa Lucía Hill.\n\nIt opened in 2014 as the city sister of The Singular Patagonia, and it's the work of Felipe Sahli, whose family has been in Chilean hospitality since his grandparents arrived from Switzerland in 1913.\n\nThe architecture is new but deliberately neoclassical in spirit, a polite nod to the older buildings around it, and inside it's all rich wood, supple leather and soft lighting, with a hint of mid-century retro in the furniture, while the restaurant, under the chef Hernán Basso, applies classical French technique to Chilean produce.\n\nNow think upwards, because the gift is on the roof: a bar built around a marble counter some eight metres long, with two terraces looking across to Santa Lucía, and a rooftop pool with views towards San Cristóbal Hill.\n\nThere's a quiet point in all this, because Lastarria is one of the city's best-loved neighbourhoods, and rather than competing with it, the hotel borrows its manners, so the newest building on the street manages to look as though it has always been there.\n\nGood manners in architecture are underrated, and this is a rather well-mannered building.\n\nWhen you leave, turn onto José Victorino Lastarria, the street that gives the neighbourhood its name, and follow it north towards the Parque Forestal and the Museum of Fine Arts, a lovely ten-minute walk."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 102,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.437103420555324,
+      "centroidLongitude": -70.64074120143243,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "f0ff8c57-b498-53d5-9738-58f3f4904243",
+        "19db0319-d356-56e9-81bb-e818c20278c5",
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+        "37f30f44-7a45-5398-9e86-6bed363415f7",
+        "40efe125-4d5e-5b0a-8b92-cc39aa010112",
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+        "f963b19a-dd2f-5d44-89ab-526a8532ada0"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Architecture",
+        "Food",
+        "Neoclassical",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f3e87d25-bf60-5b79-9fc1-4d6f936899b3",
+      "createdAt": "2026-10-30",
+      "title": "Plazoleta Negra Threshold | Umbral Plazoleta Negra",
+      "shortDescription": "On a road known for its hairpin bends, this spot is among the few places that ask you to stop and, if you like, to take your shoes off.",
+      "longDescription": "On a road known for its hairpin bends, this spot is among the few places that ask you to stop and, if you like, to take your shoes off.\n\nThis is the Umbral of Plazoleta Negra, umbral being Spanish for threshold, and it belongs to a series of ritual spaces conceived by Cazú Zegers, the same architect who restored the Hotel Magnolia downtown; this one dates from 2018 and 2019, and the municipality credits the artist Vicente Gajardo with the work.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-umbral-plazoleta-negra_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-umbral-plazoleta-negra_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-umbral-plazoleta-negra_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "43ba304a-2dba-5adc-a71c-16226b97d06f",
+          "order": 0,
+          "title": "Plazoleta Negra Threshold | Umbral Plazoleta Negra",
+          "caption": "At curve 22 on the road up to Farellones; pull in safely and keep well back from the edge.",
+          "latitude": -33.35162130446506,
+          "longitude": -70.32902072209019,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-umbral-plazoleta-negra.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-umbral-plazoleta-negra_hero.webp",
+          "transcriptText": "On a road known for its hairpin bends, this spot is among the few places that ask you to stop and, if you like, to take your shoes off.\n\nPull in safely at curve twenty-two on the road up to Farellones, in Lo Barnechea, and you'll find a semicircular stone platform on the mountainside, set on a wall laid in the traditional way, with a wooden deck reaching out over the valley. Mind the traffic, which can be heavy in the ski season, and keep well back from the edge.\n\nThis is the Umbral of Plazoleta Negra, umbral being Spanish for threshold, and it belongs to a series of ritual spaces conceived by Cazú Zegers, the same architect who restored the Hotel Magnolia downtown; this one dates from 2018 and 2019, and the municipality credits the artist Vicente Gajardo with the work.\n\nThe wall was built by stonemasons from Farellones itself, using techniques handed down over generations, and the space is meant as a ceremonial gateway into the mountains, where visitors are invited to remove their shoes and leave a small offering to the apus, the guardian spirits of the Andean peaks.\n\nZegers describes these thresholds as places for leaving something behind without abandoning your history, and that's a useful frame for a road that is usually just the quickest way to the ski slopes.\n\nFrom the deck you look down the valley towards the city and up towards the glaciers, and the idea is simply to arrive at the mountain with a little attention, rather than at speed.\n\nIt asks very little of you, and gives back a surprising amount.\n\nBefore you drive on, walk the length of the platform slowly and look up to the snowline; and if this sort of place appeals, another of Zegers' thresholds, the Agora of the Ancestral Woman, sits on the northern slope of the Parque Metropolitano back in the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.35162130446506,
+      "centroidLongitude": -70.32902072209019,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
+        "40efe125-4d5e-5b0a-8b92-cc39aa010112",
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "8b5f4585-4160-5355-9998-4507a211bd01",
+        "b05cab1b-b497-5b9a-8bd9-daad39b1dfb4",
+        "0165232e-3d55-5685-a448-a7bf5afece8f",
+        "9ce96adc-fe36-5c7a-ad76-f116e58202ff",
+        "80b3a6ed-988c-5b95-bbb0-ee2c35f82ea5"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Monument",
+        "Faith",
+        "Contemporary",
+        "Public Art",
+        "Viewpoint",
+        "Free to Visit",
+        "Designed by a Master",
+        "Cazú Zegers"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0c842ae3-c162-5bc1-a537-d8c6ed2f77c7",
+      "createdAt": "2026-10-30",
+      "title": "Yum Cha",
+      "shortDescription": "Yum cha is Cantonese for drinking tea, and if you've come expecting trolleys of dumplings, this little restaurant has a surprise in store.",
+      "longDescription": "Yum cha is Cantonese for drinking tea, and if you've come expecting trolleys of dumplings, this little restaurant has a surprise in store.\n\nThe chef, Nicolás Tapia, fell for Chinese cooking while travelling through China, and he came home to build something unusual, a ten-course tasting menu that is entirely pescatarian, with fish and seafood but no red meat, and with every course paired not with a wine but with a different tea.",
+      "makerId": "3c0fd7b0-53d7-5108-95ff-1a9c7a58af8c",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-yum-cha_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-yum-cha_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-yum-cha_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-yum-cha_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-yum-cha_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d5d4d907-bea9-5126-90e1-fde22e574ab6",
+          "order": 0,
+          "title": "Yum Cha",
+          "caption": "At number 2722 La Herradura, on a quiet stretch of Providencia.",
+          "latitude": -33.41372715630896,
+          "longitude": -70.6104877067459,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scl-yum-cha.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scl-yum-cha_hero.webp",
+          "transcriptText": "Yum cha is Cantonese for drinking tea, and if you've come expecting trolleys of dumplings, this little restaurant has a surprise in store.\n\nTucked into a quiet stretch of La Herradura in Providencia, at number two thousand seven hundred and twenty-two, is the restaurant: an intimate room of only five or so tables, with a deliberately modest presence on the street.\n\nThe chef, Nicolás Tapia, fell for Chinese cooking while travelling through China, and he came home to build something unusual, a ten-course tasting menu that is entirely pescatarian, with fish and seafood but no red meat, and with every course paired not with a wine but with a different tea.\n\nThe cellar, if you can call it that, holds more than fifty teas, and Tapia changes at least one dish every week, so returning guests rarely eat quite the same meal twice; there is a wine pairing for the unconvinced, but the house gently steers you towards the tea.\n\nThe clever part is what the tea does, lifting a delicate piece of fish, resetting the palate between courses, or adding a smoky or floral note that changes how the next mouthful tastes, and Chinese technique applied to Chilean seafood turns out to be a natural fit for a country with this much coastline.\n\nIt has worked, too, since in 2025 Yum Cha placed twenty-eighth on Latin America's 50 Best Restaurants list and Tapia received a One Knife award from The Best Chef.\n\nA restaurant built around a cup of tea, in a country so devoted to wine, takes a certain nerve.\n\nIf tonight isn't a tea night, walk east for ten minutes or so to Tobalaba, where the garden terrace above the MUT market is a good place for a cup of something, if rather less ceremonially."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.41372715630896,
+      "centroidLongitude": -70.6104877067459,
+      "city": "Santiago",
+      "country": "Chile",
+      "relatedTourIds": [
+        "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
+        "4a9cea47-36a6-5f13-9471-e8dc2db95be0",
+        "a8871a9b-95d3-53e3-9539-860b54b331c8",
+        "59387ac3-5340-5f61-910c-dcb255898752",
+        "a09bf7d7-dab7-5d42-9d4c-4daa9cdd4e94",
+        "1d7e97a5-3bff-5d27-bb3c-e299d03c732a",
+        "C5AB955F-0F6B-5DA2-AD52-EF315E63D5E1",
+        "b36072b2-2d64-505c-aa5e-93f8b72c4fa3"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
       ],
       "priceUSD": 0
     }
