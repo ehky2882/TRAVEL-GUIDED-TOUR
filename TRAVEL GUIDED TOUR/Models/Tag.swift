@@ -237,6 +237,7 @@ enum Tag {
             "Pedro Luis Escrivá", "Giovanni Antonio Medrano", "Antonio Niccolini", "Ferdinando Chiaramonte",
             "Alessandro Antonelli", "Carlo Mollino", "Claudio Silvestrin", "Guarino Guarini", "Pietro Fenoglio", "Filippo Juvarra",
             "Smiljan Radić", "Cazú Zegers", "Izquierdo Lehmann", "Martín Correa", "Gabriel Guarda", "Eduardo Costabal Zegers",
+            "Cayetano Borso di Carminati", "Eduardo de Miguel", "Arancha Muñoz", "Vicente Corell", "Alejandro Soler March", "Francisco Guardia Vial", "Ramón Esteve", "Emilio Giménez", "Francisco Mora Berenguer", "Pere Compte", "Hipólito Rovira", "Francisco Javier Goerlich", "Kathryn Gustafson", "Daniel Mayo", "Agustín Marí", "Pablo Vázquez",
         ]),
     ]
 

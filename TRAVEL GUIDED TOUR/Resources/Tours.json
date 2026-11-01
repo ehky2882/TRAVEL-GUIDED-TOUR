@@ -5681,6 +5681,16 @@
       "websiteURL": null
     },
     {
+      "id": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "displayName": "Atlas Studio VLC",
+      "platform": "dozent",
+      "handle": "atlas.vlc",
+      "avatarURL": null,
+      "avatarEmoji": "🇪🇸",
+      "bio": "Atlas Studio's Valencia bureau — a river turned into a nine-kilometre garden after the flood of 1957, a Gothic silk exchange that put business ethics on the wall in gold, farmers settling water disputes at the cathedral door every Thursday, Calatrava's white ribs by the sea, and the lagoon where paella began.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -141828,6 +141838,1477 @@
       "tags": [
         "Venue",
         "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "350c58c7-5367-514e-abfd-54948c96c1fa",
+      "createdAt": "2026-11-01",
+      "title": "Bombas Gens Centre d'Arts Digitals",
+      "shortDescription": "The brick factory in front of you spent sixty years making water pumps, and these days it pumps out light instead.",
+      "longDescription": "The brick factory in front of you spent sixty years making water pumps, and these days it pumps out light instead.\n\nCayetano Borso di Carminati designed it for two businessmen, Carlos Gens and Rafael Dalli, who turned out hydraulic pumps, valves and small farm machinery for the irrigated fields that once came right up to this edge of the city. During the Civil War the factory was requisitioned for munitions, and around 1938 an air-raid shelter was dug beneath it to protect the workforce, a space that has been preserved.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-bombas-gens_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-bombas-gens_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-bombas-gens_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-bombas-gens_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "025ce103-ab14-5b3e-86e6-0b7cc95c873a",
+          "order": 0,
+          "title": "Bombas Gens Centre d'Arts Digitals",
+          "caption": "On the pavement opposite the brick frontage on Avinguda de Burjassot, in Marxalenes.",
+          "latitude": 39.48569666498835,
+          "longitude": -0.384915164418037,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-bombas-gens.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-bombas-gens_hero.webp",
+          "transcriptText": "The brick factory in front of you spent sixty years making water pumps, and these days it pumps out light instead.\n\nAvinguda de Burjassot runs along the front of the complex here in Marxalenes, and from the pavement opposite you can take in the frontage: walls of warm clay brick, terracotta roof tiles, and the clean geometric styling of an Art Deco factory built to look modern in 1930.\n\nCayetano Borso di Carminati designed it for two businessmen, Carlos Gens and Rafael Dalli, who turned out hydraulic pumps, valves and small farm machinery for the irrigated fields that once came right up to this edge of the city. During the Civil War the factory was requisitioned for munitions, and around 1938 an air-raid shelter was dug beneath it to protect the workforce, a space that has been preserved.\n\nThe works closed in 1991 and stood empty until a private foundation bought it, spending around ten million euros on a restoration led partly by the New York architect Annabelle Selldorf. Digging beneath it turned up a fifteenth-century wine cellar, centuries older than the factory, which was kept as part of the new design.\n\nSince early 2024 the old production halls have been run by a studio called Layers of Reality, and the programme has moved to digital and immersive work, with giant projections and virtual reality filling rooms that once held lathes.\n\nThere's something rather neat in the way a building made to move water around the fields now moves images around its walls, while the steel roof trusses that watched over pump casings now watch over projectors, a neat summary of how the city itself has changed.\n\nOn your way out, walk the length of the frontage and look for where restored brick meets new, since the architects deliberately let the two sit side by side, and if a shelter visit is running on the day, it's well worth booking a place inside that quiet piece of Civil War history."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.48569666498835,
+      "centroidLongitude": -0.384915164418037,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Architecture",
+        "Art",
+        "Engineering",
+        "Art Deco",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Cayetano Borso di Carminati",
+        "Annabelle Selldorf"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "88e43e44-255c-55a1-968e-3bd879397f24",
+      "createdAt": "2026-11-01",
+      "title": "Cabecera Park | Parc de Capçalera",
+      "shortDescription": "Almost seventeen hectares of lake, pine wood and meadow mark the spot where Valencia's old river enters the city.",
+      "longDescription": "Almost seventeen hectares of lake, pine wood and meadow mark the spot where Valencia's old river enters the city.\n\nCabecera means headwaters, and that word explains the design, because while most of the long Turia garden is formal, with sports pitches, orange trees and tidy paths laid out in the dry bed of the diverted river, this western end was designed in 2003 and 2004 by Eduardo de Miguel, Arancha Muñoz and Vicente Corell to do something different: to look like a river again.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cabecera-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cabecera-park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cabecera-park_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cabecera-park_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cabecera-park_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a9c20544-190c-53fa-8dcb-0c2f455cccbc",
+          "order": 0,
+          "title": "Cabecera Park | Parc de Capçalera",
+          "caption": "At the edge of the lake, facing the wooded islands, with the viewpoint hill rising beyond the trees.",
+          "latitude": 39.47509947297767,
+          "longitude": -0.4079619305126158,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-cabecera-park.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 80,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cabecera-park_hero.webp",
+          "transcriptText": "Almost seventeen hectares of lake, pine wood and meadow mark the spot where Valencia's old river enters the city.\n\nHead down to the edge of the lake and face the water, and you'll see small wooded islands scattered across it, swan-shaped pedal boats drifting between them, and, rising above the trees on one side, a rounded grassy hill with a path winding up to its top, the viewpoint.\n\nCabecera means headwaters, and that word explains the design, because while most of the long Turia garden is formal, with sports pitches, orange trees and tidy paths laid out in the dry bed of the diverted river, this western end was designed in 2003 and 2004 by Eduardo de Miguel, Arancha Muñoz and Vicente Corell to do something different: to look like a river again.\n\nSo the islands out there are real islands, the planting is the riverside woodland you'd find along a wild Mediterranean stream, and the water itself arrives through a canal fed from the Molí del Sol, an old mill upstream, tumbling over little waterfalls on its way in. The designers wanted a soft handover between the stiff eighteenth-century flood embankments and the natural riverbed upstream.\n\nThe hill earns its climb, since from the top you can see across the whole park and, on a clear day, all the way to the Sierra Calderona mountains on the northern horizon, and next door sits the Bioparc zoo, which shares the same idea of letting landscape do the work instead of fences.\n\nWhat makes this end of the garden worth the trip is that it remembers. Everywhere else the Turia has been tidied into a park, but here it has been given a chance to pretend, quite convincingly, that the water never left.\n\nIf you've got half an hour, follow the signed Molí del Sol walk out towards the old mill, and you'll trace the canal back to where the water begins its short, gentle journey into the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.47509947297767,
+      "centroidLongitude": -0.4079619305126158,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Architecture",
+        "Green Escape",
+        "Viewpoint",
+        "Free to Visit",
+        "Contemporary",
+        "Designed by a Master",
+        "Eduardo de Miguel",
+        "Arancha Muñoz",
+        "Vicente Corell"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5b7b0481-6611-5545-ae9c-1073e4c5c81b",
+      "createdAt": "2026-11-01",
+      "title": "Café de las Horas",
+      "shortDescription": "A minute from the cathedral, behind a modest doorway, is a room that looks as if a Baroque opera set wandered offstage and decided to open a bar.",
+      "longDescription": "A minute from the cathedral, behind a modest doorway, is a room that looks as if a Baroque opera set wandered offstage and decided to open a bar.\n\nThe café opened in 1994, borrowing its mood from the literary cafés of old Europe, and it keeps long hours, serving coffee from the morning and shifting, as the light goes, into a cocktail bar that stays busy until the small hours.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cafe-de-las-horas_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cafe-de-las-horas_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cafe-de-las-horas_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e7b46c94-c4bb-57b8-a78c-4db601179a6d",
+          "order": 0,
+          "title": "Café de las Horas",
+          "caption": "At number 1 Carrer del Comte d'Almodóvar, the narrow lane just off the Plaza de la Virgen.",
+          "latitude": 39.47726156770112,
+          "longitude": -0.37559108633224625,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-cafe-de-las-horas.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cafe-de-las-horas_hero.webp",
+          "transcriptText": "A minute from the cathedral, behind a modest doorway, is a room that looks as if a Baroque opera set wandered offstage and decided to open a bar.\n\nCarrer del Comte d'Almodóvar is the narrow lane at your feet, running just off the Plaza de la Virgen, and the café sits at number one, so if the door is open, step just inside and let your eyes adjust to the plush reds and blues, the portraits crowding the walls, and a ceiling scattered with stars.\n\nThe café opened in 1994, borrowing its mood from the literary cafés of old Europe, and it keeps long hours, serving coffee from the morning and shifting, as the light goes, into a cocktail bar that stays busy until the small hours.\n\nWhat most people come for, though, is a jug of Agua de Valencia. In 1959 a barman called Constante Gil was running the Café Madrid, a few streets from here, when a group of Basque travelling salesmen who always ordered the house fizz, which they'd nicknamed Agua de Bilbao, challenged him to invent something new. He mixed fresh Valencian orange juice with cava, gin and vodka, sweetened it a little, and named it after the city.\n\nGil tried to patent the name and was turned down because it was too general, so the cocktail drifted into every bar in town while he never quite got the credit.\n\nThat's the charm of this room, where the decoration is borrowed from half the cafés of Europe but what arrives at the table is pure Valencia, made from the fruit that grew in the fields around the city and shaken into a local legend by a Galician.\n\nOrder a small jug to share, take a seat by the window if one's free, and afterwards wander back into the Plaza de la Virgen, where the reclining bronze figure in the fountain represents the river Turia surrounded by the irrigation channels that fed those orange groves."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.47726156770112,
+      "centroidLongitude": -0.37559108633224625,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6e5ae984-8ad6-59d2-896b-c780ecb884fe",
+      "createdAt": "2026-11-01",
+      "title": "Caro Hotel",
+      "shortDescription": "Very few hotels can say that a Roman mosaic, a twelfth-century Arab wall and an aristocrat's palace all share a single address.",
+      "longDescription": "Very few hotels can say that a Roman mosaic, a twelfth-century Arab wall and an aristocrat's palace all share a single address.\n\nThis was the palace of the Marqués de Caro, and when it was turned into a hotel of twenty-six rooms, the interior designer Francesc Rifé was given a puzzle: how to make a modern place to sleep without hiding a single century. His answer was to treat the building like a gallery, with clean, pale, minimal furnishings that step back and let the history take the light.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-caro-hotel_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-caro-hotel_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-caro-hotel_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-caro-hotel_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-caro-hotel_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "81d715af-1b4e-5f2c-9ae1-4376b0fdb925",
+          "order": 0,
+          "title": "Caro Hotel",
+          "caption": "Outside number 14 on the quiet Calle del Almirante, a few minutes east of the cathedral.",
+          "latitude": 39.47615103340051,
+          "longitude": -0.372120059104587,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-caro-hotel.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-caro-hotel_hero.webp",
+          "transcriptText": "Very few hotels can say that a Roman mosaic, a twelfth-century Arab wall and an aristocrat's palace all share a single address.\n\nThe discreet frontage in front of you, at number fourteen on the quiet Calle del Almirante a few minutes east of the cathedral, belongs to an old town house that gives very little away from the pavement about the layers stacked up inside.\n\nThis was the palace of the Marqués de Caro, and when it was turned into a hotel of twenty-six rooms, the interior designer Francesc Rifé was given a puzzle: how to make a modern place to sleep without hiding a single century. His answer was to treat the building like a gallery, with clean, pale, minimal furnishings that step back and let the history take the light.\n\nDownstairs, in the bar, remains of the Roman city are on open display, including original mosaic from Valentia, the settlement founded here in the second century before Christ. The hotel's restaurant goes further still, set directly against a stretch of the twelfth-century Arab wall that once ringed the Islamic city, so dinner comes with medieval fortifications.\n\nUpstairs, a few of the rooms carry on the theme, with medieval coffered ceilings and Moorish arches built into the bedrooms, and the guide inspectors at Michelin have described it as the only hotel in the city that is itself a listed historic monument.\n\nThe interesting bit is how ordinary the street outside looks. Valencia is a city built in layers, Roman under Islamic under Christian, and usually you need a museum to see them, but here the whole cross-section has been sliced open and turned into somewhere you can order a coffee.\n\nRound the corner, on the street named after them, the Baños del Almirante are well worth ten minutes: a medieval bathhouse built in the Islamic tradition after the Christian conquest, with star-shaped skylights cut into the vaults, and a rare survivor of the medieval city's daily rituals."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.47615103340051,
+      "centroidLongitude": -0.372120059104587,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Architecture",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3caaeeb7-b8b3-5dc2-a2ad-a4a326362405",
+      "createdAt": "2026-11-01",
+      "title": "Central Market | Mercat Central",
+      "shortDescription": "Somewhere up on the roof of this market, a metal parrot has been trading gossip with a sparrow for nearly a hundred years.",
+      "longDescription": "Somewhere up on the roof of this market, a metal parrot has been trading gossip with a sparrow for nearly a hundred years.\n\nThe design won a competition held in 1910, and its architects, Alejandro Soler March and Francisco Guardia Vial, had both trained in the Art Nouveau world of Barcelona; building took fourteen years, and it opened in 1928 looking like a world's fair pavilion that decided to stay on and sell vegetables.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-central-market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-central-market_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-central-market_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-central-market_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-central-market_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0d72905a-2365-5e93-b741-45b49ee8a601",
+          "order": 0,
+          "title": "Central Market | Mercat Central",
+          "caption": "In the square with your back to the Silk Exchange, facing the market's long tiled frontage.",
+          "latitude": 39.47363297655649,
+          "longitude": -0.3790772302685131,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-central-market.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-central-market_hero.webp",
+          "transcriptText": "Somewhere up on the roof of this market, a metal parrot has been trading gossip with a sparrow for nearly a hundred years.\n\nFind a spot in the square with your back to the Gothic bulk of the Silk Exchange, and the market fills your view: a long frontage of iron, glass and glazed tiles, decorated with ceramic fruit and foliage, with small towers on the roofline and a great dome rising from the middle of the roof, some thirty metres high.\n\nThe design won a competition held in 1910, and its architects, Alejandro Soler March and Francisco Guardia Vial, had both trained in the Art Nouveau world of Barcelona; building took fourteen years, and it opened in 1928 looking like a world's fair pavilion that decided to stay on and sell vegetables.\n\nNow look up at the towers and search for the weathervanes. One is a parrot, known locally as the Cotorra del Mercat, and the story goes that she spent her days chattering about the city's affairs with the Pardal de Sant Joan, the sparrow on top of the church of the Santos Juanes next door, the market's voice of commerce answering the church's voice of heaven.\n\nInside are more than three hundred stalls, and among the beans you'll find garrofó, the broad flat white bean that goes into a proper Valencian paella, and Ricard Camarena, one of the city's best known chefs, runs a bar in the middle of it all.\n\nAnd here's the thing about this building, which was made to give the everyday act of buying lunch the same dignity as the cathedral and the Silk Exchange around it, a temple to the farmland that feeds the city, with its own resident bird keeping watch.\n\nHead inside to look up into the dome, then hunt for a stall selling garrofó, and if you fancy lunch, the bar in the middle will cook up something from whatever the market has in that morning."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.47363297655649,
+      "centroidLongitude": -0.3790772302685131,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Market",
+        "Architecture",
+        "Food",
+        "Commerce",
+        "Iconic Landmark",
+        "Free to Visit",
+        "Designed by a Master",
+        "Alejandro Soler March",
+        "Francisco Guardia Vial"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "69dfe82d-d205-5dc4-a298-1767e8ea74db",
+      "createdAt": "2026-11-01",
+      "title": "Hortensia Herrero Art Centre (CAHH) | Centre d'Art Hortensia Herrero",
+      "shortDescription": "Under this palace runs the line of a Roman racetrack, and inside it a cloud of giant glass bubbles hangs above a staircase.",
+      "longDescription": "Under this palace runs the line of a Roman racetrack, and inside it a cloud of giant glass bubbles hangs above a staircase.\n\nThe palace once belonged to Joan de Valeriola, a descendant of Valencia's most important fourteenth-century banker, and when the collector Hortensia Herrero, vice-president of the supermarket chain Mercadona, bought it and spent some forty million euros on its restoration, the excavations uncovered remains of the Roman circus where chariots once raced, an Islamic fountain, a medieval oven and traces of the Jewish quarter.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cahh_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cahh_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cahh_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cahh_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cahh_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "75a473b5-6bb6-57c9-bd33-3f7f7dbacac9",
+          "order": 0,
+          "title": "Hortensia Herrero Art Centre (CAHH) | Centre d'Art Hortensia Herrero",
+          "caption": "Before the restored front of the Palau de Valeriola, number 31 Calle del Mar, east of the Plaza de la Reina.",
+          "latitude": 39.47402484862127,
+          "longitude": -0.3731790860881434,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-cahh.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cahh_hero.webp",
+          "transcriptText": "Under this palace runs the line of a Roman racetrack, and inside it a cloud of giant glass bubbles hangs above a staircase.\n\nLook for the long, restored front of the seventeenth-century Palau de Valeriola at number thirty-one on Calle del Mar, in the old town just east of the Plaza de la Reina, with the name of the art centre beside the entrance.\n\nThe palace once belonged to Joan de Valeriola, a descendant of Valencia's most important fourteenth-century banker, and when the collector Hortensia Herrero, vice-president of the supermarket chain Mercadona, bought it and spent some forty million euros on its restoration, the excavations uncovered remains of the Roman circus where chariots once raced, an Islamic fountain, a medieval oven and traces of the Jewish quarter.\n\nThe art centre opened in November 2023 with more than a hundred works by artists from Anselm Kiefer and Georg Baselitz to Joan Miró and Anish Kapoor, but the real treats are the pieces made for the building itself. Tomás Saraceno hung his huge soap-bubble spheres above the foyer stair, Olafur Eliasson turned a corridor into a shimmering tunnel of coloured glass, and Sean Scully filled the old chapel with stained glass that throws red, yellow and blue light across the floor.\n\nThere's also a room of thirty-six screens by David Hockney, showing a single Yorkshire wood across the four seasons, which is worth sitting down for.\n\nWhat's notable, standing here, is the order of things. A fortune made selling groceries has paid to dig up two thousand years of Valencia, then fill the result with contemporary art at a modest ticket price, and the palace now does both jobs at once, part archaeology site and part gallery.\n\nWednesday afternoons have offered free entry with an advance booking, so it's worth checking before you come, and once inside, save some time for the new building next door, where interactive works by teamLab and Julian Opie play with crowds, movement and city scenes."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.47402484862127,
+      "centroidLongitude": -0.3731790860881434,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "History",
+        "Baroque",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e078c0c2-df6f-55b0-a5c5-7205074a5db5",
+      "createdAt": "2026-11-01",
+      "title": "Cervecería Aquarium",
+      "shortDescription": "Since 1957, the waiters here have worn jackets and ties with their names printed on them, and the dry martini still follows the original recipe.",
+      "longDescription": "Since 1957, the waiters here have worn jackets and ties with their names printed on them, and the dry martini still follows the original recipe.\n\nThree partners opened it in 1957, and legend has it that the place very nearly flooded on its first day, which is rather a lot to ask of a bar called Aquarium. The building itself goes back to the 1930s, and very little has changed since the first cocktail was shaken, because the current owners still work from the old manuals and see no reason to tinker.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cerveceria-aquarium_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cerveceria-aquarium_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cerveceria-aquarium_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cerveceria-aquarium_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cerveceria-aquarium_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4a6f17af-b19d-504e-a284-4b988b837d1b",
+          "order": 0,
+          "title": "Cervecería Aquarium",
+          "caption": "At number 57 Gran Vía del Marqués del Turia, the tree-lined avenue with a promenade down its centre.",
+          "latitude": 39.467839508211206,
+          "longitude": -0.36778515725206934,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-cerveceria-aquarium.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-cerveceria-aquarium_hero.webp",
+          "transcriptText": "Since 1957, the waiters here have worn jackets and ties with their names printed on them, and the dry martini still follows the original recipe.\n\nGran Vía del Marqués del Turia is the broad, tree-lined avenue with the promenade running down its centre, and Aquarium occupies a ground floor at number fifty-seven, where through the glass you can make out dark wood, leather armchairs and a long bar that gives the whole room the feel of a ship's saloon.\n\nThree partners opened it in 1957, and legend has it that the place very nearly flooded on its first day, which is rather a lot to ask of a bar called Aquarium. The building itself goes back to the 1930s, and very little has changed since the first cocktail was shaken, because the current owners still work from the old manuals and see no reason to tinker.\n\nPay attention to the staff, because every waiter wears the same formal uniform, addresses you politely, and keeps a professional discretion that regulars prize, since for decades this was where the city's landowners, lawyers and businessmen came to talk over things they'd rather not discuss in the office.\n\nThe food sticks to the classics, with sepia, salt cod, toasted bread with tomato and oil, and a pepito sandwich filled with tender beans, while the drinks list runs from the dry martini the regulars call the king of the house to negronis and vermouth.\n\nAquarium is worth the detour for one simple reason: in a city reinventing itself at speed, standing still has quietly become the most fashionable thing a bar can do, and younger Valencians now come in alongside grandparents who've been ordering the same drink at the same table for half a century.\n\nTake a stool at the bar and order the martini, then walk two streets over to the Mercado de Colón, where the city's other great early twentieth-century market shows off its tiled Art Nouveau facade."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.467839508211206,
+      "centroidLongitude": -0.36778515725206934,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ceeaa14a-0104-5e9e-88aa-3817f1e00610",
+      "createdAt": "2026-11-01",
+      "title": "Chapeau Valencia",
+      "shortDescription": "Shop windows usually exist to show you the clothes, but here the whole front of the shop has been turned into a stage.",
+      "longDescription": "Shop windows usually exist to show you the clothes, but here the whole front of the shop has been turned into a stage.\n\nChapeau is a multi-brand fashion shop, and a serious one, stocking the big European houses alongside streetwear labels, from Gucci, Dior and Balenciaga to Stone Island and Golden Goose. What sets it apart in a city full of shops is the building work behind the clothes, which was done by the studio of the Valencian architect Ramón Esteve.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-chapeau-valencia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-chapeau-valencia_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "cec7c140-6076-5f0a-bb66-5fd9d66c9c0a",
+          "order": 0,
+          "title": "Chapeau Valencia",
+          "caption": "Under the black steel canopy at number 5 Carrer d'Hernán Cortés, near the Mercado de Colón.",
+          "latitude": 39.46883779409066,
+          "longitude": -0.37168398794066093,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-chapeau-valencia.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-chapeau-valencia_hero.webp",
+          "transcriptText": "Shop windows usually exist to show you the clothes, but here the whole front of the shop has been turned into a stage.\n\nA broad black steel canopy frames the glass frontage here, on Carrer d'Hernán Cortés in the Eixample, close to the Mercado de Colón, and behind it the shop splits into two entrances, one leading into menswear and the other into womenswear, each window lit like a little theatre set.\n\nChapeau is a multi-brand fashion shop, and a serious one, stocking the big European houses alongside streetwear labels, from Gucci, Dior and Balenciaga to Stone Island and Golden Goose. What sets it apart in a city full of shops is the building work behind the clothes, which was done by the studio of the Valencian architect Ramón Esteve.\n\nThe interior runs back for some eight hundred square metres, and it's planned like a journey. A line of white mirrored boxes, which turn out to be the changing rooms, divides the space along its length, black mirrors and polished stone throw reflections back at you, and screens play video art by Javier Santaella alongside footage from the catwalks.\n\nAt the very back the ceiling tilts up into a huge skylight of angled glass, so the deeper you go, the brighter it gets, which is the opposite of how most shops treat their far corners.\n\nWhat's going on here is a sort of quiet argument about the Eixample itself. This neighbourhood was laid out in the nineteenth century as the city's smart new expansion, and its shops have always been about display, but Chapeau treats shopping less like browsing rails and more like walking through an installation, where the architecture is half the point.\n\nEven if you're not buying, wander through to the skylight and see how the light changes as you go, and then walk the few steps round to the Mercado de Colón, a market of the same city ambitions but a hundred years older."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.46883779409066,
+      "centroidLongitude": -0.37168398794066093,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Fashion",
+        "Commerce",
+        "Architecture",
+        "Contemporary",
+        "Designed by a Master",
+        "Ramón Esteve"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0ba914a0-2b66-5107-98c6-fc3b6d157194",
+      "createdAt": "2026-11-01",
+      "title": "El Umbracle | L'Umbracle",
+      "shortDescription": "Fifty-five fixed arches and fifty-four floating ones stand over this walkway, each of them about eighteen metres tall.",
+      "longDescription": "Fifty-five fixed arches and fifty-four floating ones stand over this walkway, each of them about eighteen metres tall.\n\nThe Umbracle was finished in 2001, and it runs for some three hundred and twenty metres. Its name is an old Valencian word for a shaded garden structure, the kind of slatted pergola gardeners used to protect delicate plants from the Mediterranean sun, and Calatrava simply scaled the idea up.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-el-umbracle_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-el-umbracle_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-el-umbracle_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-el-umbracle_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-el-umbracle_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ab426b3c-3529-57c5-b99f-241125ae5faf",
+          "order": 0,
+          "title": "El Umbracle | L'Umbracle",
+          "caption": "On the raised promenade inside the Umbracle, looking along the white arches of the City of Arts and Sciences.",
+          "latitude": 39.45519405750457,
+          "longitude": -0.353149735581963,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-el-umbracle.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-el-umbracle_hero.webp",
+          "transcriptText": "Fifty-five fixed arches and fifty-four floating ones stand over this walkway, each of them about eighteen metres tall.\n\nStand on the raised promenade inside the Umbracle and look along its length, and the white ribs repeat into the distance like the skeleton of something enormous, with palm trees growing up between them, and through the gaps on either side you can see the rest of Santiago Calatrava's City of Arts and Sciences: the long science museum, the eye-shaped Hemisfèric and, beyond them, the opera house.\n\nThe Umbracle was finished in 2001, and it runs for some three hundred and twenty metres. Its name is an old Valencian word for a shaded garden structure, the kind of slatted pergola gardeners used to protect delicate plants from the Mediterranean sun, and Calatrava simply scaled the idea up.\n\nLook down at the planting, too, which includes ninety-nine full-sized palms, more than sixty bitter orange trees, hundreds of climbing plants and beds of rosemary and lavender, so on a warm afternoon the whole walkway smells faintly of a herb garden.\n\nAlong the promenade runs a walk of contemporary sculptures by artists including the Valencian sculptor Miquel Navarro and Yoko Ono, which turns a stroll into a small outdoor exhibition.\n\nThe neatest detail lies underneath, since the entire structure is a roof over a car park, and the most poetic piece of the whole complex is, at heart, a very elegant answer to a practical question about where to put the cars. It's also the one building here that you don't need a ticket for, which goes some way to explaining why it's the place people actually linger.\n\nWalk to the far end, where the arches open out towards the lake and the opera house, and come back around sunset if you can, when the low light catches the ribs and the whole structure glows a soft gold against the pools."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.45519405750457,
+      "centroidLongitude": -0.353149735581963,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Park",
+        "Architecture",
+        "Contemporary",
+        "Public Art",
+        "Free to Visit",
+        "Green Escape",
+        "Designed by a Master",
+        "Santiago Calatrava"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4ef6e60c-d579-50d6-b27c-e611a3fe08c8",
+      "createdAt": "2026-11-01",
+      "title": "Espai Alfaro",
+      "shortDescription": "On the edge of Godella, in the middle of an industrial estate, a sculptor quietly built himself an oasis.",
+      "longDescription": "On the edge of Godella, in the middle of an industrial estate, a sculptor quietly built himself an oasis.\n\nAndreu Alfaro was born in Valencia in 1929, the son of a butcher, and taught himself to sculpt, working mostly in steel and aluminium, building forms out of repeated lines and modules that seem to shift as you walk around them, and he went on to show at the Venice Biennale and win Spain's National Prize for Fine Arts in 1981.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-espai-alfaro_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-espai-alfaro_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-espai-alfaro_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "495736e1-a675-5dfc-aa5c-1502790e85ee",
+          "order": 0,
+          "title": "Espai Alfaro",
+          "caption": "On Avinguda Andreu Alfaro in Godella's industrial estate; visits are usually arranged in advance.",
+          "latitude": 39.52745722051463,
+          "longitude": -0.41269471492421733,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-espai-alfaro.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-espai-alfaro_hero.webp",
+          "transcriptText": "On the edge of Godella, in the middle of an industrial estate, a sculptor quietly built himself an oasis.\n\nThe street sign gives the game away: this is Avinguda Andreu Alfaro, renamed for the man whose studio stands before you, and the complex is two plain modern buildings arranged around a central square, where large sculptures of steel stand in the open air.\n\nAndreu Alfaro was born in Valencia in 1929, the son of a butcher, and taught himself to sculpt, working mostly in steel and aluminium, building forms out of repeated lines and modules that seem to shift as you walk around them, and he went on to show at the Venice Biennale and win Spain's National Prize for Fine Arts in 1981.\n\nThe first building went up in 1985, designed by the architect Emilio Giménez as a workshop for metal and stone, and a second, square volume was added beside it and turned forty-five degrees, which is where Alfaro kept his own studio. Since 2014, two years after his death, that studio has housed a permanent display of his work, roughly fifty smaller pieces plus a handful of monumental ones.\n\nThe rest of the site has been handed on to other makers. There's the architecture practice of Fran Silvestre, a master's school in design, a library, and the Alfaro Hofmann collection of more than five thousand household objects, from radios to toasters, about four hundred of them on show.\n\nWhat lifts this place out of the ordinary is that it's still working. Plenty of artists' studios become shrines when the artist dies, but this one has become a school and a workshop, so the steel in the square is surrounded by students arguing about the next thing.\n\nVisits are usually arranged in advance, so check before you come, and when you're inside, ask to see the appliance collection, where a century of kitchen gadgets turns out to be a surprisingly moving history of everyday life."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.52745722051463,
+      "centroidLongitude": -0.41269471492421733,
+      "city": "Godella",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Public Art",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Emilio Giménez"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8f38d459-4c65-5cb6-ad16-5510d0f4a55d",
+      "createdAt": "2026-11-01",
+      "title": "Genuí Cosmopolita",
+      "shortDescription": "A restored farmhouse in the middle of a golf course is not the obvious place to find one of the most personal kitchens around Valencia.",
+      "longDescription": "A restored farmhouse in the middle of a golf course is not the obvious place to find one of the most personal kitchens around Valencia.\n\nGenuí is the Valencian word for genuine, and the chef, Paco Aviñó, seems to take the name as a brief. After more than thirty years in kitchens, he describes his cooking as a conversation in his head, trying to guess how to surprise the person he's feeding.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-genui-cosmopolita_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-genui-cosmopolita_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-genui-cosmopolita_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-genui-cosmopolita_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-genui-cosmopolita_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-genui-cosmopolita_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "da1d0502-7f00-509d-9bdf-3753f0633629",
+          "order": 0,
+          "title": "Genuí Cosmopolita",
+          "caption": "At the restored farmhouse inside the Club de Golf Escorpión, near Bétera; open to non-members.",
+          "latitude": 39.57743843741576,
+          "longitude": -0.47309236114223435,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-genui-cosmopolita.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-genui-cosmopolita_hero.webp",
+          "transcriptText": "A restored farmhouse in the middle of a golf course is not the obvious place to find one of the most personal kitchens around Valencia.\n\nThe old farmhouse here stands inside the Club de Golf Escorpión, out in the countryside near Bétera, some twenty-odd kilometres north-west of the city, and its tall windows look straight out over the greens and the Mediterranean scrub beyond, with tables arranged so that nearly everyone gets a view.\n\nGenuí is the Valencian word for genuine, and the chef, Paco Aviñó, seems to take the name as a brief. After more than thirty years in kitchens, he describes his cooking as a conversation in his head, trying to guess how to surprise the person he's feeding.\n\nInside, the farmhouse keeps its high ceilings, old wooden cabinets and chandeliers, livened up with bright contemporary paintings, so the room manages to feel both rural and slightly theatrical, and you don't need to be a member of the club to eat here.\n\nThe menu follows the market and the seasons, with rice and fideuà, the Valencian noodle cousin of paella, taking pride of place. The beef fideuà has become something of a signature, and you'll also find dishes like wild scallops with a leek teriyaki, which explains the cosmopolitan part of the name: local produce, cooked with an eye on the wider world.\n\nWhat's surprising here is the balance of power. Clubhouse restaurants are usually an afterthought to the golf, but at Genuí the arrangement runs the other way round, and plenty of the people parking outside have never picked up a club in their lives.\n\nIt's a lunchtime place, open from Wednesday to Sunday, so book ahead, and afterwards drive the few minutes into Bétera itself, where the old castle at the heart of the town is a reminder that this quiet farmland was fought over long before anyone thought of putting a golf course on it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.57743843741576,
+      "centroidLongitude": -0.47309236114223435,
+      "city": "Bétera",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "954009a5-8138-5be6-a141-ac018cb446aa",
+      "createdAt": "2026-11-01",
+      "title": "Gràffica Showroom",
+      "shortDescription": "Valencia takes design rather seriously, and this small shop is where the city's best known design magazine finally gave itself a front door.",
+      "longDescription": "Valencia takes design rather seriously, and this small shop is where the city's best known design magazine finally gave itself a front door.\n\nGràffica began online and in print around fifteen years ago, covering graphic design, typography and illustration in Spanish from its base here, and it has become a reference point for designers across the Spanish-speaking world.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-graffica-showroom_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0b4947e4-5ed0-5961-9e76-e85482a764e6",
+          "order": 0,
+          "title": "Gràffica Showroom",
+          "caption": "At number 16 Calle del Almudín, behind the cathedral, beside the brick flank of the medieval grain store.",
+          "latitude": 39.47649961392139,
+          "longitude": -0.3734958284159955,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-graffica-showroom.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-graffica-showroom_hero.webp",
+          "transcriptText": "Valencia takes design rather seriously, and this small shop is where the city's best known design magazine finally gave itself a front door.\n\nTucked behind the cathedral on the short Calle del Almudín, the showroom at number sixteen is the one in front of you, and if you glance along the street, you'll catch the long, plain brick flank of the Almudín itself, the medieval grain store that gave the street its name.\n\nGràffica began online and in print around fifteen years ago, covering graphic design, typography and illustration in Spanish from its base here, and it has become a reference point for designers across the Spanish-speaking world.\n\nThe showroom opened on the twenty-third of April 2025, which was World Book Day, a date chosen with some care. Inside you'll find every issue of the magazine, the publisher's own books, a careful selection from houses like Taschen, Phaidon and Gustavo Gili, and the small tools of the trade: Pantone swatches, pencils, rulers and paper samples.\n\nThere's also a small auditorium for talks, screenings and book launches, and the team made a point of holding events in the morning on weekdays, an idea borrowed from London and Berlin, so that working designers can drop in before the day gets going. The opening programme included a round table on the future of design in Spain with Pepe Gimeno, one of the country's most respected graphic designers.\n\nThe real point of the place is that it's a shop built to be a meeting room for a profession, and in a city that was named World Design Capital in 2022, it gives all that design talk a permanent table to gather around.\n\nWhen you leave, walk two minutes to the Plaza de l'Almoina, beside the cathedral, where a shallow pool of water laid over glass lets you look straight down into the excavated remains of the Roman city beneath your feet."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.47649961392139,
+      "centroidLongitude": -0.3734958284159955,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Art",
+        "Literature",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "991d68f5-1241-5611-849e-8793261aa88e",
+      "createdAt": "2026-11-01",
+      "title": "Gran Martínez",
+      "shortDescription": "In 1881 this was a pharmacy, and in a sense it still dispenses remedies, only now they arrive in a cocktail glass.",
+      "longDescription": "In 1881 this was a pharmacy, and in a sense it still dispenses remedies, only now they arrive in a cocktail glass.\n\nJosan Peris and Jaime Pérez, the partners behind it, opened Gran Martínez in November 2021 after two years of building work that the pandemic stretched out considerably. The pharmacy is a protected interior, so its century-old chequered black-and-white floor, its wooden ceiling beams and even the original pigments on the walls have been kept, while the watchmaker's side, too far gone to save, was left as raw concrete, and the contrast between the two is a large part of the charm.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-gran-martinez_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-gran-martinez_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-gran-martinez_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-gran-martinez_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e33582d4-c641-52e4-8f2d-c1f0a327de0e",
+          "order": 0,
+          "title": "Gran Martínez",
+          "caption": "At number 318 Avenida del Puerto, near where the long road from the city reaches the port.",
+          "latitude": 39.460505042020216,
+          "longitude": -0.3344543149242173,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-gran-martinez.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-gran-martinez_hero.webp",
+          "transcriptText": "In 1881 this was a pharmacy, and in a sense it still dispenses remedies, only now they arrive in a cocktail glass.\n\nNumber three hundred and eighteen, Avenida del Puerto, close to where the long road from the city finally reaches the port, is the spot, and the bar fills two neighbouring ground-floor units, the old pharmacy on one side and a long-closed watchmaker's shop on the other.\n\nJosan Peris and Jaime Pérez, the partners behind it, opened Gran Martínez in November 2021 after two years of building work that the pandemic stretched out considerably. The pharmacy is a protected interior, so its century-old chequered black-and-white floor, its wooden ceiling beams and even the original pigments on the walls have been kept, while the watchmaker's side, too far gone to save, was left as raw concrete, and the contrast between the two is a large part of the charm.\n\nThe name has two sources: Martínez was the pharmacist who ran the original shop, and the Gran came about when the two spaces were joined, with a nod to Scott Fitzgerald and his Jazz Age parties.\n\nLook at the cocktail list and you'll see the pharmacy joke carried all the way through, because the drinks are grouped by their effect: stimulating, relaxing, fruity or aphrodisiac. The food is a short list of snacks, from pastrami sandwiches to boards of cheese and cured meat, while the music comes from vinyl DJs, a piano and the occasional jam session.\n\nWhat it pulls off is the trick of keeping a theme without becoming a theme bar. The old apothecary isn't dressed up as anything, it simply carries on, and the cocktails fit into it the way medicines once did.\n\nIt opens in the evenings from Thursday to Sunday, and if you arrive early, walk the fifteen minutes down to the marina first, where Chipperfield's white Veles e Vents building catches the last of the light over the water."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.460505042020216,
+      "centroidLongitude": -0.3344543149242173,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "After Dark",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "74ae6030-da20-53be-9b12-fdf991b81358",
+      "createdAt": "2026-11-01",
+      "title": "Habitual by Ricard Camarena",
+      "shortDescription": "One of Valencia's most celebrated chefs chose to open a restaurant underneath a market, and it turned out to be an inspired idea.",
+      "longDescription": "One of Valencia's most celebrated chefs chose to open a restaurant underneath a market, and it turned out to be an inspired idea.\n\nThe market came first, designed by the Valencian architect Francisco Mora Berenguer between 1914 and 1916, at the height of the city's love affair with Art Nouveau, and it's now a national monument, with glazed tiles and ceramic decoration celebrating the produce of the region's farmland.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-habitual_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-habitual_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-habitual_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-habitual_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-habitual_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-habitual_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f7e2c010-3dbb-5262-9020-c13e4be5d1cf",
+          "order": 0,
+          "title": "Habitual by Ricard Camarena",
+          "caption": "Before the Art Nouveau front of the Mercado de Colón on Calle de Jorge Juan; the restaurant is downstairs.",
+          "latitude": 39.46890179989657,
+          "longitude": -0.3687130879406609,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-habitual.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-habitual_hero.webp",
+          "transcriptText": "One of Valencia's most celebrated chefs chose to open a restaurant underneath a market, and it turned out to be an inspired idea.\n\nFacing you on Calle de Jorge Juan is the tiled and brick Art Nouveau front of the Mercado de Colón, and that's your way in, so once inside, head down to the lower floor, where Habitual sits tucked beneath the market hall.\n\nThe market came first, designed by the Valencian architect Francisco Mora Berenguer between 1914 and 1916, at the height of the city's love affair with Art Nouveau, and it's now a national monument, with glazed tiles and ceramic decoration celebrating the produce of the region's farmland.\n\nRicard Camarena opened Habitual here on the first of September 2015. His flagship restaurant holds Michelin stars, but this was meant to be the opposite kind of place: comfortable cooking, rooted in the western Mediterranean, using the same care with ingredients as his tasting menus without asking diners to sit through one.\n\nHe works directly with growers in the huerta, the market gardens around the city, and the menu leans on what they bring in, alongside house-made charcuterie, fresh pasta and bread. The Michelin Guide also notes that several dishes from the chef's own back catalogue turn up here, a rare chance to try them without the formality of his flagship.\n\nWhat's appealing is the honesty of the name. Habitual means the place you go out of habit, and that's precisely the ambition: a restaurant you could eat in every week, not just on special occasions, sitting under a market that was built for exactly that sort of everyday use.\n\nBefore you go down for lunch, step back out into the street and look up at the facade, where the ceramic panels and ironwork are some of the finest Art Nouveau decoration in Valencia."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.46890179989657,
+      "centroidLongitude": -0.3687130879406609,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Market",
+        "Architecture",
+        "Designed by a Master",
+        "Francisco Mora Berenguer"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "80315f55-61cc-5cc3-b5d5-d8bbcb97f3d3",
+      "createdAt": "2026-11-01",
+      "title": "HiFi Valencia",
+      "shortDescription": "In Japan in the 1950s, bars began to appear where the main attraction wasn't the drink but the speakers.",
+      "longDescription": "In Japan in the 1950s, bars began to appear where the main attraction wasn't the drink but the speakers.\n\nThe people behind it are theBasement, a Valencian collective founded in 2012 that spent a decade putting on electronic music nights in other people's venues before opening a place of their own at the end of 2023. HiFi, they say, is a different idea, borrowed from the Japanese listening bars of the post-war years, with a dash of speakeasy.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-hifi-valencia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-hifi-valencia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-hifi-valencia_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "de6e58c5-1650-5a5b-955b-35b0558ce0d4",
+          "order": 0,
+          "title": "HiFi Valencia",
+          "caption": "At number 91 Calle de Jesús, a street with a long pedigree for late nights.",
+          "latitude": 39.46190688751622,
+          "longitude": -0.38709488794066094,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-hifi-valencia.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-hifi-valencia_hero.webp",
+          "transcriptText": "In Japan in the 1950s, bars began to appear where the main attraction wasn't the drink but the speakers.\n\nCalle de Jesús has a long pedigree for late nights, having been home over the years to clubs like Juanita Club and Dub Club, and number ninety-one is now HiFi, a small room built entirely around the sound of records.\n\nThe people behind it are theBasement, a Valencian collective founded in 2012 that spent a decade putting on electronic music nights in other people's venues before opening a place of their own at the end of 2023. HiFi, they say, is a different idea, borrowed from the Japanese listening bars of the post-war years, with a dash of speakeasy.\n\nThe speakers are the stars here, and they've even been given names. A custom-built pair called Chip and Chop does the heavy lifting, another pair at the bar answers to Starsky and Hutch, and two subwoofers handle the bass, all of it playing vinyl through high-end equipment from the audio firm Admire Audio.\n\nThe music wanders well beyond the house sound theBasement made its name with, taking in jazz, reggae, dub, soul, funk and disco, and when the records demand it, there's a small dance floor for anyone who can't keep still. Now and again the decks fall silent for talks and discussions about music.\n\nThe idea underneath all of this is surprisingly old-fashioned. At a time when most music is heard through earbuds on the move, HiFi asks people to sit in one room, together, and actually listen to an album played properly, and it turns out a lot of people have been missing exactly that.\n\nCheck the programme before you come, since the nights vary, and arrive early in the evening, when the room is quieter and you can ask whoever's behind the turntables what's playing and why it sounds so good."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.46190688751622,
+      "centroidLongitude": -0.38709488794066094,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance",
+        "After Dark",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9db246ee-f617-5efa-ae09-988b9b448806",
+      "createdAt": "2026-11-01",
+      "title": "Hospes Palau de la Mar",
+      "shortDescription": "Two nineteenth-century town houses stand side by side here, and at some point they agreed to become a single hotel.",
+      "longDescription": "Two nineteenth-century town houses stand side by side here, and at some point they agreed to become a single hotel.\n\nThis stretch of the city grew up as Valencia expanded beyond its old walls, and these two palaces, as Valencians tend to call such grand houses, were part of that new prosperity. Today they're joined as the Hospes Palau de la Mar, with sixty-seven rooms and suites spread across the original buildings.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-hospes-palau-de-la-mar_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-hospes-palau-de-la-mar_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-hospes-palau-de-la-mar_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-hospes-palau-de-la-mar_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c5327a44-d014-54cc-8a4e-c2dd0d98adac",
+          "order": 0,
+          "title": "Hospes Palau de la Mar",
+          "caption": "Before the twin facades at number 14 Calle Navarro Reverter, a minute from the Porta de la Mar.",
+          "latitude": 39.471114058963636,
+          "longitude": -0.36661488161485034,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-hospes-palau-de-la-mar.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-hospes-palau-de-la-mar_hero.webp",
+          "transcriptText": "Two nineteenth-century town houses stand side by side here, and at some point they agreed to become a single hotel.\n\nCalle Navarro Reverter runs past the door here at number fourteen, a minute's walk from the old Porta de la Mar and the river gardens, and the twin facades before you are Valencian town houses of the 1800s, built for families who had done very well indeed.\n\nThis stretch of the city grew up as Valencia expanded beyond its old walls, and these two palaces, as Valencians tend to call such grand houses, were part of that new prosperity. Today they're joined as the Hospes Palau de la Mar, with sixty-seven rooms and suites spread across the original buildings.\n\nThe interior work was done by the Spanish designer Tomás Alía, who played dark woods against bright white walls. If you step into the entrance hall, look for the grand staircase, with its intricately carved wooden banister rising through a loggia, and above it a stained-glass skylight that pours coloured light down the stairwell.\n\nOut of sight there's a pool and a spa called Bodyna, which is a long way from the original purpose of the place, though perhaps not so far from the idea of rest and comfort that the families who built it had in mind.\n\nWhat the hotel shows, quite elegantly, is a particular Valencian habit of keeping the face and changing the body. Up and down this part of the city, nineteenth-century facades have been carefully preserved while whole new buildings have grown up behind them, and here the join has been handled with real tact.\n\nFrom the hotel door, turn towards the Porta de la Mar and walk down into the Turia gardens, where the old riverbed stretches away in both directions and makes a very pleasant start to an evening stroll."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.471114058963636,
+      "centroidLongitude": -0.36661488161485034,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e6f0c322-341f-58c0-bc7b-5046a2dbe9ac",
+      "createdAt": "2026-11-01",
+      "title": "Turia Gardens | Jardí del Túria",
+      "shortDescription": "On the fourteenth of October 1957, the river that once flowed under this bridge burst its banks and flooded much of Valencia.",
+      "longDescription": "On the fourteenth of October 1957, the river that once flowed under this bridge burst its banks and flooded much of Valencia.\n\nThe flood of 1957 killed at least eighty-one people, and afterwards the authorities decided the river could never be allowed back. Under what became known as the Plan Sur, the Turia was diverted into a new channel well to the south, leaving its old bed through the centre empty.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-jardin-del-turia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-jardin-del-turia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-jardin-del-turia_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-jardin-del-turia_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-jardin-del-turia_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-jardin-del-turia_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f335c0b8-eb8e-550d-97e7-455705e0d715",
+          "order": 0,
+          "title": "Turia Gardens | Jardí del Túria",
+          "caption": "In the middle of the Pont de la Trinitat, looking down over the parapet into the old riverbed.",
+          "latitude": 39.479023,
+          "longitude": -0.372695,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-jardin-del-turia.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-jardin-del-turia_hero.webp",
+          "transcriptText": "On the fourteenth of October 1957, the river that once flowed under this bridge burst its banks and flooded much of Valencia.\n\nFrom the middle of the old stone bridge here, the Pont de la Trinitat, look down over its parapet: below you, where water used to run, are paths, palm trees, lawns and joggers, part of a green ribbon that curves right through the city, and two stone statues of saints keep watch over the crossing.\n\nThe flood of 1957 killed at least eighty-one people, and afterwards the authorities decided the river could never be allowed back. Under what became known as the Plan Sur, the Turia was diverted into a new channel well to the south, leaving its old bed through the centre empty.\n\nThe first plan for that empty riverbed was a motorway. Valencians pushed back, with a campaign whose slogan translates roughly as the Turia's bed is ours and we want it green, and they won, so from 1986 the riverbed was turned, section by section, into a park almost nine kilometres long. Ricardo Bofill designed one stretch, and other teams added sports fields, fountains and an urban forest of pines.\n\nThe bridge under your feet is a survivor in its own right. It was built between 1401 and 1407, with ten Gothic arches, and it's the oldest bridge in the city, having outlasted centuries of floods, partial rebuilding and the river itself.\n\nThat origin story is what sets the Turia garden apart from most city parks. It wasn't handed down by a planner or a monarch; it came out of a disaster and then out of an argument, won by people who wanted somewhere to walk rather than somewhere to drive.\n\nCross to the far end of the bridge, where the Museo de Bellas Artes holds a superb collection of Spanish old masters, or take the steps down into the riverbed and follow the paths east towards the City of Arts and Sciences."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.479023,
+      "centroidLongitude": -0.372695,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Bridge",
+        "History",
+        "Green Escape",
+        "Free to Visit",
+        "Iconic Landmark",
+        "Gothic",
+        "Designed by a Master",
+        "Ricardo Bofill"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1e1e7f77-71b4-5457-9b97-9a55dbad943e",
+      "createdAt": "2026-11-01",
+      "title": "Silk Exchange | Llotja de la Seda",
+      "shortDescription": "Inside this building, a Latin inscription in gold reminds merchants that trade is an honourable thing, provided nobody tells lies.",
+      "longDescription": "Inside this building, a Latin inscription in gold reminds merchants that trade is an honourable thing, provided nobody tells lies.\n\nIt was built between 1482 and 1533 under the master builder Pere Compte, at the height of Valencia's wealth as a Mediterranean trading city, and the main trading hall went up in just fifteen years, a speed the building rather proudly mentions in that same inscription.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-lonja-de-la-seda_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-lonja-de-la-seda_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-lonja-de-la-seda_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-lonja-de-la-seda_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-lonja-de-la-seda_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c784301c-9281-5153-8d28-63d79e9c94cd",
+          "order": 0,
+          "title": "Silk Exchange | Llotja de la Seda",
+          "caption": "In the square with the Central Market at your back, facing the long Gothic front and its square tower.",
+          "latitude": 39.47453891097663,
+          "longitude": -0.37829234907374126,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-lonja-de-la-seda.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-lonja-de-la-seda_hero.webp",
+          "transcriptText": "Inside this building, a Latin inscription in gold reminds merchants that trade is an honourable thing, provided nobody tells lies.\n\nAcross the square, with the Central Market at your back, stretches the long Gothic front of the Silk Exchange, its roofline lined with crenellations like a castle, its walls carved with gargoyles, and in the middle a square tower that rises above everything else.\n\nIt was built between 1482 and 1533 under the master builder Pere Compte, at the height of Valencia's wealth as a Mediterranean trading city, and the main trading hall went up in just fifteen years, a speed the building rather proudly mentions in that same inscription.\n\nWhen you go in, the hall is the thing to see. Twisted stone columns spiral up from the floor and open out at the top into ribbed vaults, so the space feels less like an office and more like a petrified palm grove, which is very much the effect Compte was after. It was here that silk merchants and traders shook hands on contracts.\n\nThe tower had a sterner job, since its rooms were used to lock up merchants who couldn't pay their debts, while another wing housed the Consolat del Mar, a court that judged disputes over maritime trade. Between them sits a quiet courtyard of orange trees.\n\nAlong the outside walls, you'll notice that the gargoyles aren't all saints and beasts; some are distinctly earthy, which suggests the stonemasons had a sense of humour about the business going on inside.\n\nWhat's striking is how modern the message is. In 1996 UNESCO listed this as a World Heritage Site for its architecture, but its real legacy might be that inscription: a fifteenth-century stock exchange that put business ethics on the wall in letters of gold.\n\nOnce inside, find the orange-tree courtyard, then come back out and walk slowly round the outside, picking out your favourite gargoyle, since there's an odd one for everyone."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.47453891097663,
+      "centroidLongitude": -0.37829234907374126,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Commerce",
+        "History",
+        "Gothic",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Pere Compte"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8244e8c6-2039-5866-be1b-1887d22ac56d",
+      "createdAt": "2026-11-01",
+      "title": "Lavoe Arroz y Mar",
+      "shortDescription": "Fifty litres of fresh stock are made here every day, and the owner has said there's no cutting corners with any of it.",
+      "longDescription": "Fifty litres of fresh stock are made here every day, and the owner has said there's no cutting corners with any of it.\n\nToni Boix opened Lavoe in 2017, after three years spent cooking paellas for well-heeled clients in Ibiza, and he has described it less as a restaurant and more as a kind of gastronomic society, a club for people who take rice seriously. The interior is by the designer Ramón Bandrés, with the kitchen in full view of the tables.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-lavoe-arroz-y-mar_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-lavoe-arroz-y-mar_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "56df3c1d-b209-5822-97dd-a29052fcc41d",
+          "order": 0,
+          "title": "Lavoe Arroz y Mar",
+          "caption": "On Carrer de la Creu Nova, a narrow old-town street a few minutes from the Plaza de la Reina.",
+          "latitude": 39.47320793206633,
+          "longitude": -0.3733577437602913,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-lavoe-arroz-y-mar.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-lavoe-arroz-y-mar_hero.webp",
+          "transcriptText": "Fifty litres of fresh stock are made here every day, and the owner has said there's no cutting corners with any of it.\n\nThrough the window here on Carrer de la Creu Nova, a narrow old-town street a few minutes from the Plaza de la Reina, you can see a bright dining room and a bar facing an open kitchen, with modern artworks hanging on the walls.\n\nToni Boix opened Lavoe in 2017, after three years spent cooking paellas for well-heeled clients in Ibiza, and he has described it less as a restaurant and more as a kind of gastronomic society, a club for people who take rice seriously. The interior is by the designer Ramón Bandrés, with the kitchen in full view of the tables.\n\nThe menu focuses on rice and the sea, with around twenty different rice dishes alongside fideuà, made with short noodles in place of grains. Look out for rice with longaniza sausage and green garlic shoots, a rich rice made with the meats of a traditional stew, and a fideuà with sea bass and prawns, all of them built on that daily stock.\n\nIt helps to know how Valencians eat this kind of food. Paella is a lunchtime dish, cooked to order in a wide, shallow pan, and the prize is the socarrat, the thin layer of rice that toasts and crackles against the bottom of the pan, which locals will scrape out with real determination.\n\nThe appeal of Lavoe is in that seriousness about a single thing. In a city where paella is sold on every tourist street, a small kitchen that makes fifty litres of stock every morning is quietly making the case for doing the most famous dish in Valencia properly.\n\nCome at lunchtime, book ahead, and when the pan arrives, ask for some socarrat; afterwards, walk round to the Plaza de la Reina for a look at the cathedral's ornate Baroque front."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.47320793206633,
+      "centroidLongitude": -0.3733577437602913,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7fd6b9a9-f997-555b-92cc-e087df352ac3",
+      "createdAt": "2026-11-01",
+      "title": "Llibreries París València",
+      "shortDescription": "This bookshop began with one man's overflowing collection of books and a pitch in the Plaza Redonda.",
+      "longDescription": "This bookshop began with one man's overflowing collection of books and a pitch in the Plaza Redonda.\n\nThe founder was a collector who had simply accumulated more books than he could keep, so he began selling them at the Plaza Redonda, the circular market square in the old town. From there he moved to Calle Sevilla, and then here to Pelayo, and the business is now run by his son, Carlos Olivert, who has kept to the same idea his father started with.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-llibreries-paris-valencia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-llibreries-paris-valencia_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ef09a4e7-b448-5a85-8153-323a20f67c9c",
+          "order": 0,
+          "title": "Llibreries París València",
+          "caption": "At number 7 Calle de Pelayo, just along the street from the Estación del Norte.",
+          "latitude": 39.46744479165681,
+          "longitude": -0.3783283151683201,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-llibreries-paris-valencia.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-llibreries-paris-valencia_hero.webp",
+          "transcriptText": "This bookshop began with one man's overflowing collection of books and a pitch in the Plaza Redonda.\n\nWith the Estación del Norte just along the street, the bookshop at number seven Calle de Pelayo sits before you, and the way it fills its shelves tells you most of what you need to know about how this business has always worked.\n\nThe founder was a collector who had simply accumulated more books than he could keep, so he began selling them at the Plaza Redonda, the circular market square in the old town. From there he moved to Calle Sevilla, and then here to Pelayo, and the business is now run by his son, Carlos Olivert, who has kept to the same idea his father started with.\n\nThe family's early trade was in comics, sold wholesale, including much-loved Spanish titles like Jaimito and Pumby, and that taught them the lesson the shop still lives by: buy the books that publishers have stopped selling, the remainders and discontinued editions, and pass them on at prices people can afford.\n\nIt makes for a shop of discoveries, where alongside discounted new books you'll find out-of-print volumes and a remarkable range of facsimile editions, exact copies of illuminated manuscripts and rare old books.\n\nThere are four París València shops in the city now, and one of them, on Calle Navellos, has a mural on its wall painted in 1956 by the Valencian artist Luis Arcas Brauner, a small, little-known treasure of the city's art history.\n\nIts quiet distinction is loyalty to the books other people gave up on. It's a bookshop built on second chances, and in an age of algorithms deciding what we read next, that kind of browsing feels rather valuable.\n\nGive yourself twenty minutes to browse, and then, if you'd like to complete the family story, head into the old town to see the Plaza Redonda, where the whole business began on a market stall."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.46744479165681,
+      "centroidLongitude": -0.3783283151683201,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "literature",
+      "tags": [
+        "Venue",
+        "Literature",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "19ca1ab2-8a69-5931-9fe8-ac64e6143565",
+      "createdAt": "2026-11-01",
+      "title": "Llisa Negra",
+      "shortDescription": "Llisa negra is the Valencian name for the black mullet, a humble fish of the lagoons, and it's a telling choice for a chef with three Michelin…",
+      "longDescription": "Llisa negra is the Valencian name for the black mullet, a humble fish of the lagoons, and it's a telling choice for a chef with three Michelin stars to his name.\n\nThe chef is Quique Dacosta, whose restaurant in Dénia, down the coast, is one of the most celebrated in Spain, and he opened Llisa Negra here on the fifteenth of November 2018. Where his flagship is famous for invention, this place goes back to basics, with embers, a grill and the smell of wood smoke, and the kitchen is set up so that diners can watch the cooking from their tables.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-llisa-negra_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-llisa-negra_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-llisa-negra_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-llisa-negra_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e924287b-347d-5838-8afb-e220e6fcbdd3",
+          "order": 0,
+          "title": "Llisa Negra",
+          "caption": "At the corner of Carrer de Pascual i Genís and Carrer de Correus, near the Plaza del Ayuntamiento.",
+          "latitude": 39.469900403427715,
+          "longitude": -0.374532864418037,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-llisa-negra.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-llisa-negra_hero.webp",
+          "transcriptText": "Llisa negra is the Valencian name for the black mullet, a humble fish of the lagoons, and it's a telling choice for a chef with three Michelin stars to his name.\n\nAt the corner where Carrer de Pascual i Genís meets Carrer de Correus, a couple of minutes from the Plaza del Ayuntamiento, is where the restaurant has its home, and the entrance here leads into a dining room built around an open fire.\n\nThe chef is Quique Dacosta, whose restaurant in Dénia, down the coast, is one of the most celebrated in Spain, and he opened Llisa Negra here on the fifteenth of November 2018. Where his flagship is famous for invention, this place goes back to basics, with embers, a grill and the smell of wood smoke, and the kitchen is set up so that diners can watch the cooking from their tables.\n\nThe Michelin Guide calls it Dacosta's most Mediterranean creation, and the menu bears that out. There are prawns poached in seawater, grilled grey shrimp, octopus from Dénia and seasonal vegetables charred over the coals, and rice holds a special place, cooked to order in proper paella pans, with a set menu that changes every three weeks to follow the market.\n\nThe architect Silvia Bellot designed the rooms with simple, natural materials, so the space stays uncluttered and the fire takes centre stage.\n\nThere's a quiet confidence in the way a chef who has spent his career at the cutting edge of Spanish cooking has opened a restaurant whose main tool is a fire and named it after a fish that most people overlook, which says a good deal about where Valencian cooking finds its pride: not in fuss, but in getting simple things exactly right.\n\nBook directly with the restaurant, and after your meal, walk round the corner into the Plaza del Ayuntamiento, where the old post office building has a glass dome that rewards a look inside."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.469900403427715,
+      "centroidLongitude": -0.374532864418037,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c20c79f4-a5d9-5012-9efd-fa731453c1b9",
+      "createdAt": "2026-11-01",
+      "title": "Palace of the Marqués de Dos Aguas | Palau del Marqués de Dosaigües",
+      "shortDescription": "The doorway in front of you is carved from alabaster, and the whole thing is essentially a pun.",
+      "longDescription": "The doorway in front of you is carved from alabaster, and the whole thing is essentially a pun.\n\nThe family who lived here held the title of Marqués de Dos Aguas, which means Marquis of the Two Waters, and the two figures are pouring those waters, usually identified as the region's two great rivers, the Turia and the Júcar, which is heraldry turned into theatre.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-palace-marques-de-dos-aguas_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-palace-marques-de-dos-aguas_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-palace-marques-de-dos-aguas_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-palace-marques-de-dos-aguas_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-palace-marques-de-dos-aguas_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-palace-marques-de-dos-aguas_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e1fc5e56-d1a5-5bea-9a94-19cae2742a79",
+          "order": 0,
+          "title": "Palace of the Marqués de Dos Aguas | Palau del Marqués de Dosaigües",
+          "caption": "On Calle del Poeta Querol, before the alabaster doorway and its two water-pouring figures.",
+          "latitude": 39.4725,
+          "longitude": -0.3748026,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-palace-marques-de-dos-aguas.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-palace-marques-de-dos-aguas_hero.webp",
+          "transcriptText": "The doorway in front of you is carved from alabaster, and the whole thing is essentially a pun.\n\nLift your eyes to the palace's extraordinary entrance on Calle del Poeta Querol, a great cascade of pale carved stone, with two powerful male figures sprawled on either side of the door, each pouring water from a jar, and above them, in a niche, a figure of the Virgin Mary looking down.\n\nThe family who lived here held the title of Marqués de Dos Aguas, which means Marquis of the Two Waters, and the two figures are pouring those waters, usually identified as the region's two great rivers, the Turia and the Júcar, which is heraldry turned into theatre.\n\nThe portal dates from the 1740s, when the family transformed an older mansion into this rococo showpiece. It was designed by the painter Hipólito Rovira and carved by the sculptor Ignacio Vergara, and it remains one of the most exuberant pieces of rococo carving in Spain.\n\nOriginally the rest of the facade was every bit as lavish, painted all over with frescoes by Rovira himself, but by the nineteenth century they had deteriorated so badly that in 1867 they were removed and replaced with the grey and pink stucco, imitating marble, that you can see today, along with the curving French-style balconies.\n\nSince the middle of the twentieth century the palace has housed the National Museum of Ceramics, named after the collector Manuel González Martí.\n\nWhat this building does so well is advertise. Before newspapers or logos, a doorway like this was how a family told the whole city exactly who they were, and nearly three hundred years later, people still stop in the street to stare at it, which suggests it worked rather well.\n\nThe ceramic collection inside runs from ancient pottery to modern design, and on the ground floor you'll find the family's gilded eighteenth-century carriages, every bit as outrageous as the door."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.4725,
+      "centroidLongitude": -0.3748026,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Architecture",
+        "Art",
+        "Baroque",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Hipólito Rovira"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "965e9d92-b29d-5d63-81d1-c99fff0721e8",
+      "createdAt": "2026-11-01",
+      "title": "Palacio Santa Clara",
+      "shortDescription": "In 1916 this building went up for a family of silk merchants, with the business on the ground floor and the household above.",
+      "longDescription": "In 1916 this building went up for a family of silk merchants, with the business on the ground floor and the household above.\n\nThe architect was Francisco Javier Goerlich, one of the leading figures of his generation in Valencia, and the family were the Niederleytners, who ran a silk business from the ground floor. According to the hotel's own history, it was the woman of the house who managed the company, and the present-day hotel has made her its guiding spirit, a portrait of the independent modernist woman of her day.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-palacio-santa-clara_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-palacio-santa-clara_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-palacio-santa-clara_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-palacio-santa-clara_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "75a4d11f-84c8-5321-ac9d-d7f34b32e99d",
+          "order": 0,
+          "title": "Palacio Santa Clara",
+          "caption": "Before the modernist town house on Carrer de Santa Clara, close to the Plaza del Ayuntamiento.",
+          "latitude": 39.46859758321807,
+          "longitude": -0.3739147995799215,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-palacio-santa-clara.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-palacio-santa-clara_hero.webp",
+          "transcriptText": "In 1916 this building went up for a family of silk merchants, with the business on the ground floor and the household above.\n\nClose to the Plaza del Ayuntamiento, on Carrer de Santa Clara, the building facing you is a modernist town house, its facade softened with the curving lines and natural motifs that Valencia's architects loved in the early twentieth century.\n\nThe architect was Francisco Javier Goerlich, one of the leading figures of his generation in Valencia, and the family were the Niederleytners, who ran a silk business from the ground floor. According to the hotel's own history, it was the woman of the house who managed the company, and the present-day hotel has made her its guiding spirit, a portrait of the independent modernist woman of her day.\n\nIt was converted into a boutique hotel as the first in Valencia to join Marriott's Autograph Collection, and the restoration leaned into the building's original style, with curving lines, organic decoration and artisan detail running through its rooms.\n\nTwo touches stand out: guests are welcomed with a glass of mistela, a sweet Valencian dessert wine made from grape must and spirit, and up on the roof there's a pool and a bar called El Torreón, which looks out across the rooftops of the city.\n\nWhat connects this building to the city is silk. Valencia grew rich on the silk trade in the fifteenth century, which is why it built the Silk Exchange, and the Niederleytner shop was part of the long tail of that history, still selling fine cloth almost five hundred years after the merchants first gathered there.\n\nGo up to the roof terrace in the early evening if you're staying here, to watch the light fade over the old town, and then walk ten minutes to the Silk Exchange, where the story of Valencia's silk began."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 102,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.46859758321807,
+      "centroidLongitude": -0.3739147995799215,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Commerce",
+        "Viewpoint",
+        "Designed by a Master",
+        "Francisco Javier Goerlich"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "92f37b11-9516-53ee-8255-1303c088a097",
+      "createdAt": "2026-11-01",
+      "title": "Parc Central",
+      "shortDescription": "For more than a century, railway tracks cut this part of Valencia in two, and the park around you is the first stitch in sewing it back together.",
+      "longDescription": "For more than a century, railway tracks cut this part of Valencia in two, and the park around you is the first stitch in sewing it back together.\n\nThe park opened on the seventeenth of December 2018, designed by the American landscape architect Kathryn Gustafson and her practice, Gustafson Porter and Bowman, after an international competition. The first phase covers about eleven hectares, which is only around forty per cent of what's planned, because the rest depends on the railway lines next door being moved underground.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-parc-central_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-parc-central_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-parc-central_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a7d7fae7-55cb-592a-a483-d8b225134df1",
+          "order": 0,
+          "title": "Parc Central",
+          "caption": "In the Plaza de Demetrio Ribes at the centre of the park, among the old railway warehouses.",
+          "latitude": 39.457460950895566,
+          "longitude": -0.37906883051261586,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-parc-central.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-parc-central_hero.webp",
+          "transcriptText": "For more than a century, railway tracks cut this part of Valencia in two, and the park around you is the first stitch in sewing it back together.\n\nLook around the open square at the centre of the park, the Plaza de Demetrio Ribes, lined with low industrial buildings that were once railway warehouses, while beyond them stretch lawns, water channels and young trees.\n\nThe park opened on the seventeenth of December 2018, designed by the American landscape architect Kathryn Gustafson and her practice, Gustafson Porter and Bowman, after an international competition. The first phase covers about eleven hectares, which is only around forty per cent of what's planned, because the rest depends on the railway lines next door being moved underground.\n\nThe square is named after Demetrio Ribes, the architect of the Estación del Norte, and these warehouses were part of the same railway world. Four of them have been given new lives: one as a sports centre, one as a popular university, one as a cultural space and one as a social services centre, so the buildings that once handled freight now handle people.\n\nAround the square, the park is divided into gardens with different characters, including a garden inspired by the huerta, the irrigated farmland around Valencia, a children's garden with climbing walls, and a romantic garden of flowers. Water runs through the whole design, and the planting includes around a thousand trees.\n\nThe thing to understand is that this park is unfinished, and openly so. It's a promise half kept, waiting on trains to go underground, and in a city that turned its old river into a garden, it's another bet that infrastructure, once moved, can give a city back a place to breathe.\n\nFrom here, walk north to the Estación del Norte, Ribes's station, and look at the facade and the ticket hall, where oranges, blossom and Valencian motifs are worked into the decoration in a way that makes catching a train feel like a celebration."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.457460950895566,
+      "centroidLongitude": -0.37906883051261586,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Green Escape",
+        "Free to Visit",
+        "Contemporary",
+        "Designed by a Master",
+        "Kathryn Gustafson"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0ae3efc4-479b-5440-8fe8-f5469237a6bb",
+      "createdAt": "2026-11-01",
+      "title": "Albufera Natural Park | Parc Natural de l'Albufera",
+      "shortDescription": "The name Albufera comes from the Arabic for the little sea, and when the water is flat and the light is low, it's easy to see why.",
+      "longDescription": "The name Albufera comes from the Arabic for the little sea, and when the water is flat and the light is low, it's easy to see why.\n\nThe lagoon lies about eleven kilometres south of the city, inside a natural park of more than twenty thousand hectares protected since 1986, and it was once a salty inlet of the sea until irrigation channels and growing sandbars turned it fresh.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-albufera-natural-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-albufera-natural-park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-albufera-natural-park_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-albufera-natural-park_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-albufera-natural-park_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-albufera-natural-park_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6e57ec10-efca-52ef-a523-ade570864bfe",
+          "order": 0,
+          "title": "Albufera Natural Park | Parc Natural de l'Albufera",
+          "caption": "At the lagoon's edge by the Gola de Pujol viewpoint, south of the city on the road to El Palmar.",
+          "latitude": 39.34906708013898,
+          "longitude": -0.3239802998240244,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-albufera-natural-park.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 120,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-albufera-natural-park_hero.webp",
+          "transcriptText": "The name Albufera comes from the Arabic for the little sea, and when the water is flat and the light is low, it's easy to see why.\n\nAt the water's edge, where the reeds part, look out across the lagoon and you'll see a wide, shallow sheet of water fringed with reed beds, low wooden boats with flat bottoms, perhaps a heron or an egret standing very still in the shallows, and, on the far side, the green or golden line of the rice fields.\n\nThe lagoon lies about eleven kilometres south of the city, inside a natural park of more than twenty thousand hectares protected since 1986, and it was once a salty inlet of the sea until irrigation channels and growing sandbars turned it fresh.\n\nPeople have fished here for centuries, with rights recognised as early as 1250, and from the eighteenth century onwards rice took over the land around the water. The rice fields still set the rhythm of the year, planted in spring, harvested in early autumn, and flooded in winter for the birds.\n\nNot far away lies El Palmar, a village of fishermen and cooks, where you'll see barracas, the traditional thatched cottages with whitewashed walls and steep roofs, and where the local speciality is all i pebre, a stew of eels in garlic and paprika. This landscape also inspired the writer Vicente Blasco Ibáñez, whose novel Cañas y Barro, or Reeds and Mud, is set here.\n\nWhat's worth knowing, out here, is that this is where paella comes from. The rice, the eels, the ducks and the snails that went into the original dish all came from this lagoon, so the city's most famous meal is really a portrait of this landscape.\n\nIf you can stay until evening, take one of the flat-bottomed boats out from El Palmar at sunset, and wait, since the richest colour usually arrives ten or fifteen minutes after the sun has actually gone down."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.34906708013898,
+      "centroidLongitude": -0.3239802998240244,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Waterfront",
+        "Food",
+        "Green Escape",
+        "Viewpoint",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "77233bbb-4854-502a-8889-62c158ab4021",
+      "createdAt": "2026-11-01",
+      "title": "Pasaje 94",
+      "shortDescription": "For twenty-five years, the door to this ground-floor space stayed firmly shut, and the city more or less forgot what lay behind it.",
+      "longDescription": "For twenty-five years, the door to this ground-floor space stayed firmly shut, and the city more or less forgot what lay behind it.\n\nBefore its revival this was a storeroom, then a garage, and then nothing at all. In 2025 a team of architects took it on and opened it as Pasaje 94, and their approach was to recover and keep as much as they could of what was already there rather than strip it back, so the old structure and surfaces remain part of the room.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-pasaje-94_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-pasaje-94_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-pasaje-94_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-pasaje-94_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5d546f30-890d-5c6d-b6bc-22229b85e197",
+          "order": 0,
+          "title": "Pasaje 94",
+          "caption": "At number 13 Carrer dels Trinitaris, in the northern part of the old town; closed Sundays and Mondays.",
+          "latitude": 39.47704309620417,
+          "longitude": -0.3720293766770735,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-pasaje-94.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-pasaje-94_hero.webp",
+          "transcriptText": "For twenty-five years, the door to this ground-floor space stayed firmly shut, and the city more or less forgot what lay behind it.\n\nA short walk from the river gardens, on the quiet Carrer dels Trinitaris in the northern part of the old town, the doorway at number thirteen opens into a single room with several jobs to do.\n\nBefore its revival this was a storeroom, then a garage, and then nothing at all. In 2025 a team of architects took it on and opened it as Pasaje 94, and their approach was to recover and keep as much as they could of what was already there rather than strip it back, so the old structure and surfaces remain part of the room.\n\nIt does three things at once, as an architecture studio, where the team works, a showroom for carefully chosen design objects, and a specialty coffee bar, which is where most visitors come in, and the layout is deliberately open and flexible, so the three jobs blend into one another through the day.\n\nThe coffee has built a following of its own, and the café has been listed among the best places for a carefully made cup in the city. It keeps fairly early hours, opening in the morning and closing in the early evening, and it's closed on Sundays and Mondays.\n\nThe real story here is the street itself. The old town is full of ground-floor units like this one, shuttered and gathering dust for decades, and the founders describe this one as abandoned and forgotten by the rest of the city, which makes their small recovery feel like a model for what could be done with many others.\n\nTake your coffee to go and walk north to the Turia gardens, or wander back through the surrounding streets and keep an eye out for other old shopfronts and doorways quietly waiting for their own second life."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.47704309620417,
+      "centroidLongitude": -0.3720293766770735,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Food",
+        "Architecture",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "aac3a9e4-7a9e-5476-b40c-bbe3bf6495ef",
+      "createdAt": "2026-11-01",
+      "title": "Restaurante Hōchō",
+      "shortDescription": "Hōchō is the Japanese word for a kitchen knife, and here the knives are very much on display.",
+      "longDescription": "Hōchō is the Japanese word for a kitchen knife, and here the knives are very much on display.\n\nHōchō opened in March 2021, but the team behind it has a longer history. The Honrubia family, who also run the Valencian restaurants La Principal and Aragón 58, spent the best part of a decade running another Japanese restaurant called Kōmori, which earned two Repsol suns, Spain's own restaurant guide awards. When that arrangement ended, nearly all of the staff moved here with them.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-restaurante-hocho_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-restaurante-hocho_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-restaurante-hocho_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-restaurante-hocho_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-restaurante-hocho_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "32d18fa4-562a-5a98-8250-226c85b7978c",
+          "order": 0,
+          "title": "Restaurante Hōchō",
+          "caption": "Inside the SH Valencia Palace hotel on Paseo de la Alameda, near the Palau de la Música.",
+          "latitude": 39.46763444367635,
+          "longitude": -0.3595739149242173,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-restaurante-hocho.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-restaurante-hocho_hero.webp",
+          "transcriptText": "Hōchō is the Japanese word for a kitchen knife, and here the knives are very much on display.\n\nInside the SH Valencia Palace hotel on Paseo de la Alameda, near the Palau de la Música and the river gardens, the dining room is built around a long Japanese-style counter facing a fully open kitchen.\n\nHōchō opened in March 2021, but the team behind it has a longer history. The Honrubia family, who also run the Valencian restaurants La Principal and Aragón 58, spent the best part of a decade running another Japanese restaurant called Kōmori, which earned two Repsol suns, Spain's own restaurant guide awards. When that arrangement ended, nearly all of the staff moved here with them.\n\nThe interior was designed by Julio Guixeres, and it follows a calm, zen-inspired idea of simplicity, with neutral colours and natural textures. The open kitchen projects out from a wide counter, so if you sit there, you can watch the chefs slicing fish only a few feet away, which is where the restaurant's name comes into its own.\n\nThe food brings together Japanese cooking and Valencian tradition, so alongside nigiri and sashimi you'll find dishes that borrow from local produce and Mediterranean flavours, with sake and wine pairings to match.\n\nThe connection makes more sense than it might seem. Japan and Valencia are both rice cultures and both seafood cultures, and both take ingredients very seriously, so fusion here feels less like a gimmick and more like two cuisines discovering they have a good deal in common.\n\nAsk for a seat at the counter if one's free, since that's where the action is, and after your meal, cross the road into the Turia gardens and walk to the Palau de la Música, whose great glass hall looks lovely lit up after dark."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.46763444367635,
+      "centroidLongitude": -0.3595739149242173,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6fc552fb-643a-5fe8-a7b8-328e90d031ac",
+      "createdAt": "2026-11-01",
+      "title": "Valencia Cathedral | Catedral de València",
+      "shortDescription": "Every Thursday at noon, a group of farmers in black smocks sits down outside one of these doors to settle disputes over water.",
+      "longDescription": "Every Thursday at noon, a group of farmers in black smocks sits down outside one of these doors to settle disputes over water.\n\nThe Water Tribunal that meets at this door is one of the oldest legal institutions in Europe, and it still deals with disputes between farmers who share the ancient irrigation channels of the huerta. It meets in public, judges in Valencian, and keeps no written records, and UNESCO has listed it as part of the intangible cultural heritage of humanity.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-valencia-cathedral_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-valencia-cathedral_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-valencia-cathedral_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-valencia-cathedral_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-valencia-cathedral_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-valencia-cathedral_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "68fc763e-2a23-514c-8225-00aefd277eb5",
+          "order": 0,
+          "title": "Valencia Cathedral | Catedral de València",
+          "caption": "In the Plaza de la Virgen, facing the Gothic Door of the Apostles, with the Miguelete above the rooftops.",
+          "latitude": 39.47543900899432,
+          "longitude": -0.3754774437602913,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-valencia-cathedral.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-valencia-cathedral_hero.webp",
+          "transcriptText": "Every Thursday at noon, a group of farmers in black smocks sits down outside one of these doors to settle disputes over water.\n\nPlaza de la Virgen opens out around you, and facing you across it is the Gothic Door of the Apostles, its tall pointed arch lined with stone figures of saints and apostles, while the cathedral's octagonal bell tower, the Miguelete, rises over the rooftops nearby.\n\nThe Water Tribunal that meets at this door is one of the oldest legal institutions in Europe, and it still deals with disputes between farmers who share the ancient irrigation channels of the huerta. It meets in public, judges in Valencian, and keeps no written records, and UNESCO has listed it as part of the intangible cultural heritage of humanity.\n\nThe cathedral itself was begun in 1262, on the site of the city's main mosque. It grew in every style going, so the Romanesque Palau door, this Gothic one and the Baroque Iron Door at the front span three eras around one building.\n\nInside, in a side chapel that was once the chapter house, is the Holy Chalice, an agate cup which many believe to be the vessel used at the Last Supper. Historians debate how far back its story can be traced, though its place in the city's faith is secure.\n\nThen there's the Miguelete, the bell tower that has become a symbol of the city, with two hundred and seven steps to the top.\n\nWhat this square really shows is how long things last here. A building that has been growing for more than seven centuries stands beside a court said to be older still, and every Thursday the old rules about sharing water are still being applied, just as they were before the cathedral's first stone was laid.\n\nIf your legs are up to it, climb the Miguelete for the view, or walk round the side to the Palau door to see the oldest entrance of all."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.47543900899432,
+      "centroidLongitude": -0.3754774437602913,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History",
+        "Gothic",
+        "Iconic Landmark",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9585874c-375a-5e84-b0c8-a808440afe61",
+      "createdAt": "2026-11-01",
+      "title": "Veles e Vents",
+      "shortDescription": "This building went up in just eleven months for a sailing race, and it was designed as a place to look out from rather than a place to look at.",
+      "longDescription": "This building went up in just eleven months for a sailing race, and it was designed as a place to look out from rather than a place to look at.\n\nIt was designed by the British architect David Chipperfield, later a winner of the Pritzker Prize, together with the Spanish firm of Fermín Vázquez, and it opened in 2006 as the base for the America's Cup, the sailing competition that came to Valencia in 2007. The brief was simple: a building where people could watch the racing, standing outside as much as in.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-veles-e-vents_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-veles-e-vents_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-veles-e-vents_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-veles-e-vents_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-veles-e-vents_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bb2300d3-e3d6-5cff-b77b-cca884d6e4b5",
+          "order": 0,
+          "title": "Veles e Vents",
+          "caption": "Before the stacked white decks on the edge of the marina, at the port end of the city.",
+          "latitude": 39.461070773787625,
+          "longitude": -0.3240196574961723,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-veles-e-vents.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-veles-e-vents_hero.webp",
+          "transcriptText": "This building went up in just eleven months for a sailing race, and it was designed as a place to look out from rather than a place to look at.\n\nThe white building in front of you rises in layers on the edge of the marina, four storeys of horizontal decks stacked on top of each other, each one sliding out beyond the one below, so that the upper floors cantilever out as much as fifteen metres over the terraces.\n\nIt was designed by the British architect David Chipperfield, later a winner of the Pritzker Prize, together with the Spanish firm of Fermín Vázquez, and it opened in 2006 as the base for the America's Cup, the sailing competition that came to Valencia in 2007. The brief was simple: a building where people could watch the racing, standing outside as much as in.\n\nThe name comes from a famous poem by the medieval Valencian poet Ausiàs March, and it means Sails and Winds. It became widely known when the singer Lluís Llach set the poem to music, so the building carries a little of the Valencian language and its culture with it.\n\nThe decks are laid with timber, with crisp white edges, and the deep overhangs throw sharp shadows that keep the terraces cool, a useful trick in a city with this much sun. The building won a RIBA award and was shortlisted for the Stirling Prize.\n\nThe building's real achievement is that it outlasted its purpose, because plenty of venues made for one-off sporting events end up empty, while Veles e Vents now houses restaurants and bars, proof that a good building can outlive the job it was made for.\n\nClimb up to the higher terraces if they're open, for views over the marina and the sea, and then walk along the waterfront to the beaches of Las Arenas and the Malvarrosa, where the city meets the Mediterranean."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.461070773787625,
+      "centroidLongitude": -0.3240196574961723,
+      "city": "Valencia",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Maritime",
+        "Waterfront",
+        "Contemporary",
+        "Viewpoint",
+        "Designed by a Master",
+        "David Chipperfield",
+        "Fermín Vázquez"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "deabaae8-79af-5ba6-b788-bb31bea00c97",
+      "createdAt": "2026-11-01",
+      "title": "VIVOOD Landscape Hotel",
+      "shortDescription": "Twenty-five small suites are scattered across a hillside in the Guadalest valley, and from a distance you'd struggle to count them all.",
+      "longDescription": "Twenty-five small suites are scattered across a hillside in the Guadalest valley, and from a distance you'd struggle to count them all.\n\nVIVOOD opened in the summer of 2015, designed by the architects Daniel Mayo, Agustín Marí and Pablo Vázquez, and it was described as the first landscape hotel of its kind in Spain. The idea was to take a huge plot of land, some eighty-four thousand square metres, and build on barely a thousand of them, so that the hillside does most of the talking.",
+      "makerId": "3d291a7b-3e4f-5919-a5d6-da0c0d0701a5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-vivood-landscape-hotel_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-vivood-landscape-hotel_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-vivood-landscape-hotel_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-vivood-landscape-hotel_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-vivood-landscape-hotel_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4c99f6e2-a3d8-5c25-a13e-026eadf61076",
+          "order": 0,
+          "title": "VIVOOD Landscape Hotel",
+          "caption": "On the terraced hillside near Benimantell, in the Guadalest valley of Alicante province.",
+          "latitude": 38.67959945103258,
+          "longitude": -0.20412263558196297,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vlc-vivood-landscape-hotel.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 80,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vlc-vivood-landscape-hotel_hero.webp",
+          "transcriptText": "Twenty-five small suites are scattered across a hillside in the Guadalest valley, and from a distance you'd struggle to count them all.\n\nOut here in the mountains of Alicante province, near the village of Benimantell, the hotel is spread across a steep, terraced slope, and the buildings around you are low, modern cabins with big glass fronts, each set on its own terrace looking out over the valley below.\n\nVIVOOD opened in the summer of 2015, designed by the architects Daniel Mayo, Agustín Marí and Pablo Vázquez, and it was described as the first landscape hotel of its kind in Spain. The idea was to take a huge plot of land, some eighty-four thousand square metres, and build on barely a thousand of them, so that the hillside does most of the talking.\n\nThe suites were made by modular construction, prefabricated and then set into the hillside, each with its own terrace, and some with a private hot tub, so the hotel feels less like a building and more like a small village of cabins.\n\nThere's a restaurant and lounge at the heart of things, and a swimming pool whose edge seems to drop away into the valley. The whole place is aimed at peace and quiet rather than conventional luxury, and the architects talked about designing an experience rather than a hotel.\n\nThe lesson of this place is about restraint. Most hotels try to make the most of their land, but here the trick was to build as little as possible, and the result is that the view, the light and the silence are what you pay for, with the architecture politely stepping back.\n\nBefore heading home, drive the few minutes to Guadalest, where an old castle and a bell tower perch on a rocky crag above a turquoise reservoir, one of the most memorable views in this part of Spain."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.67959945103258,
+      "centroidLongitude": -0.20412263558196297,
+      "city": "Benimantell",
+      "country": "Spain",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Contemporary",
+        "Viewpoint",
+        "Green Escape",
+        "Designed by a Master",
+        "Daniel Mayo",
+        "Agustín Marí",
+        "Pablo Vázquez"
       ],
       "priceUSD": 0
     }
