@@ -23619,6 +23619,7 @@
         "40C9274A-2F4E-59B1-929F-067602271FB6",
         "AB4D1D29-33F6-5303-9AF6-B20C0FD34B44",
         "FA3CB786-16F4-594A-A732-6917B66C12DE",
+        "c535dfe4-77f9-5f13-b07a-e6571a688c4b",
         "84ea3d03-dcd4-5c1b-8113-0b0d33d654e0"
       ],
       "walkingDistanceMeters": null
@@ -60738,14 +60739,14 @@
       "city": "Pang Mapha",
       "country": "Thailand",
       "relatedTourIds": [
+        "a3bb45d5-753b-5e42-811d-421a6fa5a1ff",
         "e7310a36-3381-53e3-8ad7-edb470b6f559",
+        "336f19bf-931a-54ba-bb7b-d3371f9dcbb1",
         "3f477a80-420e-58ff-abe7-fa21825abcfd",
         "39da967e-ad82-5ab0-ad37-fa31cccb060b",
         "2B5B8402-E164-55B9-994B-E665328E77CD",
         "ee2b411b-3308-5837-b424-2e7b80bc0073",
-        "A8B58E21-ECDC-5BC6-99CB-E5BC3E88EB0F",
-        "aa4cffca-ea34-5706-9b59-2c96da3189be",
-        "5fdd4da6-c43b-5496-9637-4c759ab0b392"
+        "A8B58E21-ECDC-5BC6-99CB-E5BC3E88EB0F"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -68555,7 +68556,7 @@
         "0B28F397-8ECB-5519-889D-29649681DB0E",
         "cb214a2c-ae60-5242-a96c-a27e21e76523",
         "5CA6902F-DBE3-5B76-9801-C1048F222A1E",
-        "1e7b6ea3-0e70-5670-83c1-8fadac28286e"
+        "1b0880e1-8538-5a86-bcb6-a880aa64f5e5"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -77410,8 +77411,8 @@
         "30f74715-658d-51f2-ad88-5294b2b7a3c1",
         "be72b933-5382-580a-9c8e-c7482e489a32",
         "335c7f61-607b-5b41-a300-e4ac5ff82286",
-        "ab9f8b70-9dab-54f4-a523-e713e6b1258e",
-        "438cffa8-f4b9-5a2d-8a5c-83694283ad20"
+        "77ace285-4381-5661-9c3e-017fac4d000e",
+        "ab9f8b70-9dab-54f4-a523-e713e6b1258e"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -77519,9 +77520,9 @@
         "e22d016c-8f54-5600-a12b-8bf341649795",
         "54fd0804-2858-5002-82f4-8f27a02b24fe",
         "9f48ffaf-5128-5c14-b945-630978f6e185",
+        "04429cad-7f7e-52d5-9f1c-ca7c77b26471",
         "b57293ab-8421-54c1-b750-580af0a53a30",
-        "77233bbb-4854-502a-8889-62c158ab4021",
-        "5de62959-64c0-5cf2-b794-d9ce498f89aa"
+        "77233bbb-4854-502a-8889-62c158ab4021"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -99235,12 +99236,12 @@
       "relatedTourIds": [
         "ACE22085-56A5-538F-8F6C-713074E072A1",
         "fe8af15c-f542-5dd2-be52-a39a052052da",
+        "04429cad-7f7e-52d5-9f1c-ca7c77b26471",
         "30ddfe99-5f42-56dc-8bea-fd05a38724f2",
         "2e0198e7-55ff-5f65-a197-6c1be6d7319a",
         "194398fe-4c19-5c96-8ab4-60f690c06f1d",
         "2864f0e2-951e-54bb-afe1-bcc732f69d95",
-        "8f5cab88-5bbf-5232-9cca-9f0a678ed055",
-        "35189aad-9ad8-58c4-966d-6bad58b7c2fa"
+        "8f5cab88-5bbf-5232-9cca-9f0a678ed055"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -106142,8 +106143,8 @@
         "411a1129-c9e0-5286-aae0-aad9a342b3f7",
         "0d3752dd-7554-52f2-b414-4a99d19fdd58",
         "368fdb00-475f-5f33-9006-24162ccb6be0",
-        "867fc656-e20a-569f-a0a5-297e6fbc00a6",
-        "fe8af15c-f542-5dd2-be52-a39a052052da"
+        "04429cad-7f7e-52d5-9f1c-ca7c77b26471",
+        "867fc656-e20a-569f-a0a5-297e6fbc00a6"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -123790,7 +123791,7 @@
         "150adfab-8f0c-5fb2-b533-607b14d58ff2",
         "d6e8ca26-c945-5631-af40-6e4894cd536f",
         "548a680b-932b-5a43-9ad9-5ee9577e5141",
-        "eb801c90-e68c-5f6b-b472-3348c7d062ef"
+        "336f19bf-931a-54ba-bb7b-d3371f9dcbb1"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -133407,10 +133408,10 @@
         "8f5cab88-5bbf-5232-9cca-9f0a678ed055",
         "2e0198e7-55ff-5f65-a197-6c1be6d7319a",
         "fe8af15c-f542-5dd2-be52-a39a052052da",
+        "04429cad-7f7e-52d5-9f1c-ca7c77b26471",
         "867fc656-e20a-569f-a0a5-297e6fbc00a6",
         "2864f0e2-951e-54bb-afe1-bcc732f69d95",
-        "a308f6b5-1fa2-551a-86a2-22dce35b4f69",
-        "75467889-B05B-536A-98EF-AC00E4ACFA45"
+        "a308f6b5-1fa2-551a-86a2-22dce35b4f69"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -136698,9 +136699,9 @@
         "228f7619-8dda-5f08-8697-6df45bc46e38",
         "df321c7d-f281-5e9a-88f9-b059cb398978",
         "B37CC844-4F3E-5598-91D0-1684B8E4DE22",
+        "04429cad-7f7e-52d5-9f1c-ca7c77b26471",
         "52187B20-0857-4F93-AF49-CA085BDF288D",
-        "aa220274-aadd-51cd-88c7-60654c1c13f1",
-        "9583fac3-b270-5ba1-86cb-95ac19bb065c"
+        "aa220274-aadd-51cd-88c7-60654c1c13f1"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -143628,7 +143629,16 @@
       "centroidLongitude": 39.82536,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "dee28d02-c21d-50a2-a760-e29d4b3438be",
+        "f55a69b4-69b6-586e-a1d8-ccb9e0f151bd",
+        "77ace285-4381-5661-9c3e-017fac4d000e",
+        "623f2fd4-6891-5070-8cac-47f6481696e4",
+        "f124c425-1961-5d13-88bc-6b9e6e671eae",
+        "261274cc-4105-5761-8002-25b91c66be87",
+        "d7dc9756-4446-5ce0-85b5-979f4b7f6605",
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -143680,7 +143690,16 @@
       "centroidLongitude": 39.82619,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "dee28d02-c21d-50a2-a760-e29d4b3438be",
+        "77ace285-4381-5661-9c3e-017fac4d000e",
+        "f124c425-1961-5d13-88bc-6b9e6e671eae",
+        "767adfdd-80c6-5f00-a3b8-40c773321411",
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9",
+        "f51925a7-787c-583a-a738-2d551b488a09",
+        "bc5173e6-a06a-5d2e-85a4-0f5c0aee22b1",
+        "261274cc-4105-5761-8002-25b91c66be87"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -143725,7 +143744,16 @@
       "centroidLongitude": 39.827531,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "bc5173e6-a06a-5d2e-85a4-0f5c0aee22b1",
+        "767adfdd-80c6-5f00-a3b8-40c773321411",
+        "ac0e587a-f0cd-5bf7-bb3d-edd22163e036",
+        "77ace285-4381-5661-9c3e-017fac4d000e",
+        "dee28d02-c21d-50a2-a760-e29d4b3438be",
+        "379db690-8973-5c30-aee3-173546bea517",
+        "eddb7a54-c42b-571e-b5d7-fedae985dd69",
+        "9b3fb213-0a4b-52a6-96e4-fea4f0065ad0"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -143770,7 +143798,16 @@
       "centroidLongitude": 39.829817,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "9b3fb213-0a4b-52a6-96e4-fea4f0065ad0",
+        "dee28d02-c21d-50a2-a760-e29d4b3438be",
+        "77ace285-4381-5661-9c3e-017fac4d000e",
+        "f124c425-1961-5d13-88bc-6b9e6e671eae",
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9",
+        "261274cc-4105-5761-8002-25b91c66be87",
+        "623f2fd4-6891-5070-8cac-47f6481696e4",
+        "379db690-8973-5c30-aee3-173546bea517"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Library",
@@ -143816,7 +143853,16 @@
       "centroidLongitude": 39.828965,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "767adfdd-80c6-5f00-a3b8-40c773321411",
+        "dee28d02-c21d-50a2-a760-e29d4b3438be",
+        "9a4a1111-a40a-53e7-b266-88e34d807243",
+        "9b3fb213-0a4b-52a6-96e4-fea4f0065ad0",
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9",
+        "261274cc-4105-5761-8002-25b91c66be87",
+        "f55a69b4-69b6-586e-a1d8-ccb9e0f151bd",
+        "f124c425-1961-5d13-88bc-6b9e6e671eae"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -143861,7 +143907,16 @@
       "centroidLongitude": 39.827908,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "d7dc9756-4446-5ce0-85b5-979f4b7f6605",
+        "767adfdd-80c6-5f00-a3b8-40c773321411",
+        "dee28d02-c21d-50a2-a760-e29d4b3438be",
+        "261274cc-4105-5761-8002-25b91c66be87",
+        "eddb7a54-c42b-571e-b5d7-fedae985dd69",
+        "f55a69b4-69b6-586e-a1d8-ccb9e0f151bd",
+        "336f19bf-931a-54ba-bb7b-d3371f9dcbb1",
+        "45614f6d-efc4-5871-bf32-a9f62a77a46f"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Monument",
@@ -143904,7 +143959,16 @@
       "centroidLongitude": 39.816657,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9",
+        "379db690-8973-5c30-aee3-173546bea517",
+        "d7dc9756-4446-5ce0-85b5-979f4b7f6605",
+        "dee28d02-c21d-50a2-a760-e29d4b3438be",
+        "eddb7a54-c42b-571e-b5d7-fedae985dd69",
+        "2321ec3b-c1b5-5423-b609-7c4e6d910107",
+        "a1f909bc-e4cc-5659-bb6c-c57451c075c2",
+        "45614f6d-efc4-5871-bf32-a9f62a77a46f"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -143950,7 +144014,16 @@
       "centroidLongitude": 39.867493,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "767adfdd-80c6-5f00-a3b8-40c773321411",
+        "bc5173e6-a06a-5d2e-85a4-0f5c0aee22b1",
+        "dee28d02-c21d-50a2-a760-e29d4b3438be",
+        "f55a69b4-69b6-586e-a1d8-ccb9e0f151bd",
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9",
+        "9b3fb213-0a4b-52a6-96e4-fea4f0065ad0",
+        "2321ec3b-c1b5-5423-b609-7c4e6d910107",
+        "d7dc9756-4446-5ce0-85b5-979f4b7f6605"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -143993,7 +144066,16 @@
       "centroidLongitude": 39.873747,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f51925a7-787c-583a-a738-2d551b488a09",
+        "f124c425-1961-5d13-88bc-6b9e6e671eae",
+        "dee28d02-c21d-50a2-a760-e29d4b3438be",
+        "f55a69b4-69b6-586e-a1d8-ccb9e0f151bd",
+        "767adfdd-80c6-5f00-a3b8-40c773321411",
+        "9b3fb213-0a4b-52a6-96e4-fea4f0065ad0",
+        "ac0e587a-f0cd-5bf7-bb3d-edd22163e036",
+        "d7dc9756-4446-5ce0-85b5-979f4b7f6605"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -144038,7 +144120,16 @@
       "centroidLongitude": 39.873156,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "379db690-8973-5c30-aee3-173546bea517",
+        "2321ec3b-c1b5-5423-b609-7c4e6d910107",
+        "ac0e587a-f0cd-5bf7-bb3d-edd22163e036",
+        "a1f909bc-e4cc-5659-bb6c-c57451c075c2",
+        "dee28d02-c21d-50a2-a760-e29d4b3438be",
+        "0a936d75-f6fa-59e9-af23-e16bb4aa926b",
+        "767adfdd-80c6-5f00-a3b8-40c773321411",
+        "9b3fb213-0a4b-52a6-96e4-fea4f0065ad0"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Bridge",
@@ -144086,7 +144177,16 @@
       "centroidLongitude": 39.984116,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "336f19bf-931a-54ba-bb7b-d3371f9dcbb1",
+        "767adfdd-80c6-5f00-a3b8-40c773321411",
+        "45614f6d-efc4-5871-bf32-a9f62a77a46f",
+        "a3bb45d5-753b-5e42-811d-421a6fa5a1ff",
+        "2321ec3b-c1b5-5423-b609-7c4e6d910107",
+        "a1f909bc-e4cc-5659-bb6c-c57451c075c2",
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9",
+        "9a4a1111-a40a-53e7-b266-88e34d807243"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Park",
@@ -144135,7 +144235,16 @@
       "centroidLongitude": 39.858974,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "45614f6d-efc4-5871-bf32-a9f62a77a46f",
+        "a3bb45d5-753b-5e42-811d-421a6fa5a1ff",
+        "eddb7a54-c42b-571e-b5d7-fedae985dd69",
+        "767adfdd-80c6-5f00-a3b8-40c773321411",
+        "2321ec3b-c1b5-5423-b609-7c4e6d910107",
+        "ac0e587a-f0cd-5bf7-bb3d-edd22163e036",
+        "0a936d75-f6fa-59e9-af23-e16bb4aa926b",
+        "9a4a1111-a40a-53e7-b266-88e34d807243"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Park",
@@ -144179,7 +144288,16 @@
       "centroidLongitude": 39.849868,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "336f19bf-931a-54ba-bb7b-d3371f9dcbb1",
+        "45614f6d-efc4-5871-bf32-a9f62a77a46f",
+        "eddb7a54-c42b-571e-b5d7-fedae985dd69",
+        "767adfdd-80c6-5f00-a3b8-40c773321411",
+        "dee28d02-c21d-50a2-a760-e29d4b3438be",
+        "2321ec3b-c1b5-5423-b609-7c4e6d910107",
+        "9a4a1111-a40a-53e7-b266-88e34d807243",
+        "bc5173e6-a06a-5d2e-85a4-0f5c0aee22b1"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Park",
@@ -144226,7 +144344,16 @@
       "centroidLongitude": 39.869063,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "336f19bf-931a-54ba-bb7b-d3371f9dcbb1",
+        "a3bb45d5-753b-5e42-811d-421a6fa5a1ff",
+        "261274cc-4105-5761-8002-25b91c66be87",
+        "dee28d02-c21d-50a2-a760-e29d4b3438be",
+        "623f2fd4-6891-5070-8cac-47f6481696e4",
+        "0a936d75-f6fa-59e9-af23-e16bb4aa926b",
+        "eddb7a54-c42b-571e-b5d7-fedae985dd69",
+        "f55a69b4-69b6-586e-a1d8-ccb9e0f151bd"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "District",
@@ -144273,7 +144400,16 @@
       "centroidLongitude": 39.807936,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "dee28d02-c21d-50a2-a760-e29d4b3438be",
+        "f55a69b4-69b6-586e-a1d8-ccb9e0f151bd",
+        "9b3fb213-0a4b-52a6-96e4-fea4f0065ad0",
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9",
+        "45614f6d-efc4-5871-bf32-a9f62a77a46f",
+        "d7dc9756-4446-5ce0-85b5-979f4b7f6605",
+        "0a936d75-f6fa-59e9-af23-e16bb4aa926b",
+        "a1f909bc-e4cc-5659-bb6c-c57451c075c2"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Museum",
@@ -144316,7 +144452,16 @@
       "centroidLongitude": 39.754361,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "261274cc-4105-5761-8002-25b91c66be87",
+        "9b3fb213-0a4b-52a6-96e4-fea4f0065ad0",
+        "a1f909bc-e4cc-5659-bb6c-c57451c075c2",
+        "f55a69b4-69b6-586e-a1d8-ccb9e0f151bd",
+        "77ace285-4381-5661-9c3e-017fac4d000e",
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9",
+        "d7dc9756-4446-5ce0-85b5-979f4b7f6605",
+        "379db690-8973-5c30-aee3-173546bea517"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Museum",
@@ -144362,7 +144507,16 @@
       "centroidLongitude": 39.825412,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f124c425-1961-5d13-88bc-6b9e6e671eae",
+        "dee28d02-c21d-50a2-a760-e29d4b3438be",
+        "77ace285-4381-5661-9c3e-017fac4d000e",
+        "a1f909bc-e4cc-5659-bb6c-c57451c075c2",
+        "f51925a7-787c-583a-a738-2d551b488a09",
+        "9b3fb213-0a4b-52a6-96e4-fea4f0065ad0",
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9",
+        "ac0e587a-f0cd-5bf7-bb3d-edd22163e036"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Tower",
@@ -144410,7 +144564,16 @@
       "centroidLongitude": 39.825302,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f51925a7-787c-583a-a738-2d551b488a09",
+        "c535dfe4-77f9-5f13-b07a-e6571a688c4b",
+        "77ace285-4381-5661-9c3e-017fac4d000e",
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9",
+        "f55a69b4-69b6-586e-a1d8-ccb9e0f151bd",
+        "9b3fb213-0a4b-52a6-96e4-fea4f0065ad0",
+        "a1f909bc-e4cc-5659-bb6c-c57451c075c2",
+        "dee28d02-c21d-50a2-a760-e29d4b3438be"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Tower",
@@ -144458,7 +144621,16 @@
       "centroidLongitude": 39.824979,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f124c425-1961-5d13-88bc-6b9e6e671eae",
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9",
+        "77ace285-4381-5661-9c3e-017fac4d000e",
+        "dee28d02-c21d-50a2-a760-e29d4b3438be",
+        "623f2fd4-6891-5070-8cac-47f6481696e4",
+        "a1f909bc-e4cc-5659-bb6c-c57451c075c2",
+        "42369150-d506-5e79-bc30-052ba3600a3e",
+        "f55a69b4-69b6-586e-a1d8-ccb9e0f151bd"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -144505,7 +144677,16 @@
       "centroidLongitude": 39.822078,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "9b3fb213-0a4b-52a6-96e4-fea4f0065ad0",
+        "f55a69b4-69b6-586e-a1d8-ccb9e0f151bd",
+        "77ace285-4381-5661-9c3e-017fac4d000e",
+        "dee28d02-c21d-50a2-a760-e29d4b3438be",
+        "f51925a7-787c-583a-a738-2d551b488a09",
+        "45614f6d-efc4-5871-bf32-a9f62a77a46f",
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9",
+        "f124c425-1961-5d13-88bc-6b9e6e671eae"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -144551,7 +144732,16 @@
       "centroidLongitude": 39.826666,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f124c425-1961-5d13-88bc-6b9e6e671eae",
+        "9b3fb213-0a4b-52a6-96e4-fea4f0065ad0",
+        "f55a69b4-69b6-586e-a1d8-ccb9e0f151bd",
+        "dee28d02-c21d-50a2-a760-e29d4b3438be",
+        "f51925a7-787c-583a-a738-2d551b488a09",
+        "623f2fd4-6891-5070-8cac-47f6481696e4",
+        "a1f909bc-e4cc-5659-bb6c-c57451c075c2",
+        "ac0e587a-f0cd-5bf7-bb3d-edd22163e036"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -144599,7 +144789,16 @@
       "centroidLongitude": 39.788532,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "0a936d75-f6fa-59e9-af23-e16bb4aa926b",
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9",
+        "bc5173e6-a06a-5d2e-85a4-0f5c0aee22b1",
+        "2321ec3b-c1b5-5423-b609-7c4e6d910107",
+        "f124c425-1961-5d13-88bc-6b9e6e671eae",
+        "77ace285-4381-5661-9c3e-017fac4d000e",
+        "9b3fb213-0a4b-52a6-96e4-fea4f0065ad0",
+        "dee28d02-c21d-50a2-a760-e29d4b3438be"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -144643,7 +144842,16 @@
       "centroidLongitude": 39.666722,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ac0e587a-f0cd-5bf7-bb3d-edd22163e036",
+        "45614f6d-efc4-5871-bf32-a9f62a77a46f",
+        "f55a69b4-69b6-586e-a1d8-ccb9e0f151bd",
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9",
+        "dee28d02-c21d-50a2-a760-e29d4b3438be",
+        "9b3fb213-0a4b-52a6-96e4-fea4f0065ad0",
+        "261274cc-4105-5761-8002-25b91c66be87",
+        "767adfdd-80c6-5f00-a3b8-40c773321411"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Monument",
@@ -144688,7 +144896,16 @@
       "centroidLongitude": 39.825599,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "77ace285-4381-5661-9c3e-017fac4d000e",
+        "f55a69b4-69b6-586e-a1d8-ccb9e0f151bd",
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9",
+        "261274cc-4105-5761-8002-25b91c66be87",
+        "f8d99292-b1cb-5eac-a3af-067f9bd80c89",
+        "dee28d02-c21d-50a2-a760-e29d4b3438be",
+        "45614f6d-efc4-5871-bf32-a9f62a77a46f",
+        "9b3fb213-0a4b-52a6-96e4-fea4f0065ad0"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Venue",
@@ -144734,7 +144951,16 @@
       "centroidLongitude": 39.823815,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ae3102d8-45ad-5490-8e7f-8ea66d83254b",
+        "795cd0b5-d6a4-5f76-a3bc-d4390f5dfc49",
+        "04429cad-7f7e-52d5-9f1c-ca7c77b26471",
+        "f51925a7-787c-583a-a738-2d551b488a09",
+        "767adfdd-80c6-5f00-a3b8-40c773321411",
+        "77ace285-4381-5661-9c3e-017fac4d000e",
+        "a1f909bc-e4cc-5659-bb6c-c57451c075c2",
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -144779,7 +145005,16 @@
       "centroidLongitude": 39.880772,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ae3102d8-45ad-5490-8e7f-8ea66d83254b",
+        "261274cc-4105-5761-8002-25b91c66be87",
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9",
+        "9b3fb213-0a4b-52a6-96e4-fea4f0065ad0",
+        "a1f909bc-e4cc-5659-bb6c-c57451c075c2",
+        "dee28d02-c21d-50a2-a760-e29d4b3438be",
+        "42369150-d506-5e79-bc30-052ba3600a3e",
+        "77ace285-4381-5661-9c3e-017fac4d000e"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -144824,7 +145059,16 @@
       "centroidLongitude": 39.895026,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "795cd0b5-d6a4-5f76-a3bc-d4390f5dfc49",
+        "42369150-d506-5e79-bc30-052ba3600a3e",
+        "04429cad-7f7e-52d5-9f1c-ca7c77b26471",
+        "f51925a7-787c-583a-a738-2d551b488a09",
+        "767adfdd-80c6-5f00-a3b8-40c773321411",
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9",
+        "a1f909bc-e4cc-5659-bb6c-c57451c075c2",
+        "f8d99292-b1cb-5eac-a3af-067f9bd80c89"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -144870,7 +145114,16 @@
       "centroidLongitude": 39.967878,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "795cd0b5-d6a4-5f76-a3bc-d4390f5dfc49",
+        "42369150-d506-5e79-bc30-052ba3600a3e",
+        "ae3102d8-45ad-5490-8e7f-8ea66d83254b",
+        "867fc656-e20a-569f-a0a5-297e6fbc00a6",
+        "35189aad-9ad8-58c4-966d-6bad58b7c2fa",
+        "30ddfe99-5f42-56dc-8bea-fd05a38724f2",
+        "65eef272-b2e2-54f2-86f7-0928e9b97ec8",
+        "2864f0e2-951e-54bb-afe1-bcc732f69d95"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -144914,7 +145167,16 @@
       "centroidLongitude": 39.800355,
       "city": "Mecca",
       "country": "Saudi Arabia",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ae3102d8-45ad-5490-8e7f-8ea66d83254b",
+        "04429cad-7f7e-52d5-9f1c-ca7c77b26471",
+        "42369150-d506-5e79-bc30-052ba3600a3e",
+        "f51925a7-787c-583a-a738-2d551b488a09",
+        "767adfdd-80c6-5f00-a3b8-40c773321411",
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9",
+        "a1f909bc-e4cc-5659-bb6c-c57451c075c2",
+        "261274cc-4105-5761-8002-25b91c66be87"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -301529,6 +301791,16 @@
       "centroidLongitude": 39.8262,
       "city": "Mecca",
       "country": "Saudi Arabia",
+      "relatedTourIds": [
+        "77ace285-4381-5661-9c3e-017fac4d000e",
+        "f55a69b4-69b6-586e-a1d8-ccb9e0f151bd",
+        "9b3fb213-0a4b-52a6-96e4-fea4f0065ad0",
+        "261274cc-4105-5761-8002-25b91c66be87",
+        "f124c425-1961-5d13-88bc-6b9e6e671eae",
+        "f51925a7-787c-583a-a738-2d551b488a09",
+        "19d369b4-96fa-5fbe-8418-4dee9c07b9d9",
+        "623f2fd4-6891-5070-8cac-47f6481696e4"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Tower",
