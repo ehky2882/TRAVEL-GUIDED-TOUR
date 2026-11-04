@@ -5701,6 +5701,16 @@
       "websiteURL": null
     },
     {
+      "id": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "displayName": "Atlas Studio ATH",
+      "platform": "dozent",
+      "handle": "atlas.ath",
+      "avatarURL": null,
+      "avatarEmoji": "🇬🇷",
+      "bio": "Atlas Studio's Athens bureau — the museum built on stilts beneath the Parthenon, the stone paths of Pikionis, an island village on the side of the Acropolis, a Bauhaus dream left unfinished, basement tavernas with no sign over the door, and some of the best bars in the world.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -44727,6 +44737,7 @@
       "country": "Canada",
       "relatedTourIds": [
         "096a3cba-09b6-57e7-8379-2e49f3a7b507",
+        "829ae210-e5ef-5370-886e-dfec80d6fa71",
         "c5bf4a63-0b85-5c3e-92f2-5dab1cd7f614",
         "0e585845-3bdb-5ffd-8da1-b9db2d7d2daf",
         "adcc230b-75fc-56de-85e9-c3192383dd6e",
@@ -116007,10 +116018,10 @@
         "fe2cbf01-fba7-57c4-8788-5ca761c33e81",
         "3f835ead-9829-5521-97f1-00d9ad78cfb0",
         "e8630587-812e-583a-9bd4-af283c885a85",
+        "a0261a5e-a433-5289-afad-dd77b481afb1",
         "5d1f8221-725a-5578-a79e-7c089c2a8014",
         "30234cc2-792a-5ef5-9588-e7646e04c81d",
-        "45c2ace9-a42f-55c7-8248-ce90f58a663a",
-        "8990f4cd-848c-567f-995c-dfe70b4ad8e0"
+        "45c2ace9-a42f-55c7-8248-ce90f58a663a"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -121914,10 +121925,10 @@
         "928e1eac-f2cf-5583-88f3-10713f652e0f",
         "20f7005b-57d9-50ca-9229-cdd2c6dacfed",
         "7f16bf79-a24f-566b-b645-8533d88f66c4",
+        "03f81741-e71b-596d-a589-250f3004f09b",
         "177004b7-279b-5351-bc53-9fa3ae4e3dee",
         "7a871c32-8514-51de-840f-3ab30d79b32d",
-        "bf2abda0-745b-577c-bc92-676f0dc0de92",
-        "b9aa0360-6536-5c85-9c7e-b7767cc32c9b"
+        "bf2abda0-745b-577c-bc92-676f0dc0de92"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -122026,12 +122037,12 @@
       "relatedTourIds": [
         "59ee3b0e-26d9-5acd-9e1f-61744173eddb",
         "20fd6c58-8f09-5bf9-a2a6-ad5754000aee",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
         "75DEA19C-0126-509E-A5FB-34C593A0315A",
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
         "b238299d-5745-5bef-a0b5-7fac4aca5c37",
         "096a3cba-09b6-57e7-8379-2e49f3a7b507",
-        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
-        "1f3b0f44-9600-589f-ad00-a73f4844c2bf"
+        "d8f9fda3-2d1d-57bc-939d-2e3ffae0455a"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -138523,8 +138534,8 @@
         "27bd7b12-9203-53ec-8b49-0c0d70e0f790",
         "5fe721f4-2bf9-5d47-afcf-6eda222ac5a3",
         "92041407-6b30-5d78-a03e-8802b4161918",
-        "aa220274-aadd-51cd-88c7-60654c1c13f1",
-        "defeef28-4159-4ad2-813a-111c64720889"
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "aa220274-aadd-51cd-88c7-60654c1c13f1"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -145182,6 +145193,1666 @@
         "Venue",
         "Food",
         "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68",
+      "createdAt": "2026-11-04",
+      "title": "Perianth Hotel",
+      "shortDescription": "Look for the flower stalls first. They're the reason this hotel has the name it does.",
+      "longDescription": "Look for the flower stalls first. They're the reason this hotel has the name it does.\n\nStart with the name. A perianth is the part of a flower that wraps around the middle of it: in Greek, peri, around, and anthos, flower. The hotel took it from this square, which is known for its flower shops. Rather a nice way to name a building after the neighbours.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-perianth-hotel_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-perianth-hotel_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-perianth-hotel_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-perianth-hotel_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-perianth-hotel_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-perianth-hotel_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1d008016-40e7-5486-850e-d02d6c26d588",
+          "order": 0,
+          "title": "Perianth Hotel",
+          "caption": "On Agias Irinis Square by the flower stalls, before the curving grey façade with its banded balconies.",
+          "latitude": 37.97767431024124,
+          "longitude": 23.728386293706137,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-perianth-hotel.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-perianth-hotel_hero.webp",
+          "transcriptText": "Look for the flower stalls first. They're the reason this hotel has the name it does.\n\nAgias Irinis Square, a couple of minutes' walk from Monastiraki. Find the flower sellers, then look for the building of grey render with a curving façade and balconies running across it in pale, repeating bands. That's the Perianth. If the front curves and the balconies look like they're running somewhere in a hurry, you're in the right place.\n\nStart with the name. A perianth is the part of a flower that wraps around the middle of it: in Greek, peri, around, and anthos, flower. The hotel took it from this square, which is known for its flower shops. Rather a nice way to name a building after the neighbours.\n\nNow the building itself. It went up in the nineteen thirties as a bit of everything: shops at street level, offices above, flats above those. By the time the architects K-Studio arrived, the inside had been stripped right back. Only the façade and the concrete frame were left. So they made the façade the rule. Walk the corridor on any floor and it follows the curve you're looking at from out here.\n\nAnd here's my favourite part. They laid out each floor like a little piece of Athens: a wider main avenue, narrower alleys peeling off it, two or three rooms down each one, and small shared rooms where the alleys meet, which they call neighbourhood squares. Even the grey render of the outside wall is carried into the bedrooms, next to terrazzo floors, dark walnut and blush pink velvet.\n\nWhat I like about this building is that it isn't famous. Athens is full of interwar blocks exactly like it, quietly doing their jobs, and almost nobody looks up at them. This one simply got taken seriously. That's the whole trick.\n\nBefore you move on, walk to the north side of the square. The hotel's own guide points out an old shop there, still selling sewing things, vintage buttons and lace. It's what this square was like before the cocktail bars arrived, and it's still open for business."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.97767431024124,
+      "centroidLongitude": 23.728386293706137,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "7c32be44-365d-5ac7-91d8-336f94106e6d",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "35578320-0610-5fc7-9804-7c52c03ed3d0"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Contemporary",
+        "Hidden Gem",
+        "Designed by a Master",
+        "K-Studio"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7c32be44-365d-5ac7-91d8-336f94106e6d",
+      "createdAt": "2026-11-04",
+      "title": "Shila",
+      "shortDescription": "There's no lobby to speak of, and no restaurant. Just a house, and a great deal of art.",
+      "longDescription": "There's no lobby to speak of, and no restaurant. Just a house, and a great deal of art.\n\nThe house dates from the late nineteen twenties, the tail end of the neoclassical style that dressed Athens for a century. Today it holds just six suites, two to a floor, and they're built so they can be joined together if a family or a group of friends takes a whole level.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-shila_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-shila_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-shila_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-shila_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2d0d00bc-cbf8-536e-b2ed-8d4728d04057",
+          "order": 0,
+          "title": "Shila",
+          "caption": "On Mantzarou Street, a pedestrian lane one block from Kolonaki Square, before the neoclassical townhouse at number 10.",
+          "latitude": 37.98085984808299,
+          "longitude": 23.737314722093625,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-shila.mp3",
+          "audioDurationSeconds": 101,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-shila_hero.webp",
+          "transcriptText": "There's no lobby to speak of, and no restaurant. Just a house, and a great deal of art.\n\nMantzarou Street is a short pedestrian lane off Patriarchou Ioakim, one block from Kolonaki Square. No cars come down here, which is half the charm. Number ten is the neoclassical townhouse with the tall windows and the quiet front door. Stand across from it and give the façade a moment.\n\nThe house dates from the late nineteen twenties, the tail end of the neoclassical style that dressed Athens for a century. Today it holds just six suites, two to a floor, and they're built so they can be joined together if a family or a group of friends takes a whole level.\n\nThe real point of the place, though, is what's on the walls. Shila works more like a gallery you can sleep in. The art and design come mostly from Greek artists and makers, they change on rotation, and nearly everything you see can be bought: the paintings, the ceramics, the furniture. The art director is the Greek photographer Eftihia Stefanidi, and the choices feel like one person's eye rather than a hotel group's.\n\nInside there's a garden courtyard, a library lounge and a roof terrace. What there isn't is a dining room. Breakfast comes to your suite, and for dinner the staff will point you to the neighbourhood.\n\nAnd that seems right for Kolonaki. This has always been the part of Athens where people lived among their collections, in houses exactly like this one. Shila simply opened the door and let you stay the night.\n\nIf you've got a few minutes, walk the one block to Kolonaki Square and sit at a café table for a coffee. It's the best way to watch the neighbourhood go about its business, and the people watching is very much part of the architecture."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 101,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.98085984808299,
+      "centroidLongitude": 23.737314722093625,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
+        "a00e91f0-c2d9-5547-97b3-d2e5f5fa773a",
+        "35578320-0610-5fc7-9804-7c52c03ed3d0",
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Notable Building",
+        "Art",
+        "Neoclassical",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f13f47ef-ca40-56b7-9159-8fd2402769af",
+      "createdAt": "2026-11-04",
+      "title": "The Modernist Athens",
+      "shortDescription": "Before this was a hotel, it was a little piece of Canada.",
+      "longDescription": "Before this was a hotel, it was a little piece of Canada.\n\nThe conversion came from the Greek hotelier Kostis Karatzas, whose first Modernist opened in Thessaloniki, and the architects FORMrelated. They didn't try to hide the post war bones. They leaned into them.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-the-modernist-athens_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-the-modernist-athens_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-the-modernist-athens_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-the-modernist-athens_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-the-modernist-athens_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1a6f6130-c825-5304-b7bd-123a95e92d57",
+          "order": 0,
+          "title": "The Modernist Athens",
+          "caption": "On the lower slopes of Kolonaki, before a clean, symmetrical 1950s building: the former Canadian Embassy.",
+          "latitude": 37.97752228561636,
+          "longitude": 23.749309262030735,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-the-modernist-athens.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-the-modernist-athens_hero.webp",
+          "transcriptText": "Before this was a hotel, it was a little piece of Canada.\n\nYou should be on a quiet street on the lower slopes of Kolonaki, with a leafy residential square nearby and a clean, symmetrical nineteen fifties building in front of you: flat planes, regular windows, nothing fussy. This was the Canadian Embassy, and the building still has that composed, slightly formal air of a place where letters were stamped and visas were checked.\n\nThe conversion came from the Greek hotelier Kostis Karatzas, whose first Modernist opened in Thessaloniki, and the architects FORMrelated. They didn't try to hide the post war bones. They leaned into them.\n\nHave a look inside the lobby if the door's open. Marble, raw plaster, bronze and black glass: the hard, assertive materials of the period, set against the softer oak floors and leather headboards upstairs.\n\nThen there's the gift detail. The thirty eight rooms are sold in sizes, like clothing: small, medium, large and extra large. No grand names, no Deluxe Superior Premier. Just pick the size that fits, which is rather a good joke for a building that used to process paperwork.\n\nUp top is a planted roof garden with a view across to the Acropolis, and on some evenings there are vinyl sessions in the bar downstairs.\n\nHere's what I find interesting. Most hotels in old buildings borrow their glamour from the eighteen hundreds. This one borrows it from the nineteen fifties, a decade Athens is only now beginning to love. The fifties built half this city, and a building like this makes the case that it was worth keeping.\n\nFrom here, the hotel's own favourite is a ten-minute walk away, across from the National Gallery: The Runner, a tall figure of stacked glass by the sculptor Costas Varotsos. It's been there since nineteen ninety four. Catch it in low sun, when the light runs right through it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.97752228561636,
+      "centroidLongitude": 23.749309262030735,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "03f81741-e71b-596d-a589-250f3004f09b",
+        "7c32be44-365d-5ac7-91d8-336f94106e6d",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "35578320-0610-5fc7-9804-7c52c03ed3d0",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Modernist",
+        "Designed by a Master",
+        "FORMrelated"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "35578320-0610-5fc7-9804-7c52c03ed3d0",
+      "createdAt": "2026-11-04",
+      "title": "Xenodocheio Milos | Ξενοδοχείο Milos",
+      "shortDescription": "The name on the door simply means hotel. It's the Greek word for it, written out in full.",
+      "longDescription": "The name on the door simply means hotel. It's the Greek word for it, written out in full.\n\nThat top floor is the clue. This is two twin buildings, both listed, built side by side in the old style, and joined much later by a glass addition across the roof. They belong to the Army Share Fund, a military pension fund, which leased them out for twenty years. After a long restoration, the hotel opened at the start of twenty twenty two.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-xenodocheio-milos_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-xenodocheio-milos_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-xenodocheio-milos_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-xenodocheio-milos_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-xenodocheio-milos_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e661eb45-1556-5f09-a123-691581ddcfe7",
+          "order": 0,
+          "title": "Xenodocheio Milos | Ξενοδοχείο Milos",
+          "caption": "At the corner of Kolokotroni and Voulis, with the Old Parliament behind you, facing the twin neoclassical buildings.",
+          "latitude": 37.977386156075006,
+          "longitude": 23.732993049077194,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-xenodocheio-milos.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-xenodocheio-milos_hero.webp",
+          "transcriptText": "The name on the door simply means hotel. It's the Greek word for it, written out in full.\n\nYou should be on Kolokotroni Street, at the corner with Voulis, with the Old Parliament building across the road behind you. In front of you is a neoclassical building in two matching halves, with tall shuttered windows, stone details, and something newer and glassier sitting on the very top.\n\nThat top floor is the clue. This is two twin buildings, both listed, built side by side in the old style, and joined much later by a glass addition across the roof. They belong to the Army Share Fund, a military pension fund, which leased them out for twenty years. After a long restoration, the hotel opened at the start of twenty twenty two.\n\nNow, Milos. If you know restaurants, you may know the name. Estiatorio Milos is the seafood restaurant group started by the Greek chef Costas Spiliadis, with branches in seven cities around the world. Their style is famously plain: very good fish, very little interference. This is the group's first hotel, and the restaurant on the ground floor is, in a sense, the founder coming home.\n\nThe forty or so rooms have the high ceilings and marble bathrooms you'd hope for in a building like this, and some of the terraces look straight up at Lycabettus.\n\nWhat I like is the honesty of the name. Xenodocheio: a house for strangers. And the idea they've hung it on is philoxenia, the very old Greek obligation to treat a stranger as a friend. You can argue about whether a five-star hotel quite manages that. But it's a good word to have over the door.\n\nBefore you go, turn round and cross to the Old Parliament. In front of it stands the bronze of Theodoros Kolokotronis on horseback, the hero of the War of Independence this very street is named after. Worth a minute of your time."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.977386156075006,
+      "centroidLongitude": 23.732993049077194,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "7c32be44-365d-5ac7-91d8-336f94106e6d",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "03f81741-e71b-596d-a589-250f3004f09b",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "3238e759-83c1-5f71-ba57-b9559adfa304"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Neoclassical"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "03f81741-e71b-596d-a589-250f3004f09b",
+      "createdAt": "2026-11-04",
+      "title": "Hotel Grande Bretagne | Μεγάλη Βρεταννία",
+      "shortDescription": "In December nineteen forty four, there was enough dynamite in the sewers under this hotel to bring the whole thing down.",
+      "longDescription": "In December nineteen forty four, there was enough dynamite in the sewers under this hotel to bring the whole thing down.\n\nIt began in eighteen forty two as a private mansion, built for a businessman from Lemnos called Antonis Dimitriou and designed by the Danish architect Theophil Hansen. It stood directly opposite the new royal palace, which is today's Parliament. In eighteen seventy four it became a hotel and took its name, and by eighteen eighty eight it had electric light.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-hotel-grande-bretagne_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-hotel-grande-bretagne_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-hotel-grande-bretagne_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-hotel-grande-bretagne_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-hotel-grande-bretagne_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9c23f437-1b63-5b1a-bc40-e85d1098ed64",
+          "order": 0,
+          "title": "Hotel Grande Bretagne | Μεγάλη Βρεταννία",
+          "caption": "On Syntagma Square, facing the big pale building on the north side, with the Parliament up the slope to your right.",
+          "latitude": 37.97633442228559,
+          "longitude": 23.735317706515158,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-hotel-grande-bretagne.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-hotel-grande-bretagne_hero.webp",
+          "transcriptText": "In December nineteen forty four, there was enough dynamite in the sewers under this hotel to bring the whole thing down.\n\nSyntagma Square. Face the big, pale building on the north side of the square, the one with the flags and the doormen. The Parliament is up the slope to your right. That's the Grande Bretagne, and it's been watching that building across the way for as long as Greece has had a capital here.\n\nIt began in eighteen forty two as a private mansion, built for a businessman from Lemnos called Antonis Dimitriou and designed by the Danish architect Theophil Hansen. It stood directly opposite the new royal palace, which is today's Parliament. In eighteen seventy four it became a hotel and took its name, and by eighteen eighty eight it had electric light.\n\nHere's the twist. The building you're looking at is not that mansion. New wings came in nineteen thirty and nineteen fifty, and in nineteen fifty seven the original house was pulled down and rebuilt, with the architect Kostas Voutsinas keeping something of its style. What you see is a careful remembering of Hansen, not Hansen himself.\n\nThen the war. In nineteen forty and forty one the hotel was the Greek general headquarters. Under the occupation, it was the German headquarters. When the Germans left, the British moved in. And on Christmas Day nineteen forty four, resistance fighters, among them the young Manolis Glezos, packed explosives into the sewers beneath it. The attack was called off when they learned who had just arrived: Winston Churchill.\n\nSo when people call this the most famous hotel in Greece, it isn't really about the marble. It's that so much of the country's modern history happened, quite literally, across the road from the front door.\n\nIf you fancy it, cross the square towards the Parliament and the Tomb of the Unknown Soldier. The guards in their pleated kilts change on the hour, and the view back to the hotel from there is the one Churchill would have known."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.97633442228559,
+      "centroidLongitude": 23.735317706515158,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "35578320-0610-5fc7-9804-7c52c03ed3d0",
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "7c32be44-365d-5ac7-91d8-336f94106e6d",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "War",
+        "Power",
+        "Neoclassical",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Kostas Voutsinas"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "870636d4-1051-5460-9496-20c558caccd1",
+      "createdAt": "2026-11-04",
+      "title": "Diporto | Δίπορτο",
+      "shortDescription": "There's no sign. Don't bother looking for one.",
+      "longDescription": "There's no sign. Don't bother looking for one.\n\nMind your head on the way down. At the bottom you'll find a stone basement: the kitchen on your left, and across from you a wall of enormous wine barrels, said to weigh six hundred kilos each. There are about ten tables, with paper tablecloths. Don't expect one to yourself. When it's busy, and it usually is, you sit wherever there's a space, which generally means next to strangers.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-diporto_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-diporto_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-diporto_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "24d07d99-ef0f-50e7-aad7-25e8b4e509f4",
+          "order": 0,
+          "title": "Diporto | Δίπορτο",
+          "caption": "At the corner of Sokratous and Theatrou, near the central market: two unmarked doorways with stairs going down.",
+          "latitude": 37.98098032395586,
+          "longitude": 23.725875793466766,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-diporto.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-diporto_hero.webp",
+          "transcriptText": "There's no sign. Don't bother looking for one.\n\nYou want the corner of Sokratous and Theatrou streets, a couple of minutes from the central market. Look for an old building with two plain doorways, one on each street, each with a staircase going down. No menu in the window. No name over the door. The word taverna appears nowhere at all. That's Diporto, and the name more or less means two doors.\n\nMind your head on the way down. At the bottom you'll find a stone basement: the kitchen on your left, and across from you a wall of enormous wine barrels, said to weigh six hundred kilos each. There are about ten tables, with paper tablecloths. Don't expect one to yourself. When it's busy, and it usually is, you sit wherever there's a space, which generally means next to strangers.\n\nThere's no written menu, either. The cooking is the plainest, oldest Athenian food there is: chickpea soup, bean soup, fava, salt cod, fried sardines, a salad, and wine poured straight from those barrels. It arrives astonishingly fast.\n\nMost accounts date the place to the eighteen eighties, which makes it one of the oldest tavernas in the city. For years it was run by a man called Michalis, who died, so the story goes, inside the taverna at Easter in nineteen ninety one. His waiter, Mitsos, took it on, in a spotless white jacket, and became as much a fixture as the barrels.\n\nAnd here's the thing about Diporto. Almost every restaurant now is designed to be seen. This one is designed to be found, by people who already know. Nothing about it has been arranged for you, and that's exactly why it feels like a gift.\n\nWhen you come back up, turn towards Athinas Street and walk through the Varvakios market, two minutes away. The fish and the meat halls are the same world Diporto has been feeding for well over a century."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.98098032395586,
+      "centroidLongitude": 23.725875793466766,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "6408C083-6D92-51E5-B388-06AA555C4079",
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "3a06ffd3-af64-5a4a-b097-54224616d67d",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "3238e759-83c1-5f71-ba57-b9559adfa304",
+        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "39470626-dd10-53c9-a7f1-81865e370973",
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3238e759-83c1-5f71-ba57-b9559adfa304",
+      "createdAt": "2026-11-04",
+      "title": "Karamanlidika tou Fani | Καραμανλίδικα του Φάνη",
+      "shortDescription": "Look at what's on display before you look at the menu. The cured meats will tell you most of the story.",
+      "longDescription": "Look at what's on display before you look at the menu. The cured meats will tell you most of the story.\n\nFanis Theodoropoulos comes from a family who arrived in Athens from Asia Minor after nineteen twenty two. His original shop is still a few doors along Evripidou, at number forty one, selling cured meat to the trade. In twenty fourteen he opened this place round the corner, so people could stop selling and start eating.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-karamanlidika-tou-fani_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-karamanlidika-tou-fani_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-karamanlidika-tou-fani_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-karamanlidika-tou-fani_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e39358e4-7fc4-59d2-bc4d-6b635e5bfc9e",
+          "order": 0,
+          "title": "Karamanlidika tou Fani | Καραμανλίδικα του Φάνη",
+          "caption": "At the corner of Sokratous and Evripidou, off Athinas Street: half delicatessen, half restaurant.",
+          "latitude": 37.980345852333,
+          "longitude": 23.725620838787446,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-karamanlidika-tou-fani.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-karamanlidika-tou-fani_hero.webp",
+          "transcriptText": "Look at what's on display before you look at the menu. The cured meats will tell you most of the story.\n\nYou should be on the corner of Sokratous and Evripidou, in the market streets just off Athinas. Half delicatessen, half restaurant, with the cured meats and cheeses on show. This is Karamanlidika tou Fani: Fani's Karamanlidika.\n\nFanis Theodoropoulos comes from a family who arrived in Athens from Asia Minor after nineteen twenty two. His original shop is still a few doors along Evripidou, at number forty one, selling cured meat to the trade. In twenty fourteen he opened this place round the corner, so people could stop selling and start eating.\n\nThe word on the sign needs a little explaining. The Karamanlides were Orthodox Christians from Cappadocia and the Karaman region of central Anatolia. Their everyday language was Turkish, but they wrote it in the Greek alphabet. That's the gift detail: a whole literature in Turkish, spelt in Greek letters. Karamanlidika is the name for that writing, and here it's the name for their food.\n\nAnd the food is cured meat. Pastirma, the spiced, air-dried beef their families made for centuries, here made from veal, from sheep, and even from camel. Soutzouki sausage, which comes to the table fried with eggs and little potatoes. A good deal of it is made by a family curer in Drama, in northern Greece, who traces his roots to the same people. It goes with a glass of tsipouro or ouzo.\n\nWhat you're eating, really, is the population exchange of nineteen twenty three: the great uprooting that sent more than a million people across the Aegean and rebuilt Athens around them. They didn't bring much. They brought this.\n\nFrom here, walk down Evripidou and follow your nose. The street is lined with old spice shops. One of the hotels nearby says you won't need an address, and they're quite right."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.980345852333,
+      "centroidLongitude": 23.725620838787446,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "3a06ffd3-af64-5a4a-b097-54224616d67d",
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "725FE87B-3535-5D02-85C2-2469EEEBF2AB",
+        "d79fba87-711d-54fb-aa93-1ce54bc10579",
+        "6408C083-6D92-51E5-B388-06AA555C4079",
+        "39470626-dd10-53c9-a7f1-81865e370973"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Immigration",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "39470626-dd10-53c9-a7f1-81865e370973",
+      "createdAt": "2026-11-04",
+      "title": "Seychelles",
+      "shortDescription": "It used to be a café called the Bahamas. The new owners kept the furniture and simply changed islands.",
+      "longDescription": "It used to be a café called the Bahamas. The new owners kept the furniture and simply changed islands.\n\nHave a look through the window first. When Seychelles took over, they kept the bones of the old Bahamas café: the retro tiles, the worn fittings, even an old refrigerator. Nothing was ripped out to make it look new. The kitchen is in the same room as the diners, so you eat with the cooks working right beside you, and it's loud, cheerful, and very much a neighbourhood room.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-seychelles_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-seychelles_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-seychelles_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-seychelles_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "40ae694a-32d7-5cb0-97f7-390143c1240e",
+          "order": 0,
+          "title": "Seychelles",
+          "caption": "In Metaxourgeio, at the corner of Kerameikou Street and little Avdi Square, in a century-old corner building.",
+          "latitude": 37.98240740133291,
+          "longitude": 23.720293111804178,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-seychelles.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-seychelles_hero.webp",
+          "transcriptText": "It used to be a café called the Bahamas. The new owners kept the furniture and simply changed islands.\n\nYou should be in Metaxourgeio, at the corner of Kerameikou Street and the little Avdi Square. The restaurant fills the ground floor of a building about a hundred years old, with big windows onto the street and, in good weather, tables spilling out onto the square.\n\nHave a look through the window first. When Seychelles took over, they kept the bones of the old Bahamas café: the retro tiles, the worn fittings, even an old refrigerator. Nothing was ripped out to make it look new. The kitchen is in the same room as the diners, so you eat with the cooks working right beside you, and it's loud, cheerful, and very much a neighbourhood room.\n\nThe food changes with the season and often with the day. Reviewers mention chickpeas with feta and mint, crisp tomato and courgette fritters, and wide ribbons of pappardelle with kavourmas, a spiced preserved meat. It's Greek home cooking with a sharp eye, and it's not expensive. Do book, though. Athenians know about it.\n\nHere's the interesting bit. Metaxourgeio means silk mill, after a factory that worked here in the eighteen hundreds and closed in eighteen seventy five; the old mill building has since become the city's Municipal Art Gallery. For a long stretch of the last century this was one of the parts of Athens people stopped coming to. Places like Seychelles are a big part of why they've started coming back: no grand makeover, just an old corner, kept as it was, and fed well.\n\nIf you've got time before or after, walk south down Kerameikou Street towards the ancient cemetery of Kerameikos, ten minutes or so on foot. You'll pass from a corner café to the graves of classical Athens in a single street."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.98240740133291,
+      "centroidLongitude": 23.720293111804178,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "3a06ffd3-af64-5a4a-b097-54224616d67d",
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "3238e759-83c1-5f71-ba57-b9559adfa304",
+        "d79fba87-711d-54fb-aa93-1ce54bc10579",
+        "6408C083-6D92-51E5-B388-06AA555C4079"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "824c0c6e-c104-511d-bc83-131831982977",
+      "createdAt": "2026-11-04",
+      "title": "Atlantikos | Ατλαντικός",
+      "shortDescription": "You'll hear Atlantikos before you see it: plates, chairs, and a lot of people talking at once.",
+      "longDescription": "You'll hear Atlantikos before you see it: plates, chairs, and a lot of people talking at once.\n\nIt's a simple set up. The cooks work behind the bar, opposite the entrance. A narrow stair takes you up to a second floor with more tables and a tiny balcony. And the place got so popular that they opened an annex across the lane, just to keep up with the queue.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-atlantikos_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-atlantikos_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-atlantikos_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-atlantikos_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-atlantikos_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0a7fb574-a505-54ee-8b6b-416e769ac526",
+          "order": 0,
+          "title": "Atlantikos | Ατλαντικός",
+          "caption": "On Avliton Street in Psyrri, between Thiseio and Monastiraki: tables out in the lane and lifebuoys upstairs.",
+          "latitude": 37.97761962108394,
+          "longitude": 23.722957577222317,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-atlantikos.mp3",
+          "audioDurationSeconds": 94,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-atlantikos_hero.webp",
+          "transcriptText": "You'll hear Atlantikos before you see it: plates, chairs, and a lot of people talking at once.\n\nFind Avliton Street, a narrow lane in Psyrri, roughly halfway between the Thiseio and Monastiraki metro stations. Number seven is the small seafood restaurant with tables right out in the alley, shaded through the day, and an open kitchen just inside the door. If you can see lifebuoys hanging from a railing upstairs, you've found it.\n\nIt's a simple set up. The cooks work behind the bar, opposite the entrance. A narrow stair takes you up to a second floor with more tables and a tiny balcony. And the place got so popular that they opened an annex across the lane, just to keep up with the queue.\n\nThe thing to order is savoro: white fish, pan fried and then dressed with currants, rosemary and a sharp, vinegary sauce. It's a very old Greek way of treating fish, from the days before refrigeration, and it's absolutely delicious with bread. Otherwise, the fried calamari, the mixed fry, the grilled octopus, or the anchovies baked in the oven. Nothing here is complicated, and nothing needs to be.\n\nWhat I love is how Athens treats a lane like this. It doesn't see a passage between buildings. It sees a dining room with the roof left off. Half the restaurant is the street itself, and that, if you ask me, is one of the city's great inventions.\n\nWhen you're done, wander up towards Agias Irinis Square, five minutes away, for a coffee or a nightcap. Or, if you're an early riser, go and see where the fish comes in: the central market's fish hall is at its best first thing in the morning."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 94,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.97761962108394,
+      "centroidLongitude": 23.722957577222317,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "3a06ffd3-af64-5a4a-b097-54224616d67d",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "6408C083-6D92-51E5-B388-06AA555C4079",
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
+        "d79fba87-711d-54fb-aa93-1ce54bc10579",
+        "3238e759-83c1-5f71-ba57-b9559adfa304"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Maritime"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d79fba87-711d-54fb-aa93-1ce54bc10579",
+      "createdAt": "2026-11-04",
+      "title": "Nolan",
+      "shortDescription": "In a city that takes its grandmothers' recipes very seriously, Nolan was a small act of mischief.",
+      "longDescription": "In a city that takes its grandmothers' recipes very seriously, Nolan was a small act of mischief.\n\nNolan was opened by the Greek Japanese chef Sotiris Kontizas, and it did something Athens wasn't used to. It took Greek ingredients and cooked them with the flavours of Japan, Korea, Vietnam and China, all at once, without making a fuss about it. The most famous dish became the fried chicken: very crisp, with a tangy, slightly hot sauce. People came back for it again and again. The Michelin guide gave it a Bib Gourmand, its award for very good cooking at a fair price.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-nolan_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-nolan_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-nolan_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-nolan_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8e399c78-c364-508b-b899-b7314236bfac",
+          "order": 0,
+          "title": "Nolan",
+          "caption": "On Voulis Street, a few minutes south of Syntagma Square, outside numbers 31 to 33.",
+          "latitude": 37.97498463312411,
+          "longitude": 23.732350338787686,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-nolan.mp3",
+          "audioDurationSeconds": 97,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-nolan_hero.webp",
+          "transcriptText": "In a city that takes its grandmothers' recipes very seriously, Nolan was a small act of mischief.\n\nYou should be on Voulis Street, a few minutes south of Syntagma Square, outside numbers thirty one to thirty three. Nolan is the restaurant here: small, and easy to walk past if you weren't looking for it.\n\nNolan was opened by the Greek Japanese chef Sotiris Kontizas, and it did something Athens wasn't used to. It took Greek ingredients and cooked them with the flavours of Japan, Korea, Vietnam and China, all at once, without making a fuss about it. The most famous dish became the fried chicken: very crisp, with a tangy, slightly hot sauce. People came back for it again and again. The Michelin guide gave it a Bib Gourmand, its award for very good cooking at a fair price.\n\nRestaurants change, and this one has. The Michelin guide now describes a Nolan two point oh, with the chef Michalis Nourloglou in the kitchen and a short, simple menu: sea bream tartare, say, or breaded beef cheeks with truffle. So go expecting the spirit of the place rather than a particular dish. The menu may well have moved on since I last looked.\n\nAnd that, really, is the point. Athens can be a city that eats as if it were still nineteen sixty. Nolan made a modest argument that a restaurant could be completely Athenian without being traditionally Greek, and the city, rather to its own surprise, agreed.\n\nFrom here, walk up Voulis to the corner of Kolokotroni. The handsome pair of neoclassical buildings on that corner is the Xenodocheio Milos hotel, with the Old Parliament just across the road."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 97,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.97498463312411,
+      "centroidLongitude": 23.732350338787686,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "6408C083-6D92-51E5-B388-06AA555C4079",
+        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "3238e759-83c1-5f71-ba57-b9559adfa304",
+        "39470626-dd10-53c9-a7f1-81865e370973",
+        "51BA4A4C-6328-52B0-A307-D58F8E482325",
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b278dff6-bdf4-5a7b-ae6e-be9d0c766632",
+      "createdAt": "2026-11-04",
+      "title": "The Clumsies",
+      "shortDescription": "A bar named after its own spilt drinks has been ranked among the best in the world. Athens has a sense of humour.",
+      "longDescription": "A bar named after its own spilt drinks has been ranked among the best in the world. Athens has a sense of humour.\n\nStart with the name, because the bar explains it itself. Many whoops. Droplets outside the shaker. Spatters on clothes and surfaces. It's a joke at their own expense, and it tells you a great deal about the place. The founders were two bartenders, Nikos Bakoulis and Vassilis Kyritsis, who had each won Greece's top bartending competition, in twenty eleven and twenty twelve, and who ended up as strangers behind the same bar. They found they shared a sense of self mockery, and a belief that a bartender is judged as much by how they talk to you as by the drink.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-the-clumsies_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-the-clumsies_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-the-clumsies_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-the-clumsies_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-the-clumsies_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3c581df4-4c65-5258-8b16-90ed07617e54",
+          "order": 0,
+          "title": "The Clumsies",
+          "caption": "On Praxitelous Street in the commercial centre, outside number 30: a restored building with big windows.",
+          "latitude": 37.97913853632364,
+          "longitude": 23.729803211804274,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-the-clumsies.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-the-clumsies_hero.webp",
+          "transcriptText": "A bar named after its own spilt drinks has been ranked among the best in the world. Athens has a sense of humour.\n\nYou should be on Praxitelous Street, a busy, slightly scruffy road in the commercial centre, outside number thirty. Look for a restored old building with big windows and a café-bar feel on the ground floor, and people sitting there at almost any hour.\n\nStart with the name, because the bar explains it itself. Many whoops. Droplets outside the shaker. Spatters on clothes and surfaces. It's a joke at their own expense, and it tells you a great deal about the place. The founders were two bartenders, Nikos Bakoulis and Vassilis Kyritsis, who had each won Greece's top bartending competition, in twenty eleven and twenty twelve, and who ended up as strangers behind the same bar. They found they shared a sense of self mockery, and a belief that a bartender is judged as much by how they talk to you as by the drink.\n\nIt's an all day bar. In the morning it's light and quiet, a place for coffee. As the day goes on, the mood changes, and by night it's full.\n\nNow the gift detail. Up the inside stair is a private space they call the Room: a fireplace, a bookcase, a billiard table and a stack of records, for up to ten people, with a bartender of their own. Book ahead.\n\nThe Clumsies first made the World's Fifty Best Bars list in twenty fifteen, and in twenty twenty it was ranked third in the world.\n\nAnd here's the thing. A bar that good could easily have become solemn. This one decided early that it wouldn't, and that friendliness was the point. That's a very Athenian choice.\n\nIf you're making an evening of it, Baba au Rum is a couple of minutes' walk south, on Klitiou Street. It's been on the same world list for more than a decade. Two of the city's best bars, barely a street apart."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.97913853632364,
+      "centroidLongitude": 23.729803211804274,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "d69649e9-8561-502f-813e-4e3672e8b3bb",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "725FE87B-3535-5D02-85C2-2469EEEBF2AB",
+        "6408C083-6D92-51E5-B388-06AA555C4079",
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "554024f7-6570-540d-8544-ad0812fa4819",
+        "3a06ffd3-af64-5a4a-b097-54224616d67d"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "89363630-932b-5974-8e01-2a1e62adbd79",
+      "createdAt": "2026-11-04",
+      "title": "Brettos | Μπρέττος",
+      "shortDescription": "Look past the bar to the back wall. Floor to ceiling, lit from behind, hundreds of coloured bottles. That's Brettos.",
+      "longDescription": "Look past the bar to the back wall. Floor to ceiling, lit from behind, hundreds of coloured bottles. That's Brettos.\n\nBrettos has been here since nineteen oh nine, when a man called Michail Brettos began distilling and selling his own ouzo on this street. It's generally described as the oldest distillery in Athens, and it still makes its own ouzo and brandy. The founder's old still, I'm told, is kept on show inside.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-brettos_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-brettos_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-brettos_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-brettos_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b4a682ae-315b-5dd5-b87d-a72db29819aa",
+          "order": 0,
+          "title": "Brettos | Μπρέττος",
+          "caption": "On Kydathineon Street in Plaka, before the narrow bar with its back wall of glowing coloured bottles.",
+          "latitude": 37.97186342563508,
+          "longitude": 23.73050170995103,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-brettos.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-brettos_hero.webp",
+          "transcriptText": "Look past the bar to the back wall. Floor to ceiling, lit from behind, hundreds of coloured bottles. That's Brettos.\n\nYou should be on Kydathineon Street, the main pedestrian lane through Plaka, outside a narrow, old-fashioned bar with that glowing wall of bottles visible from the street. If you can see red, green, amber and blue glass all lit up like a church window, you're in the right place.\n\nBrettos has been here since nineteen oh nine, when a man called Michail Brettos began distilling and selling his own ouzo on this street. It's generally described as the oldest distillery in Athens, and it still makes its own ouzo and brandy. The founder's old still, I'm told, is kept on show inside.\n\nHave a look at that wall properly. Those bottles are the house liqueurs, around fifty flavours of them, from peppermint to watermelon, and lit from behind they turn the whole room into something like stained glass. People come just to photograph it, and you can hardly blame them.\n\nYou sit at old wooden barrels, and you choose from a long, slightly encyclopaedic list. In winter, try the rakomelo: hot raki with honey and cinnamon. Or tell the bartender whether you're a sweet person or a sour person, and let them decide the rest.\n\nWhat's worth knowing, standing here, is that before cocktail bars, this was how Athens drank. Little neighbourhood distilleries, making their own spirit and selling it by the glass to whoever walked in. Brettos is what's left of that world, and it's survived by simply carrying on.\n\nFrom here, the lanes above Kydathineon climb towards the Acropolis rock. Follow them uphill for ten minutes and you'll reach Anafiotika, a tiny island village of whitewashed houses, hidden in the middle of the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.97186342563508,
+      "centroidLongitude": 23.73050170995103,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "e9679aa4-0e91-5b79-87d9-b3ae54d56ea0",
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "3a06ffd3-af64-5a4a-b097-54224616d67d",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "b278dff6-bdf4-5a7b-ae6e-be9d0c766632"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+      "createdAt": "2026-11-04",
+      "title": "Couleur Locale",
+      "shortDescription": "The best view in Monastiraki is behind an antique shop, at the top of an old lift.",
+      "longDescription": "The best view in Monastiraki is behind an antique shop, at the top of an old lift.\n\nPast the furniture, you'll find a slightly old school lift. Take it up. The doors open onto a rooftop bar spread over the upper floors of the building, and straight ahead, filling the sky, is the Acropolis, with the Parthenon on top.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-couleur-locale_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-couleur-locale_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c69a6ddb-cc64-5a36-aadc-2f777c0feca3",
+          "order": 0,
+          "title": "Couleur Locale",
+          "caption": "At Normanou 3, off Ermou in Monastiraki: go in through the antique shop and take the lift to the roof.",
+          "latitude": 37.9768496855243,
+          "longitude": 23.724495496460015,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-couleur-locale.mp3",
+          "audioDurationSeconds": 93,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-couleur-locale_hero.webp",
+          "transcriptText": "The best view in Monastiraki is behind an antique shop, at the top of an old lift.\n\nFind Normanou Street, a narrow side alley off Ermou, right in the middle of Monastiraki. Number three looks like nothing much from the street: an arcade, and an entrance through what appears to be a shop full of old furniture. Go in anyway. That's the point.\n\nPast the furniture, you'll find a slightly old school lift. Take it up. The doors open onto a rooftop bar spread over the upper floors of the building, and straight ahead, filling the sky, is the Acropolis, with the Parthenon on top.\n\nThat's the whole gift, really. You've walked in off one of the busiest shopping streets in Athens, through a junk shop, up in a creaking lift, and come out at eye level with the most famous building in the western world. Athens does this better than almost anywhere.\n\nAs for the drinks: cocktails, wine, and plates to share. The crowd is mostly young and mostly local, and on a Friday or Saturday evening it's worth booking ahead for sunset.\n\nAnd here's what I like about it. Look across the rooftops from up here and you'll see dozens of other flat roofs, with laundry, plants, water tanks and chairs. The roof terrace is how ordinary Athenians have always escaped the street. Couleur Locale just put a bar on one and turned the lights on.\n\nBefore you go, take a walk up the rest of Normanou. The famous Poet Sandal Maker used to have his workshop on this very alley, before moving near the Acropolis Museum. And the flea market of Monastiraki is only a couple of minutes away, if you fancy rummaging."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 93,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.9768496855243,
+      "centroidLongitude": 23.724495496460015,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+        "7c32be44-365d-5ac7-91d8-336f94106e6d",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "6408C083-6D92-51E5-B388-06AA555C4079",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Viewpoint",
+        "After Dark",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d69649e9-8561-502f-813e-4e3672e8b3bb",
+      "createdAt": "2026-11-04",
+      "title": "Baba au Rum",
+      "shortDescription": "Behind this bar there are more than four hundred rums. You could visit every night for a year and never drink the same one twice.",
+      "longDescription": "Behind this bar there are more than four hundred rums. You could visit every night for a year and never drink the same one twice.\n\nThe bar calls itself a rum and cocktail society. It was started by the bartender Thanos Prunarus more than fifteen years ago, and it still runs under his eye. The style borrows from the old tiki tradition, the American dream of the South Seas in a glass, and then runs off somewhere of its own.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-baba-au-rum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-baba-au-rum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-baba-au-rum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-baba-au-rum_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b73e4654-dc83-5677-a284-982d941b2ac0",
+          "order": 0,
+          "title": "Baba au Rum",
+          "caption": "On Klitiou Street, a narrow lane in the centre, outside the small modernist-looking bar.",
+          "latitude": 37.97759128355863,
+          "longitude": 23.72986492529612,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-baba-au-rum.mp3",
+          "audioDurationSeconds": 95,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-baba-au-rum_hero.webp",
+          "transcriptText": "Behind this bar there are more than four hundred rums. You could visit every night for a year and never drink the same one twice.\n\nYou should be on Klitiou Street, a narrow lane in the city centre, outside a small bar with a modernist look and the name Baba au Rum over the door. Like the cake, yes. Soaked in rum. That's very much the joke.\n\nThe bar calls itself a rum and cocktail society. It was started by the bartender Thanos Prunarus more than fifteen years ago, and it still runs under his eye. The style borrows from the old tiki tradition, the American dream of the South Seas in a glass, and then runs off somewhere of its own.\n\nAsk for the house favourite, the Spicy Baba, which has been the most ordered drink here since twenty ten. Or try something from the current list, like the Supremus number fifty eight, their twist on the Caribbean Ti' Punch, made with a blend of rums, falernum, tea and summer fruit.\n\nNow the gift detail. In twenty twenty five, Baba au Rum was on the World's Fifty Best Bars list for the eleventh year running, and that same year the list gave it a special award for staying power, the Legend of the List.\n\nHere's what that means, standing on this little street. Eleven years in the world's top fifty is extremely hard to do, and it's been done, quietly, by a small bar in a side lane of Athens. Most cities would make a monument of it. Athens just keeps the lights on.\n\nFrom here, walk two minutes north to Praxitelous Street. The Clumsies, another of the city's world-ranked bars, is at number thirty. Same evening, two very different moods."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 95,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.97759128355863,
+      "centroidLongitude": 23.72986492529612,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "b278dff6-bdf4-5a7b-ae6e-be9d0c766632",
+        "89363630-932b-5974-8e01-2a1e62adbd79",
+        "e22d016c-8f54-5600-a12b-8bf341649795",
+        "ada17ad9-8c2d-5e74-b104-88c92eec5299",
+        "1568941f-1ef1-5297-b6f8-829cc2efe3ef",
+        "0e413d04-05d5-5e98-9c22-fbdef73beb27",
+        "5fe721f4-2bf9-5d47-afcf-6eda222ac5a3",
+        "eaf2d4d8-d282-54d3-bf6b-94da15be04f2"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "554024f7-6570-540d-8544-ad0812fa4819",
+      "createdAt": "2026-11-04",
+      "title": "Taf Coffee",
+      "shortDescription": "If you want to know where Athens' serious coffee scene started, this doorway is a good guess.",
+      "longDescription": "If you want to know where Athens' serious coffee scene started, this doorway is a good guess.\n\nTaf began as a family coffee roasting business back in the nineteen nineties. In two thousand and nine, Yannis Taloumis opened this café, and it became one of the places that taught Athens about speciality coffee: beans chosen and roasted in house, with care over where they came from and how they're brewed.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-taf-coffee_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-taf-coffee_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "aad3d758-cd27-5f25-9259-0a20c398f942",
+          "order": 0,
+          "title": "Taf Coffee",
+          "caption": "On Emmanouil Benaki Street at the edge of Exarchia, outside numbers 7 to 9: a café and roaster.",
+          "latitude": 37.98371987999055,
+          "longitude": 23.73084202529596,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-taf-coffee.mp3",
+          "audioDurationSeconds": 77,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-taf-coffee_hero.webp",
+          "transcriptText": "If you want to know where Athens' serious coffee scene started, this doorway is a good guess.\n\nYou should be on Emmanouil Benaki Street, on the edge of Exarchia, a few blocks up from the main shopping streets. Taf is at numbers seven to nine: a café that is also a coffee roaster, so it should smell right before you even reach the door.\n\nTaf began as a family coffee roasting business back in the nineteen nineties. In two thousand and nine, Yannis Taloumis opened this café, and it became one of the places that taught Athens about speciality coffee: beans chosen and roasted in house, with care over where they came from and how they're brewed.\n\nHave an espresso and ask about the house blend, called Rosebud. You can buy the beans to take home, too.\n\nAnd here's the thing about Athens and coffee. This is a city that already drank coffee constantly, sweet Greek coffee in little cups and the frothy iced frappé in summer. Persuading it to slow down and care about the bean was no small job. Places like Taf did it.\n\nFrom here, walk five minutes north, up to Exarchia Square. On the corner there's an apartment block called the Blue Building, from the early nineteen thirties, one of the finest of its kind in Athens. It's worth seeing with a coffee still in hand."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 77,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.98371987999055,
+      "centroidLongitude": 23.73084202529596,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "6408C083-6D92-51E5-B388-06AA555C4079",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "39470626-dd10-53c9-a7f1-81865e370973",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "b278dff6-bdf4-5a7b-ae6e-be9d0c766632",
+        "725FE87B-3535-5D02-85C2-2469EEEBF2AB",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "829ae210-e5ef-5370-886e-dfec80d6fa71",
+      "createdAt": "2026-11-04",
+      "title": "Melissinos Art — The Poet Sandal Maker",
+      "shortDescription": "The Beatles, Jackie Onassis and Maria Callas all came to the same Athens sandal maker. So did a great many poets, because he was one.",
+      "longDescription": "The Beatles, Jackie Onassis and Maria Callas all came to the same Athens sandal maker. So did a great many poets, because he was one.\n\nThe family has been making shoes since nineteen twenty. The legend of the place, though, is Stavros Melissinos, who took over the family workshop in the early nineteen fifties and had an idea nobody else had: to bring back the sandals of ancient Greece as something people would actually wear. It worked. His workshop became one of the sights of Athens, visited by The Beatles, Jackie Onassis, Sophia Loren, Rudolf Nureyev and Maria Callas.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-melissinos-art_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-melissinos-art_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6bb6ee85-a381-57e5-8faf-495d67a66bfb",
+          "order": 0,
+          "title": "Melissinos Art — The Poet Sandal Maker",
+          "caption": "On Tzireon Street in Makrygianni, behind the Acropolis Museum, outside number 16.",
+          "latitude": 37.96853771713371,
+          "longitude": 23.730979682967554,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-melissinos-art.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-melissinos-art_hero.webp",
+          "transcriptText": "The Beatles, Jackie Onassis and Maria Callas all came to the same Athens sandal maker. So did a great many poets, because he was one.\n\nYou should be on Tzireon Street in Makrygianni, the quiet streets just behind the Acropolis Museum, outside number sixteen. This is Melissinos Art, the Poet Sandal Maker. A word of warning if you've an old guidebook: the workshop used to be down in Monastiraki, and it has moved here.\n\nThe family has been making shoes since nineteen twenty. The legend of the place, though, is Stavros Melissinos, who took over the family workshop in the early nineteen fifties and had an idea nobody else had: to bring back the sandals of ancient Greece as something people would actually wear. It worked. His workshop became one of the sights of Athens, visited by The Beatles, Jackie Onassis, Sophia Loren, Rudolf Nureyev and Maria Callas.\n\nHere's the gift detail. He was a real poet, too, and his verses covered the walls of the workshop. In nineteen fifty nine he published his Athenian Rubaiyat, with lines like this one, in his son's translation: I will build a myriad palaces in me, as I live from day to day. Stavros died in twenty twenty five, in his nineties.\n\nToday the workshop is run by his son, Pantelis, who is a painter and a poet as well as a sandal maker. The sandals are made from natural, vegetable tanned leather, based on ancient designs and his own, and each pair is fitted to your foot here in the shop. There are no online sales, and they're sold nowhere else at all.\n\nWhat I find rather moving is that the business has never really been about shoes. It's about a family deciding that a craft, a poem and a pair of feet could all belong in the same small room. Three generations on, they still do.\n\nFrom here, the Acropolis Museum is only a few minutes' walk. And if you've bought a pair, there's no better place to try them out than the old stone paths up Philopappou Hill, a short walk away."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.96853771713371,
+      "centroidLongitude": 23.730979682967554,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "5d1b3abd-edbe-5982-bc20-119d4678aa96",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "e9679aa4-0e91-5b79-87d9-b3ae54d56ea0",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Literature",
+        "Fashion",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "43d811b0-ef70-5700-bf3c-b8a5af8ccdc6",
+      "createdAt": "2026-11-04",
+      "title": "Kombologadiko | Κομπολογάδικο",
+      "shortDescription": "Watch the older men in any Athens café and sooner or later one of them will start clicking a string of beads. This is where those beads come…",
+      "longDescription": "Watch the older men in any Athens café and sooner or later one of them will start clicking a string of beads. This is where those beads come from.\n\nA komboloi is a string of worry beads. It's descended from the knotted prayer strings of Orthodox monks, but in Greece it lost its religious job a long time ago. Nobody prays with one. You flick it, swing it, click the beads through your fingers, and pass the time. It's a fidget toy with a very long history.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-kombologadiko_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-kombologadiko_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-kombologadiko_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c16fc806-1290-5e6b-968b-de02a8736bde",
+          "order": 0,
+          "title": "Kombologadiko | Κομπολογάδικο",
+          "caption": "On Amerikis Street between Stadiou and Panepistimiou, outside number 9: a window full of worry beads.",
+          "latitude": 37.978551024082726,
+          "longitude": 23.73527199645937,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-kombologadiko.mp3",
+          "audioDurationSeconds": 94,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-kombologadiko_hero.webp",
+          "transcriptText": "Watch the older men in any Athens café and sooner or later one of them will start clicking a string of beads. This is where those beads come from.\n\nYou should be on Amerikis Street, the short street running between Stadiou and Panepistimiou, a few minutes from Syntagma Square, outside number nine. The shop window is full of strings of beads of every size and colour. The sign says Kombologadiko, which means, roughly, the komboloi shop.\n\nA komboloi is a string of worry beads. It's descended from the knotted prayer strings of Orthodox monks, but in Greece it lost its religious job a long time ago. Nobody prays with one. You flick it, swing it, click the beads through your fingers, and pass the time. It's a fidget toy with a very long history.\n\nThe family behind this shop, the Ieropoulos family, started in Nafplio, in the Peloponnese, and then brought the business to Athens, with this shop as its headquarters. Inside, the range runs from simple, inexpensive strings to serious collectors' pieces, gathered from all over the world.\n\nHere's a little gift detail to take home. A Greek komboloi almost always has an odd number of beads, and one popular account says twenty three became the usual count. Count them when you pick one up.\n\nAnd that's why I like this shop. It's a whole business built around a habit, not a need. Nobody needs a komboloi. Half of Greece has one anyway.\n\nFrom here, Kolonaki Square is a short walk uphill to the east. Take your new beads and find a café table there. You'll fit right in."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 94,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.978551024082726,
+      "centroidLongitude": 23.73527199645937,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "e9679aa4-0e91-5b79-87d9-b3ae54d56ea0",
+        "39470626-dd10-53c9-a7f1-81865e370973",
+        "3a06ffd3-af64-5a4a-b097-54224616d67d",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "3238e759-83c1-5f71-ba57-b9559adfa304",
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "824c0c6e-c104-511d-bc83-131831982977"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e9679aa4-0e91-5b79-87d9-b3ae54d56ea0",
+      "createdAt": "2026-11-04",
+      "title": "Forget Me Not",
+      "shortDescription": "Here's a souvenir shop in the heart of Plaka that, on principle, doesn't sell souvenirs.",
+      "longDescription": "Here's a souvenir shop in the heart of Plaka that, on principle, doesn't sell souvenirs.\n\nForget Me Not was opened, around twenty fourteen, by Philippos Khoury, who gave up a good job abroad to come back to Athens and open a different kind of gift shop. His idea was simple. If someone wants to take a piece of Greece home, it ought to be something a Greek person actually designed and made, and something they'd actually use.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-forget-me-not_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-forget-me-not_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-forget-me-not_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3a9dafb1-823d-5fba-a493-b52e46309185",
+          "order": 0,
+          "title": "Forget Me Not",
+          "caption": "On Adrianou Street in Plaka, beneath the Acropolis, outside number 100.",
+          "latitude": 37.97424117758139,
+          "longitude": 23.729383840639542,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-forget-me-not.mp3",
+          "audioDurationSeconds": 83,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-forget-me-not_hero.webp",
+          "transcriptText": "Here's a souvenir shop in the heart of Plaka that, on principle, doesn't sell souvenirs.\n\nYou should be on Adrianou Street, the long lane that winds through Plaka beneath the Acropolis, outside number one hundred. Adrianou is lined with tourist shops, fridge magnets and plaster columns, and this is the one that isn't quite like the others.\n\nForget Me Not was opened, around twenty fourteen, by Philippos Khoury, who gave up a good job abroad to come back to Athens and open a different kind of gift shop. His idea was simple. If someone wants to take a piece of Greece home, it ought to be something a Greek person actually designed and made, and something they'd actually use.\n\nSo instead of miniature Parthenons, you'll find work from well over a hundred Greek designers and brands: olive oil, handmade sunglasses, pottery, notebooks, bags and T shirts. The shop got itself recommended by The New York Times and The Guardian remarkably quickly.\n\nAnd here's the thing. The shops either side of this one are selling the past, mostly in plaster. Forget Me Not is selling the present, which is the bit of Greece visitors usually leave without seeing. It turns out the present is rather good.\n\nFrom here, follow Adrianou and then turn up towards Kydathineon Street. Brettos is there, the old distillery bar with its glowing wall of bottles, and it's a good place to rest your shopping bags."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 83,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.97424117758139,
+      "centroidLongitude": 23.729383840639542,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
+        "89363630-932b-5974-8e01-2a1e62adbd79",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "39470626-dd10-53c9-a7f1-81865e370973",
+        "3238e759-83c1-5f71-ba57-b9559adfa304",
+        "3a06ffd3-af64-5a4a-b097-54224616d67d"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3a06ffd3-af64-5a4a-b097-54224616d67d",
+      "createdAt": "2026-11-04",
+      "title": "Varvakios Central Market | Βαρβάκειος Αγορά",
+      "shortDescription": "Come in the morning, wear shoes you don't mind getting wet, and listen. This is the noisiest building in Athens.",
+      "longDescription": "Come in the morning, wear shoes you don't mind getting wet, and listen. This is the noisiest building in Athens.\n\nBefore this was built, Athens bought its food from shacks set up around the ruins of the Roman Agora. The market was planned in eighteen seventy six and paid for by a benefactor called Ioannis Varvakis, a sailor from the island of Psara who made his fortune in Russia, partly in the caviar trade. The market still carries his name. It opened in eighteen eighty four, and the glass roof and basements followed two years later.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-varvakios-central-market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-varvakios-central-market_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-varvakios-central-market_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-varvakios-central-market_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-varvakios-central-market_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2cc47776-8a6b-57ac-819d-d894d0c450e9",
+          "order": 0,
+          "title": "Varvakios Central Market | Βαρβάκειος Αγορά",
+          "caption": "On Athinas Street, before the covered market that fills the block to Sofokleous, Evripidou and Aiolou.",
+          "latitude": 37.98046961638499,
+          "longitude": 23.72766980376259,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-varvakios-central-market.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-varvakios-central-market_hero.webp",
+          "transcriptText": "Come in the morning, wear shoes you don't mind getting wet, and listen. This is the noisiest building in Athens.\n\nYou should be on Athinas Street, in front of the big covered market. It fills an entire block between Athinas, Sofokleous, Evripidou and Aiolou. Go through the main entrance and you'll find yourself under a long iron and glass roof, with the fish hall in the middle and the meat hall off to one side.\n\nBefore this was built, Athens bought its food from shacks set up around the ruins of the Roman Agora. The market was planned in eighteen seventy six and paid for by a benefactor called Ioannis Varvakis, a sailor from the island of Psara who made his fortune in Russia, partly in the caviar trade. The market still carries his name. It opened in eighteen eighty four, and the glass roof and basements followed two years later.\n\nHave a look at the fish hall first. The city's official guide reckons five to ten tonnes of fish come through here every day, much of it from islands like Naxos, Paros, Skyros, Kalymnos and Symi. The sellers shout, the ice slides about underfoot, and some of the stalls are very old indeed. The Korakis family has had a pitch here since nineteen twenty six.\n\nThen the meat hall, which is not for the squeamish. Carcasses hang in rows under bright lights, and the butchers will sell you every part of the animal. In the small canteens round the edge, they serve patsas, a tripe soup Athenians swear by after a long night out. One of them, Epirus, stays open round the clock on Fridays and Saturdays through the winter.\n\nWhat's worth knowing is that this is not a food hall. Nobody has tidied it up for visitors. It's a working market, and the people buying here are cooks and grandmothers, not tourists. That's exactly what makes it worth seeing.\n\nWhen you've had enough noise, cross Athinas Street to Sokratous and the basement taverna Diporto, or wander down Evripidou, where the old spice shops will find you before you find them."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.98046961638499,
+      "centroidLongitude": 23.72766980376259,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "3238e759-83c1-5f71-ba57-b9559adfa304",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
+        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "39470626-dd10-53c9-a7f1-81865e370973",
+        "6408C083-6D92-51E5-B388-06AA555C4079"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Market",
+        "Food",
+        "Commerce",
+        "History",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+      "createdAt": "2026-11-04",
+      "title": "Little Tree Books & Coffee",
+      "shortDescription": "Some neighbourhood places are started by businesses. This one was started by a group of parents who needed something good to happen.",
+      "longDescription": "Some neighbourhood places are started by businesses. This one was started by a group of parents who needed something good to happen.\n\nIt opened in twenty fifteen, in the middle of Greece's financial crisis, when a lot of the city was closing down rather than opening up. The people behind it were a group of local parents who wanted to make something worthwhile on their own street. It's been a neighbourhood favourite ever since.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-little-tree-books-and-coffee_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-little-tree-books-and-coffee_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-little-tree-books-and-coffee_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0256c478-ba43-574a-8627-31785e6c25f1",
+          "order": 0,
+          "title": "Little Tree Books & Coffee",
+          "caption": "On Kavalloti Street in Koukaki, a couple of minutes from the Acropolis Museum, outside number 2.",
+          "latitude": 37.968399198443294,
+          "longitude": 23.726975794606954,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-little-tree-books-and-coffee.mp3",
+          "audioDurationSeconds": 78,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-little-tree-books-and-coffee_hero.webp",
+          "transcriptText": "Some neighbourhood places are started by businesses. This one was started by a group of parents who needed something good to happen.\n\nYou should be on Kavalloti Street in Koukaki, a couple of minutes' walk from the Acropolis Museum, outside number two. Little Tree is the small café that is also a bookshop.\n\nIt opened in twenty fifteen, in the middle of Greece's financial crisis, when a lot of the city was closing down rather than opening up. The people behind it were a group of local parents who wanted to make something worthwhile on their own street. It's been a neighbourhood favourite ever since.\n\nInside, the walls are lined with carefully chosen books, and the kitchen serves food all day, so you can come for breakfast and still be here at tea time. It feels less like a shop than like walking into a friend's front room, if your friend owned rather a lot of books.\n\nKoukaki has changed a great deal in the last ten years. It's become one of the most popular places for visitors to stay in Athens. Little Tree is a reminder of what was here first: neighbours, and a place for them to sit down together.\n\nFrom here, the Acropolis Museum is just round the corner. Or head the other way, up towards Philopappou Hill, and look for the stone paths laid by the architect Dimitris Pikionis in the nineteen fifties. They're one of the great walks in the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 78,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.968399198443294,
+      "centroidLongitude": 23.726975794606954,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "5d1b3abd-edbe-5982-bc20-119d4678aa96",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
+        "7c32be44-365d-5ac7-91d8-336f94106e6d"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Literature",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5d1b3abd-edbe-5982-bc20-119d4678aa96",
+      "createdAt": "2026-11-04",
+      "title": "Pikionis Paths & Agios Dimitrios Loumbardiaris | Άγιος Δημήτριος Λουμπαρδιάρης",
+      "shortDescription": "Look down at your feet. The path you're standing on was laid by hand, stone by stone, and there was never a drawing for it.",
+      "longDescription": "Look down at your feet. The path you're standing on was laid by hand, stone by stone, and there was never a drawing for it.\n\nThis is the work of the architect Dimitris Pikionis, and for many people it's the finest piece of modern architecture in Greece, though it's barely a building at all. Between nineteen fifty four and nineteen fifty seven he was asked to remake the approaches to the Acropolis and this hill. Before him, there was an asphalt road built for tour coaches. He replaced it with paths for people on foot.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-pikionis-paths-loumbardiaris_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-pikionis-paths-loumbardiaris_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-pikionis-paths-loumbardiaris_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-pikionis-paths-loumbardiaris_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d7ee4694-a4b7-5b0a-82cc-cc067c8cea99",
+          "order": 0,
+          "title": "Pikionis Paths & Agios Dimitrios Loumbardiaris | Άγιος Δημήτριος Λουμπαρδιάρης",
+          "caption": "On the paved path up Philopappou Hill, opposite the Acropolis, by the little church of Agios Dimitrios.",
+          "latitude": 37.97025600299891,
+          "longitude": 23.720296825295488,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-pikionis-paths-loumbardiaris.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-pikionis-paths-loumbardiaris_hero.webp",
+          "transcriptText": "Look down at your feet. The path you're standing on was laid by hand, stone by stone, and there was never a drawing for it.\n\nYou should be on the paved path on the slope of Philopappou Hill, across from the Acropolis, near the small stone church of Agios Dimitrios Loumbardiaris. The Acropolis rock is behind you, across the road, and the path winds up the hill in front of you, paved in a patchwork of stone, marble and old brick.\n\nThis is the work of the architect Dimitris Pikionis, and for many people it's the finest piece of modern architecture in Greece, though it's barely a building at all. Between nineteen fifty four and nineteen fifty seven he was asked to remake the approaches to the Acropolis and this hill. Before him, there was an asphalt road built for tour coaches. He replaced it with paths for people on foot.\n\nNow look closely at the paving. Pikionis worked with his students and with local stonemasons, and they improvised on site, without plans, deciding each stone as they went. A great deal of the material was salvaged from the nineteenth century houses being knocked down all over Athens at the time: bits of marble, slabs of stone, shards of terracotta. He was building the new city's walk to the old one out of the pieces of the city it was destroying.\n\nThen the little church. Pikionis restored Agios Dimitrios as part of the same project, and the work uncovered old frescoes inside. Next to it he built a small pavilion that mixes the stonework of the Acropolis with something close to traditional Japanese carpentry. It shouldn't work. It does.\n\nPikionis was a painter as well as an architect, a friend of Giorgio de Chirico, and he spent his life trying to join the modern world to the very local and very old. Historians now count him among the founders of what's called critical regionalism. You don't need the term, though. You can feel it under your feet.\n\nHere's the thing to take away. Most architecture asks to be looked at. This asks to be walked on. It slows you down, makes you watch your step, and every so often, at exactly the right moment, it lifts your eyes to the Parthenon.\n\nKeep walking uphill. The path climbs to the monument of Philopappos at the top, and from there you get one of the best views of the Acropolis in the city, especially in the last hour before sunset."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 138,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.97025600299891,
+      "centroidLongitude": 23.720296825295488,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+        "7c32be44-365d-5ac7-91d8-336f94106e6d",
+        "a00e91f0-c2d9-5547-97b3-d2e5f5fa773a",
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Religious Building",
+        "Park",
+        "Architecture",
+        "Modernist",
+        "Viewpoint",
+        "Free to Visit",
+        "Designed by a Master",
+        "Dimitris Pikionis"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+      "createdAt": "2026-11-04",
+      "title": "Acropolis Museum | Μουσείο Ακρόπολης",
+      "shortDescription": "Before you go in, look down. The museum is standing on stilts, and there's an ancient neighbourhood underneath it.",
+      "longDescription": "Before you go in, look down. The museum is standing on stilts, and there's an ancient neighbourhood underneath it.\n\nThat's the first gift. When they came to build here, on the site of an old gendarmerie barracks, the diggers found two layers of ancient Athens: houses and workshops from the classical city and, on top of them, the early Byzantine one. The architect, Bernard Tschumi, working with the Greek architect Michael Photiadis, lifted the whole museum off the ground on columns, placing each one where it would miss the ruins. Those columns go down to bedrock, and they rest on bearings designed to ride out a severe earthquake.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-acropolis-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-acropolis-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-acropolis-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-acropolis-museum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-acropolis-museum_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "13308d66-27f2-53f9-bb92-63b166b17ee8",
+          "order": 0,
+          "title": "Acropolis Museum | Μουσείο Ακρόπολης",
+          "caption": "On the forecourt off Dionysiou Areopagitou, at the foot of the Acropolis, above the glass-floored excavation.",
+          "latitude": 37.968661323371066,
+          "longitude": 23.728469052279564,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-acropolis-museum.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-acropolis-museum_hero.webp",
+          "transcriptText": "Before you go in, look down. The museum is standing on stilts, and there's an ancient neighbourhood underneath it.\n\nYou should be on the open forecourt in front of the Acropolis Museum, at the foot of the Acropolis, on the pedestrian street of Dionysiou Areopagitou. The building is all concrete and glass, and the ground in front of you is partly glass too, with ruins visible beneath your feet.\n\nThat's the first gift. When they came to build here, on the site of an old gendarmerie barracks, the diggers found two layers of ancient Athens: houses and workshops from the classical city and, on top of them, the early Byzantine one. The architect, Bernard Tschumi, working with the Greek architect Michael Photiadis, lifted the whole museum off the ground on columns, placing each one where it would miss the ruins. Those columns go down to bedrock, and they rest on bearings designed to ride out a severe earthquake.\n\nNow look up to the top floor. You'll notice it's turned at an angle to the rest of the building. It's rotated by about twenty three degrees so that it lines up exactly with the Parthenon, which you can see up on the hill. That top floor is the Parthenon Gallery, glass all round, roughly the size of the temple itself, and the sculptures of the frieze are arranged in it exactly as they once were on the building, so you can look from the carving to the temple and back again.\n\nGetting the museum built took decades. The first design competition was in nineteen seventy six. The building finally opened in June two thousand and nine, and moving the sculptures the few hundred metres from the rock took three tower cranes and four months.\n\nAnd here's why the building matters. For years, one of the arguments for keeping the Parthenon sculptures in London was that Athens had nowhere fit to show them. This museum is Athens' answer, built in glass, in full view of the temple. Up on the top floor, look for the panels in pale plaster among the marble. They're copies, standing in for the originals that are still in London.\n\nBefore you leave, have a coffee on the museum's terrace if it's open. And for the full picture, walk back along Dionysiou Areopagitou to the stone paths of Pikionis on Philopappou Hill, five minutes away."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.968661323371066,
+      "centroidLongitude": 23.728469052279564,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "5d1b3abd-edbe-5982-bc20-119d4678aa96",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "a0261a5e-a433-5289-afad-dd77b481afb1"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Architecture",
+        "History",
+        "Contemporary",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Bernard Tschumi",
+        "Michael Photiadis"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d8f9fda3-2d1d-57bc-939d-2e3ffae0455a",
+      "createdAt": "2026-11-04",
+      "title": "Stavros Niarchos Foundation Cultural Center | Κέντρο Πολιτισμού Ίδρυμα Σταύρος Νιάρχος",
+      "shortDescription": "This hill is not a hill. It's a roof, with an opera house and a national library tucked underneath it.",
+      "longDescription": "This hill is not a hill. It's a roof, with an opera house and a national library tucked underneath it.\n\nThe architect is Renzo Piano. He imagined the building rising from the ground as if a piece of the earth's crust had been lifted up. So he made an artificial hill and put the buildings inside it. The National Library is under the lower part of the slope, the Greek National Opera under the higher part, and the park runs right over the top of both, planted with native Greek plants.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-snfcc_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-snfcc_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-snfcc_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-snfcc_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-snfcc_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-snfcc_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a2c3fae9-99e0-5735-805d-be276f45c70c",
+          "order": 0,
+          "title": "Stavros Niarchos Foundation Cultural Center | Κέντρο Πολιτισμού Ίδρυμα Σταύρος Νιάρχος",
+          "caption": "At the foot of the sloping park in Kallithea, near the sea at Faliro, looking up to the floating white canopy.",
+          "latitude": 37.94004462166547,
+          "longitude": 23.692178169474605,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-snfcc.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 80,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-snfcc_hero.webp",
+          "transcriptText": "This hill is not a hill. It's a roof, with an opera house and a national library tucked underneath it.\n\nYou should be at the foot of the long, gently sloping park of the Stavros Niarchos Foundation Cultural Center, on the southern edge of Athens, near the sea at Faliro. In front of you, a lawn and planted slope rise all the way to a thin white canopy floating high in the air. Below it, the glass fronts of the library and the opera house look out over a long, straight canal.\n\nThe architect is Renzo Piano. He imagined the building rising from the ground as if a piece of the earth's crust had been lifted up. So he made an artificial hill and put the buildings inside it. The National Library is under the lower part of the slope, the Greek National Opera under the higher part, and the park runs right over the top of both, planted with native Greek plants.\n\nHave a look at that canopy. Piano called it a cloud hovering over the hill. It's a huge, flat roof of concrete, covering roughly a hectare, sitting on thirty very slender steel columns, and it's covered in solar panels that help power the buildings beneath. Under it, at the very top, is a glass room called the Lighthouse, with views right round the city and out to sea.\n\nThen turn to the canal. It's four hundred metres long, and it was built partly to honour the ancient harbour of Phaleron, which once lay near here, and partly to hold water when the heavy winter rains come.\n\nThis whole site used to be a horse racing track, then a car park for the two thousand and four Olympics. The Stavros Niarchos Foundation paid for the centre, which was finished in twenty sixteen and given to the Greek state the following year.\n\nWhat's worth knowing, standing here, is that this was built in the middle of Greece's financial crisis, when almost nothing else was being built at all. A library, an opera house and a free public park, at a time when the country was being told to cut everything. People still argue about what that means. But you can feel how much it's loved on a Sunday afternoon.\n\nWalk all the way up the slope to the Lighthouse. From the top you can see the whole of Athens laid out between the mountains and the sea."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 129,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.94004462166547,
+      "centroidLongitude": 23.692178169474605,
+      "city": "Kallithea",
+      "country": "Greece",
+      "relatedTourIds": [
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "5d1b3abd-edbe-5982-bc20-119d4678aa96",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "a0261a5e-a433-5289-afad-dd77b481afb1",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "b238299d-5745-5bef-a0b5-7fac4aca5c37"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Library",
+        "Venue",
+        "Park",
+        "Architecture",
+        "Performance",
+        "Contemporary",
+        "Viewpoint",
+        "Free to Visit",
+        "Designed by a Master",
+        "Renzo Piano"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9151d19c-a003-56be-a0e5-707f123e3731",
+      "createdAt": "2026-11-04",
+      "title": "National Museum of Contemporary Art (EMST) | Εθνικό Μουσείο Σύγχρονης Τέχνης",
+      "shortDescription": "Athenians of a certain age still call this building by the name of a beer.",
+      "longDescription": "Athenians of a certain age still call this building by the name of a beer.\n\nFix was a brewery, one of the great names in Greek beer, and it moved to this spot in eighteen ninety three, on the bank of the Ilissos river, which today runs hidden underground. In nineteen fifty seven the Fix family asked the architect Takis Zenetos to redesign the whole factory. He finished in nineteen sixty one.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-emst_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-emst_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-emst_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-emst_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c9341faa-2b2d-5756-b1fe-93fdabc0b99e",
+          "order": 0,
+          "title": "National Museum of Contemporary Art (EMST) | Εθνικό Μουσείο Σύγχρονης Τέχνης",
+          "caption": "On Syngrou Avenue at Kallirrois, before the long, low former Fix brewery with its bands of windows.",
+          "latitude": 37.96319532170918,
+          "longitude": 23.725365754131246,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-emst.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-emst_hero.webp",
+          "transcriptText": "Athenians of a certain age still call this building by the name of a beer.\n\nYou should be on Syngrou Avenue, the wide road running down towards the sea, where it meets Kallirrois Avenue, looking at a long, low, pale building with its windows running in unbroken horizontal bands. This is the Fix building, now Greece's National Museum of Contemporary Art, known as EMST.\n\nFix was a brewery, one of the great names in Greek beer, and it moved to this spot in eighteen ninety three, on the bank of the Ilissos river, which today runs hidden underground. In nineteen fifty seven the Fix family asked the architect Takis Zenetos to redesign the whole factory. He finished in nineteen sixty one.\n\nHave a look at those long bands of glass. That's Zenetos. He stretched the building out along the avenue, so that from a passing car it reads as one long, clean, fast line. It was the age of the car arriving in Athens, and this was its architecture: modern, confident, and built to be seen at speed.\n\nThen things went wrong. The brewery was abandoned in the late nineteen seventies, and in the mid nineteen nineties, after the site was taken over for the new metro, the northern part of the building was demolished. What survived was handed to the new museum. After an architectural competition and a long conversion, EMST finally opened its doors to the public in twenty twenty.\n\nAnd here's the thing. Greece's museum of contemporary art lives inside a factory that was itself one of the boldest modern buildings in the country. The building is part of the collection. Look at it the way you'd look at anything on the walls inside.\n\nFrom here, the Acropolis Museum is a ten minute walk north, and the contrast is worth making: two of the city's newest museums, one looking back two and a half thousand years, the other only as far as yesterday."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.96319532170918,
+      "centroidLongitude": 23.725365754131246,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68",
+        "03f81741-e71b-596d-a589-250f3004f09b"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Modernist",
+        "Designed by a Master",
+        "Takis Zenetos"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a00e91f0-c2d9-5547-97b3-d2e5f5fa773a",
+      "createdAt": "2026-11-04",
+      "title": "Benaki Museum — Pireos 138 | Μουσείο Μπενάκη — Πειραιώς 138",
+      "shortDescription": "The Benaki is the grand old private museum of Athens. This is the part of it that moved into a factory.",
+      "longDescription": "The Benaki is the grand old private museum of Athens. This is the part of it that moved into a factory.\n\nThe main Benaki Museum is a neoclassical house in Kolonaki, full of jewellery, costume and centuries of Greek history. In the early two thousands, the museum needed space for large exhibitions, and it found it out here, in a former industrial building of the nineteen sixties. The conversion kept the original plan of the building and added a floor on top, and the new Benaki opened here in two thousand and four.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-benaki-pireos-138_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-benaki-pireos-138_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-benaki-pireos-138_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-benaki-pireos-138_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-benaki-pireos-138_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-benaki-pireos-138_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "24c6f53c-ed2b-5b3d-a8b2-6d212ec467c5",
+          "order": 0,
+          "title": "Benaki Museum — Pireos 138 | Μουσείο Μπενάκη — Πειραιώς 138",
+          "caption": "On Pireos Street, the old industrial road to the port, outside number 138.",
+          "latitude": 37.974418434559944,
+          "longitude": 23.708312881115543,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-benaki-pireos-138.mp3",
+          "audioDurationSeconds": 99,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-benaki-pireos-138_hero.webp",
+          "transcriptText": "The Benaki is the grand old private museum of Athens. This is the part of it that moved into a factory.\n\nYou should be on Pireos Street, the long, straight road that once carried the industry of Athens down to the port of Piraeus, outside number one hundred and thirty eight. The building in front of you is plain and modern, with nothing of the mansion about it. That's the point.\n\nThe main Benaki Museum is a neoclassical house in Kolonaki, full of jewellery, costume and centuries of Greek history. In the early two thousands, the museum needed space for large exhibitions, and it found it out here, in a former industrial building of the nineteen sixties. The conversion kept the original plan of the building and added a floor on top, and the new Benaki opened here in two thousand and four.\n\nGo inside and you'll notice the main idea straight away. The building turns its back on the busy street and opens inwards, around a big central courtyard. All the light and life of the place faces in, which, on a road as loud as Pireos, is rather sensible.\n\nThe exhibitions change, so check what's on before you come. These are the big temporary shows, the kind that would never fit in a nineteenth century house.\n\nWhat's worth noticing is the street itself. Pireos was the industrial spine of the city: factories, warehouses, the gasworks at Gazi. In the last few decades it's become a line of cultural buildings instead. The Benaki was one of the first to make that move.\n\nFrom here, walk up Pireos towards the centre and you'll come to Gazi, where the brick chimneys of the old gasworks still stand. It's now a cultural centre called Technopolis, and on a summer evening the whole neighbourhood comes out."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 99,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.974418434559944,
+      "centroidLongitude": 23.708312881115543,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "7c32be44-365d-5ac7-91d8-336f94106e6d",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "5d1b3abd-edbe-5982-bc20-119d4678aa96",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a0261a5e-a433-5289-afad-dd77b481afb1",
+      "createdAt": "2026-11-04",
+      "title": "Athens Conservatoire | Ωδείο Αθηνών",
+      "shortDescription": "This building was meant to be the first piece of a modern acropolis for Athens. It's the only piece that ever got built, and it was never…",
+      "longDescription": "This building was meant to be the first piece of a modern acropolis for Athens. It's the only piece that ever got built, and it was never finished.\n\nDespotopoulos was born in Smyrna in nineteen oh three, and he walked out of his architecture course in Athens to go and study at the Bauhaus in Weimar, under Walter Gropius. In nineteen fifty nine he won the competition for something enormous: an Athens Cultural Centre, stretching from Vasilissis Sofias Avenue to here, and from Rigillis Street to the National Gallery. An opera house for eighteen hundred people, a theatre, a new Byzantine Museum, an extension to the National Gallery, a great public square.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-athens-conservatoire_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-athens-conservatoire_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-athens-conservatoire_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-athens-conservatoire_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-athens-conservatoire_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-athens-conservatoire_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-athens-conservatoire_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "df76d40b-a8e9-538e-bcfd-43e02086a41f",
+          "order": 0,
+          "title": "Athens Conservatoire | Ωδείο Αθηνών",
+          "caption": "At the corner of Rigillis and Vasileos Konstantinou, before the long raw-concrete building along the avenue.",
+          "latitude": 37.97349192188191,
+          "longitude": 23.743153296459948,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-athens-conservatoire.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-athens-conservatoire_hero.webp",
+          "transcriptText": "This building was meant to be the first piece of a modern acropolis for Athens. It's the only piece that ever got built, and it was never finished.\n\nYou should be at the corner of Rigillis Street and Vasileos Konstantinou Avenue, looking at a long, severe building of raw concrete stretched out along the avenue. This is the Athens Conservatoire, the city's old music school, in a building by Ioannis Despotopoulos.\n\nDespotopoulos was born in Smyrna in nineteen oh three, and he walked out of his architecture course in Athens to go and study at the Bauhaus in Weimar, under Walter Gropius. In nineteen fifty nine he won the competition for something enormous: an Athens Cultural Centre, stretching from Vasilissis Sofias Avenue to here, and from Rigillis Street to the National Gallery. An opera house for eighteen hundred people, a theatre, a new Byzantine Museum, an extension to the National Gallery, a great public square.\n\nNow, the gift detail. Of all that, only this building was ever begun. Construction started in the late nineteen sixties and stopped in nineteen seventy six, when the money ran out. The music school moved in anyway, into an unfinished building, and it has stayed there ever since, rehearsing and performing in a work in progress.\n\nIt's now a listed modern monument, and there have been plans, more than once, to finish it at last.\n\nWhat I find so affecting about it is this. Most cities show you their ambitions. Here, you can see the ambition and its interruption at the same time. It's a Bauhaus dream for Athens, paused mid sentence, and somehow all the more honest for it.\n\nBefore you go, look next door along Vasilissis Sofias. The Byzantine and Christian Museum stands there, one of the buildings Despotopoulos had hoped to replace. And a little further along the avenue is the former Hilton, the other great modern landmark of this stretch."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.97349192188191,
+      "centroidLongitude": 23.743153296459948,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "35578320-0610-5fc7-9804-7c52c03ed3d0",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Architecture",
+        "Performance",
+        "Modernist",
+        "Brutalist",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Ioannis Despotopoulos"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+      "createdAt": "2026-11-04",
+      "title": "Conrad Athens The Ilisian",
+      "shortDescription": "For sixty years everyone called this the Hilton. Look for the drawings carved into its walls before you look at the new name.",
+      "longDescription": "For sixty years everyone called this the Hilton. Look for the drawings carved into its walls before you look at the new name.\n\nIt opened in nineteen sixty three, designed by a team of Greek architects: Emmanouil Vourekas, Prokopis Vasileiadis, Antonis Georgiadis and Spyros Staikos. For a generation it was the most modern building in Athens, the place where the city first felt international: the bar, the pool, the jet set.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-conrad-athens-the-ilisian_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-conrad-athens-the-ilisian_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-conrad-athens-the-ilisian_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-conrad-athens-the-ilisian_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-conrad-athens-the-ilisian_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-conrad-athens-the-ilisian_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-conrad-athens-the-ilisian_7.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-conrad-athens-the-ilisian_8.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1c8b989e-0b51-5017-990e-a5d2912b7d1e",
+          "order": 0,
+          "title": "Conrad Athens The Ilisian",
+          "caption": "On Vasilissis Sofias Avenue, across from the long, gently curved white slab of the former Athens Hilton.",
+          "latitude": 37.97664472891631,
+          "longitude": 23.75031038296831,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-conrad-athens-the-ilisian.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-conrad-athens-the-ilisian_hero.webp",
+          "transcriptText": "For sixty years everyone called this the Hilton. Look for the drawings carved into its walls before you look at the new name.\n\nYou should be on Vasilissis Sofias Avenue, across from a long, white slab of a hotel, gently curved, rising above the traffic with its rows of balconies. Until recently this was the Athens Hilton. Since April twenty twenty six, it has been Conrad Athens The Ilisian, named after the old Ilissos river and the Ilisia neighbourhood around it.\n\nIt opened in nineteen sixty three, designed by a team of Greek architects: Emmanouil Vourekas, Prokopis Vasileiadis, Antonis Georgiadis and Spyros Staikos. For a generation it was the most modern building in Athens, the place where the city first felt international: the bar, the pool, the jet set.\n\nNow look for the broad walls without windows. Those great flat surfaces aren't blank. They're covered in huge, linear figures cut into Pentelic marble, the same marble as the Parthenon. They're by the painter Yannis Moralis, who was commissioned in nineteen fifty nine and carved around six hundred and twenty square metres of relief across the building. That's the gift detail: one of the largest works of Greek modern art, and it's on the outside of a hotel.\n\nThe recent restoration was led by Aeter Architects, with interiors by the New York studio AvroKO, and the hotel now shares the building with private residences.\n\nHere's the thing to take away. A building like this could easily have been pulled down for something taller. Instead, it's been kept, cleaned, and taken seriously as a piece of the city's history. Athens is learning to love its nineteen sixties. This is the proof.\n\nBefore you go, look along the avenue towards the National Gallery. Across from it stands The Runner, a striding figure built of stacked sheets of glass by the sculptor Costas Varotsos. Come back at dusk and you'll see why it's so loved."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.97664472891631,
+      "centroidLongitude": 23.75031038296831,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "a0261a5e-a433-5289-afad-dd77b481afb1",
+        "35578320-0610-5fc7-9804-7c52c03ed3d0",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Art",
+        "Modernist",
+        "Public Art",
+        "Designed by a Master",
+        "Emmanouil Vourekas",
+        "Prokopis Vasileiadis",
+        "Antonis Georgiadis",
+        "Spyros Staikos"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+      "createdAt": "2026-11-04",
+      "title": "Anafiotika | Αναφιώτικα",
+      "shortDescription": "You've just walked out of a capital city and into a Greek island. Nobody moved the island. They built it here.",
+      "longDescription": "You've just walked out of a capital city and into a Greek island. Nobody moved the island. They built it here.\n\nIt began in the reign of King Otto, after Greek independence, when Athens was being rebuilt as a capital. Builders came from the little Cycladic island of Anafi to work on the king's new palace, the building that is now the Parliament. They needed somewhere to live, so they built what they knew: an island village, on the steep, unwanted slope beneath the Acropolis. The first two names on record are a carpenter, G. Damigos, and a builder, M. Sigalas.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-anafiotika_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-anafiotika_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-anafiotika_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-anafiotika_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-anafiotika_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0e074145-6999-596a-ad99-1d6c80df5b38",
+          "order": 0,
+          "title": "Anafiotika | Αναφιώτικα",
+          "caption": "In the whitewashed lanes high on the north-east side of the Acropolis rock, above Plaka.",
+          "latitude": 37.97244065659871,
+          "longitude": 23.728133936672766,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-anafiotika.mp3",
+          "audioDurationSeconds": 122,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-anafiotika_hero.webp",
+          "transcriptText": "You've just walked out of a capital city and into a Greek island. Nobody moved the island. They built it here.\n\nYou should be on the narrow, whitewashed lanes high up on the northeast side of the Acropolis rock, above Plaka. Look for tiny cube-shaped houses, steps that turn into alleys, alleys that turn into someone's terrace, and bougainvillea everywhere. The great rock rises right behind them. This is Anafiotika.\n\nIt began in the reign of King Otto, after Greek independence, when Athens was being rebuilt as a capital. Builders came from the little Cycladic island of Anafi to work on the king's new palace, the building that is now the Parliament. They needed somewhere to live, so they built what they knew: an island village, on the steep, unwanted slope beneath the Acropolis. The first two names on record are a carpenter, G. Damigos, and a builder, M. Sigalas.\n\nHave a look at the houses themselves. Small, plain, white, with flat roofs and tiny courtyards, they're the kind of buildings you'd find on Anafi, Naxos or Paros. Later came stonemasons and marble workers from other islands, and then, after nineteen twenty two, refugees from Asia Minor.\n\nHere's the gift detail. In nineteen fifty, part of the village was cleared for archaeological digs, and from nineteen seventy the state began buying up the houses. Only about forty five survive. And many of these little lanes still have no street names at all. The houses are simply numbered: Anafiotika one, Anafiotika two, and so on.\n\nWhat's worth knowing, standing here, is that this is the other half of the story of modern Athens. The palace on Syntagma Square was the official version. This is the people who built it, quietly making a home for themselves on the side of the most famous hill in the world.\n\nPlease keep your voice down; people live here. Then follow the lanes downhill into Plaka, and finish on Kydathineon Street with a glass of something at Brettos, the old distillery bar with its wall of glowing bottles."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 122,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.97244065659871,
+      "centroidLongitude": 23.728133936672766,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "5d1b3abd-edbe-5982-bc20-119d4678aa96",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Immigration",
+        "Hidden Gem",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+      "createdAt": "2026-11-04",
+      "title": "Lycabettus Funicular | Τελεφερίκ Λυκαβηττού",
+      "shortDescription": "The quickest way up the highest hill in central Athens is through the inside of it.",
+      "longDescription": "The quickest way up the highest hill in central Athens is through the inside of it.\n\nThe funicular has been running since April nineteen sixty five. It's two hundred and ten metres long, and here's the gift detail: it runs entirely in a tunnel. There's no view on the way up, none at all. Then, about three minutes later, the doors open and you step out near the top of a two hundred and seventy seven metre hill, the highest point in central Athens.",
+      "makerId": "a274e39f-e266-5eae-b21a-8d9fad136299",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-lycabettus-funicular_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-lycabettus-funicular_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-lycabettus-funicular_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-lycabettus-funicular_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ebf7b76c-6238-5f7c-bc7f-2c227acc1a9d",
+          "order": 0,
+          "title": "Lycabettus Funicular | Τελεφερίκ Λυκαβηττού",
+          "caption": "At the lower station at the top of Ploutarchou Street in Kolonaki, where it meets Aristippou.",
+          "latitude": 37.9803157,
+          "longitude": 23.7440055,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ath-lycabettus-funicular.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ath-lycabettus-funicular_hero.webp",
+          "transcriptText": "The quickest way up the highest hill in central Athens is through the inside of it.\n\nYou should be at the top of Ploutarchou Street in Kolonaki, where it meets Aristippou, at the lower station of the Lycabettus funicular. The streets here are steep, the buildings stacked up the slope, and the station is where the city simply stops and the hill begins.\n\nThe funicular has been running since April nineteen sixty five. It's two hundred and ten metres long, and here's the gift detail: it runs entirely in a tunnel. There's no view on the way up, none at all. Then, about three minutes later, the doors open and you step out near the top of a two hundred and seventy seven metre hill, the highest point in central Athens.\n\nAt the summit there's the little white chapel of Saint George, from the nineteenth century, and a café and restaurant. Just below it is the open air theatre, which closed for fifteen years and reopened in twenty twenty three. Leonard Cohen, James Brown and Radiohead have all played there.\n\nThere's an old story about this hill. The goddess Athena was carrying a mountain of limestone to build up the Acropolis, received some bad news on the way, and dropped it. This, they say, is where it landed.\n\nHere's the reason to come, though. From the top you can see what Athens really is. Not the temples. The city: white apartment blocks running in every direction, all the way to the mountains on three sides and the sea on the fourth. Every one of them is a polykatoikia, and together they're the great unsung architecture of the twentieth century city. The Acropolis is the jewel. This is the setting.\n\nIf you've got the legs for it, skip the funicular on the way back and take the footpath down through the pines. It brings you out at the top of Kolonaki, a short walk from a well-earned coffee."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.9803157,
+      "centroidLongitude": 23.7440055,
+      "city": "Athens",
+      "country": "Greece",
+      "relatedTourIds": [
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+        "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Engineering",
+        "Viewpoint"
       ],
       "priceUSD": 0
     }
@@ -225132,13 +226803,13 @@
       "country": "Greece",
       "relatedTourIds": [
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
         "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
-        "FA17B0B4-0CED-5612-A554-FE0D95AE71E6",
-        "19D39416-E573-5E48-81FC-A22344D0E3B4",
-        "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "04C16975-1FED-5022-BD51-01A73346988F",
-        "97AB10F9-740E-5A95-BFA1-3B2C9469D038"
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+        "FA17B0B4-0CED-5612-A554-FE0D95AE71E6"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -225189,11 +226860,11 @@
         "2941CD08-C085-531E-9093-0398F3D015BF",
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
         "7A5C0255-D844-5EFA-9199-A7B428CD1529",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
         "5F7B1433-8BC4-5B94-88E2-255975574E26",
         "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
         "B334407B-05B1-539D-A2C3-6AE4B1FED4DE",
-        "FDFAB0F8-4272-588E-9234-865B56DE5302",
-        "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F"
+        "FDFAB0F8-4272-588E-9234-865B56DE5302"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -225244,11 +226915,11 @@
         "5F7B1433-8BC4-5B94-88E2-255975574E26",
         "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
         "FA17B0B4-0CED-5612-A554-FE0D95AE71E6",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
         "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "FDFAB0F8-4272-588E-9234-865B56DE5302",
-        "078F4A1A-4B83-5134-9D43-20C6CF1240BE",
-        "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F"
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -233471,12 +235142,12 @@
       "relatedTourIds": [
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
         "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
         "5F7B1433-8BC4-5B94-88E2-255975574E26",
         "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
-        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
-        "2941CD08-C085-531E-9093-0398F3D015BF",
-        "078F4A1A-4B83-5134-9D43-20C6CF1240BE"
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -233529,10 +235200,10 @@
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
         "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
         "5F7B1433-8BC4-5B94-88E2-255975574E26",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
         "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
-        "172C4AC4-1CE7-59F0-B40E-80BAC95D1457",
-        "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
-        "2941CD08-C085-531E-9093-0398F3D015BF"
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "172C4AC4-1CE7-59F0-B40E-80BAC95D1457"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -233581,6 +235252,9 @@
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
         "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
         "FDFAB0F8-4272-588E-9234-865B56DE5302"
@@ -233632,13 +235306,13 @@
       "country": "Greece",
       "relatedTourIds": [
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
         "FA17B0B4-0CED-5612-A554-FE0D95AE71E6",
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
         "F9C79DF3-8607-5E62-95F0-A098ADA9CFC2",
         "5F7B1433-8BC4-5B94-88E2-255975574E26",
-        "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
-        "FDFAB0F8-4272-588E-9234-865B56DE5302"
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "7A5C0255-D844-5EFA-9199-A7B428CD1529"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -233686,14 +235360,14 @@
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
         "F9C79DF3-8607-5E62-95F0-A098ADA9CFC2",
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
         "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
-        "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
-        "FDFAB0F8-4272-588E-9234-865B56DE5302",
-        "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "5F7B1433-8BC4-5B94-88E2-255975574E26"
+        "97AB10F9-740E-5A95-BFA1-3B2C9469D038"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -233743,7 +235417,9 @@
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
         "B334407B-05B1-539D-A2C3-6AE4B1FED4DE",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
         "04C16975-1FED-5022-BD51-01A73346988F"
       ],
       "primaryCategory": "sacredSites",
@@ -233797,8 +235473,9 @@
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
         "078F4A1A-4B83-5134-9D43-20C6CF1240BE",
         "B334407B-05B1-539D-A2C3-6AE4B1FED4DE",
-        "19D39416-E573-5E48-81FC-A22344D0E3B4",
-        "B1B0CFE7-1595-52BF-9F9F-584A3B05F203"
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "a0261a5e-a433-5289-afad-dd77b481afb1",
+        "19D39416-E573-5E48-81FC-A22344D0E3B4"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -233903,11 +235580,11 @@
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
         "5F7B1433-8BC4-5B94-88E2-255975574E26",
         "FA17B0B4-0CED-5612-A554-FE0D95AE71E6",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
-        "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
-        "04C16975-1FED-5022-BD51-01A73346988F",
-        "2941CD08-C085-531E-9093-0398F3D015BF"
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "9151d19c-a003-56be-a0e5-707f123e3731"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -233956,11 +235633,14 @@
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
         "F9C79DF3-8607-5E62-95F0-A098ADA9CFC2",
         "078F4A1A-4B83-5134-9D43-20C6CF1240BE",
         "FDFAB0F8-4272-588E-9234-865B56DE5302",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
         "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
-        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2"
+        "7c32be44-365d-5ac7-91d8-336f94106e6d",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -234576,14 +236256,14 @@
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
         "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
-        "5F7B1433-8BC4-5B94-88E2-255975574E26",
-        "2941CD08-C085-531E-9093-0398F3D015BF",
-        "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
-        "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
-        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
-        "6408C083-6D92-51E5-B388-06AA555C4079",
-        "172C4AC4-1CE7-59F0-B40E-80BAC95D1457"
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+        "7c32be44-365d-5ac7-91d8-336f94106e6d",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "5F7B1433-8BC4-5B94-88E2-255975574E26"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -234633,12 +236313,13 @@
       "country": "Greece",
       "relatedTourIds": [
         "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
         "2941CD08-C085-531E-9093-0398F3D015BF",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
         "5F7B1433-8BC4-5B94-88E2-255975574E26",
-        "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
-        "B334407B-05B1-539D-A2C3-6AE4B1FED4DE",
-        "7A5C0255-D844-5EFA-9199-A7B428CD1529"
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -234980,11 +236661,11 @@
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
         "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
-        "FA17B0B4-0CED-5612-A554-FE0D95AE71E6",
-        "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "F9C79DF3-8607-5E62-95F0-A098ADA9CFC2",
-        "FDFAB0F8-4272-588E-9234-865B56DE5302",
-        "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F"
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "FA17B0B4-0CED-5612-A554-FE0D95AE71E6"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -304511,12 +306192,13 @@
       "country": "Greece",
       "relatedTourIds": [
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
         "172C4AC4-1CE7-59F0-B40E-80BAC95D1457",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
         "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "5F7B1433-8BC4-5B94-88E2-255975574E26",
-        "FDFAB0F8-4272-588E-9234-865B56DE5302",
-        "04C16975-1FED-5022-BD51-01A73346988F",
-        "B1B0CFE7-1595-52BF-9F9F-584A3B05F203"
+        "5F7B1433-8BC4-5B94-88E2-255975574E26"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -325507,10 +327189,14 @@
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
+        "3238e759-83c1-5f71-ba57-b9559adfa304",
         "6408C083-6D92-51E5-B388-06AA555C4079",
+        "824c0c6e-c104-511d-bc83-131831982977",
         "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "3a06ffd3-af64-5a4a-b097-54224616d67d",
         "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
-        "51BA4A4C-6328-52B0-A307-D58F8E482325"
+        "b278dff6-bdf4-5a7b-ae6e-be9d0c766632"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -326927,14 +328613,14 @@
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
+        "3a06ffd3-af64-5a4a-b097-54224616d67d",
+        "3238e759-83c1-5f71-ba57-b9559adfa304",
         "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "824c0c6e-c104-511d-bc83-131831982977",
         "6408C083-6D92-51E5-B388-06AA555C4079",
-        "725FE87B-3535-5D02-85C2-2469EEEBF2AB",
-        "51BA4A4C-6328-52B0-A307-D58F8E482325",
-        "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
-        "F9C79DF3-8607-5E62-95F0-A098ADA9CFC2",
-        "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "B1B0CFE7-1595-52BF-9F9F-584A3B05F203"
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "725FE87B-3535-5D02-85C2-2469EEEBF2AB"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -347249,14 +348935,14 @@
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
+        "824c0c6e-c104-511d-bc83-131831982977",
         "6408C083-6D92-51E5-B388-06AA555C4079",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "3a06ffd3-af64-5a4a-b097-54224616d67d",
         "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
-        "51BA4A4C-6328-52B0-A307-D58F8E482325",
-        "725FE87B-3535-5D02-85C2-2469EEEBF2AB",
-        "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
-        "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "F9C79DF3-8607-5E62-95F0-A098ADA9CFC2",
-        "FDFAB0F8-4272-588E-9234-865B56DE5302"
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "d79fba87-711d-54fb-aa93-1ce54bc10579",
+        "39470626-dd10-53c9-a7f1-81865e370973"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -347303,13 +348989,14 @@
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
+        "870636d4-1051-5460-9496-20c558caccd1",
         "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
         "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
+        "d79fba87-711d-54fb-aa93-1ce54bc10579",
         "725FE87B-3535-5D02-85C2-2469EEEBF2AB",
-        "51BA4A4C-6328-52B0-A307-D58F8E482325",
-        "F9C79DF3-8607-5E62-95F0-A098ADA9CFC2",
-        "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "0FE8CB92-65EA-5C20-AFA8-0832F7566E25"
+        "3a06ffd3-af64-5a4a-b097-54224616d67d"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -347448,8 +349135,12 @@
       "relatedTourIds": [
         "6408C083-6D92-51E5-B388-06AA555C4079",
         "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "d79fba87-711d-54fb-aa93-1ce54bc10579",
         "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
-        "725FE87B-3535-5D02-85C2-2469EEEBF2AB"
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "3238e759-83c1-5f71-ba57-b9559adfa304",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "3a06ffd3-af64-5a4a-b097-54224616d67d"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
