@@ -1,0 +1,15 @@
+perry anth Hotel
+
+Look for the flower stalls first. They're the reason this hotel has the name it does.
+
+ah yahs ee ree nees Square, a couple of minutes' walk from monna stee rah kee. Find the flower sellers, then look for the building of grey render with a curving façade and balconies running across it in pale, repeating bands. That's the perry anth. If the front curves and the balconies look like they're running somewhere in a hurry, you're in the right place.
+
+Start with the name. A perianth is the part of a flower that wraps around the middle of it: in Greek, perry, around, and an thoss, flower. The hotel took it from this square, which is known for its flower shops. Rather a nice way to name a building after the neighbours.
+
+Now the building itself. It went up in the nineteen thirties as a bit of everything: shops at street level, offices above, flats above those. By the time the architects kay studio arrived, the inside had been stripped right back. Only the façade and the concrete frame were left. So they made the façade the rule. Walk the corridor on any floor and it follows the curve you're looking at from out here.
+
+And here's my favourite part. They laid out each floor like a little piece of Athens: a wider main avenue, narrower alleys peeling off it, two or three rooms down each one, and small shared rooms where the alleys meet, which they call neighbourhood squares. Even the grey render of the outside wall is carried into the bedrooms, next to terrazzo floors, dark walnut and blush pink velvet.
+
+What I like about this building is that it isn't famous. Athens is full of interwar blocks exactly like it, quietly doing their jobs, and almost nobody looks up at them. This one simply got taken seriously. That's the whole trick.
+
+Before you move on, walk to the north side of the square. The hotel's own guide points out an old shop there, still selling sewing things, vintage buttons and lace. It's what this square was like before the cocktail bars arrived, and it's still open for business.
