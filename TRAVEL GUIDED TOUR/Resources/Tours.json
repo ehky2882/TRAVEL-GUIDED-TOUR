@@ -44737,6 +44737,7 @@
       "country": "Canada",
       "relatedTourIds": [
         "096a3cba-09b6-57e7-8379-2e49f3a7b507",
+        "829ae210-e5ef-5370-886e-dfec80d6fa71",
         "c5bf4a63-0b85-5c3e-92f2-5dab1cd7f614",
         "0e585845-3bdb-5ffd-8da1-b9db2d7d2daf",
         "adcc230b-75fc-56de-85e9-c3192383dd6e",
@@ -116017,10 +116018,10 @@
         "fe2cbf01-fba7-57c4-8788-5ca761c33e81",
         "3f835ead-9829-5521-97f1-00d9ad78cfb0",
         "e8630587-812e-583a-9bd4-af283c885a85",
+        "a0261a5e-a433-5289-afad-dd77b481afb1",
         "5d1f8221-725a-5578-a79e-7c089c2a8014",
         "30234cc2-792a-5ef5-9588-e7646e04c81d",
-        "45c2ace9-a42f-55c7-8248-ce90f58a663a",
-        "8990f4cd-848c-567f-995c-dfe70b4ad8e0"
+        "45c2ace9-a42f-55c7-8248-ce90f58a663a"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -121924,10 +121925,10 @@
         "928e1eac-f2cf-5583-88f3-10713f652e0f",
         "20f7005b-57d9-50ca-9229-cdd2c6dacfed",
         "7f16bf79-a24f-566b-b645-8533d88f66c4",
+        "03f81741-e71b-596d-a589-250f3004f09b",
         "177004b7-279b-5351-bc53-9fa3ae4e3dee",
         "7a871c32-8514-51de-840f-3ab30d79b32d",
-        "bf2abda0-745b-577c-bc92-676f0dc0de92",
-        "b9aa0360-6536-5c85-9c7e-b7767cc32c9b"
+        "bf2abda0-745b-577c-bc92-676f0dc0de92"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -122036,12 +122037,12 @@
       "relatedTourIds": [
         "59ee3b0e-26d9-5acd-9e1f-61744173eddb",
         "20fd6c58-8f09-5bf9-a2a6-ad5754000aee",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
         "75DEA19C-0126-509E-A5FB-34C593A0315A",
         "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
         "b238299d-5745-5bef-a0b5-7fac4aca5c37",
         "096a3cba-09b6-57e7-8379-2e49f3a7b507",
-        "DEC5417D-5A76-53EE-A578-23D91E859ACC",
-        "1f3b0f44-9600-589f-ad00-a73f4844c2bf"
+        "d8f9fda3-2d1d-57bc-939d-2e3ffae0455a"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -138533,8 +138534,8 @@
         "27bd7b12-9203-53ec-8b49-0c0d70e0f790",
         "5fe721f4-2bf9-5d47-afcf-6eda222ac5a3",
         "92041407-6b30-5d78-a03e-8802b4161918",
-        "aa220274-aadd-51cd-88c7-60654c1c13f1",
-        "defeef28-4159-4ad2-813a-111c64720889"
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "aa220274-aadd-51cd-88c7-60654c1c13f1"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -145234,7 +145235,16 @@
       "centroidLongitude": 23.728386293706137,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "7c32be44-365d-5ac7-91d8-336f94106e6d",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "35578320-0610-5fc7-9804-7c52c03ed3d0"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -145283,7 +145293,16 @@
       "centroidLongitude": 23.737314722093625,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
+        "a00e91f0-c2d9-5547-97b3-d2e5f5fa773a",
+        "35578320-0610-5fc7-9804-7c52c03ed3d0",
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Notable Building",
@@ -145331,7 +145350,16 @@
       "centroidLongitude": 23.749309262030735,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "03f81741-e71b-596d-a589-250f3004f09b",
+        "7c32be44-365d-5ac7-91d8-336f94106e6d",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "35578320-0610-5fc7-9804-7c52c03ed3d0",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -145380,7 +145408,16 @@
       "centroidLongitude": 23.732993049077194,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "7c32be44-365d-5ac7-91d8-336f94106e6d",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "03f81741-e71b-596d-a589-250f3004f09b",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "3238e759-83c1-5f71-ba57-b9559adfa304"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -145427,7 +145464,16 @@
       "centroidLongitude": 23.735317706515158,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "35578320-0610-5fc7-9804-7c52c03ed3d0",
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "7c32be44-365d-5ac7-91d8-336f94106e6d",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -145477,7 +145523,16 @@
       "centroidLongitude": 23.725875793466766,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "6408C083-6D92-51E5-B388-06AA555C4079",
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "3a06ffd3-af64-5a4a-b097-54224616d67d",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "3238e759-83c1-5f71-ba57-b9559adfa304",
+        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "39470626-dd10-53c9-a7f1-81865e370973",
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -145524,7 +145579,16 @@
       "centroidLongitude": 23.725620838787446,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "3a06ffd3-af64-5a4a-b097-54224616d67d",
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "725FE87B-3535-5D02-85C2-2469EEEBF2AB",
+        "d79fba87-711d-54fb-aa93-1ce54bc10579",
+        "6408C083-6D92-51E5-B388-06AA555C4079",
+        "39470626-dd10-53c9-a7f1-81865e370973"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -145571,7 +145635,16 @@
       "centroidLongitude": 23.720293111804178,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "3a06ffd3-af64-5a4a-b097-54224616d67d",
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "3238e759-83c1-5f71-ba57-b9559adfa304",
+        "d79fba87-711d-54fb-aa93-1ce54bc10579",
+        "6408C083-6D92-51E5-B388-06AA555C4079"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -145618,7 +145691,16 @@
       "centroidLongitude": 23.722957577222317,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "3a06ffd3-af64-5a4a-b097-54224616d67d",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "6408C083-6D92-51E5-B388-06AA555C4079",
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
+        "d79fba87-711d-54fb-aa93-1ce54bc10579",
+        "3238e759-83c1-5f71-ba57-b9559adfa304"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -145664,7 +145746,16 @@
       "centroidLongitude": 23.732350338787686,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "6408C083-6D92-51E5-B388-06AA555C4079",
+        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "3238e759-83c1-5f71-ba57-b9559adfa304",
+        "39470626-dd10-53c9-a7f1-81865e370973",
+        "51BA4A4C-6328-52B0-A307-D58F8E482325",
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -145710,7 +145801,16 @@
       "centroidLongitude": 23.729803211804274,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "d69649e9-8561-502f-813e-4e3672e8b3bb",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "725FE87B-3535-5D02-85C2-2469EEEBF2AB",
+        "6408C083-6D92-51E5-B388-06AA555C4079",
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "554024f7-6570-540d-8544-ad0812fa4819",
+        "3a06ffd3-af64-5a4a-b097-54224616d67d"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -145756,7 +145856,16 @@
       "centroidLongitude": 23.73050170995103,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e9679aa4-0e91-5b79-87d9-b3ae54d56ea0",
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "3a06ffd3-af64-5a4a-b097-54224616d67d",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "b278dff6-bdf4-5a7b-ae6e-be9d0c766632"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -145801,7 +145910,16 @@
       "centroidLongitude": 23.724495496460015,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+        "7c32be44-365d-5ac7-91d8-336f94106e6d",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "6408C083-6D92-51E5-B388-06AA555C4079",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -145849,7 +145967,16 @@
       "centroidLongitude": 23.72986492529612,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b278dff6-bdf4-5a7b-ae6e-be9d0c766632",
+        "89363630-932b-5974-8e01-2a1e62adbd79",
+        "e22d016c-8f54-5600-a12b-8bf341649795",
+        "ada17ad9-8c2d-5e74-b104-88c92eec5299",
+        "1568941f-1ef1-5297-b6f8-829cc2efe3ef",
+        "0e413d04-05d5-5e98-9c22-fbdef73beb27",
+        "5fe721f4-2bf9-5d47-afcf-6eda222ac5a3",
+        "eaf2d4d8-d282-54d3-bf6b-94da15be04f2"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -145893,7 +146020,16 @@
       "centroidLongitude": 23.73084202529596,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "6408C083-6D92-51E5-B388-06AA555C4079",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "39470626-dd10-53c9-a7f1-81865e370973",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "b278dff6-bdf4-5a7b-ae6e-be9d0c766632",
+        "725FE87B-3535-5D02-85C2-2469EEEBF2AB",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -145936,7 +146072,16 @@
       "centroidLongitude": 23.730979682967554,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "5d1b3abd-edbe-5982-bc20-119d4678aa96",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "e9679aa4-0e91-5b79-87d9-b3ae54d56ea0",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Venue",
@@ -145983,7 +146128,16 @@
       "centroidLongitude": 23.73527199645937,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e9679aa4-0e91-5b79-87d9-b3ae54d56ea0",
+        "39470626-dd10-53c9-a7f1-81865e370973",
+        "3a06ffd3-af64-5a4a-b097-54224616d67d",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "3238e759-83c1-5f71-ba57-b9559adfa304",
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "824c0c6e-c104-511d-bc83-131831982977"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Venue",
@@ -146028,7 +146182,16 @@
       "centroidLongitude": 23.729383840639542,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
+        "89363630-932b-5974-8e01-2a1e62adbd79",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "39470626-dd10-53c9-a7f1-81865e370973",
+        "3238e759-83c1-5f71-ba57-b9559adfa304",
+        "3a06ffd3-af64-5a4a-b097-54224616d67d"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Venue",
@@ -146075,7 +146238,16 @@
       "centroidLongitude": 23.72766980376259,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "3238e759-83c1-5f71-ba57-b9559adfa304",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
+        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "39470626-dd10-53c9-a7f1-81865e370973",
+        "6408C083-6D92-51E5-B388-06AA555C4079"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Market",
@@ -146122,7 +146294,16 @@
       "centroidLongitude": 23.726975794606954,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "5d1b3abd-edbe-5982-bc20-119d4678aa96",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
+        "7c32be44-365d-5ac7-91d8-336f94106e6d"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -146169,7 +146350,16 @@
       "centroidLongitude": 23.720296825295488,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+        "7c32be44-365d-5ac7-91d8-336f94106e6d",
+        "a00e91f0-c2d9-5547-97b3-d2e5f5fa773a",
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Religious Building",
@@ -146221,7 +146411,16 @@
       "centroidLongitude": 23.728469052279564,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "5d1b3abd-edbe-5982-bc20-119d4678aa96",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "a0261a5e-a433-5289-afad-dd77b481afb1"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Museum",
@@ -146274,7 +146473,16 @@
       "centroidLongitude": 23.692178169474605,
       "city": "Kallithea",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "5d1b3abd-edbe-5982-bc20-119d4678aa96",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "a0261a5e-a433-5289-afad-dd77b481afb1",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "b238299d-5745-5bef-a0b5-7fac4aca5c37"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Library",
@@ -146327,7 +146535,16 @@
       "centroidLongitude": 23.725365754131246,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68",
+        "03f81741-e71b-596d-a589-250f3004f09b"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Museum",
@@ -146378,7 +146595,16 @@
       "centroidLongitude": 23.708312881115543,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "7c32be44-365d-5ac7-91d8-336f94106e6d",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "5d1b3abd-edbe-5982-bc20-119d4678aa96",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Museum",
@@ -146428,7 +146654,16 @@
       "centroidLongitude": 23.743153296459948,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "35578320-0610-5fc7-9804-7c52c03ed3d0",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Venue",
@@ -146483,7 +146718,16 @@
       "centroidLongitude": 23.75031038296831,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "a0261a5e-a433-5289-afad-dd77b481afb1",
+        "35578320-0610-5fc7-9804-7c52c03ed3d0",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -146537,7 +146781,16 @@
       "centroidLongitude": 23.728133936672766,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "5d1b3abd-edbe-5982-bc20-119d4678aa96",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "District",
@@ -146585,7 +146838,16 @@
       "centroidLongitude": 23.7440055,
       "city": "Athens",
       "country": "Greece",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+        "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "573e70c2-3b30-5236-aa4c-b9ec0eaf6b68"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -226541,13 +226803,13 @@
       "country": "Greece",
       "relatedTourIds": [
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
         "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
-        "FA17B0B4-0CED-5612-A554-FE0D95AE71E6",
-        "19D39416-E573-5E48-81FC-A22344D0E3B4",
-        "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "04C16975-1FED-5022-BD51-01A73346988F",
-        "97AB10F9-740E-5A95-BFA1-3B2C9469D038"
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+        "FA17B0B4-0CED-5612-A554-FE0D95AE71E6"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -226598,11 +226860,11 @@
         "2941CD08-C085-531E-9093-0398F3D015BF",
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
         "7A5C0255-D844-5EFA-9199-A7B428CD1529",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
         "5F7B1433-8BC4-5B94-88E2-255975574E26",
         "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
         "B334407B-05B1-539D-A2C3-6AE4B1FED4DE",
-        "FDFAB0F8-4272-588E-9234-865B56DE5302",
-        "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F"
+        "FDFAB0F8-4272-588E-9234-865B56DE5302"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -226653,11 +226915,11 @@
         "5F7B1433-8BC4-5B94-88E2-255975574E26",
         "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
         "FA17B0B4-0CED-5612-A554-FE0D95AE71E6",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
         "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "FDFAB0F8-4272-588E-9234-865B56DE5302",
-        "078F4A1A-4B83-5134-9D43-20C6CF1240BE",
-        "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F"
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -234880,12 +235142,12 @@
       "relatedTourIds": [
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
         "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
         "5F7B1433-8BC4-5B94-88E2-255975574E26",
         "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
-        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
-        "2941CD08-C085-531E-9093-0398F3D015BF",
-        "078F4A1A-4B83-5134-9D43-20C6CF1240BE"
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -234938,10 +235200,10 @@
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
         "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
         "5F7B1433-8BC4-5B94-88E2-255975574E26",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
         "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
-        "172C4AC4-1CE7-59F0-B40E-80BAC95D1457",
-        "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
-        "2941CD08-C085-531E-9093-0398F3D015BF"
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "172C4AC4-1CE7-59F0-B40E-80BAC95D1457"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -234990,6 +235252,9 @@
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
         "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
         "FDFAB0F8-4272-588E-9234-865B56DE5302"
@@ -235041,13 +235306,13 @@
       "country": "Greece",
       "relatedTourIds": [
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
         "FA17B0B4-0CED-5612-A554-FE0D95AE71E6",
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
         "F9C79DF3-8607-5E62-95F0-A098ADA9CFC2",
         "5F7B1433-8BC4-5B94-88E2-255975574E26",
-        "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
-        "FDFAB0F8-4272-588E-9234-865B56DE5302"
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "7A5C0255-D844-5EFA-9199-A7B428CD1529"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -235095,14 +235360,14 @@
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
         "F9C79DF3-8607-5E62-95F0-A098ADA9CFC2",
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
         "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
-        "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
-        "FDFAB0F8-4272-588E-9234-865B56DE5302",
-        "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "5F7B1433-8BC4-5B94-88E2-255975574E26"
+        "97AB10F9-740E-5A95-BFA1-3B2C9469D038"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -235152,7 +235417,9 @@
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
         "B334407B-05B1-539D-A2C3-6AE4B1FED4DE",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
         "04C16975-1FED-5022-BD51-01A73346988F"
       ],
       "primaryCategory": "sacredSites",
@@ -235206,8 +235473,9 @@
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
         "078F4A1A-4B83-5134-9D43-20C6CF1240BE",
         "B334407B-05B1-539D-A2C3-6AE4B1FED4DE",
-        "19D39416-E573-5E48-81FC-A22344D0E3B4",
-        "B1B0CFE7-1595-52BF-9F9F-584A3B05F203"
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "a0261a5e-a433-5289-afad-dd77b481afb1",
+        "19D39416-E573-5E48-81FC-A22344D0E3B4"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -235312,11 +235580,11 @@
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
         "5F7B1433-8BC4-5B94-88E2-255975574E26",
         "FA17B0B4-0CED-5612-A554-FE0D95AE71E6",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
-        "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
-        "04C16975-1FED-5022-BD51-01A73346988F",
-        "2941CD08-C085-531E-9093-0398F3D015BF"
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "9151d19c-a003-56be-a0e5-707f123e3731"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -235365,11 +235633,14 @@
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
         "F9C79DF3-8607-5E62-95F0-A098ADA9CFC2",
         "078F4A1A-4B83-5134-9D43-20C6CF1240BE",
         "FDFAB0F8-4272-588E-9234-865B56DE5302",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
         "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
-        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2"
+        "7c32be44-365d-5ac7-91d8-336f94106e6d",
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -235985,14 +236256,14 @@
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
         "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
-        "5F7B1433-8BC4-5B94-88E2-255975574E26",
-        "2941CD08-C085-531E-9093-0398F3D015BF",
-        "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
-        "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
-        "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
-        "6408C083-6D92-51E5-B388-06AA555C4079",
-        "172C4AC4-1CE7-59F0-B40E-80BAC95D1457"
+        "fc45387b-6ca9-56ba-8ea5-6515118fb439",
+        "7c32be44-365d-5ac7-91d8-336f94106e6d",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "5F7B1433-8BC4-5B94-88E2-255975574E26"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -236042,12 +236313,13 @@
       "country": "Greece",
       "relatedTourIds": [
         "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
         "2941CD08-C085-531E-9093-0398F3D015BF",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
         "5F7B1433-8BC4-5B94-88E2-255975574E26",
-        "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
-        "B334407B-05B1-539D-A2C3-6AE4B1FED4DE",
-        "7A5C0255-D844-5EFA-9199-A7B428CD1529"
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -236389,11 +236661,11 @@
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
         "97AB10F9-740E-5A95-BFA1-3B2C9469D038",
         "B1B0CFE7-1595-52BF-9F9F-584A3B05F203",
-        "FA17B0B4-0CED-5612-A554-FE0D95AE71E6",
-        "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "F9C79DF3-8607-5E62-95F0-A098ADA9CFC2",
-        "FDFAB0F8-4272-588E-9234-865B56DE5302",
-        "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F"
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "9151d19c-a003-56be-a0e5-707f123e3731",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "FA17B0B4-0CED-5612-A554-FE0D95AE71E6"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -305920,12 +306192,13 @@
       "country": "Greece",
       "relatedTourIds": [
         "0FE8CB92-65EA-5C20-AFA8-0832F7566E25",
+        "e28abfb3-790f-5ade-9a91-2fa83d8940ea",
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "f13f47ef-ca40-56b7-9159-8fd2402769af",
         "172C4AC4-1CE7-59F0-B40E-80BAC95D1457",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
         "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "5F7B1433-8BC4-5B94-88E2-255975574E26",
-        "FDFAB0F8-4272-588E-9234-865B56DE5302",
-        "04C16975-1FED-5022-BD51-01A73346988F",
-        "B1B0CFE7-1595-52BF-9F9F-584A3B05F203"
+        "5F7B1433-8BC4-5B94-88E2-255975574E26"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -326916,10 +327189,14 @@
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
+        "3238e759-83c1-5f71-ba57-b9559adfa304",
         "6408C083-6D92-51E5-B388-06AA555C4079",
+        "824c0c6e-c104-511d-bc83-131831982977",
         "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "3a06ffd3-af64-5a4a-b097-54224616d67d",
         "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
-        "51BA4A4C-6328-52B0-A307-D58F8E482325"
+        "b278dff6-bdf4-5a7b-ae6e-be9d0c766632"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -328336,14 +328613,14 @@
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
+        "3a06ffd3-af64-5a4a-b097-54224616d67d",
+        "3238e759-83c1-5f71-ba57-b9559adfa304",
         "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "824c0c6e-c104-511d-bc83-131831982977",
         "6408C083-6D92-51E5-B388-06AA555C4079",
-        "725FE87B-3535-5D02-85C2-2469EEEBF2AB",
-        "51BA4A4C-6328-52B0-A307-D58F8E482325",
-        "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
-        "F9C79DF3-8607-5E62-95F0-A098ADA9CFC2",
-        "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "B1B0CFE7-1595-52BF-9F9F-584A3B05F203"
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "725FE87B-3535-5D02-85C2-2469EEEBF2AB"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -348658,14 +348935,14 @@
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
+        "824c0c6e-c104-511d-bc83-131831982977",
         "6408C083-6D92-51E5-B388-06AA555C4079",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
+        "3a06ffd3-af64-5a4a-b097-54224616d67d",
         "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
-        "51BA4A4C-6328-52B0-A307-D58F8E482325",
-        "725FE87B-3535-5D02-85C2-2469EEEBF2AB",
-        "36D57C5D-E9E0-56DC-99D4-B25B0C4CAA3F",
-        "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "F9C79DF3-8607-5E62-95F0-A098ADA9CFC2",
-        "FDFAB0F8-4272-588E-9234-865B56DE5302"
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "d79fba87-711d-54fb-aa93-1ce54bc10579",
+        "39470626-dd10-53c9-a7f1-81865e370973"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -348712,13 +348989,14 @@
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
+        "870636d4-1051-5460-9496-20c558caccd1",
         "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "aaf6c4ff-40c1-524e-b69f-76ea39408414",
         "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
+        "d79fba87-711d-54fb-aa93-1ce54bc10579",
         "725FE87B-3535-5D02-85C2-2469EEEBF2AB",
-        "51BA4A4C-6328-52B0-A307-D58F8E482325",
-        "F9C79DF3-8607-5E62-95F0-A098ADA9CFC2",
-        "7A5C0255-D844-5EFA-9199-A7B428CD1529",
-        "0FE8CB92-65EA-5C20-AFA8-0832F7566E25"
+        "3a06ffd3-af64-5a4a-b097-54224616d67d"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -348857,8 +349135,12 @@
       "relatedTourIds": [
         "6408C083-6D92-51E5-B388-06AA555C4079",
         "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "d79fba87-711d-54fb-aa93-1ce54bc10579",
         "D3EE0C2A-7F05-5618-A60E-980C8BEF16C2",
-        "725FE87B-3535-5D02-85C2-2469EEEBF2AB"
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "3238e759-83c1-5f71-ba57-b9559adfa304",
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "3a06ffd3-af64-5a4a-b097-54224616d67d"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
