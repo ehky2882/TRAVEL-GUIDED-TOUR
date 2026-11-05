@@ -5711,6 +5711,16 @@
       "websiteURL": null
     },
     {
+      "id": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "displayName": "Atlas Studio MEX",
+      "platform": "dozent",
+      "handle": "atlas.mex",
+      "avatarURL": null,
+      "avatarEmoji": "🇲🇽",
+      "bio": "Atlas Studio's Mexico City bureau — the floating shelves of the Vasconcelos library, O'Gorman's stone-mosaic campus, a concrete umbrella over the nation's oldest treasures, floating farms in Xochimilco, a Michelin-starred taco stand, mariachis for hire and mezcal bars built like caves.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -30655,11 +30665,11 @@
         "4b66eb5c-ed88-46dc-9afd-2aaabfb7592c",
         "ceeba1e6-3910-4c72-b5ab-8331cbdf04c6",
         "dfca8058-fdfb-5473-b44d-07dac56a3042",
+        "3ca30004-75d7-58df-880c-387869a3e321",
         "9f3aa784-002e-5e43-bad3-c68e2a88b022",
         "8efa1abc-1274-475f-89ee-c506bb72f1ea",
         "64B79713-9DE4-5F3B-AFED-E44E9D4EEA7E",
-        "c3d1e603-74ee-5865-87dc-1b1a97d26698",
-        "4bd57de1-6494-5b3d-af3a-808ee518c111"
+        "c3d1e603-74ee-5865-87dc-1b1a97d26698"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -36897,9 +36907,9 @@
         "fd904b3b-e189-547b-9f73-6f95374a55d3",
         "948f8ce6-e540-5ec1-bcbf-b64ddc23a934",
         "87e27455-674a-4ec6-bad5-3fa2b790b38d",
+        "830592d3-014d-5f93-a347-0f1b5d418fc4",
         "6350bcee-b875-582c-aee3-a34fdb0741d4",
-        "35095d8f-6b81-5b5c-888f-06efe44432e7",
-        "8c88caa8-f924-5267-ab44-fa8842ba6d49"
+        "35095d8f-6b81-5b5c-888f-06efe44432e7"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -44737,6 +44747,7 @@
       "country": "Canada",
       "relatedTourIds": [
         "096a3cba-09b6-57e7-8379-2e49f3a7b507",
+        "d5a1d997-4466-560f-bc2e-c2c45f17f7be",
         "829ae210-e5ef-5370-886e-dfec80d6fa71",
         "c5bf4a63-0b85-5c3e-92f2-5dab1cd7f614",
         "0e585845-3bdb-5ffd-8da1-b9db2d7d2daf",
@@ -59891,10 +59902,10 @@
         "f2861f71-87bc-54dd-98cd-cce1ac84a11f",
         "cfedd417-9b17-5499-8a97-ebec316ad887",
         "37bb55bd-56ec-5e79-8fbf-d5a6be4bf7d7",
+        "ec9acdc8-2598-5bc8-9c64-65151e43a395",
         "3827d891-6480-5f0e-8f92-ad636f2812ac",
         "1D9A2CB2-B166-5525-8514-AFBDB08BA479",
-        "80c212ca-621d-529f-afe1-f8c5113acbe8",
-        "024a940d-4267-50f3-95fa-784f70284cf2"
+        "80c212ca-621d-529f-afe1-f8c5113acbe8"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -70782,11 +70793,11 @@
         "758481c1-1925-5d9a-8377-638c51c74ffb",
         "21cee03a-e920-5018-adff-7b2f10f5ff91",
         "70a01d74-8edf-5f78-9d8b-a05850c0299a",
+        "a648b9d7-4924-555c-8762-92c0c674ca1f",
         "0165232e-3d55-5685-a448-a7bf5afece8f",
         "E0B1BA3B-6515-5289-874A-3C269C19CD98",
         "82823681-E708-50EC-8FDD-689371E92A8F",
-        "726c0fd2-ae39-5ed5-b84c-20c6783e67f5",
-        "8D3B9E6A-EA04-4D47-8FE8-6C5E83C0D4C2"
+        "726c0fd2-ae39-5ed5-b84c-20c6783e67f5"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -80298,14 +80309,14 @@
       "city": "Tigre",
       "country": "Argentina",
       "relatedTourIds": [
+        "edb75a45-df25-58cb-87c8-c744eee9bf97",
+        "a648b9d7-4924-555c-8762-92c0c674ca1f",
         "2bfc11d0-23e9-5e67-ad0f-fe89ba8700b3",
         "b2959033-0af9-5dc4-b2d3-29251878f4b9",
         "364fbc84-62fe-590d-acbe-71fa035d5b87",
         "583eda21-fc1c-54a3-94f7-cff546891976",
         "a58601e7-a4aa-4c63-942b-e9191d64da5c",
-        "3619ca6e-f14c-50a3-a659-14ac5216160d",
-        "12cb1aa6-51d0-5867-9956-9f52dfc8b68f",
-        "f963b19a-dd2f-5d44-89ab-526a8532ada0"
+        "3619ca6e-f14c-50a3-a659-14ac5216160d"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -113166,13 +113177,13 @@
       "country": "Romania",
       "relatedTourIds": [
         "0e81ef76-f1a1-5477-b09d-45c1372b14a7",
+        "9b4329a8-d70c-5af3-afda-b456a7de989e",
         "de7a0c3d-0ea4-53ac-8a87-6e7653a2eb13",
         "1ea2031e-cb40-5845-980f-1d1f85222c57",
         "c574f27b-0b14-56db-851c-404ad0462d75",
         "e182bf6b-ab75-5158-9412-21a94c48e7f4",
         "58ad0ebe-8426-512b-a6a9-4272c76ef748",
-        "efe39735-c6a8-5bd3-bedd-594d78985b27",
-        "e2a1f1b9-2d1a-51bc-b042-17a88ae7c8f2"
+        "efe39735-c6a8-5bd3-bedd-594d78985b27"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -120022,14 +120033,14 @@
       "city": "Havana",
       "country": "Cuba",
       "relatedTourIds": [
+        "3ca30004-75d7-58df-880c-387869a3e321",
         "86b3cec0-752c-550b-8c1c-c4585171168e",
         "3261bd51-24b5-5a79-a691-a1e1a868ccfb",
         "d9553133-f19c-5246-af3b-35214ddde5fe",
         "4bd57de1-6494-5b3d-af3a-808ee518c111",
         "60de976a-a8da-4dfc-a1cc-9d2a26fea2fc",
         "21cee03a-e920-5018-adff-7b2f10f5ff91",
-        "fb2eb675-600d-5884-b5c0-2db5f8f887e4",
-        "b20c0664-7644-5bac-aa79-36d7fb275722"
+        "fb2eb675-600d-5884-b5c0-2db5f8f887e4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -132996,9 +133007,9 @@
         "2521ac27-0a45-5dbd-84be-4eff7aa65133",
         "c933fed3-eb24-5319-87df-7ce498c62100",
         "0378b836-089d-5f9e-8232-8e2e9afe3e09",
+        "d5a1d997-4466-560f-bc2e-c2c45f17f7be",
         "1BE97272-8B4C-5006-AB11-96DC56A46C92",
-        "d17e0a2d-1a53-55bd-bdd3-79b1e036de96",
-        "4A883783-4A4B-5561-8564-49D5652089F2"
+        "d17e0a2d-1a53-55bd-bdd3-79b1e036de96"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -143581,14 +143592,14 @@
       "city": "Benimantell",
       "country": "Spain",
       "relatedTourIds": [
+        "13f598f3-b6e5-5653-9481-daab905ff60d",
         "9db246ee-f617-5efa-ae09-988b9b448806",
+        "f67f6de1-e449-5b31-bb9c-8be2905e7b9a",
         "FAEC55D1-8D65-5063-9A28-E46C0187E274",
         "f0ff8c57-b498-53d5-9738-58f3f4904243",
         "dd2fb227-ec66-5e26-a4ec-e65dc08f61fb",
         "7A7F41DE-5830-5679-BDB0-7CC9D41D8D0E",
-        "e858fbf5-ad82-52c7-9224-64b918276554",
-        "e16e6d26-40e9-5d13-9903-6e7890b91d10",
-        "6e5ae984-8ad6-59d2-896b-c780ecb884fe"
+        "e858fbf5-ad82-52c7-9224-64b918276554"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -146853,6 +146864,2035 @@
         "Park",
         "Engineering",
         "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b8739d55-8302-5289-8354-e1a91876b821",
+      "createdAt": "2026-11-05",
+      "title": "Alameda Central",
+      "shortDescription": "In 1592, a Spanish viceroy ordered poplar trees planted on what was then the western edge of the city, and the park that grew up around them has…",
+      "longDescription": "In 1592, a Spanish viceroy ordered poplar trees planted on what was then the western edge of the city, and the park that grew up around them has been here ever since, which is why the Alameda is usually described as the oldest public park in the Americas. Even the name comes from álamo, the Spanish word for poplar.\n\nStart with the crescent, twelve Doric columns unveiled in September 1910. At its centre sits Benito Juárez, the Zapotec lawyer turned president, while an allegorical figure of the homeland leans in to crown him with laurel. It was commissioned by Porfirio Díaz for the centenary of independence, and there's a curious twist in that, because Díaz had once taken up arms against Juárez, so the monument doubles as rather graceful political housekeeping.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-alameda-central_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-alameda-central_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-alameda-central_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-alameda-central_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2e06f9af-3ea7-5156-ad35-1968b2e947b5",
+          "order": 0,
+          "title": "Alameda Central",
+          "caption": "On the park side of Avenida Juárez, facing the white marble crescent of the Hemiciclo a Juárez.",
+          "latitude": 19.43616504232662,
+          "longitude": -99.14391240674588,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-alameda-central.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-alameda-central_hero.webp",
+          "transcriptText": "In 1592, a Spanish viceroy ordered poplar trees planted on what was then the western edge of the city, and the park that grew up around them has been here ever since, which is why the Alameda is usually described as the oldest public park in the Americas. Even the name comes from álamo, the Spanish word for poplar.\n\nThe long white crescent of marble columns in front of you is the Hemiciclo a Juárez. Stand on the park side of Avenida Juárez, facing north into the trees with the monument straight ahead, and off to your right, at the eastern end of the park, the tiled dome of the Palacio de Bellas Artes should be showing above the treetops.\n\nStart with the crescent, twelve Doric columns unveiled in September 1910. At its centre sits Benito Juárez, the Zapotec lawyer turned president, while an allegorical figure of the homeland leans in to crown him with laurel. It was commissioned by Porfirio Díaz for the centenary of independence, and there's a curious twist in that, because Díaz had once taken up arms against Juárez, so the monument doubles as rather graceful political housekeeping.\n\nAround you, the paths are laid out on French lines, with five fountains carrying figures from Greek and Roman myth, although not all of the park's past is so gentle, since the western end was once the Quemadero, where the Inquisition carried out its sentences, and it was only folded into the gardens in 1770.\n\nPut those together and the Alameda starts to look less like a garden than a stage, where each government that held this city set out, in trees and marble, the story it wanted told.\n\nFollow the paths west to the far end of the park, where the Museo Mural Diego Rivera holds his Dream of a Sunday Afternoon in the Alameda, painted in 1947 and crowded with four centuries of the people who strolled here, which is quite something to see once you've walked it yourself."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.43616504232662,
+      "centroidLongitude": -99.14391240674588,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "3ca30004-75d7-58df-880c-387869a3e321",
+        "15A18AFC-10D6-55C1-9CF4-5216C435C67E",
+        "e7f2b167-f928-5de6-9a48-d9d602cbacf8",
+        "9f4a4a4e-f7a6-5a35-a9de-16b5119d88f4",
+        "9b4329a8-d70c-5af3-afda-b456a7de989e",
+        "edb75a45-df25-58cb-87c8-c744eee9bf97",
+        "4cb31204-1f5b-57eb-9d2f-a1061858ed4b",
+        "2be3d69f-a78a-542f-86a9-ae39e3219e8f"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Power",
+        "Public Art",
+        "Green Escape",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "830592d3-014d-5f93-a347-0f1b5d418fc4",
+      "createdAt": "2026-11-05",
+      "title": "Arca Tierra",
+      "shortDescription": "The water here is the colour of strong tea, the trees along its banks stand tall and narrow as pencils, and the field ahead of you is, quite…",
+      "longDescription": "The water here is the colour of strong tea, the trees along its banks stand tall and narrow as pencils, and the field ahead of you is, quite literally, an island that somebody built by hand.\n\nBegin with the ground under your feet, because a chinampa is made by piling up layers of canal mud and plant matter until a field rises out of the water, a method farmers in this valley were using long before the Spanish arrived, and the canals that surround each bed irrigate it and fertilise it at the same time.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-arca-tierra_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-arca-tierra_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-arca-tierra_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-arca-tierra_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-arca-tierra_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "abfe05cf-7db1-5afe-9969-125c8774b508",
+          "order": 0,
+          "title": "Arca Tierra",
+          "caption": "In Xochimilco, south of the Cuemanco landing, on the edge of a chinampa with the canal either side of you.",
+          "latitude": 19.280808348236704,
+          "longitude": -99.10379125278106,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-arca-tierra.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-arca-tierra_hero.webp",
+          "transcriptText": "The water here is the colour of strong tea, the trees along its banks stand tall and narrow as pencils, and the field ahead of you is, quite literally, an island that somebody built by hand.\n\nXochimilco, a short trajinera ride south of the Cuemanco landing, on the edge of one of Arca Tierra's chinampas: the boat should be tied up behind you, the canal running away to your left and right, and ahead, low raised beds of kale, chard, beetroot and lettuce laid out in neat green rows.\n\nBegin with the ground under your feet, because a chinampa is made by piling up layers of canal mud and plant matter until a field rises out of the water, a method farmers in this valley were using long before the Spanish arrived, and the canals that surround each bed irrigate it and fertilise it at the same time.\n\nArca Tierra was founded in 2009 by Lucio Usobiaga, a philosopher by training, and today it works with around thirty-five farming families using regenerative methods, which is a fancy way of saying they're trying to put back into the soil what modern farming took out. Visitors come for sunrise breakfasts served from a trajinera, for brunches of quesadillas and chilaquiles, and for long dinners cooked by guest chefs, Gabriela Cámara of Contramar among them.\n\nWhat makes this matter, if you ask me, is that it isn't a museum of farming. A recent count found roughly two thousand two hundred hectares of chinampas in Xochimilco, with fewer than a quarter of them still worked and over a thousand abandoned, and the vegetables grown here go out every week to shops and restaurants across the city.\n\nOn the ride back towards Cuemanco, watch the banks as they slide past, and you'll start to spot the difference between a living chinampa, trimmed and planted, and an abandoned one gone over to reeds, which is the whole argument of this place written into the landscape."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.280808348236704,
+      "centroidLongitude": -99.10379125278106,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "78761e31-da0a-5d3e-924b-376728bcdf58",
+        "e3db8352-8eb8-536b-bcd4-716f756a9f2d",
+        "86b157c4-a83f-5a89-b08b-565d9e4b74e9",
+        "47eb923c-23d4-55ee-8fda-458508c72b91",
+        "88e43e44-255c-55a1-968e-3bd879397f24",
+        "855f3f28-0e8f-5c73-9205-3ddedd081033",
+        "0ae3efc4-479b-5440-8fe8-f5469237a6bb",
+        "a64371c0-c3ab-5805-ac83-191ba480d234"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Waterfront",
+        "Green Escape",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "74d534de-acc7-5014-a9c5-da0171128b6d",
+      "createdAt": "2026-11-05",
+      "title": "Vasconcelos Library | Biblioteca Vasconcelos",
+      "shortDescription": "Look up, then keep looking up, because the shelves in this library don't sit on the floor at all, they hang in the air above you like the stacks…",
+      "longDescription": "Look up, then keep looking up, because the shelves in this library don't sit on the floor at all, they hang in the air above you like the stacks of some enormous filing system that has been pulled apart and left floating.\n\nThe building came first, opening in May 2006, designed by the architect Alberto Kalach, and it holds around six hundred thousand books, with room planned for a couple of million more, while the glass walls let in so much daylight that you'll notice the lights barely seem to matter on a bright afternoon.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-biblioteca-vasconcelos_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-biblioteca-vasconcelos_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-biblioteca-vasconcelos_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-biblioteca-vasconcelos_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-biblioteca-vasconcelos_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-biblioteca-vasconcelos_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-biblioteca-vasconcelos_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c054df7a-d59a-5be1-b9d6-fdca7c1e6671",
+          "order": 0,
+          "title": "Vasconcelos Library | Biblioteca Vasconcelos",
+          "caption": "Inside the long, tall hall of hanging bookshelves, beneath the graphite-drawn skeleton of a grey whale.",
+          "latitude": 19.44723301422321,
+          "longitude": -99.15086488093685,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-biblioteca-vasconcelos.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-biblioteca-vasconcelos_hero.webp",
+          "transcriptText": "Look up, then keep looking up, because the shelves in this library don't sit on the floor at all, they hang in the air above you like the stacks of some enormous filing system that has been pulled apart and left floating.\n\nWalk in past the security desk and carry on until the building opens out overhead into one long, tall hall, crossed by metal walkways and lined on both sides with suspended bookcases, and somewhere near the middle, slung in the air, you should see the white skeleton of a whale.\n\nThe building came first, opening in May 2006, designed by the architect Alberto Kalach, and it holds around six hundred thousand books, with room planned for a couple of million more, while the glass walls let in so much daylight that you'll notice the lights barely seem to matter on a bright afternoon.\n\nNow the whale, which is a real one, a young grey whale that washed up on the coast of Baja California. The artist Gabriel Orozco had its bones assembled over two months in the train station lobby next door, then drew across them in graphite, tracing arcs and circles with a compass so that the lines map how the animal once moved, and the piece is called Mátrix Móvil.\n\nThe library is named for José Vasconcelos, the philosopher and education minister who argued, a century ago, that reading should belong to everyone, and the building takes him at his word. Nobody asks you why you've come, you don't need a card to wander, and the whole place feels designed for drifting rather than for finding.\n\nBefore you leave, find the doors out to the back, where a botanical garden of around twenty-six thousand square metres wraps round the building, and on a Saturday the Tianguis Cultural del Chopo, the city's long-running alternative street market, sets up a short walk away."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.44723301422321,
+      "centroidLongitude": -99.15086488093685,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "D2AB471A-E219-5B28-969F-76BEDF82F6E1",
+        "f67f6de1-e449-5b31-bb9c-8be2905e7b9a",
+        "4cb31204-1f5b-57eb-9d2f-a1061858ed4b",
+        "2be3d69f-a78a-542f-86a9-ae39e3219e8f",
+        "4128fcfb-f72c-509d-97c6-368c8be8202f",
+        "07f31f81-16b1-5345-b411-a7e2e0a1f14a",
+        "edb75a45-df25-58cb-87c8-c744eee9bf97",
+        "537a902e-70fa-53b7-8e17-6b2f923d1905"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Library",
+        "Architecture",
+        "Art",
+        "Literature",
+        "Contemporary",
+        "Free to Visit",
+        "Designed by a Master",
+        "Alberto Kalach"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "78761e31-da0a-5d3e-924b-376728bcdf58",
+      "createdAt": "2026-11-05",
+      "title": "Chapultepec Park | Bosque de Chapultepec",
+      "shortDescription": "Something like twenty million visits a year are paid to this park, which covers roughly twice the area of Central Park in New York.",
+      "longDescription": "Something like twenty million visits a year are paid to this park, which covers roughly twice the area of Central Park in New York.\n\nThat hill is the one that gave everything its name, since Chapultepec means grasshopper hill in Nahuatl, the language of the Mexica. It mattered to them for one very practical reason, which is that springs rose here, and in the fifteenth century an aqueduct was built to carry that water across the lake to their island capital, Tenochtitlan.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-bosque-de-chapultepec_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-bosque-de-chapultepec_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-bosque-de-chapultepec_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-bosque-de-chapultepec_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b1879142-915d-526c-8343-32ced32cd59a",
+          "order": 0,
+          "title": "Chapultepec Park | Bosque de Chapultepec",
+          "caption": "Beside the boating lake in the First Section, facing the wooded hill with Chapultepec Castle on its summit.",
+          "latitude": 19.4228,
+          "longitude": -99.1844,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-bosque-de-chapultepec.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-bosque-de-chapultepec_hero.webp",
+          "transcriptText": "Something like twenty million visits a year are paid to this park, which covers roughly twice the area of Central Park in New York.\n\nBeside the boating lake in the First Section, turn until the wooded hill with a palace on its summit is in front of you, rising above the trees to the east, with the water and its hired rowing boats at your back and the path running along the shore on either side.\n\nThat hill is the one that gave everything its name, since Chapultepec means grasshopper hill in Nahuatl, the language of the Mexica. It mattered to them for one very practical reason, which is that springs rose here, and in the fifteenth century an aqueduct was built to carry that water across the lake to their island capital, Tenochtitlan.\n\nLook at the trees nearest the shore, the ones with shaggy, dark trunks, because they're ahuehuetes, Montezuma cypresses, and some in this park are thought to be several centuries old, while the most famous of them, known as El Sargento, is said to have been planted around 1460 and stood for over five hundred years.\n\nThe palace on the hill is Chapultepec Castle, a viceroy's summer residence that later became a military college and then a home for Mexico's heads of state, and in 1847, during the war with the United States, young cadets died defending it, a loss the country still marks as the Niños Héroes.\n\nThe point, then, is that Chapultepec isn't the city's garden so much as its source, because the water that made a capital possible came out of this ground.\n\nFrom here, the path up the hill takes you to the castle terrace, and it's worth the climb for the view straight down Paseo de la Reforma, the grand avenue that was laid out to link this hill with the old centre of the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.4228,
+      "centroidLongitude": -99.1844,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "E3363651-CBD2-5837-8398-DFCEB73FFAE2",
+        "9f4a4a4e-f7a6-5a35-a9de-16b5119d88f4",
+        "b8739d55-8302-5289-8354-e1a91876b821",
+        "830592d3-014d-5f93-a347-0f1b5d418fc4",
+        "F35C24A1-58FE-52FD-A85B-024B96C50ED4",
+        "13f598f3-b6e5-5653-9481-daab905ff60d",
+        "2F5F8E5C-A30D-5CD7-81A6-F4E6D88A7A99",
+        "59f07717-a858-56d4-b495-15d1396a9ea8"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "War",
+        "Iconic Landmark",
+        "Green Escape",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3ca30004-75d7-58df-880c-387869a3e321",
+      "createdAt": "2026-11-05",
+      "title": "Círculo Mexicano",
+      "shortDescription": "One of the great photographers of the twentieth century, Manuel Álvarez Bravo, once lived in this building, back when it was a crowded tenement…",
+      "longDescription": "One of the great photographers of the twentieth century, Manuel Álvarez Bravo, once lived in this building, back when it was a crowded tenement rather than a hotel.\n\nThe building's past comes first, since it was built as a grand family house in the late eighteen hundreds, and when wealthy residents moved out of the centre, it was carved up into a vecindad, a block of small rented rooms around shared courtyards, which is how countless families in the Centro lived for generations.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-circulo-mexicano_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-circulo-mexicano_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-circulo-mexicano_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-circulo-mexicano_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-circulo-mexicano_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-circulo-mexicano_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-circulo-mexicano_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e92d4b47-d154-5d0d-bc01-71b0c7b4af7b",
+          "order": 0,
+          "title": "Círculo Mexicano",
+          "caption": "On República de Guatemala behind the cathedral, outside number 20: a stone facade with tall shuttered windows.",
+          "latitude": 19.435330108506705,
+          "longitude": -99.1327365914016,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-circulo-mexicano.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-circulo-mexicano_hero.webp",
+          "transcriptText": "One of the great photographers of the twentieth century, Manuel Álvarez Bravo, once lived in this building, back when it was a crowded tenement rather than a hotel.\n\nRepública de Guatemala runs right behind the Metropolitan Cathedral, and you want the narrow pavement outside number twenty, facing a nineteenth-century facade of stone and tall shuttered windows, with the cathedral's bell towers rising over the rooftops to one side and the Templo Mayor a short walk ahead.\n\nThe building's past comes first, since it was built as a grand family house in the late eighteen hundreds, and when wealthy residents moved out of the centre, it was carved up into a vecindad, a block of small rented rooms around shared courtyards, which is how countless families in the Centro lived for generations.\n\nNext, the conversion, carried out for Grupo Habita by the architects Jorge Ambrosi and Gabriela Etchegaray and opened in 2020. They kept the old bones and added steel, concrete, timber and basalt, and there are now twenty-five rooms, most of them looking onto small skylit patios, with Álvarez Bravo's photographs hung on the walls.\n\nThen head up to the rooftop, which has a bar and a plunge pool, and from there you can see the cathedral, the National Palace, the Templo Mayor and the Torre Latinoamericana in one sweep.\n\nThere's a debate in the Centro about conversions like this one, with some welcoming the restoration of neglected buildings and others worrying about who gets to live here afterwards, and both views come from people who care about the same streets.\n\nIf you've time, go up to the roof for a drink before sunset, and look down at the excavated walls of the old temple precinct just to the north-east, the heart of the Mexica city lying open almost beneath your feet."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.435330108506705,
+      "centroidLongitude": -99.1327365914016,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "9f4a4a4e-f7a6-5a35-a9de-16b5119d88f4",
+        "e7f2b167-f928-5de6-9a48-d9d602cbacf8",
+        "2F5F8E5C-A30D-5CD7-81A6-F4E6D88A7A99",
+        "07f31f81-16b1-5345-b411-a7e2e0a1f14a",
+        "F35C24A1-58FE-52FD-A85B-024B96C50ED4",
+        "b8739d55-8302-5289-8354-e1a91876b821",
+        "15A18AFC-10D6-55C1-9CF4-5216C435C67E",
+        "14957817-c44f-564a-a5e6-b95f7cfb76dc"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Art",
+        "Contemporary",
+        "Viewpoint",
+        "Designed by a Master",
+        "Ambrosi Etchegaray"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4cb31204-1f5b-57eb-9d2f-a1061858ed4b",
+      "createdAt": "2026-11-05",
+      "title": "Camino Real Polanco",
+      "shortDescription": "This is the Camino Real, and from the street it barely seems to want you to know it's here, which is entirely deliberate.",
+      "longDescription": "This is the Camino Real, and from the street it barely seems to want you to know it's here, which is entirely deliberate.\n\nStart with that fountain, which spins in a constant whirlpool rather than spraying upwards, and which has long been credited to the Japanese American sculptor Isamu Noguchi, although that attribution has been questioned, so it's safest to enjoy it as one of the city's great small mysteries.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-camino-real-polanco_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-camino-real-polanco_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-camino-real-polanco_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-camino-real-polanco_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-camino-real-polanco_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-camino-real-polanco_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2736edc7-46e2-5959-a66e-ed040ff46b98",
+          "order": 0,
+          "title": "Camino Real Polanco",
+          "caption": "On Mariano Escobedo, facing the pink and ochre walls and the churning round fountain in the forecourt.",
+          "latitude": 19.4281528535572,
+          "longitude": -99.1793932932541,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-camino-real-polanco.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-camino-real-polanco_hero.webp",
+          "transcriptText": "This is the Camino Real, and from the street it barely seems to want you to know it's here, which is entirely deliberate.\n\nFrom the pavement on Mariano Escobedo, face the hotel and take in the walls first, tall and almost windowless, washed in Mexican pink and deep ochre, and then, in the forecourt before the entrance, a wide round pool of blue water that never stops churning.\n\nStart with that fountain, which spins in a constant whirlpool rather than spraying upwards, and which has long been credited to the Japanese American sculptor Isamu Noguchi, although that attribution has been questioned, so it's safest to enjoy it as one of the city's great small mysteries.\n\nThe hotel opened in 1968, just in time for the Mexico City Olympics, and its architect, Ricardo Legorreta, was only in his thirties when he designed it. He worked with the sculptor Mathias Goeritz, and Luis Barragán is credited with suggesting the place be filled with art, which explains why there's a Rufino Tamayo mural in the lobby and a wall of perforated gold by Goeritz at the top of the main stairs.\n\nThere was once a nine-foot wall hanging by the textile artist Anni Albers here as well, made for the hotel and named after it, and it disappeared from view for decades before resurfacing in 2018.\n\nThe interesting bit is the blankness of those outer walls. Legorreta built the Camino Real as a kind of walled town, turned inward onto its own courtyards and gardens, so that the city outside drops away the moment you're through the door, and that sense of arrival is really the building's whole design.\n\nIf the doormen let you through, head inside to the lobby and climb the broad staircase to find the gold Goeritz wall, then look back down at the hallways, which are around nine feet wide and built, it seems, for making an entrance."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.4281528535572,
+      "centroidLongitude": -99.1793932932541,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "2be3d69f-a78a-542f-86a9-ae39e3219e8f",
+        "07f31f81-16b1-5345-b411-a7e2e0a1f14a",
+        "f67f6de1-e449-5b31-bb9c-8be2905e7b9a",
+        "edb75a45-df25-58cb-87c8-c744eee9bf97",
+        "59f07717-a858-56d4-b495-15d1396a9ea8",
+        "F35C24A1-58FE-52FD-A85B-024B96C50ED4",
+        "3ca30004-75d7-58df-880c-387869a3e321",
+        "a648b9d7-4924-555c-8762-92c0c674ca1f"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Art",
+        "Modernist",
+        "Public Art",
+        "Designed by a Master",
+        "Ricardo Legorreta"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "811c4ea2-3f08-5b28-89eb-354f803cab14",
+      "createdAt": "2026-11-05",
+      "title": "Cantina El Bosque",
+      "shortDescription": "It's 1937, and on a corner in San Miguel Chapultepec someone opens a little cantina that also sells tortas, the kind of place where a man might…",
+      "longDescription": "It's 1937, and on a corner in San Miguel Chapultepec someone opens a little cantina that also sells tortas, the kind of place where a man might stop for a drink and a sandwich on his way home, and it has been pouring ever since.\n\nBegin with the drinks, because the house cocktail is the Cascada, built on vodka, lime and something sparkling, and it's the thing regulars order without looking at the menu. Alongside it come the botanas, the small free dishes that arrive with your drinks and change from day to day, and on Sundays that usually means chicharrón in green sauce.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-cantina-el-bosque_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-cantina-el-bosque_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-cantina-el-bosque_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-cantina-el-bosque_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-cantina-el-bosque_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "73d804f6-2616-5788-8088-4a05a51d610e",
+          "order": 0,
+          "title": "Cantina El Bosque",
+          "caption": "On the corner of Calle Trece de Septiembre in San Miguel Chapultepec, by the low building with its terrace.",
+          "latitude": 19.419333362205876,
+          "longitude": -99.17848492696977,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-cantina-el-bosque.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-cantina-el-bosque_hero.webp",
+          "transcriptText": "It's 1937, and on a corner in San Miguel Chapultepec someone opens a little cantina that also sells tortas, the kind of place where a man might stop for a drink and a sandwich on his way home, and it has been pouring ever since.\n\nFind the corner where Calle Trece de Septiembre meets the street, and the cantina should be the low building facing you, with its terrace spilling onto the pavement, wooden furniture inside, and, from about five in the afternoon, the sound of a live trio drifting out of the door.\n\nBegin with the drinks, because the house cocktail is the Cascada, built on vodka, lime and something sparkling, and it's the thing regulars order without looking at the menu. Alongside it come the botanas, the small free dishes that arrive with your drinks and change from day to day, and on Sundays that usually means chicharrón in green sauce.\n\nThe kitchen has grown up around the cantina classics, so there's a salt-baked fish meant for sharing, a breaded milanesa, and tacos of braised beef shank, plus a potato-and-cheese dish that started as one customer's request and simply never left the menu.\n\nHere's the thing about a cantina like this one, which closed during the pandemic, took on new partners and reopened in 2021. Places this old usually change hands quietly or vanish, and what's notable is how little it seems to have changed in the process, because the corner, the trio and the free botanas all came through intact.\n\nWhen you've finished, the gallery Kurimanzutto is only a few streets away in the same neighbourhood, so you can walk off lunch among some of the most talked-about contemporary art in Mexico, which feels like exactly the sort of contrast this part of the city does well."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.419333362205876,
+      "centroidLongitude": -99.17848492696977,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "59648c0e-9b8e-5991-bba3-43c11afec233",
+        "3df7a354-dcd1-5533-9860-446e6f02cc13",
+        "1c607a07-db95-59c2-98ef-8e5c8c9aac88",
+        "13f598f3-b6e5-5653-9481-daab905ff60d",
+        "d5ffca7c-3493-5ffd-93c0-660af3166e73",
+        "59f07717-a858-56d4-b495-15d1396a9ea8",
+        "147bc80c-bc6a-53d7-8665-09f8c230797f",
+        "a70f0a45-a4f4-52bc-a444-991472216970"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d5a1d997-4466-560f-bc2e-c2c45f17f7be",
+      "createdAt": "2026-11-05",
+      "title": "Carla Fernández",
+      "shortDescription": "Most of the clothes in this shop start life as simple squares and rectangles, the same geometry that indigenous garments in Mexico have used for…",
+      "longDescription": "Most of the clothes in this shop start life as simple squares and rectangles, the same geometry that indigenous garments in Mexico have used for centuries, and that is the quiet secret behind everything on the rails.\n\nLook closely at the cut, because Carla Fernández spent years studying traditional clothing across Mexico, cataloguing how each piece is folded and joined, and she published what she learned in a book called The Barefoot Designer, so the patterns you see here are research turned into tailoring.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-carla-fernandez_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bcb37430-349b-52d3-bbb7-b6202f827f26",
+          "order": 0,
+          "title": "Carla Fernández",
+          "caption": "On Álvaro Obregón near Monterrey, looking across from the tree-lined central walkway at the shop windows.",
+          "latitude": 19.419070288073193,
+          "longitude": -99.16399646280586,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-carla-fernandez.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-carla-fernandez_hero.webp",
+          "transcriptText": "Most of the clothes in this shop start life as simple squares and rectangles, the same geometry that indigenous garments in Mexico have used for centuries, and that is the quiet secret behind everything on the rails.\n\nLook across Álvaro Obregón from its tree-lined central walkway, near the corner with Monterrey, and the shop should be facing you, past the benches and sculptures, with rails of garments in black, white and bold blocks of colour behind the windows.\n\nLook closely at the cut, because Carla Fernández spent years studying traditional clothing across Mexico, cataloguing how each piece is folded and joined, and she published what she learned in a book called The Barefoot Designer, so the patterns you see here are research turned into tailoring.\n\nThe making comes next, since much of the embroidery and weaving is done in partnership with artisan cooperatives, many of them led by women, through a travelling workshop she set up called Taller Flora. Recent collections have drawn on makers from Yucatán and Guanajuato, and you'll find small handmade pieces too, like bracelets turned from the wooden whisks used to froth hot chocolate.\n\nShe describes much of her clothing as unisex, one size and one age, meaning it's designed to be worn by anyone, at any point in their life, which is a pointed thing to say in an industry that usually sells the opposite.\n\nWhat's really going on here, then, is preservation disguised as fashion, a way of keeping endangered techniques alive by making sure people keep paying for them.\n\nIf you'd like to see the bigger picture, the brand's flagship sits at Marsella seventy-two in Colonia Juárez, about a twenty-minute walk north, in a concrete building designed by the artist Pedro Reyes, with floors set with mosaics inspired by Aztec iconography and a rooftop given over to weaving workshops."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.419070288073193,
+      "centroidLongitude": -99.16399646280586,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "4128fcfb-f72c-509d-97c6-368c8be8202f",
+        "e3db8352-8eb8-536b-bcd4-716f756a9f2d",
+        "07f31f81-16b1-5345-b411-a7e2e0a1f14a",
+        "537a902e-70fa-53b7-8e17-6b2f923d1905",
+        "ec9acdc8-2598-5bc8-9c64-65151e43a395",
+        "d5ffca7c-3493-5ffd-93c0-660af3166e73",
+        "D530B11F-45A9-5C26-B185-CBDA21B12A20",
+        "59648c0e-9b8e-5991-bba3-43c11afec233"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Fashion",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "537a902e-70fa-53b7-8e17-6b2f923d1905",
+      "createdAt": "2026-11-05",
+      "title": "Casa Bosques",
+      "shortDescription": "A bookshop that also makes its own chocolate sounds like a whim, and yet Casa Bosques has turned that pairing into one of the most quietly…",
+      "longDescription": "A bookshop that also makes its own chocolate sounds like a whim, and yet Casa Bosques has turned that pairing into one of the most quietly influential shops in the city.\n\nStart with what's on those tables, which leans towards art, design and architecture, alongside independent magazines and small-press publications from around the world, grouped by ideas such as migration, feminism or community rather than by the usual categories. The founders, Jorge de la Garza and Rafael Prieto, have said they want people to discover rather than search, and the layout is built to make that happen.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-casa-bosques_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-casa-bosques_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-casa-bosques_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f77acf23-194b-55dc-805b-019f88d3ba6b",
+          "order": 0,
+          "title": "Casa Bosques",
+          "caption": "At Córdoba 25 in Roma Norte, before the protected early-1900s house with white walls and books laid face-out.",
+          "latitude": 19.423378742006918,
+          "longitude": -99.15982854907374,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-casa-bosques.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-casa-bosques_hero.webp",
+          "transcriptText": "A bookshop that also makes its own chocolate sounds like a whim, and yet Casa Bosques has turned that pairing into one of the most quietly influential shops in the city.\n\nCórdoba twenty-five, Roma Norte, a protected house built in the early nineteen hundreds: its facade and front door face you across the pavement, and inside there are white walls, pale shelves and plants in nearly every corner, with books laid face-out on long tables rather than squeezed spine-first onto shelves.\n\nStart with what's on those tables, which leans towards art, design and architecture, alongside independent magazines and small-press publications from around the world, grouped by ideas such as migration, feminism or community rather than by the usual categories. The founders, Jorge de la Garza and Rafael Prieto, have said they want people to discover rather than search, and the layout is built to make that happen.\n\nThe building itself is a catalogued heritage house, with a chunky concrete staircase and windows that owe something to Frank Lloyd Wright, and the white interior was shaped by the design studio Savvy, so the architecture does a lot of the browsing for you.\n\nThen there are the chocolates, made in collaboration with artists and designers, each with its own wrapper and often a suggested drink to go alongside, which makes them rather more like small editions than sweets.\n\nThe thread running through all of it is a belief that objects should be made with the same care as the books, which is why the same people also run the Index Art Book Fair every September, bringing independent publishers to the city for a few busy days.\n\nWhen you leave, ask for whichever chocolate bar is newest, then walk the three blocks to Plaza Río de Janeiro, the leafy Roma square with a bronze copy of Michelangelo's David at its centre, and find a bench to unwrap it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.423378742006918,
+      "centroidLongitude": -99.15982854907374,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "2be3d69f-a78a-542f-86a9-ae39e3219e8f",
+        "4128fcfb-f72c-509d-97c6-368c8be8202f",
+        "07f31f81-16b1-5345-b411-a7e2e0a1f14a",
+        "edb75a45-df25-58cb-87c8-c744eee9bf97",
+        "d5a1d997-4466-560f-bc2e-c2c45f17f7be",
+        "59f07717-a858-56d4-b495-15d1396a9ea8",
+        "e3db8352-8eb8-536b-bcd4-716f756a9f2d",
+        "3472686C-F0D3-5305-9337-4B6C8BEDA757"
+      ],
+      "primaryCategory": "literature",
+      "tags": [
+        "Venue",
+        "Literature",
+        "Food",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a70f0a45-a4f4-52bc-a444-991472216970",
+      "createdAt": "2026-11-05",
+      "title": "Contramar",
+      "shortDescription": "The most famous seafood restaurant in Mexico City sits more than two thousand metres above sea level, several hours' drive from the nearest…",
+      "longDescription": "The most famous seafood restaurant in Mexico City sits more than two thousand metres above sea level, several hours' drive from the nearest beach, and it was dreamed up on holiday.\n\nGabriela Cámara opened Contramar in August 1998, after a beach trip a couple of years earlier left her wanting that same easy seaside lunch back in the capital, and the room was built to feel like a palapa, the thatched beach shelters of the Mexican coast.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-contramar_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-contramar_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-contramar_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-contramar_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-contramar_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2b9fb9f5-7194-5a0d-8810-cb3423dc630c",
+          "order": 0,
+          "title": "Contramar",
+          "caption": "At Durango 200 in Roma Norte, looking through the wide-open front into the high-ceilinged dining room.",
+          "latitude": 19.419756373000393,
+          "longitude": -99.16714723558195,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-contramar.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-contramar_hero.webp",
+          "transcriptText": "The most famous seafood restaurant in Mexico City sits more than two thousand metres above sea level, several hours' drive from the nearest beach, and it was dreamed up on holiday.\n\nThrough the wide-open front at Durango two hundred, in Roma Norte, you should be looking into a broad dining room with high ceilings, an open kitchen at the back and, at lunchtime, nearly every table taken, with waiters in white weaving between them.\n\nGabriela Cámara opened Contramar in August 1998, after a beach trip a couple of years earlier left her wanting that same easy seaside lunch back in the capital, and the room was built to feel like a palapa, the thatched beach shelters of the Mexican coast.\n\nThe dish everyone orders is the tuna tostada, thin slices of raw tuna on a crisp tortilla with chipotle mayonnaise, avocado and a tangle of fried leek, and it has been copied so widely that you've probably eaten an imitation somewhere without knowing where it came from.\n\nThe other signature is the pescado a la talla, a whole fish split open down the middle and grilled, with one half painted in red chilli adobo and the other in green parsley sauce, so it arrives at the table looking rather like a flag, and it's meant to be shared with tortillas and beans.\n\nContramar is really an argument about lunch, if you think about it. It's built for the long Mexican midday meal that can stretch from two until the evening, and its success helped persuade a whole generation of restaurants that lunch, not dinner, could be the main event.\n\nBefore you sit down, look for the Poemario, a blackboard where the restaurant chalks up a poem about the sea by a Mexican writer, then book ahead if you can, because on a Friday afternoon the queue for a table can run right out onto Durango."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.419756373000393,
+      "centroidLongitude": -99.16714723558195,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "811c4ea2-3f08-5b28-89eb-354f803cab14",
+        "13f598f3-b6e5-5653-9481-daab905ff60d",
+        "147bc80c-bc6a-53d7-8665-09f8c230797f",
+        "1c607a07-db95-59c2-98ef-8e5c8c9aac88",
+        "c7c729b5-5762-579a-b8de-ec7686640427",
+        "3df7a354-dcd1-5533-9860-446e6f02cc13",
+        "59648c0e-9b8e-5991-bba3-43c11afec233",
+        "69aca928-5ade-5659-8587-6e735b909f49"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1c607a07-db95-59c2-98ef-8e5c8c9aac88",
+      "createdAt": "2026-11-05",
+      "title": "El Califa de León",
+      "shortDescription": "This little stand in San Rafael sells three kinds of taco from a counter only a few metres wide, and for two years it held a Michelin star, the…",
+      "longDescription": "This little stand in San Rafael sells three kinds of taco from a counter only a few metres wide, and for two years it held a Michelin star, the first taquería in the world to win one.\n\nThe star is the gaonera, named after Rodolfo Gaona, the celebrated Mexican bullfighter of the early twentieth century. It's beef fillet sliced thin, seasoned with nothing more than salt and a squeeze of lime, seared on the griddle and folded into a fresh corn tortilla, and the man who has run that griddle for around two decades, Arturo Rivera Martínez, says the secret is simply the simplicity.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-el-califa-de-leon_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-el-califa-de-leon_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-el-califa-de-leon_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-el-califa-de-leon_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e7764b83-bf7e-5928-9dcc-8625420849c5",
+          "order": 0,
+          "title": "El Califa de León",
+          "caption": "On Ribera de San Cosme in San Rafael, at the narrow taco stand with a steel griddle and a queue outside.",
+          "latitude": 19.441510114558202,
+          "longitude": -99.15914832484468,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-el-califa-de-leon.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-el-califa-de-leon_hero.webp",
+          "transcriptText": "This little stand in San Rafael sells three kinds of taco from a counter only a few metres wide, and for two years it held a Michelin star, the first taquería in the world to win one.\n\nNumber fifty-six on Ribera de San Cosme is barely wider than a garage door, so look for the narrow opening on the busy avenue, with a steel griddle running almost its entire width, a taquero working the meat in front of you, and, more often than not, a queue on the pavement waiting its turn.\n\nThe star is the gaonera, named after Rodolfo Gaona, the celebrated Mexican bullfighter of the early twentieth century. It's beef fillet sliced thin, seasoned with nothing more than salt and a squeeze of lime, seared on the griddle and folded into a fresh corn tortilla, and the man who has run that griddle for around two decades, Arturo Rivera Martínez, says the secret is simply the simplicity.\n\nAlongside it you'll find bistec and chuleta, steak and pork chop, with red or green salsa to finish, and that's more or less the whole menu, which has barely changed since the stand opened in 1968.\n\nThe Michelin Guide gave El Califa its star in May 2024, the first time it had reviewed Mexico at all, and in May 2026 the star was withdrawn, although the stand remains on the guide's list of recommended places. What's worth holding on to is that the taco didn't change in either direction, because the gaonera tastes the same now as it did the week before the inspectors arrived.\n\nOrder a gaonera first and eat it standing, which is how it's meant to be done, then, if you fancy a walk afterwards, the Museo Universitario del Chopo, an iron-and-glass hall shipped over from Germany at the turn of the twentieth century, is a short stroll away."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.441510114558202,
+      "centroidLongitude": -99.15914832484468,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "811c4ea2-3f08-5b28-89eb-354f803cab14",
+        "3df7a354-dcd1-5533-9860-446e6f02cc13",
+        "59648c0e-9b8e-5991-bba3-43c11afec233",
+        "147bc80c-bc6a-53d7-8665-09f8c230797f",
+        "c7c729b5-5762-579a-b8de-ec7686640427",
+        "69aca928-5ade-5659-8587-6e735b909f49",
+        "d5ffca7c-3493-5ffd-93c0-660af3166e73",
+        "a70f0a45-a4f4-52bc-a444-991472216970"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "59648c0e-9b8e-5991-bba3-43c11afec233",
+      "createdAt": "2026-11-05",
+      "title": "El Micky",
+      "shortDescription": "The name, according to the people behind it, comes from Miguel Hidalgo, the borough you're standing in, and the cartoon mouse in the logo…",
+      "longDescription": "The name, according to the people behind it, comes from Miguel Hidalgo, the borough you're standing in, and the cartoon mouse in the logo arrived by happy accident, courtesy of the designer.\n\nEl Micky began life around 2022 in a smaller space nearby and filled up so quickly that within a couple of years it had moved here, to a bigger two-floor building, with a sister room called La Minni opening alongside as a place to eat before the dancing starts.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-el-micky_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-el-micky_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "82c6b6f9-f53b-5dae-a824-c01ef6fe4275",
+          "order": 0,
+          "title": "El Micky",
+          "caption": "On Avenida Jalisco in Tacubaya: white walls washed in purple neon, two storeys of music and a queue.",
+          "latitude": 19.405892846079315,
+          "longitude": -99.18526464721778,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-el-micky.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-el-micky_hero.webp",
+          "transcriptText": "The name, according to the people behind it, comes from Miguel Hidalgo, the borough you're standing in, and the cartoon mouse in the logo arrived by happy accident, courtesy of the designer.\n\nAfter dark, the building at Avenida Jalisco one six five, in Tacubaya, gives itself away with white walls washed in purple neon, music thumping through two storeys, and a queue that starts forming on the pavement well before ten.\n\nEl Micky began life around 2022 in a smaller space nearby and filled up so quickly that within a couple of years it had moved here, to a bigger two-floor building, with a sister room called La Minni opening alongside as a place to eat before the dancing starts.\n\nThe food is the surprise, because the owner's mother is from Chiapas, in the far south, and the kitchen leans on that, so there's a plato botanero of refried beans, garnachas and Chiapas-style quesadillas that's built for sharing across a crowded table.\n\nThen there's the drink that everyone photographs, the gomichela, a litre of beer in a plastic cup, rimmed with chamoy, the sweet-sour chilli sauce, and dotted with gummy sweets, and alongside it come the bright blue cocktails the regulars call azulitos.\n\nStrip away the neon and you've got a cantina remixed for a new crowd, with plastic cups and Chiapas home cooking on one side and a playlist that lurches from pop to regional Mexican to reggaeton on the other, and the artists, actors and designers who fill it seem to love it for exactly that high-low mix.\n\nIt opens from Wednesday to Saturday, from seven in the evening, so arrive early, start at La Minni with a plate of those quesadillas, and work your way next door to the dance floor once the room has properly filled up."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.405892846079315,
+      "centroidLongitude": -99.18526464721778,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "811c4ea2-3f08-5b28-89eb-354f803cab14",
+        "3df7a354-dcd1-5533-9860-446e6f02cc13",
+        "1c607a07-db95-59c2-98ef-8e5c8c9aac88",
+        "147bc80c-bc6a-53d7-8665-09f8c230797f",
+        "d5ffca7c-3493-5ffd-93c0-660af3166e73",
+        "59f07717-a858-56d4-b495-15d1396a9ea8",
+        "69aca928-5ade-5659-8587-6e735b909f49",
+        "07f31f81-16b1-5345-b411-a7e2e0a1f14a"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "147bc80c-bc6a-53d7-8665-09f8c230797f",
+      "createdAt": "2026-11-05",
+      "title": "El Turix",
+      "shortDescription": "Turix is the Maya word for dragonfly, which is a delicate name for a place that does one heavy, glorious thing, slow-cooked pork, and does…",
+      "longDescription": "Turix is the Maya word for dragonfly, which is a delicate name for a place that does one heavy, glorious thing, slow-cooked pork, and does almost nothing else.\n\nThat meat is cochinita pibil, the great dish of the Yucatán peninsula, pork marinated in achiote paste and bitter orange juice and then slow-cooked until it falls apart, and it comes topped with pink pickled onions and, if you're brave, a fiery habanero salsa.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-el-turix_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-el-turix_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f3095516-ce8e-5d00-bd1d-6771adee934b",
+          "order": 0,
+          "title": "El Turix",
+          "caption": "At Emilio Castelar 212 in Polanco, near Parque Lincoln: a tiny counter with people eating on the pavement.",
+          "latitude": 19.431682297540238,
+          "longitude": -99.20125336319376,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-el-turix.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-el-turix_hero.webp",
+          "transcriptText": "Turix is the Maya word for dragonfly, which is a delicate name for a place that does one heavy, glorious thing, slow-cooked pork, and does almost nothing else.\n\nHalfway along Emilio Castelar, at number two one two, look for a tiny shopfront a couple of blocks from Parque Lincoln, with a counter facing the pavement, a glass case of glistening meat, and people standing outside eating off paper, since there's nowhere at all to sit down.\n\nThat meat is cochinita pibil, the great dish of the Yucatán peninsula, pork marinated in achiote paste and bitter orange juice and then slow-cooked until it falls apart, and it comes topped with pink pickled onions and, if you're brave, a fiery habanero salsa.\n\nYou'll get it three ways, in a taco, in a torta, which is a crusty bread roll, or in a panucho, a thick tortilla stuffed with refried beans and fried until crisp, and it's the panucho that people tend to come back for.\n\nThe family who run it came here from Yucatán, and they've been serving the same short menu in this spot for around thirty years, through every change Polanco has gone through in that time.\n\nThe nice irony is the setting, because you're in one of the most expensive neighbourhoods in the country, a few steps from luxury boutiques, and one of its most loved lunches is eaten standing on the kerb or perched on the edge of a planter, with lawyers, builders and shop assistants all elbow to elbow.\n\nAfterwards, walk the two blocks to Parque Lincoln, find the clock tower and the long reflecting pools, and settle on a bench to work out whether you've room for a second panucho after all."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 102,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.431682297540238,
+      "centroidLongitude": -99.20125336319376,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "3df7a354-dcd1-5533-9860-446e6f02cc13",
+        "c7c729b5-5762-579a-b8de-ec7686640427",
+        "811c4ea2-3f08-5b28-89eb-354f803cab14",
+        "59648c0e-9b8e-5991-bba3-43c11afec233",
+        "1c607a07-db95-59c2-98ef-8e5c8c9aac88",
+        "d5ffca7c-3493-5ffd-93c0-660af3166e73",
+        "a70f0a45-a4f4-52bc-a444-991472216970",
+        "69aca928-5ade-5659-8587-6e735b909f49"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "13f598f3-b6e5-5653-9481-daab905ff60d",
+      "createdAt": "2026-11-05",
+      "title": "Hotel CondesaDF",
+      "shortDescription": "On a clear evening, from the roof of this triangular building, you can see the trees of Parque España below you and, far beyond them, the castle…",
+      "longDescription": "On a clear evening, from the roof of this triangular building, you can see the trees of Parque España below you and, far beyond them, the castle on Chapultepec hill.\n\nIt was built in 1928 as an apartment block of twelve flats for well-off couples, in the French style that was fashionable in the Condesa at the time, when the neighbourhood was being laid out on the grounds of an old hacienda.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-hotel-condesadf_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-hotel-condesadf_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-hotel-condesadf_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-hotel-condesadf_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-hotel-condesadf_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "385b45ec-ee6e-5108-acae-3ff2c1322c52",
+          "order": 0,
+          "title": "Hotel CondesaDF",
+          "caption": "On the corner of Veracruz and Guadalajara, with Parque España behind you, facing the pale wedge-shaped building.",
+          "latitude": 19.4163355618324,
+          "longitude": -99.17204900599208,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-hotel-condesadf.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-hotel-condesadf_hero.webp",
+          "transcriptText": "On a clear evening, from the roof of this triangular building, you can see the trees of Parque España below you and, far beyond them, the castle on Chapultepec hill.\n\nWith Parque España at your back, on the corner of Avenida Veracruz and Guadalajara, look up at a pale building shaped like a wedge, with tall windows, wrought-iron balconies and a little greenery trailing over the top floor.\n\nIt was built in 1928 as an apartment block of twelve flats for well-off couples, in the French style that was fashionable in the Condesa at the time, when the neighbourhood was being laid out on the grounds of an old hacienda.\n\nGrupo Habita bought it in 2001 and opened it as a hotel in 2005, with the architect Javier Sánchez restoring the building and the Paris designer India Mahdavi doing the interiors, down to the furniture in the rooms and the cutlery in the restaurant.\n\nThere are forty rooms now, arranged around a courtyard where the restaurant, El Patio, serves Mexican food with a French accent, and the Sunday brunch has become a neighbourhood fixture, drawing locals as well as guests.\n\nThen there's the roof, the reason many people come, a triangular terrace with a small sushi bar that sits rather incongruously among the plants and the treetops, given the bustle a few floors below.\n\nThe real story is that this hotel arrived just as the Condesa was becoming the neighbourhood of choice for a new generation of Mexico City, and it became one of the places where that change could be seen, and drunk, and argued about, all in one room.\n\nCross straight into Parque España as you leave and walk through it, then carry on south into the bigger Parque México, where the Art Deco apartment blocks around the edge are some of the best in the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.4163355618324,
+      "centroidLongitude": -99.17204900599208,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "811c4ea2-3f08-5b28-89eb-354f803cab14",
+        "07f31f81-16b1-5345-b411-a7e2e0a1f14a",
+        "59f07717-a858-56d4-b495-15d1396a9ea8",
+        "F35C24A1-58FE-52FD-A85B-024B96C50ED4",
+        "a70f0a45-a4f4-52bc-a444-991472216970",
+        "DD610C34-3DDE-5B2A-B575-CAF14498B46C",
+        "f67f6de1-e449-5b31-bb9c-8be2905e7b9a",
+        "3ca30004-75d7-58df-880c-387869a3e321"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Food",
+        "Viewpoint",
+        "Designed by a Master",
+        "Javier Sánchez"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "69aca928-5ade-5659-8587-6e735b909f49",
+      "createdAt": "2026-11-05",
+      "title": "Issi",
+      "shortDescription": "Issi was a childhood nickname, and the woman who chose it for her restaurant, Isabella Romero, is happy to tell you she isn't a chef at all, but…",
+      "longDescription": "Issi was a childhood nickname, and the woman who chose it for her restaurant, Isabella Romero, is happy to tell you she isn't a chef at all, but that food is simply the way she shows people she cares.\n\nBegin with the menu, which is built around comfort food, things like fish and chips or a spicy BLT, given a careful, grown-up treatment and shifting with the seasons, so it's always worth asking what's new.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-issi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-issi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-issi_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-issi_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-issi_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "872b99ff-480d-508d-b35c-226037ebf28f",
+          "order": 0,
+          "title": "Issi",
+          "caption": "On Mayorga, a short residential street in Lomas de Chapultepec, outside number 118.",
+          "latitude": 19.41066,
+          "longitude": -99.21776,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-issi.mp3",
+          "audioDurationSeconds": 101,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-issi_hero.webp",
+          "transcriptText": "Issi was a childhood nickname, and the woman who chose it for her restaurant, Isabella Romero, is happy to tell you she isn't a chef at all, but that food is simply the way she shows people she cares.\n\nMayorga is a short, easily missed residential street in Lomas de Chapultepec, and the restaurant sits at number one eighteen, a small, modern dining room behind glass, warmly lit and set out more like a family kitchen than a restaurant.\n\nBegin with the menu, which is built around comfort food, things like fish and chips or a spicy BLT, given a careful, grown-up treatment and shifting with the seasons, so it's always worth asking what's new.\n\nThen there are the dishes that come from her own life, and the montadito de papa is the one to know, three neat cubes of layered potato with beans, chorizo and sour cream, all of them things she ate for breakfast as a child.\n\nNext to it sits a carpaccio of raw chayote, the pale green squash you'll see in every Mexican market, sliced paper-thin with cherry tomatoes, hazelnuts and alfalfa sprouts, which is a family recipe passed down rather than invented for the menu.\n\nLomas is a neighbourhood of high walls, long driveways and very few people out walking, and what Issi tries to do is give it a place that works the other way, somewhere you might walk to on a weekday evening and find your neighbours already at the next table.\n\nIf it's your first visit, order the montadito de papa to start, keep the chayote for the middle of the meal, and book ahead, because the room is small, it's closed on Mondays, and on Sundays it only serves lunch."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 101,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.41066,
+      "centroidLongitude": -99.21776,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "1c607a07-db95-59c2-98ef-8e5c8c9aac88",
+        "811c4ea2-3f08-5b28-89eb-354f803cab14",
+        "3df7a354-dcd1-5533-9860-446e6f02cc13",
+        "c7c729b5-5762-579a-b8de-ec7686640427",
+        "59648c0e-9b8e-5991-bba3-43c11afec233",
+        "147bc80c-bc6a-53d7-8665-09f8c230797f",
+        "13f598f3-b6e5-5653-9481-daab905ff60d",
+        "e3db8352-8eb8-536b-bcd4-716f756a9f2d"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2be3d69f-a78a-542f-86a9-ae39e3219e8f",
+      "createdAt": "2026-11-05",
+      "title": "Kurimanzutto",
+      "shortDescription": "This gallery's very first exhibition lasted a single day and took place on a rented fruit stall in a food market, with the art priced to compete…",
+      "longDescription": "This gallery's very first exhibition lasted a single day and took place on a rented fruit stall in a food market, with the art priced to compete with the produce.\n\nThat market show happened in August 1999, at the Mercado de Medellín, when Mónica Manzutto and José Kuri, with ideas from the artist Gabriel Orozco, launched a gallery that had no gallery. For the next few years they staged projects wherever they could find room, in car parks, shipping containers and restaurants, and they built a reputation without a front door.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-kurimanzutto_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-kurimanzutto_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-kurimanzutto_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "dd31c230-4813-55b1-bf0a-b55143e0ee77",
+          "order": 0,
+          "title": "Kurimanzutto",
+          "caption": "At Gobernador Rafael Rebollar 94 in San Miguel Chapultepec, behind a plain wall: a long, low former lumber yard.",
+          "latitude": 19.411620676716055,
+          "longitude": -99.18763725092627,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-kurimanzutto.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-kurimanzutto_hero.webp",
+          "transcriptText": "This gallery's very first exhibition lasted a single day and took place on a rented fruit stall in a food market, with the art priced to compete with the produce.\n\nBehind a plain wall at Gobernador Rafael Rebollar ninety-four, in San Miguel Chapultepec, sits a long, low industrial building, and through the wide entrance you should glimpse a courtyard, and a sense of space that's unusual on a residential street like this one.\n\nThat market show happened in August 1999, at the Mercado de Medellín, when Mónica Manzutto and José Kuri, with ideas from the artist Gabriel Orozco, launched a gallery that had no gallery. For the next few years they staged projects wherever they could find room, in car parks, shipping containers and restaurants, and they built a reputation without a front door.\n\nThe front door finally arrived in 2008, when they moved into this building, a lumber yard dating from the fifties, refurbished by Alberto Kalach, the same architect behind the Biblioteca Vasconcelos, who kept the industrial scale and let the light pour in.\n\nThe artists they work with include Orozco himself, Damián Ortega and Abraham Cruzvillegas, part of a generation that helped put contemporary Mexican art on the international map, and since 2018 the gallery has had a space in New York as well.\n\nThere's a lovely paradox in all this, because a gallery that made its name by refusing walls ended up with some of the most admired walls in the city, and it still carries that market-stall instinct, the idea that art belongs out in the world rather than behind glass.\n\nOnce you've seen the show, walk a few streets over to Cantina El Bosque, which has been pouring drinks in this neighbourhood since 1937, and you'll have covered the old and new San Miguel Chapultepec in a single afternoon."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.411620676716055,
+      "centroidLongitude": -99.18763725092627,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "edb75a45-df25-58cb-87c8-c744eee9bf97",
+        "4cb31204-1f5b-57eb-9d2f-a1061858ed4b",
+        "a648b9d7-4924-555c-8762-92c0c674ca1f",
+        "537a902e-70fa-53b7-8e17-6b2f923d1905",
+        "811c4ea2-3f08-5b28-89eb-354f803cab14",
+        "07f31f81-16b1-5345-b411-a7e2e0a1f14a",
+        "4128fcfb-f72c-509d-97c6-368c8be8202f",
+        "b8739d55-8302-5289-8354-e1a91876b821"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Architecture",
+        "Contemporary",
+        "Free to Visit",
+        "Designed by a Master",
+        "Alberto Kalach"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1cf7e4f0-9c0d-5c21-ab77-b0714a6f691c",
+      "createdAt": "2026-11-05",
+      "title": "LAGO",
+      "shortDescription": "Look at the roof first, because it's the whole reason this building is famous, a great curved sheet of concrete that dips in the middle and…",
+      "longDescription": "Look at the roof first, because it's the whole reason this building is famous, a great curved sheet of concrete that dips in the middle and sweeps up at the edges towards the lake.\n\nThat roof is what engineers call a hyperbolic paraboloid, and it was designed in 1964 by Alfonso Ramírez Ponce, who was just twenty-four at the time, working with Leónides Guadarrama, and he had studied under Félix Candela, the master of thin concrete shells.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-lago_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-lago_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-lago_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-lago_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-lago_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "405feeba-43d0-52a3-9686-56235193cacc",
+          "order": 0,
+          "title": "LAGO",
+          "caption": "On the shore of the Lago Mayor in Chapultepec's Second Section, before the saddle-shaped concrete roof.",
+          "latitude": 19.417232,
+          "longitude": -99.19978,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-lago.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-lago_hero.webp",
+          "transcriptText": "Look at the roof first, because it's the whole reason this building is famous, a great curved sheet of concrete that dips in the middle and sweeps up at the edges towards the lake.\n\nOn the shore of the Lago Mayor, in the Second Section of Chapultepec, with the water on one side of you and the low glass building under its saddle-shaped roof on the other, you should be able to see diners on the terrace and the lake stretching out behind them.\n\nThat roof is what engineers call a hyperbolic paraboloid, and it was designed in 1964 by Alfonso Ramírez Ponce, who was just twenty-four at the time, working with Leónides Guadarrama, and he had studied under Félix Candela, the master of thin concrete shells.\n\nFor decades this was the Restaurante del Lago, one of the city's grand places for a special occasion, but a renovation in the late nineties carved up the open interior, and after the pandemic it closed for good.\n\nIn 2022 it reopened as Lago Algo, after the architects of the studio Naso stripped back the later additions, and it now has two halves, LAGO, a restaurant and café cooking with local and sustainable ingredients, and ALGO, a free contemporary art gallery programmed by Galería OMR.\n\nWhat's changed, and it matters, is who the building is for. It used to be a place for a smart dinner with a view, and now you can wander in off a running path, look at new art for nothing and sit by the lake with a coffee, which makes it feel like it finally belongs to the park.\n\nBefore you go inside, walk a little way along the shore so you can see the roof side-on, where the curve is clearest, and if you've got your trainers on, the Pista El Sope running track loops through the trees nearby."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.417232,
+      "centroidLongitude": -99.19978,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "3ca30004-75d7-58df-880c-387869a3e321",
+        "9b4329a8-d70c-5af3-afda-b456a7de989e",
+        "f67f6de1-e449-5b31-bb9c-8be2905e7b9a",
+        "07f31f81-16b1-5345-b411-a7e2e0a1f14a",
+        "2be3d69f-a78a-542f-86a9-ae39e3219e8f",
+        "edb75a45-df25-58cb-87c8-c744eee9bf97",
+        "a648b9d7-4924-555c-8762-92c0c674ca1f",
+        "a70f0a45-a4f4-52bc-a444-991472216970"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Engineering",
+        "Art",
+        "Food",
+        "Modernist",
+        "Waterfront",
+        "Free to Visit",
+        "Designed by a Master",
+        "Alfonso Ramírez Ponce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f67f6de1-e449-5b31-bb9c-8be2905e7b9a",
+      "createdAt": "2026-11-05",
+      "title": "Lamartine Boutique Hotel Polanco",
+      "shortDescription": "Ten rooms isn't much of a hotel, by Polanco standards, and that is very much the point of the slim building in front of you.",
+      "longDescription": "Ten rooms isn't much of a hotel, by Polanco standards, and that is very much the point of the slim building in front of you.\n\nThat mesh is the first thing to notice, since it's doing three jobs at once, giving the guests privacy, letting them see out over the street, and shading the glass from the high-altitude sun so the rooms stay cool.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-lamartine-boutique-hotel_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-lamartine-boutique-hotel_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-lamartine-boutique-hotel_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-lamartine-boutique-hotel_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-lamartine-boutique-hotel_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e1402e2c-e0cb-5f68-a0bb-e72930b0593b",
+          "order": 0,
+          "title": "Lamartine Boutique Hotel Polanco",
+          "caption": "Across the road on Lamartine in Polanco, looking up at the fine metal mesh veiling the upper floors.",
+          "latitude": 19.432323247712183,
+          "longitude": -99.18986934907373,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-lamartine-boutique-hotel.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-lamartine-boutique-hotel_hero.webp",
+          "transcriptText": "Ten rooms isn't much of a hotel, by Polanco standards, and that is very much the point of the slim building in front of you.\n\nStand across the road from the slim new building on Lamartine, the quiet Polanco street it's named after, and look up past the entrance to a veil of fine metal mesh drawn across the upper floors, with the shapes of balconies just visible behind it.\n\nThat mesh is the first thing to notice, since it's doing three jobs at once, giving the guests privacy, letting them see out over the street, and shading the glass from the high-altitude sun so the rooms stay cool.\n\nThe hotel was designed by the Mexico City studio PPAA, the practice of Pablo Pérez Palacios, and it opened in 2026 on an awkward, narrow plot that left very little room for daylight. The answer was a skylight at the very centre of the building, with a metal-clad staircase beneath it that bounces the light down through every floor.\n\nInside it's all beige textured plaster, pale wood and floors of volcanic stone, with a garden at the back and a system for harvesting rainwater, which is the kind of detail you rarely see in a hotel this small.\n\nThe street name hides a nice detail, because Alphonse de Lamartine was a French Romantic poet, and Polanco is laid out as a sort of library, with streets named after writers and thinkers, from Homer and Horace to Petrarch and Dumas.\n\nWhat PPAA have done here, and done well, is build something new that doesn't shout, which in a neighbourhood full of glossy towers is a rather confident thing to do.\n\nWander a few blocks from here and read the street signs as you go, and you'll find Alejandro Dumas, Petrarca and Edgar Allan Poe all within easy walking distance, with shops and bars tucked into the old houses along each one."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.432323247712183,
+      "centroidLongitude": -99.18986934907373,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "07f31f81-16b1-5345-b411-a7e2e0a1f14a",
+        "4cb31204-1f5b-57eb-9d2f-a1061858ed4b",
+        "13f598f3-b6e5-5653-9481-daab905ff60d",
+        "4128fcfb-f72c-509d-97c6-368c8be8202f",
+        "1cf7e4f0-9c0d-5c21-ab77-b0714a6f691c",
+        "F35C24A1-58FE-52FD-A85B-024B96C50ED4",
+        "3ca30004-75d7-58df-880c-387869a3e321",
+        "2be3d69f-a78a-542f-86a9-ae39e3219e8f"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Contemporary",
+        "Hidden Gem",
+        "Designed by a Master",
+        "PPAA"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7f93e911-9493-5a9e-a065-59a8082f3dae",
+      "createdAt": "2026-11-05",
+      "title": "Jamaica Market | Mercado de Jamaica",
+      "shortDescription": "Around five thousand different kinds of flowers and plants pass through this market, arriving from all over Mexico, and it never closes, so you…",
+      "longDescription": "Around five thousand different kinds of flowers and plants pass through this market, arriving from all over Mexico, and it never closes, so you could buy a bunch of roses here at four in the morning if the mood took you.\n\nTrading here goes back a very long way, since this area was a marketplace around five hundred years ago, on the edge of the old lake, where goods arrived by canoe along the canals, and the market building you're in now was inaugurated in September 1957 as part of a wave of modern public markets built across the city.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-mercado-jamaica_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-mercado-jamaica_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-mercado-jamaica_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "690b3bb1-8968-577b-995a-ebc2d62eaa9e",
+          "order": 0,
+          "title": "Jamaica Market | Mercado de Jamaica",
+          "caption": "Just inside the flower halls from Guillermo Prieto, near Jamaica metro, among buckets of roses and lilies.",
+          "latitude": 19.408175889057663,
+          "longitude": -99.1230618829432,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-mercado-jamaica.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-mercado-jamaica_hero.webp",
+          "transcriptText": "Around five thousand different kinds of flowers and plants pass through this market, arriving from all over Mexico, and it never closes, so you could buy a bunch of roses here at four in the morning if the mood took you.\n\nHead in from Guillermo Prieto, near the Jamaica metro station, and stop just inside the flower halls, where the aisles stretch ahead of you under high concrete roofs, with buckets of roses, lilies and gladioli stacked to shoulder height on either side, and florists working on arrangements taller than they are.\n\nTrading here goes back a very long way, since this area was a marketplace around five hundred years ago, on the edge of the old lake, where goods arrived by canoe along the canals, and the market building you're in now was inaugurated in September 1957 as part of a wave of modern public markets built across the city.\n\nThe numbers are worth a moment, because there are roughly one thousand one hundred and fifty stalls, and flowers are the heart of it, with something like two in every five selling loose blooms and a quarter more doing arrangements.\n\nThen there's the food, in its own section, and it's here that the huarache is reputed to have been invented in the nineteen thirties, a long oval of corn dough shaped like the sandal it's named after, piled with beans, salsa and cheese.\n\nThe thing about Jamaica, really, is that flowers in Mexico aren't a luxury, they're part of the daily business of life, for birthdays, funerals, saints' days and weddings, and in late October this whole place turns orange with marigolds for the Day of the Dead.\n\nStop at the food section as you leave and order a huarache from one of the stalls, then carry your flowers out past the plant sellers, where you'll find everything from tiny cacti to small trees."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.408175889057663,
+      "centroidLongitude": -99.1230618829432,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "ec9acdc8-2598-5bc8-9c64-65151e43a395",
+        "59f07717-a858-56d4-b495-15d1396a9ea8",
+        "e3db8352-8eb8-536b-bcd4-716f756a9f2d",
+        "D530B11F-45A9-5C26-B185-CBDA21B12A20",
+        "4128fcfb-f72c-509d-97c6-368c8be8202f",
+        "c7c729b5-5762-579a-b8de-ec7686640427",
+        "7d6a30e1-ccae-5194-ae05-682f5af3884d",
+        "de343718-acc9-599e-809c-41d009a23934"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "Food",
+        "Commerce",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "14957817-c44f-564a-a5e6-b95f7cfb76dc",
+      "createdAt": "2026-11-05",
+      "title": "Diego Rivera & Frida Kahlo House-Studio Museum | Museo Casa Estudio Diego Rivera y Frida Kahlo",
+      "shortDescription": "Here are two houses, one large and one small, one red and one blue, joined by a narrow bridge at roof height, and together they make about as…",
+      "longDescription": "Here are two houses, one large and one small, one red and one blue, joined by a narrow bridge at roof height, and together they make about as clear a picture of a marriage as architecture has ever managed.\n\nBoth were designed by Juan O'Gorman, a young architect who'd fallen for the ideas of Le Corbusier, and they went up between 1929 and 1932, among the first truly functionalist buildings in Latin America, all bare concrete, exposed pipes and practical lines at a time when the rest of the street was colonial stone.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-casa-estudio-diego-rivera-frida-kahlo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-casa-estudio-diego-rivera-frida-kahlo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-casa-estudio-diego-rivera-frida-kahlo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-casa-estudio-diego-rivera-frida-kahlo_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-casa-estudio-diego-rivera-frida-kahlo_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-casa-estudio-diego-rivera-frida-kahlo_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c3faf2b7-e9ef-5b56-ad83-ae48a173cdab",
+          "order": 0,
+          "title": "Diego Rivera & Frida Kahlo House-Studio Museum | Museo Casa Estudio Diego Rivera y Frida Kahlo",
+          "caption": "At Altavista and Diego Rivera in San Ángel, facing the red and blue houses behind their organ-cactus fence.",
+          "latitude": 19.34983211748169,
+          "longitude": -99.19737776441804,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-casa-estudio-diego-rivera-frida-kahlo.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-casa-estudio-diego-rivera-frida-kahlo_hero.webp",
+          "transcriptText": "Here are two houses, one large and one small, one red and one blue, joined by a narrow bridge at roof height, and together they make about as clear a picture of a marriage as architecture has ever managed.\n\nAt the corner of Altavista and the street named after Diego Rivera, in San Ángel, face the boxy concrete buildings behind their living fence of tall organ cactus, with the bigger red and white house nearer you and the smaller blue one beyond it.\n\nBoth were designed by Juan O'Gorman, a young architect who'd fallen for the ideas of Le Corbusier, and they went up between 1929 and 1932, among the first truly functionalist buildings in Latin America, all bare concrete, exposed pipes and practical lines at a time when the rest of the street was colonial stone.\n\nLook at the larger house first, which was Rivera's, and you'll see its sawtooth roof, built to pull in steady north light for his double-height studio, and the spiral staircase wound round the outside of the building like an afterthought.\n\nThen the blue house, which was Frida Kahlo's, much smaller and more compact, with her kitchen, dining room and bedroom downstairs and a studio of her own above.\n\nThe couple moved in after returning from the United States in 1934, and while they didn't stay together here for long, Rivera kept working in his studio until his death in 1957, and it became a museum in 1986.\n\nWhat O'Gorman built, in the end, was a way for two very strong-willed artists to live side by side, each with a door of their own and a bridge they could choose to cross, which says rather more than most biographies do.\n\nBefore you go in, look along the cactus fence to the third, smaller house right beside the complex, which O'Gorman built for himself, and then, when you're done, cross the road for a margarita at the San Ángel Inn."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.34983211748169,
+      "centroidLongitude": -99.19737776441804,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "3ca30004-75d7-58df-880c-387869a3e321",
+        "e7f2b167-f928-5de6-9a48-d9d602cbacf8",
+        "4cb31204-1f5b-57eb-9d2f-a1061858ed4b",
+        "59f07717-a858-56d4-b495-15d1396a9ea8",
+        "b8739d55-8302-5289-8354-e1a91876b821",
+        "edb75a45-df25-58cb-87c8-c744eee9bf97",
+        "F35C24A1-58FE-52FD-A85B-024B96C50ED4",
+        "E3363651-CBD2-5837-8398-DFCEB73FFAE2"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Architecture",
+        "Art",
+        "Modernist",
+        "Designed by a Master",
+        "Juan O'Gorman"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "edb75a45-df25-58cb-87c8-c744eee9bf97",
+      "createdAt": "2026-11-05",
+      "title": "Museo Jumex",
+      "shortDescription": "The art inside this building was gathered on the back of a juice company, and the man who collected it started by hanging it in a gallery at the…",
+      "longDescription": "The art inside this building was gathered on the back of a juice company, and the man who collected it started by hanging it in a gallery at the fruit-juice factory, on the industrial edge of the city.\n\nStart with the stone, which is travertine from Xalapa, in Veracruz, a warm, slightly pitted limestone that changes colour through the day as the light moves across it, and the building was designed by the British architect David Chipperfield, opening in November 2013 as his first in Latin America.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-museo-jumex_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-museo-jumex_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-museo-jumex_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-museo-jumex_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-museo-jumex_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-museo-jumex_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-museo-jumex_7.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-museo-jumex_8.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bc5faeec-72ab-54d3-a2b5-2374f8b0cf04",
+          "order": 0,
+          "title": "Museo Jumex",
+          "caption": "On the raised stone plaza, facing the pale building with its saw-tooth roof, the Museo Soumaya beside it.",
+          "latitude": 19.440622918910442,
+          "longitude": -99.20389429325411,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-museo-jumex.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-museo-jumex_hero.webp",
+          "transcriptText": "The art inside this building was gathered on the back of a juice company, and the man who collected it started by hanging it in a gallery at the fruit-juice factory, on the industrial edge of the city.\n\nUp on the raised stone plaza, face the pale building that sits above you on its thick columns, with its jagged roofline of sharp peaks like a row of saw teeth, and nearby, the shimmering, twisting form of the Museo Soumaya rising beside it.\n\nStart with the stone, which is travertine from Xalapa, in Veracruz, a warm, slightly pitted limestone that changes colour through the day as the light moves across it, and the building was designed by the British architect David Chipperfield, opening in November 2013 as his first in Latin America.\n\nThen there's that roof, where the saw teeth aren't decoration at all, because each peak holds a skylight angled to bring soft, even daylight into the top-floor galleries, which is exactly the light you want for looking at art and exactly the light that's hardest to manufacture.\n\nThe collection belongs to Eugenio López Alonso, heir to the Jumex juice business, who bought his first Mexican artwork in 1994 and first showed his collection in 2001 at a gallery inside the company's factory in Ecatepec. It now runs to around two thousand eight hundred works, from Warhol and Koons to a whole generation of Mexican contemporary artists.\n\nIn effect, a private collection walked out of a factory and onto a public plaza, and the museum works very hard to feel open, with a plinth you can sit on and big timber doors that swing wide to the street.\n\nBack out on the plaza, look across at the Soumaya next door, then decide for yourself which of the two buildings makes the better case for how a museum ought to look."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.440622918910442,
+      "centroidLongitude": -99.20389429325411,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "9b4329a8-d70c-5af3-afda-b456a7de989e",
+        "a648b9d7-4924-555c-8762-92c0c674ca1f",
+        "2be3d69f-a78a-542f-86a9-ae39e3219e8f",
+        "BEB23F8E-8A4C-586B-8B86-4152DA896077",
+        "4cb31204-1f5b-57eb-9d2f-a1061858ed4b",
+        "07f31f81-16b1-5345-b411-a7e2e0a1f14a",
+        "e7f2b167-f928-5de6-9a48-d9d602cbacf8",
+        "537a902e-70fa-53b7-8e17-6b2f923d1905"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Contemporary",
+        "Designed by a Master",
+        "David Chipperfield"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9b4329a8-d70c-5af3-afda-b456a7de989e",
+      "createdAt": "2026-11-05",
+      "title": "National Museum of Anthropology | Museo Nacional de Antropología",
+      "shortDescription": "It was April 1964 when this enormous stone figure was hauled into the city on a specially built trailer, and on the day it arrived, a downpour…",
+      "longDescription": "It was April 1964 when this enormous stone figure was hauled into the city on a specially built trailer, and on the day it arrived, a downpour flooded several neighbourhoods, which is quite a welcome for a statue usually identified as Tláloc, the god of rain.\n\nThat monolith was brought here from Coatlinchán, in the State of Mexico, where it had lain for centuries, and its move was a national event, followed by crowds along the route.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-museo-nacional-de-antropologia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-museo-nacional-de-antropologia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-museo-nacional-de-antropologia_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-museo-nacional-de-antropologia_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-museo-nacional-de-antropologia_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5c32652c-e33e-564b-9a32-950db94d8185",
+          "order": 0,
+          "title": "National Museum of Anthropology | Museo Nacional de Antropología",
+          "caption": "On the Paseo de la Reforma forecourt, before the seven-metre stone monolith of Tláloc.",
+          "latitude": 19.42621062015233,
+          "longitude": -99.18629469325411,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-museo-nacional-de-antropologia.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-museo-nacional-de-antropologia_hero.webp",
+          "transcriptText": "It was April 1964 when this enormous stone figure was hauled into the city on a specially built trailer, and on the day it arrived, a downpour flooded several neighbourhoods, which is quite a welcome for a statue usually identified as Tláloc, the god of rain.\n\nThe carved giant standing on the forecourt in front of you, on the Paseo de la Reforma side of the museum, is the one to find, around seven metres tall and weighing roughly one hundred and sixty-five tonnes, with the long, low museum building stretching away behind it.\n\nThat monolith was brought here from Coatlinchán, in the State of Mexico, where it had lain for centuries, and its move was a national event, followed by crowds along the route.\n\nNow head inside, through the entrance hall, to the central courtyard, and you'll see the museum's other great object, which isn't an artefact at all. It's the paraguas, the umbrella, a vast concrete roof held up by a single column, with a curtain of water pouring from its rim, and the bronze reliefs on that column were made by the Chávez Morado brothers.\n\nThe museum was designed by Pedro Ramírez Vázquez with Jorge Campuzano and Rafael Mijares, and the whole thing was built in nineteen months, opening in September 1964, which in a city of slow building projects is a remarkable pace.\n\nUnderneath the engineering, the building tells a national story, laying out Mexico's ancient cultures in halls around that courtyard on the ground floor and the living indigenous peoples of the country upstairs, so that the past and the present are stacked one above the other.\n\nWhen you're ready, walk straight across the courtyard to the hall at the far end, the Mexica hall, where the great Sun Stone hangs on the wall, and give yourself a good few minutes in front of it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.42621062015233,
+      "centroidLongitude": -99.18629469325411,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "14998A34-CF64-55FE-B85B-95037226468E",
+        "edb75a45-df25-58cb-87c8-c744eee9bf97",
+        "a648b9d7-4924-555c-8762-92c0c674ca1f",
+        "BEB23F8E-8A4C-586B-8B86-4152DA896077",
+        "e7f2b167-f928-5de6-9a48-d9d602cbacf8",
+        "3ca30004-75d7-58df-880c-387869a3e321",
+        "9f4a4a4e-f7a6-5a35-a9de-16b5119d88f4",
+        "b8739d55-8302-5289-8354-e1a91876b821"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "History",
+        "Architecture",
+        "Modernist",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Pedro Ramírez Vázquez",
+        "Jorge Campuzano",
+        "Rafael Mijares"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a648b9d7-4924-555c-8762-92c0c674ca1f",
+      "createdAt": "2026-11-05",
+      "title": "Tamayo Museum | Museo Tamayo Arte Contemporáneo",
+      "shortDescription": "This museum exists because a Mexican painter decided that his own country deserved to see the art of the rest of the world, and then went out…",
+      "longDescription": "This museum exists because a Mexican painter decided that his own country deserved to see the art of the rest of the world, and then went out and bought it.\n\nThe painter was Rufino Tamayo, born in Oaxaca in 1899, and with his wife Olga he gave the collection and the idea for a public museum of international modern art, which opened here in 1981.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-museo-tamayo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-museo-tamayo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-museo-tamayo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-museo-tamayo_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "76060f34-a4c4-586d-9b19-548eaa2149a7",
+          "order": 0,
+          "title": "Tamayo Museum | Museo Tamayo Arte Contemporáneo",
+          "caption": "At Paseo de la Reforma 51, among the trees on the park side, facing the low, stepped grey concrete building.",
+          "latitude": 19.425917302446184,
+          "longitude": -99.18169990674589,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-museo-tamayo.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-museo-tamayo_hero.webp",
+          "transcriptText": "This museum exists because a Mexican painter decided that his own country deserved to see the art of the rest of the world, and then went out and bought it.\n\nSet back from Paseo de la Reforma at number fifty-one, half hidden among the trees on the park side, is a low, stepped building of grey concrete, and that's what you should be facing, with broad terraces climbing in tiers like a pyramid that someone has pressed flat.\n\nThe painter was Rufino Tamayo, born in Oaxaca in 1899, and with his wife Olga he gave the collection and the idea for a public museum of international modern art, which opened here in 1981.\n\nIts architects were Teodoro González de León and Abraham Zabludovsky, and if you go up close, run a hand over the walls, because that concrete was mixed with crushed marble and then chipped back by hand, giving it a rough, stony texture that reads almost like carved rock.\n\nThe stepped shape is no accident, either, since the architects took their cue from the platforms and terraces of pre-Hispanic sites, so a building designed for the most up-to-date art in the world is also quietly nodding to the oldest architecture in the country.\n\nInside, the Tamayos' collection runs to more than three hundred works by around one hundred and seventy artists, with names like Picasso, Rothko and Henry Moore, alongside the contemporary shows that now fill most of the galleries.\n\nTamayo's great gesture, I always think, was the reversal, because instead of a Mexican artist sending his work out to the great museums abroad, he brought the world's art home and put it in a park where anyone could walk in.\n\nWhen you come out, follow Reforma a few minutes west to the Museo Nacional de Antropología, and you'll have walked from the newest art in the city to the oldest in less than a quarter of an hour."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.425917302446184,
+      "centroidLongitude": -99.18169990674589,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "BEB23F8E-8A4C-586B-8B86-4152DA896077",
+        "edb75a45-df25-58cb-87c8-c744eee9bf97",
+        "9b4329a8-d70c-5af3-afda-b456a7de989e",
+        "2be3d69f-a78a-542f-86a9-ae39e3219e8f",
+        "e7f2b167-f928-5de6-9a48-d9d602cbacf8",
+        "4cb31204-1f5b-57eb-9d2f-a1061858ed4b",
+        "3ca30004-75d7-58df-880c-387869a3e321",
+        "b8739d55-8302-5289-8354-e1a91876b821"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Brutalist",
+        "Designed by a Master",
+        "Teodoro González de León",
+        "Abraham Zabludovsky"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e7f2b167-f928-5de6-9a48-d9d602cbacf8",
+      "createdAt": "2026-11-05",
+      "title": "National Autonomous University of Mexico | Universidad Nacional Autónoma de México",
+      "shortDescription": "The ground this campus stands on was poured out by a volcano, Xitle, around two thousand years ago, and when the university came to build here…",
+      "longDescription": "The ground this campus stands on was poured out by a volcano, Xitle, around two thousand years ago, and when the university came to build here, it turned the black lava rock into walls, paths and gardens.\n\nThat block is the Central Library, and the mosaic, by Juan O'Gorman, covers nearly four thousand square metres across all four sides, made from more than one hundred and fifty kinds of natural stone gathered from all over Mexico, so the colours you see are the country's own rocks rather than paint.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-unam_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-unam_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-unam_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-unam_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-unam_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-unam_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-unam_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9103cdaa-2662-5b65-be7f-3498715b12d5",
+          "order": 0,
+          "title": "National Autonomous University of Mexico | Universidad Nacional Autónoma de México",
+          "caption": "On the lawns of Ciudad Universitaria, facing the Central Library's stone mosaic, with the Rectoría to one side.",
+          "latitude": 19.33335,
+          "longitude": -99.18645,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-unam.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-unam_hero.webp",
+          "transcriptText": "The ground this campus stands on was poured out by a volcano, Xitle, around two thousand years ago, and when the university came to build here, it turned the black lava rock into walls, paths and gardens.\n\nOut on the wide lawns at the heart of Ciudad Universitaria, find a spot facing the tall, windowless block covered from top to bottom in coloured stone mosaic, with the slab-like Rectoría tower off to one side.\n\nThat block is the Central Library, and the mosaic, by Juan O'Gorman, covers nearly four thousand square metres across all four sides, made from more than one hundred and fifty kinds of natural stone gathered from all over Mexico, so the colours you see are the country's own rocks rather than paint.\n\nEach face tells part of the story of Mexican culture, with the ancient world on one side and the colonial era on another, and O'Gorman said he wanted the library to look different from every other building on campus, to give it a properly Mexican character.\n\nNow look over to the Rectoría, where David Alfaro Siqueiros made a mural in what he called sculpture-painting, raised forms of concrete covered in mosaic, between 1952 and 1954, and angled so it could be read by people driving past on Avenida Insurgentes.\n\nThe campus was planned by Mario Pani and Enrique del Moral, with more than sixty architects, engineers and artists involved, and it was finished in 1954, before becoming a World Heritage Site in 2007.\n\nNotice, too, that the art isn't tucked away in galleries but put right on the outsides of the buildings, for everyone who passes, which is a rather beautiful idea of what a public university is for.\n\nIf you've the energy, cross Insurgentes to the Estadio Olímpico Universitario, where Diego Rivera's stone relief wraps the front of the stadium, and you'll have seen the work of three of Mexico's great muralists in a single walk."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.33335,
+      "centroidLongitude": -99.18645,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "3ca30004-75d7-58df-880c-387869a3e321",
+        "b8739d55-8302-5289-8354-e1a91876b821",
+        "9b4329a8-d70c-5af3-afda-b456a7de989e",
+        "edb75a45-df25-58cb-87c8-c744eee9bf97",
+        "D2AB471A-E219-5B28-969F-76BEDF82F6E1",
+        "a648b9d7-4924-555c-8762-92c0c674ca1f",
+        "14957817-c44f-564a-a5e6-b95f7cfb76dc",
+        "9f4a4a4e-f7a6-5a35-a9de-16b5119d88f4"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Art",
+        "Modernist",
+        "Public Art",
+        "Iconic Landmark",
+        "Free to Visit",
+        "Designed by a Master",
+        "Mario Pani",
+        "Enrique del Moral",
+        "Juan O'Gorman"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "07f31f81-16b1-5345-b411-a7e2e0a1f14a",
+      "createdAt": "2026-11-05",
+      "title": "Octavia Casa",
+      "shortDescription": "This hotel is also a clothes shop, or perhaps it's a clothes shop with seven bedrooms upstairs, and the people who made it seem quite happy for…",
+      "longDescription": "This hotel is also a clothes shop, or perhaps it's a clothes shop with seven bedrooms upstairs, and the people who made it seem quite happy for you to decide which.\n\nOctavia is a Mexican fashion label, and its founder, Roberta Maceda, took an old, run-down Art Deco building on this street and turned it into a small hotel that works as a showcase for the brand's way of seeing.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-octavia-casa_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-octavia-casa_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-octavia-casa_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-octavia-casa_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-octavia-casa_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-octavia-casa_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d72a8e24-16d3-582c-838d-f74d8ef7269b",
+          "order": 0,
+          "title": "Octavia Casa",
+          "caption": "At Amatlán 126 in Hipódromo Condesa, before the narrow glass facade screened by slim timber louvres.",
+          "latitude": 19.410360259430544,
+          "longitude": -99.1764219914016,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-octavia-casa.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-octavia-casa_hero.webp",
+          "transcriptText": "This hotel is also a clothes shop, or perhaps it's a clothes shop with seven bedrooms upstairs, and the people who made it seem quite happy for you to decide which.\n\nNumber one two six on Amatlán, a tree-lined street in Hipódromo Condesa, has a narrow facade of glass screened by a row of slim vertical timber louvres, with a deep metal awning jutting out over the entrance below.\n\nOctavia is a Mexican fashion label, and its founder, Roberta Maceda, took an old, run-down Art Deco building on this street and turned it into a small hotel that works as a showcase for the brand's way of seeing.\n\nThe architect was Pablo Pérez Palacios, whose studio, PPAA, had to work with a plot so narrow that only one wall faced the street, and the answer was those timber louvres, which filter the light and give the rooms privacy, while on the ground floor glass panels and screens slide along tracks so the front can open to the street.\n\nInside, everything is organised around a central courtyard, which is the hotel lobby and the shop at the same time, set with wicker furniture, terracotta vases and plants, in a palette of ochre, grey and warm wood, and at the top there's a terrace on the roof.\n\nCleverly, the building does the brand's job without a logo in sight, so if you like the way the rooms feel, you're already halfway to liking the clothes, which is a much subtler kind of shop window.\n\nTwo minutes' walk away, Avenida Amsterdam curves in a long oval because it follows the line of a racetrack that once stood here, which is how the neighbourhood got the name Hipódromo, and loop round it under the trees."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.410360259430544,
+      "centroidLongitude": -99.1764219914016,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "4128fcfb-f72c-509d-97c6-368c8be8202f",
+        "4cb31204-1f5b-57eb-9d2f-a1061858ed4b",
+        "3ca30004-75d7-58df-880c-387869a3e321",
+        "f67f6de1-e449-5b31-bb9c-8be2905e7b9a",
+        "13f598f3-b6e5-5653-9481-daab905ff60d",
+        "F35C24A1-58FE-52FD-A85B-024B96C50ED4",
+        "edb75a45-df25-58cb-87c8-c744eee9bf97",
+        "DD610C34-3DDE-5B2A-B575-CAF14498B46C"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Fashion",
+        "Commerce",
+        "Art Deco",
+        "Hidden Gem",
+        "Designed by a Master",
+        "PPAA"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e3db8352-8eb8-536b-bcd4-716f756a9f2d",
+      "createdAt": "2026-11-05",
+      "title": "Onora",
+      "shortDescription": "Everything in this shop was made by hand somewhere in Mexico, and yet hardly any of it looks the way you might expect Mexican craft to look…",
+      "longDescription": "Everything in this shop was made by hand somewhere in Mexico, and yet hardly any of it looks the way you might expect Mexican craft to look, which is exactly what its founders set out to do.\n\nOnora was started in 2014 by María Eladia Hagerman, who is Mexican, and Maggie Galton, from New York, and they work with family workshops and communities in more than ten states, including Oaxaca, Chiapas, Puebla and Michoacán.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-onora_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-onora_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-onora_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-onora_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-onora_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b1e09f23-21ef-515b-94ef-e07c59e73c0c",
+          "order": 0,
+          "title": "Onora",
+          "caption": "At Lope de Vega 330 in Polanco, looking through the windows into a calm room of muted handmade pieces.",
+          "latitude": 19.432364441582052,
+          "longitude": -99.18719327976231,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-onora.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-onora_hero.webp",
+          "transcriptText": "Everything in this shop was made by hand somewhere in Mexico, and yet hardly any of it looks the way you might expect Mexican craft to look, which is exactly what its founders set out to do.\n\nPeer through the front windows at Lope de Vega three three zero, in Polanco, and you should see a calm, uncluttered room in muted beiges, blacks and greys, with woven throws and cushions, pottery on low tables and lacquered gourds catching the light.\n\nOnora was started in 2014 by María Eladia Hagerman, who is Mexican, and Maggie Galton, from New York, and they work with family workshops and communities in more than ten states, including Oaxaca, Chiapas, Puebla and Michoacán.\n\nLook at the colours first, because they're the key to the whole place. Rather than the bright pinks and turquoises of a typical craft market, the founders asked artisans for a pared-back palette, so that a Talavera plate from Puebla or an embroidered tunic from Oaxaca reads as something you'd put in a minimalist flat rather than a souvenir.\n\nThen the making, since you'll find black pottery, rebozo shawls, wool throws, hammocks and stone molcajetes for grinding salsa, each piece made using techniques that go back generations in the place it comes from.\n\nScale is the other thing they've thought hard about, since Onora keeps its orders deliberately small so that the artisans can carry on farming and taking part in the life of their villages, which means the business is shaped around the makers' lives rather than the other way round.\n\nAsk the staff which pieces come from Michoacán, home to some of the most striking pottery in the shop, then head west along the Polanco streets to Alejandro Dumas, where the perfume house Xinú bottles Mexico's plants in a very different way."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.432364441582052,
+      "centroidLongitude": -99.18719327976231,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "ec9acdc8-2598-5bc8-9c64-65151e43a395",
+        "d5a1d997-4466-560f-bc2e-c2c45f17f7be",
+        "d5ffca7c-3493-5ffd-93c0-660af3166e73",
+        "537a902e-70fa-53b7-8e17-6b2f923d1905",
+        "3df7a354-dcd1-5533-9860-446e6f02cc13",
+        "edb75a45-df25-58cb-87c8-c744eee9bf97",
+        "4128fcfb-f72c-509d-97c6-368c8be8202f",
+        "69aca928-5ade-5659-8587-6e735b909f49"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cb872a24-0098-554c-8940-26cc3f929271",
+      "createdAt": "2026-11-05",
+      "title": "Garibaldi Square | Plaza Garibaldi",
+      "shortDescription": "At almost any hour, several bands are playing in this square at once, a few metres apart, each trumpet section doing its best to drown out the…",
+      "longDescription": "At almost any hour, several bands are playing in this square at once, a few metres apart, each trumpet section doing its best to drown out the next, and somehow it all comes out as one great noise of welcome.\n\nThe square got its name in 1921, after Giuseppe Garibaldi, grandson of the Italian hero, who fought in the Mexican Revolution, and the music arrived soon afterwards, when the Salón Tenampa opened around 1923 and brought in a mariachi band from Cocula, in Jalisco, the region where the style was born.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-plaza-garibaldi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-plaza-garibaldi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-plaza-garibaldi_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-plaza-garibaldi_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "21269284-f629-5a26-89bf-19d1c3c4fdd3",
+          "order": 0,
+          "title": "Garibaldi Square | Plaza Garibaldi",
+          "caption": "Off the Eje Central, in the open square among the mariachi bands in their silver-studded charro suits.",
+          "latitude": 19.44076710030288,
+          "longitude": -99.13925639999194,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-plaza-garibaldi.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-plaza-garibaldi_hero.webp",
+          "transcriptText": "At almost any hour, several bands are playing in this square at once, a few metres apart, each trumpet section doing its best to drown out the next, and somehow it all comes out as one great noise of welcome.\n\nOff the Eje Central, on the northern edge of the old centre, step into the open square and turn slowly, with the mariachis in their silver-studded charro suits gathered in groups around you, bars and dance halls lining the edges, and a row of standing figures of famous singers along one side.\n\nThe square got its name in 1921, after Giuseppe Garibaldi, grandson of the Italian hero, who fought in the Mexican Revolution, and the music arrived soon afterwards, when the Salón Tenampa opened around 1923 and brought in a mariachi band from Cocula, in Jalisco, the region where the style was born.\n\nThe Tenampa is still here, on the square, with murals inside celebrating the plaza's musical life, and the golden age of Mexican cinema did the rest, with stars like Pedro Infante and José Alfredo Jiménez filmed singing here, which is why their figures now stand among the others in the square.\n\nThe system is simple, because the musicians are independent, so you agree a price with a band for a song, or for a stretch of time, and they'll play it right there for you, at your table or in the middle of the plaza.\n\nGaribaldi works, in other words, as a hiring hall and a public jukebox at once, where many of the most skilled musicians in the country wait to be chosen, and where a love song can be bought for the price of a decent lunch.\n\nIf you're hungry, the Mercado de San Camilito, just off the square, keeps its food stalls going around the clock with broths and dishes from Jalisco, and there's a museum of tequila and mezcal on the plaza for a little background with your drink."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.44076710030288,
+      "centroidLongitude": -99.13925639999194,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "6027db90-4dc4-5549-acb2-2d0451a8c514",
+        "9f4a4a4e-f7a6-5a35-a9de-16b5119d88f4",
+        "F35C24A1-58FE-52FD-A85B-024B96C50ED4",
+        "59648c0e-9b8e-5991-bba3-43c11afec233",
+        "811c4ea2-3f08-5b28-89eb-354f803cab14",
+        "3ca30004-75d7-58df-880c-387869a3e321",
+        "4cb31204-1f5b-57eb-9d2f-a1061858ed4b",
+        "1c607a07-db95-59c2-98ef-8e5c8c9aac88"
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Public Square",
+        "Performance",
+        "History",
+        "Iconic Landmark",
+        "After Dark",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c7c729b5-5762-579a-b8de-ec7686640427",
+      "createdAt": "2026-11-05",
+      "title": "Quintonil",
+      "shortDescription": "Quintonil is a wild green, a leafy kind of amaranth that grows almost as a weed in Mexican cornfields, and it's also the name of one of the most…",
+      "longDescription": "Quintonil is a wild green, a leafy kind of amaranth that grows almost as a weed in Mexican cornfields, and it's also the name of one of the most celebrated restaurants in the world.\n\nThe restaurant was opened in March 2012 by the chef Jorge Vallejo and Alejandra Flores, who runs the dining room, and the two of them had met a few years earlier working at Pujol, which is about as good a training ground as Mexico offers.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-quintonil_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-quintonil_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-quintonil_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-quintonil_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-quintonil_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "79868852-1a3c-5fb4-9d15-7dbf5acecb0e",
+          "order": 0,
+          "title": "Quintonil",
+          "caption": "At Newton 55 in Polanco, before a modest frontage that gives almost nothing away.",
+          "latitude": 19.431070383120645,
+          "longitude": -99.19173537605384,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-quintonil.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-quintonil_hero.webp",
+          "transcriptText": "Quintonil is a wild green, a leafy kind of amaranth that grows almost as a weed in Mexican cornfields, and it's also the name of one of the most celebrated restaurants in the world.\n\nVery little announces the restaurant at Newton fifty-five, in Polanco, just a modest frontage that gives almost nothing away, and inside a small, warm dining room, its floors of dark volcanic stone and walls clad in wood.\n\nThe restaurant was opened in March 2012 by the chef Jorge Vallejo and Alejandra Flores, who runs the dining room, and the two of them had met a few years earlier working at Pujol, which is about as good a training ground as Mexico offers.\n\nIt began as a fairly casual place serving set lunches, and grew into fine dining over the years, but it has kept the scale small, with only around forty-two seats, so it still feels more like being looked after than being performed at.\n\nThe cooking is almost entirely Mexican in its ingredients, around ninety-eight per cent by Vallejo's reckoning, with vegetables and herbs from Xochimilco and Milpa Alta, at the city's southern edge, pork from Michoacán and Yucatán, and fish from Baja California, so a tasting menu here is also a map of the country.\n\nIt was awarded two Michelin stars in 2024, and in 2025 it was ranked third on the World's Fifty Best Restaurants list, which is rather a lot of attention for a place named after a weed, although the name, I suspect, is exactly the point, because it puts the humblest ingredient in the field at the very head of the menu.\n\nWhen you step back out, look at the street signs around you, because this corner of Polanco is named after scientists, and within a block or two you'll find Kepler, Galileo and Arquímedes keeping Newton company."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.431070383120645,
+      "centroidLongitude": -99.19173537605384,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "3df7a354-dcd1-5533-9860-446e6f02cc13",
+        "147bc80c-bc6a-53d7-8665-09f8c230797f",
+        "1c607a07-db95-59c2-98ef-8e5c8c9aac88",
+        "69aca928-5ade-5659-8587-6e735b909f49",
+        "811c4ea2-3f08-5b28-89eb-354f803cab14",
+        "a70f0a45-a4f4-52bc-a444-991472216970",
+        "59648c0e-9b8e-5991-bba3-43c11afec233",
+        "59f07717-a858-56d4-b495-15d1396a9ea8"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "59f07717-a858-56d4-b495-15d1396a9ea8",
+      "createdAt": "2026-11-05",
+      "title": "San Ángel Inn",
+      "shortDescription": "The margarita arrives in a small silver jug sunk almost to its neck in a little bucket of ice, and you pour it yourself, a glass at a time…",
+      "longDescription": "The margarita arrives in a small silver jug sunk almost to its neck in a little bucket of ice, and you pour it yourself, a glass at a time, which turns a drink into a ritual.\n\nThe land here was granted in 1616, and in the eighteenth century it became the Hacienda de Goicoechea, a working estate that produced pulque, the milky fermented drink made from the sap of the agave, and the buildings you're looking at grew out of that farm.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-san-angel-inn_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-san-angel-inn_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-san-angel-inn_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-san-angel-inn_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-san-angel-inn_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-san-angel-inn_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5f3b7e10-3334-53df-8bde-40acf76e1626",
+          "order": 0,
+          "title": "San Ángel Inn",
+          "caption": "Across from the Rivera and Kahlo studios, facing the old hacienda's pale walls and arched gateway.",
+          "latitude": 19.349412518015384,
+          "longitude": -99.19799587790982,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-san-angel-inn.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-san-angel-inn_hero.webp",
+          "transcriptText": "The margarita arrives in a small silver jug sunk almost to its neck in a little bucket of ice, and you pour it yourself, a glass at a time, which turns a drink into a ritual.\n\nAcross the street from the red and blue houses of the Rivera and Kahlo studios, facing the long, pale walls of an old hacienda with its arched gateway and heavy wooden doors, you should see glimpses of a courtyard and gardens through the entrance, shaded by old trees.\n\nThe land here was granted in 1616, and in the eighteenth century it became the Hacienda de Goicoechea, a working estate that produced pulque, the milky fermented drink made from the sap of the agave, and the buildings you're looking at grew out of that farm.\n\nIn the early twentieth century it was turned into a hotel and given its slightly unlikely English name, the San Ángel Inn, and it's often said that Pancho Villa and Emiliano Zapata, the two great generals of the Revolution, met here, a story of the sort that old houses like this one tend to gather.\n\nIt was declared a colonial monument in 1937, spent a few years housing a university's architecture school, and finally opened as a restaurant in June 1963, and it's been one ever since, with a courtyard fountain, tiled details and gardens that make it a favourite for long family lunches and celebrations.\n\nThe pleasure of the place is the layering, because a seventeenth-century land grant, a pulque hacienda, an Edwardian-style hotel with an English name and a grand Mexican restaurant all sit inside the same walls, and none of them has entirely gone away.\n\nWalk through to the courtyard before you sit down and find the fountain, and if you're visiting in late summer, ask whether the chiles en nogada are on the menu, since this is one of the city's classic places to try them."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.349412518015384,
+      "centroidLongitude": -99.19799587790982,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "811c4ea2-3f08-5b28-89eb-354f803cab14",
+        "13f598f3-b6e5-5653-9481-daab905ff60d",
+        "59648c0e-9b8e-5991-bba3-43c11afec233",
+        "4cb31204-1f5b-57eb-9d2f-a1061858ed4b",
+        "3df7a354-dcd1-5533-9860-446e6f02cc13",
+        "3ca30004-75d7-58df-880c-387869a3e321",
+        "d5ffca7c-3493-5ffd-93c0-660af3166e73",
+        "537a902e-70fa-53b7-8e17-6b2f923d1905"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Colonial"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4128fcfb-f72c-509d-97c6-368c8be8202f",
+      "createdAt": "2026-11-05",
+      "title": "Sandra Weil",
+      "shortDescription": "This shop is laid out like a walk through a landscape, from forest to marble quarry to garden, and the clothes are almost the last thing you…",
+      "longDescription": "This shop is laid out like a walk through a landscape, from forest to marble quarry to garden, and the clothes are almost the last thing you notice.\n\nSandra Weil is a Peruvian designer who has built her label in Mexico City, known for elegant, delicate pieces in natural fabrics, and the shop will alter any design to fit, which is a quietly old-fashioned service in a neighbourhood of big international brands.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-sandra-weil_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-sandra-weil_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "dcb045d8-569b-5a26-bad4-34a7de7d6aa4",
+          "order": 0,
+          "title": "Sandra Weil",
+          "caption": "At Avenida Horacio 907, with Parque América behind you, facing a former house with a plant-filled balcony.",
+          "latitude": 19.434723809281106,
+          "longitude": -99.19594599325409,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-sandra-weil.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-sandra-weil_hero.webp",
+          "transcriptText": "This shop is laid out like a walk through a landscape, from forest to marble quarry to garden, and the clothes are almost the last thing you notice.\n\nParque América's trees should be behind you, and across Avenida Horacio, at number nine zero seven, you'll be facing a former private house with a little balcony overflowing with plants above the entrance.\n\nSandra Weil is a Peruvian designer who has built her label in Mexico City, known for elegant, delicate pieces in natural fabrics, and the shop will alter any design to fit, which is a quietly old-fashioned service in a neighbourhood of big international brands.\n\nThe house itself was reworked by the Mexico City architects PPAA, who built everything around a spiral staircase winding up through the middle, and each set of rooms has its own colour, its own materials and its own character.\n\nThe brown rooms come first, with jute on the floor, textured walls and a whole tree trunk hanging horizontally from the ceiling, with handbags dangling from it like fruit.\n\nNext come the white rooms, finished in pale marble, where a single grey boulder sits reflected over and over in mirrors, and finally the green rooms, where potted plants double as hat stands and old tree stumps serve as display pedestals.\n\nAll of this is selling a feeling rather than a garment, the sense of clothes that belong to the natural world, and it does it so confidently that walking through feels more like visiting an installation than going shopping.\n\nOnce you've climbed to the top of the staircase, step out onto the little balcony if it's open, look down over Parque América, then head across the road and find a bench under the trees."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.434723809281106,
+      "centroidLongitude": -99.19594599325409,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "d5a1d997-4466-560f-bc2e-c2c45f17f7be",
+        "07f31f81-16b1-5345-b411-a7e2e0a1f14a",
+        "537a902e-70fa-53b7-8e17-6b2f923d1905",
+        "2be3d69f-a78a-542f-86a9-ae39e3219e8f",
+        "f67f6de1-e449-5b31-bb9c-8be2905e7b9a",
+        "13f598f3-b6e5-5653-9481-daab905ff60d",
+        "edb75a45-df25-58cb-87c8-c744eee9bf97",
+        "e3db8352-8eb8-536b-bcd4-716f756a9f2d"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Fashion",
+        "Commerce",
+        "Architecture",
+        "Hidden Gem",
+        "Designed by a Master",
+        "PPAA"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3df7a354-dcd1-5533-9860-446e6f02cc13",
+      "createdAt": "2026-11-05",
+      "title": "Ticuchi",
+      "shortDescription": "For more than fifteen years, this dark little building was home to Pujol, the restaurant that made Enrique Olvera's name, and when Pujol moved…",
+      "longDescription": "For more than fifteen years, this dark little building was home to Pujol, the restaurant that made Enrique Olvera's name, and when Pujol moved on, he turned its old dining room into something that only really comes alive after dusk.\n\nTicuchi opened in August 2019 as Olvera's mezcal bar, and inside it's deliberately cave-like, with black walls, very low light and a domed ceiling meant to suggest a cenote, one of the sunken limestone pools of the Yucatán, and the name itself is usually linked to the bat, the animal of caves.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-ticuchi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-ticuchi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-ticuchi_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-ticuchi_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-ticuchi_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-ticuchi_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "cc3ad1d6-1b0a-5a77-a1ed-c3ae28bc6067",
+          "order": 0,
+          "title": "Ticuchi",
+          "caption": "At Petrarca 254 in Polanco, Pujol's old home: a near-blank front with a big window onto a working comal.",
+          "latitude": 19.43378591047902,
+          "longitude": -99.18547306441803,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-ticuchi.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-ticuchi_hero.webp",
+          "transcriptText": "For more than fifteen years, this dark little building was home to Pujol, the restaurant that made Enrique Olvera's name, and when Pujol moved on, he turned its old dining room into something that only really comes alive after dusk.\n\nSeen from the street, Petrarca two five four is almost blank, apart from a big window onto a working comal, the flat clay or metal griddle of Mexican kitchens, and cooks pressing tortillas behind the glass.\n\nTicuchi opened in August 2019 as Olvera's mezcal bar, and inside it's deliberately cave-like, with black walls, very low light and a domed ceiling meant to suggest a cenote, one of the sunken limestone pools of the Yucatán, and the name itself is usually linked to the bat, the animal of caves.\n\nThe drinks list leans on agave spirits from small producers, and the cocktails are built around them, but the food is the real surprise, because almost everything on the menu is made from vegetables and corn, such as mushroom barbacoa or tacos al pastor with roasted pineapple and not a scrap of pork.\n\nSo you're eating vegetable tacos in the room where Mexico's most famous tasting menu was born, which I find rather a lovely twist, and it suggests the building has simply changed its hours rather than its ambitions.\n\nDuring the day, the same team has also run a hatch onto the street called La Ventana del Ticuchi, serving tamales made from heirloom corn, daily broths and coffee for people to eat standing on the pavement, which is Olvera's cooking at its most casual.\n\nTo see where the story went next, Pujol's current home is a short walk away on Tennyson, behind its own discreet garden wall, and it's worth strolling past even if you haven't got a booking."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.43378591047902,
+      "centroidLongitude": -99.18547306441803,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "811c4ea2-3f08-5b28-89eb-354f803cab14",
+        "d5ffca7c-3493-5ffd-93c0-660af3166e73",
+        "147bc80c-bc6a-53d7-8665-09f8c230797f",
+        "59648c0e-9b8e-5991-bba3-43c11afec233",
+        "c7c729b5-5762-579a-b8de-ec7686640427",
+        "1c607a07-db95-59c2-98ef-8e5c8c9aac88",
+        "3ca30004-75d7-58df-880c-387869a3e321",
+        "69aca928-5ade-5659-8587-6e735b909f49"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d5ffca7c-3493-5ffd-93c0-660af3166e73",
+      "createdAt": "2026-11-05",
+      "title": "Tlecan",
+      "shortDescription": "Tlecan means place of fire in Nahuatl, and inside, the low, reddish light and the haze of smoke, as if the name were being taken quite literally.",
+      "longDescription": "Tlecan means place of fire in Nahuatl, and inside, the low, reddish light and the haze of smoke, as if the name were being taken quite literally.\n\nThat disc is a replica of an Aztec carving of the god of death, and the whole room is designed to echo the galleries of the Museo Nacional de Antropología, which tells you a good deal about the bar's ambitions.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-tlecan_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-tlecan_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-tlecan_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-tlecan_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-tlecan_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-tlecan_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "322b7904-220b-509b-bf66-01745bd3d8dc",
+          "order": 0,
+          "title": "Tlecan",
+          "caption": "At Álvaro Obregón 228 in Roma Norte, through the small doorway into a dim bar with a carved stone disc.",
+          "latitude": 19.417110052399725,
+          "longitude": -99.16551179325067,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-tlecan.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-tlecan_hero.webp",
+          "transcriptText": "Tlecan means place of fire in Nahuatl, and inside, the low, reddish light and the haze of smoke, as if the name were being taken quite literally.\n\nStep through the small doorway at Álvaro Obregón two two eight, in Roma Norte, and you'll be in a dim room with a long bar, facing, on the back wall, a great carved stone disc that looks as though it has walked straight out of a museum.\n\nThat disc is a replica of an Aztec carving of the god of death, and the whole room is designed to echo the galleries of the Museo Nacional de Antropología, which tells you a good deal about the bar's ambitions.\n\nIt's run by Eli Martínez Bello, who spent five years leading the drinks at Pujol, and her business partner Bernardo Serna, and she has said she wants Mexicans to feel proud and everyone else to be impressed, which is a fine mission statement for a bar.\n\nThe spirits come straight from small producers around the country, and alongside mezcal you'll find lesser-known agave and plant spirits, like bacanora from Sonora, sotol from the north and pox from Chiapas, many of them never exported at all.\n\nThe drink to order is the Tascalate Sour, a brick-red cocktail inspired by tascalate, an old drink from the south made with toasted maize, cacao and achiote, shaken with mezcal and egg white and dusted with fermented cacao.\n\nTlecan took twenty-third place in the 2025 edition of the World's Fifty Best Bars, and the reason, really, is that it treats the country's drinking traditions with the seriousness usually reserved for its archaeology.\n\nOn your way out, stroll a few doors along Álvaro Obregón to the Carla Fernández shop on the corner with Monterrey, and you'll see the same idea, old Mexican craft treated as something entirely modern, applied to clothes instead of cocktails."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.417110052399725,
+      "centroidLongitude": -99.16551179325067,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "3df7a354-dcd1-5533-9860-446e6f02cc13",
+        "811c4ea2-3f08-5b28-89eb-354f803cab14",
+        "59648c0e-9b8e-5991-bba3-43c11afec233",
+        "ec9acdc8-2598-5bc8-9c64-65151e43a395",
+        "147bc80c-bc6a-53d7-8665-09f8c230797f",
+        "1c607a07-db95-59c2-98ef-8e5c8c9aac88",
+        "e3db8352-8eb8-536b-bcd4-716f756a9f2d",
+        "edb75a45-df25-58cb-87c8-c744eee9bf97"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ec9acdc8-2598-5bc8-9c64-65151e43a395",
+      "createdAt": "2026-11-05",
+      "title": "Xinú Perfumes",
+      "shortDescription": "Xinú means nose in Otomí, one of Mexico's indigenous languages, which is a disarmingly direct name for a perfume house.",
+      "longDescription": "Xinú means nose in Otomí, one of Mexico's indigenous languages, which is a disarmingly direct name for a perfume house.\n\nThe house was founded by Verónica Peña, and every fragrance is built from Mexican plants, starting with Aguamadera, which combines agave, cedar, lime and guaiac wood, a smell somewhere between a cantina and a forest.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-xinu-perfumes_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-xinu-perfumes_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-xinu-perfumes_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-xinu-perfumes_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-xinu-perfumes_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-xinu-perfumes_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "31a369e3-5bde-5a4e-a3ca-ea15bc229c36",
+          "order": 0,
+          "title": "Xinú Perfumes",
+          "caption": "At Alejandro Dumas 161 in Polanco: black walls and a black staircase rising to an upper floor.",
+          "latitude": 19.43343036377482,
+          "longitude": -99.19543947790982,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-xinu-perfumes.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-xinu-perfumes_hero.webp",
+          "transcriptText": "Xinú means nose in Otomí, one of Mexico's indigenous languages, which is a disarmingly direct name for a perfume house.\n\nBlack walls and a black staircase rising to an upper floor are what to look for at Alejandro Dumas one six one, in Polanco, an interior that feels almost like a theatre with the lights dimmed.\n\nThe house was founded by Verónica Peña, and every fragrance is built from Mexican plants, starting with Aguamadera, which combines agave, cedar, lime and guaiac wood, a smell somewhere between a cantina and a forest.\n\nThen there's Copála, with pink pepper, vanilla from Papantla in Veracruz, mesquite and copal, the resin that's burned as incense in churches and ceremonies across the country, so if you've smelt the Zócalo on a festival day, this one might feel oddly familiar.\n\nThe third, Oronardo, brings together marigold, Mexican tuberose and the night-blooming cereus, a cactus flower that opens only after dark.\n\nLook closely at the bottles, too, because they were designed by Esrawe Studio and Cadena y Asociados, in certified sustainable wood and hand-blown Mexican glass, and they're made to be kept and used as a vase or a small sculpture once the perfume has gone.\n\nThe quiet idea behind Xinú is that Mexico's botany is as rich a source for perfume as the lavender fields of Provence, and that you can bottle a country's landscape in the same way you might bottle a memory.\n\nClimb the black staircase to the upper floor before you go and find the phrase written up there, which says that the scent of a flower is the expression of the inexpressible, then ask to try the Copála on your wrist and see what it brings back."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.43343036377482,
+      "centroidLongitude": -99.19543947790982,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "e3db8352-8eb8-536b-bcd4-716f756a9f2d",
+        "d5ffca7c-3493-5ffd-93c0-660af3166e73",
+        "07f31f81-16b1-5345-b411-a7e2e0a1f14a",
+        "7f93e911-9493-5a9e-a065-59a8082f3dae",
+        "59648c0e-9b8e-5991-bba3-43c11afec233",
+        "d5a1d997-4466-560f-bc2e-c2c45f17f7be",
+        "59f07717-a858-56d4-b495-15d1396a9ea8",
+        "edb75a45-df25-58cb-87c8-c744eee9bf97"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9f4a4a4e-f7a6-5a35-a9de-16b5119d88f4",
+      "createdAt": "2026-11-05",
+      "title": "Zócalo",
+      "shortDescription": "Zócalo means plinth, and the name comes from a monument that was never finished, because in the 1840s a column to independence was planned for…",
+      "longDescription": "Zócalo means plinth, and the name comes from a monument that was never finished, because in the 1840s a column to independence was planned for the middle of this square, but only its base ever got built.\n\nThe square's official name is the Plaza de la Constitución, after the Spanish constitution of 1812, and it measures around two hundred and forty metres on each side, which makes it one of the largest public squares in the world.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-zocalo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-zocalo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-zocalo_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9d8568f6-e880-50d5-95e1-2d015d0af0f7",
+          "order": 0,
+          "title": "Zócalo",
+          "caption": "By the great flagpole, facing the cathedral's twin towers, with the National Palace along your right.",
+          "latitude": 19.433634391512115,
+          "longitude": -99.13326797287644,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-zocalo.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 80,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-zocalo_hero.webp",
+          "transcriptText": "Zócalo means plinth, and the name comes from a monument that was never finished, because in the 1840s a column to independence was planned for the middle of this square, but only its base ever got built.\n\nNear the great flagpole in the centre of the square, turn so that the twin towers of the Metropolitan Cathedral are in front of you, which means the long red facade of the National Palace runs along your right, and ahead and to your right, just past the cathedral's eastern end, lie the excavated ruins of the Templo Mayor.\n\nThe square's official name is the Plaza de la Constitución, after the Spanish constitution of 1812, and it measures around two hundred and forty metres on each side, which makes it one of the largest public squares in the world.\n\nLong before any of this, the ground beneath you was the ceremonial heart of Tenochtitlan, the Mexica capital, and the Spanish built their own city directly on top of it, using its stones, which is why the cathedral, the palace and the temple ruins all sit within a few hundred metres of each other.\n\nThen look up at the enormous flag, which is raised each morning and lowered each evening by soldiers, then folded and carried into the National Palace in a ceremony that draws a small crowd.\n\nOver the centuries this square has hosted military parades, concerts, Independence Day celebrations and protests of every kind, and it's still where people come to celebrate, to mourn or to be heard.\n\nWhat strikes you, standing here, is that the Zócalo's emptiness is the point, a vast stage left open for whoever needs it next, whether that's the state, the crowd or simply a family out for a walk.\n\nFinish at the north-east corner, beside the cathedral, where a viewing walkway runs along the edge of the Templo Mayor, and look down into the layers of the old Mexica temple that the city was built on top of."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.433634391512115,
+      "centroidLongitude": -99.13326797287644,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "3ca30004-75d7-58df-880c-387869a3e321",
+        "9b4329a8-d70c-5af3-afda-b456a7de989e",
+        "b8739d55-8302-5289-8354-e1a91876b821",
+        "cb872a24-0098-554c-8940-26cc3f929271",
+        "e7f2b167-f928-5de6-9a48-d9d602cbacf8",
+        "15A18AFC-10D6-55C1-9CF4-5216C435C67E",
+        "4cb31204-1f5b-57eb-9d2f-a1061858ed4b",
+        "2F5F8E5C-A30D-5CD7-81A6-F4E6D88A7A99"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Public Square",
+        "History",
+        "Power",
+        "Colonial",
+        "Iconic Landmark",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6027db90-4dc4-5549-acb2-2d0451a8c514",
+      "createdAt": "2026-11-05",
+      "title": "Zinco Jazz Club",
+      "shortDescription": "The door you're about to walk through was built to keep people out, because this jazz club sits inside the old vault of a bank.",
+      "longDescription": "The door you're about to walk through was built to keep people out, because this jazz club sits inside the old vault of a bank.\n\nHead down those stairs and you'll meet the heavy steel doors of the original vault, swung open now, and beyond them a low room of black walls, exposed brick and dark crimson upholstery, with small round tables crowded towards a little stage.",
+      "makerId": "04e05651-d6d0-514e-9724-ccffca65d17f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-zinco-jazz-club_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-zinco-jazz-club_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-zinco-jazz-club_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6a4cf292-792a-5885-83aa-10c3b6474bc5",
+          "order": 0,
+          "title": "Zinco Jazz Club",
+          "caption": "Outside Motolinía 20, at the corner of Cinco de Mayo: an old stone building with stairs leading down.",
+          "latitude": 19.43429372738992,
+          "longitude": -99.13710473558196,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mex-zinco-jazz-club.mp3",
+          "audioDurationSeconds": 97,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mex-zinco-jazz-club_hero.webp",
+          "transcriptText": "The door you're about to walk through was built to keep people out, because this jazz club sits inside the old vault of a bank.\n\nOutside Motolinía twenty, on the corner of Cinco de Mayo in the historic centre, you should be looking at a handsome old stone building with a modest entrance and a stairway leading down below street level.\n\nHead down those stairs and you'll meet the heavy steel doors of the original vault, swung open now, and beyond them a low room of black walls, exposed brick and dark crimson upholstery, with small round tables crowded towards a little stage.\n\nThe vault does wonders for the sound, since the thick walls shut out the traffic above and keep the acoustics close and warm, so the bands can play with very little amplification, and the instruments sound much as they would in your living room.\n\nThe programme runs from traditional jazz and bebop through to funk and contemporary fusion, with Mexican musicians and touring players from abroad, and the club has long been one of the places that proves the city has a serious jazz scene of its own.\n\nThere's a cover charge, which goes towards paying the musicians, and with so few tables in a space this size, it's well worth booking ahead, then arriving early to claim a seat near the front.\n\nZinco's best trick is the swap, because a room that was built to guard money has ended up guarding something much harder to keep, which is a good night of live music.\n\nWhen the set finishes and you climb back up to the street, walk a few blocks east to the Zócalo, which is at its most atmospheric late at night, with the cathedral lit up and the great square almost empty."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 97,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.43429372738992,
+      "centroidLongitude": -99.13710473558196,
+      "city": "Mexico City",
+      "country": "Mexico",
+      "relatedTourIds": [
+        "F35C24A1-58FE-52FD-A85B-024B96C50ED4",
+        "cb872a24-0098-554c-8940-26cc3f929271",
+        "3ca30004-75d7-58df-880c-387869a3e321",
+        "07f31f81-16b1-5345-b411-a7e2e0a1f14a",
+        "59648c0e-9b8e-5991-bba3-43c11afec233",
+        "4cb31204-1f5b-57eb-9d2f-a1061858ed4b",
+        "9f4a4a4e-f7a6-5a35-a9de-16b5119d88f4",
+        "1cf7e4f0-9c0d-5c21-ab77-b0714a6f691c"
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance",
+        "After Dark",
+        "Hidden Gem"
       ],
       "priceUSD": 0
     }
@@ -167378,10 +169418,14 @@
       "city": "Mexico City",
       "country": "Mexico",
       "relatedTourIds": [
+        "74d534de-acc7-5014-a9c5-da0171128b6d",
+        "e7f2b167-f928-5de6-9a48-d9d602cbacf8",
+        "edb75a45-df25-58cb-87c8-c744eee9bf97",
         "BEB23F8E-8A4C-586B-8B86-4152DA896077",
+        "2be3d69f-a78a-542f-86a9-ae39e3219e8f",
         "F35C24A1-58FE-52FD-A85B-024B96C50ED4",
         "E3363651-CBD2-5837-8398-DFCEB73FFAE2",
-        "DD610C34-3DDE-5B2A-B575-CAF14498B46C"
+        "a648b9d7-4924-555c-8762-92c0c674ca1f"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -238577,7 +240621,9 @@
       "city": "Mexico City",
       "country": "Mexico",
       "relatedTourIds": [
-        "14998A34-CF64-55FE-B85B-95037226468E"
+        "14998A34-CF64-55FE-B85B-95037226468E",
+        "3ca30004-75d7-58df-880c-387869a3e321",
+        "9b4329a8-d70c-5af3-afda-b456a7de989e"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -245144,11 +247190,14 @@
       "city": "Mexico City",
       "country": "Mexico",
       "relatedTourIds": [
+        "a648b9d7-4924-555c-8762-92c0c674ca1f",
+        "edb75a45-df25-58cb-87c8-c744eee9bf97",
+        "9b4329a8-d70c-5af3-afda-b456a7de989e",
         "D2AB471A-E219-5B28-969F-76BEDF82F6E1",
         "E3363651-CBD2-5837-8398-DFCEB73FFAE2",
         "15A18AFC-10D6-55C1-9CF4-5216C435C67E",
-        "2F5F8E5C-A30D-5CD7-81A6-F4E6D88A7A99",
-        "F35C24A1-58FE-52FD-A85B-024B96C50ED4"
+        "e7f2b167-f928-5de6-9a48-d9d602cbacf8",
+        "3ca30004-75d7-58df-880c-387869a3e321"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -245199,7 +247248,12 @@
       "relatedTourIds": [
         "DD610C34-3DDE-5B2A-B575-CAF14498B46C",
         "F35C24A1-58FE-52FD-A85B-024B96C50ED4",
-        "D530B11F-45A9-5C26-B185-CBDA21B12A20"
+        "3ca30004-75d7-58df-880c-387869a3e321",
+        "537a902e-70fa-53b7-8e17-6b2f923d1905",
+        "07f31f81-16b1-5345-b411-a7e2e0a1f14a",
+        "ec9acdc8-2598-5bc8-9c64-65151e43a395",
+        "D530B11F-45A9-5C26-B185-CBDA21B12A20",
+        "4cb31204-1f5b-57eb-9d2f-a1061858ed4b"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -245250,12 +247304,12 @@
       "relatedTourIds": [
         "DD610C34-3DDE-5B2A-B575-CAF14498B46C",
         "3472686C-F0D3-5305-9337-4B6C8BEDA757",
-        "E3363651-CBD2-5837-8398-DFCEB73FFAE2",
-        "2F5F8E5C-A30D-5CD7-81A6-F4E6D88A7A99",
-        "D2AB471A-E219-5B28-969F-76BEDF82F6E1",
-        "D530B11F-45A9-5C26-B185-CBDA21B12A20",
-        "15A18AFC-10D6-55C1-9CF4-5216C435C67E",
-        "BEB23F8E-8A4C-586B-8B86-4152DA896077"
+        "3ca30004-75d7-58df-880c-387869a3e321",
+        "07f31f81-16b1-5345-b411-a7e2e0a1f14a",
+        "13f598f3-b6e5-5653-9481-daab905ff60d",
+        "6027db90-4dc4-5549-acb2-2d0451a8c514",
+        "4cb31204-1f5b-57eb-9d2f-a1061858ed4b",
+        "E3363651-CBD2-5837-8398-DFCEB73FFAE2"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -250311,9 +252365,12 @@
       "relatedTourIds": [
         "F35C24A1-58FE-52FD-A85B-024B96C50ED4",
         "3472686C-F0D3-5305-9337-4B6C8BEDA757",
+        "07f31f81-16b1-5345-b411-a7e2e0a1f14a",
+        "13f598f3-b6e5-5653-9481-daab905ff60d",
+        "3ca30004-75d7-58df-880c-387869a3e321",
         "E3363651-CBD2-5837-8398-DFCEB73FFAE2",
-        "D530B11F-45A9-5C26-B185-CBDA21B12A20",
-        "D2AB471A-E219-5B28-969F-76BEDF82F6E1"
+        "f67f6de1-e449-5b31-bb9c-8be2905e7b9a",
+        "D530B11F-45A9-5C26-B185-CBDA21B12A20"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -250511,8 +252568,12 @@
       "relatedTourIds": [
         "DD610C34-3DDE-5B2A-B575-CAF14498B46C",
         "F35C24A1-58FE-52FD-A85B-024B96C50ED4",
+        "7f93e911-9493-5a9e-a065-59a8082f3dae",
+        "ec9acdc8-2598-5bc8-9c64-65151e43a395",
+        "537a902e-70fa-53b7-8e17-6b2f923d1905",
+        "2be3d69f-a78a-542f-86a9-ae39e3219e8f",
         "E3363651-CBD2-5837-8398-DFCEB73FFAE2",
-        "3472686C-F0D3-5305-9337-4B6C8BEDA757"
+        "edb75a45-df25-58cb-87c8-c744eee9bf97"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -357263,12 +359324,12 @@
       "relatedTourIds": [
         "15A18AFC-10D6-55C1-9CF4-5216C435C67E",
         "2F5F8E5C-A30D-5CD7-81A6-F4E6D88A7A99",
+        "78761e31-da0a-5d3e-924b-376728bcdf58",
+        "3ca30004-75d7-58df-880c-387869a3e321",
+        "e7f2b167-f928-5de6-9a48-d9d602cbacf8",
         "F35C24A1-58FE-52FD-A85B-024B96C50ED4",
         "DD610C34-3DDE-5B2A-B575-CAF14498B46C",
-        "BEB23F8E-8A4C-586B-8B86-4152DA896077",
-        "D2AB471A-E219-5B28-969F-76BEDF82F6E1",
-        "D530B11F-45A9-5C26-B185-CBDA21B12A20",
-        "E4C437D4-E495-5A06-B0B2-B0F5C3BFBF32"
+        "BEB23F8E-8A4C-586B-8B86-4152DA896077"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -357628,9 +359689,12 @@
       "relatedTourIds": [
         "2F5F8E5C-A30D-5CD7-81A6-F4E6D88A7A99",
         "E3363651-CBD2-5837-8398-DFCEB73FFAE2",
+        "3ca30004-75d7-58df-880c-387869a3e321",
+        "b8739d55-8302-5289-8354-e1a91876b821",
         "E4C437D4-E495-5A06-B0B2-B0F5C3BFBF32",
-        "BEB23F8E-8A4C-586B-8B86-4152DA896077",
-        "F35C24A1-58FE-52FD-A85B-024B96C50ED4"
+        "e7f2b167-f928-5de6-9a48-d9d602cbacf8",
+        "9f4a4a4e-f7a6-5a35-a9de-16b5119d88f4",
+        "9b4329a8-d70c-5af3-afda-b456a7de989e"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -357682,7 +359746,9 @@
       "relatedTourIds": [
         "15A18AFC-10D6-55C1-9CF4-5216C435C67E",
         "2F5F8E5C-A30D-5CD7-81A6-F4E6D88A7A99",
-        "E3363651-CBD2-5837-8398-DFCEB73FFAE2"
+        "E3363651-CBD2-5837-8398-DFCEB73FFAE2",
+        "3ca30004-75d7-58df-880c-387869a3e321",
+        "e7f2b167-f928-5de6-9a48-d9d602cbacf8"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -359372,7 +361438,10 @@
       "city": "Mexico City",
       "country": "Mexico",
       "relatedTourIds": [
-        "4C0A0145-4296-5478-AB81-50DB3BE01E97"
+        "9b4329a8-d70c-5af3-afda-b456a7de989e",
+        "4C0A0145-4296-5478-AB81-50DB3BE01E97",
+        "a648b9d7-4924-555c-8762-92c0c674ca1f",
+        "b8739d55-8302-5289-8354-e1a91876b821"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -372178,9 +374247,12 @@
       "relatedTourIds": [
         "15A18AFC-10D6-55C1-9CF4-5216C435C67E",
         "E3363651-CBD2-5837-8398-DFCEB73FFAE2",
+        "3ca30004-75d7-58df-880c-387869a3e321",
         "E4C437D4-E495-5A06-B0B2-B0F5C3BFBF32",
+        "e7f2b167-f928-5de6-9a48-d9d602cbacf8",
         "F35C24A1-58FE-52FD-A85B-024B96C50ED4",
-        "BEB23F8E-8A4C-586B-8B86-4152DA896077"
+        "9f4a4a4e-f7a6-5a35-a9de-16b5119d88f4",
+        "9b4329a8-d70c-5af3-afda-b456a7de989e"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
