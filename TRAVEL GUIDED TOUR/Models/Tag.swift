@@ -240,6 +240,7 @@ enum Tag {
             "Cayetano Borso di Carminati", "Eduardo de Miguel", "Arancha Muñoz", "Vicente Corell", "Alejandro Soler March", "Francisco Guardia Vial", "Ramón Esteve", "Emilio Giménez", "Francisco Mora Berenguer", "Pere Compte", "Hipólito Rovira", "Francisco Javier Goerlich", "Kathryn Gustafson", "Daniel Mayo", "Agustín Marí", "Pablo Vázquez",
             "Mohamed Kamal Ismail", "Dar Al-Handasah", "Samir Elabd",
             "K-Studio", "FORMrelated", "Kostas Voutsinas", "Dimitris Pikionis", "Michael Photiadis", "Takis Zenetos", "Ioannis Despotopoulos", "Emmanouil Vourekas", "Prokopis Vasileiadis", "Antonis Georgiadis", "Spyros Staikos",
+            "Alberto Kalach", "Ambrosi Etchegaray", "Ricardo Legorreta", "Javier Sánchez", "Alfonso Ramírez Ponce", "PPAA", "Juan O'Gorman", "Pedro Ramírez Vázquez", "Jorge Campuzano", "Rafael Mijares", "Teodoro González de León", "Abraham Zabludovsky", "Mario Pani", "Enrique del Moral",
         ]),
     ]
 
