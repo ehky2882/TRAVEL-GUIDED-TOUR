@@ -1,0 +1,40 @@
+# 26 · Former Fukuoka Prefectural Public Hall Guest House
+
+**Category:** Observe · **Google Maps name:** Former Fukuoka Prefectural Public Hall Guest House · **Coordinates (WGS-84):** 33.592243, 130.403809
+
+**Length:** 268 words, about 110 seconds at a natural pace. **Files:** `26_former_fukuoka_prefectural_public_hall_guest_house_clean.txt`, `26_former_fukuoka_prefectural_public_hall_guest_house_tts-safe.txt`
+
+## Clean script
+
+**Former Fukuoka Prefectural Public Hall Guest House**
+
+Locals know it as the public hall with the tulip roof by the river.
+
+Find the corner of Tenjin Central Park closest to the Naka River. Look for a two-storey wooden building with a porch on stone pillars at the front and a pointed octagonal tower on the east side.
+
+It was built in 1910 for a great industrial exhibition held for the eight prefectures of Kyushu and Okinawa, as a place to receive important guests. The style is French Renaissance, and it's one of the very few public buildings of its kind from the Meiji era, built in wood, that survive anywhere in Japan.
+
+Have a look at the tower first. That's the tulip. Then the porch, with its stone columns: an imported European grandeur, translated into Japanese carpentry.
+
+The building has had a long working life. It was the prefecture's public hall, then after the war it housed a high court, a fisheries high school and the prefecture's education office. When the prefectural government moved out of Tenjin, the rest of the complex was pulled down and the site became this park. The guest house was the one building they kept, and it's now a national Important Cultural Property.
+
+What's worth knowing is how close it came. A wooden building of 1910, on some of the most valuable land in the city, survived because someone decided it mattered.
+
+[beat]
+
+Go inside: every room is decorated differently, there's a café, and you can even try on period dress. Then look across the park to the green, stepped slope of ACROS Fukuoka, a very different kind of public building.
+
+## Respellings used in the TTS-safe version
+
+- Fukuoka → *Fookoo oka*
+- Naka River → *Nahkah River*
+- Meiji → *May jee*
+- Kyushu → *Kyooshoo*
+- ACROS → *Ackross*
+
+Years are spelled out in the TTS-safe file, `[beat]` is replaced by a paragraph break, and hyphens and all-caps are removed.
+
+## Sources read before writing
+
+- https://www.fukuokaken-kihinkan.jp/ (official)
+- https://www.crossroadfukuoka.jp/spot/12520

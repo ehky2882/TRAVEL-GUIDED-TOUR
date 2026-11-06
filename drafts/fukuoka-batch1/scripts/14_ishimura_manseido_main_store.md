@@ -1,0 +1,49 @@
+# 14 · Ishimura Manseido Main Store
+
+**Category:** Shop · **Google Maps name:** Ishimura Manseido Main Store · **Coordinates (WGS-84):** 33.595943, 130.404434
+
+**Length:** 287 words, about 110 seconds at a natural pace. **Files:** `14_ishimura_manseido_main_store_clean.txt`, `14_ishimura_manseido_main_store_tts-safe.txt`
+
+## Clean script
+
+**Ishimura Manseido Main Store**
+
+If you've ever wondered why Japan has a day for giving marshmallows back, the answer is in this shop.
+
+The main shop stands in Suzaki-machi, on the old Hakata side of the river, at a corner the whole city knows in July.
+
+It was founded on Christmas Day, 1905, by Zentaro Ishimura. His family were carpenters who built shrines and temples, but his health was poor, so he turned to making sweets fit to offer to the gods and the Buddha. He started out renting the ground floor of a house belonging to the family of Kawakami Otojiro, the actor and showman.
+
+Have a look at the Tsurunoko. A soft white marshmallow wrapped round a sweet egg-yolk bean paste, shaped like an egg. It began as a way of using up egg whites left over from another sweet made only with yolks, sold at first in real eggshells. When marshmallow-making arrived from abroad, it took the shape you see now.
+
+Now the story. In 1977 the company president, Zengo Ishimura, read a letter in a magazine: a reader complained that men never gave anything back on Valentine's Day. So in 1978 the shop proposed Marshmallow Day, on the fourteenth of March, when men would wrap the chocolate they'd received in marshmallow, a symbol of their own kindness, and give it back. Others claim the idea too, but in Hakata this is White Day's origin.
+
+[beat]
+
+Before you go, look outside. This corner is the turning point of the Hakata Gion Yamakasa festival, where the racing floats swing round, and on the fifteenth of July the street is packed. Inside, ask for the Tsurunoko no Konoko, made only here, with fresh marshmallow and a shelf life of thirty minutes.
+
+## Respellings used in the TTS-safe version
+
+- Hakata → *Hahkahtah*
+- Ishimura Manseido → *Eesheemoorah Mahn say doh*
+- Ishimura → *Eesheemoorah*
+- Suzaki-machi → *Soozahkee mahchee*
+- Zentaro → *Zentahroh*
+- Kawakami Otojiro → *Kahwahkahmee Ohtoh jeeroh*
+- Tsurunoko no Konoko → *Tsooroo nohkoh noh Kohnohkoh*
+- Tsurunoko → *Tsooroo nohkoh*
+- Zengo → *Zengoh*
+- Gion → *Gee on*
+- Yamakasa → *Yahmah kahsah*
+
+Years are spelled out in the TTS-safe file, `[beat]` is replaced by a paragraph break, and hyphens and all-caps are removed.
+
+## Sources read before writing
+
+- https://koubo.jp/press-release/prtimes/c6803_r19 (Ishimura Manseido press release)
+- https://data-max.co.jp/article/7003
+- https://www.ishimura.co.jp/ (official)
+
+## Notes
+
+White Day has rival origin claims; the script says so.

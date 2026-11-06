@@ -1,0 +1,509 @@
+{
+ "respellings": {
+  "Fukuoka": "Fookoo oka",
+  "Hakata": "Hahkahtah",
+  "Hakata-ori": "Hahkahtah ohree",
+  "Haruyoshi": "Hahroo yoshee",
+  "Naka River": "Nahkah River",
+  "Nishi Hongan-ji": "Neeshee Hongahn jee",
+  "Il Palazzo": "Eel Pahlahtsoh",
+  "Palazzo": "Pahlahtsoh",
+  "verdigris": "verdigree",
+  "Shigeru Uchida": "Sheegeroo Oocheedah",
+  "Uchida": "Oocheedah",
+  "Ettore Sottsass": "Etoray Sotsass",
+  "Gaetano Pesce": "Gah eh tahnoh Peshay",
+  "Shiro Kuramata": "Sheeroh Koorahmahtah",
+  "Adjmi": "Adjmee",
+  "Daimyo": "Dyemyoh",
+  "koma-inu": "kohmah eenoo",
+  "Kume Sekkei": "Koomay Sekkay",
+  "Ohori": "Oh hoh ree",
+  "César Pelli": "Sayzar Pelly",
+  "Momochi": "Mohmohchee",
+  "Ganso Nagahamaya": "Gahnsoh Nahgah hahmah yah",
+  "Nagahama": "Nahgah hahmah",
+  "Nama": "Nahmah",
+  "Betanama": "Betah nahmah",
+  "namatama": "nahmah tahmah",
+  "kaedama": "kah eh dahmah",
+  "Issou": "Eessoh",
+  "Itoshima": "Eetoh sheemah",
+  "Udon Taira": "Oodon Tie rah",
+  "udon": "oodon",
+  "Sumiyoshi": "Soomee yoshee",
+  "gobō-ten": "gobboh ten",
+  "Gobō": "Gobboh",
+  "Kagawa": "Kahgahwah",
+  "kashiwa onigiri": "kahsheewah ohneegeeree",
+  "zenzai": "zen zye",
+  "Yanagibashi Rengo": "Yahnahgee bahshee Rengoh",
+  "Yanagi": "Yahnahgee",
+  "Showa": "Shoh wah",
+  "Nakasu": "Nahkahsoo",
+  "Yatai": "Yah tie",
+  "yatai": "yah tie",
+  "oden": "oh den",
+  "mentaiko": "mentye koh",
+  "shochu": "shoh choo",
+  "gyoza": "gyohzah",
+  "Bimi": "Beemee",
+  "Akasaka": "Ahkah sahkah",
+  "Munemasa Morimitsu": "Moonay mahsah Moree meetsoo",
+  "Kurume": "Koorumay",
+  "Moka": "Mohkah",
+  "Kichijoji": "Keechee johjee",
+  "Mitsuko": "Meetsookoh",
+  "Keyaki-dori": "Kayahkee dohree",
+  "manu": "mahnoo",
+  "Watanabe-dori": "Wahtahnahbay dohree",
+  "Shirogane": "Sheeroh gahnay",
+  "Kujira": "Koojeerah",
+  "Manua": "Mahnoo ah",
+  "REC": "Reck",
+  "Yakuin": "Yahkoo een",
+  "Ekimae": "Ekee mah eh",
+  "Nishitetsu": "Neeshee tetsoo",
+  "Yoshikazu Iwase": "Yoshee kahzoo Eewahsay",
+  "Iwase": "Eewahsay",
+  "Osamu Kitazoe": "Ohsahmoo Keetah zoh eh",
+  "sablés": "sablays",
+  "Hakozaki": "Hahkoh zahkee",
+  "JR": "jay are",
+  "Minoru Oi": "Meenohroo Oh ee",
+  "Oi": "Oh ee",
+  "Bookuoka": "Bookoo ohkah",
+  "Ishimura Manseido": "Eesheemoorah Mahn say doh",
+  "Ishimura": "Eesheemoorah",
+  "Suzaki-machi": "Soozahkee mahchee",
+  "Zentaro": "Zentahroh",
+  "Kawakami Otojiro": "Kahwahkahmee Ohtoh jeeroh",
+  "Tsurunoko no Konoko": "Tsooroo nohkoh noh Kohnohkoh",
+  "Tsurunoko": "Tsooroo nohkoh",
+  "Zengo": "Zengoh",
+  "Gion": "Gee on",
+  "Yamakasa": "Yahmah kahsah",
+  "Kawabata": "Kahwahbahtah",
+  "Kami-Kawabata": "Kahmee Kahwahbahtah",
+  "Chuo": "Choo oh",
+  "Riverain": "River rain",
+  "Kadota Chochin": "Kahdohtah Chohcheen",
+  "Masuya": "Mahsooyah",
+  "Kunio Maekawa": "Kooneeoh My kahwah",
+  "Maekawa": "My kahwah",
+  "Port Lligat": "Port Lyeegaht",
+  "Dalí": "Dahlee",
+  "Miró": "Meeroh",
+  "Chagall": "Shagahl",
+  "Basquiat": "Baskeeah",
+  "Yayoi Kusama": "Yah yoy Koosahmah",
+  "Okushida-san": "Oh kooshee dah sahn",
+  "Kushida": "Kooshee dah",
+  "Toyotomi Hideyoshi": "Tohyohtohmee Heeday yohshee",
+  "kazariyama": "kahzahree yahmah",
+  "ehō-ban": "ay hoh bahn",
+  "Dontaku": "Dontahkoo",
+  "Okunchi": "Oh koonchee",
+  "Otafuku": "Ohtah fookoo",
+  "Setsubun": "Setsoo boon",
+  "Shofukuji": "Shoh fookoo jee",
+  "Eisai": "Ay sigh",
+  "Minamoto no Yoritomo": "Meenahmohtoh noh Yohree tohmoh",
+  "Go-Toba": "Goh tohbah",
+  "Edo": "Edoh",
+  "Sengai": "Sengye",
+  "Tochoji": "Toh choh jee",
+  "Gokusho-machi": "Gokoo shoh mahchee",
+  "Machiya Furusato-kan": "Mahchee yah Fooroosahtoh kahn",
+  "machiya": "mahchee yah",
+  "Meiji": "May jee",
+  "hakatakara": "hahkahtah kahrah",
+  "papier-mâché": "paper mashay",
+  "Fang Lijun": "Fahng Lee jun",
+  "Luo": "Lwoh",
+  "Tiananmen": "Tyen ahn men",
+  "Kim Chang-yeol": "Kim Chahng yol",
+  "Tawan Duchanee": "Tahwahn Doochahnee",
+  "Mara": "Mahrah",
+  "Busan": "Boo sahn",
+  "Kyushu": "Kyooshoo",
+  "Kiyonori Kikutake": "Keeyohnohree Keekootahkay",
+  "Kikutake": "Keekootahkay",
+  "Dazaifu Tenmangu": "Dahzye foo Tenmahn goo",
+  "Dazaifu": "Dahzye foo",
+  "Tenmangu": "Tenmahn goo",
+  "Kengo Kuma": "Kengoh Koomah",
+  "ACROS": "Ackross",
+  "Acros-yama": "Ackross yahmah",
+  "Emilio Ambasz": "Ehmeeleeoh Ahmbahss",
+  "Ambasz": "Ahmbahss",
+  "Nihon Sekkei": "Neehon Sekkay",
+  "Takenaka": "Tahkay nahkah",
+  "Meiji-dori": "May jee dohree",
+  "OMA": "oh em ay",
+  "Rem Koolhaas": "Rem Coalhahs",
+  "Koolhaas": "Coalhahs",
+  "Shohei Shigematsu": "Shoh hay Sheegay mahtsoo",
+  "Shigematsu": "Sheegay mahtsoo",
+  "Center II": "Center Two",
+  "Kisho Kurokawa": "Keeshoh Koorohkahwah",
+  "Kurokawa": "Koorohkahwah",
+  "engawa": "engahwah",
+  "Tenjin Chikagai": "Tenjin Cheekah guy",
+  "Nanakuma": "Nahnah koomah",
+  "Tenjin-Minami": "Tenjin Meenahmee",
+  "Tatsuno Kingo": "Tahtsoonoh Keengoh",
+  "Kataoka Yasushi": "Kahtah ohkah Yahsooshee",
+  "Tatsuno": "Tahtsoonoh",
+  "Kanebo": "Kahnaybo",
+  "Jisho": "Jeeshoh",
+  "Jerde": "Jerdee",
+  "Kashii": "Kahshee ee",
+  "Arata Isozaki": "Ahrahtah Eesoh zahkee",
+  "Isozaki": "Eesoh zahkee",
+  "Christian de Portzamparc": "Kreestyahn duh Portzahmpark",
+  "Oscar Tusquets": "Oscar Tooskets",
+  "Osamu Ishiyama": "Ohsahmoo Eeshee yahmah",
+  "fusuma": "foosoomah",
+  "Toyo Ito": "Tohyoh Eetoh",
+  "Ito": "Eetoh",
+  "UNESCO": "Unesco",
+  "nama": "nahmah"
+ },
+ "tours": {
+  "hotel-il-palazzo": {
+   "category": "Stay",
+   "gmaps": "Hotel Il Palazzo",
+   "lat": 33.589756,
+   "lon": 130.407578,
+   "sources": [
+    "https://www.ilpalazzo.jp/ (official)",
+    "https://wallpaper.com/travel/hotel-il-palazzo-aldo-rossi-renovation-japan",
+    "https://www.fukuoka-now.com/en/ilpalazzo/"
+   ],
+   "notes": "Coordinate from the GSI address geocoder (3-13-1 Haruyoshi)."
+  },
+  "the-ritz-carlton-fukuoka": {
+   "category": "Stay",
+   "gmaps": "The Ritz-Carlton, Fukuoka",
+   "lat": 33.589679,
+   "lon": 130.395883,
+   "sources": [
+    "https://www.aap.com.au/aapreleases/cision20230630ae45185 (Marriott press release)",
+    "https://www.fukuoka-now.com/en/a-new-landmark-that-carries-on-the-history-of-daimyo/",
+    "https://kigyorichi.pref.fukuoka.lg.jp/cn/news/detail/208 (via search)"
+   ],
+   "notes": "Sources disagree on the hotel's floors (17th-24th vs 19th-24th); the script says only 'the top floors'."
+  },
+  "hilton-fukuoka-sea-hawk": {
+   "category": "Stay",
+   "gmaps": "Hilton Fukuoka Sea Hawk",
+   "lat": 33.594829,
+   "lon": 130.359171,
+   "sources": [
+    "https://ja.wikipedia.org/wiki/ヒルトン福岡シーホーク",
+    "https://www.hospitalitynet.org/news/4046832.html (Hilton opening release, 2010)"
+   ],
+   "notes": "Room count differs by source (1,052 / 1,053); the script says 'more than a thousand'."
+  },
+  "ganso-nagahamaya": {
+   "category": "Dine",
+   "gmaps": "Ganso Nagahamaya",
+   "lat": 33.592439,
+   "lon": 130.386614,
+   "sources": [
+    "https://tabelog.com/en/fukuoka/A4001/A400104/40006844/",
+    "https://www.bengo4.com/c_1015/n_9619/"
+   ],
+   "notes": "Official site (ganso-nagahamaya.co.jp) returned 503. Hours 6:00-1:45 per Tabelog; cash only."
+  },
+  "hakata-issou": {
+   "category": "Dine",
+   "gmaps": "Hakata Issou (Hakata-eki Higashi main shop)",
+   "lat": 33.586366,
+   "lon": 130.425109,
+   "sources": [
+    "https://tabelog.com/en/fukuoka/A4001/A400101/40032701/",
+    "https://www.funliday.com/posts/fukuoka-hakata-ramen/"
+   ],
+   "notes": "Official site hakata-issou.com returned 503."
+  },
+  "udon-taira": {
+   "category": "Dine",
+   "gmaps": "Udon Taira",
+   "lat": 33.583126,
+   "lon": 130.416039,
+   "sources": [
+    "https://r.gnavi.co.jp/fa62yceu0000/ (Gurunavi listing)",
+    "Shop's own relocation notice quoted in search results (45 years at Hakata-ekimae 3-chome)"
+   ],
+   "notes": "Lunch only, Monday to Saturday."
+  },
+  "yanagibashi-rengo-market": {
+   "category": "Dine",
+   "gmaps": "Yanagibashi Rengo Market",
+   "lat": 33.582752,
+   "lon": 130.408037,
+   "sources": [
+    "https://www.city.fukuoka.lg.jp/ucf/ufc-practical-example_10.html (Fukuoka City)"
+   ],
+   "notes": "The handcart origin is presented as 'the story usually told' (travel-press account)."
+  },
+  "nakasu-yatai": {
+   "category": "Dine",
+   "gmaps": "Nakasu Yatai",
+   "lat": 33.5915,
+   "lon": 130.4062,
+   "sources": [
+    "https://www.city.fukuoka.lg.jp/keizai/yatai/shisei/documents/01_jorei.pdf (Fukuoka City Yatai Ordinance)",
+    "https://www.knt.co.jp/meito/sp/nakasu_yatai/"
+   ],
+   "notes": "Coordinate is approximate: the stalls line the Nakasu riverbank and move."
+  },
+  "coffee-bimi": {
+   "category": "Drink",
+   "gmaps": "Coffee Bimi",
+   "lat": 33.582676,
+   "lon": 130.382446,
+   "sources": [
+    "https://cafebimi.com/ (official)",
+    "https://serai.jp/hobby/1277803"
+   ],
+   "notes": "Café 12:00-17:00, closed Mon and Tue; beans from 11:00. Coordinate from the GSI address geocoder."
+  },
+  "manu-coffee-haruyoshi": {
+   "category": "Drink",
+   "gmaps": "manu coffee Haruyoshi",
+   "lat": 33.586809,
+   "lon": 130.406093,
+   "sources": [
+    "https://www.manucoffee.com/about/ (official)",
+    "https://www.manucoffee.com/shoplist/ (official)"
+   ],
+   "notes": "Official address is Watanabe-dori 3-11-2 (Border Tower 1F); the OSM node and the GSI geocode agree within 10 m."
+  },
+  "rec-coffee-yakuin-ekimae": {
+   "category": "Drink",
+   "gmaps": "REC COFFEE Yakuin Ekimae",
+   "lat": 33.58154,
+   "lon": 130.403545,
+   "sources": [
+    "https://rec-coffee.com/ (official)",
+    "https://www.walkerplus.com/article/1133030/",
+    "https://rurubu.jp/andmore/spot/80038189"
+   ],
+   "notes": "Address Shirokane 1-1-26; OSM node agrees with the GSI geocode."
+  },
+  "bbb-potters": {
+   "category": "Shop",
+   "gmaps": "B·B·B POTTERS",
+   "lat": 33.581841,
+   "lon": 130.398117,
+   "sources": [
+    "https://www.bbbpotters.com/ (official)"
+   ],
+   "notes": "Short tour: the official site gives little history. Coordinate from the GSI address geocoder."
+  },
+  "books-kubrick-hakozaki": {
+   "category": "Shop",
+   "gmaps": "BOOKS KUBRICK Hakozaki",
+   "lat": 33.617111,
+   "lon": 130.426208,
+   "sources": [
+    "https://bookskubrick.jp/ (official)",
+    "https://bookskubrick.jp/keyaki (official, Keyaki-dori closure notice)",
+    "https://www.nippon.com/ja/japan-topics/c07103/"
+   ],
+   "notes": "REPLACES the Keyaki-dori shop from the earlier list: it closed on 20 July 2026. Coordinate from the GSI address geocoder (Hakozaki 1-5-14)."
+  },
+  "ishimura-manseido-main-store": {
+   "category": "Shop",
+   "gmaps": "Ishimura Manseido Main Store",
+   "lat": 33.595943,
+   "lon": 130.404434,
+   "sources": [
+    "https://koubo.jp/press-release/prtimes/c6803_r19 (Ishimura Manseido press release)",
+    "https://data-max.co.jp/article/7003",
+    "https://www.ishimura.co.jp/ (official)"
+   ],
+   "notes": "White Day has rival origin claims; the script says so."
+  },
+  "kawabata-shopping-arcade": {
+   "category": "Shop",
+   "gmaps": "Kawabata Shopping Arcade",
+   "lat": 33.592553,
+   "lon": 130.410225,
+   "sources": [
+    "https://www.pref.fukuoka.lg.jp/somu/graph-f/2020spring/shoppingstreet/index.html (Fukuoka Prefecture)",
+    "https://www.crossroadfukuoka.jp/spot/10006 (Kawabata Zenzai Hiroba)"
+   ],
+   "notes": "Coordinate is the OSM point for the arcade; the script stands the listener at the zenzai square with the float. Check that it falls inside the geofence."
+  },
+  "fukuoka-art-museum": {
+   "category": "Visit",
+   "gmaps": "Fukuoka Art Museum",
+   "lat": 33.583939,
+   "lon": 130.379731,
+   "sources": [
+    "https://ja.wikipedia.org/wiki/福岡市美術館",
+    "https://bijutsutecho.com/magazine/news/headline/18922"
+   ],
+   "notes": "Official site returned 403. The GSI address geocode was ~650 m off; the OSM museum node is used."
+  },
+  "kushida-shrine": {
+   "category": "Visit",
+   "gmaps": "Kushida Shrine",
+   "lat": 33.593357,
+   "lon": 130.411011,
+   "sources": [
+    "https://ja.wikipedia.org/wiki/櫛田神社_(福岡市)"
+   ],
+   "notes": "The shrine's own site (hakatanomiya.com) is not reachable from this session."
+  },
+  "shofukuji": {
+   "category": "Visit",
+   "gmaps": "Shofukuji",
+   "lat": 33.596069,
+   "lon": 130.413818,
+   "sources": [
+    "https://ja.wikipedia.org/wiki/聖福寺_(福岡市)"
+   ],
+   "notes": ""
+  },
+  "hakata-machiya-furusato-kan": {
+   "category": "Visit",
+   "gmaps": "Hakata Machiya Furusato-kan",
+   "lat": 33.593521,
+   "lon": 130.411423,
+   "sources": [
+    "https://www.hakatamachiya.com/ (official)"
+   ],
+   "notes": ""
+  },
+  "fukuoka-asian-art-museum": {
+   "category": "Visit",
+   "gmaps": "Fukuoka Asian Art Museum",
+   "lat": 33.594969,
+   "lon": 130.405817,
+   "sources": [
+    "https://ja.wikipedia.org/wiki/福岡アジア美術館"
+   ],
+   "notes": "Official site returned 403. The museum is on 7F-8F of the Riverain Center Building; the script avoids floor numbers."
+  },
+  "kyushu-national-museum": {
+   "category": "Visit",
+   "gmaps": "Kyushu National Museum",
+   "lat": 33.518219,
+   "lon": 130.538463,
+   "sources": [
+    "https://ja.wikipedia.org/wiki/九州国立博物館",
+    "https://online.bunka.go.jp/museums/detail/14321 (via search)",
+    "https://www.kyuhaku.jp/en/ (official)"
+   ],
+   "notes": "The Kengo Kuma coffee shop in the closing line is from general knowledge, not a source read this session."
+  },
+  "acros-fukuoka": {
+   "category": "Observe",
+   "gmaps": "ACROS Fukuoka",
+   "lat": 33.591487,
+   "lon": 130.402445,
+   "sources": [
+    "https://www.acros.or.jp/ (official)",
+    "https://ja.wikipedia.org/wiki/アクロス福岡",
+    "https://www.crossroadfukuoka.jp/spot/11703"
+   ],
+   "notes": "The GSI address geocode was ~220 m off; the OSM building is used."
+  },
+  "tenjin-business-center": {
+   "category": "Observe",
+   "gmaps": "Tenjin Business Center",
+   "lat": 33.591534,
+   "lon": 130.400208,
+   "sources": [
+    "https://www.oma.com/projects/tenjin-business-center (official)",
+    "https://ja.wikipedia.org/wiki/天神ビジネスセンター",
+    "https://www.archinect.com/news/article/150284795/oma-s-first-office-development-in-japan-is-now-complete"
+   ],
+   "notes": "The height-limit sentence draws on the BELCA citation (national strategic special zone) and the well-known airport limit."
+  },
+  "fukuoka-bank-head-office": {
+   "category": "Observe",
+   "gmaps": "Fukuoka Bank Head Office",
+   "lat": 33.591331,
+   "lon": 130.398178,
+   "sources": [
+    "https://www.belca.or.jp/fwp/wp-content/uploads/2025/07/prize28-3.pdf (BELCA Long Life award citation)",
+    "https://www.shift.jp.org/guide/?p=20023"
+   ],
+   "notes": ""
+  },
+  "tenjin-underground-mall": {
+   "category": "Observe",
+   "gmaps": "Tenjin Underground Mall",
+   "lat": 33.589643,
+   "lon": 130.399704,
+   "sources": [
+    "https://ja.wikipedia.org/wiki/天神地下街",
+    "https://www.tenchika.com/ (official, 50th-anniversary monument)"
+   ],
+   "notes": ""
+  },
+  "former-fukuoka-prefectural-public-hall-guest-house": {
+   "category": "Observe",
+   "gmaps": "Former Fukuoka Prefectural Public Hall Guest House",
+   "lat": 33.592243,
+   "lon": 130.403809,
+   "sources": [
+    "https://www.fukuokaken-kihinkan.jp/ (official)",
+    "https://www.crossroadfukuoka.jp/spot/12520"
+   ],
+   "notes": ""
+  },
+  "fukuoka-city-red-brick-cultural-center": {
+   "category": "Observe",
+   "gmaps": "Fukuoka City Red Brick Cultural Center",
+   "lat": 33.593136,
+   "lon": 130.401993,
+   "sources": [
+    "https://ja.wikipedia.org/wiki/福岡市赤煉瓦文化館"
+   ],
+   "notes": ""
+  },
+  "canal-city-hakata": {
+   "category": "Observe",
+   "gmaps": "Canal City Hakata",
+   "lat": 33.589481,
+   "lon": 130.41095,
+   "sources": [
+    "https://www.canalcity.co.jp/ (official)",
+    "https://ja.wikipedia.org/wiki/キャナルシティ博多",
+    "https://www.keidanren.or.jp/japanese/journal/CLIP/clip0072/cli024.html (1998; 70 cm depth)"
+   ],
+   "notes": "Coordinate is the GSI address-block point; the script stands the listener at the canal."
+  },
+  "nexus-world": {
+   "category": "Observe",
+   "gmaps": "Nexus World",
+   "lat": 33.65461,
+   "lon": 130.434906,
+   "sources": [
+    "https://ja.wikipedia.org/wiki/ネクサスワールド",
+    "https://www.stevenholl.com/projects/fukuoka-housing (official)",
+    "https://www.fukuoka-now.com/en/ilpalazzo/ (architect list)"
+   ],
+   "notes": "Coordinate is the Portzamparc block (Kashiihama 4-1). The OMA 24-house description is from search summaries of OMA's text; oma.com's project page returned 404. These are private homes."
+  },
+  "island-city-central-park-grin-grin": {
+   "category": "Observe",
+   "gmaps": "Island City Central Park (GRIN GRIN)",
+   "lat": 33.664355,
+   "lon": 130.420782,
+   "sources": [
+    "https://www.city.fukuoka.lg.jp/kowan/miryoku/tanoshimu/islandcitycentralpark.html (Fukuoka City)",
+    "https://shift.jp.org/guide/?p=19440",
+    "https://archiweb.cz/en/b/centralni-park-ostrovniho-mesta-grin-grin"
+   ],
+   "notes": "Coordinate is the park centroid, not the Grin Grin building."
+  }
+ }
+}
