@@ -5721,6 +5721,16 @@
       "websiteURL": null
     },
     {
+      "id": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "displayName": "Atlas Studio FUK",
+      "platform": "dozent",
+      "handle": "atlas.fuk",
+      "avatarURL": null,
+      "avatarEmoji": "🇯🇵",
+      "bio": "Atlas Studio's Fukuoka bureau — a hill of trees laid over an office block, Aldo Rossi's red stone palazzo, a river run through a shopping centre, six architects' housing by the bay, Japan's first Zen temple, the festival float that never leaves Kushida Shrine, and the riverside street stalls wheeled in every evening.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -149173,6 +149183,1440 @@
         "Performance",
         "After Dark",
         "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "89dc3341-252a-5fdd-821c-eab4848bee4d",
+      "createdAt": "2026-11-08",
+      "title": "Hotel Il Palazzo | ホテル イル・パラッツォ",
+      "shortDescription": "It's 1989, Japan is at the height of its bubble years, and a hotel company in Fukuoka hands its new building to an Italian who has never built…",
+      "longDescription": "It's 1989, Japan is at the height of its bubble years, and a hotel company in Fukuoka hands its new building to an Italian who has never built anything in this country.\n\nStart with that red. It's travertine, a marbled stone from Iran, and the green bands are copper lintels that have been left to weather to that soft verdigris. The architect was Aldo Rossi, who won the Pritzker Prize the year after this opened, and he borrowed from Venetian palaces, from the boulevards of Paris and from Nishi Hongan-ji, a temple in Kyoto, to make a front that simply stands still and lets the city come to it.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-hotel-il-palazzo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-hotel-il-palazzo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-hotel-il-palazzo_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "851d9cae-5ebe-5f15-b8e5-8a8e4e29786e",
+          "order": 0,
+          "title": "Hotel Il Palazzo | ホテル イル・パラッツォ",
+          "caption": "In the open square on the Haruyoshi side of the Naka River, facing the long wall of deep red travertine.",
+          "latitude": 33.59011945671303,
+          "longitude": 130.40741193860998,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-hotel-il-palazzo.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-hotel-il-palazzo_hero.webp",
+          "transcriptText": "It's 1989, Japan is at the height of its bubble years, and a hotel company in Fukuoka hands its new building to an Italian who has never built anything in this country.\n\nStand in the open square in front of the hotel, on the Haruyoshi side of the Naka River, with the street behind you and the building filling your view. A long wall of deep red stone, cut into bays by tall columns, with bands of pale green metal running across it. No big glass lobby, no name in lights.\n\nStart with that red. It's travertine, a marbled stone from Iran, and the green bands are copper lintels that have been left to weather to that soft verdigris. The architect was Aldo Rossi, who won the Pritzker Prize the year after this opened, and he borrowed from Venetian palaces, from the boulevards of Paris and from Nishi Hongan-ji, a temple in Kyoto, to make a front that simply stands still and lets the city come to it.\n\nThe square is part of the idea. Rossi wanted to show architecture as a small city, and he said the Palazzo could not be built upon nothing, that its beauty depended on the everyday life around it. The owners now talk about holding markets out here, which would have pleased him.\n\nThe man who brought him to Fukuoka was the designer Shigeru Uchida, who did the interiors, and the bars were handed to Ettore Sottsass, Gaetano Pesce and Shiro Kuramata. It was billed as Japan's first design hotel.\n\nAnd here's the thing. Buildings from those years usually get gutted or pulled down. This one was given a two-year renovation by Uchida's own studio, years after his death, and reopened in October 2023 with its original 1989 logo brought back.\n\nIf you fancy a look inside, the lounge is downstairs in what was once the disco, built round Uchida's water sculpture, Dancing Water, and after nine in the evening it opens as a bar to anyone. On your way in, look for a tall red clock called Dear Morris. It's named after Morris Adjmi, Rossi's assistant, who saw the building through on site."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 126,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.59011945671303,
+      "centroidLongitude": 130.40741193860998,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Contemporary",
+        "After Dark",
+        "Designed by a Master",
+        "Aldo Rossi",
+        "Shigeru Uchida"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7b4bf7cc-c9a3-5b49-89aa-add0b69ca671",
+      "createdAt": "2026-11-08",
+      "title": "The Ritz-Carlton, Fukuoka | ザ・リッツ・カールトン福岡",
+      "shortDescription": "There was a primary school on this spot from 1873 until 2014, and one of its buildings is still standing in the corner.",
+      "longDescription": "There was a primary school on this spot from 1873 until 2014, and one of its buildings is still standing in the corner.\n\nTake the school first. It closed when the number of children in central Fukuoka fell away, and rather than clear the site, the city kept the 1929 building and turned it into a centre for start-ups. Inside, it still has its big central staircase. The plaza you're standing in was the schoolyard, and it's kept open as a garden. Have a look at the play equipment: it's modelled on the koma-inu, the lion-dogs that guard Shinto shrines.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-the-ritz-carlton-fukuoka_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-the-ritz-carlton-fukuoka_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-the-ritz-carlton-fukuoka_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-the-ritz-carlton-fukuoka_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-the-ritz-carlton-fukuoka_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-the-ritz-carlton-fukuoka_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b27f6753-80d4-54cc-ab7f-4c72252805b1",
+          "order": 0,
+          "title": "The Ritz-Carlton, Fukuoka | ザ・リッツ・カールトン福岡",
+          "caption": "In the plaza at the foot of the glass tower, the old 1929 Daimyo Elementary School in one corner.",
+          "latitude": 33.5899058151718,
+          "longitude": 130.39475845080062,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-the-ritz-carlton-fukuoka.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-the-ritz-carlton-fukuoka_hero.webp",
+          "transcriptText": "There was a primary school on this spot from 1873 until 2014, and one of its buildings is still standing in the corner.\n\nFind the open plaza at the foot of the glass tower, the lawn and the play area with the stage beside it. The tower is in front of you, twenty-five storeys of glass. Now look for a lower, older building in one corner of the site. That's Daimyo Elementary School, built in reinforced concrete in 1929.\n\nTake the school first. It closed when the number of children in central Fukuoka fell away, and rather than clear the site, the city kept the 1929 building and turned it into a centre for start-ups. Inside, it still has its big central staircase. The plaza you're standing in was the schoolyard, and it's kept open as a garden. Have a look at the play equipment: it's modelled on the koma-inu, the lion-dogs that guard Shinto shrines.\n\nThe tower is Fukuoka Daimyo Garden City, designed by Kume Sekkei, and The Ritz-Carlton takes the top floors, with its club and spa right at the summit. It opened in June 2023. The rooms look out either over Ohori Park or across Hakata Bay.\n\nInside, the designers took their cue from Hakata-ori, the yarn-dyed silk weaving this city is known for, and worked local craftspeople's screens, textiles and paintings into the rooms. Even the terrace bar, called Bay, is meant to recall the ships in Hakata Bay.\n\nWhat I like about this corner is the deal it strikes. A luxury tower was always going to go up somewhere in Tenjin. This one paid for it by keeping the playground public and the old school standing.\n\nBefore you go, step round to the school building's entrance and look through the door at that staircase. Then walk a few minutes west, into the lanes of Daimyo proper, where the small shops and cafés are the neighbourhood the school once served."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.5899058151718,
+      "centroidLongitude": 130.39475845080062,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "History",
+        "Contemporary",
+        "Free to Visit",
+        "Kume Sekkei"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3bce5aec-5aae-5d9f-9d93-2768b59ec52e",
+      "createdAt": "2026-11-08",
+      "title": "Hilton Fukuoka Sea Hawk | ヒルトン福岡シーホーク",
+      "shortDescription": "On a map it looks like any other hotel. From the bay, it's meant to look like a ship.",
+      "longDescription": "On a map it looks like any other hotel. From the bay, it's meant to look like a ship.\n\nThe architect was César Pelli, the Argentine-American behind some of the world's best-known towers, and the building is modelled on a great ship heading out into Hakata Bay. See if you can find the bow. It's a little literal, if you ask me, but on a clear evening it rather works.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-hilton-fukuoka-sea-hawk_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-hilton-fukuoka-sea-hawk_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-hilton-fukuoka-sea-hawk_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-hilton-fukuoka-sea-hawk_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-hilton-fukuoka-sea-hawk_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "cca5b282-70f9-5f1b-8cf4-2a6d5b20a1a8",
+          "order": 0,
+          "title": "Hilton Fukuoka Sea Hawk | ヒルトン福岡シーホーク",
+          "caption": "On the waterfront by the baseball dome, taking in the 36-storey ship-shaped tower facing Hakata Bay.",
+          "latitude": 33.59472716774992,
+          "longitude": 130.35979729628215,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-hilton-fukuoka-sea-hawk.mp3",
+          "audioDurationSeconds": 99,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-hilton-fukuoka-sea-hawk_hero.webp",
+          "transcriptText": "On a map it looks like any other hotel. From the bay, it's meant to look like a ship.\n\nFind a spot where you can take in the whole building, with the great dome of the baseball stadium close by. The hotel is the tall tower beside it, thirty-six storeys facing out to sea.\n\nThe architect was César Pelli, the Argentine-American behind some of the world's best-known towers, and the building is modelled on a great ship heading out into Hakata Bay. See if you can find the bow. It's a little literal, if you ask me, but on a clear evening it rather works.\n\nIt opened in April 1995 as the Sea Hawk Hotel and Resort, part of a waterfront development built around the dome, which is home to the Fukuoka SoftBank Hawks. Hence the name. It stands a hundred and forty-three metres tall, with more than a thousand rooms, which made it the largest Hilton in the Asia Pacific region when the brand took it over.\n\nThat takeover is part of the story. The original operator ran into money trouble, Japan Airlines' hotel arm took over the management in 2005, and Hilton followed in 2010. The building outlasted all of them.\n\nWhat's worth knowing, standing here, is that this shoreline is reclaimed land. The hotel, the dome and the promenade were all part of one idea: that Fukuoka should turn and face the sea.\n\nIf you've time, walk through the hotel's glass atrium, which rises several storeys over the restaurant. Then head west along the waterfront towards Momochi Seaside Park and its beach, with Fukuoka Tower rising behind it. The view back at the ship is best from there."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 99,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.59472716774992,
+      "centroidLongitude": 130.35979729628215,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Waterfront",
+        "Architecture",
+        "Maritime",
+        "Contemporary",
+        "Designed by a Master",
+        "César Pelli"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0d733787-28a4-5e0c-8cce-3448a5ba9023",
+      "createdAt": "2026-11-08",
+      "title": "Ganso Nagahamaya | 元祖長浜屋",
+      "shortDescription": "Locals don't really read the menu here. They just tell you how firm they want their noodles.",
+      "longDescription": "Locals don't really read the menu here. They just tell you how firm they want their noodles.\n\nThis is one of the founding shops of Nagahama ramen. It started in 1952 as a street stall and moved to this neighbourhood around 1955, when the fish market did. The idea was to feed the people who worked there, quickly, at all hours, which is why the doors still open at six in the morning and don't close until gone one at night.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ganso-nagahamaya_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ganso-nagahamaya_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ganso-nagahamaya_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ganso-nagahamaya_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "af502ccc-ed50-5afc-bc54-1ac216af5eef",
+          "order": 0,
+          "title": "Ganso Nagahamaya | 元祖長浜屋",
+          "caption": "In Nagahama by the fish market: the queue, the ticket machine and the long steaming counter.",
+          "latitude": 33.59260698836118,
+          "longitude": 130.38650287723237,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-ganso-nagahamaya.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ganso-nagahamaya_hero.webp",
+          "transcriptText": "Locals don't really read the menu here. They just tell you how firm they want their noodles.\n\nThe shop is on the ground floor of a building in Nagahama, in a district that grew up around the city's fish market. Look for the queue, the ticket machine just inside the door, and the long counter with the steam coming off the pots.\n\nThis is one of the founding shops of Nagahama ramen. It started in 1952 as a street stall and moved to this neighbourhood around 1955, when the fish market did. The idea was to feed the people who worked there, quickly, at all hours, which is why the doors still open at six in the morning and don't close until gone one at night.\n\nStart with the bowl. A thin, pale pork-bone soup, lighter than you might expect, with very thin straight noodles that cook in seconds. Speed was the point.\n\nNow, the ordering. You buy a ticket from the machine, and then you say how you want your noodles. Nama means barely boiled, still with real bite. Betanama is nama with extra fat. And when you finish your noodles, you can ask for a second serving to drop into the soup you have left. That's kaedama, and this shop is widely held to be where it started. If you want the second lot firm as well, it's namatama.\n\nHere's the curious thing. You'll see shops nearby with very similar names. In 2009 some long-serving staff left and opened their own place across the road from the old shop, and the names have caused confusion ever since. This is the original. They share the same roots, but they're different shops.\n\nIt's cash only, so have some yen ready. Afterwards, if it's early enough, wander down towards the fish market. And come back after dark sometime: the Nagahama street stalls, where all of this began, were revived in 2023."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.59260698836118,
+      "centroidLongitude": 130.38650287723237,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "806c4099-c3c2-5aee-9c45-264df3609c28",
+      "createdAt": "2026-11-08",
+      "title": "Hakata Issou | 博多一双",
+      "shortDescription": "Fukuoka people have a name for the soup here. They call it the pork-bone cappuccino.",
+      "longDescription": "Fukuoka people have a name for the soup here. They call it the pork-bone cappuccino.\n\nIt opened in November 2012, which is young by local standards, and it has been in the national ramen guides every year since 2020. The reason is the soup. The kitchen keeps three big pots going, mixing different cuts of pork bone and simmering them until the bones break apart. Have a look at the surface of your bowl when it arrives: a fine layer of foam. Nobody whips it. It comes from the fat and the air churning together during that long, hard boil, and the shop treats it as a sign that the work was done by hand.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-hakata-issou_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-hakata-issou_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-hakata-issou_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-hakata-issou_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0e78908c-caeb-58ed-861e-6d4f78eabbb1",
+          "order": 0,
+          "title": "Hakata Issou | 博多一双",
+          "caption": "On a side street east of Hakata Station among office blocks, at the ramen shop with the queue outside.",
+          "latitude": 33.58659247744304,
+          "longitude": 130.42515354046196,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-hakata-issou.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-hakata-issou_hero.webp",
+          "transcriptText": "Fukuoka people have a name for the soup here. They call it the pork-bone cappuccino.\n\nYou're on a side street a few minutes' walk east of Hakata Station, among the office blocks. The shop is the one with the queue outside. Inside, a ten-seat counter and a handful of tables, twenty-one seats in all.\n\nIt opened in November 2012, which is young by local standards, and it has been in the national ramen guides every year since 2020. The reason is the soup. The kitchen keeps three big pots going, mixing different cuts of pork bone and simmering them until the bones break apart. Have a look at the surface of your bowl when it arrives: a fine layer of foam. Nobody whips it. It comes from the fat and the air churning together during that long, hard boil, and the shop treats it as a sign that the work was done by hand.\n\nThe rest is simple, the way Hakata ramen is meant to be. Very fine straight noodles. Soy sauce from Fukuoka, spring onions from Itoshima, just along the coast. If you're hungry, order the special ramen, with thick slices of pork, a soft-boiled egg and wood ear mushroom.\n\nWhat's worth noticing is how much a dozen years of foam has changed the conversation. For most of its history, Hakata ramen was fast, light and cheap, a bowl for fish-market workers and late-night drinkers. This is richer and more deliberate. It's still the same family of soup. It just takes itself a little more seriously.\n\nBring cash, and expect to wait at lunchtime. Afterwards, walk back west to Hakata Station and through it to the old town on the other side. Kushida Shrine and the temple quarter are about twenty minutes on foot, if you fancy walking it off."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.58659247744304,
+      "centroidLongitude": 130.42515354046196,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8d5d98dc-bd4f-5e1d-9192-f2ac96ba8419",
+      "createdAt": "2026-11-08",
+      "title": "Udon Taira | うどん平",
+      "shortDescription": "Ramen gets the fame, but plenty of Hakata people would choose a bowl of udon.",
+      "longDescription": "Ramen gets the fame, but plenty of Hakata people would choose a bowl of udon.\n\nThe shop spent forty-five years by Hakata Station before a rebuilding scheme moved it here, and the queue came too. It's open at lunch only, from just after eleven until three, and it's closed on Sundays.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-udon-taira_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-udon-taira_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-udon-taira_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-udon-taira_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d6fe8ac2-82d6-5b46-a18a-38da57ee3969",
+          "order": 0,
+          "title": "Udon Taira | うどん平",
+          "caption": "In Sumiyoshi south of Canal City, a small shop on the ground floor of a block of flats; lunch only.",
+          "latitude": 33.58338935138924,
+          "longitude": 130.4160246440454,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-udon-taira.mp3",
+          "audioDurationSeconds": 99,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-udon-taira_hero.webp",
+          "transcriptText": "Ramen gets the fame, but plenty of Hakata people would choose a bowl of udon.\n\nUdon Taira is a small shop on the ground floor of a block of flats in Sumiyoshi, south of Canal City. If it's lunchtime, the queue on the pavement will tell you you're in the right place.\n\nThe shop spent forty-five years by Hakata Station before a rebuilding scheme moved it here, and the queue came too. It's open at lunch only, from just after eleven until three, and it's closed on Sundays.\n\nOrder the gobō-ten udon. Gobō is burdock root, sliced and fried in tempura batter, and here it comes in crisp strips laid over the bowl. The noodles are the part that surprises people. Hakata udon is soft, flat and slightly chewy, nothing like the firm, springy noodles of Kagawa that most of Japan thinks of as proper udon. The broth, made with dried sardines, is light and a little sweet.\n\nIf you're still hungry, add a kashiwa onigiri on the side. It's a rice ball cooked with chicken and burdock, and the two together are about as Hakata as lunch gets.\n\nThe interesting bit is the softness. Visitors sometimes take it for overcooking. It isn't. It's a style built for a city of merchants who wanted something gentle and quick, and a shop like this one keeps it exactly as it was.\n\nFrom here, Canal City is a ten-minute walk north. And if you'd rather stay with the old Hakata, carry on beyond it to the Kawabata arcade, where there's another local institution waiting: zenzai, a very sweet red bean soup with grilled rice cakes."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 99,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.58338935138924,
+      "centroidLongitude": 130.4160246440454,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c789956a-e10c-5c67-a8a2-9ed4f93110cb",
+      "createdAt": "2026-11-08",
+      "title": "Yanagibashi Rengo Market | 柳橋連合市場",
+      "shortDescription": "They call this lane Hakata's kitchen, and it has been feeding the city for the best part of a century.",
+      "longDescription": "They call this lane Hakata's kitchen, and it has been feeding the city for the best part of a century.\n\nThe market grew up in the early Showa years, in the late twenties and thirties, and the story usually told is that it began with one man selling fish from a handcart. Others set up around him, and after the war they joined together into the market you see now.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-yanagibashi-rengo-market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-yanagibashi-rengo-market_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-yanagibashi-rengo-market_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5dfe9733-071c-5749-a120-9fd04cf54d00",
+          "order": 0,
+          "title": "Yanagibashi Rengo Market | 柳橋連合市場",
+          "caption": "At the entrance to the covered market by the Yanagi bridge, a hundred-metre lane of counters.",
+          "latitude": 33.583158133819744,
+          "longitude": 130.40848094046186,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-yanagibashi-rengo-market.mp3",
+          "audioDurationSeconds": 84,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-yanagibashi-rengo-market_hero.webp",
+          "transcriptText": "They call this lane Hakata's kitchen, and it has been feeding the city for the best part of a century.\n\nFind the entrance to the covered market, close to the Yanagi bridge over the Naka River. A narrow covered lane about a hundred metres long, lined with counters on both sides.\n\nThe market grew up in the early Showa years, in the late twenties and thirties, and the story usually told is that it began with one man selling fish from a handcart. Others set up around him, and after the war they joined together into the market you see now.\n\nHave a look at the counters first. Around thirty-five businesses share the arcade: fishmongers, greengrocers, drink shops and places to eat. Professional cooks buy here as well as households, which is the surest sign a market is the real thing.\n\nSome of them have a few seats and will feed you on the spot, which is the best way to see the place.\n\nWhat I like about Yanagibashi is that it hasn't been prettied up for visitors. The business is still selling food to people who are going to cook it tonight. It's a working market that happens to welcome you, not a show.\n\nCome in the morning, when the deliveries are being sorted and the arcade is at its busiest. Then walk down to the riverbank and follow the Naka River north. In about fifteen minutes you'll reach Nakasu, where in the evening the street food stalls set up along the water."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 84,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.583158133819744,
+      "centroidLongitude": 130.40848094046186,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Market",
+        "Food",
+        "Commerce",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "100dccb4-31bf-569b-b0d0-c38850b216d6",
+      "createdAt": "2026-11-08",
+      "title": "Nakasu Yatai | 中洲屋台",
+      "shortDescription": "By morning, there'll be nothing here at all. That's rather the point of a yatai.",
+      "longDescription": "By morning, there'll be nothing here at all. That's rather the point of a yatai.\n\nThese are yatai, Fukuoka's street food stalls. The tradition goes back to around 1945, when temporary stalls appeared in the chaos after the war. By the 1960s, stalls taking over the pavements had become a public argument, and in 2013 the city passed an ordinance to settle it. A yatai, in the law's words, is a stall set up for a fixed time in a fixed place, and it must leave at least two metres of pavement clear for everyone else.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-nakasu-yatai_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-nakasu-yatai_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "317a72f7-fae1-5bb5-bfab-955eb121e4e2",
+          "order": 0,
+          "title": "Nakasu Yatai | 中洲屋台",
+          "caption": "On the Nakasu riverside walkway of the Naka River, along the row of curtained street-food stalls.",
+          "latitude": 33.590437826623535,
+          "longitude": 130.40830017408715,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-nakasu-yatai.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-nakasu-yatai_hero.webp",
+          "transcriptText": "By morning, there'll be nothing here at all. That's rather the point of a yatai.\n\nYou should be on the riverside walkway on the Nakasu side of the Naka River, with the water to one side and a row of small wooden stalls along the pavement, each with a curtain across the front, a counter, a handful of stools, and steam rising from behind the cloth.\n\nThese are yatai, Fukuoka's street food stalls. The tradition goes back to around 1945, when temporary stalls appeared in the chaos after the war. By the 1960s, stalls taking over the pavements had become a public argument, and in 2013 the city passed an ordinance to settle it. A yatai, in the law's words, is a stall set up for a fixed time in a fixed place, and it must leave at least two metres of pavement clear for everyone else.\n\nSo every evening the stalls are wheeled in and assembled, and every night they're taken away again.\n\nHave a look at what's cooking. Raw food isn't allowed, so it's all hot: ramen, oden simmering in its broth, grilled skewers, rolled omelette with mentaiko. People drink shochu or beer. And you will be sitting elbow to elbow with strangers, which is the whole idea.\n\nWhat's worth knowing, standing here, is how unusual this is. Plenty of cities have cleared their street stalls away. Fukuoka chose instead to write rules that let them carry on, because the city decided the stalls were part of what it is.\n\nDon't settle at the first stall you see. The local way is to have a dish and a drink at one, then move on to the next. And if you walk south along the river towards Haruyoshi Bridge, there's a stall there known for its tiny gyoza."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.590437826623535,
+      "centroidLongitude": 130.40830017408715,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Waterfront",
+        "Food",
+        "After Dark",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "75db02b7-50c7-59fa-9dac-1a400182cadc",
+      "createdAt": "2026-11-08",
+      "title": "Coffee Bimi | 珈琲美美",
+      "shortDescription": "People queue here before the door opens, for coffee that is famous for tasting good even after it has gone cold.",
+      "longDescription": "People queue here before the door opens, for coffee that is famous for tasting good even after it has gone cold.\n\nIt was founded in 1977 by Munemasa Morimitsu, from Kurume, just south of here. He trained at a famous roastery in Tokyo, Moka in Kichijoji, and the roasting machine he took over from there is still in use. He travelled again and again to Yemen and Ethiopia, the old mocha country where coffee drinking began, and wrote a book tracing its roots. Most of the beans here still come from there.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-coffee-bimi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-coffee-bimi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-coffee-bimi_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-coffee-bimi_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8dfc14ae-161b-591f-9b71-46208286543f",
+          "order": 0,
+          "title": "Coffee Bimi | 珈琲美美",
+          "caption": "On a quiet street in Akasaka west of Tenjin, where a short queue forms on the pavement around midday.",
+          "latitude": 33.58288083439505,
+          "longitude": 130.38250879628117,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-coffee-bimi.mp3",
+          "audioDurationSeconds": 99,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-coffee-bimi_hero.webp",
+          "transcriptText": "People queue here before the door opens, for coffee that is famous for tasting good even after it has gone cold.\n\nThe café is on a quiet street in Akasaka, west of Tenjin. Around midday you'll usually see a short queue on the pavement outside.\n\nIt was founded in 1977 by Munemasa Morimitsu, from Kurume, just south of here. He trained at a famous roastery in Tokyo, Moka in Kichijoji, and the roasting machine he took over from there is still in use. He travelled again and again to Yemen and Ethiopia, the old mocha country where coffee drinking began, and wrote a book tracing its roots. Most of the beans here still come from there.\n\nHe died suddenly in 2016, and his wife, Mitsuko, carries the shop on. She took over the flannel brewing, and she had been helping with the roasting since 2012.\n\nHave a look at how it's made. The coffee is brewed through flannel, a cloth filter called nel, which gives a heavy, smooth cup. The beans are prepared with great care: soaked in warm water the day before roasting, rubbed by hand, then wrapped in newspaper overnight.\n\nAnd here's the thing. This is a style of Japanese coffee that grew up long before the specialty boom, in quiet cafés where the owner roasts, brews and serves. In most cities, places like this are disappearing. Here the queue suggests the opposite.\n\nThe café opens at noon and is closed on Mondays and Tuesdays, but you can buy beans from eleven on most days. Take a bag of the house blend home. Then walk to the zelkova trees of Keyaki-dori, a few minutes away, and on east into the lanes of Daimyo."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 99,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.58288083439505,
+      "centroidLongitude": 130.38250879628117,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b85b9f49-3706-5a97-a855-4399f14d9be4",
+      "createdAt": "2026-11-08",
+      "title": "manu coffee Haruyoshi",
+      "shortDescription": "This little café is open until midnight, every day of the year, which tells you something about Haruyoshi.",
+      "longDescription": "This little café is open until midnight, every day of the year, which tells you something about Haruyoshi.\n\nmanu coffee opened in Fukuoka in 2003, and it has grown with the city since, to a handful of shops, each with its own character. Haruyoshi is the late one. The neighbourhood is a mix of small bars, restaurants and flats, a few minutes from Nakasu and the river, and the café stays open from nine in the morning to midnight to match it.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-manu-coffee-haruyoshi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-manu-coffee-haruyoshi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-manu-coffee-haruyoshi_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-manu-coffee-haruyoshi_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6507da2f-30d2-5553-8b9a-99584b50a20e",
+          "order": 0,
+          "title": "manu coffee Haruyoshi",
+          "caption": "On Watanabe-dori, at the ground floor of a tower on the Haruyoshi side: an eighteen-seat café.",
+          "latitude": 33.58699330115722,
+          "longitude": 130.4061832116253,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-manu-coffee-haruyoshi.mp3",
+          "audioDurationSeconds": 93,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-manu-coffee-haruyoshi_hero.webp",
+          "transcriptText": "This little café is open until midnight, every day of the year, which tells you something about Haruyoshi.\n\nThe shop is on the ground floor of a tower on Watanabe-dori, on the Haruyoshi side of the Naka River. Inside, about eighteen seats, close together.\n\nmanu coffee opened in Fukuoka in 2003, and it has grown with the city since, to a handful of shops, each with its own character. Haruyoshi is the late one. The neighbourhood is a mix of small bars, restaurants and flats, a few minutes from Nakasu and the river, and the café stays open from nine in the morning to midnight to match it.\n\nHave a look at the menu. Espresso and filter coffee, and the company has its own roastery café, Kujira, in Shirogane, a little way south.\n\nThen there's what happens to the leftovers. The company turns its spent coffee grounds and chaff, the papery skin that comes off the beans in roasting, into an organic fertiliser called Manua. In 2018 it made about six tonnes, and sold the lot. The firm calls its idea a cup of universe: the cup as a place where people, the city and culture meet.\n\nThat sounds grand for a café this size, but it's rather the point. A neighbourhood coffee shop can be part of how a city works, from the morning commute to what ends up back in the soil.\n\nFrom here, cross the Haruyoshi Bridge towards Nakasu and you'll reach the riverside street stalls in five minutes. Or walk a few minutes north to Hotel Il Palazzo and its red stone front."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 93,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.58699330115722,
+      "centroidLongitude": 130.4061832116253,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e208f56a-f8e5-561f-b903-039368ef73e2",
+      "createdAt": "2026-11-08",
+      "title": "REC COFFEE Yakuin Ekimae",
+      "shortDescription": "This café began as a van parked on a Yakuin street corner, and its owner went on to finish second in the world.",
+      "longDescription": "This café began as a van parked on a Yakuin street corner, and its owner went on to finish second in the world.\n\nREC Coffee started in 2008 as a mobile coffee truck here in Yakuin, run by Yoshikazu Iwase and Osamu Kitazoe. In 2010 they gave up the truck and opened this shop, their first proper café. It's still the original.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-rec-coffee-yakuin-ekimae_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-rec-coffee-yakuin-ekimae_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0dba8944-ae38-5b31-88c2-53e26a60b9b1",
+          "order": 0,
+          "title": "REC COFFEE Yakuin Ekimae",
+          "caption": "At street level near Nishitetsu Yakuin Station, under the REC sign: the original shop.",
+          "latitude": 33.581725636788086,
+          "longitude": 130.4035275962813,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-rec-coffee-yakuin-ekimae.mp3",
+          "audioDurationSeconds": 90,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-rec-coffee-yakuin-ekimae_hero.webp",
+          "transcriptText": "This café began as a van parked on a Yakuin street corner, and its owner went on to finish second in the world.\n\nThe shop is a five-minute walk from Nishitetsu Yakuin Station, at street level. Look for the REC sign.\n\nREC Coffee started in 2008 as a mobile coffee truck here in Yakuin, run by Yoshikazu Iwase and Osamu Kitazoe. In 2010 they gave up the truck and opened this shop, their first proper café. It's still the original.\n\nIwase is the reason people travel here. He came third in the Japan Barista Championship in 2011, won it in 2014 and again in 2015, and in 2016 finished second at the World Barista Championship.\n\nHave a look at the menu. The house latte is the signature, and there are tarts, sablés and cakes. Since 2018 the company has roasted its own beans, and it now has shops across Fukuoka, in Tokyo and in Taiwan.\n\nWhat I like about this place is that it has never lost the van's habits. It opens at eight and stays open until midnight, and later still at the weekend. Iwase has said that the goal isn't to keep expanding but to get good coffee into as many hands as possible, which is a very truck-shaped ambition.\n\nYakuin is one of the most pleasant neighbourhoods in Fukuoka to walk. From here, walk about ten minutes west to B·B·B Potters, the homeware shop, or south into Shirogane."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 90,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.581725636788086,
+      "centroidLongitude": 130.4035275962813,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "98a69c96-0cf3-58f3-925d-fcec875139ba",
+      "createdAt": "2026-11-08",
+      "title": "B·B·B POTTERS",
+      "shortDescription": "The name is easier to remember than it looks: brew, bake and boil.",
+      "longDescription": "The name is easier to remember than it looks: brew, bake and boil.\n\nB·B·B Potters sells tools for everyday life, and the three Bs stand for its motto: brew, bake and boil with Potters. Kitchen and tableware, food and drink, things for the bathroom, the bedroom and the garden, children's things, stationery. Everything is chosen to be practical, long-lasting and well designed, at prices that don't make you nervous.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-bbb-potters_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-bbb-potters_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-bbb-potters_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-bbb-potters_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-bbb-potters_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1e6a1102-e23a-592f-b4aa-d737ad6e151a",
+          "order": 0,
+          "title": "B·B·B POTTERS",
+          "caption": "In Yakuin, at the homeware shop filling the ground and first floors of its building.",
+          "latitude": 33.58213355038151,
+          "longitude": 130.3980450809372,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-bbb-potters.mp3",
+          "audioDurationSeconds": 75,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-bbb-potters_hero.webp",
+          "transcriptText": "The name is easier to remember than it looks: brew, bake and boil.\n\nThe shop is in Yakuin, filling the ground and first floors of its building. Step inside: the idea is that you pick things up.\n\nB·B·B Potters sells tools for everyday life, and the three Bs stand for its motto: brew, bake and boil with Potters. Kitchen and tableware, food and drink, things for the bathroom, the bedroom and the garden, children's things, stationery. Everything is chosen to be practical, long-lasting and well designed, at prices that don't make you nervous.\n\nHave a look at how you're meant to shop. You're encouraged to hold things and feel the weight before you decide, which is how you'd want to buy a pan you'll use for twenty years. There's a sister shop nearby, BBB&, for the most everyday things.\n\nWhat's worth knowing is that this sort of shop is part of what makes Yakuin feel the way it does. It's a neighbourhood where people live, shop and cook, and the stores here sell to them rather than to visitors. That's why it's worth an hour.\n\nWhen you're done, walk a few minutes to REC Coffee by Yakuin Station for a flat white, or wander north into the shops of Daimyo."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 75,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.58213355038151,
+      "centroidLongitude": 130.3980450809372,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5fb7167a-54f9-59ea-97a0-6b392348f525",
+      "createdAt": "2026-11-08",
+      "title": "BOOKS KUBRICK Hakozaki | ブックスキューブリック 箱崎店",
+      "shortDescription": "A bookshop named after a film director, because it opened in the year in the title of one of his best-known films: 2001.",
+      "longDescription": "A bookshop named after a film director, because it opened in the year in the title of one of his best-known films: 2001.\n\nThe founder, Minoru Oi, opened his first shop in April 2001, at the age of thirty-nine, on Keyaki-dori, the tree-lined street near Tenjin. He named it after Stanley Kubrick, who directed 2001: A Space Odyssey, because he admired films that managed to be both art and popular. That first shop was tiny, about forty-three square metres, and it closed in July 2026 after twenty-five years. This one, opened in 2008, carries on.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-books-kubrick-hakozaki_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-books-kubrick-hakozaki_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-books-kubrick-hakozaki_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9c61f08a-6027-5dca-8d0b-0907989464d8",
+          "order": 0,
+          "title": "BOOKS KUBRICK Hakozaki | ブックスキューブリック 箱崎店",
+          "caption": "Just west of JR Hakozaki Station: the street-level bookshop, with a café and gallery upstairs.",
+          "latitude": 33.617357931917994,
+          "longitude": 130.42628013861065,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-books-kubrick-hakozaki.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-books-kubrick-hakozaki_hero.webp",
+          "transcriptText": "A bookshop named after a film director, because it opened in the year in the title of one of his best-known films: 2001.\n\nYou should be on the street just west of JR Hakozaki Station, a minute from the exit. Books Kubrick is the bookshop at street level, with a café and gallery on the floor above.\n\nThe founder, Minoru Oi, opened his first shop in April 2001, at the age of thirty-nine, on Keyaki-dori, the tree-lined street near Tenjin. He named it after Stanley Kubrick, who directed 2001: A Space Odyssey, because he admired films that managed to be both art and popular. That first shop was tiny, about forty-three square metres, and it closed in July 2026 after twenty-five years. This one, opened in 2008, carries on.\n\nHave a look at the shelves. Oi orders his books directly from the publishers, by phone, rather than taking whatever the wholesalers send. New titles start near the door and move to themed shelves later, grouped so that one book leads you to the next. There are magazines and picture books, philosophy and manga. It's meant to suit someone who finds a big bookshop overwhelming, and still satisfy someone who reads everything.\n\nUpstairs, the café and gallery hosts talks and exhibitions, and since 2016 there's been a bakery as well.\n\nAnd here's the thing. Small bookshops across Japan are closing, and this one's own first shop went this year. Oi's answer has always been to make the shop a place where things happen. In 2006 he helped start Bookuoka, a book festival for the whole city, which is still going.\n\nBefore you leave, climb the stairs to see what's on in the gallery. Then walk a few minutes to Hakozaki Shrine, the great old shrine that gives this district its name."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.617357931917994,
+      "centroidLongitude": 130.42628013861065,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "literature",
+      "tags": [
+        "Venue",
+        "Literature",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f5db90cb-ba52-5801-bc24-f6667c3b5a41",
+      "createdAt": "2026-11-08",
+      "title": "Ishimura Manseido Main Store | 石村萬盛堂 本店",
+      "shortDescription": "If you've ever wondered why Japan has a day for giving marshmallows back, the answer is in this shop.",
+      "longDescription": "If you've ever wondered why Japan has a day for giving marshmallows back, the answer is in this shop.\n\nIt was founded on Christmas Day, 1905, by Zentaro Ishimura. His family were carpenters who built shrines and temples, but his health was poor, so he turned to making sweets fit to offer to the gods and the Buddha. He started out renting the ground floor of a house belonging to the family of Kawakami Otojiro, the actor and showman.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ishimura-manseido-main-store_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ishimura-manseido-main-store_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ishimura-manseido-main-store_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ishimura-manseido-main-store_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ishimura-manseido-main-store_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ishimura-manseido-main-store_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0c7eb699-44a3-5ae2-b075-17de82f88762",
+          "order": 0,
+          "title": "Ishimura Manseido Main Store | 石村萬盛堂 本店",
+          "caption": "At 2-1 Suzaki-machi on the old Hakata side, the corner where the Yamakasa floats turn each July.",
+          "latitude": 33.595943,
+          "longitude": 130.404434,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-ishimura-manseido-main-store.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ishimura-manseido-main-store_hero.webp",
+          "transcriptText": "If you've ever wondered why Japan has a day for giving marshmallows back, the answer is in this shop.\n\nThe main shop stands in Suzaki-machi, on the old Hakata side of the river, at a corner the whole city knows in July.\n\nIt was founded on Christmas Day, 1905, by Zentaro Ishimura. His family were carpenters who built shrines and temples, but his health was poor, so he turned to making sweets fit to offer to the gods and the Buddha. He started out renting the ground floor of a house belonging to the family of Kawakami Otojiro, the actor and showman.\n\nHave a look at the Tsurunoko. A soft white marshmallow wrapped round a sweet egg-yolk bean paste, shaped like an egg. It began as a way of using up egg whites left over from another sweet made only with yolks, sold at first in real eggshells. When marshmallow-making arrived from abroad, it took the shape you see now.\n\nNow the story. In 1977 the company president, Zengo Ishimura, read a letter in a magazine: a reader complained that men never gave anything back on Valentine's Day. So in 1978 the shop proposed Marshmallow Day, on the fourteenth of March, when men would wrap the chocolate they'd received in marshmallow, a symbol of their own kindness, and give it back. Others claim the idea too, but in Hakata this is White Day's origin.\n\nBefore you go, look outside. This corner is the turning point of the Hakata Gion Yamakasa festival, where the racing floats swing round, and on the fifteenth of July the street is packed. Inside, ask for the Tsurunoko no Konoko, made only here, with fresh marshmallow and a shelf life of thirty minutes."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.595943,
+      "centroidLongitude": 130.404434,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "68f43ff3-7687-5ef6-bd5f-8b5b2d5c2795",
+      "createdAt": "2026-11-08",
+      "title": "Kawabata Shopping Arcade | 川端商店街",
+      "shortDescription": "Over a hundred and thirty shops sit under one roof here, and a towering festival float stands in the middle of them all year round.",
+      "longDescription": "Over a hundred and thirty shops sit under one roof here, and a towering festival float stands in the middle of them all year round.\n\nThe arcade runs for about four hundred metres, from Hakata Riverain at the north end to Canal City at the south, and it's shared by two traders' associations, Kami-Kawabata and Kawabata Chuo. Shops have traded along this street for more than a hundred and forty years.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-kawabata-shopping-arcade_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-kawabata-shopping-arcade_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1c674cf1-9179-5a44-a7b3-65ac21e54dc4",
+          "order": 0,
+          "title": "Kawabata Shopping Arcade | 川端商店街",
+          "caption": "In the small square partway along the covered arcade, by the festival float and the zenzai shop.",
+          "latitude": 33.59372464886823,
+          "longitude": 130.40838521162632,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-kawabata-shopping-arcade.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-kawabata-shopping-arcade_hero.webp",
+          "transcriptText": "Over a hundred and thirty shops sit under one roof here, and a towering festival float stands in the middle of them all year round.\n\nFind the small square partway along the covered arcade, between Kushida Shrine and the river. You'll know it by the float, a towering decorated display of figures from legend, with a little zenzai shop beside it.\n\nThe arcade runs for about four hundred metres, from Hakata Riverain at the north end to Canal City at the south, and it's shared by two traders' associations, Kami-Kawabata and Kawabata Chuo. Shops have traded along this street for more than a hundred and forty years.\n\nHave a look at the float first. It's one of the decorated floats of the Hakata Gion Yamakasa, the festival dedicated to Kushida Shrine every July, and this one is kept on show here all year.\n\nThen the zenzai. It's a hot, very sweet red bean soup with two rice cakes, grilled to order, and it has been billed as the sweetest zenzai in Japan. It closed once, and the traders reopened it because the neighbourhood asked them to. It's open from Friday to Sunday, and every day during the festival.\n\nAlong the arcade, look for Kadota Chochin, a family lantern maker with around a hundred and twenty years behind it, where you can paint your own small lantern, and Masuya, which sells Hakata dolls by about sixty different artists.\n\nWhat I like about Kawabata is that it's still doing what an old shopping street is meant to do. It sells you lanterns and dolls, yes, but it also keeps a festival float on show and brings a sweet shop back from the dead.\n\nKushida Shrine, where the festival belongs, is just off the arcade. Or turn north to the river, where the Asian Art Museum sits on top of Hakata Riverain."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.59372464886823,
+      "centroidLongitude": 130.40838521162632,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "Commerce",
+        "History",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2a08dc2b-6743-54a8-973d-bf89e7b43ae4",
+      "createdAt": "2026-11-08",
+      "title": "Fukuoka Art Museum | 福岡市美術館",
+      "shortDescription": "Those tiled walls weren't stuck on afterwards. The tiles were set into the concrete as it was poured.",
+      "longDescription": "Those tiled walls weren't stuck on afterwards. The tiles were set into the concrete as it was poured.\n\nThe building is by Kunio Maekawa, one of the founders of modern architecture in Japan, who had worked for Le Corbusier in Paris. It opened in November 1979. Have a look at the walls close up. Maekawa used a technique of tiles cast into the concrete, and around them, concrete that has been chipped back by hand to a rough surface. It's a building made to weather well, and after forty-odd years it has.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-fukuoka-art-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-fukuoka-art-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-fukuoka-art-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-fukuoka-art-museum_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "57a76543-7820-593c-be95-cd0567146d18",
+          "order": 0,
+          "title": "Fukuoka Art Museum | 福岡市美術館",
+          "caption": "On the broad approach up from Ohori Park, the lake behind you and the long, low tiled walls ahead.",
+          "latitude": 33.58436234534444,
+          "longitude": 130.37969463929048,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-fukuoka-art-museum.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-fukuoka-art-museum_hero.webp",
+          "transcriptText": "Those tiled walls weren't stuck on afterwards. The tiles were set into the concrete as it was poured.\n\nStand on the broad approach that leads up from the path round Ohori Park, with the lake behind you and the museum ahead: long, low, tiled walls and broad terraces, with a café looking out over the water near the entrance.\n\nThe building is by Kunio Maekawa, one of the founders of modern architecture in Japan, who had worked for Le Corbusier in Paris. It opened in November 1979. Have a look at the walls close up. Maekawa used a technique of tiles cast into the concrete, and around them, concrete that has been chipped back by hand to a rough surface. It's a building made to weather well, and after forty-odd years it has.\n\nThe museum closed in 2016 for a long renovation and reopened in March 2019. The architecture was left alone. What changed was the way in: the new approach you're standing on opens the museum straight onto the park, so it no longer turns its back on the people walking the lake.\n\nInside are about sixteen thousand works. Highlights include Dalí's Madonna of Port Lligat, painted in 1950, works by Miró, Chagall and Warhol, a Basquiat, and a pumpkin by Yayoi Kusama from 1994. There's also a fine collection of older Japanese art, including Buddhist sculpture and tea ceremony treasures.\n\nAnd here's the thing about the renovation. The easy option would have been a glass extension and a new entrance. Instead, the city kept Maekawa's building and simply turned it to face the park.\n\nWhen you go in, look for the small Maekawa memorial space, with models of the building and the original chairs used since 1979. Afterwards, walk the two-kilometre path round Ohori Park, or cross the moat to the ruins of Fukuoka Castle."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.58436234534444,
+      "centroidLongitude": 130.37969463929048,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Modernist",
+        "Designed by a Master",
+        "Kunio Maekawa"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ae084a05-abd6-54b6-bb21-02ad07fc644f",
+      "createdAt": "2026-11-08",
+      "title": "Kushida Shrine | 櫛田神社",
+      "shortDescription": "Every July, the festival that defines Hakata is held in honour of this shrine, and one of its floats never leaves.",
+      "longDescription": "Every July, the festival that defines Hakata is held in honour of this shrine, and one of its floats never leaves.\n\nLocals call this Okushida-san. It's the guardian shrine of old Hakata, the merchant town, and tradition says it was founded in 757. The buildings you see date from 1587, when the warlord Toyotomi Hideyoshi rebuilt Hakata after years of war.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-kushida-shrine_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "849e3984-f26c-59ec-9c01-c6b0ff81ec2a",
+          "order": 0,
+          "title": "Kushida Shrine | 櫛田神社",
+          "caption": "Through the main gate from the street, the halls ahead and a towering festival float in the grounds.",
+          "latitude": 33.593142250135415,
+          "longitude": 130.41042670977347,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-kushida-shrine.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-kushida-shrine_hero.webp",
+          "transcriptText": "Every July, the festival that defines Hakata is held in honour of this shrine, and one of its floats never leaves.\n\nCome in through the main gate from the street, with the shrine's halls ahead of you. Look around the grounds for a towering festival float, crowded with painted warriors and gods.\n\nLocals call this Okushida-san. It's the guardian shrine of old Hakata, the merchant town, and tradition says it was founded in 757. The buildings you see date from 1587, when the warlord Toyotomi Hideyoshi rebuilt Hakata after years of war.\n\nHave a look at the float first. It's a kazariyama, a decorated float of the Hakata Gion Yamakasa, the festival held in honour of this shrine from the first to the fifteenth of July, which goes back about eight hundred years and is now on UNESCO's list of intangible heritage. One is kept on show here all year round, so visitors never miss it entirely.\n\nThen look up as you pass through the gate. On the ceiling is a large round board marked with the animals of the Chinese zodiac. It's an ehō-ban, and it shows the year's lucky direction.\n\nThe great ginkgo tree by the entrance is around a thousand years old, and it's protected as a natural monument by the prefecture.\n\nWhat's worth knowing, standing here, is that the shrine is the city's living calendar. The Yamakasa is held for it in July, the Dontaku procession sets off from here in May, and the Okunchi festival follows in October.\n\nIf you come in early February, look out for the huge smiling Otafuku mask at the gate for Setsubun. Otherwise, step out into the Kawabata arcade next door, where another float stands on display."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.593142250135415,
+      "centroidLongitude": 130.41042670977347,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History",
+        "Iconic Landmark",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8d54d1c6-3243-5344-bd0a-4895a725c8af",
+      "createdAt": "2026-11-08",
+      "title": "Shofukuji | 聖福寺",
+      "shortDescription": "Japan's Zen Buddhism has many homes, but this was the first.",
+      "longDescription": "Japan's Zen Buddhism has many homes, but this was the first.\n\nThe temple was founded in 1195 by the monk Eisai, who had just come back from studying in Song dynasty China. The shogun, Minamoto no Yoritomo, gave him the land, and the temple was finished in 1204. The temple carries an inscription naming it the first Zen temple in Japan, and tradition says the Emperor Go-Toba wrote it himself.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-shofukuji_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-shofukuji_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-shofukuji_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a7032cca-8d69-5048-b9cd-6deaf43f841f",
+          "order": 0,
+          "title": "Shofukuji | 聖福寺",
+          "caption": "At the outer gate, looking down the straight path to the inner gate, Buddha hall and abbot's quarters.",
+          "latitude": 33.59739776774726,
+          "longitude": 130.41444419628175,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-shofukuji.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-shofukuji_hero.webp",
+          "transcriptText": "Japan's Zen Buddhism has many homes, but this was the first.\n\nStand at the outer gate and look straight ahead. A long, straight path runs through the precinct, with the inner gate, the Buddha hall and the abbot's quarters lined up one behind the other.\n\nThe temple was founded in 1195 by the monk Eisai, who had just come back from studying in Song dynasty China. The shogun, Minamoto no Yoritomo, gave him the land, and the temple was finished in 1204. The temple carries an inscription naming it the first Zen temple in Japan, and tradition says the Emperor Go-Toba wrote it himself.\n\nHave a look at that straight line. It's the classic Zen layout, every hall on one axis, so walking in is a kind of gradual approach. Most of the halls you see were rebuilt in the Edo period, but the plan is Eisai's.\n\nEisai is also remembered for bringing tea seeds back from China, and there's a tea bush in the grounds said to be the origin of Japanese tea. Much later, the painter-monk Sengai was abbot here, and his playful brush drawings made the temple famous.\n\nHere's what I love about this place. It's in the middle of a city of more than a million and a half people, a few minutes from Hakata Station, and it's usually quiet. The whole precinct is a national historic site, and nobody has tried to turn it into an attraction.\n\nWalk out through the side lanes into the temple quarter around it. Within ten minutes you'll pass several more old temples, including Tochoji with its great wooden Buddha, and the narrow streets of Gokusho-machi, where old Hakata survives best."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.59739776774726,
+      "centroidLongitude": 130.41444419628175,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History",
+        "Hidden Gem",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b3443300-284c-530c-84e5-d44456478f4e",
+      "createdAt": "2026-11-08",
+      "title": "Hakata Machiya Furusato-kan | 博多町家ふるさと館",
+      "shortDescription": "The wooden house in front of you was a weaver's home and workshop, built in the Meiji years and carried here to be saved.",
+      "longDescription": "The wooden house in front of you was a weaver's home and workshop, built in the Meiji years and carried here to be saved.\n\nStart with the house. It was built in the middle of the Meiji era for a family of Hakata-ori weavers, the yarn-dyed silk the city is known for, and it was both their home and their workshop. It was later moved here and restored, and it's now protected by the city. Look at the narrow street front and the long depth behind it. That shape is how merchant towns like Hakata packed people in.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-hakata-machiya-furusato-kan_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-hakata-machiya-furusato-kan_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-hakata-machiya-furusato-kan_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-hakata-machiya-furusato-kan_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5c9d6a23-913b-5ea7-bd4b-c8f97b5adf12",
+          "order": 0,
+          "title": "Hakata Machiya Furusato-kan | 博多町家ふるさと館",
+          "caption": "Across the street from Kushida Shrine, at the wooden Meiji-era weaver's townhouse and its neighbours.",
+          "latitude": 33.59388893773075,
+          "longitude": 130.4115061827902,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-hakata-machiya-furusato-kan.mp3",
+          "audioDurationSeconds": 95,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-hakata-machiya-furusato-kan_hero.webp",
+          "transcriptText": "The wooden house in front of you was a weaver's home and workshop, built in the Meiji years and carried here to be saved.\n\nFind the corner across the street from Kushida Shrine where three buildings sit together. One of them is a traditional wooden townhouse. That's the machiya. Beside it are the exhibition building and a newer shop and café.\n\nStart with the house. It was built in the middle of the Meiji era for a family of Hakata-ori weavers, the yarn-dyed silk the city is known for, and it was both their home and their workshop. It was later moved here and restored, and it's now protected by the city. Look at the narrow street front and the long depth behind it. That shape is how merchant towns like Hakata packed people in.\n\nNext door, the exhibition building tells the story of old Hakata, its festivals, its crafts and its everyday life, and upstairs you'll find tools from merchant households and craftspeople working at traditional Hakata crafts.\n\nYou can also have a go yourself. Almost every day there's a chance to paint a Hakata doll, or a papier-mâché toy, or a spinning top, and there's a free guided walk round the neighbourhood every day.\n\nAnd here's the thing. A great deal of the old town was lost to war and to rebuilding. A place like this keeps not just one house but a way of living in one.\n\nThe newer building, opened in spring 2025, has a shop called hakatakara, which sells local food and crafts, and a café. Then cross the road to Kushida Shrine, or walk into the Kawabata arcade just behind it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 95,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.59388893773075,
+      "centroidLongitude": 130.4115061827902,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8590c89d-a7f0-520a-9e5c-b3ae6e40709e",
+      "createdAt": "2026-11-08",
+      "title": "Fukuoka Asian Art Museum | 福岡アジア美術館",
+      "shortDescription": "Most art museums tell the story of modern art from Paris or New York. This one tells it from Asia.",
+      "longDescription": "Most art museums tell the story of modern art from Paris or New York. This one tells it from Asia.\n\nIt opened in March 1999, built on a collection that the city had been gathering for twenty years at the Fukuoka Art Museum. The aim was unusual: to collect, keep and show modern and contemporary art from across Asia, systematically, country by country. There are very few museums anywhere with the same purpose.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-fukuoka-asian-art-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-fukuoka-asian-art-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-fukuoka-asian-art-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-fukuoka-asian-art-museum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-fukuoka-asian-art-museum_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "fe496d13-4d82-530e-a7f2-ce8680be888f",
+          "order": 0,
+          "title": "Fukuoka Asian Art Museum | 福岡アジア美術館",
+          "caption": "At Hakata Riverain beside the Hakata River; the museum is high up in the building, by lift.",
+          "latitude": 33.59539204607636,
+          "longitude": 130.40589908266233,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-fukuoka-asian-art-museum.mp3",
+          "audioDurationSeconds": 93,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-fukuoka-asian-art-museum_hero.webp",
+          "transcriptText": "Most art museums tell the story of modern art from Paris or New York. This one tells it from Asia.\n\nFind the Hakata Riverain building, beside the Hakata River at the north end of the Kawabata arcade. The museum isn't at street level. It's high up in the building, so look for the signs and take the lift.\n\nIt opened in March 1999, built on a collection that the city had been gathering for twenty years at the Fukuoka Art Museum. The aim was unusual: to collect, keep and show modern and contemporary art from across Asia, systematically, country by country. There are very few museums anywhere with the same purpose.\n\nHave a look for some of the best-known pieces. Fang Lijun's paintings of shaven-headed young men from China. The Luo Brothers' I Love Beijing Tiananmen, all bright lacquer and pop imagery. Kim Chang-yeol's painting of a single drop of water, from Korea, almost unbearably precise. And Tawan Duchanee's Battle of Mara, from Thailand.\n\nWhat's worth knowing is why Fukuoka. The city has always looked across the sea to Korea and China rather than back to Tokyo. Busan is closer than Osaka. A museum of Asian art here isn't an exotic idea. It's the city describing its own neighbourhood.\n\nBefore you leave, find a window and look out over the river towards Nakasu. Then walk down to the water and along to Nakasu, or south through the Kawabata arcade towards Kushida Shrine."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 93,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.59539204607636,
+      "centroidLongitude": 130.40589908266233,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "addff32a-e899-536a-804d-685aa1380eae",
+      "createdAt": "2026-11-08",
+      "title": "Kyushu National Museum | 九州国立博物館",
+      "shortDescription": "When this opened in 2005, it was the first new national museum in Japan for more than a century.",
+      "longDescription": "When this opened in 2005, it was the first new national museum in Japan for more than a century.\n\nThe architect was Kiyonori Kikutake, working with Kume Sekkei. Kikutake was one of the Metabolists, the group that reimagined Japanese cities in the sixties, and here he went for something softer: a flowing roof clad in blue titanium over glass walls with a double skin. It's built on seismic isolation, which won it an engineering award, so the treasures inside can ride out an earthquake.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-kyushu-national-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-kyushu-national-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-kyushu-national-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-kyushu-national-museum_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ba8d279d-42e9-5026-8ee4-dd918aab2b3d",
+          "order": 0,
+          "title": "Kyushu National Museum | 九州国立博物館",
+          "caption": "Out of the colour-lit tunnel from Dazaifu Tenmangu, facing the long glass curve and its blue wave roof.",
+          "latitude": 33.51848587405998,
+          "longitude": 130.53812774011936,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-kyushu-national-museum.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-kyushu-national-museum_hero.webp",
+          "transcriptText": "When this opened in 2005, it was the first new national museum in Japan for more than a century.\n\nCome up out of the long, colour-lit tunnel and the moving walkways from Dazaifu Tenmangu, and stand facing the building. A huge, low curve of glass, with a blue roof that rolls across the top like a wave, and wooded hills behind it.\n\nThe architect was Kiyonori Kikutake, working with Kume Sekkei. Kikutake was one of the Metabolists, the group that reimagined Japanese cities in the sixties, and here he went for something softer: a flowing roof clad in blue titanium over glass walls with a double skin. It's built on seismic isolation, which won it an engineering award, so the treasures inside can ride out an earthquake.\n\nHave a look at its scale. When it opened it had the largest floor area of any single building in Japan's national museum system. Before it, there were only three national museums, in Tokyo, Kyoto and Nara, and the newest of those dated from 1897.\n\nThe idea is what sets it apart. This museum sets out to explain how Japanese culture formed by looking at Asia, at the trade and contact that came across the sea to Kyushu first. Dazaifu, once the government outpost for this whole region, was where much of that arrived.\n\nThe hill it stands on belongs to Dazaifu Tenmangu, and the shrine's head priest was among the people calling for a museum here as long ago as 1893. It took more than a century.\n\nOn the walk back down to the shrine, stop on the approach road to look at the coffee shop by Kengo Kuma, built from thousands of interlocking strips of timber. And if there's time, go and see the plum trees at Tenmangu itself."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.51848587405998,
+      "centroidLongitude": 130.53812774011936,
+      "city": "Dazaifu",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "History",
+        "Architecture",
+        "Contemporary",
+        "Designed by a Master",
+        "Kiyonori Kikutake",
+        "Kume Sekkei"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "da5cdbe7-b8f8-5f63-a914-f6558e68a214",
+      "createdAt": "2026-11-08",
+      "title": "ACROS Fukuoka | アクロス福岡",
+      "shortDescription": "From one side, this is an office building. From the other, it's a hill.",
+      "longDescription": "From one side, this is an office building. From the other, it's a hill.\n\nThe building is ACROS Fukuoka, which stands for Asian Crossroads Over the Sea. It opened in April 1995 on the site of the old prefectural government office, and the idea came from the Argentine architect Emilio Ambasz, with Nihon Sekkei and Takenaka doing the detailed design. Look at what that achieves: the city got its big public building, and the park kept its green, laid over the building's back.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-acros-fukuoka_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-acros-fukuoka_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-acros-fukuoka_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-acros-fukuoka_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-acros-fukuoka_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4993738c-fde4-523d-b794-836d5304d8f2",
+          "order": 0,
+          "title": "ACROS Fukuoka | アクロス福岡",
+          "caption": "On the lawn of Tenjin Central Park facing north, the stepped green terraces climbing to the roof.",
+          "latitude": 33.591791560920186,
+          "longitude": 130.40240050231182,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-acros-fukuoka.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-acros-fukuoka_hero.webp",
+          "transcriptText": "From one side, this is an office building. From the other, it's a hill.\n\nStand on the lawn of Tenjin Central Park and face north. In front of you, the park doesn't stop at the building. It carries on up a long, stepped slope of trees and shrubs, terrace above terrace, all the way to the roof sixty metres above you.\n\nThe building is ACROS Fukuoka, which stands for Asian Crossroads Over the Sea. It opened in April 1995 on the site of the old prefectural government office, and the idea came from the Argentine architect Emilio Ambasz, with Nihon Sekkei and Takenaka doing the detailed design. Look at what that achieves: the city got its big public building, and the park kept its green, laid over the building's back.\n\nHave a look at the planting. It was designed to look like a natural mountain, and locals call it Acros-yama, Acros mountain. It now holds around two hundred species, and over thirty years the trees have grown up so that, from a distance, you'd struggle to see a building at all.\n\nInside are offices, shops and the Fukuoka Symphony Hall, which seats nearly two thousand people.\n\nAnd here's the thing. This was built in the mid-nineties, long before green buildings were fashionable, and it now reads almost as a prediction. It's quite something to see what thirty years of growth has done.\n\nYou can climb it. The step garden is open every day except over New Year, free, from nine in the morning, though it closes in rain. At weekends the rooftop lookout opens too, with views across to Hakata Bay. Afterwards, look for the old French-style guest house at the river end of the park."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.591791560920186,
+      "centroidLongitude": 130.40240050231182,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Civic",
+        "Park",
+        "Architecture",
+        "Green Escape",
+        "Viewpoint",
+        "Free to Visit",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Emilio Ambasz",
+        "Nihon Sekkei"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d6a0bad4-f2af-54a5-8c6b-947bc33fcb6f",
+      "createdAt": "2026-11-08",
+      "title": "Tenjin Business Center | 天神ビジネスセンター",
+      "shortDescription": "Look at the corners of this building. They look as if they're melting.",
+      "longDescription": "Look at the corners of this building. They look as if they're melting.\n\nThis is the Tenjin Business Center, completed in 2021 and designed by OMA, the international practice founded by Rem Koolhaas. The partner in charge was Shohei Shigematsu, who was born in Fukuoka. He called it a remarkable experience to build in his hometown.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-tenjin-business-center_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-tenjin-business-center_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-tenjin-business-center_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-tenjin-business-center_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-tenjin-business-center_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2788b172-0b0d-5508-aa46-4dafa758b4a6",
+          "order": 0,
+          "title": "Tenjin Business Center | 天神ビジネスセンター",
+          "caption": "On the corner of Meiji-dori, looking up at the glass tower with its pixelated, stepped corners.",
+          "latitude": 33.59161904864517,
+          "longitude": 130.40058302024116,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-tenjin-business-center.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-tenjin-business-center_hero.webp",
+          "transcriptText": "Look at the corners of this building. They look as if they're melting.\n\nStand on the corner of Meiji-dori and look up at the tall office building in front of you. Glass, mostly, but the corners are broken up into small steps, like pixels on a screen.\n\nThis is the Tenjin Business Center, completed in 2021 and designed by OMA, the international practice founded by Rem Koolhaas. The partner in charge was Shohei Shigematsu, who was born in Fukuoka. He called it a remarkable experience to build in his hometown.\n\nHave a look at those pixelated corners. The architects meant them to break the big block down to a human scale and soften the line between the street and the offices. Some have compared them to an ice cube melting. At the bottom, the soffits under the stepped corners are lit up, so the base of the building glows at night.\n\nIt's the first building finished in the Tenjin Big Bang, the city's long plan to rebuild the centre of Tenjin. Height limits here had long been tight, with the airport so close, and relaxing them under a national special zone was what let new towers like this go up. In Shigematsu's words, the Big Bang signifies a starting point.\n\nWhat's worth knowing is that these offices house start-ups, a big Japanese electronics company and a Google development team. Fukuoka has set out to be Japan's start-up city, and this building was its first statement in glass.\n\nA second tower, the Tenjin Business Center II, opened next door in August 2026, also by Shigematsu. Walk round to compare the two. Then go down a level to the underground mall below Watanabe-dori, which is fifty years old this year."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.59161904864517,
+      "centroidLongitude": 130.40058302024116,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Designed by a Master",
+        "Rem Koolhaas",
+        "Shohei Shigematsu"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b1f2ed56-6480-5aae-a20f-9f7249fe4830",
+      "createdAt": "2026-11-08",
+      "title": "Fukuoka Bank Head Office | 福岡銀行本店",
+      "shortDescription": "The best part of this bank is the part with no bank in it.",
+      "longDescription": "The best part of this bank is the part with no bank in it.\n\nThis is the head office of the Fukuoka Bank, completed in 1975 to a design by Kisho Kurokawa, one of the Metabolists who shaped Japanese architecture in the sixties and seventies. Kurokawa thought of the space under the building as an in-between place, like the engawa, the veranda of a traditional Japanese house: neither inside nor out.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-fukuoka-bank-head-office_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-fukuoka-bank-head-office_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-fukuoka-bank-head-office_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ce2bf4cc-0cc8-5793-be6c-8a1589cd3c30",
+          "order": 0,
+          "title": "Fukuoka Bank Head Office | 福岡銀行本店",
+          "caption": "On the Tenjin pavement, looking up at the dark granite block raised over its open public plaza.",
+          "latitude": 33.59214851690893,
+          "longitude": 130.39779722209363,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-fukuoka-bank-head-office.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-fukuoka-bank-head-office_hero.webp",
+          "transcriptText": "The best part of this bank is the part with no bank in it.\n\nStand on the pavement on the Tenjin side and look up. A dark grey granite building, heavy and plain, raised on great piers, with a huge open space carved out underneath it. Walk in under it if you like. It's open to everyone.\n\nThis is the head office of the Fukuoka Bank, completed in 1975 to a design by Kisho Kurokawa, one of the Metabolists who shaped Japanese architecture in the sixties and seventies. Kurokawa thought of the space under the building as an in-between place, like the engawa, the veranda of a traditional Japanese house: neither inside nor out.\n\nHave a look at the plaza. You'll find sculpture, planting, a water basin and benches, and on a hot day it's the coolest shade in Tenjin.\n\nIt hasn't always been this welcoming. Originally, the plaza sat a metre and a half to two metres above the street, and you climbed up to it by steps. It felt formal, almost solemn, and quite cut off from the noise of the city. In 2013 the bank reworked it: the steps became gentle slopes, the round entrance became a coffee corner, and now there are flower beds, an open-air café and concerts here.\n\nAnd here's the thing. All around this building, the Tenjin Big Bang is replacing older offices with taller ones. The bank has done the opposite, with a plan to keep this building going for sixty-five years, and to keep giving its ground floor to the city.\n\nBelow ground there's a hall seating seven hundred and seventy-five, used for concerts. Then cross over and compare it with the new towers of the Tenjin Business Center, a few minutes away, to see two very different ideas of what a Tenjin office should be."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.59214851690893,
+      "centroidLongitude": 130.39779722209363,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Modernist",
+        "Free to Visit",
+        "Designed by a Master",
+        "Kisho Kurokawa"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "da8df186-93c0-5c41-8c16-b3e8c05fdf3f",
+      "createdAt": "2026-11-08",
+      "title": "Tenjin Underground Mall | 天神地下街",
+      "shortDescription": "Underneath one of Fukuoka's busiest streets is a little piece of nineteenth-century Europe, built in 1976.",
+      "longDescription": "Underneath one of Fukuoka's busiest streets is a little piece of nineteenth-century Europe, built in 1976.\n\nTenjin Chikagai opened in September 1976 under Watanabe-dori, Tenjin's main street. It now runs for about six hundred metres, with more than a hundred and fifty shops, and it was extended north in 1994 and south in 2005, when the Nanakuma subway line opened.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-tenjin-underground-mall_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-tenjin-underground-mall_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "fbdb8187-ae70-54f1-ac2b-07b78a1d2e58",
+          "order": 0,
+          "title": "Tenjin Underground Mall | 天神地下街",
+          "caption": "Down any stairway from Watanabe-dori, in the dim passage of stone floors and arabesque ceilings.",
+          "latitude": 33.59158436038524,
+          "longitude": 130.3988764067493,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-tenjin-underground-mall.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-tenjin-underground-mall_hero.webp",
+          "transcriptText": "Underneath one of Fukuoka's busiest streets is a little piece of nineteenth-century Europe, built in 1976.\n\nTake any of the stairways down from Watanabe-dori into the mall. You'll find yourself in a long, dim passage, with stone and brick underfoot, an ornate patterned ceiling overhead, and brightly lit shopfronts on either side.\n\nTenjin Chikagai opened in September 1976 under Watanabe-dori, Tenjin's main street. It now runs for about six hundred metres, with more than a hundred and fifty shops, and it was extended north in 1994 and south in 2005, when the Nanakuma subway line opened.\n\nHave a look at the floor and the ceiling. The designers took their cue from the streets of nineteenth-century Europe, with stone and brick paving in a southern European style and a ceiling of curling arabesque patterns.\n\nThen notice the light. The concept was a theatre: the walkway is the audience, kept in shadow, and the shopfronts are the stage, brightly lit. When it opened, people complained it was too dark, so extra lights were added. Later, someone decided the original idea had been right, and they were taken away again.\n\nWhat I like about it is that it's a fantasy, built at a time when Japan was copying Europe without embarrassment, and it has kept its nerve for fifty years. It would be easy to modernise it into a bright white shopping corridor. Nobody has.\n\nThis year the mall marks its fiftieth anniversary, and a monument has been unveiled to celebrate. Walk the whole length from north to south, and then come up at the far end near Tenjin-Minami, a short walk from the cafés of Haruyoshi and the river."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.59158436038524,
+      "centroidLongitude": 130.3988764067493,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Market",
+        "Commerce",
+        "Architecture",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "30d23ca4-d59d-5c45-a4e3-70d2246e755a",
+      "createdAt": "2026-11-08",
+      "title": "Former Fukuoka Prefectural Public Hall Guest House | 旧福岡県公会堂貴賓館",
+      "shortDescription": "Locals know it as the public hall with the tulip roof by the river.",
+      "longDescription": "Locals know it as the public hall with the tulip roof by the river.\n\nIt was built in 1910 for a great industrial exhibition held for the eight prefectures of Kyushu and Okinawa, as a place to receive important guests. The style is French Renaissance, and it's one of the very few public buildings of its kind from the Meiji era, built in wood, that survive anywhere in Japan.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-former-fukuoka-prefectural-public-hall-guest-house_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-former-fukuoka-prefectural-public-hall-guest-house_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-former-fukuoka-prefectural-public-hall-guest-house_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5aa40cd4-10cd-5a60-8580-9d70ff5f035f",
+          "order": 0,
+          "title": "Former Fukuoka Prefectural Public Hall Guest House | 旧福岡県公会堂貴賓館",
+          "caption": "At the river corner of Tenjin Central Park, before the wooden 1910 building with its octagonal tower.",
+          "latitude": 33.59184036727882,
+          "longitude": 130.4044004116265,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-former-fukuoka-prefectural-public-hall-guest-house.mp3",
+          "audioDurationSeconds": 96,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-former-fukuoka-prefectural-public-hall-guest-house_hero.webp",
+          "transcriptText": "Locals know it as the public hall with the tulip roof by the river.\n\nFind the corner of Tenjin Central Park closest to the Naka River. Look for a two-storey wooden building with a porch on stone pillars at the front and a pointed octagonal tower on the east side.\n\nIt was built in 1910 for a great industrial exhibition held for the eight prefectures of Kyushu and Okinawa, as a place to receive important guests. The style is French Renaissance, and it's one of the very few public buildings of its kind from the Meiji era, built in wood, that survive anywhere in Japan.\n\nHave a look at the tower first. That's the tulip. Then the porch, with its stone columns: an imported European grandeur, translated into Japanese carpentry.\n\nThe building has had a long working life. It was the prefecture's public hall, then after the war it housed a high court, a fisheries high school and the prefecture's education office. When the prefectural government moved out of Tenjin, the rest of the complex was pulled down and the site became this park. The guest house was the one building they kept, and it's now a national Important Cultural Property.\n\nWhat's worth knowing is how close it came. A wooden building of 1910, on some of the most valuable land in the city, survived because someone decided it mattered.\n\nGo inside: every room is decorated differently, there's a café, and you can even try on period dress. Then look across the park to the green, stepped slope of ACROS Fukuoka, a very different kind of public building."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 96,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.59184036727882,
+      "centroidLongitude": 130.4044004116265,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4b426e05-7cef-5c35-aec7-082dd7c37452",
+      "createdAt": "2026-11-08",
+      "title": "Fukuoka City Red Brick Cultural Center | 福岡市赤煉瓦文化館",
+      "shortDescription": "If this looks like a little Tokyo Station, that's because the same architect designed both.",
+      "longDescription": "If this looks like a little Tokyo Station, that's because the same architect designed both.\n\nIt was finished in February 1909 as the Kyushu branch office of Nippon Life, the insurance company. The architects were Tatsuno Kingo and Kataoka Yasushi, and Tatsuno is the man behind Tokyo Station. That red brick striped with white stone became so closely linked with him that it's often called the Tatsuno style. He'd seen the Queen Anne buildings of Victorian Britain, and you can see them in this.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-fukuoka-city-red-brick-cultural-center_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-fukuoka-city-red-brick-cultural-center_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-fukuoka-city-red-brick-cultural-center_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a03e0e5b-3c23-5f47-acc4-19bc148ea77f",
+          "order": 0,
+          "title": "Fukuoka City Red Brick Cultural Center | 福岡市赤煉瓦文化館",
+          "caption": "Across the street from the red brick and white granite building with its dome and eight-sided turret.",
+          "latitude": 33.593375697558756,
+          "longitude": 130.40191658278985,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-fukuoka-city-red-brick-cultural-center.mp3",
+          "audioDurationSeconds": 97,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-fukuoka-city-red-brick-cultural-center_hero.webp",
+          "transcriptText": "If this looks like a little Tokyo Station, that's because the same architect designed both.\n\nStand across the street and look at the building: red brick with crisp white bands of granite, a dome, and an eight-sided turret.\n\nIt was finished in February 1909 as the Kyushu branch office of Nippon Life, the insurance company. The architects were Tatsuno Kingo and Kataoka Yasushi, and Tatsuno is the man behind Tokyo Station. That red brick striped with white stone became so closely linked with him that it's often called the Tatsuno style. He'd seen the Queen Anne buildings of Victorian Britain, and you can see them in this.\n\nHave a look at the turret first, the flourish that gives this small building its presence. Then the white stone bands, running right across the brick.\n\nInside, the decoration has hints of Art Nouveau, though rather restrained, as befits an insurance company.\n\nThe building became a national Important Cultural Property in 1969. It went on to house the city's historical archives and then a literature museum, and since 2019 it has been home to the Engineer Cafe, a meeting place for software developers and start-ups.\n\nAnd here's the thing. In a district where the Tenjin Big Bang is putting up glass towers on every corner, the most future-minded use in the neighbourhood might be in a brick building from 1909.\n\nStep inside to see the interiors. Then walk down to the river, where the old Guest House of 1910 stands at the edge of Tenjin Central Park. The two make a good pair."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 97,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.593375697558756,
+      "centroidLongitude": 130.40191658278985,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History",
+        "Free to Visit",
+        "Designed by a Master",
+        "Kingo Tatsuno",
+        "Yasushi Kataoka"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "82ca5b2f-5507-5101-bca4-ec5146271863",
+      "createdAt": "2026-11-08",
+      "title": "Canal City Hakata | キャナルシティ博多",
+      "shortDescription": "They built a river inside a shopping centre, and called the whole thing a theatre.",
+      "longDescription": "They built a river inside a shopping centre, and called the whole thing a theatre.\n\nCanal City opened in April 1996 on the site of an old Kanebo textile factory. It was built by the developer Fukuoka Jisho, and designed by the American architect Jon Jerde, who made his name turning shopping centres into places to wander. The concept was a theatre for the city.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-canal-city-hakata_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-canal-city-hakata_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-canal-city-hakata_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-canal-city-hakata_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-canal-city-hakata_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d644d4e6-8d67-59a3-856a-2ad701050606",
+          "order": 0,
+          "title": "Canal City Hakata | キャナルシティ博多",
+          "caption": "On the lowest level at the water's edge, the curving canal and its coloured balconies all around.",
+          "latitude": 33.58981025962543,
+          "longitude": 130.41093660304435,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-canal-city-hakata.mp3",
+          "audioDurationSeconds": 97,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-canal-city-hakata_hero.webp",
+          "transcriptText": "They built a river inside a shopping centre, and called the whole thing a theatre.\n\nGo down to the lowest level, to the water's edge. A curving canal runs through the middle of the complex, about a hundred and eighty metres long, lined with balconies, walkways and bridges in bold colours, climbing up on either side.\n\nCanal City opened in April 1996 on the site of an old Kanebo textile factory. It was built by the developer Fukuoka Jisho, and designed by the American architect Jon Jerde, who made his name turning shopping centres into places to wander. The concept was a theatre for the city.\n\nHave a look at how it works. Shops, cinemas and theatres are stacked above you on several levels, and the canal pulls you round the curve so you keep walking and keep seeing more. There are no railings at the water's edge, and the canal is kept shallow, about seventy centimetres deep, so children can touch it.\n\nThen the fountains. At regular intervals they burst up out of the canal, as high as twenty metres, with music and lights, and the balconies fill with people watching.\n\nWhat's worth knowing, standing here, is how influential this was. Jerde's idea of the shopping centre as a street, a stage and a day out was widely copied. Some people find it too much, and I understand why. But it changed what Fukuoka thought a city centre could feel like.\n\nWait for a fountain show if you can. Then leave by the north side and walk up the Kawabata arcade towards Kushida Shrine, the old way through Hakata."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 97,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.58981025962543,
+      "centroidLongitude": 130.41093660304435,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Commerce",
+        "Architecture",
+        "Contemporary",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Jon Jerde"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "77d50a93-af58-5bd4-88db-63fbcf063eb6",
+      "createdAt": "2026-11-08",
+      "title": "Nexus World | ネクサスワールド",
+      "shortDescription": "In the early nineties, six architects from around the world were each given a block of housing here, and told to rethink how people live.",
+      "longDescription": "In the early nineties, six architects from around the world were each given a block of housing here, and told to rethink how people live.\n\nThis is Nexus World, launched by the developer Fukuoka Jisho in the late eighties, with Arata Isozaki as the coordinator. He invited Steven Holl, Rem Koolhaas, Christian de Portzamparc, Mark Mack, Oscar Tusquets and Osamu Ishiyama. The blocks went up in 1991 and 1992.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-nexus-world_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-nexus-world_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-nexus-world_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-nexus-world_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ec81edd1-8326-52ec-937c-61f81c1e89b3",
+          "order": 0,
+          "title": "Nexus World | ネクサスワールド",
+          "caption": "On a quiet residential street in Kashii; these are private homes, so look from the street.",
+          "latitude": 33.65453767770437,
+          "longitude": 130.43299908279252,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-nexus-world.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-nexus-world_hero.webp",
+          "transcriptText": "In the early nineties, six architects from around the world were each given a block of housing here, and told to rethink how people live.\n\nYou're on a quiet residential street in Kashii, by the bay. Around you are low and mid-rise apartment blocks that look quite different from each other, some with walls you can't see past. These are private homes, so look from the street.\n\nThis is Nexus World, launched by the developer Fukuoka Jisho in the late eighties, with Arata Isozaki as the coordinator. He invited Steven Holl, Rem Koolhaas, Christian de Portzamparc, Mark Mack, Oscar Tusquets and Osamu Ishiyama. The blocks went up in 1991 and 1992.\n\nHave a look for the two dense blocks by Koolhaas's office, OMA. They hold twenty-four houses, each three storeys high, and each one is pierced from top to bottom by its own private courtyard, so the light falls into the middle of the home. From the street they look almost closed. They won the Architectural Institute of Japan prize in 1992.\n\nThen find Steven Holl's block, his first commission outside America. Its twenty-eight flats use what he called hinged space, inspired by the sliding fusuma screens of Japanese houses: walls swing open by day to make a bigger living room, and close at night to make bedrooms. Along the building, four open voids face north, and four quiet voids face south, flooded with water to throw flickering reflections.\n\nHere's what I find touching about this place. It was built as a showpiece, at the end of the bubble years, and the towers first planned for it were scaled down. But people have lived here for more than thirty years. It became what it was meant to be: homes.\n\nWalk the block slowly, and try to tell the architects apart. Then head out to Island City across the water, where Toyo Ito's Grin Grin rises out of a park."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.65453767770437,
+      "centroidLongitude": 130.43299908279252,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "District",
+        "Architecture",
+        "Contemporary",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Arata Isozaki",
+        "Rem Koolhaas",
+        "Steven Holl",
+        "Christian de Portzamparc",
+        "Mark Mack",
+        "Oscar Tusquets",
+        "Osamu Ishiyama"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "427fd8e2-9db4-5097-bc85-0fd0af9a2ee0",
+      "createdAt": "2026-11-08",
+      "title": "Island City Central Park Grin Grin | アイランドシティ中央公園 ぐりんぐりん",
+      "shortDescription": "The name means two things at once: green, green, and round and round.",
+      "longDescription": "The name means two things at once: green, green, and round and round.\n\nIt was designed by Toyo Ito, who later won the Pritzker Prize, and finished in 2005. It was the first building on Island City, an artificial island of about four hundred hectares in Hakata Bay, and it sits at the heart of a park of more than fifteen hectares.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-island-city-central-park-grin-grin_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-island-city-central-park-grin-grin_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-island-city-central-park-grin-grin_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-island-city-central-park-grin-grin_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6e812f58-d8b2-5ea0-994b-9530f9e28246",
+          "order": 0,
+          "title": "Island City Central Park Grin Grin | アイランドシティ中央公園 ぐりんぐりん",
+          "caption": "On the path beside the long pond, facing three low rounded shells rising from the grass.",
+          "latitude": 33.66403115095712,
+          "longitude": 130.41926558717583,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-island-city-central-park-grin-grin.mp3",
+          "audioDurationSeconds": 96,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-island-city-central-park-grin-grin_hero.webp",
+          "transcriptText": "The name means two things at once: green, green, and round and round.\n\nStand on the path beside the long pond in Island City Central Park, and look for three low, rounded shells rising from the grass, part covered in plants and part in glass. Walkways climb up and over them. That's Grin Grin.\n\nIt was designed by Toyo Ito, who later won the Pritzker Prize, and finished in 2005. It was the first building on Island City, an artificial island of about four hundred hectares in Hakata Bay, and it sits at the heart of a park of more than fifteen hectares.\n\nHave a look at the shells. They're curving concrete, flowing from one into the next, strung along the pond like pearls. Patches of the roof are glazed in a scale-like pattern, letting light into the greenhouse below, where there are subtropical plants, and the rest is covered in planting, so the building disappears into the landscape.\n\nThen go up. The walkways take you onto the roof, over the curves and down again, so you can walk on top of the building as if it were a hill.\n\nWhat's worth knowing is the idea behind it. Ito wanted a building that is as much park as it is building, where you can't quite say where one ends and the other begins. Twenty years on, with the planting grown in, it has become exactly that.\n\nInside there are workshops and gardening classes, and admission is a hundred yen. It's closed on Tuesdays. Afterwards, walk the length of the park, or cross back towards Kashii, where Nexus World holds six architects' visions of how to live."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 96,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.66403115095712,
+      "centroidLongitude": 130.41926558717583,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Park",
+        "Architecture",
+        "Green Escape",
+        "Contemporary",
+        "Designed by a Master",
+        "Toyo Ito"
       ],
       "priceUSD": 0
     }
