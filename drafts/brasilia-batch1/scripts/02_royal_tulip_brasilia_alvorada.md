@@ -1,0 +1,45 @@
+# 02 · Royal Tulip Brasília Alvorada
+
+- **Category:** Stay
+- **Google Maps name:** Royal Tulip Brasília Alvorada
+- **Coordinate (WGS-84):** `-15.787059, -47.829462`
+- **Length:** 308 words · about 2 min 03 s at 150 wpm
+- **Primary sources read before writing:**
+  - <https://artsandculture.google.com/asset/hotel-brasília-alvorada-tomie-ohtake/3gG43pORXoiK3Q>
+  - <https://edicao.correiobraziliense.com.br/correiobraziliense/2021/12/05/093058/pdf/A03-POL-0512-DIG.pdf>
+  - <https://www.frommers.com/destinations/brasilia/hotels/golden-tulip-braslia-alvorada>
+  - <https://www.anoreg.org.br/congresso/?p=358>
+
+## Clean script
+
+Royal Tulip Brasília Alvorada
+
+A city built in straight lines, and a hotel that refuses to draw one.
+
+Stand at the entrance, facing the building, with the access road behind you. What you are looking at is a great curve, a semicircle of rooms that bends away from you on both sides and wraps round towards the water. The lake is on the far side.
+
+The architect was Ruy Ohtake, from São Paulo. The project was launched in 1997, the flats opened in 2000 and the hotel in 2001. I always think Ohtake was arguing, his whole career, that a building could be playful and still be serious. Here he answered Niemeyer's lakeside palaces with something softer: no columns on parade, just one long, continuous sweep.
+
+There is a family story in this site, too. Ruy's mother was Tomie Ohtake, who left Kyoto for Brazil in the nineteen thirties and became one of the country's great abstract painters. For this hotel she made a sculpture in painted carbon steel, about ten metres tall, dated 2001. So mother and son are both here, in the same commission, which is rather lovely when you think about it.
+
+What's worth knowing, standing here, is where you are. The Palácio da Alvorada, the president's official home, is about eight hundred and fifty metres along this shore, and the Brasília Palace Hotel next door opened in 1958 to house the president's guests. Forty years later, the city was still building on that idea: a hotel by the lake, within sight of the head of state.
+
+[beat]
+
+If you fancy it, walk round to the lake side in the late afternoon. The curve catches the low sun, and from the water's edge you can look back across the lake to the Plano Piloto, the original plan of the city, laid out along the far horizon.
+
+## TTS-safe script
+
+Royal Tulip Brazeelya Alvorahda
+
+A city built in straight lines, and a hotel that refuses to draw one.
+
+Stand at the entrance, facing the building, with the access road behind you. What you are looking at is a great curve, a semicircle of rooms that bends away from you on both sides and wraps round towards the water. The lake is on the far side.
+
+The architect was Hooee Ohtahkay, from Sowng Powloo. The project was launched in nineteen ninety seven, the flats opened in two thousand and the hotel in two thousand and one. I always think Ohtahkay was arguing, his whole career, that a building could be playful and still be serious. Here he answered Neemyer's lakeside palaces with something softer: no columns on parade, just one long, continuous sweep.
+
+There is a family story in this site, too. Hooee's mother was Tommy Ohtahkay, who left Kyoto for Brazil in the nineteen thirties and became one of the country's great abstract painters. For this hotel she made a sculpture in painted carbon steel, about ten metres tall, dated two thousand and one. So mother and son are both here, in the same commission, which is rather lovely when you think about it.
+
+What's worth knowing, standing here, is where you are. The Palasseeo da Alvorahda, the president's official home, is about eight hundred and fifty metres along this shore, and the Brazeelya Palace Hotel next door opened in nineteen fifty eight to house the president's guests. Forty years later, the city was still building on that idea: a hotel by the lake, within sight of the head of state.
+
+If you fancy it, walk round to the lake side in the late afternoon. The curve catches the low sun, and from the water's edge you can look back across the lake to the Plahno Peeloto, the original plan of the city, laid out along the far horizon.

@@ -1,0 +1,42 @@
+# 30 · Ponte Juscelino Kubitschek
+
+- **Category:** Observe
+- **Google Maps name:** Ponte Juscelino Kubitschek
+- **Coordinate (WGS-84):** `-15.823784, -47.829451`
+- **Length:** 306 words · about 2 min 02 s at 150 wpm
+- **Primary sources read before writing:**
+  - <https://pt.wikipedia.org/wiki/Ponte_Juscelino_Kubitschek>
+
+## Clean script
+
+Ponte JK
+
+The shape of this bridge came from a simple image: a stone skipping across water.
+
+Stand on the walkway at the near end of the bridge, looking out along it towards the far shore. Three great steel arches leap across the lake ahead of you, one after another. But they aren't upright, and they aren't parallel. Each one leans, crossing from one side of the road deck to the other, so that from here they look as if they are bouncing off the water.
+
+The architect was Alexandre Chan, who did the concept, the design and the lighting. The bridge opened on the fifteenth of December 2002. The whole crossing is twelve hundred metres long, and the three spans, two hundred and forty metres each, hang from arches that rise as high as sixty two metres.
+
+In 2003 it was given the Gustav Lindenthal Medal, at the International Bridge Conference in Pittsburgh, for its beauty and its fit with the landscape. And it is named after Juscelino Kubitschek, the president who built Brasília. It was not cheap. Its budget at the start was around forty million reais, and the final cost has been put at about a hundred and sixty million.
+
+And here's the thing. Most of the great monuments in this city were finished in the nineteen sixties. This one came forty years later, by an architect who was not Niemeyer, and it has become a symbol of Brasília in its own right. Things here do not all belong to the founding generation.
+
+[beat]
+
+Walk at least to the first arch, so you can look up through the cables. And then come back at night. The arches are lit, and from the gardens of the Banco do Brasil cultural centre, on the shore to the north west, the reflections stretch right across the lake.
+
+## TTS-safe script
+
+Ponchee Zhota Kah
+
+The shape of this bridge came from a simple image: a stone skipping across water.
+
+Stand on the walkway at the near end of the bridge, looking out along it towards the far shore. Three great steel arches leap across the lake ahead of you, one after another. But they aren't upright, and they aren't parallel. Each one leans, crossing from one side of the road deck to the other, so that from here they look as if they are bouncing off the water.
+
+The architect was Alexandre Chan, who did the concept, the design and the lighting. The bridge opened on the fifteenth of December two thousand and two. The whole crossing is twelve hundred metres long, and the three spans, two hundred and forty metres each, hang from arches that rise as high as sixty two metres.
+
+In two thousand and three it was given the Gustav Lindentahl Medal, at the International Bridge Conference in Pittsburgh, for its beauty and its fit with the landscape. And it is named after Zhooseleeno Koobitchek, the president who built Brazeelya. It was not cheap. Its budget at the start was around forty million reais, and the final cost has been put at about a hundred and sixty million.
+
+And here's the thing. Most of the great monuments in this city were finished in the nineteen sixties. This one came forty years later, by an architect who was not Neemyer, and it has become a symbol of Brazeelya in its own right. Things here do not all belong to the founding generation.
+
+Walk at least to the first arch, so you can look up through the cables. And then come back at night. The arches are lit, and from the gardens of the Banko doo Brazeel cultural centre, on the shore to the north west, the reflections stretch right across the lake.

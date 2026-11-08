@@ -1,0 +1,46 @@
+# 01 · Brasília Palace Hotel
+
+- **Category:** Stay
+- **Google Maps name:** Brasília Palace Hotel
+- **Coordinate (WGS-84):** `-15.788682, -47.830524`
+- **Length:** 355 words · about 2 min 22 s at 150 wpm
+- **Primary sources read before writing:**
+  - <https://pt.wikipedia.org/wiki/Brasília_Palace_Hotel>
+
+## Clean script
+
+Brasília Palace Hotel
+
+This hotel opened in June 1958, almost two years before there was a capital for anyone to visit.
+
+Stand on the forecourt by the main entrance, with the road behind you. In front of you is a long, low building, three floors high, lifted on slim columns, with the glass of the lobby set back underneath. The water you can glimpse beyond it is Lake Paranoá.
+
+Oscar Niemeyer drew it, and the engineer Joaquim Cardozo, who calculated almost everything that went up in Brasília in those years, did the structure. It was built for one reason. Juscelino Kubitschek, the president who willed this city into being, needed somewhere to put the people he wanted to impress. He called it his favourite building, and he walked visitors round it himself.
+
+The guest book shows it worked. Queen Elizabeth the Second stayed here. So did Eisenhower, Indira Gandhi, Che Guevara and Jean-Paul Sartre. And the story the hotel still tells is that Tom Jobim and Vinícius de Moraes first played their song Água de Beber in the bar.
+
+Then the walls. Athos Bulcão, the artist whose tiles you will see all over this city, made a blue and white tile panel for the garden, and a fresco for the function room, one of the very few frescoes he ever painted. Both are protected now by the national heritage service.
+
+And here's the thing. On the fifth of August 1978, a coffee maker someone forgot to switch off started a fire on the third floor. Nobody was hurt, but the hotel closed, and for almost thirty years the most glamorous address in Brasília stood as a burnt shell on the edge of the lake.
+
+[beat]
+
+It reopened in 2006, and Athos Bulcão, by then in his late eighties, came to see his two panels uncovered again. If you have a few minutes, walk through to the garden side and find that tile wall, then follow the shore road south east. The low white palace about a kilometre along is the Palácio da Alvorada, where the president lives. It opened the same month as this hotel.
+
+## TTS-safe script
+
+Brazeelya Palace Hotel
+
+This hotel opened in June nineteen fifty eight, almost two years before there was a capital for anyone to visit.
+
+Stand on the forecourt by the main entrance, with the road behind you. In front of you is a long, low building, three floors high, lifted on slim columns, with the glass of the lobby set back underneath. The water you can glimpse beyond it is Lake Pahrah noh ah.
+
+Oscar Neemyer drew it, and the engineer Zhwakeen Cardozo, who calculated almost everything that went up in Brazeelya in those years, did the structure. It was built for one reason. Zhooseleeno Koobitchek, the president who willed this city into being, needed somewhere to put the people he wanted to impress. He called it his favourite building, and he walked visitors round it himself.
+
+The guest book shows it worked. Queen Elizabeth the Second stayed here. So did Eisenhower, Indira Gandhi, Chay Gevahra and Zhon Paul Sartra. And the story the hotel still tells is that Tom Zhobeen and Veeneesee us de Morice first played their song Ahgwa de Bebair in the bar.
+
+Then the walls. Ahtoss Boolsowng, the artist whose tiles you will see all over this city, made a blue and white tile panel for the garden, and a fresco for the function room, one of the very few frescoes he ever painted. Both are protected now by the national heritage service.
+
+And here's the thing. On the fifth of August nineteen seventy eight, a coffee maker someone forgot to switch off started a fire on the third floor. Nobody was hurt, but the hotel closed, and for almost thirty years the most glamorous address in Brazeelya stood as a burnt shell on the edge of the lake.
+
+It reopened in two thousand and six, and Ahtoss Boolsowng, by then in his late eighties, came to see his two panels uncovered again. If you have a few minutes, walk through to the garden side and find that tile wall, then follow the shore road south east. The low white palace about a kilometre along is the Palasseeo da Alvorahda, where the president lives. It opened the same month as this hotel.

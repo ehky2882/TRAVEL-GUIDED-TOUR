@@ -1,0 +1,42 @@
+# 26 · Torre de TV
+
+- **Category:** Observe
+- **Google Maps name:** Torre de TV
+- **Coordinate (WGS-84):** `-15.790711, -47.892972`
+- **Length:** 316 words · about 2 min 06 s at 150 wpm
+- **Primary sources read before writing:**
+  - <https://pt.wikipedia.org/wiki/Torre_de_TV_de_Brasília>
+
+## Clean script
+
+Torre de TV
+
+One of the few great landmarks in Brasília that Oscar Niemeyer didn't design. That honour went to the man who planned the city.
+
+Stand at the foot of the tower, on the Monumental Axis, between its three concrete legs. Above you a triangular block sits on the legs, and above that the steel mast climbs away into the sky. All round you is the craft market, and close by, the great round basin of the fountain.
+
+Lúcio Costa drew it, and he said he had the Eiffel Tower in mind. Altogether it is two hundred and twenty four metres tall, the steel mast alone a hundred and ninety two. The triangular block above the legs holds a small museum of Brazilian gemstones. And the viewing deck, which opened in the mid nineteen sixties, is seventy five metres up, reached by lift.
+
+Go up. From the deck you finally see what this city is. The Monumental Axis runs east, past the bus station, the ministries and the cathedral, to the twin towers of the Congress. And to either side the residential wings bend away north and south. Costa's first sketch for the competition in 1957 was a cross: two lines meeting at a right angle, one of them curved. From up here, you are standing on that drawing.
+
+What's worth knowing is that from the ground, almost nobody sees it that way. At street level Brasília is a city of great distances and wide lawns, and the plan is invisible. The tower is the one place where the idea becomes clear to anyone who takes the lift.
+
+[beat]
+
+The deck is open from Tuesday to Sunday, so plan around Mondays. Come down at the weekend and you can catch the fountain show; built for the city's fiftieth birthday, in 2010, it is eighty metres across, and its main jet goes fifty metres into the air.
+
+## TTS-safe script
+
+Torree dee Tay Vay
+
+One of the few great landmarks in Brazeelya that Oscar Neemyer didn't design. That honour went to the man who planned the city.
+
+Stand at the foot of the tower, on the Monumental Axis, between its three concrete legs. Above you a triangular block sits on the legs, and above that the steel mast climbs away into the sky. All round you is the craft market, and close by, the great round basin of the fountain.
+
+Loosio Costa drew it, and he said he had the Eiffel Tower in mind. Altogether it is two hundred and twenty four metres tall, the steel mast alone a hundred and ninety two. The triangular block above the legs holds a small museum of Brazilian gemstones. And the viewing deck, which opened in the mid nineteen sixties, is seventy five metres up, reached by lift.
+
+Go up. From the deck you finally see what this city is. The Monumental Axis runs east, past the bus station, the ministries and the cathedral, to the twin towers of the Congress. And to either side the residential wings bend away north and south. Costa's first sketch for the competition in nineteen fifty seven was a cross: two lines meeting at a right angle, one of them curved. From up here, you are standing on that drawing.
+
+What's worth knowing is that from the ground, almost nobody sees it that way. At street level Brazeelya is a city of great distances and wide lawns, and the plan is invisible. The tower is the one place where the idea becomes clear to anyone who takes the lift.
+
+The deck is open from Tuesday to Sunday, so plan around Mondays. Come down at the weekend and you can catch the fountain show; built for the city's fiftieth birthday, in twenty ten, it is eighty metres across, and its main jet goes fifty metres into the air.
