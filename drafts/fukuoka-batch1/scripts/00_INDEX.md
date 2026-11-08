@@ -34,3 +34,4 @@ Thirty single-stop tours from the Fukuoka architect's-guide list. Each has a cle
 | 28 | Canal City Hakata | Observe | Canal City Hakata | 33.589481, 130.41095 | 270 | `28_canal_city_hakata` |
 | 29 | Nexus World | Observe | Nexus World | 33.65461, 130.434906 | 319 | `29_nexus_world` |
 | 30 | Island City Central Park Grin Grin | Observe | Island City Central Park (GRIN GRIN) | 33.664355, 130.420782 | 276 | `30_island_city_central_park_grin_grin` |
+| 31 | Ocean & Resort Marizon | Visit | Ocean & Resort Marizon | 33.5956908585884, 130.3510793092309 | 391 | `31_ocean_and_resort_marizon` |

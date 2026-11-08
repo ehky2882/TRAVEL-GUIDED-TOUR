@@ -168,7 +168,10 @@
   "Toyo Ito": "Tohyoh Eetoh",
   "Ito": "Eetoh",
   "UNESCO": "Unesco",
-  "nama": "nahmah"
+  "nama": "nahmah",
+  "Marizon": "Marry zon",
+  "Uminaka": "Oomee nahkah",
+  "Uminonakamichi": "Oomee noh nahkah meechee"
  },
  "tours": {
   "hotel-il-palazzo": {
@@ -504,6 +507,20 @@
     "https://archiweb.cz/en/b/centralni-park-ostrovniho-mesta-grin-grin"
    ],
    "notes": "Coordinate is the park centroid, not the Grin Grin building."
+  },
+  "ocean-and-resort-marizon": {
+   "category": "Visit",
+   "gmaps": "Ocean & Resort Marizon",
+   "lat": 33.5956908585884,
+   "lon": 130.3510793092309,
+   "sources": [
+    "https://www.marizon.co.jp/ (official)",
+    "https://ja.wikipedia.org/wiki/マリゾン",
+    "https://rurubu.jp/andmore/spot/80038322",
+    "https://www.city.fukuoka.lg.jp/shishi/kankou_bl02.html (Fukuoka City history booklet: Seaside Momochi)",
+    "https://zexy.net/wedding/c_7770013860/kuchikomi/kb_1000515716/ (wedding venue listing)"
+   ],
+   "notes": "The coordinate you supplied reverse-geocodes to the Uminaka Line ticket office on the Marizon deck, about 50 m north of the OSM point for Marizon; the script stands the listener there. Japanese Wikipedia gives inconsistent dates for the opening (March vs September 1989); the script says only '1989'. The 'four times' figure is Wikipedia's revenue rise from about 400 million to 1.65 billion yen."
   }
  }
 }
