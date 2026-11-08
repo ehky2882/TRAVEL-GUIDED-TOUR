@@ -394,3 +394,4 @@ Full text for every one of them is in
 - [HANDOFF-261105-mexico-city.md](HANDOFF-261105-mexico-city.md) — **Mexico City launch: Atlas Studio MEX**, 35 singles, 8 bilingual English | Spanish titles, 14 new architect tags; four drop coordinates corrected; no places (Vasconcelos, Tamayo and a Tláloc question to Edward)
 - [HANDOFF-261107-triage-batch.md](HANDOFF-261107-triage-batch.md) — **50-pin triage batch** from 38 creators (28 new), mostly Fukuoka food; 10 links held for Edward, 8 place questions to Edward
 - [HANDOFF-261108-fukuoka.md](HANDOFF-261108-fukuoka.md) — **Fukuoka launch: Atlas Studio FUK**, 30 singles, 27 bilingual English | Japanese titles, 14 new architect tags; Ishimura Manseido moved to its street address; drop still shows the northward bias; no places
+- [HANDOFF-261108-fukuoka-marizon.md](HANDOFF-261108-fukuoka-marizon.md) — **Ocean & Resort Marizon** added to Atlas Studio FUK as its 31st single; coordinate from OSM (none supplied), no places

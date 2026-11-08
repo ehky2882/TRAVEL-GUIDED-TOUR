@@ -150889,6 +150889,57 @@
         "Toyo Ito"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "376f5146-88e5-540f-809d-c60354086624",
+      "createdAt": "2026-11-08",
+      "title": "Ocean & Resort Marizon | オーシャン&リゾート マリゾン",
+      "shortDescription": "You're standing on the sea. Not beside it, on it: this whole deck sits on piles driven into the floor of Hakata Bay.",
+      "longDescription": "You're standing on the sea. Not beside it, on it: this whole deck sits on piles driven into the floor of Hakata Bay.\n\nThe land behind you is younger than it looks. It was reclaimed from the sea in the early eighties, and in 1989 it hosted the Asia-Pacific Exposition, the city's big coming-out party. Marizon opened that same year. The idea, first sketched in 1986, was a promenade built out over the water, with shops and restaurants on it, and the city went into partnership with local companies to build it. When it opened, there was a wedding chapel, an Italian restaurant, a marine sports shop and a ferry landing.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ocean-and-resort-marizon_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ocean-and-resort-marizon_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ocean-and-resort-marizon_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ocean-and-resort-marizon_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "149e8ec3-4ead-53d3-b573-204c009a1191",
+          "order": 0,
+          "title": "Ocean & Resort Marizon | オーシャン&リゾート マリゾン",
+          "caption": "On the deck built out over Hakata Bay at Momochi beach, Fukuoka Tower behind you on the shore.",
+          "latitude": 33.5952679,
+          "longitude": 130.3511367,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-ocean-and-resort-marizon.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 80,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ocean-and-resort-marizon_hero.webp",
+          "transcriptText": "You're standing on the sea. Not beside it, on it: this whole deck sits on piles driven into the floor of Hakata Bay.\n\nWalk out from the beach to the far end of the deck, where the ferry ticket office and landing are. The water should be on three sides of you, with the bay opening out to the north, and behind you, back towards land, the white sand of Momochi beach and the tall glass spire of Fukuoka Tower.\n\nThe land behind you is younger than it looks. It was reclaimed from the sea in the early eighties, and in 1989 it hosted the Asia-Pacific Exposition, the city's big coming-out party. Marizon opened that same year. The idea, first sketched in 1986, was a promenade built out over the water, with shops and restaurants on it, and the city went into partnership with local companies to build it. When it opened, there was a wedding chapel, an Italian restaurant, a marine sports shop and a ferry landing.\n\nHave a look at the deck itself. It was meant as the city's front porch onto the sea, and for a while it worked: Fukuoka named it one of the treasures it wanted to hand on to the twenty-first century. Then the shoppers drifted away. By 2003 the company that ran it was being wound up.\n\nWhat saved it was weddings. A wedding company took it over, spent around seven hundred million yen on a full renovation in 2004, and turned Marizon into a wedding venue, with a cathedral-style chapel and a chapel looking straight out to sea. Within a few years, weddings alone were bringing in four times what the whole complex had earned before. In 2010 it was one of the first three places in Japan to win an Asian Townscape Award.\n\nAnd here's the thing. Plenty of waterfront schemes from those years were simply pulled down when the money ran out. This one found a better reason to exist, and the public still gets the walk out over the water for free.\n\nFrom here, the Uminaka Line ferry crosses the bay to Uminonakamichi in about twenty minutes, if you fancy a boat ride. Or walk back to the beach and up Fukuoka Tower, where the view from the top shows the whole deck laid out on the water below you."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 133,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.5952679,
+      "centroidLongitude": 130.3511367,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Waterfront",
+        "Venue",
+        "Architecture",
+        "Maritime",
+        "History",
+        "Contemporary",
+        "Viewpoint",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
     }
   ],
   "places": [

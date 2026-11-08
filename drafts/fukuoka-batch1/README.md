@@ -57,3 +57,14 @@ None created or joined. `check-place-candidates.py` and `join-places.py --max-mo
 ## Content notes (audio already recorded)
 Lines that will date: Books Kubrick's first shop "closed in July 2026", Tenjin Business Center II "opened in August
 2026", and the Tenjin Underground Mall "is fifty years old this year". Kushida Shrine has a hero photo only.
+
+## Script 31: Ocean & Resort Marizon (added 2026-11-08, second drop)
+A separate Dropbox drop held this one tour as flat files: no `output <Name> <lat>, <lon>` folder, so **no coordinate
+came with it**. Wired by `tools/wire_fukuoka_31.py` (reuses `wire_fukuoka.build()`), with the contributor's approval:
+- **Point:** 33.5952679, 130.3511367, the centre of OSM's マリゾン polygon (the deck over Hakata Bay). The script stands
+  the listener at the far (north) end by the ferry landing; the stop sits on the subject instead, with an **80 m**
+  geofence covering the ~170 m deck end to end. No overlap with any other stop.
+- **Title** `Ocean & Resort Marizon | オーシャン&リゾート マリゾン`, category Architecture, tags Waterfront, Venue,
+  Architecture, Maritime, History, Contemporary, Viewpoint, Free to Visit. **No architect tag:** the script names none,
+  and a Japanese search found no credited designer.
+- Audio 133 s, 4 photos at 1200×900 (`fuk-ocean-and-resort-marizon_hero.webp`, `_2`–`_4`), gh-pages `6e7afb52`.
