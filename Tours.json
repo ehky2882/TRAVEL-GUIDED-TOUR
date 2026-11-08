@@ -37636,12 +37636,12 @@
       "relatedTourIds": [
         "ecdb349d-51d4-4fc0-a4d4-3bc83916a400",
         "30f2046b-621d-5358-b436-d12925316d92",
+        "376f5146-88e5-540f-809d-c60354086624",
         "8f1bae74-890d-5910-95f2-f26a5fc908d4",
         "b51f52e9-7304-5d50-9a6f-27fb70f6013d",
         "78727770-f3f5-5b76-94cf-721593771c2c",
         "6bc636ce-93b2-5655-8b03-9db466b7fed2",
-        "acf1d709-1b60-5069-8e5d-bc001e1587fd",
-        "98988dda-9ee3-5b42-8728-04b075ff1b8a"
+        "acf1d709-1b60-5069-8e5d-bc001e1587fd"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -149343,14 +149343,14 @@
       "city": "Fukuoka",
       "country": "Japan",
       "relatedTourIds": [
+        "376f5146-88e5-540f-809d-c60354086624",
         "30d23ca4-d59d-5c45-a4e3-70d2246e755a",
         "d6a0bad4-f2af-54a5-8c6b-947bc33fcb6f",
         "DE486F9C-01A5-5B92-80E1-91C1314C9F8A",
         "da5cdbe7-b8f8-5f63-a914-f6558e68a214",
         "b1f2ed56-6480-5aae-a20f-9f7249fe4830",
         "7b4bf7cc-c9a3-5b49-89aa-add0b69ca671",
-        "2834DA09-B31B-565A-80B4-732055D9AB8D",
-        "89dc3341-252a-5fdd-821c-eab4848bee4d"
+        "2834DA09-B31B-565A-80B4-732055D9AB8D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -150015,7 +150015,7 @@
         "8d5d98dc-bd4f-5e1d-9192-f2ac96ba8419",
         "f5db90cb-ba52-5801-bc24-f6667c3b5a41",
         "c789956a-e10c-5c67-a8a2-9ed4f93110cb",
-        "da8df186-93c0-5c41-8c16-b3e8c05fdf3f"
+        "376f5146-88e5-540f-809d-c60354086624"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -150290,11 +150290,11 @@
         "2a08dc2b-6743-54a8-973d-bf89e7b43ae4",
         "DE486F9C-01A5-5B92-80E1-91C1314C9F8A",
         "30d23ca4-d59d-5c45-a4e3-70d2246e755a",
+        "376f5146-88e5-540f-809d-c60354086624",
         "b3443300-284c-530c-84e5-d44456478f4e",
         "68f43ff3-7687-5ef6-bd5f-8b5b2d5c2795",
         "7b4bf7cc-c9a3-5b49-89aa-add0b69ca671",
-        "da5cdbe7-b8f8-5f63-a914-f6558e68a214",
-        "82ca5b2f-5507-5101-bca4-ec5146271863"
+        "da5cdbe7-b8f8-5f63-a914-f6558e68a214"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -150585,7 +150585,7 @@
         "82ca5b2f-5507-5101-bca4-ec5146271863",
         "4b426e05-7cef-5c35-aec7-082dd7c37452",
         "da5cdbe7-b8f8-5f63-a914-f6558e68a214",
-        "2a08dc2b-6743-54a8-973d-bf89e7b43ae4"
+        "376f5146-88e5-540f-809d-c60354086624"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -150637,10 +150637,10 @@
         "b1f2ed56-6480-5aae-a20f-9f7249fe4830",
         "7b4bf7cc-c9a3-5b49-89aa-add0b69ca671",
         "4b426e05-7cef-5c35-aec7-082dd7c37452",
+        "376f5146-88e5-540f-809d-c60354086624",
         "2a08dc2b-6743-54a8-973d-bf89e7b43ae4",
         "3bce5aec-5aae-5d9f-9d93-2768b59ec52e",
-        "DE486F9C-01A5-5B92-80E1-91C1314C9F8A",
-        "8590c89d-a7f0-520a-9e5c-b3ae6e40709e"
+        "DE486F9C-01A5-5B92-80E1-91C1314C9F8A"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -150747,14 +150747,14 @@
       "city": "Fukuoka",
       "country": "Japan",
       "relatedTourIds": [
+        "376f5146-88e5-540f-809d-c60354086624",
         "da8df186-93c0-5c41-8c16-b3e8c05fdf3f",
         "8590c89d-a7f0-520a-9e5c-b3ae6e40709e",
         "b3443300-284c-530c-84e5-d44456478f4e",
         "30d23ca4-d59d-5c45-a4e3-70d2246e755a",
         "b1f2ed56-6480-5aae-a20f-9f7249fe4830",
         "7b4bf7cc-c9a3-5b49-89aa-add0b69ca671",
-        "DE486F9C-01A5-5B92-80E1-91C1314C9F8A",
-        "3bce5aec-5aae-5d9f-9d93-2768b59ec52e"
+        "DE486F9C-01A5-5B92-80E1-91C1314C9F8A"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -150874,10 +150874,10 @@
         "30d23ca4-d59d-5c45-a4e3-70d2246e755a",
         "77d50a93-af58-5bd4-88db-63fbcf063eb6",
         "7b4bf7cc-c9a3-5b49-89aa-add0b69ca671",
+        "376f5146-88e5-540f-809d-c60354086624",
         "2a08dc2b-6743-54a8-973d-bf89e7b43ae4",
         "b1f2ed56-6480-5aae-a20f-9f7249fe4830",
-        "3bce5aec-5aae-5d9f-9d93-2768b59ec52e",
-        "d6a0bad4-f2af-54a5-8c6b-947bc33fcb6f"
+        "3bce5aec-5aae-5d9f-9d93-2768b59ec52e"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -150887,6 +150887,66 @@
         "Contemporary",
         "Designed by a Master",
         "Toyo Ito"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "376f5146-88e5-540f-809d-c60354086624",
+      "createdAt": "2026-11-08",
+      "title": "Ocean & Resort Marizon | オーシャン&リゾート マリゾン",
+      "shortDescription": "You're standing on the sea. Not beside it, on it: this whole deck sits on piles driven into the floor of Hakata Bay.",
+      "longDescription": "You're standing on the sea. Not beside it, on it: this whole deck sits on piles driven into the floor of Hakata Bay.\n\nThe land behind you is younger than it looks. It was reclaimed from the sea in the early eighties, and in 1989 it hosted the Asia-Pacific Exposition, the city's big coming-out party. Marizon opened that same year. The idea, first sketched in 1986, was a promenade built out over the water, with shops and restaurants on it, and the city went into partnership with local companies to build it. When it opened, there was a wedding chapel, an Italian restaurant, a marine sports shop and a ferry landing.",
+      "makerId": "48d15959-59f6-59e0-9c22-9ee589f4a0f5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ocean-and-resort-marizon_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ocean-and-resort-marizon_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ocean-and-resort-marizon_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ocean-and-resort-marizon_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "149e8ec3-4ead-53d3-b573-204c009a1191",
+          "order": 0,
+          "title": "Ocean & Resort Marizon | オーシャン&リゾート マリゾン",
+          "caption": "On the deck built out over Hakata Bay at Momochi beach, Fukuoka Tower behind you on the shore.",
+          "latitude": 33.5952679,
+          "longitude": 130.3511367,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fuk-ocean-and-resort-marizon.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 80,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fuk-ocean-and-resort-marizon_hero.webp",
+          "transcriptText": "You're standing on the sea. Not beside it, on it: this whole deck sits on piles driven into the floor of Hakata Bay.\n\nWalk out from the beach to the far end of the deck, where the ferry ticket office and landing are. The water should be on three sides of you, with the bay opening out to the north, and behind you, back towards land, the white sand of Momochi beach and the tall glass spire of Fukuoka Tower.\n\nThe land behind you is younger than it looks. It was reclaimed from the sea in the early eighties, and in 1989 it hosted the Asia-Pacific Exposition, the city's big coming-out party. Marizon opened that same year. The idea, first sketched in 1986, was a promenade built out over the water, with shops and restaurants on it, and the city went into partnership with local companies to build it. When it opened, there was a wedding chapel, an Italian restaurant, a marine sports shop and a ferry landing.\n\nHave a look at the deck itself. It was meant as the city's front porch onto the sea, and for a while it worked: Fukuoka named it one of the treasures it wanted to hand on to the twenty-first century. Then the shoppers drifted away. By 2003 the company that ran it was being wound up.\n\nWhat saved it was weddings. A wedding company took it over, spent around seven hundred million yen on a full renovation in 2004, and turned Marizon into a wedding venue, with a cathedral-style chapel and a chapel looking straight out to sea. Within a few years, weddings alone were bringing in four times what the whole complex had earned before. In 2010 it was one of the first three places in Japan to win an Asian Townscape Award.\n\nAnd here's the thing. Plenty of waterfront schemes from those years were simply pulled down when the money ran out. This one found a better reason to exist, and the public still gets the walk out over the water for free.\n\nFrom here, the Uminaka Line ferry crosses the bay to Uminonakamichi in about twenty minutes, if you fancy a boat ride. Or walk back to the beach and up Fukuoka Tower, where the view from the top shows the whole deck laid out on the water below you."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 133,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.5952679,
+      "centroidLongitude": 130.3511367,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "relatedTourIds": [
+        "3bce5aec-5aae-5d9f-9d93-2768b59ec52e",
+        "30d23ca4-d59d-5c45-a4e3-70d2246e755a",
+        "8590c89d-a7f0-520a-9e5c-b3ae6e40709e",
+        "DE486F9C-01A5-5B92-80E1-91C1314C9F8A",
+        "B50DD32E-4C4B-5005-8CBF-398EEDE86D61",
+        "2834DA09-B31B-565A-80B4-732055D9AB8D",
+        "82ca5b2f-5507-5101-bca4-ec5146271863",
+        "D21659AC-63B8-50ED-BD8C-02C4BE11E477"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Waterfront",
+        "Venue",
+        "Architecture",
+        "Maritime",
+        "History",
+        "Contemporary",
+        "Viewpoint",
+        "Free to Visit"
       ],
       "priceUSD": 0
     }
@@ -403857,8 +403917,8 @@
         "30d23ca4-d59d-5c45-a4e3-70d2246e755a",
         "da5cdbe7-b8f8-5f63-a914-f6558e68a214",
         "7b4bf7cc-c9a3-5b49-89aa-add0b69ca671",
-        "6C9A0183-6553-5E79-8F50-DF371692D2BB",
-        "3bce5aec-5aae-5d9f-9d93-2768b59ec52e"
+        "376f5146-88e5-540f-809d-c60354086624",
+        "6C9A0183-6553-5E79-8F50-DF371692D2BB"
       ],
       "primaryCategory": "visualArt",
       "tags": [
