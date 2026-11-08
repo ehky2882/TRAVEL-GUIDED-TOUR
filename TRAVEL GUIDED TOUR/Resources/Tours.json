@@ -37636,12 +37636,12 @@
       "relatedTourIds": [
         "ecdb349d-51d4-4fc0-a4d4-3bc83916a400",
         "30f2046b-621d-5358-b436-d12925316d92",
+        "376f5146-88e5-540f-809d-c60354086624",
         "8f1bae74-890d-5910-95f2-f26a5fc908d4",
         "b51f52e9-7304-5d50-9a6f-27fb70f6013d",
         "78727770-f3f5-5b76-94cf-721593771c2c",
         "6bc636ce-93b2-5655-8b03-9db466b7fed2",
-        "acf1d709-1b60-5069-8e5d-bc001e1587fd",
-        "98988dda-9ee3-5b42-8728-04b075ff1b8a"
+        "acf1d709-1b60-5069-8e5d-bc001e1587fd"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -149343,14 +149343,14 @@
       "city": "Fukuoka",
       "country": "Japan",
       "relatedTourIds": [
+        "376f5146-88e5-540f-809d-c60354086624",
         "30d23ca4-d59d-5c45-a4e3-70d2246e755a",
         "d6a0bad4-f2af-54a5-8c6b-947bc33fcb6f",
         "DE486F9C-01A5-5B92-80E1-91C1314C9F8A",
         "da5cdbe7-b8f8-5f63-a914-f6558e68a214",
         "b1f2ed56-6480-5aae-a20f-9f7249fe4830",
         "7b4bf7cc-c9a3-5b49-89aa-add0b69ca671",
-        "2834DA09-B31B-565A-80B4-732055D9AB8D",
-        "89dc3341-252a-5fdd-821c-eab4848bee4d"
+        "2834DA09-B31B-565A-80B4-732055D9AB8D"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -150015,7 +150015,7 @@
         "8d5d98dc-bd4f-5e1d-9192-f2ac96ba8419",
         "f5db90cb-ba52-5801-bc24-f6667c3b5a41",
         "c789956a-e10c-5c67-a8a2-9ed4f93110cb",
-        "da8df186-93c0-5c41-8c16-b3e8c05fdf3f"
+        "376f5146-88e5-540f-809d-c60354086624"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -150290,11 +150290,11 @@
         "2a08dc2b-6743-54a8-973d-bf89e7b43ae4",
         "DE486F9C-01A5-5B92-80E1-91C1314C9F8A",
         "30d23ca4-d59d-5c45-a4e3-70d2246e755a",
+        "376f5146-88e5-540f-809d-c60354086624",
         "b3443300-284c-530c-84e5-d44456478f4e",
         "68f43ff3-7687-5ef6-bd5f-8b5b2d5c2795",
         "7b4bf7cc-c9a3-5b49-89aa-add0b69ca671",
-        "da5cdbe7-b8f8-5f63-a914-f6558e68a214",
-        "82ca5b2f-5507-5101-bca4-ec5146271863"
+        "da5cdbe7-b8f8-5f63-a914-f6558e68a214"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -150585,7 +150585,7 @@
         "82ca5b2f-5507-5101-bca4-ec5146271863",
         "4b426e05-7cef-5c35-aec7-082dd7c37452",
         "da5cdbe7-b8f8-5f63-a914-f6558e68a214",
-        "2a08dc2b-6743-54a8-973d-bf89e7b43ae4"
+        "376f5146-88e5-540f-809d-c60354086624"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -150637,10 +150637,10 @@
         "b1f2ed56-6480-5aae-a20f-9f7249fe4830",
         "7b4bf7cc-c9a3-5b49-89aa-add0b69ca671",
         "4b426e05-7cef-5c35-aec7-082dd7c37452",
+        "376f5146-88e5-540f-809d-c60354086624",
         "2a08dc2b-6743-54a8-973d-bf89e7b43ae4",
         "3bce5aec-5aae-5d9f-9d93-2768b59ec52e",
-        "DE486F9C-01A5-5B92-80E1-91C1314C9F8A",
-        "8590c89d-a7f0-520a-9e5c-b3ae6e40709e"
+        "DE486F9C-01A5-5B92-80E1-91C1314C9F8A"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -150747,14 +150747,14 @@
       "city": "Fukuoka",
       "country": "Japan",
       "relatedTourIds": [
+        "376f5146-88e5-540f-809d-c60354086624",
         "da8df186-93c0-5c41-8c16-b3e8c05fdf3f",
         "8590c89d-a7f0-520a-9e5c-b3ae6e40709e",
         "b3443300-284c-530c-84e5-d44456478f4e",
         "30d23ca4-d59d-5c45-a4e3-70d2246e755a",
         "b1f2ed56-6480-5aae-a20f-9f7249fe4830",
         "7b4bf7cc-c9a3-5b49-89aa-add0b69ca671",
-        "DE486F9C-01A5-5B92-80E1-91C1314C9F8A",
-        "3bce5aec-5aae-5d9f-9d93-2768b59ec52e"
+        "DE486F9C-01A5-5B92-80E1-91C1314C9F8A"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -150874,10 +150874,10 @@
         "30d23ca4-d59d-5c45-a4e3-70d2246e755a",
         "77d50a93-af58-5bd4-88db-63fbcf063eb6",
         "7b4bf7cc-c9a3-5b49-89aa-add0b69ca671",
+        "376f5146-88e5-540f-809d-c60354086624",
         "2a08dc2b-6743-54a8-973d-bf89e7b43ae4",
         "b1f2ed56-6480-5aae-a20f-9f7249fe4830",
-        "3bce5aec-5aae-5d9f-9d93-2768b59ec52e",
-        "d6a0bad4-f2af-54a5-8c6b-947bc33fcb6f"
+        "3bce5aec-5aae-5d9f-9d93-2768b59ec52e"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -150927,7 +150927,16 @@
       "centroidLongitude": 130.3511367,
       "city": "Fukuoka",
       "country": "Japan",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "3bce5aec-5aae-5d9f-9d93-2768b59ec52e",
+        "30d23ca4-d59d-5c45-a4e3-70d2246e755a",
+        "8590c89d-a7f0-520a-9e5c-b3ae6e40709e",
+        "DE486F9C-01A5-5B92-80E1-91C1314C9F8A",
+        "B50DD32E-4C4B-5005-8CBF-398EEDE86D61",
+        "2834DA09-B31B-565A-80B4-732055D9AB8D",
+        "82ca5b2f-5507-5101-bca4-ec5146271863",
+        "D21659AC-63B8-50ED-BD8C-02C4BE11E477"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Waterfront",
@@ -403908,8 +403917,8 @@
         "30d23ca4-d59d-5c45-a4e3-70d2246e755a",
         "da5cdbe7-b8f8-5f63-a914-f6558e68a214",
         "7b4bf7cc-c9a3-5b49-89aa-add0b69ca671",
-        "6C9A0183-6553-5E79-8F50-DF371692D2BB",
-        "3bce5aec-5aae-5d9f-9d93-2768b59ec52e"
+        "376f5146-88e5-540f-809d-c60354086624",
+        "6C9A0183-6553-5E79-8F50-DF371692D2BB"
       ],
       "primaryCategory": "visualArt",
       "tags": [
