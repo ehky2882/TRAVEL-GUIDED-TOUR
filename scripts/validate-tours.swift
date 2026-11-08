@@ -418,6 +418,7 @@ let architectTags: Set<String> = [
     "Mohamed Kamal Ismail", "Dar Al-Handasah", "Samir Elabd",
     "K-Studio", "FORMrelated", "Kostas Voutsinas", "Dimitris Pikionis", "Michael Photiadis", "Takis Zenetos", "Ioannis Despotopoulos", "Emmanouil Vourekas", "Prokopis Vasileiadis", "Antonis Georgiadis", "Spyros Staikos",
     "Alberto Kalach", "Ambrosi Etchegaray", "Ricardo Legorreta", "Javier Sánchez", "Alfonso Ramírez Ponce", "PPAA", "Juan O'Gorman", "Pedro Ramírez Vázquez", "Jorge Campuzano", "Rafael Mijares", "Teodoro González de León", "Abraham Zabludovsky", "Mario Pani", "Enrique del Moral",
+    "Jon Jerde", "Kiyonori Kikutake", "Kume Sekkei", "Emilio Ambasz", "Nihon Sekkei", "Shohei Shigematsu", "Kingo Tatsuno", "Yasushi Kataoka", "Arata Isozaki", "Steven Holl", "Mark Mack", "Oscar Tusquets", "Osamu Ishiyama", "Shigeru Uchida",
 ]
 let validTags: Set<String> = placeTypeTags
     .union(themeTags).union(styleEraTags)
