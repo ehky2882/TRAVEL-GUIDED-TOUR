@@ -19,3 +19,9 @@ The contributor pasted 25 links (two of them duplicates, so 23 posts) labelled "
 
 ## Traps
 - `make-link-pin.py --batch` still ignores `--title`, `--category` and `--tags`. So this batch ran once per URL from a TSV, and the outputs were combined (driver script in the session's scratchpad).
+
+## Follow-up: six places created (owner approved, same day)
+Edward said "make those six sites place pages". The places are Hilton Fukuoka Sea Hawk, ACROS Fukuoka, Hotel Il Palazzo, Coffee Bimi, ALSO MOONSTAR (3 pins) and Meiji Park (2 pins).
+- They were built with `make-places.py`'s `place_id` and `apply`, so the ids follow `atlas-place:fukuoka:<slug>`.
+- Every member already shared one point, so no coordinate moved. The diff is additions only.
+- None matched a declined group. The validator reports 0 errors, and check-place-candidates no longer lists any of the six. `status/owner/place-triage-261109.md` was cleared.

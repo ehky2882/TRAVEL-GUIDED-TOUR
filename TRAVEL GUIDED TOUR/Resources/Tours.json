@@ -158959,6 +158959,97 @@
         "B4C7F1B9-369B-5E0F-88FD-F17122442530",
         "DF47FC76-3AF0-54E6-81AA-EA1CAD7B7387"
       ]
+    },
+    {
+      "id": "c6b2caa4-470e-517e-ad04-c2a8eeafbd86",
+      "name": "Hilton Fukuoka Sea Hawk",
+      "description": null,
+      "latitude": 33.59472716774992,
+      "longitude": 130.35979729628215,
+      "city": "Fukuoka",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "3bce5aec-5aae-5d9f-9d93-2768b59ec52e",
+        "051D09B2-03BA-5969-822F-6C50B4ABF97D"
+      ]
+    },
+    {
+      "id": "c6b8a293-cbc1-5e35-96ad-49ac797ae833",
+      "name": "ACROS Fukuoka",
+      "description": null,
+      "latitude": 33.591791560920186,
+      "longitude": 130.40240050231182,
+      "city": "Fukuoka",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "da5cdbe7-b8f8-5f63-a914-f6558e68a214",
+        "E84FED4C-B730-5B29-B2FC-465379CBFD0E"
+      ]
+    },
+    {
+      "id": "724c4dc2-47ae-5a70-990b-d3dfd67cb33f",
+      "name": "Hotel Il Palazzo",
+      "description": null,
+      "latitude": 33.59011945671303,
+      "longitude": 130.40741193860998,
+      "city": "Fukuoka",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "89dc3341-252a-5fdd-821c-eab4848bee4d",
+        "CBFAFDD4-BC16-5362-949F-635A750BE3C7"
+      ]
+    },
+    {
+      "id": "30a90b18-25a1-5a34-83d1-17a3c1c5d7d2",
+      "name": "Coffee Bimi",
+      "description": null,
+      "latitude": 33.58288083439505,
+      "longitude": 130.38250879628117,
+      "city": "Fukuoka",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "75db02b7-50c7-59fa-9dac-1a400182cadc",
+        "409D64DA-B67F-5DB7-9E06-93DECE0BB038"
+      ]
+    },
+    {
+      "id": "41e9f846-bbd7-505c-84e2-70b59fe6b080",
+      "name": "ALSO MOONSTAR",
+      "description": null,
+      "latitude": 33.578911,
+      "longitude": 130.398849,
+      "city": "Fukuoka",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "58068E68-7C3A-5997-B72D-A1CF8DF93AC0",
+        "3F0B921F-5114-5AF9-98CA-9EF6FC9AA96A",
+        "57A70B46-982B-5A14-B741-F9E7131B5440"
+      ]
+    },
+    {
+      "id": "c3fad6e0-018d-5a87-b18b-82d09eb4c7a6",
+      "name": "Meiji Park",
+      "description": null,
+      "latitude": 33.588821,
+      "longitude": 130.417755,
+      "city": "Fukuoka",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "2EB8F325-FD2B-564E-8C28-47E7785EE21E",
+        "2100A100-CEA1-5567-ABED-8641E499EE12"
+      ]
     }
   ],
   "linkPins": [
