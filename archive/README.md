@@ -395,3 +395,4 @@ Full text for every one of them is in
 - [HANDOFF-261107-triage-batch.md](HANDOFF-261107-triage-batch.md) — **50-pin triage batch** from 38 creators (28 new), mostly Fukuoka food; 10 links held for Edward, 8 place questions to Edward
 - [HANDOFF-261108-fukuoka.md](HANDOFF-261108-fukuoka.md) — **Fukuoka launch: Atlas Studio FUK**, 30 singles, 27 bilingual English | Japanese titles, 14 new architect tags; Ishimura Manseido moved to its street address; drop still shows the northward bias; no places
 - [HANDOFF-261108-fukuoka-marizon.md](HANDOFF-261108-fukuoka-marizon.md) — **Ocean & Resort Marizon** added to Atlas Studio FUK as its 31st single; coordinate from OSM (none supplied), no places
+- [HANDOFF-261109-fukuoka-pins.md](HANDOFF-261109-fukuoka-pins.md) — **22-pin Fukuoka/Kyushu batch** from 19 creators (17 new); 6 place questions and 1 held post to Edward
