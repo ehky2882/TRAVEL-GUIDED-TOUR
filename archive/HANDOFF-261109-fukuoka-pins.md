@@ -25,3 +25,11 @@ Edward said "make those six sites place pages". The places are Hilton Fukuoka Se
 - They were built with `make-places.py`'s `place_id` and `apply`, so the ids follow `atlas-place:fukuoka:<slug>`.
 - Every member already shared one point, so no coordinate moved. The diff is additions only.
 - None matched a declined group. The validator reports 0 errors, and check-place-candidates no longer lists any of the six. `status/owner/place-triage-261109.md` was cleared.
+
+## Follow-up: the held @laureen reel is now pinned
+Edward watched it and identified the shop as "takayama pawn shop in kasuga".
+- **Location:** 高山質店販売 春日店, the chain's retail branch in Okamoto 4-chome, Kasuga, taken from its named OSM node. takayama78.co.jp turned out to be a different, single-shop Chikushino business.
+- **Pin:** "Takayama Shichiten Kasuga | 高山質店販売 春日店". It opens Instagram rather than playing inline (licensed music).
+- **Checks:** no place candidate, and 0 validator errors. The hero is on gh-pages at `6a6307b`.
+- **Board:** `status/owner/pins-261109-held.md` is cleared. The Yufuin no Mori route post stays left out, as recorded above.
+- **Note:** the 2026-11-07 batch had skipped "the Takayama pawnshop" on a contributor's word. The owner has now chosen to pin it.
