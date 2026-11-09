@@ -7779,6 +7779,16 @@
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.tiktok.com/@a_akarayaa"
+    },
+    {
+      "id": "C4AA6946-DC1A-5F29-84C3-E20844F52492",
+      "displayName": "Instagram @laureen",
+      "platform": "instagram",
+      "handle": "laureen",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/laureen/"
     }
   ],
   "tours": [
@@ -405630,6 +405640,52 @@
         "Waterfront",
         "Green Escape",
         "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "AF925097-5A8F-56E5-B52B-03B3B12CA80C",
+      "createdAt": "2026-11-09",
+      "title": "Takayama Shichiten Kasuga | 高山質店販売 春日店",
+      "shortDescription": "A post by @laureen on Instagram.",
+      "longDescription": "One of the most affordable vintage designer shops I’ve been to! Love shopping in Fukuoka 🇯🇵 full experience + unboxing haul on today’s vlog— visit my YT channel now 💯",
+      "makerId": "C4AA6946-DC1A-5F29-84C3-E20844F52492",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/takayama-shichiten-kasuga-laureen_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/C_CVFf0B2jJ/",
+      "sourceAuthor": "@laureen",
+      "stops": [
+        {
+          "id": "68FE1F6C-5D1F-5180-A36F-4431974E71CA",
+          "order": 0,
+          "title": "Takayama Shichiten Kasuga | 高山質店販売 春日店",
+          "caption": "One of the most affordable vintage designer shops I’ve been to! Love shopping in Fukuoka 🇯🇵 full experience + unboxing haul on today’s vlog— visit my YT channel now 💯",
+          "latitude": 33.5411622,
+          "longitude": 130.4506737,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/takayama-shichiten-kasuga-laureen_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.5411622,
+      "centroidLongitude": 130.4506737,
+      "city": "Kasuga",
+      "country": "Japan",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Fashion",
+        "Hidden Gem"
       ],
       "priceUSD": 0
     }
