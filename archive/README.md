@@ -396,3 +396,4 @@ Full text for every one of them is in
 - [HANDOFF-261108-fukuoka.md](HANDOFF-261108-fukuoka.md) — **Fukuoka launch: Atlas Studio FUK**, 30 singles, 27 bilingual English | Japanese titles, 14 new architect tags; Ishimura Manseido moved to its street address; drop still shows the northward bias; no places
 - [HANDOFF-261108-fukuoka-marizon.md](HANDOFF-261108-fukuoka-marizon.md) — **Ocean & Resort Marizon** added to Atlas Studio FUK as its 31st single; coordinate from OSM (none supplied), no places
 - [HANDOFF-261109-fukuoka-pins.md](HANDOFF-261109-fukuoka-pins.md) — **22-pin Fukuoka/Kyushu batch** from 19 creators (17 new); 6 place questions and 1 held post to Edward
+- [HANDOFF-261110-kuala-lumpur.md](HANDOFF-261110-kuala-lumpur.md) — **Kuala Lumpur launch: Atlas Studio KUL**, 42 singles, 19 bilingual (Malay/Chinese mix), 18 new architect tags; no coordinate moved and no northward bias; 3 place questions to Edward
