@@ -242,6 +242,7 @@ enum Tag {
             "K-Studio", "FORMrelated", "Kostas Voutsinas", "Dimitris Pikionis", "Michael Photiadis", "Takis Zenetos", "Ioannis Despotopoulos", "Emmanouil Vourekas", "Prokopis Vasileiadis", "Antonis Georgiadis", "Spyros Staikos",
             "Alberto Kalach", "Ambrosi Etchegaray", "Ricardo Legorreta", "Javier Sánchez", "Alfonso Ramírez Ponce", "PPAA", "Juan O'Gorman", "Pedro Ramírez Vázquez", "Jorge Campuzano", "Rafael Mijares", "Teodoro González de León", "Abraham Zabludovsky", "Mario Pani", "Enrique del Moral",
             "Jon Jerde", "Kiyonori Kikutake", "Kume Sekkei", "Emilio Ambasz", "Nihon Sekkei", "Shohei Shigematsu", "Kingo Tatsuno", "Yasushi Kataoka", "Arata Isozaki", "Steven Holl", "Mark Mack", "Oscar Tusquets", "Osamu Ishiyama", "Shigeru Uchida",
+            "Arthur Benison Hubback", "Hijjas Kasturi", "William Ivor Shipley", "Ho Kok Hoe", "Stanley Jewkes", "T. Y. Lee", "Baharuddin Abu Kassim", "Hisham Albakri", "Howard Ashley", "Kumpulan Akitek", "Arkitek MAA", "BEP Architects", "Keys and Dowdeswell", "James Robert Vethavanam", "Domaine Architects", "VERITAS Design Group", "A. C. Norman", "R. A. J. Bidwell",
         ]),
     ]
 
