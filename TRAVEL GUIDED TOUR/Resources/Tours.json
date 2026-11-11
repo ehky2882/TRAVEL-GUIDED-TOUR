@@ -8069,6 +8069,16 @@
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.instagram.com/kligerman.ad/"
+    },
+    {
+      "id": "481C8F2D-4170-5A58-A0EA-A94EA9850EB3",
+      "displayName": "TikTok @chaijoie",
+      "platform": "tiktok",
+      "handle": "chaijoie",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-chaijoie.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@chaijoie"
     }
   ],
   "tours": [
@@ -411338,6 +411348,98 @@
         "History",
         "Commerce",
         "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "31BD924D-A2B4-5BFF-A757-09AF203A8148",
+      "createdAt": "2026-11-11",
+      "title": "Zoo Sindang",
+      "shortDescription": "A post by @chaijoie on TikTok.",
+      "longDescription": "📍zoo sindang very fun-themed moody cocktail bar in midtown~ #nycbars #koreanbar #datenightideas #nycdatenight #kfood",
+      "makerId": "481C8F2D-4170-5A58-A0EA-A94EA9850EB3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/zoo-sindang-chaijoie_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@chaijoie/video/7680216632291118367",
+      "sourceAuthor": "@chaijoie",
+      "stops": [
+        {
+          "id": "7A84C438-D055-581E-AD8C-D774B6ACBAEA",
+          "order": 0,
+          "title": "Zoo Sindang",
+          "caption": "📍zoo sindang very fun-themed moody cocktail bar in midtown~ #nycbars #koreanbar #datenightideas #nycdatenight #kfood",
+          "latitude": 40.7504334,
+          "longitude": -73.9839857,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/zoo-sindang-chaijoie_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7504334,
+      "centroidLongitude": -73.9839857,
+      "city": "New York",
+      "country": "United States",
+      "primaryCategory": "history",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7541DF54-5D5A-5466-BF89-16E7DB2201ED",
+      "createdAt": "2026-11-11",
+      "title": "The Fung Wah Bus Mural",
+      "shortDescription": "A post by @norbertobriceno on Instagram.",
+      "longDescription": "Kinda Interesting Things #367: The Fung Wah Bus, One of the Original Chinatown Buses If you’re walking through Manhattan’s Chinatown, you might come across this “Greetings from Chinatown” mural on Allen Street by artist Victor Ving, filled with little references to the neighborhood. But look closely at the W, and you’ll notice something unusual: a bus that appears to be on fire. This is the story of the Fung Wah Bus, one of the original Chinatown buses. Fung Wah was started in 1996 by Pei Lin Liang, a Chinese immigrant who drove a dollar van between Brooklyn and Chinatown as part of an informal transportation network that connected Chinese immigrant communities across the city, offering an affordable way to get around. Then Liang saw an opportunity to take that idea further. People were asking him how they could get to Boston to visit their children attending college there. So in 1997, Liang borrowed about $60,000 from relatives and bought four vans. The following year, he launched a service between New York and Boston. The idea was simple: keep it cheap. Instead of operating out of an expensive bus terminal, Fung Wah picked passengers up right on the street in Chinatown. At one point, a one-way ticket to Boston cost just $10. And this is how Fung Wah pioneered the Chinatown bus industry in the Northeast. Before long, Fung Wah was attracting passengers from all walks of life, and other companies followed suit. But Fung Wah’s success was eventually overshadowed by safety concerns that would lead to its downfall. Sources: “In Chinatown, a $10 Trip Means War; Weary Owners Struggle to Stay Afloat in Cutthroat Competition” (New York Times, Michael Luo, 2004) “Ratings Signal Warning For Fast-Growing Fung Wah” (Boston Globe, Donovan Slack and Mac Daniel, 2005) “Bus line looks to shed its reputation for risk” (USA Today, Rick Hampson, 2007) “Chinatown Express” (The Bangor Daily News, Jackie Farwell, 2007) “After inspections, 21 buses are idle” (Boston Globe, Katie Johnson, 2013)",
+      "makerId": "6DFDFB03-3F30-5E13-A0BA-1F842FBC5470",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-fung-wah-bus-mural-norbertobriceno_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/De6w7shMiSJ/",
+      "sourceAuthor": "@norbertobriceno",
+      "stops": [
+        {
+          "id": "FB3F6B9D-EC2C-5016-AF68-06926C6696B5",
+          "order": 0,
+          "title": "The Fung Wah Bus Mural",
+          "caption": "Kinda Interesting Things #367: The Fung Wah Bus, One of the Original Chinatown Buses If you’re walking through Manhattan’s Chinatown, you might come across this “Greetings from Chinatown” mural on Allen Street by artist Victor Ving, filled with little references to the neighborhood. But look closely at the W, and you’ll notice something unusual: a bus that appears to be on fire. This is the story of the Fung Wah Bus, one of the original Chinatown buses. Fung Wah was started in 1996 by Pei Lin Liang, a Chinese immigrant who drove a dollar van between Brooklyn and Chinatown as part of an informal transportation network that connected Chinese immigrant communities across the city, offering an affordable way to get around. Then Liang saw an opportunity to take that idea further. People were asking him how they could get to Boston to visit their children attending college there. So in 1997, Liang borrowed about $60,000 from relatives and bought four vans. The following year, he launched a service between New York and Boston. The idea was simple: keep it cheap. Instead of operating out of an expensive bus terminal, Fung Wah picked passengers up right on the street in Chinatown. At one point, a one-way ticket to Boston cost just $10. And this is how Fung Wah pioneered the Chinatown bus industry in the Northeast. Before long, Fung Wah was attracting passengers from all walks of life, and other companies followed suit. But Fung Wah’s success was eventually overshadowed by safety concerns that would lead to its downfall. Sources: “In Chinatown, a $10 Trip Means War; Weary Owners Struggle to Stay Afloat in Cutthroat Competition” (New York Times, Michael Luo, 2004) “Ratings Signal Warning For Fast-Growing Fung Wah” (Boston Globe, Donovan Slack and Mac Daniel, 2005) “Bus line looks to shed its reputation for risk” (USA Today, Rick Hampson, 2007) “Chinatown Express” (The Bangor Daily News, Jackie Farwell, 2007) “After inspections, 21 buses are idle” (Boston Globe, Katie Johnson, 2013)",
+          "latitude": 40.7145615,
+          "longitude": -73.9930616,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-fung-wah-bus-mural-norbertobriceno_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7145615,
+      "centroidLongitude": -73.9930616,
+      "city": "New York",
+      "country": "United States",
+      "primaryCategory": "history",
+      "tags": [
+        "Public Art",
+        "History",
+        "Immigration",
+        "Hidden Gem",
+        "District"
       ],
       "priceUSD": 0
     }

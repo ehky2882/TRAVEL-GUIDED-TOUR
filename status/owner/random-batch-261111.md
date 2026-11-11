@@ -1,4 +1,4 @@
-# Random batch 11-11: 6 joins, 12 new places, 5 held links
+# Random batch 11-11: 6 joins, 12 new places, 3 held links
 
 _opened 2026-11-11 · clear with `git rm status/owner/random-batch-261111.md`_
 
@@ -23,8 +23,6 @@ The 2026-11-11 random batch (56 pins) landed several entries on sites the catalo
 | Nová scéna | @urban_garbagebin + @xanibi (the @insightcities "Nová Scéna & the National Theatre" pin sits 452 m east and may need moving) |
 
 **3. Held, not pinned — need a location or a ruling:**
-- @chaijoie "zoo sindang" cocktail bar "in midtown" NYC: every search finds only the Seoul bar. Need the NYC address.
-- @norbertobriceno Fung Wah Bus: the story of a bus route; the only fixed thing is the Allen Street mural. Pin the mural or leave out?
 - @livinglondonhistory "sculpture hiding in plain sight" in the City of London: the building is not named.
 - @cityloop_nl BIG block with mirrored courtyard terraces: best guess Sluishuis, Amsterdam (already pinned by @blessedarch), unconfirmed.
 - Instagram DfN8sc9RHAv: embedding disabled, unreadable.
