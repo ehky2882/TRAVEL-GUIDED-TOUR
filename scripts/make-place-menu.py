@@ -129,6 +129,8 @@ DECLINED_GROUPS = {
 # Keyed by the frozen set of the two titles, never by the N-label: the labels
 # are positions in a sorted list and renumber whenever a batch lands.
 DECLINED_PAIRS = {
+    frozenset({'Eau Bar, The Oberoi', 'The Oberoi, Nariman Point'}):
+        'owner 2026-11-11: NO — a bar inside the hotel is a tenant, not the site (part vs whole)',
     frozenset({'Magok Cultural Hall', 'Seoul Botanic Park | 서울식물원'}):
         'owner 2026-11-11: NO — the hall is a separate building inside a large park and stays its own pin (part vs whole)',
     frozenset({'Weir Greenhouse, Green-Wood Cemetery', 'Green-Wood Cemetery'}):

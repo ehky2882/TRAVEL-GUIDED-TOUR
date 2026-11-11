@@ -68,3 +68,4 @@ The owner said yes ("kolumba and fenix yes"), so both are now places at 0 m and 
 - Q11 **YES**: Future Library joined Deichman Bjørvika (2 m), which now has 5 members on one point.
 - Q12 **YES**: Shakespeare and Company. The "Latin Quarter" tour turned out to be a single stop on the shop, about the shop. Places: 589.
 - Q13 **YES**: the Grace Farms River Building pin joined Grace Farms, so all 3 pins are one place (0 m).
+- Q14 **NO**: Eau Bar stays out of The Oberoi (tenant).
