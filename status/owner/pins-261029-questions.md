@@ -2,6 +2,8 @@
 
 _opened 2026-10-29 · clear with `git rm status/owner/pins-261029-questions.md`_
 
+> ✅ **Answered 2026-11-11 ("i dont mind ad-like posts so keep all of them"):** #1 the @rebeltoursvienna Vienna Central Cemetery reel is pinned and forms one place with @architectphilipp's pin. #2 Kerepesi and #3 the held coordinates are still open.
+
 From the 2026-10-29 pin batch (`archive/HANDOFF-261029-rjj-pins.md`):
 
 1. **Vienna Central Cemetery reel by @rebeltoursvienna** (https://www.instagram.com/reel/DfAeiw7M1w1/). The caption advertises their paid tour. Pin it or not? If yes, it is the same site as the existing @architectphilipp Zentralfriedhof pin, which makes it a place question too.

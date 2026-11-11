@@ -2,6 +2,8 @@
 
 _opened 2026-11-07 · clear with `git rm status/owner/pins-261107-held.md`_
 
+> ✅ **Answered 2026-11-11 ("i dont mind ad-like posts so keep all of them"):** #2 all three ads are pinned (Marisfrolg HQ, Kakinama, Hoshino Tea Museum). #1 the unidentified places and #3 the open questions are still open.
+
 From the 2026-11-07 triage batch (50 pins minted). The contributor said "go" without answering these, so they were NOT minted:
 
 1. **Could not identify the place** (someone needs to watch the video):

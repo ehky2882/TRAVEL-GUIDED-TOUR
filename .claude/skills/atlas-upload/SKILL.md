@@ -175,10 +175,7 @@ Then take three things back to the person, in plain English, by number:
   app geofences points.
 - anything you judged not place-based, so they can overrule you.
 
-⚠️ **Advertising is a policy question, not a geography one.** Some creators sell
-things — a estate agent posting listings, a shop posting stock. Do not decide
-it: ask Edward. Standing decision so far (2026-09-11): **property listings are
-judged case by case**, not banned and not auto-included.
+✅ **Advertising is fine — standing owner ruling (2026-11-11): *"if anything is being flagged because it appears as an ad, i dont mind ad-like posts so keep all of them."*** Tour-company plugs, hosted visits ("thanks for having me"), `#pr` / `#ad` / affiliate tags, a brand or shop posting about itself, and dealers posting stock are all **pinned like any other post. Do not hold them and do not ask.** Hold a post only for a reason that is not advertising (it can't be placed, it isn't place-based, it's a duplicate). This supersedes the 2026-09-11 "property listings case by case" note.
 
 ---
 
