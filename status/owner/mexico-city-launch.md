@@ -1,6 +1,9 @@
 # Mexico City (MEX): 2 place pairs, Tláloc part-vs-whole, 2 script facts
 
 _opened 2026-11-05 · clear with `git rm status/owner/mexico-city-launch.md`_
+> ✅ **Answered 2026-11-11 (owner: "p all yes"):** #1 Vasconcelos and Tamayo are now places. #2–#4 are still open.
+> ✅ **Answered 2026-11-11 (owner: "Q1-3 YES", "Q4 NO"):** #2 Tláloc Monolith is now a place with the Museum of Anthropology. #3–#4 are still open.
+> ✅ **Answered 2026-11-11 ("photos fine, for now"):** The photo licences are accepted for now and listed in drafts/CREDITS.md § Contributor-supplied photos… accepted FOR NOW. Still open: #3 the two script facts (Isabella Romo; El Califa de León's star).
 
 Mexico City launched as **Atlas Studio MEX** (35 singles). For you to settle. The contributor (arthur.yung) is not
 the owner. They said overlaps with existing creator pins "are normal". That is recorded here as their view, not a
