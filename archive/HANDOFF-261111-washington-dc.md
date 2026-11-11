@@ -34,7 +34,8 @@ what was deliberately not tagged are in `drafts/washington-dc-batch1/README.md` 
 are new. Union Station already existed as a two-pin place on OSM's station node, so the tour joined it (110.4 m). Done by
 `drafts/washington-dc-batch1/tools/places_dc.py`.
 
-**Owner:** `status/owner/washington-dc-launch.md` holds the Capitol trigger point, the Ford's Theatre hero banner and a pronunciation listen.
+**Owner:** decided after launch to keep the Capitol pin on the building and the Ford's Theatre hero for now.
+`status/owner/washington-dc-launch.md` holds only the pronunciation listen.
 
 **Checks:** `validate-tours-mirror` 0 errors, 737 warnings (unchanged) · `check-image-duplicates --maker WAS` 168, clean, with
 Pillow · `spine-lookup` 36 asked, 0 failed · `swift scripts/validate-tours.swift` not run locally (no Swift on Linux), so CI runs it.
