@@ -2,6 +2,7 @@
 
 _opened 2026-10-20 · clear with `git rm status/owner/warsaw-launch.md`_
 > ✅ **Answered 2026-11-11 (owner: "p all yes"):** #1 the University Library and the Palace of Culture are now places. #2–#4 are still open.
+> ✅ **Answered 2026-11-11 ("N FINE BUT DONT FORGET THEM"):** #2 Neon Museum, Kulturalna, Charlotte/Plan B and Bristol/Europejski are kept separate for now (docs/places.md § Kept separate FOR NOW). #3 photo licences is still open.
 
 Warsaw launched as **Atlas Studio WAW** (34 singles). For you to settle. The contributor is not the owner, so none of
 these were put to them as rulings, and nothing was created or joined.

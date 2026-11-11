@@ -2,6 +2,8 @@
 
 _opened 2026-10-23 · clear with `git rm status/owner/lille-launch.md`_
 
+> ✅ **Answered 2026-11-11 ("N FINE BUT DONT FORGET THEM"):** #1 JaJa / Clivia Nobili is kept separate for now, listed under docs/places.md § Kept separate FOR NOW. #2 photo licences and #3 dated audio lines are still open.
+
 Lille launched as **Atlas Studio LIL** (19 singles). For you to settle or note. The contributor is not the owner, so none of
 these were put to them as rulings, and nothing was created or joined.
 

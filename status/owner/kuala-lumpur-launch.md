@@ -2,6 +2,7 @@
 
 _opened 2026-11-10 · clear with `git rm status/owner/kuala-lumpur-launch.md`_
 > ✅ **Answered 2026-11-11 (owner: "p all yes"):** Sultan Abdul Samad Building and Dayabumi are now places, on the tours' points.
+> ✅ **Answered 2026-11-11 ("N FINE BUT DONT FORGET THEM"):** ILHAM Gallery and Ho Kow / Kwai Chai Hong are kept separate for now (docs/places.md § Kept separate FOR NOW). Only the photo note is left.
 
 Kuala Lumpur launched as **Atlas Studio KUL** (42 singles). The contributor is not the owner, so none of these were
 put to them as rulings, and nothing was created or joined.

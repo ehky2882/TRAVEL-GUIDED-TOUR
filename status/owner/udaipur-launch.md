@@ -2,6 +2,8 @@
 
 _opened 2026-10-16 · clear with `git rm status/owner/udaipur-launch.md`_
 
+> ✅ **Answered 2026-11-11 ("N FINE BUT DONT FORGET THEM"):** #1 Tapri/Ladu and Ninkasi/Aosa are kept separate for now (docs/places.md § Kept separate FOR NOW). #2 photo licences and #3 the Hindi name are still open.
+
 Udaipur launched as **Atlas Studio UDR** (23 singles). For you to settle:
 
 1. **Two place questions** from `check-place-candidates.py` (the contributor is not the owner, so these were not put to them as rulings):
