@@ -651,11 +651,11 @@ struct PlayerView: View {
                     .multilineTextAlignment(.leading)
 
                 if let caption = stop.caption {
-                    Text(caption)
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.secondaryText)
-                        .multilineTextAlignment(.leading)
-                        .fixedSize(horizontal: false, vertical: true)
+                    // See TourDetailView: full captions since 2026-09-21, so
+                    // the clamp lives at the display site rather than in the data.
+                    ExpandableText(text: caption,
+                                   font: AtlasTypography.caption,
+                                   lineLimit: 3)
                 }
 
                 Text(formatTime(TimeInterval(stop.audioDurationSeconds)))

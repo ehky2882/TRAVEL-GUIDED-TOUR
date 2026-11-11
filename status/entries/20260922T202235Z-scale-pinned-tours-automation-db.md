@@ -1,0 +1,3 @@
+# Cheap last resort for pins with no stated location, on the owner's choice: scripts/fetch-cover.py saves each post's cover frame uncropped, with no coordinate needed, reusing make-link-pin.py's own fetchers (10/10 selftests, exit 2 on any failed download; selftest wired into CI). Added to the skill and runbook as the last look before asking the owner. Honest limit, shown on Long Ma She: one frame usually confirms the KIND of place and not the coordinate — the process still never downloads video, so the owner watching remains the final step.
+
+_2026-09-22 20:22 UTC · branch `scale-pinned-tours-automation-db`_

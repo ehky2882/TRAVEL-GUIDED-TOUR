@@ -1,0 +1,16 @@
+# Udaipur (UDR): 2 place questions, photo licences, one Hindi name
+
+_opened 2026-10-16 · clear with `git rm status/owner/udaipur-launch.md`_
+
+> ✅ **Answered 2026-11-11 ("N FINE BUT DONT FORGET THEM"):** #1 Tapri/Ladu and Ninkasi/Aosa are kept separate for now (docs/places.md § Kept separate FOR NOW). #2 photo licences and #3 the Hindi name are still open.
+> ✅ **Answered 2026-11-11 ("photos fine, for now"):** The photo licences are accepted for now and listed in drafts/CREDITS.md § Contributor-supplied photos… accepted FOR NOW. Still open: #3 the Hindi name for Manjhi Ka Ghat.
+
+Udaipur launched as **Atlas Studio UDR** (23 singles). For you to settle:
+
+1. **Two place questions** from `check-place-candidates.py` (the contributor is not the owner, so these were not put to them as rulings):
+   - *Tapri Niwas* and *Ladu*, 0 m apart: a tea house and a shop on the same site in New Fatehpura. The contributor asked for both on one point. Co-location is not identity (`docs/places.md`), so my read is **not** a place.
+   - *Ninkasi* and *Aosa Café*, 17 m apart: two different venues on one junction. Not a place.
+2. **Photo licences:** the 94 photos were supplied by the contributor, who says they are royalty-free and fine to use.
+3. **Hindi names**, checked against Google Maps: Manjhi Ka Ghat kept as मांझी का घाट (Maps lists "मांजी राज का घट", an old name with a typo, and अम्बराई घाट). Say if you'd prefer अम्बराई घाट.
+
+Full account: `archive/HANDOFF-261016-udaipur.md`.

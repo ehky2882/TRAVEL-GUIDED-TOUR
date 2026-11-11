@@ -280,6 +280,95 @@ jobs:
           publish_file "search/embeddings.digest" /tmp/embeddings.digest \
             "chore(search): publish embeddings digest [skip ci]"
 
+  # Keep the spine audit's Wikidata cache in step with the catalogue.
+  #
+  # 🔴 WHY THIS IS AUTOMATIC. A cached answer is only valid for the point it was
+  # measured from, and moving a coordinate is precisely what the spine audit
+  # exists to police. On 2026-09-21 the audit reported all NINE coordinates that
+  # had just been corrected as still broken, because nobody re-ran the lookup —
+  # and the same blindness hides a coordinate moved to the WRONG place, which is
+  # the failure that matters. `spine-match.py` now refuses to report a distance
+  # for such a row and exits 2, so without this job the coordinate check would
+  # go red on the next content merge and stay red. A red check nobody can clear
+  # reads as coverage and gets ignored, which is how a check stops being one.
+  #
+  # It is CHEAP because the cache is digest-gated: it re-asks only the entries
+  # whose title or coordinate actually moved. The 59 rows that had accumulated
+  # over four days took 9 queries and well under a minute. `--limit` bounds the
+  # worst case (a cold cache is ~4.5 hours at the rate WDQS politely allows);
+  # the cache is its own resume state, so a bounded slice is safe to repeat and
+  # the next content merge continues it.
+  #
+  # ⚠️ IT IS ALLOWED TO FAIL. WDQS is a third party and this is a reporting
+  # artefact, not content — nothing a phone reads comes from here. A failed
+  # refresh degrades into exactly what the guard was built to say: those rows
+  # come back STALE with no distance attached, and the audit names the command.
+  # That is the whole reason it is safe to automate.
+  refresh-spine:
+    name: Refresh the spine coordinate cache
+    runs-on: ubuntu-latest
+    # After the rebuild so it reads the catalogue that was actually published,
+    # and not gated on it succeeding — a failed embedding must not leave the
+    # coordinate cache behind too.
+    needs: rebuild-related
+    if: ${{ !cancelled() }}
+    continue-on-error: true
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Ask Wikidata about the entries that moved
+        id: refresh
+        run: |
+          set -uo pipefail
+          # Read the exit code DIRECTLY. `--limit` keeps a cold or badly stale
+          # cache from running for hours on a runner; 400 entries is ~50
+          # queries, a couple of minutes.
+          code=0
+          python3 scripts/spine-lookup.py --limit 400 --out spine-refresh.txt || code=$?
+          cat spine-refresh.txt || true
+          if [ "$code" -ne 0 ]; then
+            echo "::warning::spine-lookup could not finish (exit $code). The audit will report the affected entries as STALE with no distance, which is the honest answer; the next content merge retries."
+          fi
+          if git diff --quiet -- spine/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # The audit report is the human-readable half of the same artefact, so it
+      # is refreshed in the SAME commit. Exit 1 here means "findings to read",
+      # which is the normal state of this file and not a failure.
+      - name: Re-run the audit into spine/audit.txt
+        if: steps.refresh.outputs.changed == 'true'
+        run: |
+          set -uo pipefail
+          code=0
+          python3 scripts/spine-match.py --limit 25 --out spine/audit.txt || code=$?
+          if [ "$code" -ge 2 ]; then
+            echo "::warning::entries remain unverified after the refresh (exit $code) — see spine/audit.txt"
+          fi
+
+      - name: Commit the refreshed cache to main
+        if: steps.refresh.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add spine/
+          # [skip ci] for the same reason as the rebuild above: without it this
+          # push retriggers this workflow for no gain.
+          git commit -m "chore(spine): refresh the Wikidata coordinate cache [skip ci]"
+          if git push origin HEAD:main; then
+            echo "Pushed the refreshed spine cache to main."
+            exit 0
+          fi
+          # main moved while we were asking. Self-healing: the cache is its own
+          # resume state, so the next content merge re-asks the same entries.
+          echo "::warning::main moved during the refresh — the spine cache was not updated this run. The next content merge retries."
+
   publish:
     name: Publish Tours.json to gh-pages
     runs-on: ubuntu-latest

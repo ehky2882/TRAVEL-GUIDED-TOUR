@@ -74,6 +74,7 @@ from __future__ import annotations
 
 import argparse
 import base64
+import collections
 import gzip
 import hashlib
 import importlib.util
@@ -480,6 +481,20 @@ def selftest():
           d1 != digest({"title": "B", "heroImageURL": "u", "city": "c"}))
     check("🔴 digest moves when the IMAGE changes",
           d1 != digest({"title": "A", "heroImageURL": "v", "city": "c"}))
+    # 🔴 The record format is part of what a cached answer depends on. Without
+    # it, changing what a record MEANS leaves every old record reading as
+    # current — the same silent carry-over as a stale title or image, except it
+    # would hit the whole cache at once.
+    global RECORD_VERSION
+    _kept_version = RECORD_VERSION
+    try:
+        RECORD_VERSION += 1
+        check("🔴 digest moves when the RECORD FORMAT changes",
+              d1 != digest({"title": "A", "heroImageURL": "u", "city": "c"}))
+    finally:
+        RECORD_VERSION = _kept_version
+    check("and moves back when the format is restored",
+          d1 == digest({"title": "A", "heroImageURL": "u", "city": "c"}))
 
     nb = neighbours({"tours": [], "linkPins": [
         {"id": "a", "title": "Torre Velasca", "city": "Milan"},
@@ -496,9 +511,60 @@ def selftest():
     check("🔴 an entry with no hero is skipped — there is nothing to ask",
           "n" not in ids)
 
+    # 🔴 What the cache cannot speak for. A stale CONTRADICTS reads exactly like
+    # a live finding, and a never-asked entry reads as covered.
+    def _pin(pid, title, hero):
+        return {"id": pid, "title": title, "heroImageURL": hero, "city": "c"}
+
+    kept = _pin("k", "A", "u")
+    retitled = _pin("r", "B", "u")
+    reimaged = _pin("i", "C", "v")
+    unseen = _pin("n", "D", "w")
+    store = {"k": {"digest": digest(kept), "verdict": "CONFIRMS"},
+             "r": {"digest": digest(_pin("r", "A", "u")), "verdict": "CONTRADICTS"},
+             "i": {"digest": digest(_pin("i", "C", "u")), "verdict": "CONTRADICTS"}}
+    answered, stale, never = cache_coverage([kept, retitled, reimaged, unseen], store)
+    check("an unchanged entry counts as answered",
+          [p["id"] for p in answered] == ["k"])
+    check("🔴 a RETITLED entry's verdict no longer speaks for it",
+          "r" in [p["id"] for p in stale])
+    check("🔴 a RE-IMAGED entry's verdict no longer speaks for it — this is the "
+          "Old Spitalfields case exactly", "i" in [p["id"] for p in stale])
+    check("🔴 a never-asked entry is reported, not assumed covered",
+          [p["id"] for p in never] == ["n"])
+    check("🔴 stale and never-asked are NOT merged into answered",
+          not ({"r", "i", "n"} & {p["id"] for p in answered}))
+    check("an empty cache makes every entry never-asked",
+          len(cache_coverage([kept, unseen], {})[2]) == 2)
+
     print(f"\nSELFTEST {'OK' if not fails else 'FAILED'} — "
           f"{len(ran) - len(fails)}/{len(ran)}")
     return 1 if fails else 0
+
+
+def cache_coverage(targets, cache):
+    """Split targets into (answered, stale, never-asked).
+
+    🔴 A verdict was reached about ONE title and ONE image. Change either and
+    nobody has judged the new pair, so the old verdict is not a weaker answer
+    than none — it is a wrong one. Old Spitalfields Market kept a CONTRADICTS
+    after the very image that earned it had been replaced, and a stale
+    CONTRADICTS reads exactly like a live finding.
+
+    A never-asked entry is the other half: it reads as covered because nothing
+    says otherwise. The sibling failure in spine-match.py is in
+    docs/lessons.md § 1.
+    """
+    answered, stale, never = [], [], []
+    for pin in targets:
+        record = cache.get(pin["id"])
+        if record is None:
+            never.append(pin)
+        elif record.get("digest") != digest(pin):
+            stale.append(pin)
+        else:
+            answered.append(pin)
+    return answered, stale, never
 
 
 def main():
@@ -515,6 +581,9 @@ def main():
     ap.add_argument("--all", action="store_true",
                     help="check EVERY entry with a hero, not only the "
                          "uncorroborated ones. ~4,800 entries, ~2 calls each.")
+    ap.add_argument("--status", action="store_true",
+                    help="report what the cache can and cannot speak for, then "
+                         "stop. Needs no key and no network.")
     ap.add_argument("--selftest", action="store_true")
     runstamp.add_out_argument(ap)
     a = ap.parse_args()
@@ -538,6 +607,30 @@ def main():
         scope = "entries with a hero" if a.all else "uncorroborated pin(s)"
         print(f"{len(targets)} {scope} · {len(cache)} cached · "
               f"{len(todo)} to check")
+
+        # 🔴 WHAT THE CACHE CANNOT SPEAK FOR. A verdict was reached about one
+        # title and one image; change either and nobody has judged the new pair.
+        # Saying so needs no key, and without it a stale CONTRADICTS reads as a
+        # live finding and a never-asked entry reads as covered — which is how
+        # Old Spitalfields Market kept a CONTRADICTS after the very image that
+        # earned it had been replaced. The sibling failure in spine-match.py is
+        # in docs/lessons.md § 1.
+        _, stale, never = cache_coverage(targets, cache)
+        if stale or never:
+            print(f"⚠️  {len(stale)} retitled or re-imaged since their verdict · "
+                  f"{len(never)} never asked — NEITHER is covered")
+            carried = collections.Counter(
+                cache[p["id"]].get("verdict") for p in stale
+                if cache[p["id"]].get("verdict"))
+            if carried:
+                print("    the stale verdicts still on file: "
+                      + ", ".join(f"{n} {v}" for v, n in carried.most_common()))
+
+        if a.status:
+            # Deliberately BEFORE the key check: coverage is answerable offline,
+            # and refusing to answer it for want of a key would be the same
+            # false silence this block exists to break.
+            return 1 if (stale or never) else 0
 
         if not a.key:
             # 🔴 A check that cannot run must not be able to return a pass.

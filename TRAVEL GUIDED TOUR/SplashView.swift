@@ -231,6 +231,15 @@ struct SplashView: View {
             && breathIsBright(sinceBreathStart: elapsed + handOffLatency, reduceMotion: false)
     }
 
+    /// Whether the breath is at (and a frame later still at) the top of a
+    /// breath — for the first-launch lift onto onboarding, where the swap is to
+    /// a solid mark and has no zoom to hide it in. About a sixteenth of each
+    /// breath, so ~0.8s extra on average and at most one breath.
+    static func breathIsAtPeak(sinceBreathStart elapsed: TimeInterval?, reduceMotion: Bool) -> Bool {
+        guard !reduceMotion, let elapsed else { return true }
+        return breath(elapsed: elapsed) >= 0.96 && breath(elapsed: elapsed + 0.05) >= 0.96
+    }
+
     /// A cosine is an ease-in-out by construction, so this is the same curve
     /// the original `.easeInOut(duration: 0.8).repeatForever(autoreverses:)`
     /// drew, starting at full opacity.

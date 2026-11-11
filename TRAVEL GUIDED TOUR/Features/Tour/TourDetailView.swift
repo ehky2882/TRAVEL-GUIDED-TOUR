@@ -142,7 +142,6 @@ struct TourDetailView: View {
     /// Toggles between the truncated 4-line preview of `longDescription`
     /// and the full text. Apple Music / Podcasts pattern — keeps the
     /// action row close to the fold, lets readers expand inline.
-    @State private var isDescriptionExpanded = false
 
     /// Lines shown in the truncated state. iOS convention (Apple Music
     /// album notes, Podcasts show notes); ~25 words at 15pt SF Pro.
@@ -734,40 +733,21 @@ struct TourDetailView: View {
     /// We detect overflow by comparing the text's intrinsic height
     /// at body typography against the height of the same text capped
     /// at `descriptionPreviewLineLimit` lines.
+    ///
+    /// 🔴 This used to decide that with a CHARACTER COUNT — "over 240 characters
+    /// overflows 4 lines" — and `ExpandableText` now measures it instead. The
+    /// count was copied into that component for stop captions and was wrong on
+    /// the first screen it shipped to: two captions of 161 and 191 characters
+    /// were clamped with **no toggle at all**, because they render at caption
+    /// size in an indented row rather than body size at full width. The same
+    /// unsound reasoning was behind this 240, so it is gone here too rather
+    /// than left to fail later — clamping text while offering nothing to open
+    /// it hides content with no affordance to reach it.
     private var descriptionSection: some View {
-        VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-            Text(tour.longDescription)
-                .font(AtlasTypography.body)
-                .foregroundStyle(AtlasColors.primaryText)
-                .lineLimit(isDescriptionExpanded ? nil : Self.descriptionPreviewLineLimit)
-                .fixedSize(horizontal: false, vertical: true)
-                .animation(.easeInOut(duration: 0.2), value: isDescriptionExpanded)
-
-            if shouldShowReadMoreToggle {
-                Button {
-                    withAnimation(.easeInOut(duration: 0.2)) {
-                        isDescriptionExpanded.toggle()
-                    }
-                } label: {
-                    Text(isDescriptionExpanded ? "Show less" : "Read more")
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.secondaryText)
-                }
-                .buttonStyle(.plain)
-                .accessibilityLabel(isDescriptionExpanded ? "Show less description" : "Read more description")
-            }
-        }
-    }
-
-    /// Cheap overflow check — uses raw character count as a proxy for
-    /// "does this overflow 4 lines at 15pt body on iPhone width?"
-    /// 240 chars is the empirical break point (4 × ~60 chars/line at
-    /// our content width); anything under that always fits, anything
-    /// over reliably overflows. A character-count proxy avoids a
-    /// GeometryReader / Text-measurement round-trip on every body
-    /// eval, which would fight the inline truncation animation.
-    private var shouldShowReadMoreToggle: Bool {
-        tour.longDescription.count > 240
+        ExpandableText(text: tour.longDescription,
+                       font: AtlasTypography.body,
+                       lineLimit: Self.descriptionPreviewLineLimit,
+                       color: AtlasColors.primaryText)
     }
 
     /// Who made the post this pin stands for. A pin built out of somebody
@@ -854,11 +834,13 @@ struct TourDetailView: View {
                         .multilineTextAlignment(.leading)
 
                     if let caption = stop.caption {
-                        Text(caption)
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.secondaryText)
-                            .multilineTextAlignment(.leading)
-                            .fixedSize(horizontal: false, vertical: true)
+                        // Captions are the creator's full text since 2026-09-21
+                        // (the pipeline used to cut them at 140 characters and
+                        // lose the address). Clamped here so a stop row stays a
+                        // row; 240 ≈ 3 lines at caption size on iPhone width.
+                        ExpandableText(text: caption,
+                                       font: AtlasTypography.caption,
+                                       lineLimit: 3)
                     }
 
                     Text(AtlasFormatters.duration(seconds: stop.audioDurationSeconds))

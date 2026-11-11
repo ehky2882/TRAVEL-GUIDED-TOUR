@@ -1,0 +1,28 @@
+01	bom-elco-pani-puri	19.056087708778655	72.83322453555145	40	foodAndDrink	moved onto the existing ELCO link pin (contributor OK)
+02	bom-the-bombay-canteen	19.003468152517048	72.82754380934354	40	foodAndDrink	supplied
+03	bom-trishna	18.92872883155363	72.83237399155108	40	foodAndDrink	supplied
+04	bom-americano	18.929049645288693	72.8326251792826	40	foodAndDrink	supplied
+05	bom-cafe-madras	19.027838367050173	72.85506835952795	40	foodAndDrink	supplied
+06	bom-ayubs	18.92823542815258	72.8329033641404	40	foodAndDrink	supplied
+07	bom-eau-bar-the-oberoi	18.927693402756724	72.8207179958501	40	foodAndDrink	supplied
+08	bom-aer-four-seasons	18.993851447439337	72.82026076301167	40	foodAndDrink	supplied
+09	bom-slink-and-bardot	19.017429560719297	72.8174780805078	40	foodAndDrink	supplied
+10	bom-bombay-gymkhana	18.937625814015316	72.83075533603191	60	history	supplied
+11	bom-willingdon-sports-club	18.976881996707544	72.81534698050699	60	history	supplied
+12	bom-bastian-at-the-top	19.025084180690772	72.84108765352431	40	foodAndDrink	supplied
+13	bom-taj-mahal-palace	18.921778	72.8332848	50	architecture	moved onto the existing Taj Mahal Palace link pin (contributor OK)
+14	bom-the-oberoi	18.927006436873356	72.82007768216923	40	architecture	supplied
+15	bom-royal-bombay-yacht-club	18.923737544854294	72.83353005057957	40	history	supplied
+16	bom-intercontinental-marine-drive	18.93527479562398	72.82438323817826	40	architecture	supplied
+17	bom-colaba-causeway	18.922851770313038	72.83166455461954	75	history	supplied
+18	bom-kala-ghoda	18.927978198297573	72.83183916647423	60	visualArt	supplied
+21	bom-chor-bazaar	18.960039957504858	72.82988845352303	60	culturalHeritage	supplied
+23	bom-gateway-of-india	18.922187063268677	72.83461138050585	50	architecture	supplied
+24	bom-marine-drive	18.933727637047987	72.82341104555498	75	architecture	supplied
+26	bom-csmvs	18.9269268	72.8326498	60	culturalHeritage	folder had no coordinate; OSM museum node (contributor OK)
+28	bom-bandra-worli-sea-link	19.0418641	72.8183782	60	architecture	moved ~870 m north from mid-bay onto Bandra Fort, where the script stands (contributor OK)
+29	bom-bhau-daji-lad-museum	18.979171502728466	72.8347938381791	50	culturalHeritage	supplied
+30	bom-girgaon-chowpatty	18.95420	72.81370	75	culturalHeritage	moved ~90 m west off Birla Krida Kendra onto the sand (contributor OK)
+31	bom-st-marys-school-mazagaon	18.969624501332174	72.83599865282805	40	history	supplied
+32	bom-bmc-head-office	18.940529936496727	72.83446213339249	50	architecture	supplied
+33	bom-david-sassoon-library	18.927871704134194	72.83110748614428	40	literature	supplied

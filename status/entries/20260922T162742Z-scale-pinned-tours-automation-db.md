@@ -1,0 +1,3 @@
+# Created the Žižkov Television Tower place (both entries already coincident; OSM names the point and BOTH resolve to Wikidata Q1413217, 28 sitelinks). 420 places. The other two EXACT groups are two different buildings each and were NOT merged or separated: no source reachable from here gives a per-building coordinate — OSM has no coverage, Wikidata's bbox over Aranya holds 4 items and none is these, ArchDaily's location field is just 'Qinhuangdao Shi', Overpass is proxy-blocked. Recorded as status/owner/china-pin-coordinates.md rather than guessed.
+
+_2026-09-22 16:27 UTC · branch `scale-pinned-tours-automation-db`_

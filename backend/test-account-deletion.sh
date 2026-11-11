@@ -166,7 +166,8 @@ check "A's follows cascaded"            "select count(*) from public.follows whe
 check "page survives, detached"         "select coalesce(user_id::text,'null') from public.makers where id = '$MA'" "null"
 check "B's purchase survives"           "select count(*) from public.purchases where tour_id = '$T_SOLD' and user_id = '$B'" "1"
 out="$(q "delete from public.makers where id = '$MA'" || true)"
-if echo "$out" | grep -q "violates foreign key"; then echo "  ok    a page with a sold tour cannot be deleted (buyer keeps access)"; else echo "  FAIL  page deletion was not restricted: $out"; fail=1; fi
+# Newer Postgres words it "violates RESTRICT setting of foreign key constraint".
+if echo "$out" | grep -q "violates .*foreign key"; then echo "  ok    a page with a sold tour cannot be deleted (buyer keeps access)"; else echo "  FAIL  page deletion was not restricted: $out"; fail=1; fi
 
 echo
 if [ "$fail" = 0 ]; then echo "PASS — account_deletion.sql behaves as specified"; exit 0

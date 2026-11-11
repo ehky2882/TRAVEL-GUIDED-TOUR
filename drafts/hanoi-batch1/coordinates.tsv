@@ -1,0 +1,28 @@
+01	han-gia	21.027329	105.835910	40	foodAndDrink	supplied
+02	han-tung-dining	21.026900	105.850015	40	foodAndDrink	supplied
+03	han-ngo-trung-yen	21.033375	105.852656	40	foodAndDrink	supplied
+04	han-long-waits-jazz	21.032513	105.845655	40	musicAndPerformance	supplied
+05	han-workshop14	21.058153	105.832437	40	foodAndDrink	supplied
+06	han-memoire-15	21.036590	105.849623	40	architecture	supplied
+07	han-duy-tri	21.051497	105.838798	40	foodAndDrink	supplied; script notes the street number is uncertain, OSM's Cà Phê Duy Trí node is 4 m away
+08	han-loading-t	21.030522	105.848501	40	foodAndDrink	supplied
+09	han-metropole	21.025413	105.856375	40	history	supplied
+10	han-jw-marriott	21.006956	105.783168	75	architecture	supplied; lakeside vantage, 102 m from OSM's hotel node
+11	han-silk-path-boutique	21.025574	105.852421	40	architecture	supplied
+12	han-jackfruit-village	21.058897	105.528113	75	architecture	supplied; rural site of 1.75 ha
+13	han-54-traditions	21.041701	105.844855	40	culturalHeritage	supplied
+14	han-art-vietnam-gallery	21.000688	105.863753	40	visualArt	supplied
+15	han-manzi-art-space	21.041389	105.845556	40	visualArt	supplied
+16	han-old-quarter	21.035934	105.850988	50	culturalHeritage	MOVED 74 m west onto OSM's Bạch Mã Temple (supplied 21.0359, 105.8517 was at 47 Hàng Buồm)
+17	han-french-quarter	21.024300	105.857600	60	architecture	supplied; reverse-geocodes to the Opera House, 1A Tràng Tiền
+18	han-ba-dinh-square	21.036897	105.834667	75	history	supplied; 12 m from OSM's Mausoleum node
+19	han-imperial-citadel	21.035223	105.840259	60	history	supplied; 9 m from OSM's Đoan Môn
+20	han-military-history-museum	21.008513	105.755774	75	history	supplied; 38 ha site, point on the approach
+21	han-long-bien-bridge	21.040630	105.851660	75	history	MOVED toward the Hanoi end, ~150 m out from the west abutment (supplied 21.041784, 105.854503 was ~470 m out)
+22	han-ho-chi-minh-museum	21.035641	105.832663	60	history	supplied
+23	han-ngoc-son-temple	21.030688	105.852386	50	sacredSites	supplied
+24	han-heritage-house	21.034419	105.853528	40	culturalHeritage	supplied
+25	han-concrete-flakes	21.017766	105.852507	40	architecture	supplied
+26	han-bat-trang-house	20.977073	105.912553	40	architecture	supplied
+27	han-bat-trang-museum	20.974738	105.912975	50	architecture	supplied; no OSM node, reverse-geocodes into Bát Tràng village
+28	han-museum-of-ethnology	21.040342	105.798735	60	culturalHeritage	supplied

@@ -1,0 +1,25 @@
+# Les Espaces d'Abraxas — TTS-safe script
+
+Read this version to the voice. `[beat]` is replaced by a paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+Lay Zes pass dab rax us
+
+A palace, a theatre and a triumphal arch, built for people on modest incomes in a new town on the edge of Paris. That was the idea, anyway.
+
+plass day fay day ray, nwah zee luh gron, a short walk from the nwah zee luh gron mon dest station. You're in a long, enclosed courtyard. In the middle stands a block of flats shaped like a triumphal arch. That's lark. To the west, a building curving round in a great half circle: luh tay at ruh. And to the east, the biggest of the three, a cliff of concrete eighteen storeys high: luh pa lass ee oh.
+
+The architect was the Catalan ricardo bo feel, with his practice, the tie air day arkee tek toora. It was designed in nineteen seventy eight and finished in the early nineteen eighties, as social housing for the new town of marn la va lay. Altogether there are around six hundred flats.
+
+Have a look at the columns first. They're enormous, and they aren't holding anything up in the usual way. Some of them are staircase towers. Others are stacks of living room windows, one flat on top of the next. bo feel took the parts of a classical temple and filled them with homes.
+
+Then the arch. It's the sort of monument you'd expect at the end of a grand avenue, celebrating a victory. This one holds twenty flats.
+
+And the concrete. It was cast in panels in a factory, with oxides mixed in for colour, which kept the costs down. That's the same method that gave France its grey post war slabs, the gron zon som bluh bo feel was arguing against. He used it to make columns and cornices instead.
+
+Here's the thing. bo feel said he wanted to build an emblematic monument in a very poorly made area. Critics have argued ever since about whether that was generous or overbearing. One called the place sinister and domineering. In two thousand and fourteen bo feel admitted he hadn't managed to change the city. But when demolition was floated, he said knocking it down would be a lack of culture. Residents fought the plans, and the buildings are still here.
+
+Film makers never needed persuading. Terry Gilliam shot scenes for Brazil here, and in The Hunger Games: Mockingjay Part Two, this courtyard floods with a black, tar like ooze.
+
+Before you go, stand at the foot of one of the pa lass ee oh's columns and look straight up. Then, if you've time, walk east for about fifteen minutes to the arenn duh picasso. It's the same idea, a palace for the suburbs, built by a man who once worked in bo feel's office.

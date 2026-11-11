@@ -1,10 +1,13 @@
+FIRST LAUNCH (NEW IN 1.1.4)
+The first time Dozent opens, it shows a short welcome and then a few tips over the Home screen. Tap the button, or anywhere on the right side of the screen, to move on; every question is optional. An account is offered once and can be skipped ("Skip for now", or "Skip"). To use the demo login instead, choose "I already have an account". The welcome and the tips can both be replayed from Me tab - Settings (gear icon) - Take the app tour / Show tips again.
+
 SIGN-IN
 An account is required only to purchase. Browsing the catalogue and playing the free tours needs no account. To sign in: Me tab (bottom right) - Sign in - use the demo credentials above.
 
 HOW TO TEST THE IN-APP PURCHASE ($0.99)
 Tour Tier 0.99 is the only in-app purchase currently attached to any tour. The other tier products are price points for our creator-set pricing model; none is attached to a published tour yet, so they are not part of this submission and will be submitted as they come into use.
-Almost all of Dozent's 1,550+ tours are free. The paid items are the 66 multi-stop walking tours, so please use the filter below or you are unlikely to encounter one:
-1. On the Home screen, tap the PRICE chip in the filter row above the map, then choose PAID. The map and list now show only the paid tours, each $0.99 (a price badge appears on the card).
+Almost all of Dozent's 2,100+ tours are free. The only paid items are 66 multi-stop walking tours, so please use the filter below or you are unlikely to encounter one:
+1. On the Home screen, swipe the filter row above the map to the left, tap the PRICE chip, then choose PAID. The map and list now show only the paid tours, each $0.99 (a price badge appears on the card).
 2. Tap any of them, for example "Fifth Avenue Walk" (New York).
 3. On the tour page, tap the price/Buy button and complete the sandbox purchase.
 4. The tour unlocks immediately and plays from that same page.

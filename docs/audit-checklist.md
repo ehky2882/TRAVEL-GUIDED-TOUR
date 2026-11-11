@@ -54,6 +54,7 @@ Three things, and the third is the one that gets misread:
 | Malformed entry, broken reference, a place member not on its place | `validate-tours.swift` | every one is a defect |
 | Coordinate disagrees with a gazetteer | `spine-match.py` | **not a worklist** — five sampled by hand, none a catalogue error; two were Wikidata's own |
 | A site with two entries and no place page | `check-place-candidates.py` | candidates; the owner decides each |
+| Same name, different place | `check-same-name.py` | **not a worklist** — of the first six, a stream and a two-branch chain span legitimately and two were a repeated caption, not a name |
 | An entry sitting on a place it is not a member of | `audit-board.py` | some are correctly out — the Channel Gardens and the Blue Ribbon Garden are declined |
 | One city spelled two ways | `audit-board.py` | each splits one city in two; a few are real neighbours |
 | One hero on two subjects with two source posts | `audit-board.py` | every one is a defect |

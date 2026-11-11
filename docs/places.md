@@ -243,6 +243,30 @@ and the pin already sits among them, nearer mid-Gallery than any one of them. Wi
 one — so a mid-Gallery point is the honest answer. Rule 5 says a place is a coordinate and one
 point must be honest for everyone; here that point is deliberately the middle, not an endpoint.
 
+### 2026-09-23: seven parts and tenants declined in one sitting — the pattern is now clear
+
+Put to the owner as numbered questions, answered in one line:
+
+| Pair | Ruling |
+|---|---|
+| Westminster Abbey + four interior pins (Cosmati Pavement, Shrine of Edward the Confessor, Tomb of Elizabeth I, Britain's Oldest Door) | **NO** — a re-ask of the 2026-09-15 decision above; the comingling reason stands |
+| Rockefeller Center + The Channel Gardens | **NO** |
+| Walt Disney Concert Hall + its rooftop Blue Ribbon Garden | **NO** |
+| Arc de Triomphe + the Tomb of the Unknown Soldier beneath it | **NO** |
+| Taipei 101 + A Joy (the buffet at the top) · Grand Central Market + Eggslut (a stall) | **NO** — Rule 4, tenants |
+| The Unisphere + Relics of the World's Fairs | **YES**, joined |
+| Queens Museum (Atlas tour) + *Before the Queens Museum* | **YES**, new place (and the owner asked why it was missed — see `docs/lessons.md`) |
+| Ara Pacis Museum + *The Ara Pacis and the Mausoleum of Augustus* | **YES**, new place |
+| Palais-Royal + Colonnes de Buren | **NO**; the owner asked for the pins to be moved apart, and the Buren pin now sits on the columns, 63 m from the Palais-Royal |
+| Museum of the City of New York (Atlas tour) + *Inside the Museum of the City of New York* | **YES**, new place |
+| Chichén Itzá + The Great Ball Court | **NO** |
+
+🔴 **Every part-of-a-site pairing was declined.** Together with 2026-09-15 this is now a consistent
+pattern: **a component inside or on a site stays out of the site's place.** It is still recorded as
+undecided above only because the owner has not stated it as a rule; until they do, keep asking, but
+expect NO and never assume YES. Every ruling here is in `scripts/make-place-menu.py`
+`DECLINED_PAIRS`, which `check-place-candidates.py` now reads so it never re-lists them.
+
 ## 🔴 Before deciding anything: check the coordinate
 
 `Lloyd's of London` / `The Leadenhall Building` sat 7 m apart and looked like a
@@ -258,3 +282,72 @@ That check found **nine wrong coordinates** in a single day. The signature is a
 **4-decimal coordinate on a tour**: pins are geocoded per link at import, while
 tours carry coordinates typed once and never verified. In the 26–49 m band,
 **fifteen of seventeen groups had the pin right and the tour wrong.**
+
+## 2026-09-25: four more rulings, including the first part-of-a-museum YESes
+
+| Pair | Ruling |
+|---|---|
+| Banksy Sculpture, Waterloo Place + Banksy-Signed Sculpture | **YES**: the same artwork (Rule 1) |
+| MMCA Seoul (tour) + MMCA Space Kids (pin) | **YES**: the owner's judgement call. A space inside the museum, placed with it |
+| MMCA Gwacheon + *The More the Better*, Nam June Paik | **YES**: the owner's judgement call. The Paik tower is inside the museum |
+| Adega Mayor (tour) + Adega Mayor (pin), 59 m apart | **YES** (Rule 1); the place sits on the tour's point |
+| A Mesa do CAM + CAM Gulbenkian | **NO for now**: the restaurant stays outside the museum's place |
+
+⚠️ **Part vs whole is still decided one case at a time.** Two museum parts were accepted here, after
+many earlier refusals (Westminster Abbey interiors, Rockefeller Center parts, the Tomb of the
+Unknown Soldier). Ask; do not infer a rule from either side.
+
+## 2026-11-11: the owner answered the backlog (79 yes, part-vs-whole case by case)
+
+All 67 "same thing pinned twice" pairs and 10 joins to existing places were a **yes**, plus Kolumba and FENIX.
+Part-vs-whole rulings:
+
+| Pair | Ruling |
+|---|---|
+| Teshima Art Museum + Teshima Art Museum Café | **YES**: the café is placed with the museum |
+| Nezu Museum (tour) + Nezu Museum Garden (pin) | **YES**: the garden is part of the museum |
+| National Museum of Anthropology (tour) + The Tláloc Monolith (pin) | **YES**: the monolith stands on the museum's forecourt |
+| Lycabettus Funicular (tour) + Mount Lycabettus (pin) | **NO**: the funicular station is not the hill |
+| Abraj Al-Bait Shopping Center (tour) + Abraj Al Bait (pin) | **YES**: the mall is the complex's base; the place sits on the tour's point |
+| Makkah Clock Tower museum (tour) + Fairmont Makkah Clock Royal Tower (tour) | **NO**: a museum and a hotel in one tower are two different visits |
+| El Umbracle (tour) + City of Arts and Sciences (pin) | **YES**: the place sits on the Umbracle, which is inside the complex |
+| Monument to Richard Sorge (SovMod tour) + Richard Sorge Park (pin) | **YES**: the park exists for the monument; the place sits on the monument |
+| Weir Greenhouse (pin) + Green-Wood Cemetery (tour + pin) | **NO**: one building in a huge cemetery |
+| Magok Cultural Hall (pin) + Seoul Botanic Park (tour) | **NO**: a separate building in a big park |
+| Future Library (pin) + Deichman Bjørvika (place) | **YES**: joined, because the manuscripts are kept in Deichman's Silent Room |
+| Latin Quarter & Shakespeare and Company (tour) + Shakespeare and Company (pin) | **YES**: despite its title, the tour is a single stop on the shop and is about the shop |
+| Grace Farms — River Building (pin) + Grace Farms (place) | **YES**: all three pins are one place |
+| Eau Bar, The Oberoi (tour) + The Oberoi, Nariman Point (tour) | **NO**: a bar inside the hotel is a tenant |
+| @architectphilipp's feature pins on St Stephen's (6), Minorite (4), St Michael's (2), Servite (2) | **YES**: one place per church, with a creator's several features of one building gathered inside it |
+| Les Invalides & Napoleon's Tomb (tour) + Napoleon's Tomb, Les Invalides (pin) | **YES**: the tour's own title names the tomb |
+
+## 🔁 Kept separate FOR NOW: revisit (owner, 2026-11-11: *"N fine but don't forget them, maybe we'll return to them and reevaluate"*)
+
+These are **not settled NOs**. The owner kept them apart for now and wants to look again later. They are in
+`DECLINED_PAIRS` only so that no check or session merges them on its own (Sphere/Fernsehturm and Tapri/Ladu read
+as "EXACT · PROVEN" to `check-place-candidates.py`). **When the owner asks to revisit, this table is the list:**
+`grep -n 'FOR NOW' scripts/make-place-menu.py` finds every entry.
+
+| # | Pair | Why kept apart |
+|---|---|---|
+| N1 | Sphere by Tim Raue, Fernsehturm + Berliner Fernsehturm | tenant: a restaurant inside the TV tower |
+| N2 | ILHAM Gallery + Ilham Tower | tenant: a gallery inside the tower |
+| N3 | 圭K + Ilham Tower | tenant: a restaurant on level 37 |
+| N4 | Raffles Makkah Palace + Abraj Al Bait | tenant: a hotel within the complex |
+| N5 | Abdul Samad Al Qurashi | عبدالصمد القرشي + Abraj Al Bait | tenant: a shop within the complex |
+| N6 | Neon Museum | Muzeum Neonów + Palace of Culture and Science | Pałac Kultury i Nauki | tenant inside the Palace |
+| N6 | Neon Museum | Muzeum Neonów + The Palace of Culture and Science | tenant inside the Palace |
+| N7 | Kulturalna + Palace of Culture and Science | Pałac Kultury i Nauki | tenant inside the Palace |
+| N7 | Kulturalna + The Palace of Culture and Science | tenant inside the Palace |
+| N8 | Tapri Niwas + Ladu | neighbours: a tea house and a shop on one site |
+| N9 | Ninkasi + Aosa Café | neighbours on one junction |
+| N10 | JaJa, Planches & Vins + Clivia Nobili | neighbours: two shops |
+| N11 | Charlotte, Plac Zbawiciela + Plan B | neighbours on one square |
+| N12 | Hotel Bristol + Raffles Europejski Warsaw | two hotels facing each other |
+| N13 | Manari Taverna + The Clumsies | neighbours |
+| N14 | Ho Kow Hainam Kopitiam | 何九海南茶店 + Kwai Chai Hong | 鬼仔巷 | neighbours |
+| N15 | Edward Mooney House + Doyers Street and NYC's Gang Wars | a house and a nearby street |
+| N16 | Carnegie Deli + Tanner Smith's | neighbours |
+| N17 | Schweizerhof Fountain, Hofburg + Swiss Gate (Schweizertor), Hofburg | two Hofburg features |
+| N18 | Parliament Square + Houses of Parliament and Big Ben | a square is not the building |
+

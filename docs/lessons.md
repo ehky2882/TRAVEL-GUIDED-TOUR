@@ -73,6 +73,325 @@ right to: the walk begins at its place and then leaves it.
 non-empty `city` check (the field is `let city: String?` with no such rule), and a
 `Designed by a Master` shelf rule the validator has never had.
 
+### 🔴 Place membership is recorded in the PLACE, not the entry — check both directions (2026-09-21)
+
+Every coordinate move today asserted `entry.get("placeId") is None` before touching a pin, on the
+belief that this was the runbook's *"refuse an entry in a place"*. Eleven moves passed it.
+
+The twelfth did too — and broke the catalogue. `validate-tours-mirror.py` came back
+**`control DIRTY` / `SELFTEST FAILED — verdict not trustworthy`**, refusing to print a verdict at
+all, which is exactly the behaviour § 1 asks for and the only reason it was caught immediately.
+
+**Membership is stored on the PLACE, as `places[].tourIds`.** An entry can be a member with no
+`placeId` of its own, so the guard was looking down a one-way street:
+
+```python
+# WRONG — passes for a member whose place lists it
+assert entry.get("placeId") is None
+
+# RIGHT — ask the places too
+members = {i for p in catalog.get("places") or [] for i in (p.get("tourIds") or [])}
+assert entry["id"] not in members and entry.get("placeId") is None
+```
+
+🔴 **The eleven earlier moves were safe by luck, not by design.** None happened to be a place
+member. A guard that has never fired is not a guard that works — the only reason this one's failure
+was visible is that a *different* check refused to answer.
+
+⚠️ **And the case it caught is a real content question.** `Stortorget, Gamla Stan` (a pin about the
+**square**) shares the place `Gamla stan` with a multi-stop walk about the **whole old town**. Since
+a place is a coordinate, both sit on one point — and reverse-geocoding shows that point is *Inre
+borggården*, the Royal Palace's inner courtyard, 226 m from Stortorget. **A part bound to its whole
+costs the part its real location.** `docs/places.md` leaves part-vs-whole to the owner; this is what
+the cost looks like when it goes unanswered.
+
+### 🔴 Ask what is AT the point, not only where the name is (2026-09-21)
+
+Two name lookups of the same string are not two sources (see the pub lesson above). **Reverse
+geocoding is**, because it asks a different question: *what is at these coordinates?*
+
+It settled two cases nothing else could:
+
+- **Stortorget** — our point resolves to `Inre borggården`, the Royal Palace's inner courtyard. Not
+  "226 m from the square" but *a different named landmark entirely*.
+- **Edison's Menlo Park Laboratory** — our point resolves to the `Ford Model AA Fort Meyers Lab
+  stop`. Greenfield Village holds **both** of Edison's relocated laboratories, and the pin sat by the
+  **Fort Myers** one. A plain distance would have read as a 179 m offset; the reverse lookup named
+  the actual mistake.
+
+**Reach for it whenever a candidate is close enough that distance alone cannot decide.** A forward
+lookup can only tell you the name is somewhere else; a reverse lookup tells you what you are
+standing on, which is often the thing that names the error.
+
+### 🔴 UNMATCHED is not always a coverage gap — sometimes the title is not a name (2026-09-21)
+
+After the `@insightcities` sweep found three real errors, the same method was pointed at the three
+largest creators: `@pasttworld` (178 pins), `@urbanistariel` (326), `@hereinnyc` (262). Scoped to
+the **434 blind spots** — `UNMATCHED` plus verdict-suppressed rows, where a gazetteer-driven audit
+cannot see.
+
+**It found essentially nothing**, and the reason is worth more than a finding would have been.
+
+| | |
+|---|---|
+| asked | 434 |
+| OSM answered | **73** |
+| **no result at all** | **361 (83%)** |
+| disagreed >150 m | 20 — and on inspection nearly all are the gazetteer matching a *different entity* |
+
+Those 20 include `Chapel Bar` → a **shingle beach** 837 km away, `The New York State Pavilion` → a
+**laundry**, `Meteora` → a **restaurant**, `MahaNakhon` → a **BTS station**. The generic-name lesson
+above, at scale.
+
+🔴 **But look at what the 361 actually are:**
+
+> *The Million Dollar Corner* · *Breakfast at Tiffany's Townhouse* · *The Man Who Predicted the
+> Titanic* · *A Greek Goddess on Fifth Avenue* · *Restoring Park Avenue* · *Madison Square Garden
+> and the Knicks*
+
+**These are story titles, not place names.** No gazetteer will ever match them, and not because
+coverage is thin — because they are not the names of things. `docs/places.md` already draws this
+line for place pages (*"an editorial angle never is"*); it applies to the audit too.
+
+**So `UNMATCHED` means two very different things and the tool cannot tell them apart:**
+
+1. *a real place a gazetteer happens not to know* — a neighbourhood restaurant. Reachable by
+   another route: the caption's 📍 marker, the linked post, an address.
+2. *an editorial title that names no place at all* — unreachable by any name-based method, ever.
+
+For `@hereinnyc` and `@urbanistariel`, **64–67% of pins are `UNMATCHED` and most are category 2**.
+A name-based audit will never verify them, and running it repeatedly in the hope of coverage
+improving is wasted effort.
+
+⚠️ **The practical rule: measure the ceiling before grinding at it.** `@insightcities` was worth
+sweeping because its titles are institutions (*National Library of Latvia*, *Žižkov Television
+Tower*) — 17 of 61 matched and 3 were real errors. These three were not, and one 11-minute run
+said so more honestly than any amount of reasoning about it would have.
+
+### 🔴 A recorded verdict can be WRONG, and suppressing it makes that permanent (2026-09-21)
+
+`spine-match.py` learned to read `checks/spine-verdicts.json` and stop re-listing findings a human
+had already ruled on. Sensible: 166 settled findings were shouting on every run.
+
+Hours later, sweeping one creator's pins directly, three of their entries turned out to be
+**1,316 m, 966 m and 1,691 m wrong** — and **two of the three carried a verdict of
+`wikidata-elsewhere`**, meaning *"our point is right, the gazetteer matched something else."*
+
+They were not right. Three independent signals said so and agreed with each other:
+
+| | prior ruling | OSM name lookup | OSM geocode of its street address | Wikidata |
+|---|---|---|---|---|
+| **Žižkov Television Tower** | "ours is fine" | 1,316 m | 1,316 m (*Žižkovský vysílač*, Mahlerovy sady 1) | 1,296 m (28 sitelinks) |
+| **Hotel International** | "ours is fine" | 966 m | 966 m (Koulova 15) | 953 m (12 sitelinks) |
+
+**There is exactly one Žižkov TV Tower.** No collision is possible, so the earlier ruling was
+simply mistaken — and from the moment suppression shipped, *no future run would ever have
+mentioned it again.*
+
+🔴 **A verdict is a human judgement stored as data, and it inherits every way a human can be
+wrong.** Caching a judgement is not like caching a fact: a stale fact gets re-fetched, a wrong
+judgement gets re-applied forever. Suppression turns a one-off mistake into a permanent blind spot,
+and the entry looks *more* trustworthy than an unexamined one because someone signed it off.
+
+**So suppression must be inspectable.** `spine-match.py --show-ruled` lists every finding a verdict
+is hiding, worst first, with the ruling that hides it. Re-read it after any sweep that finds a
+verdict wrong, and treat a `wikidata-elsewhere` on a **distinctive** name with particular suspicion
+— that ruling is correct overwhelmingly often *because* most such names collide, which is exactly
+what makes the non-colliding ones slip through.
+
+⚠️ **Two smaller things fell out of building it, both worth keeping.**
+
+- `--show-ruled` crashed with `KeyError: 'verdict'` the first time it ran, because `classify()`'s
+  early-return branches (`NOT-ASKED`, `STALE`) omitted the key. **Every record a function emits
+  should carry every key**, banded or not; a selftest now asserts all rows share one key set.
+- The third entry, **Radium Palace Hotel**, had *no Wikidata candidate at all* — it sat in
+  `UNMATCHED`, which the tool's own footer calls unexamined. **Nothing would ever have found it.**
+  Sweeping a creator's pins directly reaches what a gazetteer-driven audit structurally cannot.
+
+### 🔴 Two sources agreeing is NOT corroboration when the name is generic (2026-09-21)
+
+Triaging 43 coordinate findings, the obvious method: look each subject up in OSM by name, and
+compare that independent answer against our point and against Wikidata's. Where OSM sits on
+Wikidata's point and far from ours, ours is wrong. Where it sits on ours, Wikidata matched
+something else. It had worked all week.
+
+It called **five of seven `@historicpubcrawls` London pubs OURS-WRONG**, by up to 8.7 km.
+
+**All five were correct.** Every caption carries a 📍 address, and geocoding the address the
+creator themselves wrote put our pin **0 m** away in four cases and 79 m in the fifth:
+
+| pub | the cross-check said | its own caption's address said |
+|---|---|---|
+| The Britannia | ours wrong by **8,673 m** | **0 m** — 1 Allen St, Kensington |
+| The Royal Oak | ours wrong by **3,615 m** | **0 m** — 44 Tabard St, Borough |
+| The Flying Horse | ours wrong by **3,201 m** | **0 m** — 52 Wilson St |
+| The Wellington | ours wrong by **1,037 m** | **0 m** — Waterloo Road |
+| The Grapes | ours wrong by 562 m | **562 m** — genuinely wrong |
+
+🔴 **The failure is specific and it is not "one source was bad".** *The Royal Oak*, *The
+Britannia*, *The Wellington* and *The Grapes* are among the commonest pub names in Britain. OSM's
+`limit=1` picked one; Wikidata had picked another; **they happened to pick the SAME one** — and
+agreed with each other to within 10 m, which reads exactly like strong corroboration. It is not.
+They agreed about a pub. They said nothing about *our* pub.
+
+**Independence is about the ENTITY, not the source.** Two databases resolving the same ambiguous
+string will land on the same popular referent for the same reason. Agreement only counts as
+corroboration once you know both are talking about the thing you mean.
+
+**What actually settled it** was the one signal that cannot collide: the creator's own words. A
+caption reading *"📍 44 Tabard St, London SE1 4JU"* identifies one building on earth. Rule 8d
+already says to search the venue's name — this extends it: **when the name is generic, the name is
+not enough; find something in the entry that is unique.**
+
+Practical test before trusting a name-based cross-check:
+
+- **Would this name match more than one thing in this city?** Pub, café, "Central Station",
+  "The Royal…", a saint's name, a chain — assume yes.
+- **Does the entry carry a unique identifier of its own?** A street address, a postcode, a venue
+  `@handle`. Use it, and prefer it over any gazetteer.
+- **Does the cross-check disagree with us by a city-scale distance?** For a subject that is
+  obviously *in* this city, a multi-kilometre "error" is far more likely a different entity than
+  a badly placed pin. Treat size as evidence of collision, not of severity.
+
+⚠️ The eight *distinctive*-named findings in the same batch (National Library of Latvia, Hotel
+Negresco, Drottningholm, Palika Kendra…) were deliberately **left for the owner**, not moved on the
+same heuristic that had just failed — and `Drottningholm` turned out to be `multiStop`, which the
+runbook refuses to move anyway.
+
+### 🔴 State the population and make it add up (2026-09-21)
+
+Checking whether any two `places` shared a name, the query read `centroidLatitude` where the
+key is `latitude`. Every row came back `None`, the loop skipped **all 408**, and the output
+read:
+
+```
+same name + same city among PLACES: 0
+```
+
+**A zero from a loop that never ran is indistinguishable from a zero that means "clean".** It
+was caught only because the keys happened to be printed beside it — luck, not method.
+
+The fix is one line, and it is the cheapest verification habit in this file:
+
+```python
+print(f"places: {len(places)} · usable: {placed} · skipped: {skipped}")
+assert placed + skipped == len(places), "population does not add up"
+```
+
+The broken version fails that assertion instantly. It is the same rule `check-image-duplicates.py`
+learned the hard way — **read the counts a checker prints, not only its verdict** — except
+applied to a throwaway one-off query, which is exactly where nobody bothers. 🔴 **A quick check
+written to answer one question deserves the guard, because it will be believed like any other
+output**, and this one was written *by the session that was busy cataloguing this very defect
+in four other places.*
+
+### 🔴 Half a cache-invalidation is worse than none (2026-09-21)
+
+`spine-lookup.py` keys every cached Wikidata answer by a digest of the entry's title,
+coordinate and search bound, and re-asks when any of them moves. `spine/README.md` said so.
+It was true — **of the fetcher**. `spine-match.py`, which is what CI runs and what a human
+reads, never looked at the digest and printed the cached distance regardless.
+
+So the audit reported **all nine coordinates corrected the previous night as still broken.**
+Belgrade Tower read *2,329 m out* while sitting on Wikidata's own point — a 0 m agreement.
+Fifty-nine rows were stale; refreshing them took **9 queries** and moved CONFIRMS 1,764 → 1,778.
+
+Two things to take from it, and the second is the one that matters.
+
+**The nuisance direction is the harmless one.** Being told a fix is unfixed wastes a session.
+But the same blindness runs the other way: **a coordinate moved to the WRONG place keeps
+reporting its OLD distance**, so the one check built to police such a move cannot see it, and
+CI stays green. The visible symptom was the benign half of a silent defect.
+
+**A stale number is a confident wrong answer, not a weak one.** The fix is not to flag such a
+row and print its distance anyway — it is to print **no distance at all**. `spine-match.py`
+bands them `STALE`, leaves them out of the coverage denominator (coverage is the claim
+"Wikidata knows this subject", which a row cached against an entry we no longer hold does not
+support), and exits **2 — COULD NOT VERIFY**, the same treatment `NOT-ASKED` already had.
+
+Three general rules:
+
+- **An invalidation rule belongs to every reader of the cache, not to the writer.** If only the
+  fetcher checks the digest, the cache is unversioned from the point of view of everyone else.
+- **Documentation describing an invariant is not evidence the invariant holds.** The README's
+  promise is exactly what stopped anyone looking; it described one half of the system and read
+  as describing all of it.
+- **The tell was arithmetic, not intuition.** Our point equalled Wikidata's to five decimals
+  and the tool said 2,329 m. When a check's output contradicts a number you can compute by
+  hand, the check is the thing to doubt.
+
+**The rule generalises, and the second instance was one layer up.** `checks/spine-verdicts.json`
+holds 137 rulings on individual findings — *this one is Wikidata's error, ours is right*. Each was
+a judgement about **one coordinate**, and the records stored none. Reading them back to quiet a
+settled finding would have meant carrying a verdict across a move nobody had judged: a finding
+suppressed on a point no human ever saw, which is **silence indistinguishable from agreement** on
+the one defect nothing else catches. So every verdict is now stamped with the coordinate it was
+reached against and **stops applying the moment that coordinate moves** — and an unstamped record
+is not trusted at all, because "unstamped" and "unmoved" would otherwise read the same. With that
+in place the findings list fell from **85 to 41 genuinely unexamined**.
+
+Two structural notes worth keeping:
+
+- **The verdict rides alongside the band, never replacing it.** A ruled entry that later stops
+  confirming — a fix reverted by a bad merge — must still read as a finding, and it would not if
+  the ruling overwrote the classification.
+- **The stamp was provable, not assumed.** Diffing the catalogue at the verdict file's first
+  commit against `HEAD` showed exactly eleven of the 137 entries had moved: the nine whose *fix
+  was the verdict*, plus two that did not exist yet. So stamping today's coordinate was correct
+  for all 137 — and one `fixed` note's hand-typed coordinate turned out to be **~60 m from what
+  was actually applied**, which is the argument for storing the fact as data rather than prose.
+
+**A third instance, found by looking for the SHAPE rather than for a bug.** Having fixed two,
+the obvious question was which other committed cache has a reader that does not version it. The
+answer was the vision sweep: `check-pin-subject.py` digests an entry's title **and hero image**
+and re-asks on a mismatch — the fetcher, again — while nothing reading the cache back checks it.
+**51 of 4,930 entries were retitled or re-imaged after their verdict, and 69 had never been asked
+at all.** The single stale `CONTRADICTS` was **Old Spitalfields Market, whose hero was replaced
+precisely because that check flagged it** — so the finding outlived its own fix, and read exactly
+like a live one. A `--status` mode now reports both, offline and without the API key, because
+coverage is answerable without one and refusing to answer it for want of a key is the same false
+silence.
+
+### Wikidata has three front doors and they fail independently (2026-09-21)
+
+Mid-session WDQS returned `429 Aggressively rate-limiting to 1 req / min - this rule was created
+during active wdqs outage`, and the action API (`w/api.php?action=wbgetentities`) 429'd as well.
+The **REST endpoint answered 200 throughout**:
+
+```
+https://www.wikidata.org/w/rest.php/wikibase/v1/entities/items/<QID>/labels/en
+https://www.wikidata.org/wiki/Special:EntityData/<QID>.json
+```
+
+It is one item per request rather than fifty, so it is a fallback and not a replacement — but it
+is the difference between "Wikidata is down" and "the batch route is down". Same rule as the 42
+Tokyo addresses and the Overpass mirror: **a blocked route is not an absent fact.** ⚠️ It is not a
+free pass either: it resolved only 21 of 55 labels before throttling in turn, so say what you
+could not get rather than reporting the partial set as the whole.
+
+🔴 **And a partial sample can say the OPPOSITE of the whole, confidently.** On those 21 of 55
+labels the types looked scattered and point-like, so the conclusion recorded — in a merged PR body
+and a handoff — was *"the extended-types hypothesis does not hold."* An hour later Wikidata
+recovered, all 55 resolved, and **roughly 23 of the 41 turned out to be extended sites or the
+wrong entity altogether.** The sample size *was* stated, which is necessary and was not sufficient:
+**a stated limitation does not make a wrong conclusion right.** With a third of the evidence the
+honest output is *no* conclusion, not a negative one.
+
+⚠️ This is also why the `refresh-spine` CI job is `continue-on-error`. A third party's outage must
+degrade a reporting artefact, never block a content merge.
+
+🔴 **Go looking for the shape.** Two instances of one defect are not a coincidence, they are a
+pattern, and the third was found in a few minutes by grepping for which scripts read a committed
+cache. Fixing the bug you tripped over and stopping there leaves the others.
+
+⚠️ **A guard that reds a check must ship with the thing that clears it.** Exiting 2 on a stale
+cache would have turned the coordinate audit permanently red on the next content merge —
+`spine/README.md`'s own warning that *a red check nobody can fix reads as coverage and gets
+ignored*. The `refresh-spine` job in `publish-catalog.yml` re-asks on every content merge, and
+is deliberately `continue-on-error`: it is a reporting artefact, WDQS is a third party, and a
+failed refresh degrades into precisely what the guard says — STALE, with the command named.
+**The guard is what makes the automation safe to let fail.**
+
 ---
 
 ## 2. Live systems vs. documents
@@ -299,6 +618,15 @@ one file" shape `check-image-duplicates.py` exists to catch.
 
 ---
 
+### 🔴 Durations are WHOLE seconds — one fraction loses the catalogue on old builds (2026-11-11)
+
+Every build already on phones decodes `audioDurationSeconds` and `totalDurationSeconds` as `Int`. A
+single `812.1` anywhere in `Tours.json` makes that decode throw, and the build drops the **entire**
+catalogue, not one tour. The Washington DC assembler copied Philadelphia's line, but its audio manifest
+held fractional seconds, so 101 values shipped as floats. `validate-tours-mirror.py` passed it, and only
+`LegacyCatalogCompatibilityTests` in the simulator job caught it. **An assembler rounds with
+`int(round(seconds))` when it reads the manifest, never at the sum.**
+
 ## 4. Geocoding
 
 **A supplied coordinate is not a verified coordinate.** Reverse-verify every one at **zoom 18**.
@@ -430,6 +758,16 @@ sat. A different branch of the same bar, and the pin was left alone.
 2026-09-15 pass, Kiwamiya and Saryo Tsujiri still share a point and are **correct**: both are
 inside 丸の内1-9-1, the Daimaru Tokyo / Gransta building. Check the addresses before "fixing" it.
 
+### 🔴 A street name geocodes to ONE of its segments, and it may be the wrong one (2026-09-29)
+
+Miami's Española Way was staged 457 m from where its script stands. The script is on the
+pedestrian lane off Washington Avenue; the point was on a residential stretch of the same street
+four blocks west. `check-coordinates.py` passed it, because its geocoder returned that same wrong
+segment: the check compared a point with itself. CI's **Spine coordinate audit** caught it (420 m
+from the Wikidata item). **For a street, a mall or any linear subject, match the point to the
+stretch the script describes** (OSM `highway=pedestrian` and the like), and read every Spine
+DISAGREES line on a city launch rather than filing it under "large site".
+
 ## 5. Images
 
 🔴 **Correcting an image means a NEW filename — never overwrite bytes at a live URL.** A phone
@@ -482,6 +820,31 @@ hand-building a `/thumb/` path (a constructed one returns 400).
 
 **rawpixel serves `editor_1024` whatever Openverse advertises.** Two images advertised at
 7000×5249 delivered 1024×768. Download and measure.
+
+### 🔴 A Commons category listing has NO licence filter (2026-09-29)
+
+The Miami batch was reported as "all PD/CC0 Commons, no attribution owed". The owner picked
+77 images on that basis, and 74 were uploaded. **At least 61 were CC BY or CC BY-SA.** The
+`license=cc0,pdm` filter exists on Openverse; a Commons `Category:` listing or MediaWiki
+search applies none. The pool had been drawn from both. The manifest recorded
+`num, slug, code, name, src, orig, sha` and **no licence**, so no later step could catch
+it. It surfaced only when a later session opened one file's Flickr source page.
+
+**Record the licence per candidate at sourcing time** (Commons `extmetadata.LicenseShortName`,
+or Openverse's `license`), carry it on the contact sheet, and refuse to call a batch
+"no attribution owed" unless every pick's recorded licence is `cc0`/`pdm`. To check a
+batch after the fact while Commons is throttled, match each exact Commons filename
+against Openverse (`?q=<title>&source=wikimedia`, with a real User-Agent — the default
+Python one is 403'd). Commons filenames are unique, so an exact title match is the same file.
+
+### A pasted image that never became a file is still in the transcript (2026-09-29)
+
+In web sessions an image the owner pastes into chat can render for Claude and still never
+appear on disk. Two sessions in a row hit this, and the first asked the owner to resend
+repeatedly. The image **is** saved in the session transcript,
+`~/.claude/projects/<project>/<session>.jsonl`, as a content block with `type: image` and
+base64 `source.data`. Decode it with a few lines of Python, then hash the written file as
+usual. **Do this before asking the owner to resend anything.**
 
 ### A creator's cover frame is not a picture of the venue (2026-09-16)
 
@@ -545,11 +908,16 @@ missing from the primary source and is wrong.
 decodes a missing key as nil and the feature just stops existing — no crash, no log, no failed CI.
 Asking the live RPC what keys it returns is the only detection.
 
-🔴 **Deleting from `Tours.json` does NOT remove it from Postgres.** `seed_from_toursjson.py` is
-**upsert-only by design**, so a deletion reaches the gh-pages mirror and the bundled seed and
-never reaches the database the app reads first. A removal is a two-part change: the catalogue
-edit **plus SQL the owner runs**. `backend/pull_nycunfilteredstories.sql` sat committed and
-unpasted for **eight days** while four "removed" pins kept being served.
+🔴 **Deleting from `Tours.json` reaches Postgres ONLY while the entry's maker stays in the
+catalogue.** `seed_from_toursjson.py` was upsert-only until it gained a prune step, and that prune
+deletes a missing tour or pin **only when its `maker_id` is still a catalogue maker** (the guard
+that keeps in-app uploads safe). So to remove a pin, delete the pin and **keep its maker row**,
+even if the maker now has no entries. The next content merge's seed then deletes it from the
+database with no owner paste (2026-10-02: the Instagram @oneyearinparis Chinese Scholar's Garden
+duplicate). ⚠️ **Delete the maker row as well and the prune can no longer see the pin**, and you
+are back to the old two-part change: the catalogue edit **plus SQL the owner runs**. That is how
+`backend/pull_nycunfilteredstories.sql` sat committed and unpasted for **eight days** while four
+"removed" pins kept being served.
 
 **And the inverse: adding a key to `Tours.json` does not put it in front of users.** Supabase is
 primary. Build 68 shipped the place layer and showed the old behaviour because `places.sql` had
@@ -2248,3 +2616,1106 @@ fresh — and the thing being looked for was simply never printed.
 
 **The habit:** before concluding "none of mine are in here", check that the file could have
 contained them. `grep -c WARN file` against the header's own total answers it in one command.
+
+✅ **FIXED AT SOURCE on 2026-09-21 — the habit above is now a backstop, not a necessity.**
+`validate-tours-mirror.py` announces what it withheld (`… and 483 more warn(s) not shown —
+re-run with --limit 0`), takes `--limit N` / `--limit 0`, and prints a shape tally
+(`by kind: 331x no Theme tag · 192x no Place type tag`). 🔴 **The ERROR path was truncated
+the same way and was the more dangerous of the two** — 500 errors would have printed 40 and
+read as forty problems — and `validate-tours.swift` prints *every* finding, so the mirror had
+silently diverged from the thing it stands in for, in the direction of saying less.
+
+🔴 **The wider lesson is that this entry existed for a day and prescribed a workaround
+instead of a fix.** A trap written down is still a trap. When a lesson's remedy is "remember
+to check X by hand", ask whether the tool can be made to say X by itself — here it was
+four lines. 12 selftests and 9/9 mutants guard it, two of which exist only because mutation
+testing showed the guards could not fail: `summarise()` *returns* the hidden count while
+`report()` *prints* it, and **the printing was the entire bug**; and the tally assertion was
+vacuous, because `out.split("by kind:")[-1]` returns the whole output when the marker is
+absent.
+
+## A check keyed on a non-unique field silently tests half its subject (2026-09-20)
+
+Four places were created from pairs of entries. The guard that was supposed to
+refuse a member being dragged too far built `{title[:30]: distance}` — but both
+members of each pair carry the **same title**, which is why they are a place at
+all. The dict collapsed to one key per pair, the assertion tested one entry
+instead of two, and it printed `moves 0.0 m` for every pair: the pin's distance,
+never the tour's.
+
+The result happened to be sound. That was established afterwards by a different
+method — diffing every entry's coordinate against `origin/main`, which reported
+4 moved, max 62.9 m, all tours, no pin touched. **That is the number the guard
+should have produced and did not.**
+
+🔴 **Keying a check by a field that is not unique reduces its sample without
+saying so.** It is the same shape as the truncated-output trap above: a check
+that cannot see its whole subject returns a pass for the part it saw. Both read
+exactly like success.
+
+**The habit:** key a per-entry check by `id`, never by a display field — and when
+a check reports N results, assert N is the number you expected to test.
+
+## The release lane BUILDS — it cannot submit a build you already tested (2026-09-20)
+
+1.1.3 was ready to submit with nothing left to write: build **176** was uploaded, `VALID`,
+tested on the owner's device and approved — *"looks good! merge it"* — and
+`git diff a0671e39 HEAD` over `*.swift`, `*.pbxproj`, `Info.plist` and `Assets.xcassets`
+was **empty**, so the code on `main` was that binary.
+
+The documented way to ship is Actions → **App Store release** → type `RELEASE`
+(`docs/launch-runbook.md` Step 15, and Step U6 for an update, which says *"same as Step 15"*).
+
+🔴 **That workflow runs `bundle exec fastlane release`, and the lane's first real action is
+`build_ipa`.** It compiles a *fresh* binary from the checkout and submits that. Pressing the
+button named "App Store release" on a release whose build is already approved therefore
+**throws away the tested artifact and submits an untested one with the same source** — same
+code, different binary, never run on a device, with a new build number the owner has never
+seen. Nothing in the workflow name, its description or the runbook says so.
+
+⚠️ **And the same lane pushes metadata.** `upload_to_app_store` runs with `force: true` and
+skips **screenshots only, not metadata**, so `fastlane/metadata/` goes to Apple with no
+confirmation prompt. On the same day, `release_notes.txt` still held **1.1.2's text verbatim**
+(fixed hours earlier in #1028) — the lane would have shipped an update whose What's New
+described the *previous* update.
+
+**When the build already exists, submit it through the App Store Connect REST API instead.**
+Six calls, each verifiable before the next, with the key at `~/Downloads/AuthKey_*.p8`:
+
+```
+POST /v1/appStoreVersions                       versionString, platform IOS, releaseType MANUAL
+PATCH /v1/appStoreVersionLocalizations/{en-US}  whatsNew
+PATCH /v1/appStoreVersions/{id}/relationships/build   → the build you tested
+POST /v1/appStoreVersionPhasedReleases          phasedReleaseState INACTIVE
+POST /v1/reviewSubmissions  +  /v1/reviewSubmissionItems
+PATCH /v1/reviewSubmissions/{id}                submitted: true
+```
+
+✅ **Creating the version this way copies the previous version's localization AND its
+media**, exactly as the UI's *"+ Version"* button does — all ten screenshots appeared on
+1.1.3 with an **identical `sourceFileChecksum` to 1.1.2**, which is the check worth making
+rather than trusting the copy. That matters because `fastlane/screenshots` is empty and
+gitignored on purpose: any lane that "uploads screenshots" replaces the live set with
+nothing. They only ever go via `.github/workflows/upload-screenshots.yml`.
+
+⚠️ Pulling the current screenshots down first as insurance needs **`curl`, not `urllib`** —
+`urllib` fails certificate verification on this Mac. Substitute `{w}`/`{h}`/`{f}` in each
+`imageAsset.templateUrl`, and read the tab-separated filename properly: *"App Store
+Preview-01.png"* contains spaces, so a bare `read fn w h url` splits it and curl answers
+`(3) URL rejected`.
+
+🔴 **The general shape: a workflow named after the OUTCOME can be named after a path to it
+that no longer applies.** "App Store release" is the right name for the case where the build
+does not exist yet, and the wrong tool for every release after a TestFlight cycle the owner
+has already signed off. Read what the lane does, not what it is called.
+
+## Overpass is reachable through a MIRROR (2026-09-21)
+
+`CLAUDE.md` rule 8d records Overpass as "blocked by the web egress proxy", and
+`overpass-api.de` does indeed fail here — `curl: (35) Recv failure: Connection
+reset by peer`, every time.
+
+🔴 **`https://overpass.kumi.systems/api/interpreter` works.** That is a real
+extra source for the one question no gazetteer always answers: *where is this
+building, by name?* It settled Belgrade Tower, where Wikidata stated no address
+and Wikipedia carried no coordinate in either English or Serbian.
+
+Two things to know before relying on it:
+
+- **A named node is not necessarily the thing.** Searching `Кула Београд`
+  returned three elements: **two bus stops named after the tower**, and one
+  `way` tagged `building=apartments` which is the tower itself. Read the tags,
+  not the name. Taking the first node would have moved the pin onto a bus stop.
+- **It times out on an unindexed query.** A regex over a bounding box, or an
+  `area[...]` lookup, returns **504** on anything but a small city. The Belgrade
+  query only succeeded because the area was small; the same shape 504'd
+  repeatedly for Balneário Camboriú. Prefer an exact `["name"="…"]` match, keep
+  the bbox tight, and expect to be rate-limited after a few calls.
+
+- **Query the name LOOSELY.** `["name"="Yachthouse Residence Club"]` returned
+  nothing; OSM calls it **"Yachthouse Residence"**, without the "Club" our title
+  carries. A regex on `Yacht` found it immediately. An exact-name miss is not
+  evidence the building is absent — it is evidence the two names differ.
+
+**A blocked host is not an absent fact** — the same lesson as the 42 Tokyo
+addresses. Try a mirror before saying a source is unavailable.
+
+### ⚠️ Backticks inside a double-quoted shell string are COMMAND SUBSTITUTION
+
+Writing this very lesson, a `python3 -c "…"` one-liner containing
+`` `overpass.kumi.systems` `` in its text silently lost the hostname: bash ran
+it as a command, printed `command not found` to stderr, and substituted the
+empty string. The edit reported success and the committed index row read
+*"reachable through \*\*"*.
+
+**Use a heredoc (`python3 - <<'PYEOF'`) for any text containing backticks** —
+the quoted delimiter stops bash touching the body at all. And when a command
+prints something odd to stderr but still exits 0, read what it actually wrote
+rather than trusting the exit code.
+
+## The wrong WORD, matched confidently (2026-09-21)
+
+`"Great Court, British Museum"` sat **58 km from London**, in a business park.
+Reverse-geocoding our own point named the error outright:
+
+> *Horizon Boulevard, Horizon 120, **Great Notley**, Braintree, Essex*
+
+***GREAT** Court* → ***GREAT** Notley*. Some geocoder, at some point, matched one
+word of the title and returned a confident answer in the wrong county.
+
+🔴 **Neither gazetteer check could ever have found it.** `spine-match.py` asks
+Wikidata where a name is — and had no record, so the entry was `UNMATCHED` and
+contributed nothing but a silence. `check-same-name.py` needs a second entry of
+the same name, and there is none. **Both were working correctly and both had
+nothing to say.**
+
+What found it was the catalogue asking itself: *this claims to be in London, and
+it is 58 km from every other London entry.* No external source involved.
+
+**The general shape: a lookup can only speak about what the source knows, and its
+blind spot is not random.** 2,901 entries are unknown to Wikidata, and 83% of a
+sampled sweep had no OSM result either — because many of those titles are not
+names at all. `@hereinnyc` and `@urbanistariel` title pins *The Million Dollar
+Corner*, *Breakfast at Tiffany's Townhouse*, *A Greek Goddess on Fifth Avenue*.
+**Adding sources will never reach them.** When a check's coverage stalls, ask
+what question could be answered *without* the source, rather than looking for a
+better source.
+
+### And three things that make such a check honest rather than noisy
+
+- **MEDIAN, never mean.** A mean centre is dragged toward the very entry being
+  hunted — and with *two* bad entries in the same place, it hides both. That is
+  the silent failure: not a wrong number, **no number**.
+- **An entry must not vote on its own centre.**
+- **Scale to the city's own spread.** A flat threshold flags a sprawling city
+  wholesale. Of 76 flagged, most are genuinely far-out sights: Cape Point is
+  48 km from Cape Town and correct. **The output is a question, never a verdict.**
+
+## A guard that withholds an answer is not automatically the defect (2026-09-21)
+
+After a week of finding checks that silently suppressed real findings, the
+instinct was that any guard declining to answer is a bug. `check-city-outliers.py`
+holds out a city whose *other* entries sit on one exact point — no spread, no
+scale, no opinion. Is that the same defect?
+
+**It was measured instead of argued.** Catalogue-wide it withholds **exactly two
+rows of 4,174**, and both are noise: Denver holds five entries, **three of them
+the same building**, so its median spread is 0 and two ordinary motels 3.3 and
+5.8 km from that building would read as outliers.
+
+Two minutes of arithmetic separates *"this guard is hiding real errors"* from
+*"this guard is the only thing keeping two motels out of the report"* — and
+nothing about the guard's shape distinguishes them. **Measure the rows a guard
+removes before deciding what it is.**
+
+## Two copies of one rule are two EQUIVALENT mutants, not two guards (2026-09-21)
+
+A mutation run reported 16/17 with one `MISSED`, and the miss was correct: the
+`min_others` rule is written twice — `len(members) <= min_others` outside the
+loop and `len(others) < min_others` inside it — and since `others` is `members`
+minus one, **they are the same predicate**. Breaking either copy alone changes
+nothing, because the other still skips the city.
+
+The temptation is to delete one copy, or to call the miss a selftest gap and
+write a test that cannot exist. The honest move is a third category: **assert the
+equivalence rather than trust it.** The harness now runs both single-copy mutants
+and requires them to stay *green*, so a later edit that makes the two predicates
+differ is caught as loudly as a missed mutant would be. Removing **both** is the
+real mutant, and is tested as one.
+
+## We cut the caption at 140 characters, and creators put the address last (2026-09-21)
+
+**"Modern Coffee House", New York, was 22.9 km out — on Staten Island.** What
+settled it was the creator's own caption, which ends:
+
+> 📍 105 E BROADWAY, NY, NY 10002
+
+Geocoding that returns **three** results, and the **third is our exact stored
+point**: a semidetached house at *105 East Broadway, **Staten Island**, 10306*.
+**Staten Island has an East Broadway too**, and the only thing separating the two
+is the postcode.
+
+🔴 **The postcode was in our own data and we had thrown it away.** Our stored
+copy of that caption stops mid-word at 140 characters, immediately before the 📍.
+`scripts/make-link-pin.py:621` is `caption[:140]`.
+
+Measured across the catalogue: **2,375 of 5,463 captions are exactly 140
+characters, and 2,320 of those end mid-sentence.** Only 535 carry a 📍 — which is
+a **floor, not a count**, because the cut lands precisely where the address is.
+
+**A truncation is not neutral about what it removes.** Cutting the *tail* of a
+caption sounds like dropping hashtags; in this corpus it is dropping the address,
+because that is the convention creators follow. Before truncating any field, ask
+what convention governs its *end* — that is what a fixed-length cut actually
+deletes.
+
+⚠️ And the fix is **not** a quiet tooling change: the caption is what a user
+reads on the pin, so altering it is the owner's decision, not a checker's.
+
+## The address-only geocode that would have moved a CORRECT pin (2026-09-21)
+
+Having used the creator's own 📍 address to settle *The Grapes* and *Modern
+Coffee House*, the obvious next move was to run it across every caption that
+carries one. Thirteen survive the 140-character cut with a real street number.
+**Nine agreed to within 38 m. Four did not — and not one was a catalogue error.**
+
+| flagged | what it actually was |
+|---|---|
+| House of the Redeemer, 20 km | my extractor took `95th Street` — the **house number was in the truncated tail** |
+| Mexican Seafood, 16 km | `107 St`, no number; the title itself says 107th St |
+| Barker Road Station, 665 m | `1919 Barker Road` — **1919 is a year**: *"Built in 1919 Barker Road Station sits…"* |
+| **Cube House, Toronto, 1,421 m** | 🔴 **the method itself was wrong** |
+
+Cube House is the one worth keeping. Its caption is unambiguous — `Cube House.
+📍 1 Sumach St` — and geocoding that address put it **1,421 m from our pin**.
+But searching the **name** returns an OSM node, `Cube House, 1, Sumach Street,
+Toronto`, at **exactly our stored coordinate**. The pin was right. Acting on the
+address alone would have moved a correct pin 1.4 km.
+
+**An address string and a named venue are not the same query**, even when the
+address is the venue's own. *Modern Coffee House* looked like a counter-example
+and is not: what settled it was the **named `cafe` node** at that address, with
+the address geocode only confirming which of two East Broadways was meant.
+
+🔴 So the rule already in this file — *search the venue's NAME* — is not a
+fallback for when an address is unavailable. **It outranks the address.** Use the
+address to disambiguate between candidates of the same name; use the name to find
+the thing.
+
+⚠️ **And this is why the sweep was not turned into a check.** Thirteen rows, nine
+trivially right, four false positives: the population is too small and too noisy
+to automate — *because the truncation destroyed it*. The check becomes worth
+building only if the caption decision goes the other way.
+
+### The counter-case, in the same afternoon: when the address IS the answer
+
+*Ginza Kojyu* was 258 m out, and the address settled it — but only because the
+order was right:
+
+1. **Search the NAME.** Nominatim returns **nothing at all** for `Ginza Kojyu`;
+   the restaurant's own listings give `4F Carioca Bldg, 5-4-8 Ginza, Chuo-ku`.
+2. **Geocode that with the authoritative service.** Rule 8d already says
+   Nominatim cannot geocode a Japanese address. **GSI** resolves 東京都中央区銀座
+   五丁目４番８号 to `35.671429, 139.763138`.
+3. **Check it against an independent source.** That is **33 m** from Wikidata's
+   point and **258 m** from ours.
+
+⚠️ **Reverse geocoding settled nothing here** — both points return 銀座五丁目, the
+same chōme. By rule 8d's *verify by ward, not by distance*, this was **not
+actionable at all** until the street address existed. The tool that beat
+everything last week was the wrong tool this time.
+
+### And when two sources agreeing IS corroboration
+
+*Chiesa di Nostra Signora del Cadore* was 675 m out. OSM holds a way named
+exactly `Nostra Signora del Cadore`, `building=church`, **34 m from Wikidata's
+independent point**.
+
+This looks like the London pubs — two lookups of one string, agreeing — and is
+the opposite, for one reason: **the name is unique to one building.** Five pubs
+called *The Royal Oak* let OSM and Wikidata resolve to the *same namesake* and
+agree at 10 m while both being wrong. There is no second Nostra Signora del
+Cadore to land on.
+
+🔴 **Independence is a property of the NAME, not of the number of sources.** Ask
+whether the two could have made the same mistake before treating their agreement
+as evidence.
+
+## Refusing a move can be right, and the owner is a SOURCE (2026-09-21)
+
+*Sun Tower* (Yantai) was flagged **23.5 km** from its only Wikidata candidate,
+and a session **refused to move it** and escalated instead: the candidate had no
+description in any language but German, no Chinese label and one sitelink — too
+thin to relocate a pin 23 km. That refusal was correct, and it was also not the
+end of the work; it was a **question put to the person who could answer it**.
+
+The owner supplied the address: `煙台市福山區海濱路揚帆廣場`. That is evidence
+**independent of Wikidata**, and it settles the pin **by district, not by
+distance**, exactly as rule 8d prescribes:
+
+| | reverse-geocodes to |
+|---|---|
+| our pin | 滨海路街道, **莱山区** — the **wrong district** |
+| Wikidata's | **海滨路**, 福莱山街道, 烟台经济技术开发区, **福山区** |
+
+Note what that comparison does: it proves the pin is **wrong** without yet
+proving where it belongs. Those are separate questions, and mixing them is how a
+thin candidate talks you into a 23 km move.
+
+⚠️ **The likely cause is a near-homonym: 滨海路 (Binhai Rd, Laishan) and 海滨路
+(Haibin Rd, Fushan) are the same two characters reversed.** The Great Notley
+error the same day was the same shape in English — *GREAT Court* → *GREAT
+Notley*. **A geocoder's wrong answer tends to look like the right one.**
+
+🔴 **And state the residual uncertainty rather than rounding it away.** OSM names
+the building at that point 时光塔, not 太阳塔, and carries no wikidata tag. The
+identification rests on four separate things — Wikidata placing *Sun Tower*
+within 1 m of it, the building type matching a cultural observatory, the owner's
+address matching district **and** street, and OSM holding **no** building named
+太阳塔 anywhere in Shandong. Four weak agreements that could not have copied each
+other beat one strong source, and the verdict file says so in full, so the next
+session can overturn it if a better source appears.
+
+## A correct decision and a recoverable one are different things (2026-09-21)
+
+PR #1032 triaged 62 links and dropped four as duplicates, recording them by
+landmark only: *Calgary Central Library, Guangzhou Circle, Huajiang Grand Canyon
+Bridge, Three Gorges Dam*. The owner read that note later and asked the obvious
+question — *"i dont have a duplicate at calgary central library unless you say
+the tour by taylinmaylin is the same thing?"*
+
+Two failures, and the second is the expensive one.
+
+**The reasoning was wrong.** The note said the four duplicated "earlier posts by
+the same creator". They do not: the existing pins are by **@taylinmaylin** and
+**@pasttworld**, and the dropped ones were **@welldonestuff**. Same creator twice
+on one subject is a duplicate; **a different creator is a second take**, and the
+owner had already ruled that way twice — on #1040 they overrode the same default
+for Fraunces Tavern, Ye Olde Cheshire Cheese and the Stonewall Inn. All four
+should have been kept.
+
+🔴 **And the decision could not be undone, because the links were never written
+down.** The branch was deleted on merge, the PR body named the landmarks and no
+URLs, nothing in the tree recorded them, and Instagram offers no per-post search
+across a 1,241-post profile. The subject was recoverable; **the only
+irreplaceable thing was the URL, and that is exactly what was dropped.**
+
+**So: record what you DISCARD, not only what you keep.** A skip is a decision,
+decisions get revisited, and a revisit needs the input. The rule is now in
+`docs/link-pin-runbook.md` — an owner item for a dropped post lists the source
+URL, the subject, **who the existing entry is by**, and the reason.
+
+⚠️ Note the shape it shares with the day's other findings: the caption
+truncation destroyed addresses, this destroyed URLs. **Both threw away the one
+field that could settle a later question, while keeping the parts that read
+well.**
+
+## I estimated +12% egress. It was +0.8%. (2026-09-21)
+
+Recovering 2,351 truncated captions added **897,983 characters** to the
+catalogue. Before running it I warned the owner it would cost roughly **+12%**
+on a payload that has already drawn two overage notices, and flagged that as a
+reason to think twice.
+
+Measured after the fact, at gzip level 1, which is what PostgREST uses:
+
+| | before | after | |
+|---|---|---|---|
+| raw | 15,667,186 | 16,602,669 | **+6.0%** |
+| **gzip-1** | **4,431,645** | **4,467,188** | **+0.8%** |
+
+**A 15× overestimate**, and captions are only **2.7% of the compressed payload**
+in total.
+
+🔴 **This file already warned me.** § Egress in `CLAUDE.md` says in bold that
+egress is billed on compressed bytes, that raw size *"overstates text fields
+badly"*, and that **two separate cuts were nearly decided on the raw figure**.
+I read that, quoted the compressed-vs-raw rule back in my own commit messages
+that same day, and still produced my own estimate by reasoning about character
+counts.
+
+**Why captions in particular compress so hard:** they are the most repetitive
+text in the catalogue. Hashtags recur across thousands of posts, emoji repeat,
+and the phrasing is formulaic — *"📍"*, *"best … in"*, *"you have to try"*.
+Compression eats exactly that. The fields that resist compression are the ones
+that are genuinely varied, which is why `longDescription` is 43.9% compressed
+while being 29.4% raw — it goes the *other* way.
+
+**The habit:** an estimate of payload cost is worth nothing before it is
+compressed, and the arithmetic is cheap — one `gzip.compress(payload, 1)` on a
+copy with the field removed. **Do not warn someone off a change on an
+uncompressed guess.** Had the owner weighed my 12% more heavily, a recovery
+that cost 35 KB would have been declined on a number that was never measured.
+
+## The check found no wrong pins, and was still worth building (2026-09-22)
+
+`check-caption-address.py` asks one question of the creator's own sign-off:
+*the caption names a city we know — is it this entry's city?* Of **914**
+location-marker captions, 551 name a known city and **15 disagree**.
+
+**Not one of the 15 is a wrong pin.** They are adjacent towns (Caserta/Naples,
+East Hampton/Montauk), Hong Kong's *Austin* Road and *Aberdeen* district,
+Toronto's *Queens* Quay, and captions referencing a painting or a pizza's
+birthplace.
+
+🔴 **What it did find was a different defect entirely: `St Louis` and
+`St. Louis` were the same city stored twice**, one entry each, 2.6 km apart.
+The catalogue had already been through this — `Sao Paulo`/`São Paulo` and
+`Zurich`/`Zürich` were merged after the same discovery — and the accent-folding
+written then does not catch a **punctuation** variant. Merged to `St. Louis`.
+
+**Two things worth keeping:**
+
+**A check earns its place by the class of question it can ask, not by its first
+harvest.** This one runs on every PR now and costs nothing. The day a batch
+lands a pin in the wrong city, it says so — and that is the error nothing else
+here detects, because a coordinate in the wrong country still validates,
+geocodes and renders.
+
+**Three tunings took it from 28 findings to 15, and each one was a guard, not a
+threshold.** A neighbourhood is an agreement at a finer grain, so the named city
+must be **far** from this one (Williamsburg inside Brooklyn is not a
+disagreement). A city word inside the entry's **own title** is part of a venue's
+name, not a location claim — *Venice Leather*, *Bistrot Lyon*, *The Ice Bath
+Club*, *Shanghai Street*, the largest single class. And the location must come
+from the text after the **last** 📍, not from prose that happens to mention a
+city.
+
+⚠️ **The gazetteer is the catalogue's own list of cities**, like
+`check-city-outliers.py`. That means no external source and no network — and it
+means a caption naming a city the catalogue has never heard of is invisible by
+construction. That cost is stated in a selftest rather than left to be
+discovered.
+
+## The creator's caption can be wrong too (2026-09-22)
+
+A whole day of work rested on one premise: **the creator's own stated location is
+the strongest coordinate evidence this project gets.** It settled The Grapes,
+it settled *Modern Coffee House*, it settled *Sun Tower*, and recovering 2,351
+truncated captions was justified almost entirely by it.
+
+Here is the counter-case, found on the second pass over the city-outlier flags.
+
+**Rock Pools at Tai Long, Sai Kung** — 24.7 km from Hong Kong's centre, and its
+title and caption name *different places*:
+
+| | |
+|---|---|
+| title | Rock Pools at **Tai Long, Sai Kung** |
+| caption | *"Cliff Jumping at Rock pools in Hong Kong? 📍**Sai Wan Ho** Rock Pools"* |
+| our point reverse-geocodes to | **下鹿湖, Sheung Luk Wu, Sai Kung District** |
+
+**Sai Wan Ho is 17 km away, an urban MTR district on Hong Kong Island with no
+rock pools and nowhere to cliff-jump.** Sheung Luk Stream in Sai Kung is exactly
+where people go to do it. The creator wrote *Sai Wan **Ho*** for *Sai Wan* — one
+syllable, two entirely different places. **The pin is right and the caption is
+wrong.**
+
+🔴 **So the rule is not "trust the caption" — it is "the caption is evidence,
+and evidence gets weighed."** What settled this was the same thing that settled
+Sun Tower and the Cadore church: asking what is actually AT the point, and
+reading the subject. A place that cannot have cliff-jumping is not where you
+went cliff-jumping, whatever the caption says.
+
+⚠️ Note the shape it shares with the Barker Road extractor error and the *Great
+Notley* geocode: **a near-miss name is the dangerous kind.** *Sai Wan* / *Sai Wan
+Ho*, *Binhai Road* / *Haibin Road*, *Great Court* / *Great Notley*. A wrong
+answer that looks nothing like the right one gets caught immediately; one that
+differs by a syllable does not.
+
+### And the second pass's actual yield
+
+**79 flags read against full captions, and not one coordinate error.** The first
+pass read them with 140-character captions, so this was genuinely new evidence
+rather than a re-read — and the answer was still that Cape Point is 48 km from
+Cape Town and correct, Lantau is 23–31 km from Hong Kong and correct, and
+Chongqing's 360 km outlier is correct because the municipality is the size of
+Austria. **A check that keeps returning "nothing wrong" on a population you have
+already examined is doing its job**; the value is the day it stops.
+## A pipeline fix does not reach work already in flight (2026-09-22)
+
+`make-link-pin.py` stopped truncating captions at 140 characters on 2026-09-21,
+and 2,351 captions were recovered the same day, leaving 24 at the cut — all of
+them dead posts or genuinely that long.
+
+**The next day there were 111 again.** Eighty-seven were `@historicpubcrawls`
+pins from #1054, which merged that morning: the branch had been cut **before**
+the fix, so the batch carried the old code with it and re-introduced the exact
+defect that had just been repaired.
+
+🔴 **Nothing noticed.** Every check passed, the validator was clean, CI was
+green. It surfaced only because a count was being re-derived by hand for a
+handoff — which is to say, by luck.
+
+**The habit this earns:** when a fix changes what a generator *writes*, ask what
+is already in flight that will write the old thing anyway. Long-lived branches,
+another contributor's checkout, a queued batch — none of them rebase themselves.
+
+**And the durable fix is a guard, not a memo.** `refetch-captions.py --check`
+now fails CI when a caption arrives on the cut that the recovery cache does not
+excuse. Known-dead posts stay excused; a genuinely new cut turns the step red
+and names the remedy. A rule that lives in a document is a rule somebody has to
+remember; this one stops the branch.
+
+⚠️ It also states its own scope rather than implying completeness: ten captions
+sit at the cut with **no source URL**, so nothing can re-read them, and the
+output says so — `24 sit at exactly 140 · 10 have no source URL · 14 excused ·
+0 not excused`. The population adds up in the line itself.
+
+## The same field was full the whole time (2026-09-22)
+
+I recovered 2,351 truncated captions and reported the win as **"captions
+carrying a 📍 went 535 → 943 — a 70% larger evidence base."**
+
+Then I went to check whether the recovery had helped a *different* check, and
+found this:
+
+| | caption | longDescription | **either** |
+|---|---|---|---|
+| before the recovery | 535 | **913** | **913** |
+| after | 943 | 945 | **945** |
+
+🔴 **`longDescription` was never truncated.** The pipeline cut `caption[:140]` on
+the stop and wrote the full text to the description in the same breath. Before
+the recovery, 2,364 captions sat at exactly 140 characters and **seven**
+longDescriptions did.
+
+**So the addressable evidence base gained 32 entries, not 408**, and the
+caption-address audit could have been built the day before by reading the other
+field.
+
+**What the recovery did genuinely fix** is real but smaller than I said: 2,320
+captions ended mid-word **on screen**, which is a display defect users see, and
+the two fields now agree.
+
+### Why I got it wrong
+
+I measured the field I had just changed. The number was correct — captions *did*
+go 535 → 943 — and it answered a question nobody had asked. **The question was
+"how much more evidence do we have", and the answer required looking at every
+field that could carry it.**
+
+That is the same shape as the egress estimate I got wrong by 15× the day before,
+and as the *"0 duplicates"* places query that read the wrong key: **a true
+statement about the wrong population.** The habit that catches all three is the
+one already written here — **state the population and make it add up** — extended
+by one word: state which *fields* the population is drawn from.
+
+⚠️ And it is why `check-caption-address.py` now reads the caption **and**
+`longDescription`, with a mutant that goes red if either is dropped. A check
+reading one field would have been blind to 378 entries whose address the
+catalogue already held.
+
+## The tool that writes to the catalogue was the one CI did not check (2026-09-22)
+
+Running the place-candidate scan after a 117-pin day turned up **two defects in
+the place tooling itself**, and either would have put a wrong place into the
+catalogue. A place is a **coordinate**: minting one *moves every member onto a
+single point*.
+
+### 1 · `make-places.py --selftest` had been crashing for a day
+
+`IndexError`, not a verdict. The cause was mine: adding the **STALE** band to
+`spine-match.py` on 2026-09-21 meant a cache record with no `digest` now bands
+STALE instead of CONFIRMS — and this file's fixture supplies no digest, so
+`propose` saw no groups and indexed into an empty list.
+
+🔴 **Nothing noticed, because `make-places.py --selftest` was not run anywhere.**
+It is the only tool in `scripts/` that *writes places*, and it was the one tool
+CI did not gate. It is gated now, and the fixture asserts it is **live** — strip
+the digest and the group must vanish, so a fixture that quietly stops producing
+one cannot pass again.
+
+**The general form:** when you add a guard to a shared module, the things that
+break are not its own tests. They are the fixtures in every *other* file that
+imports it — and those are exactly the files nobody re-runs.
+
+### 2 · A tourism board is not a venue
+
+`proven_same_venue` treats a shared `@handle` as proof that two coincident
+entries are one venue. It already excludes the **creator's** handle, or every
+pair of pins by one food reviewer would pair. It did not exclude
+**`@visitscotland`** — so *The Last Drop* and *Biddy Mulligan's*, two different
+Grassmarket pubs **24 m apart**, were reported PROVEN and would have been minted
+as one place, merging two pubs into one page.
+
+`docs/places.md` states the rule this breaks: **co-location is not identity.**
+
+**The fix is measured, not a list.** `ubiquitous_handles()` counts the distinct
+points each handle appears at: a real venue handle appears at **one**, a tourism
+board at many. Twenty-five handles in this catalogue appear at four or more —
+`@visitscotland`, `@michelinguide`, `@guinnessgb`, `@invernesstouristboard`, and
+several creators' handles quoted in *other* creators' captions.
+
+⚠️ Both defects were found by **using** the tool, not by reading it. The scan is
+rule 8c and it is meant to run after every batch; it had not, and two batches
+had landed.
+
+## The test asserted the hardcoded value, so it could never catch it (2026-09-22)
+
+`make-places.py` reported every proven group as **`move<=0 m`**, and its
+docstring said so in words: *"Members do not move — they are already on the same
+point — so the `--max-move` guard is inert here by construction, not by
+omission."*
+
+I chose to mint only those groups **because of that number**. Eight places were
+created, and two entries moved — by **19.5 m** and **11.6 m**.
+
+🔴 **The figure was hardcoded.** `propose_proven` wrote `"max_move_m": 0.0` as a
+literal, while `proven_groups` bounds its search at `TIGHT_M` = **25 m**, not at
+0. A proven group may legitimately span up to that, and minting pulls every
+member onto the anchor. The docstring asserted a property the code did not have.
+
+**And the selftest asserted the same literal:**
+
+```python
+check("a PROVEN group moves nobody", made and made[0]["max_move_m"] == 0.0)
+```
+
+It read the hardcoded value and confirmed it. A test that checks a constant
+against itself **cannot fail**, so this one had been passing while describing
+the wrong behaviour — including on the fixture whose own members sit 12.4 m
+apart, which the same file's docstring documents.
+
+**The fix:** `max_move_m` is computed from the members, the docstring says
+members *can* move and by how much, and the selftest asserts the fixture's real
+span (`5 m < move < 25 m`) instead of a literal.
+
+⚠️ The outcome here was harmless — the groups were right and 19 m is nothing.
+**What was not harmless is that a decision was made on a number nobody had
+measured**, which is the third time in two days: the +12% egress estimate, the
+`535 → 943` caption figure, and now this. The pattern is not carelessness about
+arithmetic. It is **trusting a number because it was printed**, when printing it
+cost nothing and measuring it was never done.
+
+## The declined record was doing a guard's job (2026-09-22)
+
+`join-places.py` adds an entry to a place that already exists. It fires on two
+signals, either sufficient: the entry's **title** equals the place's name, or the
+entry's **caption** names the place. The caption tier was built for a real case —
+a pin titled with its own caption, `@centrepompidou is the coolest museum ever`,
+which no title test could ever see.
+
+Asked to join one orphan entry to **Walden 7**, the tool proposed three:
+
+```
+ 0.0m  Walden 7       -> Walden 7 (Sant Just Desvern)     ✅
+ 0.0m  Stonewall Inn  -> The Stonewall Inn (New York)     ✅
+18.2m  Dead Rabbit    -> Fraunces Tavern (New York)       🔴
+```
+
+The Dead Rabbit is a different bar at a different address. Its description says
+*"in the historic Fraunces Tavern **district**"* — a **locator**, and
+`docs/places.md` Rule 3 is that **co-location is not identity**. A join moves the
+member onto the place's coordinate and writes it into `tourIds`, so applying it
+would have merged two real venues into one.
+
+### The part that matters is WHY it was the only one
+
+Instrumenting the tier on the live catalogue: it matched **seven** rows. One was
+right. Four others — the Channel Gardens at Rockefeller Center, the Cosmati
+Pavement and the Shrine of Edward the Confessor at Westminster Abbey, the Blue
+Ribbon Garden at Walt Disney Concert Hall — were refused, every one of them by
+`declined_pairs()`, the record of ~60 decisions **the owner had already made one
+at a time**. Every one is a part-vs-whole, which `docs/places.md` leaves to the
+owner.
+
+So the tier's apparent accuracy was not a property of the tier. It was the
+owner's accumulated rulings, re-applied. A pairing nobody had happened to decline
+yet went straight through, and the first new one did.
+
+🔴 **A refusal list is a record of judgements already made; it cannot refuse a
+case nobody has judged.** When a check's clean record rests on such a list, its
+true precision is whatever it does on the rows the list has never seen — here,
+one in one wrong. Measure a tier on rows the declined record does NOT cover,
+because those are the only ones it is actually deciding.
+
+### The guard that was missing
+
+The caption tier is sound exactly when the entry has **no name of its own to
+contradict the match**. So: strip the place's name out of the entry's title, and
+if a name is left over, the entry is about something else.
+
+| title | place | left over | |
+|---|---|---|---|
+| `Stonewall Inn` | The Stonewall Inn | — | join |
+| `@centrepompidou is the coolest museum ever` | Centre Pompidou | filler only | join |
+| `Dead Rabbit` | Fraunces Tavern | **Dead** | refuse |
+| `The Cosmati Pavement` | Westminster Abbey | **Cosmati** | refuse |
+| `Bar Luce at Fondazione Prada` | Fondazione Prada | **Luce** | refuse |
+| `Municipal Library of Viana do Castelo` | Viana do Castelo | **Municipal** | refuse |
+
+The last two are cases the file's own docstrings already record as having gone
+wrong, and the guard now refuses them structurally rather than by memory.
+
+⚠️ **Editing the predicate broke three existing mutants' anchors.** A mutation
+harness patches source by quoting it, so changing the line a mutant quotes stops
+that mutant from applying — and a mutant that cannot apply proves nothing about
+the guard it was written for. All fifteen `scripts/mutate-*.py` already treat a
+non-matching anchor as `missed`, so the run went red and named the three. **That
+is the design worth keeping: a fixture that cannot run must fail, never pass.**
+Re-anchor the mutants in the same commit as the edit; re-running until the SKIPs
+are gone is the check.
+
+### A fourth "true of the wrong population", caught in the act
+
+Reading that skip report, I grepped for `missed += 1` on the SKIP *lines* and
+concluded 13 of the 15 harnesses did not count a SKIP as a failure — a CI-wide
+hole. The increment is simply on the **next** line. Every harness was already
+correct, and the write-up above said the opposite until re-checked with an
+`awk` that read both lines.
+
+🔴 Three times this session a measurement was **true of something other than what
+it was reported about** (the +12% egress, the 535→943 captions, `move<=0 m`).
+This was the fourth, and the tell was the same each time: **a number that makes a
+whole population look broken deserves one confirming probe before it is written
+down.** The probe costs a minute. The claim, unchecked, costs the reader's trust
+in every other number beside it.
+
+## "All checks complete" over a list that was still growing (2026-09-22)
+
+A CI watcher polled GitHub's check-runs API and stopped when every run it could
+see had `status == "completed"`:
+
+```python
+print('yes' if rs and all(r.get('status') == 'completed' for r in rs) else 'no')
+```
+
+It announced **ALL CHECKS COMPLETE** on PR #1059 — and `Run unit tests` was
+still **queued**. The check run did not yet exist in the API's response when the
+watcher polled, so `all(...)` was true over the six that did. The `rs and`
+guard was there precisely to stop the empty-list case, and it does; it cannot
+help with a list that is merely **short**.
+
+🔴 **A completion test is only as good as its denominator, and on CI the
+denominator arrives late.** Jobs are created as their dependencies resolve, so
+early in a run the set of known checks is a *prefix* of the real one. Every
+"have they all finished?" question asked against it answers yes.
+
+**The fix is not a hardcoded expected count** — the workflow gains jobs, and a
+stale constant would fail green runs forever. Require the complete set to hold
+**twice in a row**, thirty seconds apart: a list still growing changes between
+polls, a finished one does not.
+
+This is the same shape as the stale-output-file and `PIPESTATUS` traps in
+`CLAUDE.md` § Reading a check's result, arriving through a third door: **the
+check ran, reported honestly, and was asked a question whose premise was false.**
+Nothing was broken — the watcher, the API and CI were all behaving. The defect
+was entirely in what the answer was taken to mean.
+
+⚠️ It would have merged a PR on six of seven checks. Nothing downstream would
+have caught it: a merge does not re-run the missing job.
+
+## The crash that exited 1, and 1 meant "fine" (2026-09-22)
+
+`check-place-candidates.py` documents its own contract, and CI reads it:
+
+```
+# 0 = nothing found, 1 = candidates found (both fine), >=2 = the check failed
+```
+
+An uncaught Python exception exits **1**. So when `report()` raised `NameError`
+— it referenced an undefined `catalog` in its `if exact:` branch, from a
+refactor in #1058 — the crash was **indistinguishable from a clean report**.
+Every run since had printed the NAME section, died, and been read as *candidates
+found, fine*.
+
+🔴 **The EXACT tier is the one Rule 8c exists for.** It is the tier written
+after the owner found duplicate pins on the map, twice. It had been silently
+unreported, with **three groups sitting in it** — including `Žižkov Television
+Tower` and `Zizkov Television Tower` on an *identical* coordinate, which is
+Rule 1 in its purest form.
+
+Two separate defects, and both had to be fixed:
+
+1. **The bug.** `entries(catalog)` → `entries(doc)`.
+2. **The contract.** `main()` now catches, prints the traceback and returns
+   **2**. A script whose success codes include 1 must never let an exception
+   produce a 1, or its own error path is its happy path.
+
+### Why 51 green selftests said nothing
+
+`report()` *was* exercised — on a fixture whose two entries sit at *different*
+coordinates. So the EXACT tier was empty, `if exact:` never ran, and the only
+broken branch was the only one no fixture entered.
+
+🔴 **Coverage of a function is not coverage of its branches.** The new fixture
+differs from the old one in exactly one respect: the two entries share a
+coordinate. That one character of difference is the whole test.
+
+⚠️ And I reported "EXACT tier is clean" to the owner **twice** from these runs.
+It was never clean; the check never got there. **A tier that prints nothing is
+not a tier that found nothing** — read the verdict line, and count the sections
+you expected against the sections you got. The report was missing three of its
+four headings and it still read as a pass.
+
+### A smaller trap on the way out
+
+The first attempt to prove the new fixture could fail used `sed -i '473s/.../'`
+— a line number, captured before the fixtures were added. It patched a
+different line, the selftest passed, and the run printed `exit=0 (want
+non-zero)` as though the fixture were dead. **A mutation applied by line number
+is a mutation that may not have been applied at all.** Anchor on content and
+assert the anchor matched exactly once.
+
+## A Chinese coordinate off a Chinese map is wrong by more than the error you are fixing (2026-09-22)
+
+Two pairs of pins shared one coordinate each — `Seashore Library` + `Chapel of
+Music` in the Aranya community, `Long Ma She` + `Soft Square` in Changshou
+Village. Each pair is two genuinely different buildings, so the shared point is
+a geocoding artefact and the owner asked for them to be spaced apart.
+
+**They were not separated, and that was the right answer.** Every route was
+exhausted first — Nominatim in English *and* Chinese, Wikidata by entity search
+(429) and then by SPARQL bounding box (4 items in the whole area, none of them
+these), two web searches, the ArchDaily project page (location: *"Qinhuangdao
+Shi, China"*), Overpass (proxy-blocked). Nothing anywhere gives a per-building
+coordinate.
+
+🔴 **Inventing a separation would have been worse than leaving them coincident.**
+A made-up offset looks precise, and a geofence fires where nobody stood. This
+file already records three pins moved on a weak distance signal that came out
+**11 m right, 220 m wrong and 100 m wrong**.
+
+⚠️ **And the reverse-geocode is what makes "leave it" defensible rather than
+lazy:** the Beidaihe point resolves to `阿那亚三期` (Aranya Phase 3) and the
+Shenzhen one to Jiangling Road, Maluan Sub-district. **The locality is right and
+only the precision is wrong** — which is a different, far milder defect than a
+pin in the wrong place, and worth establishing before reporting "cannot fix".
+
+### The trap if someone does go and get the numbers
+
+**China's public maps do not publish WGS-84.** Baidu serves **BD-09** and Amap
+and every other domestic service serve **GCJ-02** — a deliberate obfuscation
+offset from true WGS-84 by roughly **100–700 m**, varying with position.
+
+🔴 **That offset is LARGER than the separation being created.** A coordinate
+copied from Baidu or Amap would not merely be imprecise; it would move the pin
+further from the building than leaving both entries stacked on one point does,
+while looking like a careful fix. Google Maps' satellite layer and Apple Maps
+are WGS-84 and safe.
+
+Worth knowing generally: a coordinate has a **datum**, and outside the places
+where everyone silently agrees on WGS-84 the datum is part of the fact. Asking
+*"where did this number come from?"* is not pedantry there — it is the
+difference between a 5 m fix and a 500 m error.
+
+### The same datum trap, three times in one hour, each a different shape (2026-09-22)
+
+The owner sent Amap share links for four pins. Every one needed GCJ-02 → WGS-84
+conversion, and the *consequence of skipping it* was different each time:
+
+| pin | raw Amap number | after conversion | what skipping would have done |
+|---|---|---|---|
+| Long Ma She | 975 m from the old pin | **414 m** | left it **further** from the building than the wrong shared pin it replaced |
+| Seashore Library | 551 m away | **4 m** | 🔴 **moved a pin that was already CORRECT, by 551 m** |
+| Chapel of Music | 1,684 m away | 1,510 m | a 174 m error on top of a real 1.5 km fix |
+
+🔴 **The library case is the one to remember.** Its shared coordinate looked like
+a village-centroid guess — two pins on one point, the classic artefact. It was
+nothing of the kind: converting Amap's number landed **4 m** from it, so the
+coordinate was *right* and the real defect was that `Chapel of Music` had been
+given the library's position. **The shape of a defect is not its cause**, and
+"two pins share a point" has at least two causes that look identical.
+
+⚠️ **The 4 m agreement is also the best validation the converter got.** It is an
+external check at the exact location in question: an independently-sourced
+coordinate already in the catalogue, matched to within noise. That mattered when
+the chapel's reverse-geocode came back as bare "Changli County" for *both* the
+raw and converted points and **could not discriminate** — the locality check
+usually settles these (长守 vs 三河 did, for Long Ma She) and here it simply had
+nothing to say. **Say so when a check comes back mute, rather than counting it as
+support.**
+
+⚠️ And the small decision in the middle: once the library was known correct, it
+was tempting to apply its 4 m refinement immediately. That would have dropped
+the pair from `EXACT · ASK` — visible, addressed to the owner — into the 81-row
+`TIGHT` list, where it would not have been seen again. **A 4 m improvement is
+not worth hiding a 1.5 km fault.** Both were set together instead.
+
+## A 25 m search radius hid nine plain joins, and the unjoined pin was sometimes the right one (2026-09-22)
+
+With the NAME and EXACT candidate tiers both clean, reading the NEAR tier through
+`check-place-candidates.py`'s own `scan()` found **35 "join-shaped" rows**: an
+entry 26–418 m from an existing place on the same subject, not a member of it.
+`join-places.py` searches within **25 m** by default, so every one of them was
+invisible to it indefinitely. It is the Walden 7 hole at a larger radius.
+
+Run at `--max-move 100` with every guard still on, it proposed **six**: exact-name
+joins at 27–44 m (Kaktus Towers, Vessel, Guggenheim, Marina City, Trellick Tower,
+The Oculus). The owner added three the guards had conservatively skipped. The
+other ~26 rows were correctly left alone: part-vs-whole, two-building tours,
+shops inside a district, and pairs the owner had already declined.
+
+### 🔴 Joining is not always "move the stray onto the place"
+
+**MahaNakhon.** The unjoined `@pasttworld` pin was **0 m from Wikidata's** King
+Power Mahanakhon, and the existing place was 26 m off. Joining in the usual
+direction would have moved the one accurate coordinate onto a less accurate
+point. The place was **re-anchored onto the pin** instead, and its two existing
+members moved 26 m. **Before joining, ask which coordinate an independent source
+supports. The one being joined may be it.**
+
+### 🔴 An Atlas tour's stop is where the audio triggers, so read it before moving it
+
+> **Superseded on 2026-09-23 by the owner:** *"move the atlas tours. when I first started I did put
+> the coordinates in the deliberate spot to stand, but as the catalog evolved I think that would be
+> increasingly difficult to manage for a large catalog."* **An Atlas stop now sits on its subject,
+> the same as a pin**, and nine were moved that day (Estádio do Dragão, Jardins do Palácio de
+> Cristal, Castelo de São Jorge, Jardim da Estrela, Palais-Royal, Dolby Theatre, Gaysorn Amarin,
+> Nubank Parque, Candler Building; 113–185 m each). What survives from the account below: **the
+> subject can be a named PART of a site** (CAM's canopy, one facade of a walk), and a multi-stop
+> walk's stops each have their own subject, so a walk stop is never moved to its building's
+> centre. The history is kept because it explains every Atlas stop still sitting on an entrance.
+
+A link pin's coordinate marks a subject. **An Atlas tour's stop coordinate is
+also the geofence trigger**, and its caption may name a deliberate viewpoint.
+
+* **Kyoto ICC** (moved 96 m). The caption describes the building and gives no
+  standing instruction, and the point was 95 m from Wikidata's building. It was
+  off; the move is a correction.
+* **CAM** (moved 62 m, in #1066). The caption says *"stand… by the long curving
+  canopy that sweeps from the museum out into the garden"*, which is a specific
+  viewpoint. It was moved onto OSM's museum node **without reading that first**.
+  **Resolved the same day, and the move had made it worse.** Architectural
+  Record, Dezeen and Wallpaper all describe Kuma's 107 m *Engawa* as tracing
+  the **south** side of the museum, facing the south gardens. OSM's CAM node,
+  where the place had been put, is addressed on *Percurso do Lago*, the lake
+  path on the **north** side. The original Atlas stop and Wikidata's point both
+  reverse-geocode to Rua Dr. Nicolau de Bettencourt, the campus's south edge.
+  So the move had taken the trigger north, away from the canopy the caption
+  names. The place was put back on the **Atlas author's own stop**, restoring a
+  deliberate choice rather than inventing a third point.
+
+**Check the stop caption of any Atlas tour before a place moves it.** A
+subject-accurate point can still be the wrong place to trigger a walk. 🔴 **CAM
+is the proof: the museum's own OSM node was the right SUBJECT and the wrong
+place to stand.**
+
+## A correct NAME on the wrong KIND of feature is still the wrong pin (2026-09-22)
+
+Nominatim's first hit for *"The Warrington, Warrington Crescent"* was `building/yes` named **The
+Warrington**, near the Alan Turing plaque at no. 2, and 153 m from our pin. Moving there would have
+looked verified: an OSM feature, the exact name, a plausible distance. Searching the pub's
+**address** (93 Warrington Crescent) returned `amenity/pub "Warrington"` **150 m in the opposite
+direction**, where Wikidata also had it. **Accept a gazetteer point only when its TYPE matches the
+subject** (a pub is `amenity/pub`, a hotel `tourism/hotel`), and when two sources disagree, search
+the address as well as the name.
+
+## Renaming a pin means renaming its stop too (2026-09-22)
+
+A link pin carries its title twice: `title` and `stops[0].title`. Every earlier title correction
+changed only the first, so **62 stops still carried the names those fixes had removed**: *Crown
+Sydney* on Avaz Twist Tower, *Vittoriano* on Torre Velasca, *MSG Sphere* on the Lucas Museum,
+*Grace Farms* on the Glass House. No check compares the two. When you retitle a pin, set both in
+the same edit, and diff `title` against `stops[0].title` before committing.
+
+## A caption title blinds every coordinate check at once — recovering the name restores them (2026-09-22)
+
+355 entries were titled with a creator's caption. None of them can be geocoded, matched against
+Wikidata or asked of a photograph, so the spine audit counted them as UNMATCHED and nothing else
+looked at them. Recovering 269 names from the captions (only what the caption names, with the
+verbatim evidence kept for each) moved spine **CONFIRMS from 1,861 to 1,923** in one refresh, and
+surfaced 4 new place candidates and 3 disagreements to rule on. **The cheapest independent check on
+a recovered name is the place the pin already belongs to**: every renamed pin that sat in a place
+got a name matching that place, and the three that did not were spelling errors (one of them in the
+place's own name).
+
+## Changing a pin's CITY breaks other pins' suggestions (2026-09-23)
+
+Correcting one Krispy Pizza pin from *New York* to *Brooklyn* failed `Validate Tours.json` with
+**63 errors**, none of them in the edited entry: 63 New York pins listed it in `relatedTourIds`,
+and a pin may only suggest pins in its own city. The city is an input to the related-tours graph,
+so editing it by hand makes other entries invalid. **Leave `city` alone unless the same PR rebuilds
+related tours** (`scripts/build-embeddings.py --write-related`), and before pushing, count how many
+entries name the one you are changing.
+
+## Nominatim will cut a bulk run off; Photon is the same OSM data (2026-09-23)
+
+An overnight name sweep was refused by Nominatim (**HTTP 429 on every request**) after about 800
+queries, although it was spaced 2 s apart. Nominatim's usage policy does not allow bulk geocoding,
+and it enforces that. **Photon** (`https://photon.komoot.io/api/?q=…`, no key) searches the same
+OpenStreetMap data, returns `osm_key`/`osm_value`/`name` on each feature, and served ~1,500 more
+queries at 1.5 s spacing with no refusals. Use Nominatim for a handful of lookups and Photon for a
+sweep. Either way, read the HTTP status: a 429 parsed as JSON turns into "no match".
+
+## A same-name match is only safe for MOVING when the name is exact (2026-09-23)
+
+Token-containment matching ("the shorter name's words all appear in the longer") looked like the
+right fix for bilingual OSM names, and it would have moved pins onto the wrong buildings: *Saint
+Mary's Cathedral* → *Old* Saint Mary's Cathedral, *The Chelsea Hotel* → *The GEM Hotel Chelsea*,
+*The House of Commons* → *Office of the Leader of the House of Commons*. **Confirm with a loose
+match, move only on an exact one** (or the same Latin half of a bilingual name), and read every gap
+over 1 km by hand: in this sweep those were mostly the caption naming a *different branch* from the
+one OSM returned first.
+
+## A place question answered by the wrong person is not answered (2026-09-23)
+
+A contributor's 55-pin batch (#1075) flagged three place candidates correctly. Its session asked
+the person it was talking to, the owner's brother, recorded his *"keep them separate"* as
+**"Owner: keep them as separate entries. Do not re-offer them"**, and merged. The owner saw
+none of it, found the pairs the next morning, and made all three places. **The detector worked,
+and the decision still reached the wrong person.** The upload skill now says a contributor's
+session must leave place questions on the owner's board (`status.py --add-owner`) and never take
+a contributor's answer as the ruling. Where a record says "Owner:", check which person that was.
+
+## A landmark named after its own city is invisible to a title match (2026-09-23)
+
+`check-place-candidates.py` strips the city's name from each title before comparing, so "the
+Barcelona Pavilion" and "the Pavilion" can pair. That stripped **"Queens Museum" in city "Queens"
+down to `{museum}`**, which is generic, while the pin *"Before the Queens Museum"* (filed under
+"New York") kept `queens`. The two sat 68 m apart for weeks and the owner found them. The comparison
+now retries with the city kept when stripping leaves nothing distinctive. **Two cities spelled
+differently for one borough was half the cause**: the stripping only ran on one side.
+
+## Moving coordinates can CREATE a place candidate; read the whole report afterwards (2026-09-23)
+
+The Atlas-stops sweep moved the Queens Museum tour, Casa de Chá da Boa Nova and Palais-Royal onto
+OSM's points, and each landed **exactly** on a pin that was already there. `check-place-candidates`
+said so at once ("EXACT · PROVEN — create the place"), and it was missed because only the first
+line of the report was read. **After any batch of coordinate moves, read every tier of the report,
+not its first line.**
+
+## A ruling nobody's tool reads gets asked again (2026-09-23)
+
+The report re-offered four Westminster Abbey interiors the owner had kept out of the Abbey's place
+eight days earlier, because the decision lived in `docs/places.md` prose and the checker never read
+it. **Every place ruling now goes into `scripts/make-place-menu.py` `DECLINED_PAIRS`, and the
+report skips those pairs with a count.** Read `docs/places.md` before putting candidates to the
+owner anyway.
+
+## A TikTok video's own subtitles name what its caption does not (2026-09-23)
+
+Twelve pins were titled with a guess ("A house in Morumbi", "A concrete building near Cold
+Spring") because the caption named nothing. **Every one of them was named out loud in the video:**
+TikTok serves an auto-generated subtitle file with the post page, and in it the creator says
+"today we're visiting the EDP headquarters designed by Alejandro Aravena". Three of the twelve
+guesses were the wrong KIND of place too: the "guesthouse" was a Zara flagship, the "apartment
+building" an office HQ, the "house" a hotel. And three pins were 457 m, 514 m and **7.3 km** off,
+which a caption title had hidden from every coordinate check. **Before settling for a description,
+read the subtitles.**
+
+Two more routes that worked on caption-only pins: a pin that sits at exactly 0 m from a geocoded
+street address was placed from a venue's listing, so the listing at that address names it; and a
+chef's jacket, a lantern or a coaster in the hero image usually carries the shop's name.
+
+## A pin that sits EXACTLY on an area's node was geocoded from the area, not the venue (2026-09-24)
+
+The caption-address sweep moved 33 pins, and the largest errors shared one signature: the pin
+sat to the metre on a **district office, a district node, a "shopping area" node or a street
+midpoint** — Gongliao district (8 km), Ruifang district (3.4 km), the 迪化街商圈 node (1.7 km),
+Gamcheon Culture Village. Whoever made the pin geocoded the *area* the caption mentions and
+stopped there. **A pin 0 m from an admin or street-midpoint node is a finding, not a
+confirmation.** For Hong Kong, the government's own address service (als.gov.hk) returns
+building-level points that Photon cannot; for New York, NYC Geosearch; for other US addresses the
+Census geocoder.
+
+## A pin's stop image is a second copy of its hero, and a rename can strand it (2026-09-25)
+
+Nine pins had `stops[0].imageURL` pointing at a hero file their own `heroImageURL` had already
+replaced. It surfaced only as a "one image on entries in different cities" error: two
+@suzyandaustin pins in Keelung and Paris still shared the stop image `here-s-one-of-our-favorite-…`,
+a caption-slug file from before the pins were renamed. **When a pin's hero is corrected, move its
+stop image with it** (every other pin has `stop == hero`). Also: two pins cut from one post are
+byte-identical by construction; `check-image-duplicates.py` now allows that, as it already did for
+two pins sharing one file.
+
+## A staged walk's image names go stale when a single's hero is corrected (2026-10-01)
+
+The Miami walk pick-map was written on 2026-09-29. It named the reused singles' heroes as `<slug>_hero`. Then three of
+those heroes were corrected the only safe way, under a NEW filename (`_hero-2`, CLAUDE.md § Image Pipeline step 9).
+Copying the pick-map at wire-in pointed one stop at a **404** (`dupont-building_hero`) and two at an orphaned
+old hero, byte-identical to its single's `_3` gallery image. The validator passed all three, because a URL
+is well-formed whether or not it exists. `check-image-duplicates.py --maker <CODE>` caught both kinds.
+**At wire-in, take a reused stop's image from the single's current `heroImageURL` in `Tours.json`, never
+from the staging document.**
+
+## gh-pages pushes a few minutes apart cancel each other's deploy (2026-10-02)
+
+The owner pasted Boston photos one at a time, and each was pushed to gh-pages as it arrived, 1 to 8 minutes
+apart. A Pages build takes about 8–10 minutes, and **each new push cancels the deploy still running**.
+Eight deploys in a row ended `cancelled`. So for an hour **none** of 92 images was live, including the
+first batch, pushed long before. The live check returned 404 on every file, and the branch looked fine
+throughout. **Batch the uploads: commit each photo locally, push gh-pages once when the owner pauses,
+then hash-verify the live URLs.** If a hash check fails across the board, list the `pages build and
+deployment` runs before suspecting the files.

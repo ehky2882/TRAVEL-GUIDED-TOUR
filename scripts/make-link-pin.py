@@ -322,10 +322,10 @@ def platform_of(url: str) -> str:
     return "other"
 
 
-def curl(url: str, binary: bool = False):
+def curl(url: str, binary: bool = False,
+         agent: str = "Dozent/1.0 (link-pin tool; +https://dozent.world)"):
     r = subprocess.run(
-        ["curl", "-sSL", "--max-time", "45", "-A",
-         "Dozent/1.0 (link-pin tool; +https://dozent.world)", url],
+        ["curl", "-sSL", "--max-time", "45", "-A", agent, url],
         capture_output=True,
     )
     if r.returncode != 0:
@@ -353,9 +353,46 @@ def oembed(url: str) -> dict:
             "COULD NOT VERIFY — the platform did not return JSON. This is NOT a\n"
             f"pass; the post may be private, deleted, or region-locked.\n{body[:300]}"
         )
+    if not data.get("thumbnail_url") and plat == "tiktok":
+        # ⚠️ Observed 2026-10-20: TikTok's oEmbed now returns only the iframe —
+        # no title, author or thumbnail — for every post. The video page still
+        # carries all three in its rehydration JSON, so read them from there.
+        data = {**data, **tiktok_page_meta(url)}
     if not data.get("thumbnail_url"):
         raise SystemExit("COULD NOT VERIFY — no thumbnail in the oEmbed response.")
     return data
+
+
+BROWSER_AGENT = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+                 "(KHTML, like Gecko) Chrome/124 Safari/537.36")
+
+
+def tiktok_page_meta(url: str) -> dict:
+    """oEmbed-shaped fields from a TikTok video page, or {} if it has none.
+
+    Scraping, like `avatar_source`: an internal key in page HTML that TikTok can
+    rename without notice. It returns {} rather than raising, so the caller's
+    "no thumbnail" refusal still fires when the page changes shape.
+    """
+    import re as _re
+    try:
+        html = curl(url, agent=BROWSER_AGENT)
+        g = _re.search(r'<script id="__UNIVERSAL_DATA_FOR_REHYDRATION__"[^>]*>(.*?)</script>',
+                       html, _re.S)
+        item = (json.loads(g.group(1))["__DEFAULT_SCOPE__"]["webapp.video-detail"]
+                ["itemInfo"]["itemStruct"])
+    except Exception:
+        return {}
+    video, author = item.get("video") or {}, item.get("author") or {}
+    uid = author.get("uniqueId") or ""
+    return {
+        "title": item.get("desc") or "",
+        "author_unique_id": uid,
+        "author_name": author.get("nickname") or uid,
+        "author_url": f"https://www.tiktok.com/@{uid}" if uid else "",
+        "thumbnail_url": video.get("originCover") or video.get("cover") or "",
+        "provider_name": "TikTok",
+    }
 
 
 def instagram_playability(html: str) -> tuple[bool, str]:
@@ -381,6 +418,53 @@ def instagram_playability(html: str) -> tuple[bool, str]:
     if name and "original audio" not in name.lower():
         return False, f"licensed music ({name})"
     return False, "Instagram is not exposing the media file for this post"
+
+
+LINK_PREVIEW_AGENT = "Mozilla/5.0 (compatible; facebookexternalhit/1.1)"
+
+
+def instagram_og_meta(html: str, url: str) -> dict:
+    """Fallback for a post whose embed page is a stub (`EmbedBrokenMedia`).
+
+    Some creators switch embedding off per post; the embed page then carries
+    no username, caption or image. The post page still serves Open Graph tags
+    to link-preview crawlers, so read those instead. Observed 2026-09-25 on 6
+    of 63 @where.to.taste reels.
+
+    🔴 The og:image is the reel cover at 360x640 WITH A PLAY BUTTON BAKED INTO
+    ITS CENTRE (Instagram's link-preview treatment; the URL is signed, so no
+    variant without it can be requested). The hero this produces must be
+    replaced before it ships — the warning rides on `no_inline_reason` so it
+    prints in the batch's WILL NOT PLAY INLINE report. Such a post also
+    cannot play inline.
+    """
+    import html as _html
+    import re as _re
+
+    def og(prop):
+        g = _re.search(rf'<meta property="og:{prop}" content="([^"]*)"', html)
+        return _html.unescape(g.group(1)) if g else None
+
+    page, thumb, title = og("url"), og("image"), og("title")
+    g = _re.search(r"instagram\.com/([A-Za-z0-9._]+)/(?:p|reel|tv)/", page or "")
+    handle = g.group(1) if g else None
+    if not handle or not thumb:
+        raise SystemExit(
+            "COULD NOT VERIFY — Instagram's embed is disabled for this post and its\n"
+            f"link-preview tags yielded no handle and image. URL: {url}")
+    # og:title reads `Name on Instagram: "<caption>"`.
+    g = _re.search(r' on Instagram: "(.*)"\s*$', title or "", _re.S)
+    return {
+        "plays_inline": False,
+        "no_inline_reason": ("the creator has switched off embedding for this post"
+                             " — AND ITS COVER HAS A BAKED-IN PLAY BUTTON: replace the hero"),
+        "title": (g.group(1) if g else "").strip(),
+        "author_name": handle,
+        "author_unique_id": handle,
+        "author_url": f"https://www.instagram.com/{handle}/",
+        "provider_name": "Instagram",
+        "thumbnail_url": thumb,
+    }
 
 
 def instagram_meta(url: str) -> dict:
@@ -411,6 +495,11 @@ def instagram_meta(url: str) -> dict:
     handle = grab(r'\\"username\\":\\"(.*?)\\"')
     thumb = grab(r'\\"display_url\\":\\"(.*?)\\"')
     caption = grab(r'\\"edge_media_to_caption\\":\{\\"edges\\":\[\{\\"node\\":\{\\"text\\":\\"(.*?)\\"\}')
+    if (not handle or not thumb) and "EmbedBrokenMedia" in html:
+        # Embedding switched off for this post — the embed page is a stub.
+        return instagram_og_meta(
+            curl(f"https://www.instagram.com/{parts[parts.index(code) - 1]}/{code}/",
+                 agent=LINK_PREVIEW_AGENT), url)
     if not handle or not thumb:
         raise SystemExit(
             "COULD NOT VERIFY — Instagram's embed did not yield a handle and a\n"
@@ -618,7 +707,15 @@ def build_entry(*, url, meta, slug, maker, lat, lon, city, country,
             "id": stop_id,
             "order": 0,
             "title": title or f"A post by {handle}",
-            "caption": (caption[:140] or f"A post by {handle}."),
+            # 🔴 The WHOLE caption, not caption[:140]. That cut ran until
+            # 2026-09-21 and destroyed 2,375 of 5,463 captions, 2,320 of them
+            # mid-word — and creators put their ADDRESS LAST, so it landed on
+            # the most useful line in the text. "Modern Coffee House" shipped
+            # 22.9 km wrong, on Staten Island, because the postcode that told
+            # two East Broadways apart was in the tail we deleted. The clamp
+            # now lives at the DISPLAY site (Components/ExpandableText.swift),
+            # where it can be undone by a reader; a cut here cannot be.
+            "caption": (caption or f"A post by {handle}."),
             "latitude": lat,
             "longitude": lon,
             # 🔴 Empty audio + zero duration is the representation a fresh
@@ -679,6 +776,17 @@ def selftest() -> int:
           is_already_canonical("https://www.tiktok.com/@a/video/12345"), True)
     check("instagram reel is canonical",
           is_already_canonical("https://www.instagram.com/reel/ABC/"), True)
+    og_html = ('<meta property="og:title" content="Mariana | Food on Instagram: '
+               '&quot;Parra \U0001f377\n&#x1f377; bistro&quot;" />'
+               '<meta property="og:image" content="https://x.cdninstagram.com/a.jpg?a=1&amp;b=2" />'
+               '<meta property="og:url" content="https://www.instagram.com/where.to.taste/reel/C7R/" />')
+    og_meta = instagram_og_meta(og_html, "u")
+    check("embed-disabled post: handle from og:url", og_meta["author_name"], "where.to.taste")
+    check("embed-disabled post: caption unwrapped",
+          og_meta["title"], "Parra \U0001f377\n\U0001f377 bistro")
+    check("embed-disabled post: image unescaped",
+          og_meta["thumbnail_url"], "https://x.cdninstagram.com/a.jpg?a=1&b=2")
+    check("embed-disabled post never plays inline", og_meta["plays_inline"], False)
     # 🔴 Short forms must STILL resolve, or the same post shared two ways
     # hashes to two different pins.
     check("youtu.be is NOT canonical",
@@ -731,8 +839,10 @@ def selftest() -> int:
                      created_at="2026-08-24", image_base="https://x/images")
     if len(e4["title"]) > 60:
         fails.append(f"title not truncated: {len(e4['title'])}")
-    if len(e4["stops"][0]["caption"]) > 140:
-        fails.append("caption not truncated")
+    # The caption is kept WHOLE on purpose — see the note at the write site.
+    # This asserts the opposite of what it used to: a long caption must survive.
+    if e4["stops"][0]["caption"] != long_caption:
+        fails.append("caption was truncated — the address lives in the tail")
 
     check("slugify", slugify("Hello, World! Again", "f"), "hello-world-again")
     check("slugify empty", slugify("!!!", "fallback"), "fallback")

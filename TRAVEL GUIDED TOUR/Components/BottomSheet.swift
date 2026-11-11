@@ -108,6 +108,11 @@ struct BottomSheet<Content: View>: View {
     /// the drawer's edge during the drag — not just after the snap.
     @Binding var dragOffset: CGFloat
     @GestureState private var isDragging: Bool = false
+    /// Reports the PANEL's frame to the navigation tour. 🔴 It must be the
+    /// panel, not this view: `body` is a full-screen `GeometryReader`, so an
+    /// anchor on the sheet from outside reported the whole screen and the
+    /// tour lit the search bar instead of the drawer.
+    var coachMark: CoachMark? = nil
 
     init(
         detent: Binding<BottomSheetDetent>,
@@ -118,8 +123,10 @@ struct BottomSheet<Content: View>: View {
         bottomCornerRadius: CGFloat = AtlasSpacing.phoneScreenRadius,
         bottomReservedHeight: CGFloat = 0,
         topReservedHeight: CGFloat = 0,
+        coachMark: CoachMark? = nil,
         @ViewBuilder content: () -> Content
     ) {
+        self.coachMark = coachMark
         self._detent = detent
         self._dragOffset = dragOffset
         self.peekHeight = peekHeight
@@ -206,6 +213,7 @@ struct BottomSheet<Content: View>: View {
             .offset(y: launchOpening + (1 - launchSlideProgress) * launchEntryOffset)
             .frame(height: dragHeight, alignment: .top)
             .clipped()
+            .modifier(OptionalCoachMarkAnchor(mark: coachMark))
             // 8pt insets on left + right. The bottom padding is
             // exactly the parent's reserved height — when 0, the
             // drawer sits flush against the screen edge (default
@@ -377,4 +385,13 @@ enum BottomSheetDetent: CaseIterable {
     case peek
     case medium
     case large
+}
+
+/// `.coachMarkAnchor` when a mark is given, nothing otherwise.
+private struct OptionalCoachMarkAnchor: ViewModifier {
+    let mark: CoachMark?
+
+    func body(content: Content) -> some View {
+        if let mark { content.coachMarkAnchor(mark) } else { content }
+    }
 }

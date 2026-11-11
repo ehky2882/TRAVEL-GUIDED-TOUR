@@ -241,6 +241,32 @@ ROWS = [
      "DISAGREES — mostly the gazetteer's own error; not a worklist"),
     ("A site with two entries and no place", "check-place-candidates.py", "CI", None,
      "candidate groups — owner decides each"),
+    # The INVERSE of the row above, and a class that had no check at all until
+    # 2026-09-21: two entries we call by the same name, sitting in different
+    # places. Agreement is the norm (158 of 164 groups within 100 m), so a
+    # disagreement is a real question — but an extended site and a chain with
+    # two branches both span legitimately, so it is never a defect count.
+    ("Same name, different place", "check-same-name.py", "CI", None,
+     "groups spanning >100 m — a stream or a chain spans legitimately"),
+    # 🔴 The only row here covered by a check that asks NO external source. Every
+    # lookup above is silent on the 2,901 entries Wikidata does not know, and
+    # that blind spot is not random — many of those titles are stories, not
+    # names ("A Greek Goddess on Fifth Avenue"), so more sources never reach
+    # them. This asks the catalogue about itself, and found "Great Court,
+    # British Museum" 58 km away in Great Notley, Essex, while UNMATCHED.
+    ("Coordinate far from its own city", "check-city-outliers.py", "CI", None,
+     "flagged — a question, not a defect count; Cape Point is 48 km out and right"),
+    # 🔴 The creator SAID where they were. Only possible since the caption
+    # recovery took location-marker captions from 535 to 914 — before that the
+    # population was 13 rows and too noisy to automate. Tests the LOCALITY, not
+    # the distance, per rule 8d: an address-only geocode would have moved the
+    # correct Cube House pin 1.4 km.
+    # 🔴 A class created by FIXING something: the pipeline stopped truncating,
+    # and a branch cut before the fix carried the old code into main anyway.
+    ("Caption arrives newly cut at 140 chars", "refetch-captions.py --check", "CI", None,
+     "unexcused cuts — any count means a checkout is still truncating"),
+    ("Caption names a city the pin disagrees with", "check-caption-address.py", "CI", None,
+     "disagreements — a question; adjacent towns and street names dominate"),
     ("Coordinate implausible for its city", "check-coordinates.py", "by hand, on a drop", None,
      "GROSS — every one is a defect"),
     ("Image written under the wrong name", "check-image-duplicates.py", "by hand (network)", None,

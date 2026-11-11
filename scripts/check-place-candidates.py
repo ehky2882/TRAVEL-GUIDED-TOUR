@@ -48,13 +48,16 @@ Park are 48 m apart and were deliberately left separate in #541 — a mountain
 and a funfair are two subjects. Read them; do not batch-approve them.
 """
 
+import collections
 import argparse
+import importlib.util
 import io
 import json
 import math
 import os
 import re
 import sys
+import traceback
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import runstamp  # noqa: E402  (stamps every run; see scripts/runstamp.py)
@@ -136,8 +139,18 @@ def same_subject(a, b):
     pairs within 200 m catalogue-wide, so distance alone is useless and a fuzzy
     threshold would drown the signal. Containment left exactly two pairs.
     """
-    wa = subject_words(a.get("title"), a.get("city"))
-    wb = subject_words(b.get("title"), b.get("city"))
+    if _contains(subject_words(a.get("title"), a.get("city")),
+                 subject_words(b.get("title"), b.get("city"))):
+        return True
+    # 🔴 A landmark named after its own city loses its only distinctive word
+    # when the city is stripped: "Queens Museum" in city "Queens" became just
+    # {museum}, which is GENERIC, so it never paired with "Before the Queens
+    # Museum" (filed under "New York"), and the two sat 68 m apart unflagged
+    # until the owner spotted them on 2026-09-23. Retry with the city kept.
+    return _contains(subject_words(a.get("title")), subject_words(b.get("title")))
+
+
+def _contains(wa, wb):
     if not wa or not wb:
         return False
     if not (wa <= wb or wb <= wa):
@@ -216,7 +229,38 @@ def venue_handles(tour):
     return {h for h in found if h and h != creator}
 
 
-def proven_same_venue(members):
+def ubiquitous_handles(entries_in, min_places=4):
+    """Handles that turn up at MANY different places — not venue handles.
+
+    🔴 WHY. `venue_handles` already drops the creator's own handle, or every
+    pair of pins by one food reviewer would look like one venue. It does not
+    drop a TOURISM BOARD, and on 2026-09-22 that nearly minted a place merging
+    **The Last Drop** and **Biddy Mulligan's** — two different Grassmarket pubs
+    24 m apart, "proven" one venue because both captions tag `@visitscotland`.
+
+    `docs/places.md` states the rule this breaks: **co-location is not
+    identity.** A handle is evidence of a venue only if it belongs to one, and
+    that is measurable from the catalogue — count the distinct points a handle
+    appears at. A real venue handle appears at one.
+    """
+    seen = collections.defaultdict(set)
+    for item in entries_in:
+        # ⚠️ `entries()` yields (kind, entry) pairs; callers elsewhere pass bare
+        # entries. Accept both rather than making the caller remember which.
+        entry = item[1] if isinstance(item, tuple) else item
+        at = marker(entry)
+        if at is None:
+            stops = entry.get("stops") or []
+            at = (stops[0]["latitude"], stops[0]["longitude"]) if stops else None
+        if at is None:
+            continue
+        key = (round(at[0], 4), round(at[1], 4))
+        for handle in venue_handles(entry):
+            seen[handle].add(key)
+    return {h for h, points in seen.items() if len(points) >= min_places}
+
+
+def proven_same_venue(members, ubiquitous=frozenset()):
     """Is a coincident group provably ONE venue, with no judgement needed?
 
     🔴 THIS IS THE LINE BETWEEN "ACT" AND "ASK", so it is deliberately narrow.
@@ -255,7 +299,9 @@ def proven_same_venue(members):
     if len(names) == 1:
         return True, "identical name"
 
-    handle_sets = [venue_handles(t) for t in tours]
+    # ⚠️ A handle that appears at many different points is a tourism board or a
+    # city account, not a venue — see `ubiquitous_handles`.
+    handle_sets = [venue_handles(t) - set(ubiquitous) for t in tours]
 
     # A name can BE the handle: "Mark's Off Madison" is @marksoffmadison, so an
     # entry that carries the plain name and one that carries only the handle
@@ -391,6 +437,28 @@ def scan_names(doc, name_radius_m=NAME_RADIUS_M):
     return out
 
 
+_DECLINED = None
+
+
+def declined_pairs():
+    """The owner's recorded declines, as frozensets of two titles.
+
+    Read from make-place-menu.py, which is where rulings are written. A copy
+    here would drift; an import failure returns an empty set and so fails SAFE
+    (everything is listed, nothing is hidden)."""
+    global _DECLINED
+    if _DECLINED is None:
+        try:
+            spec = importlib.util.spec_from_file_location(
+                "_menu", os.path.join(os.path.dirname(os.path.abspath(__file__)), "make-place-menu.py"))
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            _DECLINED = set(getattr(mod, "DECLINED_PAIRS", {}))
+        except Exception:
+            _DECLINED = set()
+    return _DECLINED
+
+
 def report(doc, radius_m=DEFAULT_RADIUS_M, tight_m=DEFAULT_TIGHT_M, out=None,
            name_radius_m=NAME_RADIUS_M):
     # ⚠️ `out=sys.stdout` as a DEFAULT binds the stream at import time, so it
@@ -407,6 +475,25 @@ def report(doc, radius_m=DEFAULT_RADIUS_M, tight_m=DEFAULT_TIGHT_M, out=None,
     named_pairs = {(a["id"], b["id"]) for _, (_, a), (_, b) in names}
     tight = [r for r in tight if (r[1][1]["id"], r[2][1]["id"]) not in named_pairs]
     near = [r for r in near if (r[1][1]["id"], r[2][1]["id"]) not in named_pairs]
+
+    # 🔴 A pair the owner has already declined is not a question any more.
+    # On 2026-09-23 this report re-offered four Westminster Abbey interiors the
+    # owner had kept out of the Abbey's place on 09-15, because nothing here
+    # read the record of that ruling. Count them, never list them.
+    ruled = declined_pairs()
+    def _declined(r):
+        return frozenset({r[1][1].get("title"), r[2][1].get("title")}) in ruled
+    n_declined = sum(1 for r in tight + near if _declined(r))
+    tight = [r for r in tight if not _declined(r)]
+    near = [r for r in near if not _declined(r)]
+    # The same record applies to a coincident GROUP whose titles are exactly a
+    # declined pair: the owner's 2026-10-02 "no" to the Grand Egyptian Museum +
+    # Khufu's Solar Boat was still being offered here, because only TIGHT and
+    # NEAR read it. `make-places.py` already refuses to mint it.
+    def _declined_group(members):
+        return frozenset(e.get("title") for _, e in members) in ruled
+    n_declined += sum(1 for _, members in exact if _declined_group(members))
+    exact = [(c, m) for c, m in exact if not _declined_group(m)]
 
     if names:
         out.write(f"\nNAME — {len(names)} unplaced pair(s) carrying the SAME NAME "
@@ -426,8 +513,9 @@ def report(doc, radius_m=DEFAULT_RADIUS_M, tight_m=DEFAULT_TIGHT_M, out=None,
         # line carries a second, independent proof that it is one venue; the
         # rest is a coordinate and nothing else, which a centroid dump also is.
         proven, unproven = [], []
+        everywhere = ubiquitous_handles(entries(doc))
         for coord, members in exact:
-            ok, why = proven_same_venue(members)
+            ok, why = proven_same_venue(members, everywhere)
             (proven if ok else unproven).append((coord, members, why))
 
         if proven:
@@ -449,6 +537,10 @@ def report(doc, radius_m=DEFAULT_RADIUS_M, tight_m=DEFAULT_TIGHT_M, out=None,
                     out.write(f"     [{kind:<4}] {t['title'][:56]:<57} {t.get('city')}\n")
     else:
         out.write("\nEXACT — none. Every coincident group is already a place.\n")
+
+    if n_declined:
+        out.write(f"\n({n_declined} TIGHT/NEAR pair(s) not re-listed: the owner already declined them — "
+                  "scripts/make-place-menu.py DECLINED_PAIRS.)\n")
 
     if tight:
         out.write(f"\nTIGHT — {len(tight)} pair(s) within {tight_m:.0f} m, regardless of title.\n")
@@ -515,6 +607,22 @@ def selftest():
             "linkPins": [], "places": []}
     e2, g2, n2 = scan(doc2)
     check("same subject nearby is NEAR", len(n2), 1)
+    # 🔴 A pair the owner already declined is counted, never re-listed.
+    global _DECLINED
+    saved = _DECLINED
+    _DECLINED = {frozenset({"Declined A", "Declined B"})}
+    dd = {"tours": [t("d1", "Declined A", 51.5, -0.1), t("d2", "Declined B", 51.50005, -0.1)],
+          "places": []}
+    buf = io.StringIO(); report(dd, out=buf); txt = buf.getvalue()
+    check("🔴 a declined TIGHT pair is not re-listed", "Declined A" in txt, False)
+    check("...but it is counted, not silently dropped", "1 TIGHT/NEAR pair(s) not re-listed" in txt, True)
+    _DECLINED = saved
+    # A landmark named after its city must not lose its only distinctive word.
+    q = {"tours": [t("q1", "Queens Museum", 40.7461, -73.846, city="Queens"),
+                   t("q2", "Before the Queens Museum", 40.745869, -73.8467413,
+                     city="New York")], "places": []}
+    _, _, nq = scan(q)
+    check("🔴 a landmark named after its own city still pairs (Queens Museum)", len(nq), 1)
     check("same subject nearby is not EXACT", len(e2), 0)
     check("71 m is beyond TIGHT, so NEAR is the only tier that sees it", len(g2), 0)
     check("distance is roughly right", 60 < n2[0][0] < 80, True)
@@ -547,6 +655,15 @@ def selftest():
     ok, why = proven_same_venue([pin("a", "Pecking House"),
                                  pin("b", "the fried chicken from Pecking House is unreal")])
     check("one entry named inside the other's caption proves it", ok, True)
+
+    # 🔴 Two different pubs, 24 m apart, both tagging a tourism board.
+    last_drop = pin("a", "The Last Drop @visitscotland", author="@historicpubcrawls")
+    biddy = pin("b", "Biddy Mulligan's @visitscotland", author="@historicpubcrawls")
+    ok, why = proven_same_venue([last_drop, biddy])
+    check("⚠️ without the guard a shared tourism handle reads as proof", ok, True)
+    ok, _ = proven_same_venue([last_drop, biddy], {"visitscotland"})
+    check("🔴 a handle that appears at MANY places is not proof of one venue",
+          ok, False)
 
     ok, _ = proven_same_venue([pin("a", "Round Swamp Farm"), pin("b", "Round Swamp Farm")])
     check("identical names prove it", ok, True)
@@ -711,6 +828,41 @@ def selftest():
             "linkPins": [t("2", "Foo", 10.0, 20.0)], "places": []}
     check("a pin can form a place with a tour", len(scan(doc5)[0]), 1)
 
+    # 🔴 THE GAP THAT SHIPPED A CRASH. `report` WAS exercised above — but only
+    # ever on a doc whose EXACT tier is EMPTY, so the `if exact:` branch was
+    # never entered. It referred to an undefined `catalog` there, so it raised
+    # NameError on any catalogue with a coincident group, and 51 green
+    # selftests said nothing: every unit was fine, and the one branch no
+    # fixture reached was the broken one. Worse, an uncaught exception exits 1,
+    # which this script's own contract defines as "candidates found", so CI
+    # read the crash as a normal run and the EXACT tier — the tier rule 8c
+    # exists for — went unreported while three groups sat in it.
+    #
+    # ⚠️ Coverage of a FUNCTION is not coverage of its BRANCHES. The fixture
+    # below differs from the one above in one respect only: its two entries
+    # share a coordinate exactly.
+    doc_r = {"tours": [t("r1", "Tower", 10.0, 20.0)],
+             "linkPins": [t("r2", "Tower", 10.0, 20.0)], "places": []}
+    buf = io.StringIO()
+    try:
+        code = report(doc_r, out=buf)
+        crashed = ""
+    except Exception as exc:               # noqa: BLE001 — that is the fault
+        code, crashed = None, f"{type(exc).__name__}: {exc}"
+    check("🔴 report() survives a NON-EMPTY exact tier (it raised NameError)",
+          crashed, "")
+    check("   …and says so in its output",
+          "EXACT" in buf.getvalue() and "EXACT — none" not in buf.getvalue(), True)
+    check("   …and reports findings with exit 1", code, 1)
+
+    buf2 = io.StringIO()
+    doc_empty = {"tours": [t("e1", "Alone", 10.0, 20.0)], "linkPins": [], "places": []}
+    check("report() over a clean catalogue exits 0, not 1",
+          report(doc_empty, out=buf2), 0)
+    check("   …and every tier still prints its 'none' line",
+          all(x in buf2.getvalue() for x in ("NAME — none", "EXACT — none",
+                                             "TIGHT — none", "NEAR — none")), True)
+
     total = len(ran)
     if fails:
         print(f"SELFTEST FAILED — {len(fails)}/{total}")
@@ -743,6 +895,17 @@ def main():
         with open(a.catalog, encoding="utf-8") as fh:
             return report(json.load(fh), a.radius, a.tight,
                           name_radius_m=a.name_radius)
+    except Exception:                      # noqa: BLE001 — see below
+        # 🔴 EXIT 2, NEVER 1. This script's contract is 0 = nothing found,
+        # 1 = candidates found, >=2 = the check could not run, and CI treats 1
+        # as a normal outcome. An uncaught exception exits 1 in Python, so a
+        # CRASH was indistinguishable from a clean report — which is exactly
+        # what happened: `report()` raised NameError the moment an EXACT group
+        # existed, after printing the NAME section, and every run since read as
+        # "candidates found (fine)". The EXACT tier is the one rule 8c was
+        # written for, and it went unreported while three groups sat in it.
+        traceback.print_exc()
+        return 2
     finally:
         run.close()
 

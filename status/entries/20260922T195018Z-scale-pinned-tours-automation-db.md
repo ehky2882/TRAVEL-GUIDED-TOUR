@@ -1,0 +1,3 @@
+# Two follow-ups done. (1) CI's Place candidates job now also runs join-places.py --max-move 100 in report mode and warns on any entry carrying an existing place's name but not in it; tested under bash -e in four cases (real run, crash, silent exit 0, findings) — a crash and a countless exit 0 both fail the job. Rule 8c updated. (2) CAM resolved: Kuma's canopy traces the museum's SOUTH side (Architectural Record, Dezeen, Wallpaper); #1066 had moved the place onto OSM's CAM node on the north (lake) side, taking the audio trigger away from the canopy its caption names. Restored to the Atlas author's original stop on the south side.
+
+_2026-09-22 19:50 UTC · branch `scale-pinned-tours-automation-db`_

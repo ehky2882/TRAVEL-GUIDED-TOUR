@@ -1,3 +1,9 @@
-Filters, rebuilt. The row above the map is now four panels — Tags, Dozents, Format and Price. Choose as many options as you like in each, and every option shows how many results it will leave you with.
+A proper welcome.
 
-General improvements and bug fixes.
+Open Dozent for the first time and the little brass face shows you in: what a dozent is, a few questions about how you like to explore, and six dozents you might like to follow. You can create an account along the way with Apple, Google or email — or skip it. Browsing, playing and downloading never need one.
+
+A guided look around. Five short tips show you the map, search, filters, the list and the tab bar, each one working on the real screen. Missed something? Settings has Take the app tour and Show tips again.
+
+Easier sign-up. The form spots typos in your email, tells you straight away if a username is taken, and offers real places for your home city.
+
+More architects to browse by. Dozens of new architect tags arrived with the newest cities, so you can find buildings by who designed them.

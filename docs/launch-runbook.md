@@ -550,8 +550,23 @@ buttons lead nowhere.
 
 ### Step U6 — Submit
 
-Same as Step 15. `releaseType` stays **MANUAL** unless you decide otherwise, so
-approval does not publish — you press Release.
+🔴 **Only if this update still needs a binary built.** Step 15 runs
+`fastlane release`, whose first real action is `build_ipa` — it compiles a
+**fresh** binary and submits that. If the build is already uploaded and the owner
+has tested it on TestFlight, that lane **throws the tested artifact away and
+submits an untested one**. It also pushes `fastlane/metadata/` with `force: true`
+and no prompt (it skips screenshots, *not* metadata).
+
+**Build already tested → submit it through the App Store Connect REST API**, which
+attaches the build you name and touches nothing else. The six calls, and the
+screenshot check that goes with them, are in
+[`docs/lessons.md`](lessons.md) § *The release lane BUILDS*. Done that way for
+1.1.3 on build 176 (`archive/HANDOFF-260920-submit-1-1-3.md`).
+
+**No build yet → Step 15.**
+
+Either way `releaseType` stays **MANUAL** unless you decide otherwise, so approval
+does not publish — you press Release.
 
 ### Standing gaps that are not blockers
 

@@ -1,0 +1,13 @@
+Little Tree Books and Coffee
+
+Some neighbourhood places are started by businesses. This one was started by a group of parents who needed something good to happen.
+
+You should be on kah vah loh tee Street in koo kah kee, a couple of minutes' walk from the Acropolis Museum, outside number two. Little Tree is the small café that is also a bookshop.
+
+It opened in twenty fifteen, in the middle of Greece's financial crisis, when a lot of the city was closing down rather than opening up. The people behind it were a group of local parents who wanted to make something worthwhile on their own street. It's been a neighbourhood favourite ever since.
+
+Inside, the walls are lined with carefully chosen books, and the kitchen serves food all day, so you can come for breakfast and still be here at tea time. It feels less like a shop than like walking into a friend's front room, if your friend owned rather a lot of books.
+
+koo kah kee has changed a great deal in the last ten years. It's become one of the most popular places for visitors to stay in Athens. Little Tree is a reminder of what was here first: neighbours, and a place for them to sit down together.
+
+From here, the Acropolis Museum is just round the corner. Or head the other way, up towards fee loh pah poo Hill, and look for the stone paths laid by the architect dee mee trees pee kee oh nees in the nineteen fifties. They're one of the great walks in the city.

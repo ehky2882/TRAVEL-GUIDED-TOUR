@@ -14,10 +14,26 @@ on:
 jobs:
   validate-content:
     name: Validate Tours.json
-    runs-on: ubuntu-latest
+    # Pinned: ubuntu-latest became 26.04 on 2026-10-30 and setup-swift@v2
+    # refuses it ("Version 26.04 of Ubuntu is not supported").
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
+      # The runner image ships a Swift toolchain; use it when present.
+      # setup-swift@v2 always refreshes its GPG keys from keyserver.ubuntu.com
+      # and has no option to skip that, so a keyserver outage (2026-11-11)
+      # failed this job on every PR before the validator ran.
+      - name: Find preinstalled Swift
+        id: swift
+        run: |
+          if command -v swift >/dev/null 2>&1; then
+            swift --version
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Set up Swift
+        if: steps.swift.outputs.found != 'true'
         uses: swift-actions/setup-swift@v2
         with:
           swift-version: "5.10"
@@ -69,6 +85,183 @@ jobs:
           if [ "${n:-0}" -gt 0 ]; then
             echo "::warning::$n unplaced pair(s) share a name — docs/places.md Rule 1 says every one is a place. See the job summary."
           fi
+
+      # 🔴 WHY THIS EXISTS. The step above asks which UNPLACED entries belong
+      # together. It cannot see an entry that belongs to a place that ALREADY
+      # exists: the moment a place is minted its site reads as finished. And
+      # join-places.py, which does ask, searches only 25 m by default — so on
+      # 2026-09-22 nine plain joins had sat unseen at 26–96 m (Kaktus Towers,
+      # Guggenheim, Marina City, The Oculus, Kyoto ICC …), every one with the
+      # place's own name. Report-only at 100 m, all guards still on: it proposes
+      # nothing it would refuse to apply. It does not move anything.
+      - name: Scan for entries that should join an existing place
+        run: |
+          # Report mode returns 0 by design, so ANY non-zero exit means the
+          # check could not run — including an uncaught exception, which Python
+          # exits as 1. Never let a crash read as "nothing to join".
+          code=0
+          python3 scripts/join-places.py --max-move 100 --out joins.txt || code=$?
+          if [ "$code" -ne 0 ]; then
+            echo "::error::join-places.py could not run (exit $code)"
+            cat joins.txt || true
+            exit 2
+          fi
+          # 🔴 And a run that exits 0 but never printed its count did not
+          # report — it is COULD NOT VERIFY, not zero.
+          n=$(grep -oE '^[0-9]+ entry\(ies\) to join' joins.txt | grep -oE '^[0-9]+' || true)
+          if [ -z "$n" ]; then
+            echo "::error::join-places.py exited 0 but printed no count — cannot verify"
+            cat joins.txt || true
+            exit 2
+          fi
+          {
+            echo "## Entries that should join an existing place"
+            echo
+            echo '```'
+            sed -n '2,$p' joins.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ "$n" -gt 0 ]; then
+            echo "::warning::$n entr(ies) carry an existing place's name but are not in it — see the job summary; apply with join-places.py --max-move 100 --apply after reading each one."
+          fi
+
+      # The INVERSE question, in the same job because it shares the catalogue
+      # and costs nothing: check-place-candidates asks which entries are close
+      # enough to be one place; this asks why two entries we call by the SAME
+      # NAME sit in different places. Agreement is the norm — 158 of 164 groups
+      # within 100 m — so a disagreement is a real question about one in six.
+      - name: Scan for same-name entries in different places
+        run: |
+          # Same exit contract as above: 1 means "findings to read", which is
+          # not a failure. Read the code DIRECTLY, never through a pipe.
+          code=0
+          python3 scripts/check-same-name.py --out same-name.txt || code=$?
+          if [ "$code" -ge 2 ]; then
+            echo "::error::check-same-name.py could not run (exit $code)"
+            cat same-name.txt || true
+            exit "$code"
+          fi
+          {
+            echo "## Same name, different place"
+            echo
+            echo '```'
+            sed -n '/name(s) used by/,$p' same-name.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          n=$(grep -oE '^[0-9]+ name\(s\) to read' same-name.txt | grep -oE '^[0-9]+' || echo 0)
+          if [ "${n:-0}" -gt 0 ]; then
+            echo "::warning::$n repeated name(s) sit in more than one place. NOT a verdict — an extended site and a chain with two branches both span legitimately; what matters is a group where most members agree and one does not."
+          fi
+
+      # 🔴 The only check in this job that asks NO external source, which is the
+      # point. The two above and the spine audit are all lookups, so they are
+      # silent on the 2,901 entries Wikidata does not know — and that blind spot
+      # is not random: many of those titles are not names at all ("The Million
+      # Dollar Corner", "A Greek Goddess on Fifth Avenue"), so no amount of extra
+      # sources will ever reach them. This one asks the catalogue about itself,
+      # and it is how "Great Court, British Museum" was found sitting 58 km away
+      # in a business park in GREAT NOTLEY, Essex — the entry was UNMATCHED, so
+      # every lookup here had nothing to say about it.
+      # ⚠️ This one is selftested before it is believed, where the two above are
+      # not, and the reason is specific: they compare a coordinate to something
+      # external, so a broken guard shows up as a wrong number. This one derives
+      # its centre, its scale and its threshold from the catalogue itself, and
+      # every way of breaking those produces NO finding rather than a wrong one.
+      # An outlier check that silently flags nothing reads exactly like a clean
+      # catalogue.
+      # 🔴 make-places.py WRITES places into the catalogue, and a place is a
+      # COORDINATE — minting one moves every member onto a single point. Its
+      # selftest was not run anywhere, and on 2026-09-21 the new STALE band in
+      # spine-match.py broke its fixture: every row banded STALE instead of
+      # CONFIRMS, `propose` returned no groups, and the selftest died with an
+      # IndexError instead of a verdict. Nothing noticed for a day. A tool that
+      # edits the catalogue must not be the one tool CI does not check.
+      - name: Selftest the place minter (it writes to the catalogue)
+        run: python3 scripts/make-places.py --selftest
+      - name: Prove every guard in the place joiner can still fail
+        run: python3 scripts/mutate-join-places.py
+
+      # 🔴 Did a batch arrive with its captions still cut at 140?
+      # make-link-pin.py stopped truncating on 2026-09-21, and on 2026-09-22
+      # EIGHTY-SEVEN fresh captions arrived cut anyway: #1054 was built from a
+      # branch taken before the fix, so the batch carried the old code with it.
+      # A pipeline fix does not reach work already in flight, and nothing
+      # noticed until a count was re-derived by hand. This fails the step so
+      # the next one is caught instead of discovered.
+      - name: Selftest the truncation guard before believing it
+        run: python3 scripts/refetch-captions.py --selftest
+      - name: Prove every guard in it can still fail
+        run: python3 scripts/mutate-refetch-captions.py
+      - name: No caption may arrive newly cut at 140 characters
+        run: |
+          # ⚠️ Exit 1 here means NEW truncation and IS a failure — unlike the
+          # reporting checks around it. Known-dead posts are excused by the
+          # cache, so a red step means some checkout is still cutting.
+          code=0
+          python3 scripts/refetch-captions.py --check --out captions-cut.txt || code=$?
+          cat captions-cut.txt
+          if [ "$code" -ne 0 ]; then
+            echo "::error::captions arrived cut at 140 — rebase the branch onto a main that has make-link-pin.py's fix, then re-run the refetch"
+            exit 1
+          fi
+
+      # 🔴 The creator's own location line, checked against the pin's city.
+      # Only worth running since the caption recovery: before it, 13 captions
+      # carried a usable location and the check was too noisy to automate; now
+      # 914 do. Selftested and mutation-tested first, for the same reason as
+      # the outlier check below — every way of breaking it produces silence.
+      - name: Selftest the caption-locality check before believing it
+        run: python3 scripts/check-caption-address.py --selftest
+      - name: Prove every guard in it can still fail
+        run: python3 scripts/mutate-check-caption-address.py
+      - name: Scan for captions naming a different city
+        run: |
+          # 1 means "findings to read", not a failure — most of what it finds
+          # is an adjacent town or a street that shares a city's name.
+          code=0
+          python3 scripts/check-caption-address.py --out caption-city.txt || code=$?
+          if [ "$code" -ge 2 ]; then
+            echo "::error::check-caption-address.py could not run (exit $code)"
+            cat caption-city.txt || true
+            exit "$code"
+          fi
+          {
+            echo "## Caption names a different city"
+            echo
+            echo '```'
+            sed -n '/captions carry a location marker/,$p' caption-city.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Selftest the outlier check before believing a number it prints
+        run: python3 scripts/check-city-outliers.py --selftest
+      - name: Prove every guard in it can still fail
+        run: python3 scripts/mutate-check-city-outliers.py
+      - name: Scan for entries far from their own city
+        run: |
+          # Same exit contract: 1 means "findings to read", not a failure. This
+          # one especially — most of what it flags is CORRECT (Cape Point is
+          # 48 km from Cape Town), so it must never gate a merge.
+          code=0
+          python3 scripts/check-city-outliers.py --out city-outliers.txt || code=$?
+          if [ "$code" -ge 2 ]; then
+            echo "::error::check-city-outliers.py could not run (exit $code)"
+            cat city-outliers.txt || true
+            exit "$code"
+          fi
+          {
+            echo "## Far from its own city"
+            echo
+            echo '```'
+            sed -n '/entries scored against/,$p' city-outliers.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # fetch-cover.py downloads nothing in CI — its selftest injects the fetcher,
+      # so this proves the exit contract (one failed cover -> 2, nothing to fetch
+      # -> 2) without touching TikTok or Instagram.
+      - name: Selftest the cover-frame fetcher
+        run: python3 scripts/fetch-cover.py --selftest
 
   audit-board:
     name: Audit board

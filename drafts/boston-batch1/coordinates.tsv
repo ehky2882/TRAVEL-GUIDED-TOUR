@@ -1,0 +1,30 @@
+01	massachusetts-state-house	42.358602	-71.063875	60	architecture	building centroid (OSM way 29718019); script stands on the Common's Beacon St path facing north, ~70 m
+02	boston-common	42.355467	-71.066412	100	natureAndParks	Soldiers and Sailors Monument on Flagstaff Hill (node 358277245), where the script stands; inside the Common
+03	old-state-house	42.358731	-71.057468	40	history	building (way 29608515); script on State St below Devonshire facing the east end
+04	faneuil-hall	42.360034	-71.056234	50	history	building (way 29551702); script in Dock Square on the city side
+05	acorn-street-louisburg-square	42.358444	-71.068764	50	architecture	Louisburg Square (way 405903268); script at the Mount Vernon St end looking north
+06	paul-revere-house	42.363738	-71.053683	30	history	building (way 240376785) in North Square
+07	old-north-church	42.366316	-71.054448	60	sacredSites	church (way 29650592); script at the Unity St end of the Paul Revere Mall facing the church's back
+08	bunker-hill-monument	42.376352	-71.060767	60	history	obelisk (way 212124093) in Monument Square
+09	uss-constitution	42.372439	-71.056546	60	history	the ship at Pier One (way 166151194); OSM's address label says Cambridge, the point is Charlestown Navy Yard
+10	boston-public-garden	42.354128	-71.069899	60	natureAndParks	the lagoon foot bridge (way 822707193), where the script stands
+11	copley-square	42.349985	-71.076544	70	architecture	square (way 1239199995); script at the central fountain
+12	fenway-park	42.346461	-71.097100	120	culturalHeritage	stadium relation 11188464; script on the Jersey St sidewalk outside
+13	granary-burying-ground	42.357133	-71.061785	40	history	burying ground (way 29861355); script at the Tremont St gateway
+14	park-street-church	42.356858	-71.062042	40	sacredSites	church (way 240317867); script at Park x Tremont
+15	old-south-meeting-house	42.356983	-71.058377	40	history	building (node 367781324); script at Washington x Milk
+16	kings-chapel	42.358013	-71.060027	40	sacredSites	church (way 29551954); script at Tremont x School
+17	boston-city-hall-plaza	42.360323	-71.059098	90	architecture	plaza (node 7335431272); script on the Congress St side facing City Hall
+18	quincy-market	42.360208	-71.054913	60	history	market hall (way 29573399); script at its east end looking back along it
+19	shaw-54th-memorial	42.357481	-71.063501	30	history	memorial (node 358276404) at Beacon x Park
+20	african-meeting-house	42.359956	-71.065471	30	culturalHeritage	building (way 405880946) in Smith Court
+21	charles-street-beacon-hill	42.357781	-71.070284	40	history	Charles St x Mount Vernon St intersection (ways 825494584 / 825494585), where the script stands
+22	hanover-street-north-end	42.364322	-71.053916	50	culturalHeritage	Hanover St x Prince St intersection beside St Leonard's (ways 109301987 / 8643944), where the script stands
+23	copps-hill-burying-ground	42.367366	-71.055912	50	history	burying ground (way 29837117); script at its northwest edge above Snowhill St
+24	greenway-north-end	42.362281	-71.055680	60	natureAndParks	North End Parks (node 5922346085); script under the pergola facing Hanover St
+25	long-wharf-boston	42.360316	-71.048073	80	history	Long Wharf (way 29861778); script at the far end by the compass rose
+26	commonwealth-avenue-mall	42.353618	-71.071715	60	natureAndParks	east end of the Mall polygon (way 820334088) at Arlington St, where the script stands looking west
+27	boston-marathon-finish-line	42.349751	-71.078616	40	culturalHeritage	finish-line node 7644779165 on Boylston St
+28	christian-science-plaza	42.344457	-71.083372	120	sacredSites	plaza (relation 1723651); script at the Huntington Ave end of the reflecting pool
+29	chinatown-gate-boston	42.351189	-71.059752	50	culturalHeritage	gate (way 212123982, OSM name "China Trade Gate"); script across Surface Rd on the Greenway side
+30	harvard-yard	42.374766	-71.118519	50	history	Johnston Gate: the Harvard Yard boundary (relation 17336107) at Mass Ave, 15 m from the 'Mass Ave @ Johnston Gate' stop

@@ -1,0 +1,36 @@
+W1-0	Intro	39.947095	-75.152708	50	philadelphia_fifth_square_walk_multistop_00_intro.txt	reuses single 12 `washington-square-philadelphia` exactly
+W1-1	Washington Square	39.947095	-75.152708	50	philadelphia_fifth_square_walk_multistop_01_washington_square.txt	reuses single 12 `washington-square-philadelphia` exactly
+W1-2	Mother Bethel AME	39.943325	-75.151761	40	philadelphia_fifth_square_walk_multistop_02_mother_bethel.txt	reuses single 17 `mother-bethel-ame-church` exactly
+W1-3	The Lombard and Pine blocks	39.943534	-75.148765	40	philadelphia_fifth_square_walk_multistop_03_lombard_pine_blocks.txt	new: Pine St x S 4th St, the segment's turn (OSM Pine St geometry; Lombard x 4th is 39.942651,-75.148962, one block south). Script walks east on Lombard, north on 4th, east on Pine
+W1-4	Head House Square	39.942647	-75.145359	50	philadelphia_fifth_square_walk_multistop_04_head_house_square.txt	reuses single 18 `head-house-square` exactly
+W1-5	Penn's Landing	39.943521	-75.140996	60	philadelphia_fifth_square_walk_multistop_05_penns_landing.txt	reuses single 19 `penns-landing` exactly
+W2-0	Intro	39.955658	-75.150435	70	philadelphia_broad_and_market_walk_multistop_00_intro.txt	reuses single 27 `franklin-square` exactly
+W2-1	Franklin Square	39.955658	-75.150435	70	philadelphia_broad_and_market_walk_multistop_01_franklin_square_corner.txt	reuses single 27 `franklin-square` exactly
+W2-2	Chinatown Friendship Gate	39.953719	-75.156265	30	philadelphia_broad_and_market_walk_multistop_02_chinatown_gate.txt	reuses single 26 `chinatown-friendship-gate` exactly
+W2-3	Reading Terminal Market	39.953144	-75.159049	50	philadelphia_broad_and_market_walk_multistop_03_reading_terminal.txt	reuses single 08 `reading-terminal-market` exactly
+W2-4	City Hall, the courtyard	39.952399	-75.162989	70	philadelphia_broad_and_market_walk_multistop_04_city_hall_courtyard.txt	reuses single 06 `philadelphia-city-hall` exactly
+W2-5	Dilworth Park	39.952885	-75.164653	50	philadelphia_broad_and_market_walk_multistop_05_dilworth_connective.txt	new: Dilworth Park (OSM way 410095875), outside City Hall's west portal
+W2-6	LOVE Park, from behind	39.954149	-75.165745	50	philadelphia_broad_and_market_walk_multistop_06_love_park_from_behind.txt	reuses single 29 `love-park` exactly
+W2-7	One Liberty Place, at the base	39.952579	-75.168134	60	philadelphia_broad_and_market_walk_multistop_07_one_liberty_place_base.txt	reuses single 30 `one-liberty-place` exactly
+W2-8	Rittenhouse Square	39.949466	-75.171890	70	philadelphia_broad_and_market_walk_multistop_08_rittenhouse_square_close.txt	reuses single 09 `rittenhouse-square` exactly
+W3-0	Intro	39.957937	-75.170592	60	philadelphia_the_boulevard_walk_multistop_00_intro.txt	reuses single 11 `logan-square` exactly
+W3-1	Logan Square	39.957937	-75.170592	60	philadelphia_the_boulevard_walk_multistop_01_logan_square.txt	reuses single 11 `logan-square` exactly
+W3-2	The Rodin gate	39.961929	-75.173951	50	philadelphia_the_boulevard_walk_multistop_02_rodin_gate.txt	reuses single 24 `rodin-museum` exactly
+W3-3	The steps	39.964945	-75.180080	70	philadelphia_the_boulevard_walk_multistop_03_the_steps.txt	reuses single 07 `philadelphia-museum-of-art-steps` exactly
+W3-4	The Water Works	39.966189	-75.183525	60	philadelphia_the_boulevard_walk_multistop_04_water_works.txt	reuses single 22 `fairmount-water-works` exactly
+W3-5	Boathouse Row	39.969414	-75.187107	100	philadelphia_the_boulevard_walk_multistop_05_boathouse_row.txt	reuses single 23 `boathouse-row` exactly
+W4-0	Intro	39.950730	-75.143880	40	philadelphia_brick_walk_multistop_00_intro.txt	reuses single 05 `christ-church-philadelphia` exactly
+W4-1	Christ Church	39.950730	-75.143880	40	philadelphia_brick_walk_multistop_01_christ_church.txt	reuses single 05 `christ-church-philadelphia` exactly
+W4-2	Elfreth's Alley	39.952772	-75.142381	40	philadelphia_brick_walk_multistop_02_elfreths_alley.txt	reuses single 04 `elfreths-alley` exactly
+W4-3	Betsy Ross House	39.952285	-75.144625	30	philadelphia_brick_walk_multistop_03_betsy_ross_house.txt	reuses single 14 `betsy-ross-house` exactly
+W4-4	The Arch Street blocks	39.952284	-75.146022	40	philadelphia_brick_walk_multistop_04_arch_street_blocks.txt	new: Arch St midway between 3rd (39.952187,-75.145246) and 4th (39.952380,-75.146797), OSM way intersections; script walks Arch west from 3rd toward 4th
+W4-5	The Meeting House and the Burial Ground	39.951776	-75.148134	40	philadelphia_brick_walk_multistop_05_burial_ground_meeting_house.txt	reuses single 28 `christ-church-burial-ground` exactly
+W4-6	Franklin Court	39.949638	-75.146596	40	philadelphia_brick_walk_multistop_06_franklin_court.txt	reuses single 10 `franklin-court` exactly
+W4-7	Race Street Pier	39.953099	-75.138665	60	philadelphia_brick_walk_multistop_07_race_street_pier.txt	reuses single 20 `race-street-pier` exactly
+W5-0	Intro	39.948142	-75.147215	35	philadelphia_house_that_isnt_there_walk_multistop_00_intro.txt	reuses single 13 `carpenters-hall` exactly
+W5-1	Carpenters' Hall	39.948142	-75.147215	35	philadelphia_house_that_isnt_there_walk_multistop_01_carpenters_hall.txt	reuses single 13 `carpenters-hall` exactly
+W5-2	Second Bank of the United States	39.948572	-75.148410	35	philadelphia_house_that_isnt_there_walk_multistop_02_second_bank.txt	reuses single 16 `second-bank-of-the-united-states` exactly
+W5-3	Independence Hall	39.948887	-75.150026	40	philadelphia_house_that_isnt_there_walk_multistop_03_independence_hall.txt	reuses single 01 `independence-hall` exactly
+W5-4	Congress Hall	39.948981	-75.150645	25	philadelphia_house_that_isnt_there_walk_multistop_04_congress_hall.txt	reuses single 15 `congress-hall` exactly
+W5-5	The Liberty Bell	39.949954	-75.150205	30	philadelphia_house_that_isnt_there_walk_multistop_05_liberty_bell.txt	reuses single 02 `liberty-bell-center` exactly
+W5-6	Where the Door Was	39.950465	-75.150089	25	philadelphia_house_that_isnt_there_walk_multistop_06_presidents_house_where_the_door_was.txt	reuses single 03 `presidents-house-site` exactly
