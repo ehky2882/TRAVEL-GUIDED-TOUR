@@ -1,0 +1,46 @@
+# 24 · Palacio de las Dueñas
+
+- **Category:** Visit
+- **Google Maps name:** Palacio de las Dueñas
+- **Coordinates (WGS-84):** 37.395381, -5.989412
+- **Length:** 304 words, about 120 seconds at a natural pace
+
+## Script (clean)
+
+The great Spanish poet Antonio Machado was born in this house, and he never forgot its lemon tree.
+
+You're on Calle Dueñas, a narrow street north of the Setas. The palace hides behind a long wall with an entrance arch. Step through it and there's a garden to cross before you reach the house itself.
+
+The palace was built in the fifteenth and sixteenth centuries for the Pineda family, one of Seville's old patrician lines. It passed by marriage, in sixteen twelve, to the House of Alba, the great ducal family of Spain, and it has belonged to them ever since. Its name comes from a convent next door, Santa María de las Dueñas, demolished in eighteen sixty-eight.
+
+The style is a mixture, Gothic and Mudéjar with Renaissance touches, round an arcaded main patio. The family's collection of art and furniture, more than fourteen hundred pieces, fills the rooms.
+
+Now, Machado. In the nineteenth century parts of the palace were let out, and Machado's father lived here as a tenant and administrator. The poet was born here in eighteen seventy-five and spent his first eight years in these gardens. Decades later, in nineteen twelve, he wrote one of the best-known lines in Spanish poetry: my childhood is memories of a patio in Seville, and a bright orchard where the lemon tree ripens.
+
+Look for the lemon tree. It's the reason this house is famous to people who will never own a palace.
+
+And here's the thing. A ducal family's great house, full of masterpieces, and its most famous resident was the tenant's little boy.
+
+*[beat]*
+
+When you leave, walk south for five minutes to the Setas, and climb to the walkway on top. From there you can look back over these rooftops and try to pick out the palace garden.
+
+## Respellings used in the TTS-safe version
+
+| As written | TTS-safe |
+|---|---|
+| Calle | Kah yeh |
+| Dueñas | Dwen yahs |
+| Machado | Mah chah doh |
+| María | Mah ree ah |
+| Mudéjar | Moo deh har |
+| Palacio | Pah lah see oh |
+| Pineda | Pee neh dah |
+| Setas | Seh tahs |
+
+`[beat]` is removed in the TTS-safe version and replaced with a paragraph break.
+
+## Sources read before writing
+
+- https://www.lasduenas.es/en/historia
+- https://www.lasduenas.es/en/

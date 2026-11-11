@@ -1,0 +1,48 @@
+# 25 · Palacio de Lebrija
+
+- **Category:** Visit
+- **Google Maps name:** Palacio de Lebrija
+- **Coordinates (WGS-84):** 37.389953, -5.993269
+- **Length:** 312 words, about 120 seconds at a natural pace
+
+## Script (clean)
+
+In most palaces you look at the walls. In this one, look down. You're walking on Rome.
+
+You're on Calle Cuna, a narrow shopping street that runs parallel to Calle Sierpes. Palacio de Lebrija is at number eight. From the street it's a plain doorway between shops, with the courtyard beyond.
+
+The house is old, but its character was created by one remarkable woman. María Regla Manjón y Mergelina, Countess of Lebrija, bought it in nineteen hundred and one, and with an architect, José Sáez y López, she turned it into the setting for her collection of antiquities. She was an archaeologist by passion, and she furnished her house with what she found.
+
+Have a look at the floor of the main courtyard first. That's a Roman mosaic, from the second or third century, found on the countess's own land outside the city. In the centre the god Pan plays his pipes, in love with the nymph Galatea. Around him, eight medallions tell the love affairs of Zeus, and in the corners are the four seasons. It's a remarkable thing to find in a private house, and you can stand right beside it.
+
+Then look at the walls. Sixteenth-century tiles run all around the courtyard, some of them rescued from a ruined convent. Look up, and there's a sixteenth-century carved wooden ceiling, brought here from another palace.
+
+That's the interesting bit. This is a house made almost entirely of pieces of other places: a Roman villa's floor, a convent's tiles, a palace's ceiling. In another country that would be a scandal. Here it's a portrait of one woman's taste, and an archive of a vanished Seville.
+
+*[beat]*
+
+When you come out, walk the length of Calle Cuna. It's famous for its shops selling flamenco dresses, and the windows during the weeks before the April Fair are quite a sight.
+
+## Respellings used in the TTS-safe version
+
+| As written | TTS-safe |
+|---|---|
+| Calle | Kah yeh |
+| Cuna | Koo nah |
+| Galatea | Gah lah tay ah |
+| José | Hoh seh |
+| Lebrija | Leh bree hah |
+| López | Loh pess |
+| Manjón | Mahn hon |
+| María | Mah ree ah |
+| Mergelina | Mair heh lee nah |
+| Palacio | Pah lah see oh |
+| Regla | Reh glah |
+| Sierpes | See air pess |
+| Sáez | Sah ess |
+
+`[beat]` is removed in the TTS-safe version and replaced with a paragraph break.
+
+## Sources read before writing
+
+- https://es.wikipedia.org/wiki/Palacio_de_la_Condesa_de_Lebrija

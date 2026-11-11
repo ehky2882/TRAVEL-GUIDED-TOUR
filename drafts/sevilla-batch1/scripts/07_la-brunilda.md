@@ -1,0 +1,43 @@
+# 07 · La Brunilda
+
+- **Category:** Dine
+- **Google Maps name:** La Brunilda Tapas
+- **Coordinates (WGS-84):** 37.388319, -5.999398
+- **Length:** 292 words, about 120 seconds at a natural pace
+
+## Script (clean)
+
+Find the blue gate. That's most of the battle.
+
+You're on Calle Galera, a short cobbled street in the Arenal, between the cathedral and the river. La Brunilda is behind a blue entrance, and inside is one modest room with high ceilings, a bar and a handful of tables. If there's a queue outside before the doors open, that's normal.
+
+The Arenal was once the city's waterfront, a district of warehouses, sailors and the people who served them. Many of its old buildings are tall, plain and practical, with high ceilings to keep the heat off. This is one of them, and the room is simple and modern, filled with the noise of a full house.
+
+What arrives is a newer kind of Seville tapa. A risotto of mushrooms made creamy with Idiazábal, a smoked sheep's cheese from the Basque Country. Duck confit with a spiced carrot cream and pistachios. These are small plates that borrow from all over, and they're cooked with real care.
+
+Have a look round at who's eating. On a good night it's a mixture of locals and visitors, and that's harder to manage than it sounds in a city this popular. Brunilda has done it by keeping the room small and the prices reasonable, and by not trying to be anything other than a very good bar.
+
+And here's the thing. Seville is often described as a city that does tapas the old way. That's true, but it isn't the whole story. Rooms like this one are where the city is quietly writing the next chapter.
+
+*[beat]*
+
+From here, head west to the river. In a few minutes you'll reach the Puente de Triana, the old iron bridge. Cross it at sunset and look back.
+
+## Respellings used in the TTS-safe version
+
+| As written | TTS-safe |
+|---|---|
+| Arenal | Ah reh nahl |
+| Brunilda | Broo neel dah |
+| Calle | Kah yeh |
+| Galera | Gah leh rah |
+| Idiazábal | Ee dee ah sah bahl |
+| Puente | Pwen teh |
+| Triana | Tree ah nah |
+
+`[beat]` is removed in the TTS-safe version and replaced with a paragraph break.
+
+## Sources read before writing
+
+- https://www.timeout.com/es/sevilla/bares-y-pubs/la-brunilda
+- https://tablejourney.com/spain/seville/restaurants/la-brunilda/

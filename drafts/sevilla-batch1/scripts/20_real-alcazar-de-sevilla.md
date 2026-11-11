@@ -1,0 +1,56 @@
+# 20 · Real Alcázar de Sevilla
+
+- **Category:** Visit
+- **Google Maps name:** Real Alcázar de Sevilla
+- **Coordinates (WGS-84):** 37.38321, -5.990183
+- **Length:** 460 words, about 180 seconds at a natural pace
+
+## Script (clean)
+
+A Christian king built this palace, and across its front he had an Arabic inscription carved: there is no conqueror but God.
+
+You're in the Patio de la Montería, the big open courtyard just inside the Lion Gate. Face the far end. The tall front in front of you, with its carved plaster, its slender columns and its deep timber eaves, is the façade of the palace of King Pedro the First. If you can see the overhanging wooden roof, like the brim of a hat, you're looking at the right thing.
+
+Some history first, briefly. There was a fortress here in the tenth century, when Seville was ruled from Córdoba. The Almohads, the Berber dynasty from North Africa, made it their great palace in the twelfth century. After the Christian conquest in twelve forty-eight, the kings of Castile moved in, and they never really left. The royal family still uses the upper floors when it visits Seville.
+
+Now have a look at that façade. It was built for Pedro the First in the thirteen sixties. A Latin inscription gives the year thirteen sixty-four, and inside, in the Hall of Ambassadors, an Arabic one gives thirteen sixty-six. Pedro was a Christian king of Castile, but his palace is in the style of the Muslim palaces of Granada, and some of the craftsmen were very likely sent by the Muslim sultan of Granada, Muhammad the Fifth, his ally. The carpenters for the great doors came from Toledo.
+
+Look for the blue tiled band and the carved lettering above the doorway. Among the texts runs the motto of the Nasrid kings of Granada, the same words you'll find all over the Alhambra: there is no conqueror but God.
+
+And here's the thing. We tend to describe the history of Spain as a clean line: Muslim, then Christian. This wall won't have it. A Christian king, a Muslim sultan's craftsmen and the Arabic language, all working together on one front door. It's the style we call Mudéjar, and it was the court style of medieval Castile.
+
+Go inside to the Patio de las Doncellas, the Courtyard of the Maidens. The lower arcades are Pedro's. The upper storey was added two hundred years later for the emperor Charles the Fifth, in a Renaissance style. Between two thousand and two and two thousand and five, archaeologists lifted the later marble paving and found Pedro's sunken garden beneath it, and it was put back.
+
+*[beat]*
+
+Before you leave, go down into the gardens and find the Baños de Doña María de Padilla, the long underground pool with Gothic vaulting. It's named after the king's mistress, though it was there before her. Fans of Game of Thrones may recognise the gardens as Dorne.
+
+## Respellings used in the TTS-safe version
+
+| As written | TTS-safe |
+|---|---|
+| Alcázar | Al kah sar |
+| Alhambra | Al ahm brah |
+| Almohads | Al moh hads |
+| Baños | Bahn yos |
+| Córdoba | Kor doh bah |
+| Doncellas | Don seh yahs |
+| Dorne | Dorn |
+| Doña | Don yah |
+| Granada | Grah nah dah |
+| María | Mah ree ah |
+| Montería | Mon teh ree ah |
+| Mudéjar | Moo deh har |
+| Muhammad the Fifth | Moo hah mad the Fifth |
+| Nasrid | Nass rid |
+| Padilla | Pah dee yah |
+| Pedro | Peh droh |
+| Real | Ray ahl |
+| Sevilla | Seh vee yah |
+| Toledo | Toh leh doh |
+
+`[beat]` is removed in the TTS-safe version and replaced with a paragraph break.
+
+## Sources read before writing
+
+- https://en.wikipedia.org/wiki/Alc%C3%A1zar_of_Seville

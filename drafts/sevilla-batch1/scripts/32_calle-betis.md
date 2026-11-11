@@ -1,0 +1,53 @@
+# 32 · Calle Betis
+
+- **Category:** Observe
+- **Google Maps name:** Calle Betis
+- **Coordinates (WGS-84):** 37.383296, -5.999693
+- **Length:** 326 words, about 130 seconds at a natural pace
+
+## Script (clean)
+
+The best view of Seville is from the other side of the river. This street has it.
+
+Calle Betis runs along the Triana bank of the Guadalquivir, from the Puente de Triana south towards the Plaza de Cuba. You should be on the riverside of the street, with a row of brightly painted houses behind you, and the river and the old city spread out in front.
+
+The name is Roman. Baetis was what the Romans called the Guadalquivir, and the city council gave the street that name in eighteen fifty-nine. Before that it had simply been the river street: calle del Río, Vera del Río, Orilla del Río. Different words, same idea.
+
+For most of its history this bank was hard to live on. The river flooded. From seventeen eighty-seven a great embankment was built against it, which is why the street now sits well above the water. Once the iron bridge opened in eighteen fifty-two, the street filled up with houses and became the face of Triana.
+
+Now look across the river. From left to right, you should be able to pick out the white and ochre ring of the Maestranza bullring, the Giralda above the rooftops, the church of the Hospital de la Caridad, and the Torre del Oro. On a clear day, look south for the towers of the Plaza de España.
+
+And here's the thing. Seville built its monuments facing the river, as a show for anyone arriving by boat. Triana, the working quarter of sailors and potters, got the best seat in the house, and kept it.
+
+*[beat]*
+
+On a summer evening in late July, this end of the street fills with stalls and lights for the Velá de Santa Ana, Triana's own festival, which may go back to the Middle Ages. Any other time, just find a bar with a riverside table and wait for the sun to go down behind you and light up the city.
+
+## Respellings used in the TTS-safe version
+
+| As written | TTS-safe |
+|---|---|
+| Baetis | Bye tis |
+| Betis | Beh tees |
+| Calle | Kah yeh |
+| Caridad | Kah ree dahd |
+| Cuba | Koo bah |
+| España | Ess pahn yah |
+| Giralda | Hee rahl dah |
+| Guadalquivir | Gwah dahl kee veer |
+| Maestranza | Mah ess trahn sah |
+| Orilla | Oh ree yah |
+| Oro | Oh roh |
+| Puente | Pwen teh |
+| Río | Ree oh |
+| Torre | Toh reh |
+| Triana | Tree ah nah |
+| Velá | Veh lah |
+| Vera | Veh rah |
+| calle | kah yeh |
+
+`[beat]` is removed in the TTS-safe version and replaced with a paragraph break.
+
+## Sources read before writing
+
+- https://es.wikipedia.org/wiki/Calle_Betis

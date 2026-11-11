@@ -1,0 +1,50 @@
+# 19 · Calle Sierpes
+
+- **Category:** Shop
+- **Google Maps name:** Calle Sierpes
+- **Coordinates (WGS-84):** 37.391094, -5.994567
+- **Length:** 333 words, about 130 seconds at a natural pace
+
+## Script (clean)
+
+In summer, this street gets a roof.
+
+You're on Calle Sierpes, the long, pedestrian shopping street that runs north from the Plaza de San Francisco and the town hall up to La Campana. It's narrow, slightly curving and lined with shops on both sides. If you can see old shopfronts, café tables and a crowd ambling in both directions, you're there.
+
+Have a look up first. In the hottest months, great canvas awnings, called toldos, are stretched across the street from roof to roof, shading the whole length of it. It's a very simple idea and an old one. Sevillians have been pulling shade across their streets for centuries, and on an August afternoon it is noticeably cooler under the toldos than out in the sun.
+
+Then look for the site of the Cárcel Real, the Royal Prison, which stood on this street until the nineteenth century. Its most famous inmate was Miguel de Cervantes. He was locked up here in the fifteen nineties, over the accounts from his work as a tax collector. In the prologue to Don Quixote, he describes the book as conceived in a prison, and Seville has always been happy to believe it was this one. Plaques recall it near the southern end of the street, by the little Calle Entrecárceles, the street "between prisons".
+
+What you're walking down now is a different sort of Seville. Hat shops, fan makers, shoe shops, pastry shops, many of them family businesses that have been here for generations.
+
+And that's the interesting bit. This was the city's high street when Seville was the gateway to the Americas, and it still works as one. It's crowded, practical and a bit shabby in places, and it's alive.
+
+*[beat]*
+
+Walk up to the top of the street, to La Campana. On the corner is the Confitería La Campana, founded in eighteen eighty-five and still run by the same family. Go in for a pastry and have a look at the old interior.
+
+## Respellings used in the TTS-safe version
+
+| As written | TTS-safe |
+|---|---|
+| Calle | Kah yeh |
+| Campana | Kahm pah nah |
+| Cervantes | Ser vahn tess |
+| Confitería | Kon fee teh ree ah |
+| Cárcel | Kar sel |
+| Entrecárceles | En treh kar seh less |
+| Miguel | Mee gell |
+| Quixote | Kee hoh teh |
+| Real | Ray ahl |
+| Sierpes | See air pess |
+| café | caffay |
+| toldos | tol dohs |
+
+`[beat]` is removed in the TTS-safe version and replaced with a paragraph break.
+
+## Sources read before writing
+
+- https://es.wikipedia.org/wiki/Calle_Sierpes
+- https://www.barcelo.com/guia-turismo/es/espana/sevilla/que-ver/calle-sierpes-sevilla/
+- https://sevillasecreta.co/calle-entrecarceles/
+- https://www.timeout.com/es/sevilla/tiendas/confiteria-la-campana

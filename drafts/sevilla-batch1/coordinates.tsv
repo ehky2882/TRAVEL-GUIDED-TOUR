@@ -1,0 +1,38 @@
+n	slug	google_maps_name	lat	lon	category
+01	hotel-alfonso-xiii	Hotel Alfonso XIII, a Luxury Collection Hotel, Seville	37.381516	-5.992719	Stay
+02	corral-del-rey	Corral del Rey	37.389431	-5.990357	Stay
+03	hotel-mercer-sevilla	Hotel Mercer Sevilla	37.387564	-5.997425	Stay
+04	palacio-de-villapanes	Hotel CoolRooms Palacio Villapanés	37.391578	-5.986392	Stay
+05	casa-1800	Hotel Casa 1800 Sevilla	37.385853	-5.990801	Stay
+06	eslava	Eslava	37.397548	-5.996924	Dine
+07	la-brunilda	La Brunilda Tapas	37.388319	-5.999398	Dine
+08	bodeguita-casablanca	Bodeguita Casablanca	37.383728	-5.994098	Dine
+09	las-golondrinas	Bar Las Golondrinas	37.384866	-6.005512	Dine
+10	abantal	Abantal	37.387929	-5.983713	Dine
+11	el-rinconcillo	El Rinconcillo	37.39334	-5.988294	Drink
+12	casa-morales	Casa Morales	37.386527	-5.994614	Drink
+13	bar-garlochi	Garlochí	37.390488	-5.989532	Drink
+14	bar-alfalfa	Bar Alfalfa	37.389982	-5.990161	Drink
+15	mercado-de-feria	Mercado de Feria	37.399474	-5.991191	Drink
+16	ceramica-santa-ana	Cerámica Santa Ana	37.385356	-6.00393	Shop
+17	populart	Populart	37.385919	-5.990579	Shop
+18	mercado-de-triana	Mercado de Triana	37.385749	-6.00355	Shop
+19	calle-sierpes	Calle Sierpes	37.391094	-5.994567	Shop
+20	real-alcazar-de-sevilla	Real Alcázar de Sevilla	37.38321	-5.990183	Visit
+21	setas-de-sevilla	Setas de Sevilla	37.393119	-5.991853	Visit
+22	plaza-de-espana	Plaza de España	37.376974	-5.986939	Visit
+23	casa-de-pilatos	Casa de Pilatos	37.390239	-5.987249	Visit
+24	palacio-de-las-duenas	Palacio de las Dueñas	37.395381	-5.989412	Visit
+25	palacio-de-lebrija	Palacio de Lebrija	37.389953	-5.993269	Visit
+26	hospital-de-los-venerables	Hospital de los Venerables	37.38524	-5.990332	Visit
+27	hospital-de-la-santa-caridad	Hospital de la Santa Caridad	37.384081	-5.995231	Visit
+28	centro-andaluz-de-arte-contemporaneo	Centro Andaluz de Arte Contemporáneo	37.398068	-6.007729	Visit
+29	pabellon-de-la-navegacion	Pabellón de la Navegación	37.394268	-6.007796	Visit
+30	caixaforum-sevilla	CaixaForum Sevilla	37.393635	-6.009293	Visit
+31	puente-de-isabel-ii	Puente de Isabel II	37.386277	-6.00243	Observe
+32	calle-betis	Calle Betis	37.383296	-5.999693	Observe
+33	parque-de-maria-luisa	Parque de María Luisa	37.374771	-5.988794	Observe
+34	alameda-de-hercules	Alameda de Hércules	37.398883	-5.993735	Observe
+35	iglesia-de-san-luis-de-los-franceses	Iglesia de San Luis de los Franceses	37.39836	-5.988269	Observe
+36	plaza-del-salvador	Plaza del Salvador	37.390021	-5.993103	Observe
+37	puente-del-alamillo	Puente del Alamillo	37.413359	-5.990634	Observe

@@ -1,0 +1,49 @@
+# 22 · Plaza de España
+
+- **Category:** Visit
+- **Google Maps name:** Plaza de España
+- **Coordinates (WGS-84):** 37.376974, -5.986939
+- **Length:** 374 words, about 150 seconds at a natural pace
+
+## Script (clean)
+
+This was built for a fair that lasted barely a year. Nearly a century on, it's still where Seville comes to show off.
+
+You're in the Plaza de España, on the edge of the Parque de María Luisa. In front of you, a vast half-circle of red brick and tiles, with a tower at each end. Between you and the building runs a curving canal, crossed by four bridges, with a fountain in the middle of the square.
+
+It was designed by the Sevillian architect Aníbal González for the Ibero-American Exposition of nineteen twenty-nine, the fair at which Spain tried to embrace its former colonies in the Americas. The half-circle shape is the clue. It's a pair of open arms, held out across the Atlantic.
+
+Have a look at the bridges. There are four, and they stand for the four old kingdoms that made Spain: Castile, León, Aragón and Navarre. Their railings and lamps are made of glazed ceramic, the blue and yellow of Triana.
+
+Now walk along the foot of the building. Set into the wall is a series of tiled alcoves, one for each of the provinces of Spain, arranged in alphabetical order. Each has a tiled map, a scene from that province's history, and a bench. Spanish visitors look for their home province and take a photograph sitting in it. Have a look, and you'll probably see someone doing just that.
+
+The style is a mixture: Renaissance, Baroque, and Neo-Mudéjar, the revival of the medieval brick and tile work you can see in the Alcázar. Critics have called it pastiche. Film-makers have loved it. It played Cairo in Lawrence of Arabia and the planet Naboo in Star Wars.
+
+And here's the thing. Most exhibition buildings are pulled down when the fair is over. This one stayed, was restored between two thousand and seven and two thousand and ten, and has become the city's favourite public space. Whatever the critics say, the people of Seville have voted with their feet.
+
+*[beat]*
+
+From here, walk south through the Parque de María Luisa to the Plaza de América. It's another of Aníbal González's set pieces for nineteen twenty-nine, with three pavilions, one of them Mudéjar, and a flock of white doves.
+
+## Respellings used in the TTS-safe version
+
+| As written | TTS-safe |
+|---|---|
+| Alcázar | Al kah sar |
+| América | Ah meh ree kah |
+| Aníbal | Ah nee bahl |
+| Aragón | Ah rah gon |
+| España | Ess pahn yah |
+| González | Gon sah less |
+| León | Leh on |
+| Luisa | Loo ee sah |
+| María | Mah ree ah |
+| Mudéjar | Moo deh har |
+| Parque | Par keh |
+| Triana | Tree ah nah |
+
+`[beat]` is removed in the TTS-safe version and replaced with a paragraph break.
+
+## Sources read before writing
+
+- https://en.wikipedia.org/wiki/Plaza_de_Espa%C3%B1a,_Seville
