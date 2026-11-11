@@ -296,3 +296,17 @@ tours carry coordinates typed once and never verified. In the 26–49 m band,
 ⚠️ **Part vs whole is still decided one case at a time.** Two museum parts were accepted here, after
 many earlier refusals (Westminster Abbey interiors, Rockefeller Center parts, the Tomb of the
 Unknown Soldier). Ask; do not infer a rule from either side.
+
+## 2026-11-11: the owner answered the backlog (79 yes, part-vs-whole case by case)
+
+All 67 "same thing pinned twice" pairs and 10 joins to existing places were a **yes**, plus Kolumba and FENIX.
+Part-vs-whole rulings:
+
+| Pair | Ruling |
+|---|---|
+| Teshima Art Museum + Teshima Art Museum Café | **YES**: the café is placed with the museum |
+| Nezu Museum (tour) + Nezu Museum Garden (pin) | **YES**: the garden is part of the museum |
+| National Museum of Anthropology (tour) + The Tláloc Monolith (pin) | **YES**: the monolith stands on the museum's forecourt |
+| Lycabettus Funicular (tour) + Mount Lycabettus (pin) | **NO**: the funicular station is not the hill |
+| Abraj Al-Bait Shopping Center (tour) + Abraj Al Bait (pin) | **YES**: the mall is the complex's base; the place sits on the tour's point |
+| Makkah Clock Tower museum (tour) + Fairmont Makkah Clock Royal Tower (tour) | **NO**: a museum and a hotel in one tower are two different visits |

@@ -2,6 +2,8 @@
 
 _opened 2026-11-02 · clear with `git rm status/owner/mecca-launch.md`_
 
+> ✅ **Answered 2026-11-11 (owner: "Q5 YES"):** Abraj Al-Bait mall + the Abraj Al Bait pin are now one place, on the tour's point. Clock Tower museum / Fairmont: **NO** (owner: "Q6 NO"), so they stay separate. #2 and #3 are still open.
+
 Mecca launched as **Atlas Studio MAK** (29 singles). For you to settle. The contributor is not the owner, so none of
 these were put to them as rulings, and nothing was created or joined.
 

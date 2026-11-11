@@ -7799,6 +7799,66 @@
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.instagram.com/laureen/"
+    },
+    {
+      "id": "698250FF-EE44-5838-A27C-48C212982EFB",
+      "displayName": "Instagram @nicoletrilivas",
+      "platform": "instagram",
+      "handle": "nicoletrilivas",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/nicoletrilivas/"
+    },
+    {
+      "id": "4A14A8AA-ACFA-59F2-83B2-2B7D7C000E66",
+      "displayName": "TikTok @emthenutritionist",
+      "platform": "tiktok",
+      "handle": "emthenutritionist",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-emthenutritionist.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@emthenutritionist"
+    },
+    {
+      "id": "B0B9A117-1193-5CD5-9AE6-965ED66B3446",
+      "displayName": "TikTok @isaacfrench_",
+      "platform": "tiktok",
+      "handle": "isaacfrench_",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-isaacfrench.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@isaacfrench_"
+    },
+    {
+      "id": "D18BD4AA-A8AB-582C-A790-5EEAD2568EB7",
+      "displayName": "Instagram @littlebigworld.em",
+      "platform": "instagram",
+      "handle": "littlebigworld.em",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/littlebigworld.em/"
+    },
+    {
+      "id": "1E375A36-5373-50DC-8E57-43909B7AFF8B",
+      "displayName": "Instagram @mdfunfam",
+      "platform": "instagram",
+      "handle": "mdfunfam",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/mdfunfam/"
+    },
+    {
+      "id": "347DE6C7-CEE6-52DC-B1D4-3A846342DA54",
+      "displayName": "Instagram @nycrehistory",
+      "platform": "instagram",
+      "handle": "nycrehistory",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/nycrehistory/"
     }
   ],
   "tours": [
@@ -158948,7 +159008,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "232F314F-284E-5C6B-AB25-AF2EFC198676",
-        "ee2b411b-3308-5837-b424-2e7b80bc0073"
+        "ee2b411b-3308-5837-b424-2e7b80bc0073",
+        "3E66A91D-6191-5E85-94B6-07E74BAE550C"
       ]
     },
     {
@@ -162500,6 +162561,66 @@
       "tourIds": [
         "5f1bef3c-0cec-54af-9506-66f3a393ad2a",
         "AFB5C454-4110-53FA-B529-AAD59AB3FE7A"
+      ]
+    },
+    {
+      "id": "125a3eae-9335-502e-833d-e69253bddfa1",
+      "name": "Teshima Art Museum",
+      "description": null,
+      "latitude": 34.4900105,
+      "longitude": 134.0913214,
+      "city": "Teshima",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "65F00EDB-EF27-5323-BA8D-36B71E5665D0",
+        "9130C194-C005-5480-953C-216DCC0422FA"
+      ]
+    },
+    {
+      "id": "6a421dc5-9fa6-5aa4-b132-23bab43b071f",
+      "name": "Nezu Museum",
+      "description": null,
+      "latitude": 35.66245,
+      "longitude": 139.71711,
+      "city": "Tokyo",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "1c7b05ad-953a-539e-875d-94eca960dcdc",
+        "6CCE0FF5-8C5F-5965-BB36-3BCB66075745"
+      ]
+    },
+    {
+      "id": "98433fec-0699-5377-83bd-bad83087d1e8",
+      "name": "National Museum of Anthropology",
+      "description": null,
+      "latitude": 19.42621062015233,
+      "longitude": -99.18629469325411,
+      "city": "Mexico City",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "9b4329a8-d70c-5af3-afda-b456a7de989e",
+        "14998A34-CF64-55FE-B85B-95037226468E"
+      ]
+    },
+    {
+      "id": "4425ecc1-759a-53c0-9ec4-5ebaf574cf40",
+      "name": "Abraj Al Bait",
+      "description": null,
+      "latitude": 21.418597,
+      "longitude": 39.826666,
+      "city": "Mecca",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "77ace285-4381-5661-9c3e-017fac4d000e",
+        "FE75D07B-D2A8-5E95-81F9-38F4B73FD4EF"
       ]
     }
   ],
@@ -311310,8 +311431,8 @@
           "order": 0,
           "title": "Abraj Al Bait",
           "caption": "World's Most Expensive Skyscraper Complex 😳",
-          "latitude": 21.4185,
-          "longitude": 39.8262,
+          "latitude": 21.418597,
+          "longitude": 39.826666,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -311323,8 +311444,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 21.4185,
-      "centroidLongitude": 39.8262,
+      "centroidLatitude": 21.418597,
+      "centroidLongitude": 39.826666,
       "city": "Mecca",
       "country": "Saudi Arabia",
       "relatedTourIds": [
@@ -367217,8 +367338,8 @@
           "order": 0,
           "title": "The Tláloc Monolith",
           "caption": "The arrival of the rain god is a story deeply ingrained in Mexico City’s popular tradition. 🌧️🇲🇽 In 1964, this 1,500-year-old monolith was brought from Coatlinchán to the National Museum of Anthropology. Commonly associated with Tláloc, its true identity is still debated. And what happened upon its arrival? Let’s just say the timing was unforgettable. 👀 #mexicocity #traveltips #cdmx #history travelmexico",
-          "latitude": 19.42615,
-          "longitude": -99.18665,
+          "latitude": 19.42621062015233,
+          "longitude": -99.18629469325411,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -367230,8 +367351,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 19.42615,
-      "centroidLongitude": -99.18665,
+      "centroidLatitude": 19.42621062015233,
+      "centroidLongitude": -99.18629469325411,
       "city": "Mexico City",
       "country": "Mexico",
       "relatedTourIds": [
@@ -373477,8 +373598,8 @@
           "order": 0,
           "title": "Teshima Art Museum Café",
           "caption": "La cafetería con el mejor espacio arquitectónico del mundo está en la isla de Teshima Japón y así se hizo. Teshima Art Museum cafe Por Ryue Nishizawa Esta estructura fue hecha con un cascarón de concreto vertido sobre una cimbra hecha de la misma tierra de la montaña. #arquitectura #diseño #design #interiordesign",
-          "latitude": 34.4899402,
-          "longitude": 134.0909454,
+          "latitude": 34.4900105,
+          "longitude": 134.0913214,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -373490,8 +373611,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 34.4899402,
-      "centroidLongitude": 134.0909454,
+      "centroidLatitude": 34.4900105,
+      "centroidLongitude": 134.0913214,
       "city": "Teshima",
       "country": "Japan",
       "relatedTourIds": [
@@ -383971,8 +384092,8 @@
           "order": 0,
           "title": "Nezu Museum Garden",
           "caption": "The garden behind the Nezu Museum could arguably be the museum’s main attraction. While many visitors comes to this small, beautiful space because of the architecture of the museum hall and cafe (by Kengo Kuma), the garden is worth a celebration of its own. The namesake of Nezu Museum, Kaiichiro Nezu, was a mega successful businessman, philanthropist, and patron of the arts and culture. He amassed an impressive collection of historical works of art (which visitors can see at the museum exhibitions). He was also a sukisha (数奇者), a word used to mean one devoted to refined aesthetics, especially tea ceremony. He (not a gardener by trade) created this garden on his land in Tokyo, creating a “mountains and valleys” landscape that winds through paths where statues, lanterns, sculptures, and even torii gates can be found, in what struck me as a rather unusual departure from gardens like Rikugien and Kenrokuen. Those “classic” Japanese gardens, owned by daimyo, were for receiving dignitaries and were carefully maintained, utilizing heavy symbolism. Miniature versions of well-known landscapes were recreated within daimyo gardens so one could walk around the garden to enjoy the scenes. I was so curious about the difference in style from this garden to Nezu’s garden, and despite an absurd amount of research, I couldn’t find a definitive throughline on centuries-old garden design. What I DID find is a gradual shift toward what could be called “naturalism,” with the gardener Jihei Ogawa, who started implementing surrounding landscape views (like mountains) into his garden designs. This technique was called “borrowed scenery.” What’s extra tricky here is that Nezu’s garden (this one in the video) burned down in WWII and was rebuilt, so the kind of “wild” beauty we see today may not be precisely representative of his original design. It’s easy to forget you’re in the middle of the city when you’re in Nezu’s garden, though if you look up, you’ll catch glimpses of skyscrapers 🌱 If you liked this video, follow me for more deep dives into art, design, craft, and culture (especially in Japan, where I live). Thank you @kaminosuke_hikaru for helping me film!",
-          "latitude": 35.662242,
-          "longitude": 139.71725,
+          "latitude": 35.66245,
+          "longitude": 139.71711,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -383984,8 +384105,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 35.662242,
-      "centroidLongitude": 139.71725,
+      "centroidLatitude": 35.66245,
+      "centroidLongitude": 139.71711,
       "city": "Tokyo",
       "country": "Japan",
       "relatedTourIds": [
@@ -409127,6 +409248,322 @@
         "Commerce",
         "Fashion",
         "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "19876286-F07F-5104-99B7-D2627002A08E",
+      "createdAt": "2026-11-11",
+      "title": "Raffles London at The OWO",
+      "shortDescription": "A post by @nicoletrilivas on Instagram.",
+      "longDescription": "First time in London? This is the one hotel you should know…",
+      "makerId": "698250FF-EE44-5838-A27C-48C212982EFB",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/raffles-london-at-the-owo-nicoletrilivas_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/Dd3U71VsxBw/",
+      "sourceAuthor": "@nicoletrilivas",
+      "stops": [
+        {
+          "id": "44F485F1-5F55-586D-8405-F0A7FBCA2152",
+          "order": 0,
+          "title": "Raffles London at The OWO",
+          "caption": "First time in London? This is the one hotel you should know…",
+          "latitude": 51.5055381,
+          "longitude": -0.1261729,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/raffles-london-at-the-owo-nicoletrilivas_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.5055381,
+      "centroidLongitude": -0.1261729,
+      "city": "London",
+      "country": "United Kingdom",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Notable Building",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "97308EF9-F115-52CC-A661-C42D17572AF2",
+      "createdAt": "2026-11-11",
+      "title": "Beaverbrook",
+      "shortDescription": "A post by @emthenutritionist on TikTok.",
+      "longDescription": "24 Hour Vlog In the British Countryside With A Tibetan Monk, Martinis and a Luxury Sleepover I spent the day with Tibetan monk Geshe YongDong learning about meditation, breathwork, gratitude, intention and how often we’re so busy chasing the next thing that we forget to actually be where we are. A few of my favourite lessons: Wings of compassion and wisdom. You need both to fly. Life is a gift. We deserve happiness and enjoyment. Whatever comes to you, receive it openly. Peace starts with you If I’m happy and at peace with myself, I have more energy to give to other people. Expectations can become obstacles. They can stop us from receiving something different, or even better, than what we imagined. Thank you to the Beaverbrook team for having me 🫶🏻🫶🏻 Kindly gifted stay #wellness #staycation",
+      "makerId": "4A14A8AA-ACFA-59F2-83B2-2B7D7C000E66",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beaverbrook-emthenutritionist_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@emthenutritionist/video/7690175234552401154",
+      "sourceAuthor": "@emthenutritionist",
+      "stops": [
+        {
+          "id": "A74D329B-2859-594C-907B-E00BF02FB763",
+          "order": 0,
+          "title": "Beaverbrook",
+          "caption": "24 Hour Vlog In the British Countryside With A Tibetan Monk, Martinis and a Luxury Sleepover I spent the day with Tibetan monk Geshe YongDong learning about meditation, breathwork, gratitude, intention and how often we’re so busy chasing the next thing that we forget to actually be where we are. A few of my favourite lessons: Wings of compassion and wisdom. You need both to fly. Life is a gift. We deserve happiness and enjoyment. Whatever comes to you, receive it openly. Peace starts with you If I’m happy and at peace with myself, I have more energy to give to other people. Expectations can become obstacles. They can stop us from receiving something different, or even better, than what we imagined. Thank you to the Beaverbrook team for having me 🫶🏻🫶🏻 Kindly gifted stay #wellness #staycation",
+          "latitude": 51.2771075,
+          "longitude": -0.3122992,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beaverbrook-emthenutritionist_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.2771075,
+      "centroidLongitude": -0.3122992,
+      "city": "Leatherhead",
+      "country": "United Kingdom",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Notable Building",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "36433264-A862-5B4E-8734-A9B92C5CA68E",
+      "createdAt": "2026-11-11",
+      "title": "Preserve Life Nutrition Nest",
+      "shortDescription": "A post by @isaacfrench_ on TikTok.",
+      "longDescription": "One of the most ambitious & beautiful hospitality projects I’ve walked - and a fascinating glimpse at wellness travel at the cutting edge. This place has been majorly under wraps… until now :) #wellness #hospitality #nordic",
+      "makerId": "B0B9A117-1193-5CD5-9AE6-965ED66B3446",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/preserve-life-nutrition-nest-isaacfrench_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@isaacfrench_/video/7692615976969309470",
+      "sourceAuthor": "@isaacfrench_",
+      "stops": [
+        {
+          "id": "40CAC45E-2B88-50E0-8F29-1673267E45C1",
+          "order": 0,
+          "title": "Preserve Life Nutrition Nest",
+          "caption": "One of the most ambitious & beautiful hospitality projects I’ve walked - and a fascinating glimpse at wellness travel at the cutting edge. This place has been majorly under wraps… until now :) #wellness #hospitality #nordic",
+          "latitude": 33.6031,
+          "longitude": -84.824,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/preserve-life-nutrition-nest-isaacfrench_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.6031,
+      "centroidLongitude": -84.824,
+      "city": "Douglasville",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Contemporary",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "A3FFD159-B0EC-5E7E-9E82-3FECCC57483A",
+      "createdAt": "2026-11-11",
+      "title": "CenTrio Cooling Plant",
+      "shortDescription": "A post by @dan__asher on Instagram.",
+      "longDescription": "This building is a huge ice machine! However, it doesn’t make ice to keep your drinks cold. Rather, it’s part of the largest carbon-zero district cooling system in the country. This is a CenTrio plant located in the Chicago Loop in Downtown Chicago, just off of the Chicago River. CenTrio makes and stores ice at night and then melts that ice during the day to provide chilled water that is distributed through the pipe system to the buildings in the network, which is then used to help cool those buildings. This process shifts electricity usage for cooling those buildings to when the demand for power is lower, which reduces the cost of electricity used to cool the buildings. 🏙️ Please give me a follow, if you enjoy content like this. I would greatly appreciate it! 🙌 #chicago #downtownchicago #chicagoarchitecture #chicagoloop #chicagobuildings",
+      "makerId": "3A21B11D-F180-5138-91A0-78DBF3DE2368",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/centrio-cooling-plant-danasher_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DeUP0FWhnMU/",
+      "sourceAuthor": "@dan__asher",
+      "stops": [
+        {
+          "id": "35014AD5-67F0-5896-B468-F019FEE68E26",
+          "order": 0,
+          "title": "CenTrio Cooling Plant",
+          "caption": "This building is a huge ice machine! However, it doesn’t make ice to keep your drinks cold. Rather, it’s part of the largest carbon-zero district cooling system in the country. This is a CenTrio plant located in the Chicago Loop in Downtown Chicago, just off of the Chicago River. CenTrio makes and stores ice at night and then melts that ice during the day to provide chilled water that is distributed through the pipe system to the buildings in the network, which is then used to help cool those buildings. This process shifts electricity usage for cooling those buildings to when the demand for power is lower, which reduces the cost of electricity used to cool the buildings. 🏙️ Please give me a follow, if you enjoy content like this. I would greatly appreciate it! 🙌 #chicago #downtownchicago #chicagoarchitecture #chicagoloop #chicagobuildings",
+          "latitude": 41.876906,
+          "longitude": -87.635344,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/centrio-cooling-plant-danasher_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.876906,
+      "centroidLongitude": -87.635344,
+      "city": "Chicago",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Engineering",
+        "Notable Building",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3E66A91D-6191-5E85-94B6-07E74BAE550C",
+      "createdAt": "2026-11-11",
+      "title": "Museum SAN",
+      "shortDescription": "A post by @littlebigworld.em on Instagram.",
+      "longDescription": "This striking museum in Wonju, Korea was designed by renowned Japanese architect Tadao Ando and opened in 2013. Set in the mountains, Museum SAN brings together contemporary art, architecture, and nature, with works by Lee Bae, Park Rehyun, James Turrell, and Antony Gormley. 📍Museum SAN (Wonju-si, South Korea) #architecturelover #architectureart #artmuseum #museumlover #andotadao",
+      "makerId": "D18BD4AA-A8AB-582C-A790-5EEAD2568EB7",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-san-littlebigworldem_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DeKdMrSI6FF/",
+      "sourceAuthor": "@littlebigworld.em",
+      "stops": [
+        {
+          "id": "6938AB9C-6492-5F56-89F3-5DD1FB266CE9",
+          "order": 0,
+          "title": "Museum SAN",
+          "caption": "This striking museum in Wonju, Korea was designed by renowned Japanese architect Tadao Ando and opened in 2013. Set in the mountains, Museum SAN brings together contemporary art, architecture, and nature, with works by Lee Bae, Park Rehyun, James Turrell, and Antony Gormley. 📍Museum SAN (Wonju-si, South Korea) #architecturelover #architectureart #artmuseum #museumlover #andotadao",
+          "latitude": 37.415800420051454,
+          "longitude": 127.82352922396977,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-san-littlebigworldem_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.415800420051454,
+      "centroidLongitude": 127.82352922396977,
+      "city": "Wonju",
+      "country": "South Korea",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Contemporary",
+        "Tadao Ando",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3ACCFC5B-8E2E-5C80-8D49-C39E530C6610",
+      "createdAt": "2026-11-11",
+      "title": "Evergreen Museum & Library",
+      "shortDescription": "A post by @mdfunfam on Instagram.",
+      "longDescription": "Looking for unique things to do in Baltimore? Add Evergreen Museum & Library to your Maryland bucket list! This stunning Gilded Age mansion sits on 26 acres in Baltimore City and was once home to the wealthy Garrett family. For just $12, you can take a guided tour through rooms filled with Tiffany glass, rare books, incredible architecture, and even artwork by Picasso! If you love Maryland history, historic mansions, hidden gems, or unique day trips, this is one Baltimore attraction you don’t want to miss! 📍 Evergreen Museum & Library | Baltimore, MD 4545 N. Charles Street Baltimore, MD 21210 ☎️410-516-0341 🎟️Purcahe tickets click the link in @evergreenmuseumandlibrary profile #BaltimoreMaryland #ThingsToDoInBaltimore #MarylandHiddenGems",
+      "makerId": "1E375A36-5373-50DC-8E57-43909B7AFF8B",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/evergreen-museum-library-mdfunfam_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DeSWv11snck/",
+      "sourceAuthor": "@mdfunfam",
+      "stops": [
+        {
+          "id": "F2B4CC05-79F1-5034-AFCB-E04E615DDD05",
+          "order": 0,
+          "title": "Evergreen Museum & Library",
+          "caption": "Looking for unique things to do in Baltimore? Add Evergreen Museum & Library to your Maryland bucket list! This stunning Gilded Age mansion sits on 26 acres in Baltimore City and was once home to the wealthy Garrett family. For just $12, you can take a guided tour through rooms filled with Tiffany glass, rare books, incredible architecture, and even artwork by Picasso! If you love Maryland history, historic mansions, hidden gems, or unique day trips, this is one Baltimore attraction you don’t want to miss! 📍 Evergreen Museum & Library | Baltimore, MD 4545 N. Charles Street Baltimore, MD 21210 ☎️410-516-0341 🎟️Purcahe tickets click the link in @evergreenmuseumandlibrary profile #BaltimoreMaryland #ThingsToDoInBaltimore #MarylandHiddenGems",
+          "latitude": 39.349074,
+          "longitude": -76.620847,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/evergreen-museum-library-mdfunfam_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.349074,
+      "centroidLongitude": -76.620847,
+      "city": "Baltimore",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Gilded Age",
+        "Notable Building"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7FC78DBA-1C9F-5DA8-A14C-58C524E7B2F5",
+      "createdAt": "2026-11-11",
+      "title": "Hermès Williamsburg",
+      "shortDescription": "A post by @nycrehistory on Instagram.",
+      "longDescription": "What do you think of the new Hermés store in Brooklyn? This newly built luxury retail fortress on North 6th and Berry in Williamsburg has been getting some buzz, so I thought I’d join the fray…but I’m only talking architecture here. (Anti-gentrification mud-slinging is welcome in the comments). Does this purpose-built, Parisian-designed store fit into a 19th century neighborhood of simple, low rise buildings? Or does it stick out like a sore thumb? #architecture #williamsburg #brooklyn #nycarchitecture #nycrealestate",
+      "makerId": "347DE6C7-CEE6-52DC-B1D4-3A846342DA54",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/herm-s-williamsburg-nycrehistory_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DeCBzyCx41q/",
+      "sourceAuthor": "@nycrehistory",
+      "stops": [
+        {
+          "id": "4648CF64-AF09-5D11-ADAC-BADE3B030B8D",
+          "order": 0,
+          "title": "Hermès Williamsburg",
+          "caption": "What do you think of the new Hermés store in Brooklyn? This newly built luxury retail fortress on North 6th and Berry in Williamsburg has been getting some buzz, so I thought I’d join the fray…but I’m only talking architecture here. (Anti-gentrification mud-slinging is welcome in the comments). Does this purpose-built, Parisian-designed store fit into a 19th century neighborhood of simple, low rise buildings? Or does it stick out like a sore thumb? #architecture #williamsburg #brooklyn #nycarchitecture #nycrealestate",
+          "latitude": 40.7186953,
+          "longitude": -73.960366,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/herm-s-williamsburg-nycrehistory_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7186953,
+      "centroidLongitude": -73.960366,
+      "city": "Brooklyn",
+      "country": "United States",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Commerce",
+        "Fashion",
+        "Contemporary"
       ],
       "priceUSD": 0
     }

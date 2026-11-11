@@ -2,6 +2,7 @@
 
 _opened 2026-11-04 · clear with `git rm status/owner/athens-launch.md`_
 > ✅ **Answered 2026-11-11 (owner: "p all yes"):** #1 Atlantikos, The Clumsies and Diporto are now places, each on the tour's point. #2–#5 are still open.
+> ✅ **Answered 2026-11-11 (owner: "Q1-3 YES", "Q4 NO"):** #2 Lycabettus: **NO**. The funicular and the hill stay separate. #3–#5 are still open.
 
 Athens launched as **Atlas Studio ATH** (29 singles). For you to settle. The contributor (arthur.yung) is not the owner,
 so nothing was created or joined; their requests are recorded here as requests, not rulings.

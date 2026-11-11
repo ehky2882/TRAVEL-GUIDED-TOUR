@@ -52,3 +52,13 @@ Parliament Square remains, which is deliberate.
 
 ## Follow-up: Kolumba and FENIX
 The owner said yes ("kolumba and fenix yes"), so both are now places at 0 m and nothing moved. Places 580 → 582. `place-triage-261020` is cleared.
+
+## Follow-up: part-vs-whole Q1–Q6
+- **YES:** Q1 Teshima Art Museum + café (35 m), Q2 Nezu Museum + garden (26 m), Q3 Museum of
+  Anthropology + Tláloc Monolith (38 m), Q5 Abraj Al Bait mall + pin (49 m). Each sits on the tour's
+  or museum pin's point.
+- **NO:** Q4 Lycabettus Funicular / Mount Lycabettus, Q6 Clock Tower museum / Fairmont. Both are in
+  `DECLINED_PAIRS` (`scripts/make-place-menu.py`) and in the `docs/places.md` 2026-11-11 table.
+- `main` (#1177–#1179) was merged into the branch first. The spine cache conflict took `main`'s copy
+  and re-ran `spine-lookup.py`.
+- Places: 586.
