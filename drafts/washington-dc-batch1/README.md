@@ -12,7 +12,7 @@ The author's newest handoff is **№8 (CLOSING)**, and its stale-upload check pa
 - **Audio:** 65 MP3s from the owner's Dropbox (2026-11-11), 31 singles + 34 walk segments, 7,799 s in all. Each was transcribed
   (faster-whisper base.en) and matched to its own script before upload. The low scorers differ only in digits against
   spelled-out numbers, and were read by eye. gh-pages `493a56a`. Record: `audio-manifest.json` (seconds, sha256, kbps and the
-  match score per file). **Whether the pronunciation pass happened is not known**. The owner should listen for *Nacotchtank*
+  match score per file). **Whether the pronunciation pass happened is not known**. **Owner, 2026-11-11: leave the pronunciation as recorded** (no listen-check owed). The flagged words were *Nacotchtank*
   (W2), *Lei Yixin* (06), *Bartholdi* (27) and the letter streets.
 - **Assembler:** `tools/wire_dc.py --created 2026-11-11`, adapted from Philadelphia's. Walk distances are the author's stated
   route lengths (W1 2.1 km, W2 3.2 km, W3 1.9 km, W4 2.6 km, W5 3.4 km), not straight-line × 1.25. Stage directions (`[beat]`, bare
@@ -48,7 +48,7 @@ name for its first stop, so these are not places.
 4. **Audio:** none yet. Expect 31 singles + 34 walk segments = **65 MP3s**.
 5. **Images: all 31 tours and all 10 picker walk stops done (2026-10-14 and 15).** The owner picked them in the [Washington DC Image Picks](https://claude.ai/artifact/4ZVazgKzoGmgsavTrWcoGy) page (461 candidates). 168 files are on gh-pages as `images/<slug>_hero.webp`, then `_2`, `_3` and so on in the owner's order, and walk stops as `images/<walk-slug>_stop<N>.webp`. Records: `image-manifest.json` (picked) and `image-candidates.json` (all 461 picker codes and their sources). None needs a credit: Unsplash, Pexels and public-domain Commons only.
    - **11 Georgetown: owner photo as hero (2026-10-15)**, gallery 11-1 (Unsplash) and 11-3 (Pexels).
-   - **18 Ford's Theatre: two owner photos (2026-10-15)**, the facade as hero and the Petersen House as gallery 2, then 18-1, 18-5, 18-2, 18-3 and 18-6. ⚠️ The facade photo's vertical banner reads "BOFDF THPATRE", not "FORD'S THEATRE", which suggests AI-edited text; flagged to the owner. 18-3 carries a burned-in 2006 date stamp.
+   - **18 Ford's Theatre: two owner photos (2026-10-15)**, the facade as hero and the Petersen House as gallery 2, then 18-1, 18-5, 18-2, 18-3 and 18-6. ⚠️ The facade photo's vertical banner reads "BOFDF THPATRE", not "FORD'S THEATRE", which suggests AI-edited text; flagged to the owner. **Owner, 2026-11-11: OK for now.** 18-3 carries a burned-in 2006 date stamp.
    - **20 Freedom Plaza: owner photo as hero (2026-10-15)**, then 20-7, 20-3 and 20-5 (public domain). **23 Embassy Row:** 23-1 hero, 23-4, 23-2.
    - **28 National Cathedral: owner photo as hero (2026-10-15)**, then 28-1, 28-4, 28-5, 28-6, 28-7, 28-9, 28-10 and 28-13.
    - **40 Old Stone House: owner photo, hero only (2026-10-15).** None of its picker candidates was used, so no credit is owed.
@@ -63,7 +63,7 @@ name for its first stop, so these are not places.
 - **Eastern Market (26) read 266 m** because the forward geocode found the Metro station; the supplied point reverse-geocodes to Market Lunch, a stall inside the market hall. Correct.
 - **A stop sits ON its subject** (owner, 2026-09-23). Where the script stands across a street, the trigger radius is sized to reach the listener. **Do not normalise the radii.**
 - 🔴 **Two subjects are far bigger than any radius we use, so the owner should look at them:**
-  - **03 United States Capitol** is pinned on the building, radius 120 m. The script stands on the Mall at Third Street, about **500 m** west, so the tour will not trigger where the script is read; it triggers on the West Front. W5's final stop sits on the same point, which suits that script ("the West Front").
+  - **03 United States Capitol** is pinned on the building, radius 120 m. The script stands on the Mall at Third Street, about **500 m** west, so the tour will not trigger where the script is read; it triggers on the West Front. W5's final stop sits on the same point, which suits that script ("the West Front"). **Owner, 2026-11-11: keep the Capitol pin as is.**
   - **04 The White House** is pinned on the building, radius **150 m** (the catalogue's largest so far is 120), which just reaches the south edge of Lafayette Square, where the script stands. The square has been fenced since January 2026, per the scripts.
 - **16 Tidal Basin** is pinned at the paddle-boat dock on the north-east shore, not the basin's centroid (which is in the water). W2's intro starts at the same point.
 - **18** is pinned on Ford's Theatre; the Petersen House is 50 m across 10th Street, where the script stands between them.
