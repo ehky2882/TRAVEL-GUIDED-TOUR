@@ -8973,8 +8973,8 @@
           "order": 0,
           "title": "Little Island, Southwest Overlook",
           "caption": "Stand at the Southwest Overlook, the highest point on the island, the amphitheater below you and the Hudson to your south.",
-          "latitude": 40.741898238219996,
-          "longitude": -74.01128824249908,
+          "latitude": 40.74218933266744,
+          "longitude": -74.01030973212531,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/little-island.mp3",
           "audioDurationSeconds": 139,
           "triggerMode": "manual",
@@ -8986,8 +8986,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 139,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.741898238219996,
-      "centroidLongitude": -74.01128824249908,
+      "centroidLatitude": 40.74218933266744,
+      "centroidLongitude": -74.01030973212531,
       "city": "New York",
       "country": "United States",
       "relatedTourIds": [
@@ -12111,8 +12111,8 @@
           "order": 0,
           "title": "Seagram Building",
           "caption": "Stand on the Seagram Plaza on Park Avenue between 52nd and 53rd Streets, near one of the reflecting pools.",
-          "latitude": 40.7587,
-          "longitude": -73.9716,
+          "latitude": 40.7584073,
+          "longitude": -73.9719841,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/seagram-building.mp3",
           "audioDurationSeconds": 153,
           "triggerMode": "manual",
@@ -12122,8 +12122,8 @@
         }
       ],
       "primaryCategory": "architecture",
-      "centroidLatitude": 40.7587,
-      "centroidLongitude": -73.9716,
+      "centroidLatitude": 40.7584073,
+      "centroidLongitude": -73.9719841,
       "introAudioURL": null,
       "kind": "single",
       "longDescription": "On the Seagram Plaza, on Park Avenue between 52nd and 53rd Streets, rises thirty-eight stories of bronze-and-amber glass set back fifty feet from the street — the Seagram Building, designed by Mies van der Rohe with Philip Johnson, completed in 1958. It is one of the most influential buildings in the history of architecture, and almost every other skyscraper built in the world since 1960 is, in some sense, a version of this one. The building exists because of a twenty-seven-year-old woman named Phyllis Lambert. In 1954, Lambert was living in Paris when she received word that her father, Samuel Bronfman — head of the Seagram Distilling Company — had commissioned a New York headquarters he was unhappy with. Phyllis wrote him a long letter explaining why the design was bad, then flew home to take charge of the project herself, traveling to architecture schools across the United States, interviewing leading architects, and concluding the building should be designed by Mies van der Rohe, then teaching in Chicago.\n\nMies designed almost everything you can see. The bronze curtain wall — the first ever built — has the I-beams of the building's structure expressed on the exterior even though they're not structural; they're symbolic, indicating the building's frame to the viewer. The plaza in front, with its two reflecting pools, was a radical decision that cost Seagram an entire usable floor of office space — in exchange, the building got something almost no Park Avenue tower had: room to breathe. The plaza is what changed New York. When the city revised its zoning code in 1961, it borrowed directly from what Seagram had done — offering developers extra floor area in exchange for providing public open space at street level — and within ten years every new tower on Park Avenue and Sixth Avenue had a Seagram-style plaza out front. Most of them are worse — smaller, windier, more hostile to the public, with fewer benches and meaner proportions — but the model is the same, and New York's modern skyline is essentially a series of failed attempts to copy this building.",
@@ -71745,8 +71745,8 @@
           "order": 0,
           "title": "MAC Niterói",
           "caption": "This is MAC Niterói, and from certain angles it looks less like a museum than something that simply landed on the cliff.",
-          "latitude": -22.906154729175984,
-          "longitude": -43.12586261088506,
+          "latitude": -22.9079221,
+          "longitude": -43.1258687,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mac-niteroi.mp3",
           "audioDurationSeconds": 90,
           "triggerMode": "geofenced",
@@ -71758,8 +71758,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 90,
       "walkingDistanceMeters": null,
-      "centroidLatitude": -22.906154729175984,
-      "centroidLongitude": -43.12586261088506,
+      "centroidLatitude": -22.9079221,
+      "centroidLongitude": -43.1258687,
       "city": "Niterói",
       "country": "Brazil",
       "relatedTourIds": [
@@ -113319,8 +113319,8 @@
           "order": 0,
           "title": "Genex Tower",
           "caption": "From the open ground at the foot of the building, you should see two towers of ribbed concrete standing side by side, a taller one and a slightly shorter one, joined high up by a two-storey bridge, with that circular crown sitting on top of the taller one.",
-          "latitude": 44.819444,
-          "longitude": 20.404722,
+          "latitude": 44.820309,
+          "longitude": 20.404971,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/genex-tower-western-city-gate.mp3",
           "audioDurationSeconds": 123,
           "triggerMode": "geofenced",
@@ -113332,8 +113332,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 123,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 44.819444,
-      "centroidLongitude": 20.404722,
+      "centroidLatitude": 44.820309,
+      "centroidLongitude": 20.404971,
       "city": "Belgrade",
       "country": "Serbia",
       "relatedTourIds": [
@@ -161461,6 +161461,1016 @@
         "2EB8F325-FD2B-564E-8C28-47E7785EE21E",
         "2100A100-CEA1-5567-ABED-8641E499EE12"
       ]
+    },
+    {
+      "id": "ed11b5a7-60ff-5655-b81a-d943dd168d3a",
+      "name": "National Theatre",
+      "description": null,
+      "latitude": 51.507,
+      "longitude": -0.114,
+      "city": "London",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "88b44354-87c7-402f-99a2-778c1dd1e889",
+        "D8E33E8F-7C42-59DA-A072-62F8467CAFAD"
+      ]
+    },
+    {
+      "id": "a2068d5c-eefb-5d39-9bb4-be6e5f35e24e",
+      "name": "BT Tower",
+      "description": null,
+      "latitude": 51.52144,
+      "longitude": -0.1388,
+      "city": "London",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "574C8CE9-1708-50C4-8A64-81318E8987B8",
+        "AFF1A476-13E1-5E93-8ECB-A848822ECF56"
+      ]
+    },
+    {
+      "id": "ef71f468-c357-5280-86d6-97405dd6f6eb",
+      "name": "The Briton's Protection",
+      "description": null,
+      "latitude": 53.4749771,
+      "longitude": -2.2472863,
+      "city": "Manchester",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "49D126C6-E081-52E8-9B05-E0535FFA77FF",
+        "B141DD06-4FC9-5A8C-8034-88A533938DBC"
+      ]
+    },
+    {
+      "id": "e484380a-9d81-5501-aa31-3deff3b0fcd1",
+      "name": "The Marble Arch",
+      "description": null,
+      "latitude": 53.4882145,
+      "longitude": -2.232339,
+      "city": "Manchester",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "AA61A538-9090-5862-A5E9-6DA6AC951E50",
+        "3C0E64C6-ECFE-51C5-8682-9024AA65E4D4"
+      ]
+    },
+    {
+      "id": "2fd8ff73-0ad7-5906-b72d-1397d467e4a7",
+      "name": "Little Island",
+      "description": null,
+      "latitude": 40.74218933266744,
+      "longitude": -74.01030973212531,
+      "city": "New York",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "4D727057-2B78-5A70-8654-20BE4E75E6CE",
+        "05f53b83-abde-422e-9d6f-a2bb21c4be07",
+        "5A5DE3B5-58F4-504F-99A7-8FA7E958CD8B"
+      ]
+    },
+    {
+      "id": "508a8c16-508d-5a29-b9ba-9d6ab52eca5f",
+      "name": "Seagram Building",
+      "description": null,
+      "latitude": 40.7584073,
+      "longitude": -73.9719841,
+      "city": "New York",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "ABF67360-B47B-5E83-BB68-2454A2692394",
+        "6AD2C00B-A865-4C8D-A300-3BF5BC62AED0"
+      ]
+    },
+    {
+      "id": "c5c74e8e-3823-569f-b8d9-3d342cebd3ed",
+      "name": "Los Angeles Memorial Coliseum",
+      "description": null,
+      "latitude": 34.0141,
+      "longitude": -118.2879,
+      "city": "Los Angeles",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "ee249344-4ce3-5fbc-a25b-09ab465c8192",
+        "AFDF8A9E-839E-5346-8844-493FC882395D"
+      ]
+    },
+    {
+      "id": "fd2c3077-4f9e-5154-9e3b-eedbdb28fbc4",
+      "name": "Grace Farms",
+      "description": null,
+      "latitude": 41.196273,
+      "longitude": -73.512642,
+      "city": "New Canaan",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "F490D545-FC94-50FD-A263-882B1062BF53",
+        "794217C3-28E2-5A21-8CD4-C07D4E9E60F2"
+      ]
+    },
+    {
+      "id": "a6acb06d-725f-5c6a-ae74-ba53169f6968",
+      "name": "Sydney Opera House",
+      "description": null,
+      "latitude": -33.857198,
+      "longitude": 151.2151234,
+      "city": "Sydney",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "5b61699f-7df4-50bc-92de-d249bb9bd15b",
+        "65FABAD2-721B-5C8B-B2B0-A4941676EB48"
+      ]
+    },
+    {
+      "id": "bacfced4-91a9-5f46-a83f-8ce116c444ce",
+      "name": "Maison du Brésil",
+      "description": null,
+      "latitude": 48.8178042,
+      "longitude": 2.343553,
+      "city": "Paris",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "0E492AD8-2B8C-5AE0-A49D-8CF4B1DE1267",
+        "8D88645A-7C8A-59DA-953D-6540BDF75287"
+      ]
+    },
+    {
+      "id": "e2e977ac-bc7c-5927-ab0a-f40ba18c075e",
+      "name": "Le Bon Georges",
+      "description": null,
+      "latitude": 48.8776422,
+      "longitude": 2.3372106,
+      "city": "Paris",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "AC13C3B9-81DA-5BCC-A7DF-CA065A62221E",
+        "3A3B9308-5985-5F66-B021-680788B9237D"
+      ]
+    },
+    {
+      "id": "89e6d98a-9e10-5932-8b05-0bcef88f3020",
+      "name": "Musée Rodin",
+      "description": null,
+      "latitude": 48.8547473,
+      "longitude": 2.315867,
+      "city": "Paris",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "5167a3d3-dea3-55c9-a471-c5b402ca7472",
+        "9D8DAF66-2057-56E8-A5B3-81B4215743EB"
+      ]
+    },
+    {
+      "id": "1d2898b1-d293-5544-aba3-d27fef176daf",
+      "name": "Les Espaces d'Abraxas",
+      "description": null,
+      "latitude": 48.84018131090563,
+      "longitude": 2.542929727151812,
+      "city": "Noisy-le-Grand",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "1ff51015-6af1-544e-91f5-bbd975bbfa28",
+        "12941F35-7822-5498-9CD5-93718AD4B692"
+      ]
+    },
+    {
+      "id": "9da40f2e-f982-5639-be93-abc72164d78c",
+      "name": "Les Choux de Créteil",
+      "description": null,
+      "latitude": 48.7851046,
+      "longitude": 2.4447226,
+      "city": "Créteil",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "932acd4f-66df-5152-ba4d-3ca6e8d7381c",
+        "60916A4D-9376-56AA-98E7-C899806F7C9E"
+      ]
+    },
+    {
+      "id": "d68183cc-e16a-534f-b8b5-e1159668a53b",
+      "name": "Les Tours Aillaud",
+      "description": null,
+      "latitude": 48.889872,
+      "longitude": 2.2269925,
+      "city": "Nanterre",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "726c0fd2-ae39-5ed5-b84c-20c6783e67f5",
+        "0758555B-6807-5AB1-8E54-1CB2B4B2DAF3"
+      ]
+    },
+    {
+      "id": "5db9d3a4-c9b0-5596-abd5-48ceb3e70f2c",
+      "name": "Les Étoiles de Renaudie",
+      "description": null,
+      "latitude": 48.8137558,
+      "longitude": 2.3850938,
+      "city": "Ivry-sur-Seine",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "89443016-9aea-5422-a33a-be72636e89f1",
+        "1C3123A0-4025-57AF-82F5-7974297D1882"
+      ]
+    },
+    {
+      "id": "31cfe313-6665-5bb0-911e-a7f19058bef5",
+      "name": "Looshaus",
+      "description": null,
+      "latitude": 48.208468,
+      "longitude": 16.366592,
+      "city": "Vienna",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "62a9cd88-ba9a-5017-bbf1-3e6e120d77dc",
+        "F8C6124D-7E63-546E-9A18-F443BFB2636E"
+      ]
+    },
+    {
+      "id": "c21da933-4a57-5dda-9036-6e87f4f9b6cb",
+      "name": "Zacherlhaus",
+      "description": null,
+      "latitude": 48.2099044,
+      "longitude": 16.3716273,
+      "city": "Vienna",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "FE3A4C89-B50E-548E-9CE6-BC27004DDEC4",
+        "38AE0136-4C79-510A-9455-676433862BCC"
+      ]
+    },
+    {
+      "id": "2f41a245-5204-5a07-8c3c-eba36af8bd67",
+      "name": "Austrian Parliament Building",
+      "description": null,
+      "latitude": 48.208087,
+      "longitude": 16.358465,
+      "city": "Vienna",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "B8D0F81D-0B7B-520D-A3BC-967D114BE432",
+        "6BE58CBE-0EE8-51F3-8031-A4ABEEFE4121"
+      ]
+    },
+    {
+      "id": "b02cb089-413e-58e1-8cd3-88605ce12781",
+      "name": "Church of St Charles Borromeo, Zentralfriedhof",
+      "description": null,
+      "latitude": 48.150619,
+      "longitude": 16.438094,
+      "city": "Vienna",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "0a454b83-93e9-56d5-a24f-28b312935a2f",
+        "86148835-297E-5CC6-A892-ABE5BE4657FA"
+      ]
+    },
+    {
+      "id": "76fc227d-0950-5ff5-a796-62cc7b182ec0",
+      "name": "Wotruba Church",
+      "description": null,
+      "latitude": 48.147632,
+      "longitude": 16.253453,
+      "city": "Vienna",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "4e227a06-777e-571a-80ad-4c53decfc0d6",
+        "BD886705-0E22-5F5E-B0EC-A86F0148BF5E"
+      ]
+    },
+    {
+      "id": "b12f644a-d9d6-58d7-ab14-684386961ca7",
+      "name": "Secession Building",
+      "description": null,
+      "latitude": 48.200497,
+      "longitude": 16.365768,
+      "city": "Vienna",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "527f3825-e099-55b7-97c6-1c4543ae806e",
+        "3B17F3E3-B8F5-5B55-9557-1822ABCDEC7E"
+      ]
+    },
+    {
+      "id": "3432c775-f086-503e-bf02-116297d4c354",
+      "name": "State Hall of the Austrian National Library",
+      "description": null,
+      "latitude": 48.206167,
+      "longitude": 16.36669,
+      "city": "Vienna",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "92fd22a4-08dc-574a-ad6b-c39bc7a987fb",
+        "3BE8ED61-A8DB-593A-B2B3-B5D31A795644"
+      ]
+    },
+    {
+      "id": "ed67a06c-ef87-5da9-a73f-2a2dc8979c01",
+      "name": "Kirche am Steinhof",
+      "description": null,
+      "latitude": 48.210383,
+      "longitude": 16.278411,
+      "city": "Vienna",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "0929d219-6962-5f4a-a515-f0f0659ba1aa",
+        "BD8A7BF7-26D8-5119-9D26-64087EC1AA2E"
+      ]
+    },
+    {
+      "id": "362c0a6e-f47e-5e1a-ae5b-d0c3b0cb41fe",
+      "name": "Otto Wagner Pavilions, Karlsplatz",
+      "description": null,
+      "latitude": 48.200275,
+      "longitude": 16.370266,
+      "city": "Vienna",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "a40c6e9a-b148-5e15-93bf-3ec55ed80a48",
+        "F7EBB3B0-E8E4-50BD-B4BA-3AED9363C4AD"
+      ]
+    },
+    {
+      "id": "5fb3d6eb-725c-5b42-8983-5006e6c769cb",
+      "name": "Library & Learning Center, WU Campus",
+      "description": null,
+      "latitude": 48.213856,
+      "longitude": 16.408884,
+      "city": "Vienna",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "0ad42d09-6a9b-5533-af7d-e47c81f6e947",
+        "52A835F2-F314-5A02-A4AC-2412823306F8"
+      ]
+    },
+    {
+      "id": "73084043-8597-50ef-b67d-a7d11bca3b92",
+      "name": "Kaiser Wilhelm Memorial Church",
+      "description": null,
+      "latitude": 52.5048,
+      "longitude": 13.335,
+      "city": "Berlin",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "6acafe2f-3283-5ecb-b6c6-5b50c0b6f120",
+        "47963E4D-DFC3-55FE-AEDD-C53F19B5D336"
+      ]
+    },
+    {
+      "id": "79fe6859-3b17-5162-bc2d-78de76e00d48",
+      "name": "Berlin Wall Memorial",
+      "description": null,
+      "latitude": 52.5351,
+      "longitude": 13.3898,
+      "city": "Berlin",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "c056c499-76ae-5306-a407-b4eb22663f2e",
+        "5B26C34B-9449-5CC7-B50F-E32114E99140"
+      ]
+    },
+    {
+      "id": "e9e4373e-5eee-5f92-9a5a-b293cc9e134c",
+      "name": "University of Warsaw Library",
+      "description": null,
+      "latitude": 52.242643,
+      "longitude": 21.025068,
+      "city": "Warsaw",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "726a0fba-a5fd-5771-9d83-677c11a89309",
+        "8C161438-70DC-5AC5-9A72-99E670FC77A9"
+      ]
+    },
+    {
+      "id": "f9df1096-98e3-5a5a-b447-d0bcba64b938",
+      "name": "Palace of Culture and Science",
+      "description": null,
+      "latitude": 52.231766,
+      "longitude": 21.005798,
+      "city": "Warsaw",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "1f3b0f44-9600-589f-ad00-a73f4844c2bf",
+        "E5EA1925-C0D0-581B-9985-3F5C67755978"
+      ]
+    },
+    {
+      "id": "4dd81d4e-cbcb-5032-816b-324afa7b87e7",
+      "name": "Museum of Modern Art in Warsaw",
+      "description": null,
+      "latitude": 52.233129,
+      "longitude": 21.008984,
+      "city": "Warsaw",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "ac8ddfc9-726e-576b-a3f5-8b0226ba4c0f",
+        "DEC5417D-5A76-53EE-A578-23D91E859ACC"
+      ]
+    },
+    {
+      "id": "7afd23b5-bbb0-5188-9b14-af7f0f449c2c",
+      "name": "Sedesowce (Manhattan Estate)",
+      "description": null,
+      "latitude": 51.111667,
+      "longitude": 17.053611,
+      "city": "Wrocław",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "3525df3c-992a-5ca4-8c84-4c05e8dfc452",
+        "6BBFE2C6-E407-5C57-8CD0-3A60536D5D0E"
+      ]
+    },
+    {
+      "id": "9d27a43d-4ec0-5ab2-822d-61e685bb9482",
+      "name": "Familjen",
+      "description": null,
+      "latitude": 38.708896,
+      "longitude": -9.155853,
+      "city": "Lisbon",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "E8B5B5A2-3972-576D-9848-9EFBD5DC3742",
+        "E20EE90C-E0CA-5200-9774-E0B40CD52BE8"
+      ]
+    },
+    {
+      "id": "f7f7da1c-5439-5ee2-a3cd-4401f11dbb3c",
+      "name": "The Capsule",
+      "description": null,
+      "latitude": 38.710438,
+      "longitude": -9.139,
+      "city": "Lisbon",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "5CB08592-2BFB-5149-A964-D292C29E436B",
+        "C11E30EC-4CE1-56DD-9472-9DE286BA0175"
+      ]
+    },
+    {
+      "id": "938195d6-6106-526d-b2b3-ba0bb149d1ba",
+      "name": "Livraria Lello",
+      "description": null,
+      "latitude": 41.146961998172856,
+      "longitude": -8.614860428995875,
+      "city": "Porto",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "34887987-540B-4388-839D-D0CD4BD5BBCE",
+        "F8F604E4-AD4D-551A-AACC-4ABA9B926D3B"
+      ]
+    },
+    {
+      "id": "52086013-4d82-5e37-a98f-b9c6d6dd94ee",
+      "name": "Leixões Cruise Terminal",
+      "description": null,
+      "latitude": 41.177270133059395,
+      "longitude": -8.701836600093268,
+      "city": "Leixões",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "11B4526D-530F-4792-B2A0-CBBB23065AA0",
+        "EBC0934A-421D-592E-BA04-1387A61794F2"
+      ]
+    },
+    {
+      "id": "d495bf04-7511-59c5-87ef-caa02c2b4c91",
+      "name": "Soho House Istanbul",
+      "description": null,
+      "latitude": 41.0304642,
+      "longitude": 28.9730073,
+      "city": "Istanbul",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "4e9ceaca-0487-51aa-993f-7a2d394c6ebc",
+        "2B55EE81-6169-5D51-93BB-B7FA2CC61461"
+      ]
+    },
+    {
+      "id": "5aaece88-1e74-5564-bb86-ada273a93406",
+      "name": "Kosmaj Monument",
+      "description": null,
+      "latitude": 44.467999,
+      "longitude": 20.571784,
+      "city": "Mladenovac",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "5e468948-aac9-5250-b387-487050249903",
+        "36A1564B-9396-5DF9-A529-4A45180A5311"
+      ]
+    },
+    {
+      "id": "e1bebbcc-9bb8-5a0d-94fe-8118de12ee65",
+      "name": "Avala Tower",
+      "description": null,
+      "latitude": 44.696092,
+      "longitude": 20.51465,
+      "city": "Belgrade",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "41f542ab-b489-5838-8e06-2a257608985c",
+        "36DDCC5C-4574-59B8-8B88-2BE6435206D6"
+      ]
+    },
+    {
+      "id": "b65e990e-e908-587b-b807-3efac1191029",
+      "name": "Genex Tower",
+      "description": null,
+      "latitude": 44.820309,
+      "longitude": 20.404971,
+      "city": "Belgrade",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "DB317CB7-E0D3-54F4-99AF-6AA1EA794AA7",
+        "fb2eb675-600d-5884-b5c0-2db5f8f887e4",
+        "095575F6-61DB-56D3-AFFF-CBC0FC336C06"
+      ]
+    },
+    {
+      "id": "70998b10-bf77-5a35-b6c7-b26f8fb158ac",
+      "name": "Block 23, New Belgrade",
+      "description": null,
+      "latitude": 44.808421,
+      "longitude": 20.423989,
+      "city": "Belgrade",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "1b899a06-66a0-5054-ad44-0b9a0924929b",
+        "5D39378D-8A45-5C3E-9FA2-3257B7C0BE1D"
+      ]
+    },
+    {
+      "id": "7adb6745-8f50-5240-a374-18d6deb37d81",
+      "name": "Romanița Tower",
+      "description": null,
+      "latitude": 46.990942,
+      "longitude": 28.837423,
+      "city": "Chișinău",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "7eb81622-24bb-5633-b4ee-a65cbb67828e",
+        "15D39366-D817-5E11-B076-FAA83C5504F1"
+      ]
+    },
+    {
+      "id": "b96098fb-220b-59f7-b033-d1314a2480eb",
+      "name": "Bank of Georgia Headquarters",
+      "description": null,
+      "latitude": 41.73562,
+      "longitude": 44.770861,
+      "city": "Tbilisi",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "a00108c0-4f6a-5b55-a692-026b0ee96ccd",
+        "2512CDFF-FA89-59F5-8C9B-E7DA0D332251"
+      ]
+    },
+    {
+      "id": "385266f2-4d79-50d0-b918-9aed9c666fd3",
+      "name": "Atlantikos",
+      "description": null,
+      "latitude": 37.97761962108394,
+      "longitude": 23.722957577222317,
+      "city": "Athens",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "824c0c6e-c104-511d-bc83-131831982977",
+        "75A07051-0B73-51A9-BEF1-72E12DC5E5B8",
+        "C7694CE4-B4D4-51A5-81FB-7EF20CEC90F2"
+      ]
+    },
+    {
+      "id": "33b76f2c-fde2-5ea4-b3d5-d070419594c5",
+      "name": "The Clumsies",
+      "description": null,
+      "latitude": 37.97913853632364,
+      "longitude": 23.729803211804274,
+      "city": "Athens",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "b278dff6-bdf4-5a7b-ae6e-be9d0c766632",
+        "084E7693-1681-5915-9494-F6A8A54031C2"
+      ]
+    },
+    {
+      "id": "49b4ef39-1761-5f33-9350-be2ba96a0bbd",
+      "name": "Diporto",
+      "description": null,
+      "latitude": 37.98098032395586,
+      "longitude": 23.725875793466766,
+      "city": "Athens",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "870636d4-1051-5460-9496-20c558caccd1",
+        "6408C083-6D92-51E5-B388-06AA555C4079"
+      ]
+    },
+    {
+      "id": "2192b76d-f27a-59d2-ba1b-b4adb90e1055",
+      "name": "Syracuse Cathedral",
+      "description": null,
+      "latitude": 37.05922,
+      "longitude": 15.29317,
+      "city": "Syracuse",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "775D592F-659A-56D6-8E9C-E06441DE51FE",
+        "22FC3FA8-5248-5DEA-B98F-8AD375F76435"
+      ]
+    },
+    {
+      "id": "305bc64f-4e13-514b-a11c-3de7fe1842dc",
+      "name": "Asador Etxebarri",
+      "description": null,
+      "latitude": 43.1159106,
+      "longitude": -2.5984392,
+      "city": "Atxondo",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "97E8EEAC-4969-5B0E-B0A9-DE227BDBDF18",
+        "F670D6E6-ADB4-525C-9C4D-DCB2A38AF30C"
+      ]
+    },
+    {
+      "id": "0e64a99b-81f5-51c0-9154-7c7587a2ecea",
+      "name": "Doshi Retreat",
+      "description": null,
+      "latitude": 47.6016707,
+      "longitude": 7.6188637,
+      "city": "Weil am Rhein",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "AACDE2A9-75C0-523C-9C68-763F2D1F37ED",
+        "3D100BB8-64EB-5CC0-A12F-0393D3F9AAB7"
+      ]
+    },
+    {
+      "id": "7aa965b6-b25e-5e85-afc9-c6eb523245eb",
+      "name": "Tomba Brion",
+      "description": null,
+      "latitude": 45.7513589,
+      "longitude": 11.9134061,
+      "city": "San Vito di Altivole",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "288958E7-B0E4-5291-8C00-21FFD644279B",
+        "B7FE63D1-39BD-59EA-933C-1D6BB0F6E220"
+      ]
+    },
+    {
+      "id": "8a33fe3e-6340-579d-896b-4431e470b1d0",
+      "name": "Malahide Castle",
+      "description": null,
+      "latitude": 53.44494,
+      "longitude": -6.16461,
+      "city": "Malahide",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "47F72EA2-2164-5CD1-B96B-82908BEAA92F",
+        "F79C4F3C-F2C9-5DB9-988D-98CB344A3A61"
+      ]
+    },
+    {
+      "id": "47c7b316-f0fa-58b4-9a19-a2d912d698b7",
+      "name": "Capilla San Bernardo",
+      "description": null,
+      "latitude": -32.047254710366225,
+      "longitude": -63.1094490632366,
+      "city": "La Playosa",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "2C8F052B-5DBB-5E4A-B72A-9857B5F9505B",
+        "EA180EF8-BE28-5B49-AE96-A2D687F31B67"
+      ]
+    },
+    {
+      "id": "19ad0239-7930-5a61-9e28-7dba612e8072",
+      "name": "MAC Niterói",
+      "description": null,
+      "latitude": -22.9079221,
+      "longitude": -43.1258687,
+      "city": "Niterói",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "DC0E9AA7-11B4-5131-BA7B-48C380C1C0F8",
+        "7694e539-478c-5663-971f-53b3c63e28f8",
+        "D7E89D2D-E7B2-5E22-B04A-60796CC4A84A"
+      ]
+    },
+    {
+      "id": "924980ea-84cf-548d-8b6e-202a902747c0",
+      "name": "Biblioteca Vasconcelos",
+      "description": null,
+      "latitude": 19.44723301422321,
+      "longitude": -99.15086488093685,
+      "city": "Mexico City",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "74d534de-acc7-5014-a9c5-da0171128b6d",
+        "D2AB471A-E219-5B28-969F-76BEDF82F6E1"
+      ]
+    },
+    {
+      "id": "640628ef-461c-58a8-a990-ee0f6446affc",
+      "name": "Museo Tamayo",
+      "description": null,
+      "latitude": 19.425917302446184,
+      "longitude": -99.18169990674589,
+      "city": "Mexico City",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "a648b9d7-4924-555c-8762-92c0c674ca1f",
+        "BEB23F8E-8A4C-586B-8B86-4152DA896077"
+      ]
+    },
+    {
+      "id": "34be1014-4b83-5322-a2f8-7176636adb0a",
+      "name": "Imaya no Hamburger",
+      "description": null,
+      "latitude": 33.597919,
+      "longitude": 130.378189,
+      "city": "Fukuoka",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "18E6D880-7DCC-5828-87F6-91A71877BADC",
+        "63DD7831-BDC7-53A5-8EF6-79C940F4EECD",
+        "A4D63392-E9A3-592F-B479-657E2566B6CF"
+      ]
+    },
+    {
+      "id": "ff71b499-f0e2-5f6c-8df9-4ac22b41894f",
+      "name": "Nanzoin",
+      "description": null,
+      "latitude": 33.61984,
+      "longitude": 130.57294,
+      "city": "Sasaguri",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "77F3C884-D86A-55D4-ADD1-4642C6FA3BA6",
+        "5229E5EB-46B0-5C50-AF3D-1B77A1FCBBB5"
+      ]
+    },
+    {
+      "id": "c2101bec-12ad-508b-882b-bc6c2a37584d",
+      "name": "Reiyūkai Shakaden",
+      "description": null,
+      "latitude": 35.66129,
+      "longitude": 139.74218,
+      "city": "Tokyo",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "948f8ce6-e540-5ec1-bcbf-b64ddc23a934",
+        "E42FC0CA-2CC5-58EF-9D2D-A6F34885F94F"
+      ]
+    },
+    {
+      "id": "fe329518-9ee0-5616-afd9-1d73a58e76a6",
+      "name": "Dongdaemun Design Plaza",
+      "description": null,
+      "latitude": 37.56667011489626,
+      "longitude": 127.00922360484853,
+      "city": "Seoul",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "4fe03935-405b-53c8-9991-d21eba60c45c",
+        "2A83EDCE-B65C-591D-9B03-B13249F6DAE1"
+      ]
+    },
+    {
+      "id": "f56dfbf5-590d-5593-a841-2b30d304bb5a",
+      "name": "Anan Saigon",
+      "description": null,
+      "latitude": 10.771910171223684,
+      "longitude": 106.70285179949286,
+      "city": "Ho Chi Minh City",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "7bf82561-b2f9-52aa-9e55-ed0b31ecae9e",
+        "1C093B88-CF55-5F3F-A43F-0D66A6486E2E"
+      ]
+    },
+    {
+      "id": "3d57df98-d20d-51aa-917b-a0984aecb6fe",
+      "name": "Heap Seng Leong",
+      "description": null,
+      "latitude": 1.305557,
+      "longitude": 103.8635591,
+      "city": "Singapore",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "62878BD5-855A-5B1C-A3F5-0984F8EE7A79",
+        "BBC19618-EDF2-5D13-8BF0-F356CE01AE1F"
+      ]
+    },
+    {
+      "id": "a07a37fb-96a0-57c5-89c5-5c6802c7d5df",
+      "name": "Sultan Abdul Samad Building",
+      "description": null,
+      "latitude": 3.1489214,
+      "longitude": 101.6944689,
+      "city": "Kuala Lumpur",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "bfa1f874-30f1-5fac-9d16-01c917dc17c4",
+        "2838677E-B18C-5576-BCF0-F1E7AFCC19BD"
+      ]
+    },
+    {
+      "id": "3efc4c3b-f6d6-5f9d-8605-1036db68a7ea",
+      "name": "Dayabumi Complex",
+      "description": null,
+      "latitude": 3.1452478,
+      "longitude": 101.6939599,
+      "city": "Kuala Lumpur",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "631bc104-4c04-571e-896e-b369c85fa062",
+        "106E9AB0-1236-5D56-B400-FE2E0B33DC3F"
+      ]
+    },
+    {
+      "id": "85e36f23-3ee4-5986-b0c8-d8f9eaf068df",
+      "name": "ELCO Pani Puri Centre",
+      "description": null,
+      "latitude": 19.056087708778655,
+      "longitude": 72.83322453555145,
+      "city": "Mumbai",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "70000ac7-5d40-5379-b16d-c33ff1ff49d9",
+        "87BEFFA6-E4B2-5B67-BBAA-6EB000959915"
+      ]
+    },
+    {
+      "id": "3c18f1f3-e9cf-5a78-9f29-2ef88bcb6738",
+      "name": "The Taj Mahal Palace",
+      "description": null,
+      "latitude": 18.921778,
+      "longitude": 72.8332848,
+      "city": "Mumbai",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "746258af-f84f-5c06-a48f-bf6e55d70010",
+        "340AFDD5-361B-5D40-B684-64072FEA29EA"
+      ]
+    },
+    {
+      "id": "ff04e6b9-ea84-533e-9bda-ec5901df81ff",
+      "name": "Zeitz MOCAA",
+      "description": null,
+      "latitude": -33.90822478508058,
+      "longitude": 18.422694040537365,
+      "city": "Cape Town",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "c022fd6a-83b2-57c3-911c-55cba9e8d884",
+        "E74E3767-D0DB-573F-B297-A61D773CF294"
+      ]
+    },
+    {
+      "id": "98e4a9a8-15fd-5b26-b565-bc0ae93b26fb",
+      "name": "Oslo Opera House",
+      "description": null,
+      "latitude": 59.90760102792315,
+      "longitude": 10.753130448305486,
+      "city": "Oslo",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "5d1f8221-725a-5578-a79e-7c089c2a8014",
+        "EBB987C9-7386-5FDB-A060-B0CAE64F0D36"
+      ]
     }
   ],
   "linkPins": [
@@ -161747,8 +162757,8 @@
           "order": 0,
           "title": "Les Choux de Créteil",
           "caption": "The most interesting residential towers I've ever seen. Les Choux de Créteil, ten circular towers designed by Gérard Grandval in 1968 as a direct rejection of cube-shaped housing. #brutalism #Design #Paris",
-          "latitude": 48.78469,
-          "longitude": 2.44558,
+          "latitude": 48.7851046,
+          "longitude": 2.4447226,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -161760,8 +162770,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.78469,
-      "centroidLongitude": 2.44558,
+      "centroidLatitude": 48.7851046,
+      "centroidLongitude": 2.4447226,
       "city": "Créteil",
       "country": "France",
       "relatedTourIds": [
@@ -166039,8 +167049,8 @@
           "order": 0,
           "title": "Les Espaces d'Abraxas",
           "caption": "80s French post-modern residential architecture. Kitsch masquerading as grandeur. It’s kind of horrible? Kind of awesome? Les Espaces d’Abraxas by Ricardo Bofill, 1982 & Arenes de Picasso Manuel Nuñez Yanowsky, 1985 #learnontiktokcontest #tiktoklearningcampaign #architecture #paris #postmodern",
-          "latitude": 48.840100488877574,
-          "longitude": 2.5429407453895685,
+          "latitude": 48.84018131090563,
+          "longitude": 2.542929727151812,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -166052,8 +167062,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.840100488877574,
-      "centroidLongitude": 2.5429407453895685,
+      "centroidLatitude": 48.84018131090563,
+      "centroidLongitude": 2.542929727151812,
       "city": "Noisy-le-Grand",
       "country": "France",
       "relatedTourIds": [
@@ -169330,8 +170340,8 @@
           "order": 0,
           "title": "Kirche am Steinhof",
           "caption": "Otto Wagner’s Kirche am Steinhof",
-          "latitude": 48.2106094,
-          "longitude": 16.2787645,
+          "latitude": 48.210383,
+          "longitude": 16.278411,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -169343,8 +170353,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.2106094,
-      "centroidLongitude": 16.2787645,
+      "centroidLatitude": 48.210383,
+      "centroidLongitude": 16.278411,
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
@@ -174129,8 +175139,8 @@
           "order": 0,
           "title": "Biblioteca Vasconcelos",
           "caption": "Field notes on Biblioteca Vasconcelos, the Mexico City library everyone mistakes for a movie set. Designed by architect Alberto Kalach with Juan Palomar, the library was selected through an international design competition in the early 2000s and broke ground in 2004. It opened in May 2006, dedicated to José Vasconcelos, the philosopher and former Mexican education minister who championed public literacy in the 1920s. Inside: suspended steel bookshelves, walkways that seem to float, and a whale skeleton hanging in the atrium, an installation tied to the building’s own “ark” concept. What most people don’t know is that the library flooded and closed within its first year, reopening only after nearly two years of structural repairs. It’s still one of the most photographed public libraries in the world. Mexico City travel guide, Mexico City architecture, Alberto Kalach architecture, things to do in Mexico City, unique libraries in the world, CDMX hidden gems, Mexico City design tour. #mexicocity #cdmx #architecture #designtravel #hiddengemsmexico",
-          "latitude": 19.4474857,
-          "longitude": -99.150807,
+          "latitude": 19.44723301422321,
+          "longitude": -99.15086488093685,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -174142,8 +175152,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 19.4474857,
-      "centroidLongitude": -99.150807,
+      "centroidLatitude": 19.44723301422321,
+      "centroidLongitude": -99.15086488093685,
       "city": "Mexico City",
       "country": "Mexico",
       "relatedTourIds": [
@@ -190281,8 +191291,8 @@
           "order": 0,
           "title": "Oslo Opera House",
           "caption": "Btw the marble in this place was 👌🏾👌🏾👌🏾 ARCHITECT ARCHITECTURE Who’s been here? 🙌🏾",
-          "latitude": 59.9075238,
-          "longitude": 10.7526806,
+          "latitude": 59.90760102792315,
+          "longitude": 10.753130448305486,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -190294,8 +191304,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 59.9075238,
-      "centroidLongitude": 10.7526806,
+      "centroidLatitude": 59.90760102792315,
+      "centroidLongitude": 10.753130448305486,
       "city": "Oslo",
       "country": "Norway",
       "relatedTourIds": [
@@ -213858,8 +214868,8 @@
           "order": 0,
           "title": "The Kosmaj Monument",
           "caption": "What’s the story behind this epic Yugoslav monument that appears in The Hunger Games? The original stands near Belgrade, built in 1971, after Yugoslavia broke away from the Soviet Bloc in 1948. It was designed and built by sculptor Vojin Stojić and architect Gradimir Medaković, with its five sweeping 30-metre concrete fins resembling a sci-fi spaceship. In the film franchise, the spomenik forms part of the Capitol’s architecture representing the authoritarian regime led by President Snow. Yet the original anti-fascist monument commemorates Partisan armies who fought Nazi occupation in WWII – fighters that, like Katniss’s female-led rebellion, included tens of thousands of women.",
-          "latitude": 44.4678125,
-          "longitude": 20.5716875,
+          "latitude": 44.467999,
+          "longitude": 20.571784,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -213871,8 +214881,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 44.4678125,
-      "centroidLongitude": 20.5716875,
+      "centroidLatitude": 44.467999,
+      "centroidLongitude": 20.571784,
       "city": "Mladenovac",
       "country": "Serbia",
       "relatedTourIds": [
@@ -227753,8 +228763,8 @@
           "order": 0,
           "title": "The Palace of Culture and Science",
           "caption": "The Palace of Culture and Science will be demolished? 🏰 Join us in decoding the future of Warsaw's iconic Palace of Culture and Science. Delve into the controversies surrounding its Stalinist origins and witness the impact of urban decay on this historic landmark. Explore the ongoing efforts to preserve the past and the uncertainties that lie ahead, as we navigate through the intersection of history, controversy, and the evolving fate of this architectural masterpiece. 🏰🕵️‍♂️ #palaceofcultureandscience #warsaw #stalinist #controversy #urbandecay #history #historytok",
-          "latitude": 52.2318125,
-          "longitude": 21.0059375,
+          "latitude": 52.231766,
+          "longitude": 21.005798,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -227766,8 +228776,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 52.2318125,
-      "centroidLongitude": 21.0059375,
+      "centroidLatitude": 52.231766,
+      "centroidLongitude": 21.005798,
       "city": "Warsaw",
       "country": "Poland",
       "relatedTourIds": [
@@ -231076,8 +232086,8 @@
           "order": 0,
           "title": "Jeanne Hachette, Ivry-sur-Seine",
           "caption": "This is social housing complex outside Paris, designed so that no two homes would be alike. In 1969 Ivry-sur-Seine made Renée Gailhoustet chief architect of its whole center, a hundred and five hectares. She was one of the very few women of her generation building under her own name. She brought in Jean Renaudie, who received his first independent commissions here. At the time France was answering its housing shortage with identical towers. Renaudie thought every apartment should be different because every person is different, and that a home only becomes yours when it isn’t like anyone else’s. Handed forty units at Jeanne-Hachette, he drew forty different plans. He abandoned the right angle and worked in triangles. Gailhoustet worked in octagons on the buildings next to his. The shapes interlock, so apartments overlap rather than stack into floors, and the buildings step back as they climb so that each roof becomes the planted terrace of the home above, filled with enough soil for the green to keep climbing. Then they put the town inside the buildings. Shops, offices, a school and a cinema run up through the levels, connected by open walkways that work like streets. In 2015 the last Hunger Games film used it as a street in the Capitol. Renaudie won the Grand Prix national de l’architecture in 1978 and died in 1981. Gailhoustet completed the center alone and spent four more decades applying the same idea across Aubervilliers, Saint-Denis and Villejuif. The Ivry buildings are now recognized by the French state as remarkable contemporary architecture. #architecture #reneegailhoustet #parisarchitecture #ivrysurseine",
-          "latitude": 48.8135625,
-          "longitude": 2.3850625,
+          "latitude": 48.8137558,
+          "longitude": 2.3850938,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -231089,8 +232099,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.8135625,
-      "centroidLongitude": 2.3850625,
+      "centroidLatitude": 48.8137558,
+      "centroidLongitude": 2.3850938,
       "city": "Ivry-sur-Seine",
       "country": "France",
       "relatedTourIds": [
@@ -242444,8 +243454,8 @@
           "order": 0,
           "title": "The Clumsies",
           "caption": "😍 This Cheesecake at Clumsies in Athens is what dreams are made of. #athensgreece #greektiktok",
-          "latitude": 37.9789375,
-          "longitude": 23.7298125,
+          "latitude": 37.97913853632364,
+          "longitude": 23.729803211804274,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -242457,8 +243467,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 37.9789375,
-      "centroidLongitude": 23.7298125,
+      "centroidLatitude": 37.97913853632364,
+      "centroidLongitude": 23.729803211804274,
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
@@ -248740,8 +249750,8 @@
           "order": 0,
           "title": "Warsaw University Library",
           "caption": "The Warsaw University Library #blessedarch #architecture #design #library #garden",
-          "latitude": 52.24264,
-          "longitude": 21.02507,
+          "latitude": 52.242643,
+          "longitude": 21.025068,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -248753,8 +249763,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 52.24264,
-      "centroidLongitude": 21.02507,
+      "centroidLatitude": 52.242643,
+      "centroidLongitude": 21.025068,
       "city": "Warsaw",
       "country": "Poland",
       "relatedTourIds": [
@@ -251908,8 +252918,8 @@
           "order": 0,
           "title": "Museo Tamayo",
           "caption": "Museo Tamayo doesn’t look like a museum from outside. It looks like a hillside that decided to have options. Built by Teodoro González de León and Abraham Zabludovsky in Mexico City’s Chapultepec Park, the whole thing borrows the logic of pyramids without copying a single one. You don’t approach this building. You descend into it. Mexico City architecture | brutalist museums | hidden gems #MexicoCity #BrutalistArchitecture #MuseoTamayo #CDMXTravel #ArchitectureLovers",
-          "latitude": 19.4256875,
-          "longitude": -99.1816875,
+          "latitude": 19.425917302446184,
+          "longitude": -99.18169990674589,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -251921,8 +252931,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 19.4256875,
-      "centroidLongitude": -99.1816875,
+      "centroidLatitude": 19.425917302446184,
+      "centroidLongitude": -99.18169990674589,
       "city": "Mexico City",
       "country": "Mexico",
       "relatedTourIds": [
@@ -257585,8 +258595,8 @@
           "order": 0,
           "title": "Block 23, New Belgrade",
           "caption": "Serbians built an entire city by hand, then weren’t allowed to live in it. Block 23 in New Belgrade promised every Yugoslav worker a home, but the workers who poured the concrete ended up last in line. New York’s NYCHA tells the same story, only far bigger: 177,000 apartments and a $78 billion repair bill. #TikTokLearningCampaign #historyfacts #learnontiktok",
-          "latitude": 44.80853,
-          "longitude": 20.42423,
+          "latitude": 44.808421,
+          "longitude": 20.423989,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -257598,8 +258608,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 44.80853,
-      "centroidLongitude": 20.42423,
+      "centroidLatitude": 44.808421,
+      "centroidLongitude": 20.423989,
       "city": "Belgrade",
       "country": "Serbia",
       "relatedTourIds": [
@@ -267668,8 +268678,8 @@
           "order": 0,
           "title": "Zaha Hadid Library, Campus WU",
           "caption": "🚀 Six Architectural Visions, One Campus ✨ If the Ringstrasse is Vienna’s history, Campus WU is its future. This \"starchitect\" playground redefined the city's skyline with six world-class masterpieces: 🛸 Zaha Hadid's Library: The campus \"flagship.\" With its 16-meter cantilevered roof and futuristic white canyon interior, it looks like a spacecraft docked in the Prater. 🏗️ BUSarchitektur's Learning Center: Clad in rusting Corten steel, this rugged monolith houses the Audimax and serves as the campus’s weathered, urban heart. 🌿 CRAB Studio's Administration Building: Peter Cook’s vibrant timber louvers in orange and red bring the organic warmth of the neighboring woods into the architecture. 🧩 Carme Pinós's Departments Building: Applying geometric abstraction, defined by a façade and floor plan that reject the traditional grid in favor of a playful arrangement of parallelograms. 🏁 Hitoshi Abe's Student Center: The complex is defined by two elongated, curved structures characterized by a \"wavy\" geometry. The façade has a striking black-and-white color palette, arranged in fluid patterns. 🪞 NO.MAD Arquitectos Executive Academy: The reflective tower uses a mono-material construction philosophy of expending the least possible components. Ready to walk through the future of Vienna? Contact team@insightcities.com for a deep dive into the city's masterworks of modern and contemporary architecture. #WUWien #ZahaHadid #ViennaTour #ViennaArchitecture #CampusWU",
-          "latitude": 48.2131,
-          "longitude": 16.4109,
+          "latitude": 48.213856,
+          "longitude": 16.408884,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -267681,8 +268691,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.2131,
-      "centroidLongitude": 16.4109,
+      "centroidLatitude": 48.213856,
+      "centroidLongitude": 16.408884,
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
@@ -267723,8 +268733,8 @@
           "order": 0,
           "title": "Karlsplatz Stadtbahn Pavilions",
           "caption": "🌿 Iron & Florals: Otto Wagner’s City Vision 🇦🇹 Before the world fell in love with the Parisian metro, Vienna was already setting the standard for urban transit. This is how Otto Wagner turned a commute into a masterpiece. 🧱 At the end of the 19th century, Vienna was exploding. The old walls were gone, the Ringstrasse was rising, and the city needed a way to move thousands of people fast. 🎨 Enter Otto Wagner. Instead of just building tracks, he wanted a \"total work of art.\" He chose the Secessionist style—Vienna's bold, geometric take on Art Nouveau—to prove that infrastructure could be high art. 🏛️ You can still see this logic today at Karlsplatz—green-painted iron, gold leaf, and white marble merging beauty with pure function. 🏘️ Near the Naschmarkt, the famous Majolikahaus used the same logic, ceramic tiles paired with explosive floral decoration. 🏙️ He took the lessons learned from these residential masterpieces and applied them to the city's transport system. 🚠 Next time you climb the stairs at Kettenbrückengasse or Stadtpark, look at the railings. Every curve and bolt is part of a 120-year-old system designed to make the modern city feel intentional. To explore Vienna's art nouveau stations and Secession Building on our Vienna Art Nouveau tour, contact team@insightcities.com. #Wien #OttoWagner #ArtNouveau #MetroDesign #ViennaArtNouveau Photo credits: Wenzl Weis, Public domain, via Wikimedia Commons Bibliothèque nationale de France, Public domain, via Wikimedia Commons Pobuda, Wenzel; Hoffmann, Karl Friedrich Vollrath, CC0, via Wikimedia Commons",
-          "latitude": 48.1993,
-          "longitude": 16.3689,
+          "latitude": 48.200275,
+          "longitude": 16.370266,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -267736,8 +268746,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.1993,
-      "centroidLongitude": 16.3689,
+      "centroidLatitude": 48.200275,
+      "centroidLongitude": 16.370266,
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
@@ -316091,8 +317101,8 @@
           "order": 0,
           "title": "Dayabumi Complex",
           "caption": "Malaysia’s First Modern Tower 😲",
-          "latitude": 3.144377,
-          "longitude": 101.6940076,
+          "latitude": 3.1452478,
+          "longitude": 101.6939599,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -316104,8 +317114,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 3.144377,
-      "centroidLongitude": 101.6940076,
+      "centroidLatitude": 3.1452478,
+      "centroidLongitude": 101.6939599,
       "city": "Kuala Lumpur",
       "country": "Malaysia",
       "relatedTourIds": [
@@ -316249,8 +317259,8 @@
           "order": 0,
           "title": "Sultan Abdul Samad Building",
           "caption": "Malaysia’s Most Historic Building 🇲🇾",
-          "latitude": 3.148231,
-          "longitude": 101.6948581,
+          "latitude": 3.1489214,
+          "longitude": 101.6944689,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -316262,8 +317272,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 3.148231,
-      "centroidLongitude": 101.6948581,
+      "centroidLatitude": 3.1489214,
+      "centroidLongitude": 101.6944689,
       "city": "Kuala Lumpur",
       "country": "Malaysia",
       "relatedTourIds": [
@@ -327342,8 +328352,8 @@
           "order": 0,
           "title": "Secession Building — Beethoven Frieze",
           "caption": "📍Beethoven Frieze, Gustav Klimt, Secession Building, Vienna, Austria GUSTAV KLIMT Gustav Klimt is incredibly important to Vienna’s cultural identity. He helped lead the Vienna Secession, a movement that broke away from traditional art and moved into a new era of modern art. If you’re planning a trip to Vienna, it is an absolute must to see one of his incredible works in person. Many visit The Kiss at the Belvedere Palace, but Beethoven Frieze is also worth paying a visit. THE PAINTING The painting isn’t just hanging inside the museum, it was painted directly onto the walls of the Secession building, making the artwork part of the architecture itself. The mural tells a story of humanity searching for happiness, it is more complicated than my “simple for social media explanation”, because of the many layers of symbolism (and I’m by no means an art expert). Essentially, it shows a journey of suffering, obstacles, on the path to artistic fulfillment. BEETHOVEN’S NINTH SYMPHONY This is also an immersive experience. You can scan a QR code with your phone, or use one of their headsets, to listen to the fourth movement of Beethoven’s Ninth Symphony while viewing the artwork. Pretty cool! If you’re planning a trip to Vienna, save this. We’re Anthony + Katie, food explorers and travelers on a mission to discover the world’s most beautiful places and unforgettable foods. Follow @anthonykatiekay for your next adventure (and snack). #viennaaustria #viennatravelguide #visitaustria #gustavklimt #artmuseum",
-          "latitude": 48.2005,
-          "longitude": 16.3658,
+          "latitude": 48.200497,
+          "longitude": 16.365768,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -327355,8 +328365,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.2005,
-      "centroidLongitude": 16.3658,
+      "centroidLatitude": 48.200497,
+      "centroidLongitude": 16.365768,
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
@@ -328553,8 +329563,8 @@
           "order": 0,
           "title": "Austrian National Library — State Hall",
           "caption": "The most magical library in Vienna ✨ If you’re planning a trip to Vienna, this is your sign to add the Austrian National Library’s State Hall (Prunksaal) to your itinerary. Truly one of the most beautiful libraries in the world, and yes… it absolutely gives Beauty and the Beast vibes. Located right in the Hofburg Palace complex, it’s super easy to find and such a magical stop in the heart of the city. There are often rotating exhibits inside too, so there’s even more to explore beyond the State Hall itself. If you already have your ticket, you really don’t need to set aside a huge chunk of time here. I’d say 30 minutes to 1 hour is perfect for the State Hall, unless you want to explore the rest of the museums/exhibits in the building. TICKETS: Buy your tickets in advance online and only through the Austrian National Library’s official website. There are way too many scammy ticket listings for this one, and it’s not worth the headache. HOURS: Open Tuesday–Sunday, 10 AM–6 PM (last entry 5 PM) This is an absolute must-see in Vienna. #viennatravelguide #austriannationallibrary #beautifullibrary #viennatrip #visitaustria",
-          "latitude": 48.2062,
-          "longitude": 16.3667,
+          "latitude": 48.206167,
+          "longitude": 16.36669,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -328566,8 +329576,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.2062,
-      "centroidLongitude": 16.3667,
+      "centroidLatitude": 48.206167,
+      "centroidLongitude": 16.36669,
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
@@ -330255,8 +331265,8 @@
           "order": 0,
           "title": "Les Tours Aillaud",
           "caption": "Les Tours Aillaud, 1976, designed by Émile Aillaud. Also known as Les Tours Nuages, or the Cloud Towers! One of the more surreal utopian housing projects I’ve had a chance to wander around. Dreamlike in all ways. They’re located in Nanterre, a western suburb of Paris.",
-          "latitude": 48.8897142,
-          "longitude": 2.2281781,
+          "latitude": 48.889872,
+          "longitude": 2.2269925,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -330268,8 +331278,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.8897142,
-      "centroidLongitude": 2.2281781,
+      "centroidLatitude": 48.889872,
+      "centroidLongitude": 2.2269925,
       "city": "Nanterre",
       "country": "France",
       "relatedTourIds": [
@@ -355735,8 +356745,8 @@
           "order": 0,
           "title": "Atlantikos",
           "caption": "Trying the most Viral seafood restaurant in Greece, Atlantikos! This place is the number one most reviewed place in Athens for seafood, found just a short walk from Monastiraki. Every time I walk by this place in Athens, there is a massive lineup down the street, so we decided to try it. Was it any good? I would say yes, it’s incredible, but I found it to be quite too famous, it’s mostly tourists so if you want to get a table without a long wait you should go early. I would come back but I think I will explore more and more places in Athens first, but yes overall an amazing place I loved their Mussels saganaki, their anchovies in the oven with garlic , their grilled fish, their fava spread, and their seafood pasta! Amazing place to eat in Athens! I could go back just for their seafood pasta and mussels! And all their dishes!",
-          "latitude": 37.977534,
-          "longitude": 23.722976,
+          "latitude": 37.97761962108394,
+          "longitude": 23.722957577222317,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -355748,8 +356758,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 37.977534,
-      "centroidLongitude": 23.722976,
+      "centroidLatitude": 37.97761962108394,
+      "centroidLongitude": 23.722957577222317,
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
@@ -355789,8 +356799,8 @@
           "order": 0,
           "title": "Diporto",
           "caption": "The oldest taverna in Athens? This shop is called Diporto and is a classic spot to visit to eat authentic Greek home style cooking, drink wine from the barrel, and feel like you’re stepping back in time. It’s a short walk from Monastiraki area and is worth the walk over, just make sure you find it! It’s underground and you should follow Diporto on Google Maps, and you will have a nice hearty lunch! Contrary to popular opinion, Anthony Bourdain did not actually eat here but I think he would have loved this place, it’s a true not so hidden anymore gem but it’s popular for good reason, you get honest and delicious home cooked Greek food. I would definitely come back to this place and I usually do whenever I visit Athens! Diporto, come here for a nice lunch! And follow for more great food finds around Europe!",
-          "latitude": 37.980733,
-          "longitude": 23.725835,
+          "latitude": 37.98098032395586,
+          "longitude": 23.725875793466766,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -355802,8 +356812,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 37.980733,
-      "centroidLongitude": 23.725835,
+      "centroidLatitude": 37.98098032395586,
+      "centroidLongitude": 23.725875793466766,
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
@@ -367813,8 +368823,8 @@
           "order": 0,
           "title": "Genex Tower",
           "caption": "If you’re into Brutalism, this is one building you shouldn’t miss in Belgrade. The Western City Gate,better known as the Genex Tower,was designed by Serbian architect Mihajlo Mitrović in the 1970s and completed around 1980. Its location wasn’t accidental: standing along the route from Belgrade’s airport, it was conceived as a western gateway into the city. The complex consists of two concrete towers connected near the top: a taller residential tower and a commercial tower that became associated with Generalexport (Genex), which is where the building got its popular name. And then there’s probably its most recognizable feature: the circular restaurant above the towers. It was conceived as a revolving restaurant with panoramic views over Belgrade, although the rotating mechanism never became functional. Today, the contrast between the two sides is almost as interesting as the original design. The residential tower is still inhabited, while the former office tower has been abandoned. And something I wish I had discovered before visiting: you can actually stay inside the residential tower. There are apartments offered as short-term rentals, including one right at the top. I came here because I wanted to photograph one of Belgrade’s most recognizable examples of Yugoslav Brutalism. I didn’t expect the building itself to have this many stories. Definitely adding “sleep inside a Brutalist icon” to the list for my next visit. 😂",
-          "latitude": 44.82028,
-          "longitude": 20.40472,
+          "latitude": 44.820309,
+          "longitude": 20.404971,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -367826,8 +368836,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 44.82028,
-      "centroidLongitude": 20.40472,
+      "centroidLatitude": 44.820309,
+      "centroidLongitude": 20.404971,
       "city": "Belgrade",
       "country": "Serbia",
       "relatedTourIds": [
@@ -370959,8 +371969,8 @@
           "order": 0,
           "title": "Avala Tower",
           "caption": "Avala Tower (Telecommunication and observation) Belgrade, Serbia Originally constructed in 1961, rebuilt 2006-2009. Architects Uglješa Bogunović and Slobodan Janjić. © BACU @_di_ma @socheritage @socmodernism @socialistheritage",
-          "latitude": 44.69583,
-          "longitude": 20.51444,
+          "latitude": 44.696092,
+          "longitude": 20.51465,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -370972,8 +371982,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 44.69583,
-      "centroidLongitude": 20.51444,
+      "centroidLatitude": 44.696092,
+      "centroidLongitude": 20.51465,
       "city": "Belgrade",
       "country": "Serbia",
       "relatedTourIds": [
@@ -372166,8 +373176,8 @@
           "order": 0,
           "title": "Dongdaemun Design Plaza",
           "caption": "Dongdaemun Design Plaza, Seoul, South Korea by Zaha Hadid, 2014. Over 45,000 aluminium panels, each one a different size and curvature, wrap a building with no straight edges and no two facades alike. Built over the excavated remains of a Joseon era gate and sections of the old Seoul city wall. @maynardarchitect @kevinhui_archimarathon #archimarathon #seoul #southkorea #zahahadid #archilovers",
-          "latitude": 37.5670686,
-          "longitude": 127.009899,
+          "latitude": 37.56667011489626,
+          "longitude": 127.00922360484853,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -372179,8 +373189,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 37.5670686,
-      "centroidLongitude": 127.009899,
+      "centroidLatitude": 37.56667011489626,
+      "centroidLongitude": 127.00922360484853,
       "city": "Seoul",
       "country": "South Korea",
       "relatedTourIds": [
@@ -373146,8 +374156,8 @@
           "order": 0,
           "title": "Zeitz MOCAA",
           "caption": "Zeitz MOCAA – A cathedral carved from concrete. Cape Town’s historic grain silo once stored maize from across South Africa. Today, it has been transformed into the largest museum of contemporary art on the continent. Rather than demolish its dense concrete tubes, Heatherwick Studio carved into them—creating a luminous atrium that celebrates the building’s industrial past while redefining it for the future. A powerful example of adaptive reuse, the Zeitz Museum shows how what we see as obsolete can become extraordinary when reimagined with purpose—turning industrial heritage into timeless architecture. 📍 Cape Town, South Africa Architects: Heatherwick Studio 📸 Photo credits: Iwan Baan, Hufton + Crow, Dezeen, ArchDaily, Heatherwick Studio, Mark Williams #architecture #brutalism #africa #adaptivereuse #renovation",
-          "latitude": -33.9083985,
-          "longitude": 18.423001,
+          "latitude": -33.90822478508058,
+          "longitude": 18.422694040537365,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -373159,8 +374169,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": -33.9083985,
-      "centroidLongitude": 18.423001,
+      "centroidLatitude": -33.90822478508058,
+      "centroidLongitude": 18.422694040537365,
       "city": "Cape Town",
       "country": "South Africa",
       "relatedTourIds": [
@@ -373834,7 +374844,7 @@
           "title": "Sydney Opera House",
           "caption": "1973 年，雪梨歌劇院落成。英國女王親臨剪彩、港灣煙火齊發、萬人歡騰慶祝，但在歡呼聲背後，創造這座世界奇蹟的人，卻遠在數萬公里外的丹麥。 38 歲的約恩·烏松（Jørn Utzon）畫出了歌劇院草圖。當時所有評審都覺得這堆曲線是根本蓋不出來的瘋狂想法，只有埃羅·薩里寧（Eero Saarinen）力排眾議讓他拿下項目。 烏松帶著全家搬到澳洲親自監工，然而技術與政治的雙重打壓，1966 年他辭職離開澳洲，即使後來他獲得了建築界最高榮譽普立茲克獎，雪梨歌劇院在 2007 年成為世界文化遺產，他終其一生，再也沒有踏上澳洲。2008 年他在睡夢中平靜離世。他沒能親手撫摸完工後的建築，但他留給世界的，是一座永恆的人類精神地標。 #Victor帶看 #JornUtzon #建築 #雪梨歌劇院 #SydneyOperaHouse",
           "latitude": -33.857198,
-          "longitude": 151.215123,
+          "longitude": 151.2151234,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -373847,7 +374857,7 @@
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
       "centroidLatitude": -33.857198,
-      "centroidLongitude": 151.215123,
+      "centroidLongitude": 151.2151234,
       "city": "Sydney",
       "country": "Australia",
       "primaryCategory": "architecture",
@@ -382877,8 +383887,8 @@
           "order": 0,
           "title": "Anan Saigon",
           "caption": "Trying Michelin Star Banh Mi 🥖 Today we are at Anan where they serve a 25 layer mortadella banh mi that people are calling the best banh mi in the world, would you try this? Follow to see the best food on the planet #foodie #banhmi",
-          "latitude": 10.771803,
-          "longitude": 106.702974,
+          "latitude": 10.771910171223684,
+          "longitude": 106.70285179949286,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -382890,8 +383900,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 10.771803,
-      "centroidLongitude": 106.702974,
+      "centroidLatitude": 10.771910171223684,
+      "centroidLongitude": 106.70285179949286,
       "city": "Ho Chi Minh City",
       "country": "Vietnam",
       "relatedTourIds": [
@@ -383487,8 +384497,8 @@
           "order": 0,
           "title": "Le Bon Georges",
           "caption": "Le Bon Georges was such a fantastic meal, great service, super flavorful, and honestly no misses from start to finish 🌟 Thank you @bubuandres @rickyandres2000 for an amazing meal and great wines, and the never ending birthday festivities!! 🥹❤️ And ofc my Eedjot @rissandres ❤️❤️ #parisrestaurant #parisfoodguide #parisrecommendations #wheretoeatinparis #parisfoodie",
-          "latitude": 48.877628,
-          "longitude": 2.3372618,
+          "latitude": 48.8776422,
+          "longitude": 2.3372106,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -383500,8 +384510,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.877628,
-      "centroidLongitude": 2.3372618,
+      "centroidLatitude": 48.8776422,
+      "centroidLongitude": 2.3372106,
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
@@ -383939,8 +384949,8 @@
           "order": 0,
           "title": "Heap Seng Leong",
           "caption": "Heap Seng Leong - Lavender: Coffee Run Singapore This spot has been trending on Instagram, so we decided to join the hype and film another coffee run video on our second visit! We came for a traditional Kaya toast breakfast paired perfectly with kopi. We ordered two breakfast sets, each including kaya toast, soft boiled eggs, and a hot drink. Our choices were Kopi-O Siew Dai (coffee, no milk, less sugar) and Kopi C Kosong (coffee with evaporated milk, no sugar). Kopi, made from Robusta beans, packs nearly double the caffeine of the more common Arabica beans—an excellent way to kickstart your day! The beans are roasted with sugar and butter or margarine, then brewed using the traditional \"hand-pulling\" method. My Kopi-O Siew Dai was just right—not too sweet and not too strong, hitting that perfect balance. Now, onto the toast and eggs. The toast, made from two thick slices of white bread, is grilled over charcoal, giving it a delightful smoky flavor. The Kaya (coconut jam) is generously spread on the toast, topped with a square of butter. Joyce was impressed! Dipping the toast into the perfectly soft boiled eggs (they were a bit overdone last time) was a real treat. OFFEE STOP: Heap Seng Leong Coffeeshop LOCATION: 10 N Bridge Rd, #01-5109, Singapore 190010 COFFEE BRAND: Traditional Singapore Kopi SOFUNSOWHAT COFFEE RATING: (PG+) Pretty Good Plus #kopi #CoffeeRun #SingaporeEats #KayaToast #KopiLovers #HeapSengLeong #FoodieAdventures #BreakfastGoals #exploresg #realsingapore",
-          "latitude": 1.3053994,
-          "longitude": 103.86374,
+          "latitude": 1.305557,
+          "longitude": 103.8635591,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -383952,8 +384962,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 1.3053994,
-      "centroidLongitude": 103.86374,
+      "centroidLatitude": 1.305557,
+      "centroidLongitude": 103.8635591,
       "city": "Singapore",
       "country": "Singapore",
       "relatedTourIds": [
@@ -383989,7 +384999,7 @@
           "order": 0,
           "title": "Maison du Brésil",
           "caption": "This might surprise you but this building was designed by a Brazilian architect. Le Corbusier just took over. Maison du Brésil. Paris. 1959. Brazil commissioned Lucio Costa, the architect who would later master-plan Brasília, to build a student residence in Paris. Costa sketched the building. Then handed it to Le Corbusier. Le Corbusier changed so much Costa walked away. Both names are still on the building. Then came the argument about colour. Le Corbusier wanted his own palette. Costa insisted on the colours of Brazil. They argued by letter across two continents for years. The compromise: dark green with the three primary colours Costa proposed. Each of the 100 rooms is exactly 18 square metres. Le Corbusier and Charlotte Perriand designed every centimetre. One of the students who lived here: Sebastião Salgado. One of the greatest photographers of the 20th century. 18 square metres. Paris. The beginning. Save this for your next trip to Paris. 📍 Cité Internationale Universitaire, 7J Boulevard Jourdan, Paris 14e Follow for the parts of Europe most travelers walk straight past. maisondubrésil | lecorbusier | luciocosta | paris | parisarchitecture | modernarchitecture | architecturelovers | hiddeneurope",
-          "latitude": 48.817804,
+          "latitude": 48.8178042,
           "longitude": 2.343553,
           "audioURL": "",
           "audioDurationSeconds": 0,
@@ -384002,7 +385012,7 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.817804,
+      "centroidLatitude": 48.8178042,
       "centroidLongitude": 2.343553,
       "city": "Paris",
       "country": "France",
@@ -384786,8 +385796,8 @@
           "order": 0,
           "title": "Tomba Brion",
           "caption": "Have you ever seen a cemetery like this? #architecture #design #brutalism",
-          "latitude": 45.751358,
-          "longitude": 11.913406,
+          "latitude": 45.7513589,
+          "longitude": 11.9134061,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -384799,8 +385809,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 45.751358,
-      "centroidLongitude": 11.913406,
+      "centroidLatitude": 45.7513589,
+      "centroidLongitude": 11.9134061,
       "city": "San Vito di Altivole",
       "country": "Italy",
       "relatedTourIds": [
@@ -398148,8 +399158,8 @@
           "order": 0,
           "title": "Bank of Georgia Headquarters",
           "caption": "Soviet-time heritage is rarely appreciated in post-Soviet countries, and buildings are the most visible, most striking leftovers of a past both painful and unerasable. It is therefore a delight to see the headquarters of the former Ministry of Highway Design in Tbilisi in such great shape, renovated and appreciated worldwide. Now, unfortunately, it’s The Bank of Georgia (aka corruption paradise), and recording there was a living hell due to the amount of cars around it and a very persistent bodyguard. But we would do everything for the content. #bankofgeorgia #sovietarchitecture #postsoviet #georgianarchitecture #tbilisi #georgia🇬🇪 #georgechakhava #zurabjalaghania #structuralism #brutalism #architecture #communism #sovietdesign",
-          "latitude": 41.735758,
-          "longitude": 44.771065,
+          "latitude": 41.73562,
+          "longitude": 44.770861,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -398161,8 +399171,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.735758,
-      "centroidLongitude": 44.771065,
+      "centroidLatitude": 41.73562,
+      "centroidLongitude": 44.770861,
       "city": "Tbilisi",
       "country": "Georgia",
       "relatedTourIds": [
@@ -398415,8 +399425,8 @@
           "order": 0,
           "title": "Sedesowce",
           "caption": "𝗦𝗲𝗱𝗲𝘀𝗼𝘄𝗰𝗲 / 𝗠𝗮𝗻𝗵𝗮𝘁𝘁𝗮𝗻 𝗼𝗳 𝗪𝗿𝗼𝗰𝗹𝗮𝘄 Architect: Jadwiga Grabowska-Hawrylak Building year: 1973 Location: Wrocław, Poland 🇵🇱 Music: Mam Dosc - Kryzys You know what they say about the eastern bloc. You’ve seen pictures of identical concrete boxes. They’re gray. Identical. Depressing. But are they all? (Re-edit of our first video) #brutalism #modernism #architecture #architectureexplained #wrocław",
-          "latitude": 51.111438,
-          "longitude": 17.058332,
+          "latitude": 51.111667,
+          "longitude": 17.053611,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -398428,8 +399438,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.111438,
-      "centroidLongitude": 17.058332,
+      "centroidLatitude": 51.111667,
+      "centroidLongitude": 17.053611,
       "city": "Wrocław",
       "country": "Poland",
       "relatedTourIds": [
@@ -399614,8 +400624,8 @@
           "order": 0,
           "title": "Familjen",
           "caption": "The Signature, ep 2. A steak tartare in Lisbon that should not work, and absolutely does. Familjen sits up the hill from Santos in Madragoa, the old fishwives' quarter. Swedish chef Petter Nyström has spent 25 years in Nordic kitchens, so you walk in braced for restraint. What arrives is the opposite. It looks like a classic steak tartare. Then the spice hits you before the fork does. Sweet, salty, fragrant pepper notes, chilli and heat running underneath, horseradish cream pulling it back to Europe. He told a magazine his food is spice, spice, spice and pepper, and he means it. It turns the whole concept of beef tartare on its head. Nordic room, African and Indian spice, Portuguese beef. Perhaps the finest tartare either of us has ever eaten. Also worth reading: the graffiti in the toilet. Someone got there before us. Which Lisbon signature dish should we chase next? Tell us in the comments. #GFQsignature #SteakTartare #LisbonFood #Lisbon #Portugal",
-          "latitude": 38.708897,
-          "longitude": -9.155854,
+          "latitude": 38.708896,
+          "longitude": -9.155853,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -399627,8 +400637,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 38.708897,
-      "centroidLongitude": -9.155854,
+      "centroidLatitude": 38.708896,
+      "centroidLongitude": -9.155853,
       "city": "Lisbon",
       "country": "Portugal",
       "relatedTourIds": [
@@ -400903,8 +401913,8 @@
           "order": 0,
           "title": "Musée Rodin: The Gates of Hell",
           "caption": "Where to see the gate of hell of Rodin ? The Gates of Hell was his life’s work. Inspired by Dante’s Inferno, he worked on it for nearly 40 years and never considered it finished. The Thinker and The Kiss were both born from it. Proof that a closed door can lead somewhere extraordinary. ✨ 📍 Musée Rodin, 77 rue de Varenne, Paris 7e (Métro Varenne) 🕙 Tuesday to Sunday, 10:00 to 18:30 (last entry 17:45). Closed Mondays. 🎟️ Free on the first Sunday of the month, October to March. Want the stories behind the masterpieces? Book a private art tour in Paris. Link in bio. #MuseeRodin #Rodin #GatesOfHell #PrivateToursParis #ParisArt",
-          "latitude": 48.85475,
-          "longitude": 2.31587,
+          "latitude": 48.8547473,
+          "longitude": 2.315867,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -400916,8 +401926,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.85475,
-      "centroidLongitude": 2.31587,
+      "centroidLatitude": 48.8547473,
+      "centroidLongitude": 2.315867,
       "city": "Paris",
       "country": "France",
       "relatedTourIds": [
@@ -400958,8 +401968,8 @@
           "order": 0,
           "title": "Austrian Parliament Building",
           "caption": "The origins of the Austrian Parliament Building in Vienna 🇦🇹 🏛️ 👑 It was built under Emperor Franz Joseph I, despite being a home for parliamentary politics of the Austrian half of the Habsburg Empire (known as \"Cisleithania\"). 🏺 The parliament of the Republic of Austria has a very noticeable Greek revival style. ⚖️ The Pallas Athena fountain in front symbolizes wisdom, justice and statecraft. 🔥 Badly damaged during World War II and extensively rebuilt afterwards. 🇦🇹 Today it houses both chambers of Austria’s parliament: the Nationalrat and Bundesrat. #vienna #austrianparliament #democracy #habsburgs #austrohungarianempire",
-          "latitude": 48.20809,
-          "longitude": 16.35846,
+          "latitude": 48.208087,
+          "longitude": 16.358465,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -400971,8 +401981,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.20809,
-      "centroidLongitude": 16.35846,
+      "centroidLatitude": 48.208087,
+      "centroidLongitude": 16.358465,
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
@@ -401015,8 +402025,8 @@
           "order": 0,
           "title": "MAC Niterói",
           "caption": "A Brazilian museum perched on a cliff that looks like a UFO... 🛸 Touchdown, Niterói. The Museu de Arte Contemporânea (MAC) looks like a flying saucer hovering above Guanabara Bay - staring straight back at Rio. 😮 Designed by Oscar Niemeyer, it’s art on the inside and a spectacle on the outside, with 360° views of Rio, Sugarloaf, and the bay. ✍️ Peak Niemeyer energy: curves over corners, concrete treated like sculpture, drama fully intentional. 🏗️ Opened in 1996, the MAC is one of Niemeyer’s late-career icons - proof he never stopped experimenting. #oscarniemeyer #architecturereels #brazilarchitecture #niteroi #modernarchitecture",
-          "latitude": -22.90792,
-          "longitude": -43.12587,
+          "latitude": -22.9079221,
+          "longitude": -43.1258687,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -401028,8 +402038,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": -22.90792,
-      "centroidLongitude": -43.12587,
+      "centroidLatitude": -22.9079221,
+      "centroidLongitude": -43.1258687,
       "city": "Niterói",
       "country": "Brazil",
       "relatedTourIds": [
@@ -401376,8 +402386,8 @@
           "order": 0,
           "title": "Berlin Wall Memorial",
           "caption": "History Highlight #3 - The Berlin Wall Memorial The History Buff Podcast is charting a the story of the Berlin Wall through discussions with fellow Berlin tour guides. As part of that series, this History Highlight looks at the Berlin Wall Memorial created to educate visitors and commemorate victims of the wall. Use the link to The History Buff website in my bio to find episodes and access to my YouTube channel, where you can watch videos of the episodes. #history #historyhighlight #berlin #berlinhistory #berlinwall #berlintourguide #tourguide #theberlinwallmemorial",
-          "latitude": 52.53379,
-          "longitude": 13.38745,
+          "latitude": 52.5351,
+          "longitude": 13.3898,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -401389,8 +402399,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 52.53379,
-      "centroidLongitude": 13.38745,
+      "centroidLatitude": 52.5351,
+      "centroidLongitude": 13.3898,
       "city": "Berlin",
       "country": "Germany",
       "relatedTourIds": [
@@ -401431,8 +402441,8 @@
           "order": 0,
           "title": "Kaiser Wilhelm Memorial Church",
           "caption": "People often wonder why a ruined church stands on the famous Kurfürstendamm shopping street in Berlin. Here is its story. #KaiserWilhelmMemorialChurch #Berlin #History #TheHistoryBuffPodast",
-          "latitude": 52.50489,
-          "longitude": 13.33461,
+          "latitude": 52.5048,
+          "longitude": 13.335,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -401444,8 +402454,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 52.50489,
-      "centroidLongitude": 13.33461,
+      "centroidLatitude": 52.5048,
+      "centroidLongitude": 13.335,
       "city": "Berlin",
       "country": "Germany",
       "relatedTourIds": [
@@ -404308,8 +405318,8 @@
           "order": 0,
           "title": "Syracuse Cathedral",
           "caption": "In Sicily, the Roman Catholic cathedral at Syracuse has a secret - it was built into a much older pagan Greek temple to the goddess Athena #history #historylovers #historyfacts #greece #ancientgreece",
-          "latitude": 37.05959,
-          "longitude": 15.29382,
+          "latitude": 37.05922,
+          "longitude": 15.29317,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -404321,8 +405331,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 37.05959,
-      "centroidLongitude": 15.29382,
+      "centroidLatitude": 37.05922,
+      "centroidLongitude": 15.29317,
       "city": "Syracuse",
       "country": "Italy",
       "relatedTourIds": [
@@ -404513,8 +405523,8 @@
           "order": 0,
           "title": "Grace Farms",
           "caption": "📍Grace Farms @gracefarmsct You can see through Grace Farms, but can you trace where its materials came from? Follow👉@sophia_architecture for more architecture stories #architecture #modernarchitecture #designthinking #architectlife #modernliving",
-          "latitude": 41.19627,
-          "longitude": -73.51264,
+          "latitude": 41.196273,
+          "longitude": -73.512642,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -404526,8 +405536,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 41.19627,
-      "centroidLongitude": -73.51264,
+      "centroidLatitude": 41.196273,
+      "centroidLongitude": -73.512642,
       "city": "New Canaan",
       "country": "United States",
       "relatedTourIds": [
@@ -405090,8 +406100,8 @@
           "order": 0,
           "title": "Doshi Retreat",
           "caption": "The Doshi Retreat at the Vitra Campus is a beautiful collaboration between B.V. Doshi, Khushnu Panthaki Hoof and Sönke Hoof. The project began with all three architects coming together during the initial design stages, exchanging ideas and exploring what the space could become. Unfortunately, B.V. Doshi passed away before the project could be fully realised. Khushnu Panthaki Hoof and Sönke Hoof then carried the vision forward, bringing the project to life. I had the opportunity to visit it earlier this year, and honestly, I was blown away. Of all the projects at the Vitra Campus, I can safely say this was my favourite. Walking along that path, gradually making your way up to the space, was an almost surreal experience. There was an incredible sense of tranquillity to it. Having listened to B.V. Doshi speak about architecture, spirituality, the experience of space and the very essence of design, I could recognise so many of those learnings embedded in this project. It was fascinating to experience a space that felt so deeply connected to his philosophy, even though he wasn’t there to see its final realisation. A big thank you to Vitra Campus for having me over, showing me around this incredible campus and giving me the opportunity to experience this beautiful project. Some spaces are best understood not through photographs, but by simply walking through them. The drone photograph of the project at the start is by Julien Lanoo @julienlanoo #blessedarch #architecture #design #vitra #bvdoshi",
-          "latitude": 47.60167,
-          "longitude": 7.61886,
+          "latitude": 47.6016707,
+          "longitude": 7.6188637,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -405103,8 +406113,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 47.60167,
-      "centroidLongitude": 7.61886,
+      "centroidLatitude": 47.6016707,
+      "centroidLongitude": 7.6188637,
       "city": "Weil am Rhein",
       "country": "Germany",
       "relatedTourIds": [
@@ -405188,8 +406198,8 @@
           "order": 0,
           "title": "Atlantikos",
           "caption": "obsessed with greek seafood 🇬🇷🥹🦑 📍 Atlantikos Avliton 7, Psyrri, Athens 105 54, Greece",
-          "latitude": 37.97753,
-          "longitude": 23.72298,
+          "latitude": 37.97761962108394,
+          "longitude": 23.722957577222317,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -405201,8 +406211,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 37.97753,
-      "centroidLongitude": 23.72298,
+      "centroidLatitude": 37.97761962108394,
+      "centroidLongitude": 23.722957577222317,
       "city": "Athens",
       "country": "Greece",
       "relatedTourIds": [
@@ -405396,8 +406406,8 @@
           "order": 0,
           "title": "Asador Etxebarri",
           "caption": "Número 1 del mundo Now it’s official. Just announced by @theworlds50best The World’s best restaurant for 2026 is @asadoretxebarrioficial So well deserved! Congratulations Bittor, Patri, Moha, Paul, Hector, and all our friends. I miss you always",
-          "latitude": 43.11591,
-          "longitude": -2.59844,
+          "latitude": 43.1159106,
+          "longitude": -2.5984392,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -405409,8 +406419,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 43.11591,
-      "centroidLongitude": -2.59844,
+      "centroidLatitude": 43.1159106,
+      "centroidLongitude": -2.5984392,
       "city": "Atxondo",
       "country": "Spain",
       "relatedTourIds": [

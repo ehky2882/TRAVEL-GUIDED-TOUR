@@ -1,6 +1,7 @@
 # Mumbai (BOM): 2 place questions, photo licences, 5 missing numbers
 
 _opened 2026-10-15 · clear with `git rm status/owner/mumbai-launch.md`_
+> ✅ **Answered 2026-11-11 (owner: "p all yes"):** #1 ELCO and the Taj Mahal Palace are now places. Still open: the Oberoi part-vs-whole question, #2 and #3.
 
 Mumbai launched as **Atlas Studio BOM** (28 singles). Three things only you can settle:
 

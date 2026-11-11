@@ -1,6 +1,7 @@
 # Triage batch 2026-10-07: Seagram place, Napoleon ad, Hermès hero, Barragunda coordinate
 
 _opened 2026-10-07 · clear with `git rm status/owner/triage-batch-261007.md`_
+> ✅ **Answered 2026-11-11 (owner: "p all yes"):** #1 Seagram is now a place, on the pin's point, which is the more precise one. #2–#4 are still open.
 
 The 2026-10-07 triage batch (88 pins, mostly @hungrywolfgrams restaurants) left four things only you can decide. Nothing was joined, created or published for any of them.
 

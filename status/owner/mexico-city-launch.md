@@ -1,6 +1,7 @@
 # Mexico City (MEX): 2 place pairs, Tláloc part-vs-whole, 2 script facts
 
 _opened 2026-11-05 · clear with `git rm status/owner/mexico-city-launch.md`_
+> ✅ **Answered 2026-11-11 (owner: "p all yes"):** #1 Vasconcelos and Tamayo are now places. #2–#4 are still open.
 
 Mexico City launched as **Atlas Studio MEX** (35 singles). For you to settle. The contributor (arthur.yung) is not
 the owner. They said overlaps with existing creator pins "are normal". That is recorded here as their view, not a

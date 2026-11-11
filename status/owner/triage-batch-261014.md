@@ -1,6 +1,7 @@
 # Triage batch 2026-10-14: 6 place questions, 7 pins held for photos, 6 posts held for answers
 
 _opened 2026-10-14 · clear with `git rm status/owner/triage-batch-261014.md`_
+> ✅ **Answered 2026-11-11 (owner: "p all yes"):** Place questions 1–5 (Maison du Brésil, Tomba Brion, Le Bon Georges, Anan Saigon, Heap Seng Leong, on the pin at 10 North Bridge Rd) are now places. #6 Nezu Garden (part-vs-whole) and the held posts are still open.
 
 # Triage batch 2026-10-14: 6 place questions, 7 pins held for photos, 6 posts held for answers
 

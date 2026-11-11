@@ -1,6 +1,7 @@
 # Places? 6 pins from the 27 Oct batch sit on existing sites (Familjen, Capsule, MSN Warsaw, Bank of Georgia, Grace Farms, Sedesowce)
 
 _opened 2026-10-27 · clear with `git rm status/owner/place-batch-261027.md`_
+> ✅ **Answered 2026-11-11 (owner: "p all yes"):** Familjen, The Capsule, MSN Warsaw, Bank of Georgia, Sedesowce (on the tour's point) and Grace Farms (the two *Grace Farms* pins) are now places. Still open: whether the *River Building* pin belongs to Grace Farms (part-vs-whole), and the Nová Scéna coordinate.
 
 A 37-pin batch (6 Instagram creators, triaged and approved by the contributor, @arthuryung-gif) landed
 these on sites the catalogue already has. Nothing was created or joined — these are yours to decide

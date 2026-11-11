@@ -3,6 +3,7 @@
 _opened 2026-10-20 · clear with `git rm status/owner/place-triage-261020.md`_
 
 > ✅ **Answered 2026-11-11 (owner: "j all yes"):** The Colosseum, Carpenter Center, MoMA: Abby Aldrich Rockefeller and Great Court were joined to their places. The 5 new-place questions are still open.
+> ✅ **Answered 2026-11-11 (owner: "p all yes"):** Little Island, National Theatre, BT Tower and The Briton's Protection are now places. **Kolumba is still open**: it was left off the list the owner answered.
 
 The 2026-10-20 triage batch (26 pins, 17 creators) put nine pins **exactly on the point of an existing entry** for the same
 subject. The contributor (arthur.yung) asked for them to be stacked. A place moves every member onto one point, so creating

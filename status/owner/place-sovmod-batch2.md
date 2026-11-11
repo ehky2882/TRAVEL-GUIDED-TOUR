@@ -1,6 +1,7 @@
 # Place? Blok 23 and Richard Sorge — SovMod batch 2 tours near existing pins
 
 _opened 2026-10-10 · clear with `git rm status/owner/place-sovmod-batch2.md`_
+> ✅ **Answered 2026-11-11 (owner: "p all yes"):** Block 23 is now a place. Richard Sorge (monument vs park) is still open.
 
 # Place? Blok 23 and Richard Sorge — SovMod batch 2 tours near existing creator pins
 

@@ -3,6 +3,7 @@
 _opened 2026-10-27 · clear with `git rm status/owner/rotterdam-launch.md`_
 
 > ✅ **Answered 2026-11-11 (owner: "j all yes"):** Depot Boijmans was joined to its place. FENIX and the photo licences are still open.
+> ✅ **Answered 2026-11-11 (owner: "p all yes"):** **FENIX is still open**: it was left off the list the owner answered.
 
 Rotterdam launched as **Atlas Studio RTM** (28 singles), plus Portugalia Tasca for **Atlas Studio AMS**. For you to settle.
 The contributor is not the owner, so none of these were put to them as rulings, and nothing was created or joined.

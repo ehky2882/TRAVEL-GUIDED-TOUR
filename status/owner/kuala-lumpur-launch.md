@@ -1,6 +1,7 @@
 # Kuala Lumpur (KUL): 3 place questions (SAS Building, Dayabumi, ILHAM)
 
 _opened 2026-11-10 · clear with `git rm status/owner/kuala-lumpur-launch.md`_
+> ✅ **Answered 2026-11-11 (owner: "p all yes"):** Sultan Abdul Samad Building and Dayabumi are now places, on the tours' points.
 
 Kuala Lumpur launched as **Atlas Studio KUL** (42 singles). The contributor is not the owner, so none of these were
 put to them as rulings, and nothing was created or joined.

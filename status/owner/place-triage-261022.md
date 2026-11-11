@@ -1,6 +1,7 @@
 # Places? 10 pins from the 2026-10-22 triage batch stacked on existing entries
 
 _opened 2026-10-22 · clear with `git rm status/owner/place-triage-261022.md`_
+> ✅ **Answered 2026-11-11 (owner: "p all yes"):** Looshaus, St Charles Borromeo, Wotruba, Zacherlhaus, The Marble Arch, LA Coliseum, Livraria Lello, Reiyūkai Shakaden and Leixões are now places. Still open: Shakespeare and Company (part-vs-whole) and the same-creator Vienna church pins.
 
 The 2026-10-22 triage batch (143 pins, 7 creators) put **ten pins exactly on the point of an existing entry** for the same
 subject, at the contributor's request ("stack it on same location if it's from different creator/content"). A place moves
