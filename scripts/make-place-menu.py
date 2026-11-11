@@ -129,6 +129,56 @@ DECLINED_GROUPS = {
 # Keyed by the frozen set of the two titles, never by the N-label: the labels
 # are positions in a sorted list and renumber whenever a batch lands.
 DECLINED_PAIRS = {
+    frozenset({'Sphere by Tim Raue, Fernsehturm', 'Berliner Fernsehturm'}):
+        'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N1 tenant: a restaurant inside the TV tower',
+    frozenset({'ILHAM Gallery', 'Ilham Tower'}):
+        'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N2 tenant: a gallery inside the tower',
+    frozenset({'圭K', 'Ilham Tower'}):
+        'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N3 tenant: a restaurant on level 37',
+    frozenset({'Raffles Makkah Palace', 'Abraj Al Bait'}):
+        'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N4 tenant: a hotel within the complex',
+    frozenset({'Abdul Samad Al Qurashi | عبدالصمد القرشي', 'Abraj Al Bait'}):
+        'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N5 tenant: a shop within the complex',
+    frozenset({'Neon Museum | Muzeum Neonów', 'Palace of Culture and Science | Pałac Kultury i Nauki'}):
+        'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N6 tenant inside the Palace',
+    frozenset({'Neon Museum | Muzeum Neonów', 'The Palace of Culture and Science'}):
+        'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N6 tenant inside the Palace',
+    frozenset({'Kulturalna', 'Palace of Culture and Science | Pałac Kultury i Nauki'}):
+        'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N7 tenant inside the Palace',
+    frozenset({'Kulturalna', 'The Palace of Culture and Science'}):
+        'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N7 tenant inside the Palace',
+    frozenset({'Tapri Niwas', 'Ladu'}):
+        'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N8 neighbours: a tea house and a shop on one site',
+    frozenset({'Ninkasi', 'Aosa Café'}):
+        'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N9 neighbours on one junction',
+    frozenset({'JaJa, Planches & Vins', 'Clivia Nobili'}):
+        'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N10 neighbours: two shops',
+    frozenset({'Charlotte, Plac Zbawiciela', 'Plan B'}):
+        'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N11 neighbours on one square',
+    frozenset({'Hotel Bristol', 'Raffles Europejski Warsaw'}):
+        'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N12 two hotels facing each other',
+    frozenset({'Manari Taverna', 'The Clumsies'}):
+        'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N13 neighbours',
+    frozenset({'Ho Kow Hainam Kopitiam | 何九海南茶店', 'Kwai Chai Hong | 鬼仔巷'}):
+        'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N14 neighbours',
+    frozenset({'Edward Mooney House', "Doyers Street and NYC's Gang Wars"}):
+        'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N15 a house and a nearby street',
+    frozenset({'Carnegie Deli', "Tanner Smith's"}):
+        'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N16 neighbours',
+    frozenset({'Schweizerhof Fountain, Hofburg', 'Swiss Gate (Schweizertor), Hofburg'}):
+        'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N17 two Hofburg features',
+    frozenset({'Parliament Square', 'Houses of Parliament and Big Ben'}):
+        'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N18 a square is not the building',
+    frozenset({'Eau Bar, The Oberoi', 'The Oberoi, Nariman Point'}):
+        'owner 2026-11-11: NO — a bar inside the hotel is a tenant, not the site (part vs whole)',
+    frozenset({'Magok Cultural Hall', 'Seoul Botanic Park | 서울식물원'}):
+        'owner 2026-11-11: NO — the hall is a separate building inside a large park and stays its own pin (part vs whole)',
+    frozenset({'Weir Greenhouse, Green-Wood Cemetery', 'Green-Wood Cemetery'}):
+        'owner 2026-11-11: NO — the greenhouse is one building inside a 478-acre cemetery and stays its own pin (part vs whole)',
+    frozenset({'Makkah Clock Tower | برج ساعة مكة', 'Makkah Clock Royal Tower, a Fairmont Hotel'}):
+        'owner 2026-11-11: NO — the Clock Tower museum and the Fairmont hotel are two different visits in one tower (part vs whole)',
+    frozenset({'Lycabettus Funicular | Τελεφερίκ Λυκαβηττού', 'Mount Lycabettus'}):
+        'owner 2026-11-11: NO — the funicular station is not the hill (part vs whole)',
     frozenset({'Grand Egyptian Museum', "Khufu's Solar Boat, Grand Egyptian Museum"}):
         'owner 2026-10-02: NO — the Solar Boat is one exhibit inside the museum and stays its own pin (part vs whole)',
     frozenset({'The Burrell Collection', 'Pollok Country Park'}):

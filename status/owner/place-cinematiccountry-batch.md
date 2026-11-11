@@ -2,6 +2,9 @@
 
 _opened 2026-10-29 · clear with `git rm status/owner/place-cinematiccountry-batch.md`_
 
+> ✅ **Answered 2026-11-11 (owner: "j all yes"):** Hampton Court Palace was joined to its place. The other 6 rows are still open.
+> ✅ **Answered 2026-11-11 (owner: "p all yes"):** Austrian Parliament, Musée Rodin, MAC Niterói (on the pins' point, which is on the museum), Kaiser Wilhelm Memorial Church, Berlin Wall Memorial (on the tour's point) and Malahide Castle are now places. Only the Mount Oliver coordinate note is left.
+
 The 72-pin triage batch of 2026-10-29 (@thecinematiccountry, @ministeriumofhistory, @paris_and_beyond_tours, @shabnamnasimi) landed new pins on sites the catalogue already has. The contributor is not the owner, so none of these were put to them as rulings, and nothing was created or joined.
 
 | New pin | Existing entry | Distance | Check that found it |

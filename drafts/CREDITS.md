@@ -42,6 +42,37 @@ Last updated 2026-07-29 (🇺🇸 Chicago batch 1 staging in progress — 2 CC i
 > 4. **`kollwitzplatz_2.webp` (Berlin — staged).** Off by two frames in the same photo series;
 >    author and licence were always right and it is public domain. **Corrected below.**
 
+## 🔁 Contributor-supplied photos with NO per-image licence: accepted FOR NOW (owner, 2026-11-11)
+
+The owner answered *"photos fine, for now. also dont forget those"*. These batches **shipped live** on the
+contributor's word, with **no source or licence recorded for any single image**. That is not a settled
+clearance: the owner wants to come back to it. **This table is the list to revisit**, and each launch's owner
+item was cleared or annotated on the strength of it. If a takedown request or a credit question ever arrives
+for one of these cities, start here. The fix is per image: ask the contributor (arthur.yung) for the source
+link, then credit it here or swap it. A SHA-1 lookup against Commons will not work, because every file
+arrived pre-cropped to 1200×900.
+
+| Batch | Photos | What the contributor said | Shipped |
+|---|---|---|---|
+| Istanbul (IST) | 187 | contributor: "from Creative Commons". ⚠️ CC means a credit may be owed; the licence per image is unknown | 2026-09-28 |
+| Grands Ensembles | 34 | contributor-supplied, already cropped, no source | 2026-10-13 |
+| Nairobi (NBO) | 51 | contributor: "royalty-free and good to use" | 2026-10-14 |
+| Mumbai (BOM) | 73 | contributor-supplied, licence not recorded | 2026-10-15 |
+| Udaipur (UDR) | 94 | contributor: royalty-free and fine to use | 2026-10-16 |
+| Warsaw (WAW) | 125 | contributor-supplied, no source or licence per image | 2026-10-20 |
+| Oslo (OSL) | 67 | contributor: good to use | 2026-10-21 |
+| Belém (BEL) | 41 | contributor: fine to use | 2026-10-21 |
+| Helsinki (HEL) | 70 | contributor confirmed 2026-10-22: cleared and fine to use | 2026-10-22 |
+| Lille (LIL) | 77 | contributor confirmed 2026-10-23: good to use | 2026-10-23 |
+| Rotterdam (RTM) | 119 | contributor-supplied, no source or licence per image | 2026-10-27 |
+| Mecca (MAK) | 80 | contributor-supplied, no source or licence per image | 2026-11-02 |
+| Athens (ATH) | 127 | contributor-supplied, no source or licence per image | 2026-11-04 |
+| Mexico City (MEX) | 163 | contributor-supplied, no source or licence per image | 2026-11-05 |
+| Kuala Lumpur (KUL) | 174 | contributor: royalty-free | 2026-11-10 |
+
+**1482 photos across 15 batches.** ⚠️ Istanbul is the riskiest row: "Creative Commons" without a licence
+usually means CC BY or BY-SA, which **does** require a credit line, and the app has none.
+
 ## Rome — 6 credit-required images (`drafts/rome-batch1`)
 
 Everything else in the Rome batch is ship-safe (Unsplash/Pexels/Pixabay) or owner-pasted.
