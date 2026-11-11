@@ -162653,6 +162653,21 @@
         "f68fb5ac-aaf0-54f1-bde5-ea002037e44e",
         "942CC3C4-9538-5ECF-B64D-E015D7910A67"
       ]
+    },
+    {
+      "id": "668d9f4e-04f2-55c9-86d7-f3fde812368a",
+      "name": "Shakespeare and Company",
+      "description": null,
+      "latitude": 48.85253,
+      "longitude": 2.34706,
+      "city": "Paris",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "43318a61-f8bd-51e1-a393-43ba4944b10e",
+        "F9946337-3A37-591D-B5F2-EC0E8D3E268B"
+      ]
     }
   ],
   "linkPins": [

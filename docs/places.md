@@ -315,3 +315,4 @@ Part-vs-whole rulings:
 | Weir Greenhouse (pin) + Green-Wood Cemetery (tour + pin) | **NO**: one building in a huge cemetery |
 | Magok Cultural Hall (pin) + Seoul Botanic Park (tour) | **NO**: a separate building in a big park |
 | Future Library (pin) + Deichman Bjørvika (place) | **YES**: joined, because the manuscripts are kept in Deichman's Silent Room |
+| Latin Quarter & Shakespeare and Company (tour) + Shakespeare and Company (pin) | **YES**: despite its title, the tour is a single stop on the shop and is about the shop |

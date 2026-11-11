@@ -66,3 +66,4 @@ The owner said yes ("kolumba and fenix yes"), so both are now places at 0 m and 
   on the monument (164 m pin move). Q9 **NO**: Weir Greenhouse stays out of Green-Wood. Places: 588.
 - Q10 **NO**: Magok Cultural Hall stays out of Seoul Botanic Park.
 - Q11 **YES**: Future Library joined Deichman Bjørvika (2 m), which now has 5 members on one point.
+- Q12 **YES**: Shakespeare and Company. The "Latin Quarter" tour turned out to be a single stop on the shop, about the shop. Places: 589.
