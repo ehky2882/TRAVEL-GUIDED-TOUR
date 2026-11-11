@@ -61,9 +61,7 @@ before minting. If you skip the reading, that safety is gone.
   (§ One post, several pins), pin the lead location only, or leave it out.
 - **Routes.** A ferry line, a transit route, a whole street. Neither a pin nor
   a roundup — this app geofences points. Usually "does not fit"; always ask.
-- **Advertising.** Some creators sell things. That is a policy question for the
-  owner, not a geography one. Standing decision (2026-09-11): **property
-  listings case by case.**
+- **Advertising is fine — standing owner ruling (2026-11-11): *"if anything is being flagged because it appears as an ad, i dont mind ad-like posts so keep all of them."*** Tour-company plugs, hosted visits ("thanks for having me"), `#pr` / `#ad` / affiliate tags, a brand or shop posting about itself, and dealers posting stock are all **pinned like any other post. Do not hold them and do not ask.** Hold a post only for a reason that is not advertising (it can't be placed, it isn't place-based, it's a duplicate). This supersedes the 2026-09-11 "property listings case by case" note.
 
 ---
 

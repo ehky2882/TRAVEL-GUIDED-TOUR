@@ -73,3 +73,11 @@ The owner said yes ("kolumba and fenix yes"), so both are now places at 0 m and 
 - Q16: the owner said "PIN IT". Napoleon's Tomb (@paris_and_beyond_tours, a tour-booking caption accepted) is pinned at the Les Invalides tour's point and joined into a new place, *Les Invalides*. The hero was already on gh-pages. Places: 594; pins: 4729.
 - N list (18 pairs): kept separate **for now**. The owner wants to revisit them, so they are in DECLINED_PAIRS marked "FOR NOW" and listed in docs/places.md § Kept separate FOR NOW. Cleared place-batch-261002-triage.
 - Photo licences: the owner said "photos fine, for now". 15 batches (1,482 photos) are accepted FOR NOW and listed in drafts/CREDITS.md for a later revisit. Cleared 7 owner items and annotated 8.
+
+## Follow-up: ads are fine (standing ruling)
+The owner said: *"if anything is being flagged because it appears as an ad, i dont mind ad-like posts so keep all of them."*
+- Peter's Beach and Talo stay.
+- Five held posts are pinned: Vienna Central Cemetery, Ganterie Boon, Marisfrolg HQ, Kakinama and Hoshino Tea Museum. Their heroes were checked by eye (no play buttons) and pushed to gh-pages.
+- The ruling is now in the link-pin runbook and the atlas-upload skill, so contributor sessions stop holding ads.
+- Athens SNF Centre stays under Kallithea, and Udaipur keeps मांझी का घाट ("both keep it"). Cleared athens-launch and udaipur-launch.
+- Nairobi: the cave_bureau citation is OK ("c, it's fine"), reversing the earlier "no". Item cleared.
