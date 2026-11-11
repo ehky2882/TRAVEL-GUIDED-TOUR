@@ -320,3 +320,34 @@ Part-vs-whole rulings:
 | Eau Bar, The Oberoi (tour) + The Oberoi, Nariman Point (tour) | **NO**: a bar inside the hotel is a tenant |
 | @architectphilipp's feature pins on St Stephen's (6), Minorite (4), St Michael's (2), Servite (2) | **YES**: one place per church, with a creator's several features of one building gathered inside it |
 | Les Invalides & Napoleon's Tomb (tour) + Napoleon's Tomb, Les Invalides (pin) | **YES**: the tour's own title names the tomb |
+
+## 🔁 Kept separate FOR NOW: revisit (owner, 2026-11-11: *"N fine but don't forget them, maybe we'll return to them and reevaluate"*)
+
+These are **not settled NOs**. The owner kept them apart for now and wants to look again later. They are in
+`DECLINED_PAIRS` only so that no check or session merges them on its own (Sphere/Fernsehturm and Tapri/Ladu read
+as "EXACT · PROVEN" to `check-place-candidates.py`). **When the owner asks to revisit, this table is the list:**
+`grep -n 'FOR NOW' scripts/make-place-menu.py` finds every entry.
+
+| # | Pair | Why kept apart |
+|---|---|---|
+| N1 | Sphere by Tim Raue, Fernsehturm + Berliner Fernsehturm | tenant: a restaurant inside the TV tower |
+| N2 | ILHAM Gallery + Ilham Tower | tenant: a gallery inside the tower |
+| N3 | 圭K + Ilham Tower | tenant: a restaurant on level 37 |
+| N4 | Raffles Makkah Palace + Abraj Al Bait | tenant: a hotel within the complex |
+| N5 | Abdul Samad Al Qurashi | عبدالصمد القرشي + Abraj Al Bait | tenant: a shop within the complex |
+| N6 | Neon Museum | Muzeum Neonów + Palace of Culture and Science | Pałac Kultury i Nauki | tenant inside the Palace |
+| N6 | Neon Museum | Muzeum Neonów + The Palace of Culture and Science | tenant inside the Palace |
+| N7 | Kulturalna + Palace of Culture and Science | Pałac Kultury i Nauki | tenant inside the Palace |
+| N7 | Kulturalna + The Palace of Culture and Science | tenant inside the Palace |
+| N8 | Tapri Niwas + Ladu | neighbours: a tea house and a shop on one site |
+| N9 | Ninkasi + Aosa Café | neighbours on one junction |
+| N10 | JaJa, Planches & Vins + Clivia Nobili | neighbours: two shops |
+| N11 | Charlotte, Plac Zbawiciela + Plan B | neighbours on one square |
+| N12 | Hotel Bristol + Raffles Europejski Warsaw | two hotels facing each other |
+| N13 | Manari Taverna + The Clumsies | neighbours |
+| N14 | Ho Kow Hainam Kopitiam | 何九海南茶店 + Kwai Chai Hong | 鬼仔巷 | neighbours |
+| N15 | Edward Mooney House + Doyers Street and NYC's Gang Wars | a house and a nearby street |
+| N16 | Carnegie Deli + Tanner Smith's | neighbours |
+| N17 | Schweizerhof Fountain, Hofburg + Swiss Gate (Schweizertor), Hofburg | two Hofburg features |
+| N18 | Parliament Square + Houses of Parliament and Big Ben | a square is not the building |
+

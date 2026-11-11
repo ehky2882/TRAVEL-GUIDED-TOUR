@@ -71,3 +71,4 @@ The owner said yes ("kolumba and fenix yes"), so both are now places at 0 m and 
 - Q14 **NO**: Eau Bar stays out of The Oberoi (tenant).
 - Q15 **YES**: 4 Vienna church places (St Stephen's ×6, Minorite ×4, St Michael's ×2, Servite ×2), all @architectphilipp feature pins, 0 m moves. Places: 593.
 - Q16: the owner said "PIN IT". Napoleon's Tomb (@paris_and_beyond_tours, a tour-booking caption accepted) is pinned at the Les Invalides tour's point and joined into a new place, *Les Invalides*. The hero was already on gh-pages. Places: 594; pins: 4729.
+- N list (18 pairs): kept separate **for now**. The owner wants to revisit them, so they are in DECLINED_PAIRS marked "FOR NOW" and listed in docs/places.md § Kept separate FOR NOW. Cleared place-batch-261002-triage.
