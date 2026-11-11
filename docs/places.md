@@ -319,3 +319,4 @@ Part-vs-whole rulings:
 | Grace Farms — River Building (pin) + Grace Farms (place) | **YES**: all three pins are one place |
 | Eau Bar, The Oberoi (tour) + The Oberoi, Nariman Point (tour) | **NO**: a bar inside the hotel is a tenant |
 | @architectphilipp's feature pins on St Stephen's (6), Minorite (4), St Michael's (2), Servite (2) | **YES**: one place per church, with a creator's several features of one building gathered inside it |
+| Les Invalides & Napoleon's Tomb (tour) + Napoleon's Tomb, Les Invalides (pin) | **YES**: the tour's own title names the tomb |

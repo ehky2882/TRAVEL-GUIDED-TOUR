@@ -2,6 +2,7 @@
 
 _opened 2026-10-07 · clear with `git rm status/owner/triage-batch-261007.md`_
 > ✅ **Answered 2026-11-11 (owner: "p all yes"):** #1 Seagram is now a place, on the pin's point, which is the more precise one. #2–#4 are still open.
+> ✅ **Answered 2026-11-11 ("PIN IT. I DONT MIND."):** #2 Napoleon's Tomb is pinned on the Les Invalides tour's point, and the two are now one place, *Les Invalides*. Hermès was pinned in #1177, so only #4 Barragunda (a coordinate) is still open.
 
 The 2026-10-07 triage batch (88 pins, mostly @hungrywolfgrams restaurants) left four things only you can decide (Hermès Williamsburg resolved 2026-11-11: pinned with its play-button cover, on Edward's OK). Nothing was joined, created or published for any of them.
 

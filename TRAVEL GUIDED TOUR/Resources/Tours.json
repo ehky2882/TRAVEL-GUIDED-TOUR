@@ -162735,6 +162735,21 @@
         "C33F5AD9-FD84-5FF3-ABAE-4CB2540E91CB",
         "64D3BC37-B816-5179-9C71-129FAC69CE63"
       ]
+    },
+    {
+      "id": "e512cf8b-007f-554e-8f42-bee21d37b001",
+      "name": "Les Invalides",
+      "description": null,
+      "latitude": 48.85683,
+      "longitude": 2.31252,
+      "city": "Paris",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "e218cea4-0041-57b0-8ddf-194dab7f93c7",
+        "2235AA0B-E79C-5BD7-B705-1D564A66EEF5"
+      ]
     }
   ],
   "linkPins": [
@@ -409677,6 +409692,51 @@
         "Commerce",
         "Fashion",
         "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2235AA0B-E79C-5BD7-B705-1D564A66EEF5",
+      "createdAt": "2026-11-11",
+      "title": "Napoleon's Tomb, Les Invalides",
+      "shortDescription": "A post by @paris_and_beyond_tours on Instagram.",
+      "longDescription": "Is it true you have to bow to see Napoleon’s tomb? Legend says that’s on purpose. In 1840, a French king brought Napoleon home from Saint Helena to borrow his glory. When they opened the coffin, his face was so intact that his old soldiers burst into tears. Then it backfired: eight years later, the king lost his crown. And here’s the American twist: this is the man who sold Louisiana. In 1803, Napoleon sold the Louisiana Territory to the US for $15 million and doubled the size of the United States of America. Hero or tyrant? Come make up your own mind on a private family tour in Paris. Link in bio 👇 #ParisTravel #ParisWithKids #ParisWithTeens",
+      "makerId": "9F8FB734-D52F-50A6-B6CC-7CF0551FF579",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/napoleon-s-tomb-les-invalides-parisandbeyondtours_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DeIBF5vOcip/",
+      "sourceAuthor": "@paris_and_beyond_tours",
+      "stops": [
+        {
+          "id": "E5D449F3-3F21-5E0C-A4B4-2B84FEDFEC3B",
+          "order": 0,
+          "title": "Napoleon's Tomb, Les Invalides",
+          "caption": "Is it true you have to bow to see Napoleon’s tomb? Legend says that’s on purpose. In 1840, a French king brought Napoleon home from Saint Helena to borrow his glory. When they opened the coffin, his face was so intact that his old soldiers burst into tears. Then it backfired: eight years later, the king lost his crown. And here’s the American twist: this is the man who sold Louisiana. In 1803, Napoleon sold the Louisiana Territory to the US for $15 million and doubled the size of the United States of America. Hero or tyrant? Come make up your own mind on a private family tour in Paris. Link in bio 👇 #ParisTravel #ParisWithKids #ParisWithTeens",
+          "latitude": 48.85683,
+          "longitude": 2.31252,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/napoleon-s-tomb-les-invalides-parisandbeyondtours_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 48.85683,
+      "centroidLongitude": 2.31252,
+      "city": "Paris",
+      "country": "France",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Remembrance"
       ],
       "priceUSD": 0
     }
