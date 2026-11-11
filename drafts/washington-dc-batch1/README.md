@@ -1,12 +1,43 @@
 # Washington DC batch 1: wire-in pick-map
 
-**31 single-stop tours · Atlas Studio WAS (`e170d645-86aa-51d2-a5e6-ad1cacf06e26` = uuid5(NAMESPACE_URL, "atlas-maker:was")) · staged 2026-10-13 · scripts only, no audio or images yet**
+**31 single-stop tours · Atlas Studio WAS (`e170d645-86aa-51d2-a5e6-ad1cacf06e26` = uuid5(NAMESPACE_URL, "atlas-maker:was")) · staged 2026-10-13 · **WIRED 2026-11-11 (31 singles + 5 walks, 34 stops)**. The "Owed before wire-in" list below is kept as the record; all of it is now done or handed to the owner.**
 
 The owner's drop (OneDrive folder `261013_WASHINGTON DC`) held the author's non-gated corpus: **30 singles (01–30), single 40 Old Stone House, and 5 walks** (`drafts/washington-dc-walks/`). Each script comes as a clean + `_TTS` pair. **A further 14 "T3" singles (31–39, 41–45) are GATED by the author** (master list §3) and were not written. Do not treat them as missing. Old Stone House (40) is a T3 number but was built under the author's walk-component rule because W3 visits it, so it ships as a normal single.
 
 The author's newest handoff is **№8 (CLOSING)**, and its stale-upload check passes against the master list in this drop (header "Session 8 closed", 15 open, 399 lines). Both are kept in `author/`: the pronunciation library, the pre-record flags and the open decisions for the owner are there.
 
 **City string:** `Washington`, country `United States`. That matches the 21 creator link pins already in the catalogue, so the city does not split in two.
+
+## Wired 2026-11-11
+- **Audio:** 65 MP3s from the owner's Dropbox (2026-11-11), 31 singles + 34 walk segments, 7,799 s in all. Each was transcribed
+  (faster-whisper base.en) and matched to its own script before upload. The low scorers differ only in digits against
+  spelled-out numbers, and were read by eye. gh-pages `493a56a`. Record: `audio-manifest.json` (seconds, sha256, kbps and the
+  match score per file). **Whether the pronunciation pass happened is not known**. The owner should listen for *Nacotchtank*
+  (W2), *Lei Yixin* (06), *Bartholdi* (27) and the letter streets.
+- **Assembler:** `tools/wire_dc.py --created 2026-11-11`, adapted from Philadelphia's. Walk distances are the author's stated
+  route lengths (W1 2.1 km, W2 3.2 km, W3 1.9 km, W4 2.6 km, W5 3.4 km), not straight-line × 1.25. Stage directions (`[beat]`, bare
+  or starred, on their own line or at a line's end) are stripped from `transcriptText`. The validator rejects them.
+- **Washington Monument (02) joined the existing place** of the same name (3 creator pins), moving 7.3 m onto its point,
+  done with `join-places.py`'s own `apply_join`. Nothing else was joined or created; see Places below.
+- **Architect tags (Job 5), 11 new names, one line in each list:** Henry Bacon (01 Lincoln Memorial; 22 Dupont Circle's
+  fountain, "the same architect" in the script) · Robert Mills (02) · James Hoban (04) · Maya Lin (07) · Smithmeyer & Pelz (09) ·
+  Friedrich St. Florian (13) · Lawrence Halprin (15) · Willoughby J. Edbrooke (19) · Alfred Liu (21) · John A. Lankford (24, the
+  True Reformer Building the script describes) · Adolf Cluss (26). Existing tags used: John Russell Pope (05, 08), Cass Gilbert
+  (10), Daniel Burnham (12), James Renwick Jr. (17). Mills, Edbrooke and Lankford are standard attributions the scripts do not
+  name. **Not** tagged: the Capitol (03, many hands), the Cathedral (28), and memorials known by their sculptor rather than an
+  architect (06 Lei Yixin, 14 Frank Gaylord). Walks are not tagged.
+- **Checks:** `validate-tours-mirror` 0 errors, 737 warnings (unchanged) · `check-image-duplicates --maker WAS` 168 images, no
+  duplicates (Pillow) · `spine-lookup` 36 asked, 0 failed.
+
+### Places: for the owner, nothing created
+| New Atlas tour | Existing entry | Distance | Note |
+|---|---|---|---|
+| 08 National Archives | pin *National Archives Building* | 0 m | EXACT · PROVEN |
+| 19 Old Post Office and Clock Tower | pin *Old Post Office Tower* | 38 m | same building |
+| 12 Union Station | pin *Union Station* | 110 m | same building; the *Continental Club, Union Station* pin is a tenant, not the site |
+
+01 Lincoln Memorial / W1 and 16 Tidal Basin / W2 share a point because each walk starts at the single. A walk is not a second
+name for its first stop, so these are not places.
 
 ## Owed before wire-in
 1. 🔴 **The author's pronunciation pass, before recording** (handoff №8 §2.3, "UNRESOLVED; native check before any Firefly generation"): *Nacotchtank*, *Lei Yixin*, *Frédéric Auguste Bartholdi*, and the letter-named streets U, T, H, M, E and F as read by the engine.

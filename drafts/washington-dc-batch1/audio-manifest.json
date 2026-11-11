@@ -1,0 +1,652 @@
+{
+ "lincoln-memorial.mp3": {
+  "id": "01",
+  "seconds": 161.1,
+  "sha256": "1a4b5fdcb02551146f3926f850e38504bd91d33ba8fa90c99a7a73e9009a351c",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_01_lincoln_memorial.mp3",
+  "transcript_match": 0.662
+ },
+ "washington-monument.mp3": {
+  "id": "02",
+  "seconds": 149.2,
+  "sha256": "d4caba1df75efb0fef32c44800cd6860add66d1a908f608b299a2f52721c29d5",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_02_washington_monument.mp3",
+  "transcript_match": 0.764
+ },
+ "us-capitol-west-front.mp3": {
+  "id": "03",
+  "seconds": 169.6,
+  "sha256": "057f655b23fd76b9555f8ef1f33caa27eeea764b955ab5bde38c557ce0af68cc",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_03_capitol_west_front.mp3",
+  "transcript_match": 0.612
+ },
+ "white-house-lafayette-square.mp3": {
+  "id": "04",
+  "seconds": 177.8,
+  "sha256": "241185e17cafd0f0ebc73edbe92c9a90124a5c1f6065448d1e11034a0fbadb60",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_04_white_house_lafayette_square.mp3",
+  "transcript_match": 0.835
+ },
+ "jefferson-memorial.mp3": {
+  "id": "05",
+  "seconds": 141.2,
+  "sha256": "b6ce225c764d3c01640ac81fbe899ba31e7d2b8583686fb74f076400c5e06dca",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_05_jefferson_memorial.mp3",
+  "transcript_match": 0.624
+ },
+ "martin-luther-king-jr-memorial.mp3": {
+  "id": "06",
+  "seconds": 131.0,
+  "sha256": "59dfb4447446f42c004cb9a7908aedb417eb46b52f66f705ce194d139ae85f97",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_06_mlk_memorial.mp3",
+  "transcript_match": 0.487
+ },
+ "vietnam-veterans-memorial.mp3": {
+  "id": "07",
+  "seconds": 132.1,
+  "sha256": "b8b723be5a6854928777c460cf4f0a190f47c20b993c7f34de8f80347879deba",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_07_vietnam_veterans_memorial.mp3",
+  "transcript_match": 0.705
+ },
+ "national-archives-dc.mp3": {
+  "id": "08",
+  "seconds": 143.9,
+  "sha256": "4ebab65392e81663481933fcc1e4417b16a8f887f73f8b3af35144dbed199b68",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_08_national_archives.mp3",
+  "transcript_match": 0.69
+ },
+ "library-of-congress-jefferson-building.mp3": {
+  "id": "09",
+  "seconds": 160.8,
+  "sha256": "5c491024198ff32add9b852a3c25de8b73949f520575866a60b07d2f373ce6e4",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_09_library_of_congress.mp3",
+  "transcript_match": 0.915
+ },
+ "supreme-court-of-the-united-states.mp3": {
+  "id": "10",
+  "seconds": 136.3,
+  "sha256": "9af6f60d09a259f6d4f05ae0950951112fa45ce146a1fc75a1ca02aa7f5ca325",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_10_supreme_court.mp3",
+  "transcript_match": 0.873
+ },
+ "georgetown-co-canal.mp3": {
+  "id": "11",
+  "seconds": 168.8,
+  "sha256": "65c01c1ee49cf12ad5820f1f49b352b877c7b627663f01b7535331cb16626de8",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_11_georgetown_m_street_co_canal.mp3",
+  "transcript_match": 0.583
+ },
+ "washington-union-station.mp3": {
+  "id": "12",
+  "seconds": 146.9,
+  "sha256": "2d0c95042ed670011b075ebc0144c0bcf3766033d648f5abb09a0599451cd422",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_12_union_station.mp3",
+  "transcript_match": 0.817
+ },
+ "world-war-ii-memorial.mp3": {
+  "id": "13",
+  "seconds": 132.9,
+  "sha256": "df5a62f0aaa2bdf22f84088517625f5aeaef9f8be6be13fd54de32258db486e8",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_13_world_war_ii_memorial.mp3",
+  "transcript_match": 0.697
+ },
+ "korean-war-veterans-memorial.mp3": {
+  "id": "14",
+  "seconds": 122.1,
+  "sha256": "8323a9827ce26a735c2ec2f10f48bc8948ee024bf32ad8b88a1afc78e263bd1b",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_14_korean_war_veterans_memorial.mp3",
+  "transcript_match": 0.858
+ },
+ "fdr-memorial.mp3": {
+  "id": "15",
+  "seconds": 139.9,
+  "sha256": "216b7d44d4e58eb74bdbefb25b4426fa71ff43e452c92de93da7832b249e294a",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_15_fdr_memorial.mp3",
+  "transcript_match": 0.838
+ },
+ "tidal-basin-cherry-trees.mp3": {
+  "id": "16",
+  "seconds": 132.7,
+  "sha256": "0775297ec19c5c363ad0c1b913d38c514e810d638dc108c3a0610dd1bcc627e0",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_16_tidal_basin_cherry_trees.mp3",
+  "transcript_match": 0.873
+ },
+ "smithsonian-castle.mp3": {
+  "id": "17",
+  "seconds": 137.3,
+  "sha256": "fc457dee01ea0bbcc05d0d1ce3fbda4dc1500b6bb894c7f1176aa5d5bcc12e74",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_17_smithsonian_castle.mp3",
+  "transcript_match": 0.841
+ },
+ "fords-theatre-petersen-house.mp3": {
+  "id": "18",
+  "seconds": 140.1,
+  "sha256": "55614b4343d5dc507cee8aaa6c5998e72bb81b6f872bc14d91c4d708e962f230",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_18_fords_theatre_petersen_house.mp3",
+  "transcript_match": 0.082
+ },
+ "old-post-office-dc.mp3": {
+  "id": "19",
+  "seconds": 127.3,
+  "sha256": "65868190316ae718daa0ce34b85b7198fd0702b0b30a07d98ea3061c1c8076e6",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_19_old_post_office.mp3",
+  "transcript_match": 0.218
+ },
+ "freedom-plaza-pennsylvania-avenue.mp3": {
+  "id": "20",
+  "seconds": 133.0,
+  "sha256": "3200f9b886b77bacd04e04c77975852543b817c4aafd2168f90ae480953b5046",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_20_pennsylvania_avenue_freedom_plaza.mp3",
+  "transcript_match": 0.781
+ },
+ "chinatown-friendship-archway-dc.mp3": {
+  "id": "21",
+  "seconds": 144.0,
+  "sha256": "885bea851514dcfcfda83ce8e536ab4db9b0d07df6092986bc6e195ff2373eb3",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_21_chinatown_friendship_archway.mp3",
+  "transcript_match": 0.79
+ },
+ "dupont-circle.mp3": {
+  "id": "22",
+  "seconds": 137.9,
+  "sha256": "b2ba03589f2e83425534e088b9bab695e709a8a0715df91f3204baa63735e1c0",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_22_dupont_circle.mp3",
+  "transcript_match": 0.9
+ },
+ "embassy-row-massachusetts-avenue.mp3": {
+  "id": "23",
+  "seconds": 145.7,
+  "sha256": "06c45267860ec0fb22fd83687b137c648e5dd4c7c117b1e9643cbb8f173d3208",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_23_embassy_row_massachusetts_avenue.mp3",
+  "transcript_match": 0.876
+ },
+ "u-street-lincoln-theatre.mp3": {
+  "id": "24",
+  "seconds": 179.5,
+  "sha256": "f6fd001bf69f173c55c0ebef2c1ff957ffe7104ee2b628cde32a14df8d1102ff",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_24_u_street_lincoln_howard_theatres.mp3",
+  "transcript_match": 0.59
+ },
+ "african-american-civil-war-memorial.mp3": {
+  "id": "25",
+  "seconds": 129.8,
+  "sha256": "51a2c589433474eb916a4df95a1dfbb8be74ffbfc93a1864718e26392d855a71",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_25_african_american_civil_war_memorial.mp3",
+  "transcript_match": 0.838
+ },
+ "eastern-market-dc.mp3": {
+  "id": "26",
+  "seconds": 141.1,
+  "sha256": "5009772d5ed7b2b4748cdd298301bca0f454e2216800f06af128a716acd46966",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_26_eastern_market.mp3",
+  "transcript_match": 0.704
+ },
+ "us-botanic-garden.mp3": {
+  "id": "27",
+  "seconds": 142.6,
+  "sha256": "caa7aca5efe0577a56cef790623fde1d12aa06562309f1912fed867618b73a2a",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_27_us_botanic_garden.mp3",
+  "transcript_match": 0.709
+ },
+ "washington-national-cathedral.mp3": {
+  "id": "28",
+  "seconds": 135.4,
+  "sha256": "27876731362b04cfc0aa1969d0e8f916cb8035ffef252953285c7b957924115a",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_28_washington_national_cathedral.mp3",
+  "transcript_match": 0.894
+ },
+ "wharf-maine-avenue-fish-market.mp3": {
+  "id": "29",
+  "seconds": 131.8,
+  "sha256": "3de993d45d8829bbef95ed26d3ce3c088186090679e9b33f7e74895e8dad4e1f",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_29_the_wharf_fish_market.mp3",
+  "transcript_match": 0.727
+ },
+ "frederick-douglass-cedar-hill.mp3": {
+  "id": "30",
+  "seconds": 138.0,
+  "sha256": "34353bd058288505c4116f47243486061b4a33684b1668623ee1cf2d4516032c",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_30_frederick_douglass_house.mp3",
+  "transcript_match": 0.478
+ },
+ "old-stone-house-georgetown.mp3": {
+  "id": "40",
+  "seconds": 129.0,
+  "sha256": "4ba99a2f25fda3fc0c003d80eb0e4220c031e184d6a564a9662add03adbeb9c2",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "washington_dc_40_old_stone_house.mp3",
+  "transcript_match": 0.79
+ },
+ "washington-dc-long-room-walk_stop0.mp3": {
+  "id": "W1-0",
+  "seconds": 77.6,
+  "sha256": "fa008466de215e13286c4ad109820e2ce34c168518d65950b812aa4c4df37c17",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W1/washington_dc_long_room_multistop_00_intro_lincoln_steps.mp3",
+  "transcript_match": 0.724
+ },
+ "washington-dc-long-room-walk_stop1.mp3": {
+  "id": "W1-1",
+  "seconds": 97.8,
+  "sha256": "38fcfb7fb98010e3014ef6a96faa9d927dec935b29ff7d7981ee4a90535d3149",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W1/washington_dc_long_room_multistop_01_lincoln_memorial.mp3",
+  "transcript_match": 0.785
+ },
+ "washington-dc-long-room-walk_stop2.mp3": {
+  "id": "W1-2",
+  "seconds": 95.7,
+  "sha256": "9dc6c36aa4ec99b0fd9301fe8aeb938637b2bf9d598f301d8ad4611339caca37",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W1/washington_dc_long_room_multistop_02_vietnam_veterans_memorial.mp3",
+  "transcript_match": 0.714
+ },
+ "washington-dc-long-room-walk_stop3.mp3": {
+  "id": "W1-3",
+  "seconds": 86.0,
+  "sha256": "a9904f6ede52803b98f554bb852f5955ea6bf9f37a3ec0fd6484509d3b47a8c5",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W1/washington_dc_long_room_multistop_03_korean_war_veterans_memorial.mp3",
+  "transcript_match": 0.838
+ },
+ "washington-dc-long-room-walk_stop4.mp3": {
+  "id": "W1-4",
+  "seconds": 68.2,
+  "sha256": "041cd6c869283e3b63fdb9b4fceb26440f85b5c747a271ad8e8f55b23d686a2e",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W1/washington_dc_long_room_multistop_04_connective_reflecting_pool_south_walk.mp3",
+  "transcript_match": 0.374
+ },
+ "washington-dc-long-room-walk_stop5.mp3": {
+  "id": "W1-5",
+  "seconds": 96.3,
+  "sha256": "7db39eb93f6f677b83537a0ce6518cdde2f171b11b2a78d228604ffebe231251",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W1/washington_dc_long_room_multistop_05_world_war_two_memorial.mp3",
+  "transcript_match": 0.686
+ },
+ "washington-dc-long-room-walk_stop6.mp3": {
+  "id": "W1-6",
+  "seconds": 118.8,
+  "sha256": "f532cb115eb971b371c571e535c5a6776fe2beab791f9bf57bf019f8a748ad02",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W1/washington_dc_long_room_multistop_06_washington_monument.mp3",
+  "transcript_match": 0.829
+ },
+ "washington-dc-around-the-water-walk_stop0.mp3": {
+  "id": "W2-0",
+  "seconds": 107.4,
+  "sha256": "02899f420f69880c16e7e8ba8eef6fa4c074a0c154fee050d7d45c6513ac604f",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W2/washington_dc_around_the_water_multistop_00_intro_boat_dock.mp3",
+  "transcript_match": 0.762
+ },
+ "washington-dc-around-the-water-walk_stop1.mp3": {
+  "id": "W2-1",
+  "seconds": 107.7,
+  "sha256": "6c403bdc4df599233c71b39cd2f7a89edf9064d47e32c60109e839c97b3c966c",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W2/washington_dc_around_the_water_multistop_01_the_cherry_trees.mp3",
+  "transcript_match": 0.899
+ },
+ "washington-dc-around-the-water-walk_stop2.mp3": {
+  "id": "W2-2",
+  "seconds": 105.4,
+  "sha256": "4b1bfd4805777d110aebe506a81091f0bb0b1c0c5725bcf8f971fd0b3a69b6c6",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W2/washington_dc_around_the_water_multistop_02_jefferson_memorial.mp3",
+  "transcript_match": 0.924
+ },
+ "washington-dc-around-the-water-walk_stop3.mp3": {
+  "id": "W2-3",
+  "seconds": 77.8,
+  "sha256": "c0473d81052217f697684b7c6db0e59be2e9692bd986ff83cb23e0faf98886e8",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W2/washington_dc_around_the_water_multistop_03_connective_inlet_bridge.mp3",
+  "transcript_match": 0.639
+ },
+ "washington-dc-around-the-water-walk_stop4.mp3": {
+  "id": "W2-4",
+  "seconds": 111.0,
+  "sha256": "dfd2d0b9d59cffa5e9d9275dea7ae6a30bd191748e5ef9276a736e3165bf4f8d",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W2/washington_dc_around_the_water_multistop_04_roosevelt_memorial.mp3",
+  "transcript_match": 0.93
+ },
+ "washington-dc-around-the-water-walk_stop5.mp3": {
+  "id": "W2-5",
+  "seconds": 107.3,
+  "sha256": "16ebc71e53351e7c8f437ca26989abcc190e76721cee5f953d86f2289f973f4b",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W2/washington_dc_around_the_water_multistop_05_king_memorial_the_last_stop.mp3",
+  "transcript_match": 0.902
+ },
+ "washington-dc-older-than-the-city-walk_stop0.mp3": {
+  "id": "W3-0",
+  "seconds": 102.8,
+  "sha256": "4f06a39c9e0edad1e42296530be6a123b307614562726982ce877d72f115b1b1",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W3/washington_dc_older_than_the_city_multistop_00_key_bridge_foot.mp3",
+  "transcript_match": 0.735
+ },
+ "washington-dc-older-than-the-city-walk_stop1.mp3": {
+  "id": "W3-1",
+  "seconds": 110.5,
+  "sha256": "386fa64db0e4bb10f24c0203ebc7ef41cd9b522a15face5eaf23a8e70d52e499",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W3/washington_dc_older_than_the_city_multistop_01_m_street_and_the_canal.mp3",
+  "transcript_match": 0.756
+ },
+ "washington-dc-older-than-the-city-walk_stop2.mp3": {
+  "id": "W3-2",
+  "seconds": 86.1,
+  "sha256": "e6a51a5c9a76a4faec32d6c824db83af55252a95d4692b319940bdb3af802001",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W3/washington_dc_older_than_the_city_multistop_02_the_locks_connective.mp3",
+  "transcript_match": 0.739
+ },
+ "washington-dc-older-than-the-city-walk_stop3.mp3": {
+  "id": "W3-3",
+  "seconds": 99.8,
+  "sha256": "a30d3adb6ee6f0eeaf4c71910ac209aa507915eee4176ca831a951eba50bc023",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W3/washington_dc_older_than_the_city_multistop_03_old_stone_house.mp3",
+  "transcript_match": 0.722
+ },
+ "washington-dc-older-than-the-city-walk_stop4.mp3": {
+  "id": "W3-4",
+  "seconds": 109.6,
+  "sha256": "f07b2953645288bca46b3f6041c8fae9ef33c4b1ac201bb37f38b3b462fc632a",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W3/washington_dc_older_than_the_city_multistop_04_the_waterfront.mp3",
+  "transcript_match": 0.811
+ },
+ "washington-dc-the-avenue-walk_stop0.mp3": {
+  "id": "W4-0",
+  "seconds": 98.1,
+  "sha256": "de005df6d4140ce98a31d1d1f84458e8dcb26a775e513e8a44af4fd9552c7014",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W4/washington_dc_the_avenue_multistop_00_intro_lafayette_square.mp3",
+  "transcript_match": 0.931
+ },
+ "washington-dc-the-avenue-walk_stop1.mp3": {
+  "id": "W4-1",
+  "seconds": 112.4,
+  "sha256": "5f6a9a0ec8469a672188031eed2844f0300a1f287c06bc7095fccbe75912462f",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W4/washington_dc_the_avenue_multistop_01_the_white_house_the_avenue_leaving.mp3",
+  "transcript_match": 0.888
+ },
+ "washington-dc-the-avenue-walk_stop2.mp3": {
+  "id": "W4-2",
+  "seconds": 107.1,
+  "sha256": "266956e077ad95631ecb421f76cc422f798d312159c10d896781a112ea66c89b",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W4/washington_dc_the_avenue_multistop_02_freedom_plaza_the_parade.mp3",
+  "transcript_match": 0.736
+ },
+ "washington-dc-the-avenue-walk_stop3.mp3": {
+  "id": "W4-3",
+  "seconds": 99.0,
+  "sha256": "6b3ea6a0f7b5ccd6e556af305395d521ebacf6ad1935f9c9ef3b89d30d2aecd1",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W4/washington_dc_the_avenue_multistop_03_old_post_office_the_tower.mp3",
+  "transcript_match": 0.845
+ },
+ "washington-dc-the-avenue-walk_stop4.mp3": {
+  "id": "W4-4",
+  "seconds": 115.9,
+  "sha256": "460b81446801425a76f7884f702acac1bc3376e295c126de5d1dedc3394ce9da",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W4/washington_dc_the_avenue_multistop_04_national_archives_the_arrival.mp3",
+  "transcript_match": 0.785
+ },
+ "washington-dc-the-avenue-walk_stop5.mp3": {
+  "id": "W4-5",
+  "seconds": 86.9,
+  "sha256": "f7cdea4f33a7625551c9922be643ca6dee4db3309a94ea5e001a74cc687d3bd4",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W4/washington_dc_the_avenue_multistop_05_connective_seventh_street.mp3",
+  "transcript_match": 0.688
+ },
+ "washington-dc-the-avenue-walk_stop6.mp3": {
+  "id": "W4-6",
+  "seconds": 97.9,
+  "sha256": "1fa6c69bd9c7223c534feafbdc5117e3e9199163cd1600981b2b62ec6e9ba796",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W4/washington_dc_the_avenue_multistop_06_fords_theatre_tenth_street.mp3",
+  "transcript_match": 0.757
+ },
+ "washington-dc-the-avenue-walk_stop7.mp3": {
+  "id": "W4-7",
+  "seconds": 94.8,
+  "sha256": "f775e339168238436213ed3cf535725ecc093b87f30714790193a26fd91949c1",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W4/washington_dc_the_avenue_multistop_07_chinatown_the_archway.mp3",
+  "transcript_match": 0.847
+ },
+ "washington-dc-city-that-isnt-a-state-walk_stop0.mp3": {
+  "id": "W5-0",
+  "seconds": 99.0,
+  "sha256": "959dc4a0f1c3bdd9b2e0074e477656b0e6ab8bf9509fea2cd9c3870c5f889306",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W5/washington_dc_the_city_that_isnt_a_state_multistop_00_intro_columbus_circle.mp3",
+  "transcript_match": 0.408
+ },
+ "washington-dc-city-that-isnt-a-state-walk_stop1.mp3": {
+  "id": "W5-1",
+  "seconds": 107.0,
+  "sha256": "e29a3404deca33161299e02a9f7dfeb4a41557fbb22dc171f7a4ef08f104805d",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W5/washington_dc_the_city_that_isnt_a_state_multistop_01_union_station.mp3",
+  "transcript_match": 0.921
+ },
+ "washington-dc-city-that-isnt-a-state-walk_stop2.mp3": {
+  "id": "W5-2",
+  "seconds": 112.9,
+  "sha256": "e590176e858b27f40d148e236c725dc6fccdf7e91870dc2b0fb70adf0dc8c4f2",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W5/washington_dc_the_city_that_isnt_a_state_multistop_02_eastern_market.mp3",
+  "transcript_match": 0.853
+ },
+ "washington-dc-city-that-isnt-a-state-walk_stop3.mp3": {
+  "id": "W5-3",
+  "seconds": 81.2,
+  "sha256": "ce248d577da616cd9a4c48bf5408bbe7ae07797f600218f773c21ae40332a44e",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W5/washington_dc_the_city_that_isnt_a_state_multistop_03_connective_east_capitol_street.mp3",
+  "transcript_match": 0.514
+ },
+ "washington-dc-city-that-isnt-a-state-walk_stop4.mp3": {
+  "id": "W5-4",
+  "seconds": 86.9,
+  "sha256": "47f7aee6ad6fc35cc87affd42130f397714761c91a68e46d90a14c77ee7b6f66",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W5/washington_dc_the_city_that_isnt_a_state_multistop_04_supreme_court.mp3",
+  "transcript_match": 0.68
+ },
+ "washington-dc-city-that-isnt-a-state-walk_stop5.mp3": {
+  "id": "W5-5",
+  "seconds": 108.9,
+  "sha256": "69ca3ba16c71bbd42839659d7068217f60e766bf90a29eb52466cc7df61ec9fa",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W5/washington_dc_the_city_that_isnt_a_state_multistop_05_library_of_congress.mp3",
+  "transcript_match": 0.902
+ },
+ "washington-dc-city-that-isnt-a-state-walk_stop6.mp3": {
+  "id": "W5-6",
+  "seconds": 81.2,
+  "sha256": "54326d5e4755d11f507a396731852b0e6ea110547bd329ba83ec8e20e1817fb7",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W5/washington_dc_the_city_that_isnt_a_state_multistop_06_botanic_garden.mp3",
+  "transcript_match": 0.824
+ },
+ "washington-dc-city-that-isnt-a-state-walk_stop7.mp3": {
+  "id": "W5-7",
+  "seconds": 104.9,
+  "sha256": "f74c99fe1d56877d10230d94d0c93c0badcc14236b631244ee8c1dee0cf72394",
+  "kbps": 128,
+  "hz": 44100,
+  "channels": 2,
+  "source": "DC W5/washington_dc_the_city_that_isnt_a_state_multistop_07_final_the_open_question.mp3",
+  "transcript_match": 0.863
+ }
+}
