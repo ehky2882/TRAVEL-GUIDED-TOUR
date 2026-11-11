@@ -313,3 +313,4 @@ Part-vs-whole rulings:
 | El Umbracle (tour) + City of Arts and Sciences (pin) | **YES**: the place sits on the Umbracle, which is inside the complex |
 | Monument to Richard Sorge (SovMod tour) + Richard Sorge Park (pin) | **YES**: the park exists for the monument; the place sits on the monument |
 | Weir Greenhouse (pin) + Green-Wood Cemetery (tour + pin) | **NO**: one building in a huge cemetery |
+| Magok Cultural Hall (pin) + Seoul Botanic Park (tour) | **NO**: a separate building in a big park |

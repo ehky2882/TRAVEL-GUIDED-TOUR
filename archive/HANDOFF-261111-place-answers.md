@@ -64,3 +64,4 @@ The owner said yes ("kolumba and fenix yes"), so both are now places at 0 m and 
 - Places: 586.
 - Q7 **YES**: City of Arts and Sciences, on El Umbracle's point (81 m pin move). Q8 **YES**: Richard Sorge Park,
   on the monument (164 m pin move). Q9 **NO**: Weir Greenhouse stays out of Green-Wood. Places: 588.
+- Q10 **NO**: Magok Cultural Hall stays out of Seoul Botanic Park.
