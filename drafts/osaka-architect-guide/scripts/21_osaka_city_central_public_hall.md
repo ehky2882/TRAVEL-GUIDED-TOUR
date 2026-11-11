@@ -1,0 +1,47 @@
+# 21 · Osaka City Central Public Hall
+
+**Category:** Visit · **Coordinates (WGS-84):** 34.693540, 135.504009 · **Length:** 323 words (about 129 s at 150 wpm)
+
+## Script (clean)
+
+A stockbroker paid for this building. He didn't live to see it open.
+
+The building in front of you, on Nakanoshima between the rivers, is a red-brick hall with bands of pale stone, big arched windows and a bronze dome. Look at the great arch in the middle of the front: it's the thing everyone photographs.
+
+The man behind it was Einosuke Iwamoto, a stockbroker from the share-trading streets of Kitahama, just across the river. He gave a million yen of his own money for a public hall for the people of Osaka, a vast sum at the time. There was a design competition, won by a young architect, Shinichiro Okada, and his design was carried forward by Kingo Tatsuno and Yasushi Kataoka. Building began in 1913.
+
+Iwamoto died in 1916, two years before it was finished. The hall opened in 1918.
+
+Have a look along the roofline for two figures. They're Minerva, goddess of wisdom, and Mercury, god of merchants. For a building given by a stockbroker, in a city of traders, that's rather a fitting pair.
+
+Inside, it's been used for operas, concerts and lectures since the beginning, and it still is. The great hall seats over eleven hundred people. Between 1999 and 2002 the building was restored, strengthened against earthquakes and made accessible, and in December 2002 it was made a national Important Cultural Property.
+
+Osaka has always been a city built by its merchants rather than by its rulers. Tokyo had the government; Osaka had the money, and the people who made it built the bridges, the schools and this hall. It's a monument to a man, but it's also a monument to that idea.
+
+*[beat]*
+
+Entry to the building is free, and if you book a guided tour you'll be taken into the Special Room, which is otherwise closed to the public. Then walk west along the island to the domed library next door, and on to the museums at the far end.
+
+## TTS-safe version
+
+See `21_osaka_city_central_public_hall_tts-safe.txt`. Spoken title: **Osaka City Central Public Hall**.
+
+## Respellings used
+
+| Written | Spoken |
+|---|---|
+| Einosuke Iwamoto | Ay noh skay Eewah mohtoh |
+| Iwamoto | Eewah mohtoh |
+| Kingo Tatsuno | Keengoh Tahtsoonoh |
+| Kitahama | Keetah hahmah |
+| Nakanoshima | Nahkah noh sheemah |
+| Shinichiro Okada | Sheen eechee roh Ohkahdah |
+| Yasushi Kataoka | Yahsooshee Kahtah ohkah |
+
+## Primary sources read before writing
+
+- https://osaka-chuokokaido.com/en/ (official site)
+- https://www.mlit.go.jp/tagengo-db/R1-00877.html
+- https://tabi-mag.jp/os0025/
+- https://www.city.osaka.lg.jp/contents/wdu210/mayor/deta_pdf/deta53.pdf
+- https://www.gltjp.com/ja/directory/item/11986/

@@ -1,0 +1,48 @@
+# 06 · Mizuno
+
+**Category:** Dine · **Coordinates (WGS-84):** 34.668372, 135.503220 · **Length:** 306 words (about 122 s at 150 wpm)
+
+## Script (clean)
+
+Okonomiyaki is supposed to be pancake batter, cabbage and whatever you fancy. The best thing on the menu here doesn't use any flour at all.
+
+You're in the covered arcade a few steps in from Dotonbori and the canal, in the thick of the neon. Look for the queue. Inside, everything is cooked on hot iron plates.
+
+It opened in 1945. The air raids that year had burned Minami, this whole southern district, almost flat, and the family started again with a single iron plate, selling yoshoku-yaki, the thin, cheap griddled pancake that came before okonomiyaki. It's still on the menu. The family has run it through three generations since.
+
+Now, the dish to order. It's yamaimo-yaki, made with nothing but grated mountain yam, the slippery, sticky root you'll find all over Japanese cooking. No flour, no binding, just yam on the griddle. It starts soft, almost creamy, and as it sits on the hot plate the outside turns crisp. Eat it slowly and you get both. The house special, the Mizuno-yaki, is the other one people come for. And the shop is quite proud that it doesn't drown everything in sauce: the idea is that you taste what's in it.
+
+The Michelin guide has given it a Bib Gourmand, its prize for good cooking at a fair price, several years running.
+
+Here's what's worth knowing. Dotonbori sells itself on spectacle, giant crabs and running men and lights. But the places that have lasted here are the ones that kept their heads down and their griddles hot. This one started on a bomb site with one iron plate. It's still, essentially, a pancake shop.
+
+*[beat]*
+
+Afterwards, find Hozenji Yokocho, two narrow stone lanes with a moss-covered statue at their heart. It's a couple of minutes' walk, and about as quiet as this neighbourhood gets.
+
+## TTS-safe version
+
+See `06_mizuno_tts-safe.txt`. Spoken title: **Meezoonoh**.
+
+## Respellings used
+
+| Written | Spoken |
+|---|---|
+| Bib Gourmand | Bib Goormahn |
+| Dotonbori | Doh tonn boree |
+| Hozenji | Hoh zen jee |
+| Hozenji Yokocho | Hoh zen jee Yokkoh choh |
+| Minami | Meenahmee |
+| Mizuno | Meezoonoh |
+| Mizuno-yaki | Meezoonoh yahkee |
+| Okonomiyaki | Okonnomee yahkee |
+| Yokocho | Yokkoh choh |
+| okonomiyaki | okonnomee yahkee |
+| yamaimo-yaki | yahmah eemoh yahkee |
+| yoshoku-yaki | yoh shoh koo yahkee |
+
+## Primary sources read before writing
+
+- https://www.mizuno-osaka.com/ (official site)
+- https://www.gltjp.com/ja/directory/item/12081/
+- https://livejapan.com/ja/in-kansai/in-pref-osaka/in-namba_dotonbori_shinsaibashi/article-a2000114/

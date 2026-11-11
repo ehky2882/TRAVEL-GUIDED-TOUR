@@ -1,0 +1,41 @@
+# 10 · Bar Nayuta
+
+**Category:** Drink · **Coordinates (WGS-84):** 34.671967, 135.498383 · **Length:** 298 words (about 119 s at 150 wpm)
+
+## Script (clean)
+
+There's no menu. You tell the bartender what you like, and they make you something that didn't exist until a minute ago.
+
+Near Triangle Park in Amerikamura, find the foot of an ordinary building of bars and shops. Have a look at the signboards by the door for a small, intricate geometric symbol. That's your sign. The bar is on the fifth floor, and you go in through a door low enough to make most people duck.
+
+Inside it's dim, wooden and cluttered. Bottles crowd the shelves and spill down onto the floor, and many of them are the bar's own: infusions, bitters and liqueurs made in house. It looks less like a cocktail bar than an alchemist's workshop, which I suspect is deliberate.
+
+The name is worth a moment. Nayuta is an old Buddhist word for an unimaginably large number, used in the traditional Japanese counting system for a figure with sixty or more noughts after it. A fair description of the possible drinks.
+
+It opens at five in the evening and stays open until three in the morning, every day. In 2025 it was one of two Osaka bars on the extended list of Asia's 50 Best Bars.
+
+What's worth noticing is how Osaka does this differently from Tokyo or Kyoto. In those cities, the great bars tend to be hushed, formal and precise. Here, the same skill comes with a bit of mischief: the low door, the hidden sign, the bottles on the floor. It's serious about the drink and not at all serious about itself.
+
+*[beat]*
+
+When you come back down, Triangle Park is where Amerikamura gathers at night, young people sitting on the steps with cans and skateboards. Walk east from it and you'll reach Shinsaibashi-suji, the long covered shopping street, in about five minutes.
+
+## TTS-safe version
+
+See `10_bar_nayuta_tts-safe.txt`. Spoken title: **Bar Nah yootah**.
+
+## Respellings used
+
+| Written | Spoken |
+|---|---|
+| Amerikamura | Ahmayree kah moorah |
+| Kyoto | Kyohtoh |
+| Nayuta | Nah yootah |
+| Shinsaibashi | Sheen sye bahshee |
+| Shinsaibashi-suji | Sheen sye bahshee soojee |
+
+## Primary sources read before writing
+
+- https://www.timeout.com/osaka/bars-and-pubs/bar-nayuta
+- https://www.timeout.com/osaka/news/2-osaka-bars-named-in-asias-50-best-bars-2025-extended-list-101425
+- https://ssl.tabelog.com/en/osaka/A2701/A270202/27017544/

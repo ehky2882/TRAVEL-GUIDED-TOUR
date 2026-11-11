@@ -1,0 +1,45 @@
+# 05 · HAJIME
+
+**Category:** Dine · **Coordinates (WGS-84):** 34.688599, 135.496201 · **Length:** 322 words (about 129 s at 150 wpm)
+
+## Script (clean)
+
+The chef here started out as an engineer, designing parts for electronic devices. You can still taste it.
+
+Hajime is on the ground floor of a quiet building on Edobori, a few streets south of the river. From outside there's very little to see, which is rather the point. You should be on the pavement in front of a discreet entrance with the restaurant's name on it, in a neighbourhood of offices and small flats.
+
+The man behind it is Hajime Yoneda. Born in Osaka in 1972, he studied engineering at Kindai University and went to work as a design engineer, saving up for cookery school. He trained in Osaka and Kobe, went to France in 2002, and later cooked under Michel Bras, the great French chef of vegetables and landscapes, at his restaurant in Hokkaido.
+
+He opened here in May 2008. About a year and a half later the Michelin guide gave it three stars, which at the time made it the only three-star restaurant in Osaka.
+
+Have a look at how the restaurant describes itself. The motto is that the universe exists in a remarkably delicate harmony, and it measures its cooking in tenths: a tenth of a degree, a tenth of a millimetre, a tenth of a gram. That's an engineer's tolerance. But what arrives on the plate is meant to feel like nature, like a hillside or a garden, not like a circuit board.
+
+And that's the interesting bit. Precision and wildness usually pull in opposite directions. Here the precision is how you get the wildness. Every leaf on the plate is placed to look as if it simply fell there.
+
+*[beat]*
+
+You'll need a reservation, made well ahead, and the long tasting menu is an evening's commitment. If you've come by day, walk a few minutes west to Utsubo Park, a long, leafy strip with a rose garden, where the office workers of this neighbourhood eat lunch on the benches.
+
+## TTS-safe version
+
+See `05_hajime_tts-safe.txt`. Spoken title: **Hahjeemay**.
+
+## Respellings used
+
+| Written | Spoken |
+|---|---|
+| Edobori | Eddoh boree |
+| Hajime | Hahjeemay |
+| Hajime Yoneda | Hahjeemay Yonnay dah |
+| Hokkaido | Hokkye doh |
+| Kindai | Keendye |
+| Kobe | Kohbay |
+| Michel Bras | Meeshel Brah |
+| Utsubo | Ootsooboh |
+
+## Primary sources read before writing
+
+- https://www.hajime-artistes.com/ (official site)
+- https://ai.sony/blog/The-Future-Kitchen-Series-Chef-Hajime-Yoneda-Part1
+- https://en.wikipedia.org/wiki/Hajime_(restaurant)
+- https://guide.michelin.com/at/en/osaka-region/osaka/restaurant/hajime

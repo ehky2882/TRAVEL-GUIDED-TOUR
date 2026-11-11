@@ -1,0 +1,41 @@
+# 19 · Nakanoshima Museum of Art, Osaka
+
+**Category:** Visit · **Coordinates (WGS-84):** 34.692381, 135.491368 · **Length:** 303 words (about 121 s at 150 wpm)
+
+## Script (clean)
+
+Osaka first decided to build a museum of modern art in 1983. This is it. It took nearly forty years.
+
+In front of you is a great black box on the western end of Nakanoshima, between the rivers. Hardly any windows. Just a dark, almost sealed volume sitting on the ground. Ask anyone in Osaka for directions and they'll call it the one with the black outside.
+
+The idea goes back to August 1983, when a modern art museum was named as one of the projects for the city's hundredth anniversary. Then came committees, a preparation office, years of deliberation over where to put it, a decision in 2013 to build here, and a design competition in 2017. Building work began in February 2019, and it finally opened in 2022.
+
+The competition was won by the architect Katsuhiko Endo, and his whole idea is inside. He calls it the passage, like the covered arcades of old Paris. A tall atrium runs right through the middle of the building, from the first floor to the fifth, with soft light falling from above, and it's open to anyone, ticket or not. Endo described it as a museum like a city, where all sorts of people and activities cross.
+
+Have a look at the furniture in the passage if you go in. The chairs, benches and sofas are by the designer Taiji Fujimori, in Hokkaido oak.
+
+What's worth noticing is the contrast. Outside, the building is closed and mysterious. Inside, it's as public as a station concourse. The black box doesn't keep people out. It makes them curious enough to come in.
+
+*[beat]*
+
+Walk through the passage even if you're not seeing an exhibition. Then go next door. The National Museum of Art is almost entirely underground, and from up here, all you can see of it is a strange sculpture of steel.
+
+## TTS-safe version
+
+See `19_nakanoshima_museum_of_art_osaka_tts-safe.txt`. Spoken title: **Nahkah noh sheemah Museum of Art, Osaka**.
+
+## Respellings used
+
+| Written | Spoken |
+|---|---|
+| Endo | Endoh |
+| Hokkaido | Hokkye doh |
+| Katsuhiko Endo | Kahtsoo heekoh Endoh |
+| Nakanoshima | Nahkah noh sheemah |
+| Taiji Fujimori | Tye jee Foojee moree |
+
+## Primary sources read before writing
+
+- https://nakka-art.jp/en/ (official site)
+- https://nakka-art.jp/en/about/architecture/ (official: architecture)
+- https://nakka-art.jp/en/about/history/ (official: history)

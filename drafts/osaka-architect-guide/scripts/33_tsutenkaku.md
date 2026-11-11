@@ -1,0 +1,41 @@
+# 33 · Tsutenkaku
+
+**Category:** Observe · **Coordinates (WGS-84):** 34.652539, 135.506310 · **Length:** 321 words (about 128 s at 150 wpm)
+
+## Script (clean)
+
+This is the second Tsutenkaku. The first was half Eiffel Tower, half Arc de Triomphe, and it was melted down for the war.
+
+Shinsekai, the street just north of the tower. In front of you, Tsutenkaku itself, eight-sided and steel, and on its side a big sign with the name of an electronics company. Round you, a whole district of fried-food restaurants, giant shop signs and neon.
+
+Shinsekai means the new world. It was laid out in 1912 with the north half modelled on Paris and the south half on Coney Island in New York. The first Tsutenkaku went up the same year, sixty-four metres tall: the top borrowed from the Eiffel Tower, the base from the Arc de Triomphe, and a cable car ran from it to Luna Park, the amusement park next door. In 1943 a fire badly damaged it, and instead of repairing it, the steel was taken away for the war effort.
+
+After the war, local people campaigned to have it back. They formed a company, Tachu Naito designed a new tower, and it opened in 1956. Seventy years old this year. It stands a hundred and eight metres high, with the main observation deck at ninety-one.
+
+Have a look at the sign. Hitachi has sponsored it since 1957. And look at the lights at the very top: they change colour to give tomorrow's weather forecast.
+
+Very few cities rebuild a tower because the people asked. Tsutenkaku isn't the tallest building in Osaka, not by a long way. But it's the one that belongs to the neighbourhood, and it was put back up by the neighbourhood.
+
+*[beat]*
+
+If you go up, find Billiken on the observation deck, a smiling little god of good luck. The original statue vanished after Luna Park closed, and a copy was made from an old photograph in 1979. Rub the soles of his feet. It's what everybody does, and they've rubbed them rather shiny.
+
+## TTS-safe version
+
+See `33_tsutenkaku_tts-safe.txt`. Spoken title: **Tsoo ten kahkoo**.
+
+## Respellings used
+
+| Written | Spoken |
+|---|---|
+| Arc de Triomphe | Ark duh Tree omf |
+| Hitachi | Heetahchee |
+| Shinsekai | Sheen sekkye |
+| Tachu Naito | Tah choo Nye toh |
+| Tsutenkaku | Tsoo ten kahkoo |
+
+## Primary sources read before writing
+
+- https://www.tsutenkaku.co.jp/ (official site)
+- https://en.wikipedia.org/wiki/Tsutenkaku
+- https://en.wikipedia.org/wiki/Shinsekai

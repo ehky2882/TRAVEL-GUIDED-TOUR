@@ -1,0 +1,42 @@
+# 26 · Tower of the Sun
+
+**Category:** Observe · **Coordinates (WGS-84):** 34.809513, 135.532397 · **Length:** 345 words (about 138 s at 150 wpm)
+
+## Script (clean)
+
+In 1970, this figure burst up through the roof of the World's Fair. The roof has gone. The figure is still here.
+
+The Expo '70 Commemorative Park, in Suita, north of the city. In front of you stands a tower about seventy metres tall, white and red, with arms stretched out to either side. At the very top, a golden face. On its belly, another face.
+
+This is Taro Okamoto's Tower of the Sun. It was the centrepiece of the Theme Pavilion at Expo '70, the first world's fair held in Asia. Around it was the Big Roof, designed by Kenzo Tange: two hundred and ninety-two metres long, a hundred and eight wide, about forty metres up. Okamoto's tower went straight through the middle of it.
+
+Count the faces. The golden mask at the top is the future. The face on the front is the present. And if you walk round the back, there's a third, the black sun, which is the past. There was a fourth, the Sun of the Underground, three metres high and eleven metres long, shown in the underground exhibition beneath. After the Expo it was taken away, and to this day nobody knows where it is.
+
+Inside the tower is the Tree of Life, about forty-one metres tall, climbing through its body and carrying two hundred and ninety-two models of living things, from single cells up to human beings. Okamoto called it the tower's bloodstream. For nearly fifty years the inside was closed to the public. It's open again now.
+
+What's worth knowing is that Tange's roof was meant to be the architecture, and Okamoto's tower was meant to be the art inside it. Most of the roof was taken down within a decade. The art outlived the architecture, which almost never happens.
+
+*[beat]*
+
+Book ahead to see inside, as visits are by reservation. And while you're in the park, walk on to the National Museum of Ethnology, a building by Kisho Kurokawa, which grew out of the objects that were gathered from around the world for the Expo.
+
+## TTS-safe version
+
+See `26_tower_of_the_sun_tts-safe.txt`. Spoken title: **Tower of the Sun**.
+
+## Respellings used
+
+| Written | Spoken |
+|---|---|
+| Kenzo Tange | Kenzoh Tahngay |
+| Kisho Kurokawa | Keeshoh Kooroh kahwah |
+| Okamoto | Ohkah mohtoh |
+| Suita | Soo eetah |
+| Tange | Tahngay |
+| Taro Okamoto | Tahroh Ohkah mohtoh |
+
+## Primary sources read before writing
+
+- https://taiyounotou-expo70.jp/en/ (official site)
+- https://www.taiyounotou-expo70.jp/en/about/ (official: about)
+- https://en.wikipedia.org/wiki/Tower_of_the_Sun

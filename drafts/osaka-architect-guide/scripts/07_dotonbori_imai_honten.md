@@ -1,0 +1,49 @@
+# 07 · Dotonbori Imai Honten
+
+**Category:** Dine · **Coordinates (WGS-84):** 34.668651, 135.502710 · **Length:** 318 words (about 127 s at 150 wpm)
+
+## Script (clean)
+
+This family has sold tea to theatregoers, trumpets to jazz musicians, and udon to everybody, all on the same street.
+
+Dotonbori, the south side of the canal. Look for a calm, low wooden shopfront in the middle of all the noise. Inside, it's quiet, polished and rather old-fashioned, which on this street is the most surprising thing of all.
+
+The story starts around 1815, when the founder came to Dotonbori from Imai-cho in Nara. In 1838 his daughter opened a teahouse for the theatre crowds, because this street was lined with theatres. Generations later, the family turned it into a shop selling Western musical instruments, Imai Gakki, which became one of the best known in the country and grew up alongside Dotonbori's jazz scene.
+
+Then the war. The air raids burned this district, and when the family came back in 1946 they sold whatever they could: agar jelly, shaved ice, sweet bean soup. And, rather quietly, noodles. Customers loved the noodles. That was that.
+
+Order the kitsune udon. Kitsune means fox, and the dish is udon topped with a sheet of sweet-simmered fried tofu, which foxes, in Japanese folklore, are supposed to adore. Osaka claims the dish as its own invention. But the reason to come is the broth, the dashi. It was perfected in 1949 by the fifth-generation head and his wife, using kombu seaweed from Hokkaido and dried mackerel and sardine flakes from Kyushu. It's clear, pale and deep.
+
+And here's the thing. On a street that reinvents itself every few years, this family has reinvented itself three times without ever leaving. Teahouse, music shop, noodle house. Same street, same name.
+
+*[beat]*
+
+When you come out, walk along the canal and look for the building called Nakaza Cuidaore. Nakaza was the great theatre that stood there, the one that teahouse was built to serve. Its name survives on the building, even though the stage is long gone.
+
+## TTS-safe version
+
+See `07_dotonbori_imai_honten_tts-safe.txt`. Spoken title: **Doh tonn boree Eemye Hon ten**.
+
+## Respellings used
+
+| Written | Spoken |
+|---|---|
+| Dotonbori | Doh tonn boree |
+| Hokkaido | Hokkye doh |
+| Imai | Eemye |
+| Imai Gakki | Eemye Gahkkee |
+| Imai-cho | Eemye choh |
+| Kitsune | Keetsoonay |
+| Kyushu | Kyoo shoo |
+| Nakaza | Nahkah zah |
+| Nakaza Cuidaore | Nahkah zah Kwee dah oh ray |
+| Nara | Nahrah |
+| dashi | dahshee |
+| kitsune | keetsoonay |
+| kombu | kombo |
+| udon | oodon |
+
+## Primary sources read before writing
+
+- https://d-imai.com/ (official site)
+- https://d-imai.com/history/ (official history)
