@@ -129,6 +129,16 @@ DECLINED_GROUPS = {
 # Keyed by the frozen set of the two titles, never by the N-label: the labels
 # are positions in a sorted list and renumber whenever a batch lands.
 DECLINED_PAIRS = {
+    frozenset({'Itamaraty Palace | Palácio Itamaraty', 'Palácio Itamaraty'}):
+        'owner 2026-11-11: NO — Brasília tour and @ninosbuildings pin stay separate ("1. no")',
+    frozenset({'Metropolitan Cathedral | Catedral Metropolitana Nossa Senhora Aparecida', 'Catedral Metropolitana Nossa Senhora Aparecida'}):
+        'owner 2026-11-11: NO — Brasília tour and @ninosbuildings pin stay separate ("1. no")',
+    frozenset({'Brasília Palace Hotel', 'Brasília Palace Hotel'}):
+        'owner 2026-11-11: NO — Brasília tour and @ninosbuildings pin stay separate ("1. no")',
+    frozenset({'National Congress | Congresso Nacional', 'National Congress of Brazil'}):
+        'owner 2026-11-11: NO — Brasília tour and @ninosbuildings pin stay separate ("1. no")',
+    frozenset({'Central Institute of Sciences | Instituto Central de Ciências', 'Instituto Central de Ciências, University of Brasília'}):
+        'owner 2026-11-11: NO — Brasília tour and @ninosbuildings pin stay separate ("1. no")',
     frozenset({'Sphere by Tim Raue, Fernsehturm', 'Berliner Fernsehturm'}):
         'owner 2026-11-11: kept separate FOR NOW, to revisit later (owner: "N FINE BUT DONT FORGET THEM") — N1 tenant: a restaurant inside the TV tower',
     frozenset({'ILHAM Gallery', 'Ilham Tower'}):
