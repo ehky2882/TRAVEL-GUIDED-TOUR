@@ -5751,6 +5751,16 @@
       "websiteURL": null
     },
     {
+      "id": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "displayName": "Atlas Studio BSB",
+      "platform": "dozent",
+      "handle": "atlas.bsb",
+      "avatarURL": null,
+      "avatarEmoji": "🇧🇷",
+      "bio": "Atlas Studio's Brasília bureau — a capital drawn as a cross on a sheet of paper and built on empty scrubland in four years: Niemeyer's palaces and a cathedral you enter from below, the superquadras where the plan actually lives, the wooden house where it all began, and the bars, markets and lakeside promenades that nobody planned at all.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -156370,6 +156380,1520 @@
         "Power",
         "Civic",
         "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8f030814-2226-5f9b-b88a-41c22df66585",
+      "createdAt": "2026-11-11",
+      "title": "Brasília Palace Hotel",
+      "shortDescription": "This hotel opened in June 1958, almost two years before there was a capital for anyone to visit.",
+      "longDescription": "This hotel opened in June 1958, almost two years before there was a capital for anyone to visit.\n\nOscar Niemeyer drew it, and the engineer Joaquim Cardozo, who calculated almost everything that went up in Brasília in those years, did the structure. It was built for one reason. Juscelino Kubitschek, the president who willed this city into being, needed somewhere to put the people he wanted to impress. He called it his favourite building, and he walked visitors round it himself.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-brasilia-palace-hotel_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-brasilia-palace-hotel_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-brasilia-palace-hotel_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-brasilia-palace-hotel_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-brasilia-palace-hotel_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f00158f1-1d5e-504f-b5a3-3426e7dd151b",
+          "order": 0,
+          "title": "Brasília Palace Hotel",
+          "caption": "On the forecourt by the main entrance, road behind you, facing the long low block lifted on slim columns.",
+          "latitude": -15.7881069,
+          "longitude": -47.8308118,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-brasilia-palace-hotel.mp3",
+          "audioDurationSeconds": 122,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-brasilia-palace-hotel_hero.webp",
+          "transcriptText": "This hotel opened in June 1958, almost two years before there was a capital for anyone to visit.\n\nStand on the forecourt by the main entrance, with the road behind you. In front of you is a long, low building, three floors high, lifted on slim columns, with the glass of the lobby set back underneath. The water you can glimpse beyond it is Lake Paranoá.\n\nOscar Niemeyer drew it, and the engineer Joaquim Cardozo, who calculated almost everything that went up in Brasília in those years, did the structure. It was built for one reason. Juscelino Kubitschek, the president who willed this city into being, needed somewhere to put the people he wanted to impress. He called it his favourite building, and he walked visitors round it himself.\n\nThe guest book shows it worked. Queen Elizabeth the Second stayed here. So did Eisenhower, Indira Gandhi, Che Guevara and Jean-Paul Sartre. And the story the hotel still tells is that Tom Jobim and Vinícius de Moraes first played their song Água de Beber in the bar.\n\nThen the walls. Athos Bulcão, the artist whose tiles you will see all over this city, made a blue and white tile panel for the garden, and a fresco for the function room, one of the very few frescoes he ever painted. Both are protected now by the national heritage service.\n\nAnd here's the thing. On the fifth of August 1978, a coffee maker someone forgot to switch off started a fire on the third floor. Nobody was hurt, but the hotel closed, and for almost thirty years the most glamorous address in Brasília stood as a burnt shell on the edge of the lake.\n\nIt reopened in 2006, and Athos Bulcão, by then in his late eighties, came to see his two panels uncovered again. If you have a few minutes, walk through to the garden side and find that tile wall, then follow the shore road south east. The low white palace about a kilometre along is the Palácio da Alvorada, where the president lives. It opened the same month as this hotel."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 122,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.7881069,
+      "centroidLongitude": -47.8308118,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Venue",
+        "Architecture",
+        "History",
+        "Modernist",
+        "Designed by a Master",
+        "Oscar Niemeyer"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e62674d3-eec1-52c5-8a05-c8164533fd05",
+      "createdAt": "2026-11-11",
+      "title": "Royal Tulip Brasília Alvorada",
+      "shortDescription": "A city built in straight lines, and a hotel that refuses to draw one.",
+      "longDescription": "A city built in straight lines, and a hotel that refuses to draw one.\n\nThe architect was Ruy Ohtake, from São Paulo. The project was launched in 1997, the flats opened in 2000 and the hotel in 2001. I always think Ohtake was arguing, his whole career, that a building could be playful and still be serious. Here he answered Niemeyer's lakeside palaces with something softer: no columns on parade, just one long, continuous sweep.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-royal-tulip-brasilia-alvorada_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-royal-tulip-brasilia-alvorada_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-royal-tulip-brasilia-alvorada_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-royal-tulip-brasilia-alvorada_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-royal-tulip-brasilia-alvorada_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3baed913-cb77-5587-9653-2a8f8629ce27",
+          "order": 0,
+          "title": "Royal Tulip Brasília Alvorada",
+          "caption": "At the entrance, access road behind you, facing the great curve of rooms that wraps round to the lake.",
+          "latitude": -15.7865219,
+          "longitude": -47.8289297,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-royal-tulip-brasilia-alvorada.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-royal-tulip-brasilia-alvorada_hero.webp",
+          "transcriptText": "A city built in straight lines, and a hotel that refuses to draw one.\n\nStand at the entrance, facing the building, with the access road behind you. What you are looking at is a great curve, a semicircle of rooms that bends away from you on both sides and wraps round towards the water. The lake is on the far side.\n\nThe architect was Ruy Ohtake, from São Paulo. The project was launched in 1997, the flats opened in 2000 and the hotel in 2001. I always think Ohtake was arguing, his whole career, that a building could be playful and still be serious. Here he answered Niemeyer's lakeside palaces with something softer: no columns on parade, just one long, continuous sweep.\n\nThere is a family story in this site, too. Ruy's mother was Tomie Ohtake, who left Kyoto for Brazil in the nineteen thirties and became one of the country's great abstract painters. For this hotel she made a sculpture in painted carbon steel, about ten metres tall, dated 2001. So mother and son are both here, in the same commission, which is rather lovely when you think about it.\n\nWhat's worth knowing, standing here, is where you are. The Palácio da Alvorada, the president's official home, is about eight hundred and fifty metres along this shore, and the Brasília Palace Hotel next door opened in 1958 to house the president's guests. Forty years later, the city was still building on that idea: a hotel by the lake, within sight of the head of state.\n\nIf you fancy it, walk round to the lake side in the late afternoon. The curve catches the low sun, and from the water's edge you can look back across the lake to the Plano Piloto, the original plan of the city, laid out along the far horizon."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.7865219,
+      "centroidLongitude": -47.8289297,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Venue",
+        "Waterfront",
+        "Architecture",
+        "Contemporary",
+        "Public Art",
+        "Designed by a Master",
+        "Ruy Ohtake"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "73c02852-c2a2-5d5d-90ff-8cd11d3feccb",
+      "createdAt": "2026-11-11",
+      "title": "Mangai",
+      "shortDescription": "A restaurant from the far north east of Brazil, on the shore of a lake in the middle of the country. That is Brasília in a sentence.",
+      "longDescription": "A restaurant from the far north east of Brazil, on the shore of a lake in the middle of the country. That is Brasília in a sentence.\n\nMangai started in 1990 in Paraíba, in Brazil's north east, as a small shop selling produce from the sertão, the dry backlands. It grew into a chain that now runs from João Pessoa and Natal to Recife and São Paulo, and it calls itself the biggest restaurant of Brazilian cooking in Brazil. This lakeside branch, opened in 2008, was its first in the capital.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-mangai_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-mangai_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-mangai_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-mangai_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "87b68bca-0f9d-552f-90c5-238876e543f7",
+          "order": 0,
+          "title": "Mangai",
+          "caption": "At the lake-side entrance in the Sports Clubs Sector South, the JK Bridge arches down the shore.",
+          "latitude": -15.8174703,
+          "longitude": -47.8369802,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-mangai.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-mangai_hero.webp",
+          "transcriptText": "A restaurant from the far north east of Brazil, on the shore of a lake in the middle of the country. That is Brasília in a sentence.\n\nFind the entrance on the lake side of the Sports Clubs Sector South, and stop before you go in. Ahead of you is a long, low building with the water behind it, and the arches of the JK Bridge a little way down the shore. Inside, past the door, is a buffet that seems to go on for ever.\n\nMangai started in 1990 in Paraíba, in Brazil's north east, as a small shop selling produce from the sertão, the dry backlands. It grew into a chain that now runs from João Pessoa and Natal to Recife and São Paulo, and it calls itself the biggest restaurant of Brazilian cooking in Brazil. This lakeside branch, opened in 2008, was its first in the capital.\n\nThe buffet runs to more than two hundred dishes, priced by weight. Look for carne de sol, beef salted and dried in the sun, often served on a hot griddle with melted queijo de manteiga, a soft butter cheese. Then pão de macaxeira, a bread made with cassava, and cuscuz, which here means a steamed corn cake, not the North African grain. Finish with cocada, a coconut sweet, or ice cream served in half a coconut shell.\n\nWhat's worth knowing is why this food is here at all. Brasília was built in the late nineteen fifties largely by workers from the north east, the candangos, who came by the tens of thousands and stayed. So this is not an exotic import. In a sense, it is the city's home cooking.\n\nCome at lunchtime, take a table on the terrace and let the light move across the water. Afterwards, the lakeside paths lead along the shore towards the JK Bridge, a good walk if the afternoon is not too hot."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.8174703,
+      "centroidLongitude": -47.8369802,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Waterfront",
+        "Immigration"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2d254d67-9500-5abc-99f4-21a97fd2f0c4",
+      "createdAt": "2026-11-11",
+      "title": "Daniel Briand Pâtissier & Chocolatier",
+      "shortDescription": "Daniel Briand's father was a baker in France. At fifteen, Daniel had to choose between school and an apprenticeship in pastry. He chose pastry…",
+      "longDescription": "Daniel Briand's father was a baker in France. At fifteen, Daniel had to choose between school and an apprenticeship in pastry. He chose pastry, and he has called it the turning point of his life.\n\nIt opened in 1995. Briand had married a Brazilian woman he met in Paris, and she wanted a French café in Brazil. He has said he started out working here without a permit, until the butcher next door rented him the shop. It has never moved. Some of his staff have been with him for sixteen or twenty years.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-daniel-briand_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-daniel-briand_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-daniel-briand_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-daniel-briand_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d25a7fc3-b9eb-5a03-9903-848a15ea661f",
+          "order": 0,
+          "title": "Daniel Briand Pâtissier & Chocolatier",
+          "caption": "On the shopping strip of Quadra 104 North, Block A: pavement tables, checked cloths through the window.",
+          "latitude": -15.7769165,
+          "longitude": -47.8827935,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-daniel-briand.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-daniel-briand_hero.webp",
+          "transcriptText": "Daniel Briand's father was a baker in France. At fifteen, Daniel had to choose between school and an apprenticeship in pastry. He chose pastry, and he has called it the turning point of his life.\n\nYou should be on the shopping street of Quadra 104 North, the low row of shops that serves the blocks of flats around you, in front of Block A. Look for small tables on the pavement and, through the window, checked tablecloths, old mirrors and black and white photographs. That is the place.\n\nIt opened in 1995. Briand had married a Brazilian woman he met in Paris, and she wanted a French café in Brazil. He has said he started out working here without a permit, until the butcher next door rented him the shop. It has never moved. Some of his staff have been with him for sixteen or twenty years.\n\nStart with the croissant, because that is the whole reason this place exists. The aim from the first day was a croissant in Brasília as good as one in Paris. At lunch the dish to order is duck leg confit, from the south west of France, with herbed potatoes, slices of apple and orange, and a green salad. And at Christmas there is a new bûche de Noël every year.\n\nAnd here's the thing. Lúcio Costa planned every residential block in this city to have a small commercial strip like this one: a bakery, a pharmacy, a newsagent, all in walking distance of your front door. This café is that idea working as it was meant to: thirty years on the same corner, serving the same neighbours.\n\nWhen you are done, walk into the block of flats behind the shops. Most of the buildings stand on columns, so you can cross underneath them, through the gardens, from one side of the superquadra to the other. It is the best way to understand how people here actually live."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.7769165,
+      "centroidLongitude": -47.8827935,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5741ea9c-0195-5331-82ff-17e79e93e91c",
+      "createdAt": "2026-11-11",
+      "title": "Mané Mercado",
+      "shortDescription": "The roof above this food hall was built for the 2007 Pan American Games, and then it sat largely empty for years.",
+      "longDescription": "The roof above this food hall was built for the 2007 Pan American Games, and then it sat largely empty for years.\n\nThe architects were BLOCO Arquitetos, a Brasília practice run by Daniel Mangabeira, Henrique Coutinho and Matheus Seco. They opened it in 2022. Rather than pulling the old structure down, they kept its steel roof and built the market underneath: about four thousand square metres, put together as a temporary use until a planned sports complex takes the site.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-mane-mercado_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-mane-mercado_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-mane-mercado_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-mane-mercado_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d1cb8ee4-2c7c-5dff-a1b0-1984f9402b2f",
+          "order": 0,
+          "title": "Mané Mercado",
+          "caption": "At the main entrance on the Monumental Axis side, the Mané Garrincha stadium off to one side.",
+          "latitude": -15.7823666,
+          "longitude": -47.9019064,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-mane-mercado.mp3",
+          "audioDurationSeconds": 100,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-mane-mercado_hero.webp",
+          "transcriptText": "The roof above this food hall was built for the 2007 Pan American Games, and then it sat largely empty for years.\n\nStand at the main entrance, on the Monumental Axis side, with the great round bowl of the Mané Garrincha National Stadium off to one side and the Nilson Nelson arena on the other. In front of you, under a wide steel roof, are long communal tables, bars and the counters of more than a dozen kitchens.\n\nThe architects were BLOCO Arquitetos, a Brasília practice run by Daniel Mangabeira, Henrique Coutinho and Matheus Seco. They opened it in 2022. Rather than pulling the old structure down, they kept its steel roof and built the market underneath: about four thousand square metres, put together as a temporary use until a planned sports complex takes the site.\n\nHave a look at how it works. It isn't a canteen where you queue at a counter. Waiters bring dishes from all the different kitchens to your table, so one group can eat from several places at once. There are long shared tables, a wine cellar and a children's play room.\n\nWhat's worth knowing, standing here, is that the most interesting thing about this building is how little was built. Brasília's habit was always the grand new gesture. This is the opposite: an unloved leftover from a sporting event, given a second life for the price of what was already there.\n\nStalls change often, so walk the whole length of the hall before you choose. Then, if you have the energy, the TV Tower is about a kilometre south east along the axis, and its viewing deck shows you the whole plan of the city laid out below."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 100,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.7823666,
+      "centroidLongitude": -47.9019064,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Market",
+        "Food",
+        "Contemporary",
+        "BLOCO Arquitetos"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d8fff3c0-8bd7-56ca-a81a-90adb7347259",
+      "createdAt": "2026-11-11",
+      "title": "Beirute",
+      "shortDescription": "People in Brasília have made a verb out of this bar. You don't go to the Beirute. You beirute.",
+      "longDescription": "People in Brasília have made a verb out of this bar. You don't go to the Beirute. You beirute.\n\nIt opened on the sixteenth of April 1966. Two brothers from Lebanon, Youssef Sarkis Maaraouri and Youssef Sarkis Kaawai, had just arrived in Brasília and bought this corner shop to open an Arab restaurant. In December 1970, two of their waiters, brothers from Ceará called Bartô and Chico, offered to buy them out. It has stayed with that family ever since. It is often called the oldest bar in Brasília still open.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-beirute_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-beirute_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-beirute_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-beirute_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-beirute_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2511b33c-cf84-54d8-adc3-50425a690566",
+          "order": 0,
+          "title": "Beirute",
+          "caption": "On the corner of the 109 South shopping strip, tables spilling out under the trees. The original Beirute.",
+          "latitude": -15.819528,
+          "longitude": -47.9076129,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-beirute.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-beirute_hero.webp",
+          "transcriptText": "People in Brasília have made a verb out of this bar. You don't go to the Beirute. You beirute.\n\nStand on the corner of the shopping street at Quadra 109 South, where the tables spill out under the trees. You will see the waiters before you see the sign: in their jackets, moving fast between plastic chairs. The shops on this strip are low and plain, and the bar takes up its corner as if it has always been there, which, for this city, it nearly has.\n\nIt opened on the sixteenth of April 1966. Two brothers from Lebanon, Youssef Sarkis Maaraouri and Youssef Sarkis Kaawai, had just arrived in Brasília and bought this corner shop to open an Arab restaurant. In December 1970, two of their waiters, brothers from Ceará called Bartô and Chico, offered to buy them out. It has stayed with that family ever since. It is often called the oldest bar in Brasília still open.\n\nOrder a chopp, which is a cold draught beer, and something from the Lebanese side of the menu, the esfihas, small open pies, or the kibe. The house version of the kibe is called a kibeirute.\n\nAnd here's the thing. In a city planned down to the last kerb, nobody planned this. It grew out of a corner shop, and it became the place where every crowd in Brasília ends up at the same tables: students, civil servants, journalists, musicians. Renato Russo, of the band Legião Urbana, had a regular table here by a tree.\n\nA second Beirute opened in 2017 at 107 North, but this is the original. Before you leave, look at the walls inside, which are hung with newspaper stories about the bar itself. Then walk a few minutes west, through the superquadra, and you reach the W3 South, the city's old main shopping avenue."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.819528,
+      "centroidLongitude": -47.9076129,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "26b9009e-f823-5649-9183-9d7efe0e28be",
+      "createdAt": "2026-11-11",
+      "title": "Ernesto Cafés Especiais",
+      "shortDescription": "Brazil grows more coffee than any other country on earth. This café is one of the places in Brasília that set out to serve it at its best.",
+      "longDescription": "Brazil grows more coffee than any other country on earth. This café is one of the places in Brasília that set out to serve it at its best.\n\nIt opened in July 2011. Its founder, Juliana Pedro, had lived for years in São Paulo and spent much of that time in its cafés, and she came back wanting the same thing here. It is now one of the oldest specialty coffee houses in the city, and one of the largest, with a second branch in the north wing.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-ernesto-cafes-especiais_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-ernesto-cafes-especiais_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-ernesto-cafes-especiais_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-ernesto-cafes-especiais_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-ernesto-cafes-especiais_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2a0c340e-f8a8-5fec-843d-1a5b05dafb42",
+          "order": 0,
+          "title": "Ernesto Cafés Especiais",
+          "caption": "On the shopping strip of Quadra 115 South, in front of Block C, at the far south of the Asa Sul.",
+          "latitude": -15.8304728,
+          "longitude": -47.9242143,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-ernesto-cafes-especiais.mp3",
+          "audioDurationSeconds": 99,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-ernesto-cafes-especiais_hero.webp",
+          "transcriptText": "Brazil grows more coffee than any other country on earth. This café is one of the places in Brasília that set out to serve it at its best.\n\nYou should be on the shopping street of Quadra 115 South, in front of Block C. A low row of shops, a few tables outside, and through the door a counter with a bakery case. The blocks of flats around you are the superquadras of the far south of the Asa Sul, the southern wing of the city.\n\nIt opened in July 2011. Its founder, Juliana Pedro, had lived for years in São Paulo and spent much of that time in its cafés, and she came back wanting the same thing here. It is now one of the oldest specialty coffee houses in the city, and one of the largest, with a second branch in the north wing.\n\nHave a look at the menu board before you order. Specialty coffee means the beans are traced to where they were grown, and here that usually means Brazilian farms. Then the thing locals come for is the pão de queijo, the little cheese bread, made here with cheese from the Serra da Canastra, the mountains in Minas Gerais famous for it.\n\nWhat's worth knowing, standing here, is how recent all of this is. This place is not yet fifteen years old and already counts as one of the city's veterans. A café that tells you which region your cup came from is, in the country that grows the most coffee in the world, a fairly new kind of pride.\n\nWhen you have finished, walk through the nearest superquadra rather than round it. The buildings stand on columns, so the ground floor is open, and you can cross the whole block through its gardens. In the late afternoon it is one of the quietest walks in the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 99,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.8304728,
+      "centroidLongitude": -47.9242143,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "309c9c19-c2d0-599f-9cbb-e3fab33a51bd",
+      "createdAt": "2026-11-11",
+      "title": "Choro Club | Clube do Choro de Brasília",
+      "shortDescription": "Choro is the music Rio de Janeiro played before samba existed. And one of its most important homes is here, nearly a thousand kilometres inland…",
+      "longDescription": "Choro is the music Rio de Janeiro played before samba existed. And one of its most important homes is here, nearly a thousand kilometres inland, in a building by Oscar Niemeyer.\n\nThe club began as an informal gathering of musicians. In 1967 and 1968 the great mandolin player Jacob do Bandolim spent time in Brasília and held evenings with local players. Nine years later, on the ninth of September 1977, they met at the home of the flautist Odette Ernest Dias and founded this club. Their first home was a disused cloakroom of the convention centre on this very spot.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-clube-do-choro_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-clube-do-choro_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-clube-do-choro_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-clube-do-choro_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d57dcb5d-640d-5c67-8223-b80670c3011f",
+          "order": 0,
+          "title": "Choro Club | Clube do Choro de Brasília",
+          "caption": "In front of the low curved white building just west of the TV Tower, wrapped round its courtyard.",
+          "latitude": -15.7890579,
+          "longitude": -47.8994194,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-clube-do-choro.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-clube-do-choro_hero.webp",
+          "transcriptText": "Choro is the music Rio de Janeiro played before samba existed. And one of its most important homes is here, nearly a thousand kilometres inland, in a building by Oscar Niemeyer.\n\nStand in front of the low, curved white building on the Cultural Promotion Sector, just west of the TV Tower. It is a semicircle, wrapped round an open courtyard. Inside are classrooms, a concert hall with a café, and four hundred and twenty seats.\n\nThe club began as an informal gathering of musicians. In 1967 and 1968 the great mandolin player Jacob do Bandolim spent time in Brasília and held evenings with local players. Nine years later, on the ninth of September 1977, they met at the home of the flautist Odette Ernest Dias and founded this club. Their first home was a disused cloakroom of the convention centre on this very spot.\n\nBy the late nineteen eighties it was falling apart, with equipment stolen and eviction on the cards. In 1993, a mandolin player, Reco do Bandolim, took it over and saved it. A music school followed, named after the guitarist Raphael Rabello and said to be the first in Brazil devoted to choro. And in November 2011 Niemeyer's new building opened, on the site of the old cloakroom.\n\nAnd here's the thing. Choro is a music of small groups, a flute, a guitar, a mandolin, a tambourine, playing fast and close together, often in someone's front room. Brasília was built by people from all over Brazil, and this is one of the ways they brought home with them. In 2024 choro was recognised as part of Brazil's national cultural heritage, partly at this club's request.\n\nIn 2023 Paul McCartney played a surprise concert here for about five hundred people. Check the programme and book ahead, as the hall is small. If you arrive early, sit in the courtyard and listen to the students practising."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.7890579,
+      "centroidLongitude": -47.8994194,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance",
+        "After Dark",
+        "Designed by a Master",
+        "Oscar Niemeyer"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b846a8da-33c7-50e9-9753-3cee0232617c",
+      "createdAt": "2026-11-11",
+      "title": "Tea House | Casa de Chá",
+      "shortDescription": "At the very centre of Brazilian power there is a café, and most people walk straight over the top of it.",
+      "longDescription": "At the very centre of Brazilian power there is a café, and most people walk straight over the top of it.\n\nOscar Niemeyer designed it in 1965 and 1966, and it was finished in 1967. In his memoirs he called it a restaurant for the square. Because it is half buried, the people inside sit with their eyes at the height of the paving, looking out across the square as if from a hide. It opened in 1975 as a Chinese restaurant, closed in 1979, and spent most of the next forty years shut or hired out for events.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-casa-de-cha_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-casa-de-cha_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-casa-de-cha_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-casa-de-cha_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4fe8e549-a389-502e-ab24-ce04e732ace1",
+          "order": 0,
+          "title": "Tea House | Casa de Chá",
+          "caption": "On the Square of the Three Powers: look down for the low pavilion sunk half into the paving.",
+          "latitude": -15.8006682,
+          "longitude": -47.8608551,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-casa-de-cha.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-casa-de-cha_hero.webp",
+          "transcriptText": "At the very centre of Brazilian power there is a café, and most people walk straight over the top of it.\n\nStand on the Square of the Three Powers with the presidential palace, the Planalto, on one side, the Supreme Court on the other and Congress behind you. Look down rather than up. Set into the paving is a small, low pavilion, sunk half below the level of the square, so its roof barely rises above the stones.\n\nOscar Niemeyer designed it in 1965 and 1966, and it was finished in 1967. In his memoirs he called it a restaurant for the square. Because it is half buried, the people inside sit with their eyes at the height of the paving, looking out across the square as if from a hide. It opened in 1975 as a Chinese restaurant, closed in 1979, and spent most of the next forty years shut or hired out for events.\n\nIn June 2024 it reopened as a café run by Senac, the national training service, and the kitchen is staffed partly by its cookery students. The menu leans on the Cerrado, the savanna that surrounds Brasília. Look for pequi, a strongly scented local fruit, and baru, a nut from the Cerrado tree of that name. There are pão de queijo, pamonha, a sweet corn parcel, and a tea they call céu de Brasília, Brasília sky, which changes colour when you add a drop of lemon.\n\nAnd here's the thing. Niemeyer gave the most formal square in the country a place for nothing more important than a cup of tea, and then hid it, so that it never competes with the palaces around it. More than forty five thousand people came in its first hundred days.\n\nBefore you go in, look just beyond the café to the long white Pantheon of the Fatherland, a few steps away. Then, from your table, look out across the square at ground level. Few seats in Brasília give you that view of it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.8006682,
+      "centroidLongitude": -47.8608551,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Architecture",
+        "Modernist",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Oscar Niemeyer"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "71d1e326-8eee-57d8-ab0f-eee149e50baa",
+      "createdAt": "2026-11-11",
+      "title": "TV Tower Market | Feira da Torre de TV",
+      "shortDescription": "The market at your feet started in the nineteen seventies as a few stalls in the shade of a television mast.",
+      "longDescription": "The market at your feet started in the nineteen seventies as a few stalls in the shade of a television mast.\n\nHave a look at what is actually made here, rather than what is merely sold. There are miniature Congress buildings and key rings, of course. But walk on and you find ceramics, macramé, hammocks, leather and work in seeds and stone. The thing to look for is capim dourado, golden grass, a shiny wild grass from the Cerrado, woven into bracelets, bags and boxes that glint like brass.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-feira-da-torre-de-tv_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-feira-da-torre-de-tv_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-feira-da-torre-de-tv_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-feira-da-torre-de-tv_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-feira-da-torre-de-tv_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f8d28aff-6d5a-58ab-b7cd-ea54d9895fc4",
+          "order": 0,
+          "title": "TV Tower Market | Feira da Torre de TV",
+          "caption": "Among the craft pavilions at the foot of the TV Tower, on the Monumental Axis.",
+          "latitude": -15.7896307,
+          "longitude": -47.8947118,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-feira-da-torre-de-tv.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-feira-da-torre-de-tv_hero.webp",
+          "transcriptText": "The market at your feet started in the nineteen seventies as a few stalls in the shade of a television mast.\n\nStand on the Monumental Axis at the foot of the TV Tower, with its three concrete legs and steel mast rising above you. Around it, spread across three or four pavilions, are the stalls of the Feira da Torre, the tower market. Once they were tents on the grass. Since 2010 they have had a permanent home.\n\nHave a look at what is actually made here, rather than what is merely sold. There are miniature Congress buildings and key rings, of course. But walk on and you find ceramics, macramé, hammocks, leather and work in seeds and stone. The thing to look for is capim dourado, golden grass, a shiny wild grass from the Cerrado, woven into bracelets, bags and boxes that glint like brass.\n\nSome of the people behind these counters have been here for decades. In 2022, one craftsman had been working with stone, seeds and golden grass at this market for thirty five years. One potter, who taught herself, has sold ceramics here since 1984.\n\nWhat's worth knowing, standing here, is that the market is the TV Tower's other half. Lúcio Costa, who planned the city, designed this tower himself, one of very few major buildings here not by Niemeyer. He drew a monument. Nobody drew the market. It simply grew up around the tower's feet, and fifty years on it is as much a part of this place as the mast.\n\nCome early, around nine, before the midday sun, as shade between the pavilions is scarce, and check the opening days before you set off, because even the stallholders give different answers. When you are done, take the lift up the tower. At seventy five metres, the viewing deck shows you the whole cross of the city's plan."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.7896307,
+      "centroidLongitude": -47.8947118,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "Commerce",
+        "Art",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "41ac5e81-ceae-5958-a8c4-4142930ae450",
+      "createdAt": "2026-11-11",
+      "title": "Athos Bulcão Foundation | Fundação Athos Bulcão",
+      "shortDescription": "If you have spent even an hour in Brasília, you have already seen Athos Bulcão's work. You probably just didn't know his name.",
+      "longDescription": "If you have spent even an hour in Brasília, you have already seen Athos Bulcão's work. You probably just didn't know his name.\n\nAthos Bulcão was born in Rio de Janeiro in 1918. As a young man he worked as an assistant to the painter Cândido Portinari on the church at Pampulha, in Belo Horizonte, and in 1958 his friend Oscar Niemeyer invited him to Brasília to help build the city. He stayed for fifty years. The tiles on the Igrejinha, the panels in the Congress, the wall of concrete blocks on the National Theatre: those are all his.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-fundacao-athos-bulcao_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-fundacao-athos-bulcao_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-fundacao-athos-bulcao_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-fundacao-athos-bulcao_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "90422eb9-cdea-50cd-ad84-836127f47e2c",
+          "order": 0,
+          "title": "Athos Bulcão Foundation | Fundação Athos Bulcão",
+          "caption": "On the W3 South at Quadra 510, Block B: the shop with his blue and white patterns in the window.",
+          "latitude": -15.8167407,
+          "longitude": -47.9122121,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-fundacao-athos-bulcao.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-fundacao-athos-bulcao_hero.webp",
+          "transcriptText": "If you have spent even an hour in Brasília, you have already seen Athos Bulcão's work. You probably just didn't know his name.\n\nYou should be on the W3 South, the long avenue of shops along the western edge of the south wing, at Quadra 510, in front of Block B. The foundation's shop is a ground floor unit with his patterns in the window: blue and white tiles, bold geometric prints, simple shapes repeated in a way you will start to recognise everywhere.\n\nAthos Bulcão was born in Rio de Janeiro in 1918. As a young man he worked as an assistant to the painter Cândido Portinari on the church at Pampulha, in Belo Horizonte, and in 1958 his friend Oscar Niemeyer invited him to Brasília to help build the city. He stayed for fifty years. The tiles on the Igrejinha, the panels in the Congress, the wall of concrete blocks on the National Theatre: those are all his.\n\nThe shop sells his patterns on things you can take home: actual tiles, mugs, umbrellas, necklaces, sandals, prints and books. The foundation was set up in 1992 to look after his work, and its collection holds more than seven hundred pieces.\n\nAnd here's the thing. Athos often handed the builders boxes of his tiles with a few rules and no fixed plan, and let them lay the pieces as they chose, so that no two walls came out quite the same. The bricklayer became a kind of co author. Buying a single one of his tiles here is the nearest you can get to taking Brasília home with you.\n\nThe foundation has moved more than once, and talk of a permanent home keeps coming and going, so check the address and hours before you visit. Then go and find the real thing. The Igrejinha, the little church at Quadra 307 South, is wrapped in his tiles, about a kilometre north east of here."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.8167407,
+      "centroidLongitude": -47.9122121,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "70cf47eb-947f-5f56-bfa2-8b3177886871",
+      "createdAt": "2026-11-11",
+      "title": "Metropolitan Cathedral | Catedral Metropolitana Nossa Senhora Aparecida",
+      "shortDescription": "Most of this cathedral is underground. What you can see from here is really just the roof.",
+      "longDescription": "Most of this cathedral is underground. What you can see from here is really just the roof.\n\nThose four are the evangelists, Matthew, Mark, Luke and John, made in 1970 by Alfredo Ceschiatti. The bells in the tower were given by Spanish residents of Brazil and came from Miranda de Ebro, in northern Spain. The oval building to the left of the entrance is the baptistery, its walls lined with tiles by Athos Bulcão.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-catedral-metropolitana_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-catedral-metropolitana_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-catedral-metropolitana_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-catedral-metropolitana_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-catedral-metropolitana_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-catedral-metropolitana_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "919b090a-cfe3-5ea5-96db-a8772d19eacf",
+          "order": 0,
+          "title": "Metropolitan Cathedral | Catedral Metropolitana Nossa Senhora Aparecida",
+          "caption": "On the plaza in front of the cathedral, facing the ramp down to the entrance and its ring of ribs.",
+          "latitude": -15.7980797,
+          "longitude": -47.8755038,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-catedral-metropolitana.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-catedral-metropolitana_hero.webp",
+          "transcriptText": "Most of this cathedral is underground. What you can see from here is really just the roof.\n\nStand on the open plaza in front of the cathedral, on the Esplanada of the Ministries, facing the low ramp that leads down to the entrance. Rising ahead of you is a ring of curved concrete ribs, gathered at the waist and flaring open at the top, with glass between them. To one side stands a tall, thin bell tower. And lining your way to the door, four bronze figures, each about three metres high.\n\nThose four are the evangelists, Matthew, Mark, Luke and John, made in 1970 by Alfredo Ceschiatti. The bells in the tower were given by Spanish residents of Brazil and came from Miranda de Ebro, in northern Spain. The oval building to the left of the entrance is the baptistery, its walls lined with tiles by Athos Bulcão.\n\nNow the structure. There are sixteen ribs, each weighing around ninety tonnes. The first stone was laid in 1958, and the frame was finished by the day the city was inaugurated, the twenty first of April 1960. Then, for years, there was nothing between the ribs at all. The cathedral was consecrated in 1968 with no roof, and only completed in 1970.\n\nAnd here's the thing. Oscar Niemeyer didn't want you to walk in through a grand door. He made you go down, through a short, dark tunnel, so that you come up into the light all at once. It is a very old idea, the dark passage before the revelation, built with a very new material.\n\nOnce you are inside, look up. The stained glass sweeping across the roof is by Marianne Peretti, and three angels by Ceschiatti hang from steel cables above you, the largest more than four metres long. Then come back out, and walk a few minutes west along the Esplanada to the white dome of the National Museum."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.7980797,
+      "centroidLongitude": -47.8755038,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Modernist",
+        "Iconic Landmark",
+        "Free to Visit",
+        "Designed by a Master",
+        "Oscar Niemeyer"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d077575c-1286-5851-8034-8473c6c819b3",
+      "createdAt": "2026-11-11",
+      "title": "Itamaraty Palace | Palácio Itamaraty",
+      "shortDescription": "Its first name was the Palace of the Arches. Once you have seen it, you won't need to ask why.",
+      "longDescription": "Its first name was the Palace of the Arches. Once you have seen it, you won't need to ask why.\n\nThe sculpture is Meteoro, the Meteor, by Bruno Giorgi. The water garden around it, and the gardens inside, are by Roberto Burle Marx. Niemeyer designed the palace, and Joaquim Cardozo did the structure, including, with the architect Milton Ramos, the great spiral staircase that curls up through the lobby.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-palacio-itamaraty_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-palacio-itamaraty_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-palacio-itamaraty_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-palacio-itamaraty_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1bc2f4d1-cf0b-5e0d-b36f-7d87f62e00e3",
+          "order": 0,
+          "title": "Itamaraty Palace | Palácio Itamaraty",
+          "caption": "On the Esplanada pavement opposite the Foreign Ministry, across its water garden and arches.",
+          "latitude": -15.8004205,
+          "longitude": -47.8673072,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-palacio-itamaraty.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-palacio-itamaraty_hero.webp",
+          "transcriptText": "Its first name was the Palace of the Arches. Once you have seen it, you won't need to ask why.\n\nStand on the pavement of the Esplanada, opposite the Foreign Ministry, across its water garden. Ahead is a square glass building set back behind a colonnade of tall, slender concrete arches, all identical, all evenly spaced, rising straight out of a sheet of water. Floating on that water, in front of the entrance, is an abstract white sculpture.\n\nThe sculpture is Meteoro, the Meteor, by Bruno Giorgi. The water garden around it, and the gardens inside, are by Roberto Burle Marx. Niemeyer designed the palace, and Joaquim Cardozo did the structure, including, with the architect Milton Ramos, the great spiral staircase that curls up through the lobby.\n\nThe foundation stone went down in September 1960. The first official reception was in 1967, and the palace was formally opened in 1970. Inside, it is said to have the largest column free span in Latin America, about two thousand eight hundred square metres with no pillars at all. And it is full of art: Portinari, Volpi, Athos Bulcão, and around a hundred and fifty pieces of furniture by the designer Sergio Rodrigues.\n\nWhat's worth knowing, standing here, is what this building is for. This is the Foreign Ministry, the house in which Brazil receives the rest of the world. It is the country's front room, and it was designed to make that first impression in total calm: no grand staircase outside, no flagpoles, just the arches, the water, and their reflection.\n\nYou can see it for yourself. The ministry runs free guided tours, in English among other languages, and they need to be booked online in advance. If you can't get a place, walk east along this side of the Esplanada, under the trees, towards the Congress, and look back at the arches when the light is low and the reflections are at their sharpest."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.8004205,
+      "centroidLongitude": -47.8673072,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Civic",
+        "Power",
+        "Modernist",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Oscar Niemeyer",
+        "Roberto Burle Marx"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "17b56ef3-4d69-50a6-b20f-30edf1eeb557",
+      "createdAt": "2026-11-11",
+      "title": "National Congress | Congresso Nacional",
+      "shortDescription": "Two towers, a bowl and a dome. If you have ever seen a single photograph of Brasília, it was probably this one.",
+      "longDescription": "Two towers, a bowl and a dome. If you have ever seen a single photograph of Brasília, it was probably this one.\n\nThe bigger one, the bowl, open to the sky, is the Chamber of Deputies. The smaller dome, closed and turned down, is the Senate. People love to read meanings into that: one house open to every idea, the other inward looking and careful. Niemeyer, rather wonderfully, said the arrangement was purely aesthetic.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-congresso-nacional_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-congresso-nacional_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-congresso-nacional_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "298f9be4-90a9-5c64-9fc0-81c34b608a38",
+          "order": 0,
+          "title": "National Congress | Congresso Nacional",
+          "caption": "At the Congress platform, the bowl and the dome either side of the two towers.",
+          "latitude": -15.7995003,
+          "longitude": -47.8642273,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-congresso-nacional.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-congresso-nacional_hero.webp",
+          "transcriptText": "Two towers, a bowl and a dome. If you have ever seen a single photograph of Brasília, it was probably this one.\n\nStand on the great lawn of the Esplanada of the Ministries, facing east towards the Congress at its far end. In front of you is a long, flat white platform. Rising from the middle, two thin towers, joined in the middle, about a hundred metres high. On the platform, one shape opens upwards like a bowl, and the other is turned upside down, like a dome.\n\nThe bigger one, the bowl, open to the sky, is the Chamber of Deputies. The smaller dome, closed and turned down, is the Senate. People love to read meanings into that: one house open to every idea, the other inward looking and careful. Niemeyer, rather wonderfully, said the arrangement was purely aesthetic.\n\nIt was inaugurated with the city, on the twenty first of April 1960, with Joaquim Cardozo as engineer. The towers hold offices, twenty eight floors each. Underneath the platform is a whole hidden building, of corridors, halls and committee rooms, so the shapes you see are really just its lid. Inside, the Senate's ceiling is covered with a hundred and thirty five thousand small metal plates by Athos Bulcão.\n\nAnd here's the thing. You aren't looking at a monument on a hill. The top of that platform is a terrace, reached by a ramp, and it is usually closed now for security. But stand here and you can still see the idea: a parliament that sits low and flat, almost level with the people walking up to it, with only its offices allowed to rise.\n\nBoth houses run free guided tours inside, and they are worth checking the day before. Afterwards, walk round the side of the building, past the reflecting pools, to the Square of the Three Powers behind it, where the presidential palace and the Supreme Court face each other across the stones."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.7995003,
+      "centroidLongitude": -47.8642273,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Civic",
+        "Power",
+        "Modernist",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Oscar Niemeyer"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ad3254a7-d52c-5eb5-a302-ec9f3a858f23",
+      "createdAt": "2026-11-11",
+      "title": "Dom Bosco Sanctuary | Santuário Dom Bosco",
+      "shortDescription": "From the street this looks like a plain concrete box. Go inside and it turns out to be made almost entirely of blue.",
+      "longDescription": "From the street this looks like a plain concrete box. Go inside and it turns out to be made almost entirely of blue.\n\nEighty columns, each sixteen metres high, hold up the roof, and every gap between them is filled with stained glass in twelve shades of blue, by the Belgian artist Hubert Van Doorne. The architect was Carlos Alberto Naves, and the pointed openings are his nod to Gothic cathedrals. Building began in 1963 and finished in 1970.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-santuario-dom-bosco_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-santuario-dom-bosco_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-santuario-dom-bosco_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-santuario-dom-bosco_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bedd82e9-f27b-5dce-804d-a03d0c3983a0",
+          "order": 0,
+          "title": "Dom Bosco Sanctuary | Santuário Dom Bosco",
+          "caption": "On the W3 South at Quadra 702, before the square building framed by tall pointed concrete arches.",
+          "latitude": -15.8003829,
+          "longitude": -47.8947201,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-santuario-dom-bosco.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-santuario-dom-bosco_hero.webp",
+          "transcriptText": "From the street this looks like a plain concrete box. Go inside and it turns out to be made almost entirely of blue.\n\nYou should be on the pavement of the W3 South, at Quadra 702, looking at a square building framed by a grid of tall, pointed concrete arches. Between them, from outside, the glass gives very little away. Find the door and go in.\n\nEighty columns, each sixteen metres high, hold up the roof, and every gap between them is filled with stained glass in twelve shades of blue, by the Belgian artist Hubert Van Doorne. The architect was Carlos Alberto Naves, and the pointed openings are his nod to Gothic cathedrals. Building began in 1963 and finished in 1970.\n\nAbove the middle of the nave hangs a chandelier, three and a half metres tall, weighing two tonnes, made from seven thousand four hundred pieces of Murano glass. It is only lit for ceremonies. And behind the altar, the crucifix was carved by Gotfredo Tralli from a single piece of cedar.\n\nNow, the reason this church is dedicated to Dom Bosco. In 1883 the Italian priest John Bosco, who never set foot in South America, described a dream of a journey across the continent, and of a great civilisation that would rise where a lake formed between the fifteenth and twentieth parallels. Brasília sits just below the fifteenth, beside the lake it made for itself. So he became the city's patron saint, and this is his sanctuary.\n\nThe light changes completely through the day, but late afternoon is when it turns deepest blue, so come back then if you can. The glass has never been restored, and about a fifth of it is now damaged, which is a good reason to see it while you can. For the other end of the story, the Ermida Dom Bosco, a small chapel to the saint, stands across the lake on the far shore."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.8003829,
+      "centroidLongitude": -47.8947201,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Art",
+        "Modernist",
+        "Iconic Landmark",
+        "Free to Visit",
+        "Carlos Alberto Naves"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8e7e7f88-5913-5182-8474-cd40f27d8cb4",
+      "createdAt": "2026-11-11",
+      "title": "Little Church of Our Lady of Fátima | Igrejinha Nossa Senhora de Fátima",
+      "shortDescription": "The first lady of Brazil made a promise. If her daughter recovered from her illness, she would build a church. The daughter recovered, and this…",
+      "longDescription": "The first lady of Brazil made a promise. If her daughter recovered from her illness, she would build a church. The daughter recovered, and this is the church.\n\nThe first lady was Sarah Kubitschek, the president's wife, and the daughter was Márcia. Oscar Niemeyer designed it and Joaquim Cardozo engineered it. The first stone went down in October 1957, and it was consecrated in June 1958, the first church of brick and concrete in the new capital. The story usually told is that it took a hundred days.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-igrejinha_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-igrejinha_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-igrejinha_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-igrejinha_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d9fdb79d-1271-50bd-b568-57fa628cb03d",
+          "order": 0,
+          "title": "Little Church of Our Lady of Fátima | Igrejinha Nossa Senhora de Fátima",
+          "caption": "On the grass beside the little church at 307 South, facing its open front and tilted roof.",
+          "latitude": -15.8138855,
+          "longitude": -47.9036727,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-igrejinha.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-igrejinha_hero.webp",
+          "transcriptText": "The first lady of Brazil made a promise. If her daughter recovered from her illness, she would build a church. The daughter recovered, and this is the church.\n\nStand on the grass beside the little church at Quadra 307 South, with the road behind you, facing its open front. It is tiny: one curved wall, open at the front, and over it a triangular roof slab that tilts upwards, held on three slim supports. Brasilians say it looks like a nun's hat, the starched, winged kind, and once you have heard that you can't unsee it.\n\nThe first lady was Sarah Kubitschek, the president's wife, and the daughter was Márcia. Oscar Niemeyer designed it and Joaquim Cardozo engineered it. The first stone went down in October 1957, and it was consecrated in June 1958, the first church of brick and concrete in the new capital. The story usually told is that it took a hundred days.\n\nNow, walk round to the outside of that curved wall. It is covered in Athos Bulcão's tiles, blue and white, with a star and a dove repeated across them: the Star of Bethlehem and the dove of the Holy Spirit. It is one of the rare panels in his work that shows actual things rather than abstract shapes.\n\nAnd here's the thing. Inside there were once frescoes by the painter Alfredo Volpi, of angels and flags. In the nineteen sixties, during a renovation, they were simply painted over in blue. In 2009 Francisco Galeno, who had studied with Volpi, was asked to paint the walls afresh, and he filled them with kites, flags and cotton reels, the things of everyday Brazilian life.\n\nThis church was planned as the neighbourhood chapel for the superquadras around it. Walk into the superquadra next door, 308 South, the model superquadra, and you can see the whole idea at once: flats on columns, gardens by Burle Marx, a school, and this church, all within a few minutes' walk."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.8138855,
+      "centroidLongitude": -47.9036727,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Public Art",
+        "Modernist",
+        "Free to Visit",
+        "Designed by a Master",
+        "Oscar Niemeyer"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "425e1cf4-b0bc-51bf-a4e9-902eca932bf5",
+      "createdAt": "2026-11-11",
+      "title": "JK Memorial | Memorial JK",
+      "shortDescription": "The man who built this city is buried at the end of its main avenue, standing on a pillar, waving.",
+      "longDescription": "The man who built this city is buried at the end of its main avenue, standing on a pillar, waving.\n\nThe figure is Juscelino Kubitschek, known simply as JK, president from 1956 to 1961, and the man who decided Brazil's capital would move here, into what was then empty scrubland. The statue, four and a half metres tall, is by Honório Peçanha, and it stands on a pedestal twenty eight metres high.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-memorial-jk_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-memorial-jk_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-memorial-jk_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-memorial-jk_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-memorial-jk_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9b6be5a3-5a97-50c0-b82f-2fb7200bdd38",
+          "order": 0,
+          "title": "JK Memorial | Memorial JK",
+          "caption": "At the foot of the memorial at the west end of the Monumental Axis, looking up at JK on his pillar.",
+          "latitude": -15.7839664,
+          "longitude": -47.9133685,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-memorial-jk.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-memorial-jk_hero.webp",
+          "transcriptText": "The man who built this city is buried at the end of its main avenue, standing on a pillar, waving.\n\nStand at the foot of the Memorial at the western end of the Monumental Axis, looking up. On top of a tall, plain column is a bronze figure, arm raised, under a curved white shell that wraps over him like a hood. Below that, a low white building with very few windows.\n\nThe figure is Juscelino Kubitschek, known simply as JK, president from 1956 to 1961, and the man who decided Brazil's capital would move here, into what was then empty scrubland. The statue, four and a half metres tall, is by Honório Peçanha, and it stands on a pedestal twenty eight metres high.\n\nAfter JK died in a car crash in 1976, his widow, Sarah, asked Oscar Niemeyer to design a memorial. It opened on the twelfth of September 1981, which would have been JK's seventy ninth birthday. And that shell over the statue caused a row. To the military government of the day, it looked rather like a hammer and sickle. Niemeyer, a lifelong communist, said it was nothing of the sort, and simplified the design, but it was still argued over before the statue was allowed up.\n\nInside, the mood changes. Upstairs is JK's tomb, in a dim room under a stained glass window by Marianne Peretti, where the colour of the light shifts with the sun. Around it, his library, his presidential sash, his medals, family photographs, and his last car, a Ford Galaxie.\n\nWhen you come back out, turn and look east. The whole Monumental Axis runs away from you in a straight line, past the TV Tower and the bus station to the Congress, exactly as Lúcio Costa first sketched it. JK was placed here so he could look down it for ever."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.7839664,
+      "centroidLongitude": -47.9133685,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "Museum",
+        "Remembrance",
+        "Power",
+        "Modernist",
+        "Designed by a Master",
+        "Oscar Niemeyer"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ac8c2ee8-68d8-5d15-a575-9b8333843bb5",
+      "createdAt": "2026-11-11",
+      "title": "National Museum | Museu Nacional Honestino Guimarães",
+      "shortDescription": "This museum opened on the fifteenth of December 2006. That was Oscar Niemeyer's ninety ninth birthday.",
+      "longDescription": "This museum opened on the fifteenth of December 2006. That was Oscar Niemeyer's ninety ninth birthday.\n\nThe dome is one half of a pair. Opposite it, the long, flat block is the National Library, which opened on the same day. Lúcio Costa, who planned the city, conceived a cultural centre for this end of the Esplanada. It took almost fifty years to arrive, and Niemeyer, then in his late nineties, lived to see it finished.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-museu-nacional_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-museu-nacional_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-museu-nacional_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "38b31060-e8ba-5c2a-ad18-b29bc01cb277",
+          "order": 0,
+          "title": "National Museum | Museu Nacional Honestino Guimarães",
+          "caption": "On the paving of the Cultural Complex of the Republic, facing the white dome and its long ramp.",
+          "latitude": -15.7970635,
+          "longitude": -47.8781638,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-museu-nacional.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-museu-nacional_hero.webp",
+          "transcriptText": "This museum opened on the fifteenth of December 2006. That was Oscar Niemeyer's ninety ninth birthday.\n\nStand on the open paving of the Cultural Complex of the Republic, at the western end of the Esplanada, between the bus station and the cathedral. Ahead of you is a perfect white dome, about twenty six metres high, sitting directly on the ground, with no base and no visible door. And peeling off its side, a long ramp that climbs up and into it.\n\nThe dome is one half of a pair. Opposite it, the long, flat block is the National Library, which opened on the same day. Lúcio Costa, who planned the city, conceived a cultural centre for this end of the Esplanada. It took almost fifty years to arrive, and Niemeyer, then in his late nineties, lived to see it finished.\n\nHave a look at that outside ramp. It is fifty two metres long and leads straight into the dome at first floor level. Inside there is a second ramp, curving from the main hall up to the mezzanine and reaching out almost twenty metres without a single support underneath it. The engineer who made that work was José Carlos Sussekind.\n\nAnd here's the thing. The museum carries the name of Honestino Guimarães, a geology student at the University of Brasília who became a leader of the student movement under the military dictatorship. He was arrested several times, and in October 1973 he disappeared. Naming a white dome on the Esplanada after him puts his memory a few hundred metres from the ministries of the government that took him.\n\nThe exhibitions change, so check what is on. Either way, walk up the outside ramp, then turn round at the top. From there you look straight down the Esplanada, past the cathedral, to the twin towers of the Congress."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.7970635,
+      "centroidLongitude": -47.8781638,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Remembrance",
+        "Modernist",
+        "Designed by a Master",
+        "Oscar Niemeyer"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a47bdbdc-7444-5884-ae78-883a0a137fe0",
+      "createdAt": "2026-11-11",
+      "title": "National Theatre | Teatro Nacional Cláudio Santoro",
+      "shortDescription": "The side of this building has a nickname. People call it O Sol faz a festa, the sun throws a party.",
+      "longDescription": "The side of this building has a nickname. People call it O Sol faz a festa, the sun throws a party.\n\nThat wall is by Athos Bulcão, from 1966. It is about a hundred and twenty five metres long and twenty seven high, around seventeen hundred square metres of relief, and it is often described as the largest work of art built into a building anywhere in Brazil. The trick is the sun. As it moves, the blocks throw shadows of different lengths, so the wall looks different every hour of the day.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-teatro-nacional_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-teatro-nacional_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-teatro-nacional_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-teatro-nacional_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "15af4bef-2d68-5d94-9a88-0db3b39d2d88",
+          "order": 0,
+          "title": "National Theatre | Teatro Nacional Cláudio Santoro",
+          "caption": "Beside the theatre in the Cultural Sector North, facing a sloping side covered in Athos's blocks.",
+          "latitude": -15.791896,
+          "longitude": -47.8803283,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-teatro-nacional.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-teatro-nacional_hero.webp",
+          "transcriptText": "The side of this building has a nickname. People call it O Sol faz a festa, the sun throws a party.\n\nStand on the lawn beside the theatre in the Cultural Sector North, just across the axis from the bus station, facing one of its long sloping sides. It is a pyramid with the top sliced off, a shape that recalls the temples of pre Columbian America. And the wall in front of you is covered in raised concrete blocks, in five different shapes, set in a pattern that seems at first to be random.\n\nThat wall is by Athos Bulcão, from 1966. It is about a hundred and twenty five metres long and twenty seven high, around seventeen hundred square metres of relief, and it is often described as the largest work of art built into a building anywhere in Brazil. The trick is the sun. As it moves, the blocks throw shadows of different lengths, so the wall looks different every hour of the day.\n\nOscar Niemeyer designed the building. Work began in 1960 and then stalled for years, and the full theatre only opened in 1981. Its main hall, the Villa Lobos, has around fourteen hundred seats. Inside the main foyer is a garden by Burle Marx, and works by Ceschiatti, Peretti and Athos again. It took the name of Cláudio Santoro, the composer and conductor who founded its orchestra, after his death in 1989.\n\nAnd here's the thing. In 2014 the whole theatre was shut on safety grounds, and it stayed closed for about a decade. In December 2024 part of it reopened, starting with the smaller Martins Pena hall. The rest has been coming back slowly. A national theatre with its biggest stage dark for ten years is not the story anyone wanted. But the wall outside never closed.\n\nCheck the programme to see which halls are open. Then come back near sunset, and walk the full length of this side. The shadows on Athos's blocks are at their longest, and you will see why it got its name."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.791896,
+      "centroidLongitude": -47.8803283,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance",
+        "Public Art",
+        "Modernist",
+        "Designed by a Master",
+        "Oscar Niemeyer"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f162aa83-4f71-5f2f-81ca-8609b83f3ba1",
+      "createdAt": "2026-11-11",
+      "title": "Central Institute of Sciences | Instituto Central de Ciências",
+      "shortDescription": "Students here call this building the Minhocão, the giant earthworm. That will make sense in about ten seconds.",
+      "longDescription": "Students here call this building the Minhocão, the giant earthworm. That will make sense in about ten seconds.\n\nOscar Niemeyer conceived it in 1963, and the work was developed with the university's own planning office, where the architect João Filgueiras Lima, known to everyone as Lelé, worked out how to build it. Building began in June 1963. It was finished in 1971, but the departments did not wait: psychology and biology moved in the moment the structure was standing.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-instituto-central-de-ciencias_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-instituto-central-de-ciencias_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-instituto-central-de-ciencias_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-instituto-central-de-ciencias_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2407508c-cbfc-50bb-bd0f-4916f2b648cb",
+          "order": 0,
+          "title": "Central Institute of Sciences | Instituto Central de Ciências",
+          "caption": "In the central garden of the Minhocão at the University of Brasília, looking along its two long wings.",
+          "latitude": -15.7631234,
+          "longitude": -47.8692311,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-instituto-central-de-ciencias.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 80,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-instituto-central-de-ciencias_hero.webp",
+          "transcriptText": "Students here call this building the Minhocão, the giant earthworm. That will make sense in about ten seconds.\n\nStand in the garden in the middle of the building, at the University of Brasília, Darcy Ribeiro campus, and look along it. There are two long, parallel wings of exposed concrete, low and dead straight, with a strip of garden running between them. They keep going, and going. The whole thing is roughly seven hundred metres long.\n\nOscar Niemeyer conceived it in 1963, and the work was developed with the university's own planning office, where the architect João Filgueiras Lima, known to everyone as Lelé, worked out how to build it. Building began in June 1963. It was finished in 1971, but the departments did not wait: psychology and biology moved in the moment the structure was standing.\n\nHave a look at the concrete beams and frames. Much of it was made as identical prefabricated pieces and put together, rather than poured in place. That was very new in Brazil in the nineteen sixties, and it is the start of the story that made Lelé one of the country's great engineering architects. He would go on to build whole hospitals this way.\n\nAnd here's the thing. A university in a planned capital could have been a cluster of grand pavilions. Instead the core of it is one enormous, repeating, deliberately ordinary building, a factory for teaching, with gardens down the middle and room to grow. Today it houses seven institutes and three faculties.\n\nWalk at least part of its length along the central garden. It is shaded, busy with students, and, I think, the best place in Brasília to feel what all that concrete was for. If you have more time, Lelé's hospital at Lago Norte, one of the buildings that grew out of this, is a short drive away on the lake shore."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.7631234,
+      "centroidLongitude": -47.8692311,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Engineering",
+        "Brutalist",
+        "Green Escape",
+        "Designed by a Master",
+        "Oscar Niemeyer",
+        "João Filgueiras Lima"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "85cad224-9b9b-5e22-b6b7-240b64cd99b8",
+      "createdAt": "2026-11-11",
+      "title": "Hospital SARAH Lago Norte",
+      "shortDescription": "This is a working hospital, so you are a guest here, and you will be looking from the outside. It is still one of the most important buildings…",
+      "longDescription": "This is a working hospital, so you are a guest here, and you will be looking from the outside. It is still one of the most important buildings in Brasília.\n\nThis is the International Centre for Neurosciences and Rehabilitation of the Sarah network, which opened in December 2003. The architect was João Filgueiras Lima, known as Lelé, who designed hospital after hospital for the Sarah network across Brazil.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-hospital-sarah-lago-norte_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-hospital-sarah-lago-norte_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-hospital-sarah-lago-norte_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-hospital-sarah-lago-norte_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "82b1494a-0ecf-56df-ade6-6dee915c797b",
+          "order": 0,
+          "title": "Hospital SARAH Lago Norte",
+          "caption": "Outside the working hospital by the lake, looking at the waves of its roofs. Please don't go in.",
+          "latitude": -15.7527096,
+          "longitude": -47.8293205,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-hospital-sarah-lago-norte.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 80,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-hospital-sarah-lago-norte_hero.webp",
+          "transcriptText": "This is a working hospital, so you are a guest here, and you will be looking from the outside. It is still one of the most important buildings in Brasília.\n\nStand by the entrance road, looking towards the lake. In front of you, the buildings are long and low, spread out among the trees and lawns that run right down to the water. Look at the roofs. They rise and fall in a series of curved waves, with openings along each crest.\n\nThis is the International Centre for Neurosciences and Rehabilitation of the Sarah network, which opened in December 2003. The architect was João Filgueiras Lima, known as Lelé, who designed hospital after hospital for the Sarah network across Brazil.\n\nThose wavy roofs are the trick. Wind comes in off the lake, flows through the big rooms and escapes out of the vents along the curves. The openings, which Lelé called sheds, also let daylight fall from above. So the building is largely cooled and lit by the site it sits on, rather than by machines.\n\nAnd here's the thing. Lelé believed that a hospital could help to heal, not just house the sick. Everything is horizontal, so patients in wheelchairs can move about freely, inside and out. The hospital's own description talks about teamwork and wide open spaces. And the lake is not just a view: its calm water is used for sport as part of rehabilitation.\n\nPlease don't go inside unless you have business there. From the road, take a moment to look at how the buildings sit low under the trees, then head back towards the city. On the near shore of the lake is the University of Brasília, where Lelé began, on the long concrete building known as the Minhocão."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.7527096,
+      "centroidLongitude": -47.8293205,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Engineering",
+        "Waterfront",
+        "Contemporary",
+        "Designed by a Master",
+        "João Filgueiras Lima"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1a470802-995c-5ed3-8a97-112025180458",
+      "createdAt": "2026-11-11",
+      "title": "Banco do Brasil Cultural Centre | Centro Cultural Banco do Brasil",
+      "shortDescription": "In late 2022, the government that was about to take power in Brazil chose to plan its first days from an arts centre. This one.",
+      "longDescription": "In late 2022, the government that was about to take power in Brazil chose to plan its first days from an arts centre. This one.\n\nOscar Niemeyer designed it in the late nineteen eighties for the Banco do Brasil, the state bank, as offices for its staff and training. It carries the name of Tancredo Neves, the man elected president in 1985 who died before he could take office. In October 2000 the bank turned it into a cultural centre, with galleries, a theatre and a cinema, across more than six thousand square metres. Entry is free.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-ccbb-brasilia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-ccbb-brasilia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-ccbb-brasilia_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-ccbb-brasilia_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-ccbb-brasilia_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "94500247-6a03-5e76-9a76-c5cdfd08bea0",
+          "order": 0,
+          "title": "Banco do Brasil Cultural Centre | Centro Cultural Banco do Brasil",
+          "caption": "In the lake-side gardens, the long bare concrete building behind you and the JK Bridge across the water.",
+          "latitude": -15.8133275,
+          "longitude": -47.8383402,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-ccbb-brasilia.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-ccbb-brasilia_hero.webp",
+          "transcriptText": "In late 2022, the government that was about to take power in Brazil chose to plan its first days from an arts centre. This one.\n\nStand in the gardens by the lake side, with the main building behind you and Lake Paranoá in front. The building is long and low, with walls of bare grey concrete and big openings cut into them, unusually for Brasília, where Niemeyer's buildings are nearly always painted white. Ahead, across the water, are the three steel arches of the JK Bridge.\n\nOscar Niemeyer designed it in the late nineteen eighties for the Banco do Brasil, the state bank, as offices for its staff and training. It carries the name of Tancredo Neves, the man elected president in 1985 who died before he could take office. In October 2000 the bank turned it into a cultural centre, with galleries, a theatre and a cinema, across more than six thousand square metres. Entry is free.\n\nHave a look, when you go in, at the reception. The wall there is a large relief of white shapes on blue by Marianne Peretti, the only woman in Niemeyer's team, better known for the stained glass of the cathedral. The bank's own collection, the Museu BB, has works by Di Cavalcanti, Tomie Ohtake, Burle Marx and Athos Bulcão.\n\nWhat's worth knowing, standing here, is that the gardens are half the point. They are planted with trees of the Cerrado, the savanna of central Brazil, and they are used for concerts, festivals and open air cinema, all looking out over the lake. In a city of formal lawns, this is one of the few places where people simply settle down on the grass for an evening.\n\nCheck the programme before you come, as the exhibitions and concerts change. Then stay for the sunset, when the light goes down behind the city, and wait for the arches of the bridge to be lit up across the water."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.8133275,
+      "centroidLongitude": -47.8383402,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Waterfront",
+        "Green Escape",
+        "Free to Visit",
+        "Designed by a Master",
+        "Oscar Niemeyer"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f57808ef-e7c0-53a2-a1f4-9c0ed4e205d2",
+      "createdAt": "2026-11-11",
+      "title": "Catetinho",
+      "shortDescription": "Before there was a single concrete wall in Brasília, there was this: a wooden house, built in ten days.",
+      "longDescription": "Before there was a single concrete wall in Brasília, there was this: a wooden house, built in ten days.\n\nIt was built between the twenty second and the thirty first of October 1956, and on the tenth of November President Juscelino Kubitschek came to open it. Oscar Niemeyer designed it, and the wood was cut on site, which is why it was first called the Palace of Planks. It was paid for by about ten of JK's friends, partly with a bank loan raised in Belo Horizonte.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-catetinho_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-catetinho_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-catetinho_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-catetinho_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-catetinho_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ec323807-4e96-56e0-ac1a-37a3b243d5a2",
+          "order": 0,
+          "title": "Catetinho",
+          "caption": "In the clearing in front of the long timber house on stilts, in Cerrado woodland south of the city.",
+          "latitude": -15.9473986,
+          "longitude": -47.9884076,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-catetinho.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-catetinho_hero.webp",
+          "transcriptText": "Before there was a single concrete wall in Brasília, there was this: a wooden house, built in ten days.\n\nStand in the clearing in front of the house, under the trees, with the path behind you. It is a long, simple building of timber planks, raised up off the ground on stilts. It sits in a patch of Cerrado woodland, close to a spring, south of the city.\n\nIt was built between the twenty second and the thirty first of October 1956, and on the tenth of November President Juscelino Kubitschek came to open it. Oscar Niemeyer designed it, and the wood was cut on site, which is why it was first called the Palace of Planks. It was paid for by about ten of JK's friends, partly with a bank loan raised in Belo Horizonte.\n\nThe name came from the guitarist Dilermando Reis. In Rio, the president lived at the Catete Palace, so this little wooden version became the Catetinho, the little Catete. JK flew in from Rio almost every day and sometimes stayed the night. Inside you can still see his personal things, and Dilermando's guitar.\n\nAnd here's the thing. Within three years, JK had it declared a national historic monument, in 1959, before the city it was built to oversee had even been opened. Somebody understood very early that the rough wooden start of all this was worth keeping as much as the marble at the end.\n\nIt has been a museum since 1970, and it is free. Open from Tuesday to Sunday, so don't come on a Monday. Before you leave, walk a little way into the woodland round the house, towards the spring. This patch of Cerrado is protected, and it gives you a fair idea of what the whole plateau looked like before the city arrived."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.9473986,
+      "centroidLongitude": -47.9884076,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Power",
+        "Green Escape",
+        "Free to Visit",
+        "Hidden Gem",
+        "Oscar Niemeyer"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c05b2fb2-84a2-5295-98b0-d4f692de965c",
+      "createdAt": "2026-11-11",
+      "title": "Superquadra 308 South | SQS 308 Sul",
+      "shortDescription": "The word superquadra was coined for this city in 1956. This is where you see what it meant.",
+      "longDescription": "The word superquadra was coined for this city in 1956. This is where you see what it meant.\n\nIt is known as the model quadra, because it followed Lúcio Costa's plan for the city more closely than any other. Costa wanted each block of flats set in a park, and four blocks grouped together into a neighbourhood unit sharing a kindergarten, schools, a church, a cinema and a row of shops. Here, nearly all of it was built. The city's first primary school opened in 1959, the Igrejinha is on the corner, and the Cine Brasília is a short walk away.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-sqs-308_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-sqs-308_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-sqs-308_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-sqs-308_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "92798f90-99a8-5f53-b185-a826bb0448ee",
+          "order": 0,
+          "title": "Superquadra 308 South | SQS 308 Sul",
+          "caption": "In the garden at the heart of 308 South, between the six-storey blocks raised on columns.",
+          "latitude": -15.8132808,
+          "longitude": -47.9055922,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-sqs-308.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 80,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-sqs-308_hero.webp",
+          "transcriptText": "The word superquadra was coined for this city in 1956. This is where you see what it meant.\n\nStand in the garden in the middle of Superquadra 308 South, between the blocks of flats. All around you are long, six storey residential buildings, lifted on columns so that the ground floor is open air. You can see straight under them into the next garden. There are no fences, no front gardens and no through traffic.\n\nIt is known as the model quadra, because it followed Lúcio Costa's plan for the city more closely than any other. Costa wanted each block of flats set in a park, and four blocks grouped together into a neighbourhood unit sharing a kindergarten, schools, a church, a cinema and a row of shops. Here, nearly all of it was built. The city's first primary school opened in 1959, the Igrejinha is on the corner, and the Cine Brasília is a short walk away.\n\nNow, a couple of myths. People will tell you the buildings are by Niemeyer. They are not; they are by Sérgio Rocha and Marcelo Campelo, and the tiles on the blocks are Campelo's own. And the tiles that everyone assumes are by Athos Bulcão are not on the blocks at all. His are on the kindergarten, designed by Stellio Seabra.\n\nWhat is by a famous name is the landscape. Roberto Burle Marx did the gardens and squares, including a little plaza of benches and curving low walls known as the serpentário, the snake house, which has never held a snake. Find Block F and you will see one of his water gardens, still full of carp.\n\nThis is a place where people live, so keep your voice down and stay on the paths. If you walk out to the north east corner, you reach the Igrejinha, the nun's hat church, and from there the little shopping street where the neighbourhood buys its bread, exactly as it was planned."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.8132808,
+      "centroidLongitude": -47.9055922,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "District",
+        "Architecture",
+        "Modernist",
+        "Green Escape",
+        "Designed by a Master",
+        "Roberto Burle Marx",
+        "Sérgio Rocha",
+        "Marcelo Campelo"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "29e6193e-a17b-5ccd-928b-689f589ac62a",
+      "createdAt": "2026-11-11",
+      "title": "TV Tower | Torre de TV",
+      "shortDescription": "One of the few great landmarks in Brasília that Oscar Niemeyer didn't design. That honour went to the man who planned the city.",
+      "longDescription": "One of the few great landmarks in Brasília that Oscar Niemeyer didn't design. That honour went to the man who planned the city.\n\nLúcio Costa drew it, and he said he had the Eiffel Tower in mind. Altogether it is two hundred and twenty four metres tall, the steel mast alone a hundred and ninety two. The triangular block above the legs holds a small museum of Brazilian gemstones. And the viewing deck, which opened in the mid nineteen sixties, is seventy five metres up, reached by lift.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-torre-de-tv_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-torre-de-tv_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-torre-de-tv_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-torre-de-tv_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7f344fc2-0035-5999-9515-bfb4f4bc963a",
+          "order": 0,
+          "title": "TV Tower | Torre de TV",
+          "caption": "On the Monumental Axis between the tower's three concrete legs, the craft market all round you.",
+          "latitude": -15.7904197,
+          "longitude": -47.8928939,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-torre-de-tv.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-torre-de-tv_hero.webp",
+          "transcriptText": "One of the few great landmarks in Brasília that Oscar Niemeyer didn't design. That honour went to the man who planned the city.\n\nStand at the foot of the tower, on the Monumental Axis, between its three concrete legs. Above you a triangular block sits on the legs, and above that the steel mast climbs away into the sky. All round you is the craft market, and close by, the great round basin of the fountain.\n\nLúcio Costa drew it, and he said he had the Eiffel Tower in mind. Altogether it is two hundred and twenty four metres tall, the steel mast alone a hundred and ninety two. The triangular block above the legs holds a small museum of Brazilian gemstones. And the viewing deck, which opened in the mid nineteen sixties, is seventy five metres up, reached by lift.\n\nGo up. From the deck you finally see what this city is. The Monumental Axis runs east, past the bus station, the ministries and the cathedral, to the twin towers of the Congress. And to either side the residential wings bend away north and south. Costa's first sketch for the competition in 1957 was a cross: two lines meeting at a right angle, one of them curved. From up here, you are standing on that drawing.\n\nWhat's worth knowing is that from the ground, almost nobody sees it that way. At street level Brasília is a city of great distances and wide lawns, and the plan is invisible. The tower is the one place where the idea becomes clear to anyone who takes the lift.\n\nThe deck is open from Tuesday to Sunday, so plan around Mondays. Come down at the weekend and you can catch the fountain show; built for the city's fiftieth birthday, in 2010, it is eighty metres across, and its main jet goes fifty metres into the air."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.7904197,
+      "centroidLongitude": -47.8928939,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Viewpoint",
+        "Engineering",
+        "Iconic Landmark",
+        "Modernist",
+        "Designed by a Master",
+        "Lúcio Costa"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "bf7cf3db-5d17-5638-a708-8c1e1a657e4a",
+      "createdAt": "2026-11-11",
+      "title": "Central Bus Station | Rodoviária do Plano Piloto",
+      "shortDescription": "If Brasília has a centre, a single point where everything meets, you are standing on it.",
+      "longDescription": "If Brasília has a centre, a single point where everything meets, you are standing on it.\n\nThis is the spot where Lúcio Costa's two great lines cross: the Monumental Axis, running east to the Congress, and the Residential Axis, curving away to the north and south wings. Costa designed this station himself. It is one of very few major buildings in the city not by Niemeyer. Juscelino Kubitschek opened it on the twelfth of September 1960, his birthday, three months before he left office.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-rodoviaria_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-rodoviaria_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "43d01f01-0f74-5532-ae7f-16b421263c58",
+          "order": 0,
+          "title": "Central Bus Station | Rodoviária do Plano Piloto",
+          "caption": "On the bus platform of the Rodoviária, one avenue over your head and another under your feet.",
+          "latitude": -15.793846,
+          "longitude": -47.883366,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-rodoviaria.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-rodoviaria_hero.webp",
+          "transcriptText": "If Brasília has a centre, a single point where everything meets, you are standing on it.\n\nStand on the bus platform of the Rodoviária, the central bus station, with the buses pulling in beside you. It is a long, low concrete deck, open at the sides, crowded, noisy, full of snack stalls and people hurrying to work. Above your head runs one of the city's main avenues. And under your feet runs another.\n\nThis is the spot where Lúcio Costa's two great lines cross: the Monumental Axis, running east to the Congress, and the Residential Axis, curving away to the north and south wings. Costa designed this station himself. It is one of very few major buildings in the city not by Niemeyer. Juscelino Kubitschek opened it on the twelfth of September 1960, his birthday, three months before he left office.\n\nHave a look at how it is layered. There are three levels. On top, the road deck joining the entertainment sectors and their car parks. Down here, the platform, level with the Esplanada of the Ministries. And below that, the underpass where the Eixão, the Residential Axis, runs through. Since 2001 there has been a metro station down there too.\n\nAnd here's the thing. Most visitors to Brasília see the ministries and the palaces. The people who keep them running arrive here, by bus, from the satellite cities outside the plan, where most of the population of the Federal District actually lives. Costa saw that clearly. In 1987 he said that he had always called this platform the link that joins the metropolis together.\n\nSo linger for a few minutes, at rush hour if you can. Then climb up to the top deck and look west. The TV Tower is straight ahead at the end of the axis, and turning round, the ministries march away towards the Congress. You can see both halves of the city from the one spot where they touch."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.793846,
+      "centroidLongitude": -47.883366,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Civic",
+        "Architecture",
+        "Modernist",
+        "Designed by a Master",
+        "Lúcio Costa"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ecd229d4-4f4e-594f-870e-5d92bbc5887e",
+      "createdAt": "2026-11-11",
+      "title": "Conic",
+      "shortDescription": "Lúcio Costa wanted the heart of Brasília to have something like Times Square. This is what it turned into.",
+      "longDescription": "Lúcio Costa wanted the heart of Brasília to have something like Times Square. This is what it turned into.\n\nCosta marked out this sector in 1957 as the city's place of entertainment, cinemas, bars, theatres, all next to the bus station where everyone would pass. For a while, it worked. From the late nineteen sixties to the early eighties this was the cultural centre of Brasília. At its height the Conic had thirteen buildings, ten bookshops, eight cinemas and six nightclubs.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-conic_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-conic_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b3afd61c-9ddc-5cad-9db1-3a4f8127de2c",
+          "order": 0,
+          "title": "Conic",
+          "caption": "In the passages of the Conic beside the bus station, signs stacked on signs. Mind your belongings.",
+          "latitude": -15.795721,
+          "longitude": -47.8846815,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-conic.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-conic_hero.webp",
+          "transcriptText": "Lúcio Costa wanted the heart of Brasília to have something like Times Square. This is what it turned into.\n\nStand in the open passage between the buildings of the Conic, in the South Entertainment Sector, just beside the bus station. Around you is a cluster of blocky commercial buildings, stained concrete, signs stacked on top of signs, staircases and walkways going off in every direction. Across the road to the north, the sloping pyramid of the National Theatre.\n\nCosta marked out this sector in 1957 as the city's place of entertainment, cinemas, bars, theatres, all next to the bus station where everyone would pass. For a while, it worked. From the late nineteen sixties to the early eighties this was the cultural centre of Brasília. At its height the Conic had thirteen buildings, ten bookshops, eight cinemas and six nightclubs.\n\nThen the cinemas and the money moved out to the shopping centres, and the Conic got a reputation. Look around you now, and you will find it all mixed together: evangelical churches upstairs from nightclubs, opticians and sex shops, record shops selling vinyl and turntables, skateboard shops, and screen printers selling t shirts. On some nights there is hip hop, reggae and drag, and there are fanzine fairs and MC battles.\n\nAnd here's the thing. Brasília is a city where almost everything was planned, zoned and drawn in advance. The Conic is the one place in the middle of it that slipped out of the plan, and so it is the one place where the city does whatever it likes. It has been called a stronghold of cultural resistance. To my mind, it is the most honest building in Brasília.\n\nKeep an eye on your belongings, especially at night. By day, wander the galleries and look up at the painted murals. Then cross over to the National Theatre, and look back at the Conic from its lawn, the official city and the unofficial one, facing each other across the road."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.795721,
+      "centroidLongitude": -47.8846815,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "District",
+        "Commerce",
+        "Performance",
+        "Modernist",
+        "After Dark",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b7225f80-2896-5852-9db2-8bec3808ede6",
+      "createdAt": "2026-11-11",
+      "title": "Dom Bosco Hermitage | Ermida Dom Bosco",
+      "shortDescription": "In 1883 an Italian priest dreamed that a great civilisation would rise between the fifteenth and twentieth parallels south. Brasília was built…",
+      "longDescription": "In 1883 an Italian priest dreamed that a great civilisation would rise between the fifteenth and twentieth parallels south. Brasília was built at fifteen degrees and forty seven minutes. This little chapel is where the city keeps that promise.\n\nOscar Niemeyer designed it, and it was finished in 1957, among the very first permanent structures of the new capital. Inside is a statue of Dom Bosco, carved in Carrara marble and signed by the Arreghini brothers, from Italy.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-ermida-dom-bosco_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-ermida-dom-bosco_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "022be147-aa8d-5efe-8cd9-e3bc34049bbb",
+          "order": 0,
+          "title": "Dom Bosco Hermitage | Ermida Dom Bosco",
+          "caption": "On the slope beside the little white pyramid chapel, the lake and the whole city across the water.",
+          "latitude": -15.7980785,
+          "longitude": -47.8095043,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-ermida-dom-bosco.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-ermida-dom-bosco_hero.webp",
+          "transcriptText": "In 1883 an Italian priest dreamed that a great civilisation would rise between the fifteenth and twentieth parallels south. Brasília was built at fifteen degrees and forty seven minutes. This little chapel is where the city keeps that promise.\n\nStand on the slope beside the chapel, in the Dom Bosco Ecological Park, on the far shore of Lake Paranoá. The building is a small pyramid, white, on a raised platform faced in marble, with a metal cross on top. Turn round and the lake opens out in front of you, with the whole of the Plano Piloto stretched along the opposite shore.\n\nOscar Niemeyer designed it, and it was finished in 1957, among the very first permanent structures of the new capital. Inside is a statue of Dom Bosco, carved in Carrara marble and signed by the Arreghini brothers, from Italy.\n\nThe priest was John Bosco, founder of the Salesians. He never visited South America, but the account of his dream speaks of a lake forming between those parallels, and of a promised land. When Brazil decided to build a capital on the central plateau, and then made a lake to go with it, the prophecy was too good to ignore. He became the city's patron saint.\n\nAnd here's the thing. On almost any evening, people drive out here, sit on the grass with a bottle of wine or a flask of coffee, and wait. Nobody is here for the chapel, exactly. They come because this is the one spot where the sun sets over the whole city at once.\n\nSo time your visit for the last hour before dusk, and bring something to sit on. Watch the light go down behind the TV Tower and the Congress across the water. Then, if you want the other half of the story, the Sanctuary of Dom Bosco in the city, with its eighty columns of blue glass, is waiting on the far shore."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.7980785,
+      "centroidLongitude": -47.8095043,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Viewpoint",
+        "Green Escape",
+        "Free to Visit",
+        "Oscar Niemeyer"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a7361e23-3885-527a-ab4e-aea546cbf5d2",
+      "createdAt": "2026-11-11",
+      "title": "JK Bridge | Ponte JK",
+      "shortDescription": "The shape of this bridge came from a simple image: a stone skipping across water.",
+      "longDescription": "The shape of this bridge came from a simple image: a stone skipping across water.\n\nThe architect was Alexandre Chan, who did the concept, the design and the lighting. The bridge opened on the fifteenth of December 2002. The whole crossing is twelve hundred metres long, and the three spans, two hundred and forty metres each, hang from arches that rise as high as sixty two metres.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-ponte-jk_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-ponte-jk_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "cdfbf6cb-a2c1-5c80-bf8e-bdbb5618c28a",
+          "order": 0,
+          "title": "JK Bridge | Ponte JK",
+          "caption": "On the bridge walkway, the three leaning steel arches skipping across the lake.",
+          "latitude": -15.822598,
+          "longitude": -47.8300645,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-ponte-jk.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 80,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-ponte-jk_hero.webp",
+          "transcriptText": "The shape of this bridge came from a simple image: a stone skipping across water.\n\nStand on the walkway at the near end of the bridge, looking out along it towards the far shore. Three great steel arches leap across the lake ahead of you, one after another. But they aren't upright, and they aren't parallel. Each one leans, crossing from one side of the road deck to the other, so that from here they look as if they are bouncing off the water.\n\nThe architect was Alexandre Chan, who did the concept, the design and the lighting. The bridge opened on the fifteenth of December 2002. The whole crossing is twelve hundred metres long, and the three spans, two hundred and forty metres each, hang from arches that rise as high as sixty two metres.\n\nIn 2003 it was given the Gustav Lindenthal Medal, at the International Bridge Conference in Pittsburgh, for its beauty and its fit with the landscape. And it is named after Juscelino Kubitschek, the president who built Brasília. It was not cheap. Its budget at the start was around forty million reais, and the final cost has been put at about a hundred and sixty million.\n\nAnd here's the thing. Most of the great monuments in this city were finished in the nineteen sixties. This one came forty years later, by an architect who was not Niemeyer, and it has become a symbol of Brasília in its own right. Things here do not all belong to the founding generation.\n\nWalk at least to the first arch, so you can look up through the cables. And then come back at night. The arches are lit, and from the gardens of the Banco do Brasil cultural centre, on the shore to the north west, the reflections stretch right across the lake."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.822598,
+      "centroidLongitude": -47.8300645,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Bridge",
+        "Engineering",
+        "Contemporary",
+        "Iconic Landmark",
+        "After Dark",
+        "Designed by a Master",
+        "Alexandre Chan"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "81f8d3f5-8462-5a39-bea6-a2e204a810b3",
+      "createdAt": "2026-11-11",
+      "title": "Pontão do Lago Sul",
+      "shortDescription": "Brasília is nearly a thousand kilometres from the sea. On a Sunday afternoon, this is where people go instead.",
+      "longDescription": "Brasília is nearly a thousand kilometres from the sea. On a Sunday afternoon, this is where people go instead.\n\nThe Pontão opened in March 2002, as part of the Projeto Orla, a scheme to open up the edge of the lake to the public. The land belongs to the public, but it is run by a private company, and it is packed with bars and restaurants, a children's play area and space to walk.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-pontao-do-lago-sul_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-pontao-do-lago-sul_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-pontao-do-lago-sul_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-pontao-do-lago-sul_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-pontao-do-lago-sul_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "78383d53-4052-5fe6-93d7-ac769ac392b2",
+          "order": 0,
+          "title": "Pontão do Lago Sul",
+          "caption": "On the lakeside promenade in the middle of the Pontão, the restaurants behind you.",
+          "latitude": -15.8261192,
+          "longitude": -47.8734944,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-pontao-do-lago-sul.mp3",
+          "audioDurationSeconds": 94,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-pontao-do-lago-sul_hero.webp",
+          "transcriptText": "Brasília is nearly a thousand kilometres from the sea. On a Sunday afternoon, this is where people go instead.\n\nStand on the promenade by the water, in the middle of the Pontão, with the restaurants behind you. Ahead is Lake Paranoá, wide and calm, often with sailing boats and paddle boarders out on it. Along the shore to either side runs a broad lakeside walk, with kiosks and tables.\n\nThe Pontão opened in March 2002, as part of the Projeto Orla, a scheme to open up the edge of the lake to the public. The land belongs to the public, but it is run by a private company, and it is packed with bars and restaurants, a children's play area and space to walk.\n\nHave a look at the lake itself. It isn't natural. Lake Paranoá was made for the new capital, by damming a river, and it does a good deal to soften the dry climate of the central plateau. For most of its life the water was a view you looked at from a distance, rather than a place you could actually reach.\n\nWhat's worth knowing, standing here, is that this is the Brasília the postcards leave out. Not ministers or monuments, but families, joggers and couples, out on a boardwalk on a hot evening. The planned city gave everyone a lake. It took more than forty years to give them a way to sit beside it.\n\nCome in the late afternoon and walk the promenade end to end. And looking east across the lake, the low lights of the Lago Sul shore lead your eye towards the arches of the JK Bridge."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 94,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.8261192,
+      "centroidLongitude": -47.8734944,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "Food",
+        "Green Escape",
+        "After Dark",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "af4abe6f-bbe8-5025-bb67-b8045bfc8335",
+      "createdAt": "2026-11-11",
+      "title": "Lúcio Costa Space | Espaço Lúcio Costa",
+      "shortDescription": "Everything you have seen in Brasília started as a few pencil lines on a sheet of paper. Underneath the Square of the Three Powers, you can see…",
+      "longDescription": "Everything you have seen in Brasília started as a few pencil lines on a sheet of paper. Underneath the Square of the Three Powers, you can see them.\n\nThe space opened on the twenty seventh of February 1992, for what would have been Lúcio Costa's ninetieth birthday. Oscar Niemeyer designed the building and set it underground so as not to compete with the landmarks above. Costa himself put together what is shown inside.",
+      "makerId": "08918da7-8218-561a-b8ef-0b37907d4b87",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-espaco-lucio-costa_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-espaco-lucio-costa_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-espaco-lucio-costa_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4b8d612a-8bee-559f-802b-c08784644252",
+          "order": 0,
+          "title": "Lúcio Costa Space | Espaço Lúcio Costa",
+          "caption": "On the Square of the Three Powers: find the low entrance in the paving and go down the steps.",
+          "latitude": -15.8005597,
+          "longitude": -47.8612961,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bsb-espaco-lucio-costa.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bsb-espaco-lucio-costa_hero.webp",
+          "transcriptText": "Everything you have seen in Brasília started as a few pencil lines on a sheet of paper. Underneath the Square of the Three Powers, you can see them.\n\nStand on the Square, with the Congress behind you and the Supreme Court to one side, and look for a low entrance in the paving, leading down. It is easy to miss, because it was meant to be. Go down the steps.\n\nThe space opened on the twenty seventh of February 1992, for what would have been Lúcio Costa's ninetieth birthday. Oscar Niemeyer designed the building and set it underground so as not to compete with the landmarks above. Costa himself put together what is shown inside.\n\nIn the middle is a huge model of the whole Plano Piloto, built in 1988 over about eleven months. It has been updated several times since; look closely and you will see that parts of the city added after 1988 are shown in grey. Around the walls are copies of the sketches and the short written report that Costa submitted in 1957 to the competition for the plan of the new capital. There are also models of the two buildings he designed himself, the TV Tower and the bus station.\n\nAnd here's the thing. Costa's entry was famously slight: a handful of freehand drawings and a few pages of text, against rivals who submitted volumes of detailed plans. It won anyway. Read the report and you will see why. He starts with the gesture of someone marking a place, two axes crossing at a right angle, the sign of the cross. That single gesture is the city above your head.\n\nIt is open from Tuesday to Sunday. Come here first if you can, before the rest of the city, and everything else will make more sense. When you climb back up, walk to the edge of the Square and look west, down the Esplanada. You are looking along the line he drew."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -15.8005597,
+      "centroidLongitude": -47.8612961,
+      "city": "Brasília",
+      "country": "Brazil",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "Architecture",
+        "History",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Oscar Niemeyer"
       ],
       "priceUSD": 0
     }
