@@ -1,0 +1,75 @@
+RUN check-coordinates.py · rev 02bd1f9f · 2026-11-11T18:45:21Z · args: --drop /tmp/claude-0/-home-user-TRAVEL-GUIDED-TOUR/5af72348-8b0e-53bc-921a-3ec84147e9e1/scratchpad/drop/dec --city Brasília, Brazil --out /tmp/claude-0/-home-user-TRAVEL-GUIDED-TOUR/5af72348-8b0e-53bc-921a-3ec84147e9e1/scratchpad/coords2.txt
+auditing 31 coordinate(s) against 'Brasília, Brazil'  (~1.1 min at Nominatim's rate limit)
+
+  [  1/31] Igrejinha Nossa Senhora de Fátima  fwd     16m  at: Igrejinha Nossa Senhora de Fát
+  [  2/31] Congresso Nacional                 fwd    153m  at: Congresso Nacional do Brasil
+  [  3/31] Brasília Palace Hotel              fwd     71m  at: Brasília Palace Hotel
+  [  4/31] Beirute                            fwd   6442m  at: Elétrica 109
+  [  5/31] Clube do Choro de Brasília         fwd     41m  at: Clube do Choro de Brasília
+  [  6/31] Mané Mercado - Complexo Gastronômi fwd     96m  at: -
+  [  7/31] Fundação Athos Bulcão              fwd   2417m  at: W3/W4 Sul
+  [  8/31] Palácio Itamaraty                  fwd     28m  at: Palácio Itamaraty
+  [  9/31] Royal Tulip Brasília Alvorada      fwd     83m  at: Hotel Royal Golden Tulip Brasí
+  [ 10/31] Casa de Chá                        fwd     13m  at: Casa de Chá
+  [ 11/31] Ermida Dom Bosco                   fwd     29m  at: -
+  [ 12/31] Catedral Metropolitana Nossa Senho fwd     30m  at: Catedral Metropolitana Nossa S
+  [ 13/31] Torre de TV                        fwd     34m  at: Torre de TV
+  [ 14/31] Feira da Torre de TV               fwd     78m  at: -
+  [ 15/31] Catetinho                          fwd     27m  at: -
+  [ 16/31] Mangai                             fwd      6m  at: Mangai
+  [ 17/31] Museu Nacional Honestino Guimarães fwd     37m  at: Museu Nacional Honestino Guima
+  [ 18/31] Centro Comercial Boulevard (CONIC) fwd    100m  at: WR Joalheria
+  [ 19/31] Santuário Dom Bosco                fwd     22m  at: Santuário Dom Bosco
+  [ 20/31] Teatro Nacional Cláudio Santoro    fwd    103m  at: Eixo L Norte
+  [ 21/31] Pontão do Lago Sul                 fwd    220m  at: Pontão do Lago Sul
+  [ 22/31] Ernesto Cafés Especiais            fwd   8432m  at: Don’ Durica
+  [ 23/31] Centro Cultural Banco do Brasil    fwd     37m  at: Teatro CCBB
+  [ 24/31] Daniel Briand Pâtissier & Chocolat fwd    n/a  at: Passier chocolatier Daneil Bri
+  [ 25/31] Ponte Juscelino Kubitschek         fwd    147m  at: Ponte Juscelino Kubitschek
+  [ 26/31] Hospital SARAH - Lago Norte        fwd    146m  at: Hospital SARAH - Lago Norte
+  [ 27/31] SQS 308                            fwd    163m  at: SQS 308
+  [ 28/31] Instituto Central de Ciências      fwd     57m  at: -
+  [ 29/31] Espaço Lúcio Costa                 fwd     72m  at: Marco Brasília Patrimonio Cult
+  [ 30/31] Rodoviária do Plano Piloto         fwd      0m  at: Banco24Horas
+  [ 31/31] Memorial JK                        fwd     23m  at: Memorial JK
+
+========================================================================
+GROSS - 3 coordinate(s) may not be at their venue
+Check each by hand. Reverse-geocoding the SUPPLIED point is what
+settles it: a motorway or an unrelated office means it is wrong;
+a neighbour on the right street means it is fine.
+
+  Beirute
+    supplied      -15.8195280, -47.9076129
+    sits on       Elétrica 109  [shop]
+    venue geocode 6442 m away - Beirute, CLN 107/108, SQN 107, Asa Norte, Brasília, Plano Pi
+
+  Fundação Athos Bulcão
+    supplied      -15.8167407, -47.9122121
+    sits on       W3/W4 Sul  [highway]
+    venue geocode 2417 m away - Fundação Athos Bulcão, CLS 404/405, Asa Sul, Brasília, Plano
+
+  Ernesto Cafés Especiais
+    supplied      -15.8304728, -47.9242143
+    sits on       Don’ Durica  [amenity]
+    venue geocode 8432 m away - Ernesto Cafés Especiais, CLN 107/108, SQN 107, Asa Norte, Br
+
+UNVERIFIABLE - 1: no automatic verdict, and that is
+not the same as a pass. A towpath, a square and a long street have no
+single point to measure against; read the script and judge by hand.
+    Daniel Briand Pâtissier & Chocolatier    venue could not be geocoded
+  (a GROSS verdict needs the geocoder to have found the venue itself;
+   where it did not, the distance is reported and not acted on)
+
+========================================================================
+BIAS - 20/24 north of true position, median +17.0 m, p = 0.0015
+  reference, measured 2026-08-22:
+    old-sourced cities (NYC, London)   24/51   -0.9 m   p = 1.0
+    drop-pipeline cities (BCN, MIL)    41/50  +10.3 m   p = 5.6e-06
+
+  >> SYSTEMATIC NORTHWARD OFFSET STILL PRESENT.
+  >> Upstream has NOT been fixed. Whatever converts a map position
+  >> to lat/lon is applying a constant offset in screen pixels;
+  >> it is small here only because these subjects were framed at
+  >> high zoom. The same fault produces kilometre errors on any
+  >> subject far enough out of town to need zooming out.
