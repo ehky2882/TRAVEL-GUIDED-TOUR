@@ -19,7 +19,21 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
+      # The runner image ships a Swift toolchain; use it when present.
+      # setup-swift@v2 always refreshes its GPG keys from keyserver.ubuntu.com
+      # and has no option to skip that, so a keyserver outage (2026-11-11)
+      # failed this job on every PR before the validator ran.
+      - name: Find preinstalled Swift
+        id: swift
+        run: |
+          if command -v swift >/dev/null 2>&1; then
+            swift --version
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Set up Swift
+        if: steps.swift.outputs.found != 'true'
         uses: swift-actions/setup-swift@v2
         with:
           swift-version: "5.10"
