@@ -1,0 +1,20 @@
+# Trattoria Antiche Carampane
+
+**Dine** · Google Maps: *Trattoria Antiche Carampane* · 45.438671, 12.331115  
+~298 words · about 1:59 at a natural pace
+
+---
+
+You don't reach this restaurant by chance. It says so itself, and if you've found it, you'll already know why.
+
+Rio Terà de le Carampane, in San Polo, a couple of minutes from the Rialto markets. A rio terà is a canal that has been filled in to make a street, so you are walking on a waterway. The trattoria is the low doorway with the name painted above it, tucked into a cluster of narrow lanes.
+
+The neighbourhood gives the place its name and a bit of its reputation. Carampane comes from Ca' Rampani, the house of the Rampani, an old patrician family who owned property here. Later, these lanes were where the Republic licensed its brothels.
+
+The Bortoluzzi family took the place over in nineteen eighty-three. Piera Bortoluzzi ran it from nineteen ninety-nine, and her son Francesco Agopyan now runs the business. The menu follows whatever fish the Rialto market has that morning. Try the spaghetti in cassopipa, a slow seafood sauce that is very old Venice. Or the gran fritto misto, the house mixed fry, or cuttlefish in its own black ink with soft polenta.
+
+And here's the thing. The trattoria is quite open about wanting a particular kind of customer: Venetians, and travellers who want to eat the way Venetians do. It is closed on Sundays and Mondays, and it doesn't bend for anyone. In a city where most restaurants are built around visitors, that stubbornness is the whole appeal.
+
+[beat]
+
+Before or after you eat, walk a minute towards the canal nearby and find the Ponte de le Tette, the Bridge of Breasts. Local tradition says the women of this district once stood on it, bare-breasted, to advertise. It is the same story as the trattoria's name, told by a bridge.

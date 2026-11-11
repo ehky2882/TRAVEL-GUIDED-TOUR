@@ -1,0 +1,21 @@
+# Punta della Dogana — TTS-safe
+
+Read this version to the voice. Each beat is a plain paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+poon ta della doh gah na
+
+For three centuries, every ship entering Venice had to declare its cargo here. These days, the cargo is contemporary art.
+
+You're at the very tip of dor so doo ro, where the Grand Canal meets the joo deck a Canal. The great dome of the sa loo tay is behind you. San Marco is across the water to your left, and san jor jo ma jor ay ahead and to your right. The long, low building that forms this point is the old sea customs house, the doh gah na da mar.
+
+It was designed by joo zep pay beh no nee and finished in sixteen eighty two. Look up at the tower on the point. Two kneeling figures hold up a golden globe, and on the globe stands a figure of Fortune. She turns with the wind, a weathervane telling sailors which way the luck was blowing.
+
+The customs house was closed in the nineteen eighties and fell into decay. The city then held a competition to bring it back to life, and in two thousand and seven it went to fran swah pee no, the French collector. He asked the Japanese architect ta dow ando to restore it, and it opened as a museum of contemporary art in two thousand and nine.
+
+Ando cleaned up the old brick walls and the timber roof trusses, and largely left them alone. His one big gesture is at the centre: a cube of smooth, reinforced concrete set into a double height room, in the heart of the old warehouses. A decade later he used the same idea at the boorse de commerce in Paris.
+
+The interesting bit is the contrast. Seventeenth century brick, rough and patched, against the most careful concrete in the world. Neither tries to look like the other, and that is why they get on.
+
+Before you go, walk right out to the point, below Fortune. The view takes in more of Venice at once than almost anywhere else on foot. Then turn and look up at the sa loo tay. Its steps are one of the best places in the city to sit and watch the boats.

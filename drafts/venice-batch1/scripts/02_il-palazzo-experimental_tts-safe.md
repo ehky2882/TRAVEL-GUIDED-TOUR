@@ -1,0 +1,19 @@
+# Il Palazzo Experimental — TTS-safe
+
+Read this version to the voice. Each beat is a plain paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+eel pa lat so experimental
+
+Three doors, side by side, on a Venetian waterfront: one for dinner, one for bed, and one for a cocktail. It is a very modern way to read an old pa lat so.
+
+You're on the zat teh ray, the long sunny quay along the southern edge of dor so doo ro. The wide joo deck a Canal is behind you, and across it the island of joo deck a. Facing you is a pa lat so of several storeys, with those three separate doors at street level. The restaurant, adree ah tee ka, is behind one. Reception is behind another. The third belongs to the Experimental Cocktail Club.
+
+The building is said to have housed a naval headquarters in the nineteen thirties, before it became the hotel it is today, with thirty two rooms. Some look out over the joo deck a Canal. Others look back onto a garden you would never guess was there, with its own landing stage on a quiet side canal.
+
+The interiors are by doro tay may lish zon, a Paris designer who looked hard at Venice before she drew anything. teh rat so floors, the speckled stone chip flooring you find in every old pa lat so. Arched mirrors. Marble, and tiles glazed by hand. She took the house style of the city and turned the colour up.
+
+What I like about it is that it doesn't pretend. Plenty of Venetian hotels dress up as somewhere from the eighteenth century. This one is plainly from now, and it still couldn't be anywhere else. The stripes and the arches are Venetian ideas, borrowed and enjoyed rather than copied.
+
+Before you go, walk a little way along the zat teh ray in either direction. It is one of the few places in Venice where you can stroll in a straight line in full sun. Westwards, the quay runs out towards the old port; eastwards it brings you, eventually, to the tip of the customs house at poon ta della doh gah na.

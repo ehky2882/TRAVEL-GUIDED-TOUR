@@ -1,0 +1,21 @@
+# Fortuny Showroom and Factory — TTS-safe
+
+Read this version to the voice. Each beat is a plain paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+for too nee showroom and factory
+
+Behind this wall, for a hundred years, a factory has been printing fabric by a method that nobody outside it has ever been allowed to see.
+
+fonda menta san bee ah jo, at the western end of the island of joo deck a. Just along the waterfront to the west is the mo lee no stookee, the great brick flour mill, now a hotel. In front of you is the long, low for too nee building, in what was once joo deck a's industrial quarter. The showroom and the garden are open to visitors on certain days. The factory floor is not.
+
+mariano for too nee ee ma drah zo was born in gra nah da in eighteen seventy one, the son of a painter. He grew up in Paris and then Venice, where he and his wife and partner, on ree et neg rin, ran a studio in a Gothic pa lat so. He was a painter, photographer, stage designer and inventor. And he made fabrics that looked as if they had come out of Renaissance paintings.
+
+In the summer of nineteen twenty two he opened this factory. It is still where the fabrics are made.
+
+The gift detail is the secret. for too nee's will held that the techniques behind his fabrics were never to be revealed publicly, and a century on they still haven't been. What comes out of this building looks like silk damask or old brocade. It is actually printed on cotton, by a process only the factory knows.
+
+The second hero of the story is elsie mac neel lee, an interior designer from New York. She saw for too nee's fabrics in a Paris museum in nineteen twenty seven, became his sole distributor, and after his death ran the company for more than forty years. The garden here, made on the grounds of a former convent, became hers. She even put in a swimming pool.
+
+If the showroom is open, go in and look at the fabric closely. Try to work out how it was printed. Nobody will tell you. Otherwise, walk east along the joo deck a waterfront for the view back across to the zat teh ray. And if you'd like the rest of the story, the for too nee museum is back across the water, in the pa lat so where he lived.

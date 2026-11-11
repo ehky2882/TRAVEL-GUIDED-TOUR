@@ -1,0 +1,20 @@
+# Il Mercante
+
+**Drink** · Google Maps: *Il Mercante* · 45.437314, 12.327291  
+~280 words · about 1:52 at a natural pace
+
+---
+
+There has been a café on this corner for more than a hundred and fifty years. These days it serves rather more interesting drinks.
+
+Campo dei Frari, in San Polo. The huge brick church in front of you is the Basilica dei Frari, where Titian is buried. Keep it on your left and look for the bar on the corner by the canal, with a dark, wood-panelled room inside.
+
+From eighteen seventy this was the Caffè dei Frari, an elegant old Venetian café. In twenty sixteen Alessandro Zampieri reopened it as Il Mercante, The Merchant. He is the owner and the man behind the drinks list.
+
+The name is the theme. The drinks menu is built around famous merchants and explorers. It suits a city that made its fortune buying spices, silk and pepper in the East and selling them to the rest of Europe. The menus change with the seasons, and the drinks are made with real care: measured, balanced, nothing for show.
+
+What's worth knowing, standing here, is that Venice is not, on the whole, a cocktail city. It is a city of the spritz and the ombra, drunk standing at a counter. Il Mercante is part of a small, recent shift: a generation of bartenders treating cocktails with the same seriousness Venetians have always given to wine. One international list now ranks it among the five hundred best bars in the world.
+
+[beat]
+
+If you arrive before dark, go into the Frari first. Find Titian's Assumption over the high altar, a blaze of red and gold that you can see from the far end of the church. Then come back out, and the bar will be open.

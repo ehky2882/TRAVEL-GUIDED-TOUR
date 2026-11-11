@@ -1,0 +1,21 @@
+# Aman Venice — TTS-safe
+
+Read this version to the voice. Each beat is a plain paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+Aman Venice
+
+There's a curious thing about this pa lat so. It is a luxury hotel, but the family who own it still live upstairs.
+
+The best view is from the water, but from the land you'll find the entrance on kal lay tee eh polo, in San Polo, a few minutes' walk from the ree al toe Bridge. This is pa lat so pappa doppo lee. Its front faces the Grand Canal, and two pointed obelisks stand on its roof. In the old Republic, obelisks like that were the mark of a family that had produced a great naval commander.
+
+It was built in the mid sixteenth century by the architect jan jah ko mo day gree jee for the kot chee na family, merchants who had come to Venice from bair ga mo. In the eighteenth century it passed to a branch of the tee eh polo family. In eighteen sixty four it was bought by the pappa doppo lee, who added gardens and a ballroom. And in nineteen twenty two it passed by inheritance to the arree va beh nay va len tee gon zah ga. Count jil bair toe and Countess Bianca still live in the private apartments at the top.
+
+Have a look at those gardens if you can catch a glimpse of them. Private gardens are rare in a city built on water, and this pa lat so has its own.
+
+Inside, almost every room has frescoes or reliefs. The best known are eighteenth century frescoes from the circle of the tee eh polo, the great Venetian family of painters, which now hang over the heads of guests in a games room. The staircase is from eighteen seventy four. The walls of one room are covered in leather brought from kor doba generations ago.
+
+What's worth knowing, standing here, is that the hotel was laid over the house rather than carved out of it. Aman opened here in twenty thirteen, and the family stayed. Venice is full of pa lat see that were emptied and sold. This one is still lived in.
+
+From here, walk to the ree al toe Bridge and stand at the top of it, looking down the Grand Canal. Pick out the two obelisks on the roofline. Once you know what they mean, you'll start spotting them on other pa lat see all the way along.

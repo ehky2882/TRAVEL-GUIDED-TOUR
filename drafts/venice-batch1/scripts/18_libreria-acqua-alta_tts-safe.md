@@ -1,0 +1,21 @@
+# Libreria Acqua Alta — TTS-safe
+
+Read this version to the voice. Each beat is a plain paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+lee breh ree a akwa alta
+
+Most bookshops worry about damp. This one has put its stock into bathtubs and a gondola, and dared the water to try.
+
+kal lay longa santa maria for mo za, in kass tello, a short walk east of kampo santa maria for mo za. The sign says lee breh ree a akwa alta, the high water bookshop. There will very likely be a queue. Inside, it gets more cluttered the deeper you go.
+
+The shop was opened in two thousand and two by loo ee jee freet so, as a place for books on Venetian art and history, and fiction set in the city. It stands in one of the lowest parts of Venice. When the akwa alta comes, the high tide that floods the streets, it comes in here first.
+
+So loo ee jee made a plan. He put books in bathtubs, in old rowing boats and in a full size gondola that now sits in the middle of the shop. When the water rose, the boats would float, and the books would float with them.
+
+The gift detail is out the back. Old encyclopedias, spoiled by the water and no use to anyone, were stacked up into a staircase. Climb it and you can look out over the canal behind. loo ee jee admitted he'd never imagined that what he saw as a simple practical solution would become so famous. And keep an eye out for the cats. The shop has long had a few, once strays and now residents.
+
+Here's the thing, though. The floods are real. In November twenty nineteen, during the worst high water in Venice since nineteen sixty six, the shop lost hundreds of books. The bathtubs look like a joke. They are actually how a bookshop survives in this city.
+
+Go early or late, when it is quieter, and spend a few minutes on the real books rather than the props. Then walk back to kampo santa maria for mo za. karlo scarpa's work at the kweh ree nee stam pah lee a, just across the canal from the square, takes on exactly the same water, in a very different way.

@@ -1,0 +1,22 @@
+# Osteria alle Testiere
+
+**Dine** · Google Maps: *Osteria alle Testiere* · 45.437119, 12.340328  
+~316 words · about 2:06 at a natural pace
+
+---
+
+The name of this restaurant means headboards, as in beds. There is a perfectly good reason for that, and it has nothing to do with sleeping.
+
+Calle del Mondo Novo, in Castello, between Campo Santa Maria Formosa and the Rialto. You are looking for a very small dining room behind a modest front. If the door is open and the room is full, which it usually is, you are in the right place.
+
+When the current owners took it over, the sign above the door still read Da Mario. While they were clearing out the old furniture, they found a set of headboards from the nineteen thirties. Rather than throw them away, they hung them on the walls, and the osteria became alle Testiere: at the headboards.
+
+That was in nineteen ninety-three. The owners are two friends: Bruno Gavagnin, who cooks, and Luca di Vita, who runs the room and the wine. They have run it together for more than thirty years. There are only around twenty seats, so the room fills with a single sitting and stays full.
+
+There is no fixed menu to speak of. It is fish, nearly all of it, bought at the Rialto market that morning and cooked with a light hand. What's on depends on what the lagoon and the Adriatic gave up that day.
+
+What's worth knowing, standing outside, is that a place this small can only survive if the locals keep coming back. Twenty seats is a very small margin for error. That it has lasted three decades in the busiest part of Venice tells you more than any review.
+
+[beat]
+
+You'll need to book, well ahead. If you've arrived without a table, walk two minutes to Campo Santa Maria Formosa, one of the broadest squares in this part of the city. The Querini Stampalia, with Carlo Scarpa's garden, is just across the canal on its far side.

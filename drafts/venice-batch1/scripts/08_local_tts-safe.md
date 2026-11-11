@@ -1,0 +1,21 @@
+# Local — TTS-safe
+
+Read this version to the voice. Each beat is a plain paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+Local
+
+Some of the best cooking in Venice happens on a street named after the Greeks, under a bell tower that leans.
+
+sali tsah da day greh chee, in kass tello, a few minutes behind the waterfront at san zakka ree a. A sali tsah da was one of the first streets in Venice to be paved, which is all the name means. Look along the canal here and you'll see the bell tower of san jor jo day greh chee, the Greek Orthodox church, tilting quite visibly off true. The restaurant is the understated frontage at number thirty three oh three.
+
+Local is run by a couple, beneh detta fool in and manuel treh vee zan, who share the front of house between them.
+
+The room is the first thing you notice. Clean lines, pale surfaces, a few carefully chosen pieces. It feels more like a studio than a dining room, and it is the kind of restraint that is surprisingly rare in this city.
+
+The cooking is a tasting menu built on what the lagoon and the veh neh toe produce, treated with modern technique. The kitchen is led by salva toe ray so dah no, a chef from kam pah nya who took over shortly after the restaurant won its Michelin star in the early twenty twenties. So a southern Italian cooks Venetian ingredients, in a room that looks like neither place.
+
+The interesting bit is the name. Local is an English word, chosen on purpose. In a part of town where most menus are written for visitors, the point is to cook from here, for whoever is at the table.
+
+Before you go in, or once you come out, walk back to the canal and look properly at that leaning bell tower. Then follow the canal towards the lagoon. In two minutes you're back on the ree va, with san jor jo ma jor ay across the water.

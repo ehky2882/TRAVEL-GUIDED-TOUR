@@ -1,0 +1,20 @@
+# Trattoria al Gatto Nero
+
+**Dine** · Google Maps: *Trattoria al Gatto Nero* · 45.484754, 12.416360  
+~291 words · about 1:56 at a natural pace
+
+---
+
+On an island of fishermen and lacemakers, this has been the family table since nineteen sixty-five.
+
+Burano, on the Fondamenta della Giudecca. Yes, there is a Giudecca here too, a waterfront of the same name on a different island. Stand with the canal beside you and the painted houses on either side, every one a different colour. The trattoria is the one with tables along the canal and the black cat on its sign.
+
+It was founded by Ruggero and Lucia Bovo. Ruggero is still in the kitchen, and their son Massimiliano runs the place with them. It is a family restaurant in the plainest sense of the word: the same people, the same island, for nearly sixty years.
+
+The cooking is Burano's own. The menu changes with the seasons and the catch, with homemade pasta and vegetables from the lagoon gardens. The gift detail is that there is no meat on the menu at all. This is an island of fishermen, and the kitchen has never seen any reason to pretend otherwise.
+
+And here's the thing about Burano. It was settled in the fifth century by people fleeing an invasion on the mainland, sheltered by the fog and the shallow water. Today the islands of Burano, Mazzorbo and Torcello together are home to fewer than three thousand people. A trattoria like this is part of what keeps the island a place where people still live, rather than a backdrop for photographs.
+
+[beat]
+
+After lunch, walk away from the main street and into the back lanes, where the washing hangs between the houses. If you have the afternoon, take the short boat ride to Torcello. That is where Venice began, and where the vines that saved the Dorona grape were found.

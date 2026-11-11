@@ -1,0 +1,19 @@
+# Cantinone del Vino già Schiavi — TTS-safe
+
+Read this version to the voice. Each beat is a plain paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+kanti noh nay del vee no jah skee ah vee
+
+Take your glass outside, turn round, and watch gondolas being made. That is the deal at this wine bar, and it has been for generations.
+
+fonda menta nah nee, in dor so doo ro, beside the ree oh dee san tro vah zo. The wine shop is the one with bottles stacked to the ceiling and people standing outside with a glass. Now turn to face the canal. On the far bank is a cluster of wooden buildings that look as if they belong in the mountains rather than in Venice. That is the skweh ro dee san tro vah zo, one of the very few gondola yards still working in the city.
+
+The bar has been here since the late eighteen hundreds. jah skee ah vee means formerly skee ah vee, after a previous owner. In nineteen forty five it was taken over by sisto ga stal dee. In nineteen sixty his son Lino met alless andra day res pee nees, and she is still behind the counter, with their children. Venetians also call the place il botteh gon, the big shop.
+
+The gift detail is Alessandra's kro stee nee. She makes them fresh every day, small toasts with dozens of different toppings. Many people will tell you they are the best in Venice. You eat them standing up, with an om bra, the small glass of wine Venetians drink at the bar.
+
+The interesting bit is the view. Gondola builders traditionally came from the mountains, which is why the skweh ro looks like an Alpine chalet. The two businesses sit across the water from each other, both of them family trades that most of the city has lost.
+
+Stand on the far side of the canal for a minute and look into the skweh ro if the doors are open. You may see a gondola upturned on the slipway. Then follow the canal down to the zat teh ray, a couple of minutes away, for the sun on the joo deck a Canal.

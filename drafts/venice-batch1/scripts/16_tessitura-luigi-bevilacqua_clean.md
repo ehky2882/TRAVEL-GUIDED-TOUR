@@ -1,0 +1,22 @@
+# Tessitura Luigi Bevilacqua
+
+**Shop** · Google Maps: *Tessitura Luigi Bevilacqua* · 45.441494, 12.327679  
+~316 words · about 2:06 at a natural pace
+
+---
+
+Somewhere behind these walls, an eighteenth-century loom is weaving velvet a few centimetres at a time.
+
+Campo San Zan Degolà, in Santa Croce, a quiet square near the Grand Canal on the station side of the city. The weaving house is at Santa Croce thirteen twenty. You'll know it by the name, Luigi Bevilacqua, beside the door. It is a working factory, open to visitors by appointment, so don't expect a shopfront.
+
+The family's link with Venetian silk goes back a very long way. A painting by Giovanni Mansueti includes a small scroll naming a Giacomo Bevilacqua, weaver, around the year fourteen ninety-nine. The present firm was founded in eighteen seventy-five, when Luigi Bevilacqua rescued old looms from the silk school of the Venetian Republic.
+
+They are still here. Eighteen looms, all of them original eighteenth-century machines, worked by hand. The patterns are fed in on punched cards, the old Jacquard system, the ancestor of every computer program.
+
+The gift detail is the velvet called soprarizzo. Its pattern is made of two kinds of pile: some loops left uncut, and some cut, which catch the light differently. It is so slow and skilled to weave that a day's work is measured in centimetres.
+
+Here's the thing. Velvet like this has gone into the Basilica della Salute here in Venice, into the Royal Palace in Dresden and into Stockholm City Hall. It is one of the last places in the world making it this way. When you walk through grand interiors anywhere in Europe, you may well have touched its work without knowing.
+
+[beat]
+
+If you can't get inside, walk down to the Grand Canal from the campo. You'll come out looking across the water to Cannaregio. And if you'd rather see the velvets than the looms, look for the Bevilacqua shops near San Marco, one of them by Campo Santa Maria del Giglio.

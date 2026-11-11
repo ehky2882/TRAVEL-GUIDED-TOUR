@@ -1,0 +1,19 @@
+# Trattoria al Gatto Nero — TTS-safe
+
+Read this version to the voice. Each beat is a plain paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+tratto ree a al gatto neh ro
+
+On an island of fishermen and lacemakers, this has been the family table since nineteen sixty five.
+
+boo rah no, on the fonda menta della joo deck a. Yes, there is a joo deck a here too, a waterfront of the same name on a different island. Stand with the canal beside you and the painted houses on either side, every one a different colour. The tratto ree a is the one with tables along the canal and the black cat on its sign.
+
+It was founded by roo jeh ro and Lucia bo vo. roo jeh ro is still in the kitchen, and their son massi mee lee ah no runs the place with them. It is a family restaurant in the plainest sense of the word: the same people, the same island, for nearly sixty years.
+
+The cooking is boo rah no's own. The menu changes with the seasons and the catch, with homemade pasta and vegetables from the lagoon gardens. The gift detail is that there is no meat on the menu at all. This is an island of fishermen, and the kitchen has never seen any reason to pretend otherwise.
+
+And here's the thing about boo rah no. It was settled in the fifth century by people fleeing an invasion on the mainland, sheltered by the fog and the shallow water. Today the islands of boo rah no, mat sor bo and tor chello together are home to fewer than three thousand people. A tratto ree a like this is part of what keeps the island a place where people still live, rather than a backdrop for photographs.
+
+After lunch, walk away from the main street and into the back lanes, where the washing hangs between the houses. If you have the afternoon, take the short boat ride to tor chello. That is where Venice began, and where the vines that saved the doh roh na grape were found.

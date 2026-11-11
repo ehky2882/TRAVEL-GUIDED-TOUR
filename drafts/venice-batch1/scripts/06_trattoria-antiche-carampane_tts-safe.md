@@ -1,0 +1,19 @@
+# Trattoria Antiche Carampane — TTS-safe
+
+Read this version to the voice. Each beat is a plain paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+tratto ree a an tee kay karam pah nay
+
+You don't reach this restaurant by chance. It says so itself, and if you've found it, you'll already know why.
+
+ree oh teh rah day lay karam pah nay, in San Polo, a couple of minutes from the ree al toe markets. A ree oh teh rah is a canal that has been filled in to make a street, so you are walking on a waterway. The tratto ree a is the low doorway with the name painted above it, tucked into a cluster of narrow lanes.
+
+The neighbourhood gives the place its name and a bit of its reputation. karam pah nay comes from car ram pah nee, the house of the ram pah nee, an old patrician family who owned property here. Later, these lanes were where the Republic licensed its brothels.
+
+The bor toe loot see family took the place over in nineteen eighty three. pee eh ra bor toe loot see ran it from nineteen ninety nine, and her son fran chess ko a go pee an now runs the business. The menu follows whatever fish the ree al toe market has that morning. Try the spaghetti in kasso pee pa, a slow seafood sauce that is very old Venice. Or the gran free toe mee sto, the house mixed fry, or cuttlefish in its own black ink with soft polenta.
+
+And here's the thing. The tratto ree a is quite open about wanting a particular kind of customer: Venetians, and travellers who want to eat the way Venetians do. It is closed on Sundays and Mondays, and it doesn't bend for anyone. In a city where most restaurants are built around visitors, that stubbornness is the whole appeal.
+
+Before or after you eat, walk a minute towards the canal nearby and find the pon tay day lay tet tay, the Bridge of Breasts. Local tradition says the women of this district once stood on it, bare breasted, to advertise. It is the same story as the tratto ree a's name, told by a bridge.

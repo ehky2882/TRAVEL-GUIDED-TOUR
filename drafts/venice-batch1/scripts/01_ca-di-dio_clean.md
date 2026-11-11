@@ -1,0 +1,22 @@
+# Ca' di Dio
+
+**Stay** · Google Maps: *Ca' di Dio* · 45.433718, 12.348677  
+~367 words · about 2:26 at a natural pace
+
+---
+
+For roughly eight hundred years, people have arrived at this door needing somewhere to sleep. The difference now is the room service.
+
+Riva degli Schiavoni, the long stone waterfront east of San Marco. Stand with the lagoon at your back and the island of San Giorgio somewhere behind your shoulder. In front of you is a long, plain building in pale render, with a little canal, the Rio Ca' di Dio, running along one side. The name means the House of God.
+
+It began in the thirteenth century as a hospice for pilgrims on their way to the Holy Land, who waited here for a ship. Later it took in women who had nowhere else to go, then soldiers, and for many years it was a home for the elderly. In the sixteenth century it was rebuilt to designs by Jacopo Sansovino, the architect who gave San Marco its library. His drawings have since been lost, but the long, sober front is his kind of building: useful first, grand only by accident.
+
+Now look at what happened inside. In twenty nineteen the Spanish designer Patricia Urquiola began turning it into a hotel, and it opened with sixty-six rooms, most of them facing the lagoon. The old courtyards became three gardens. Fabric, glass, stone and marble were worked by local craftspeople, and the colours are soft and pale, meant to recall light on the water.
+
+The gift detail is in the lobby. It rises double height where a chapel once stood, and hanging in it is a chandelier of fourteen thousand pieces of Murano glass.
+
+And here's the thing. Urquiola said she wanted to follow the lines the building already had, enhancing them without revolutionising them. In a city where almost every hotel shouts, this one keeps its voice down. It is still, in a sense, a hostel. It has simply moved up in the world.
+
+[beat]
+
+If you've got a few minutes, walk east along the Riva towards the Arsenale. Look for where the waterfront crosses the little canal beside the building. From that bridge you can see the side wall run back from the lagoon, which tells you just how deep these old charitable houses went.

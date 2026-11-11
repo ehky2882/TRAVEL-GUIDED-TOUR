@@ -1,0 +1,22 @@
+# Local
+
+**Dine** · Google Maps: *Local* · 45.435632, 12.345967  
+~295 words · about 1:57 at a natural pace
+
+---
+
+Some of the best cooking in Venice happens on a street named after the Greeks, under a bell tower that leans.
+
+Salizada dei Greci, in Castello, a few minutes behind the waterfront at San Zaccaria. A salizada was one of the first streets in Venice to be paved, which is all the name means. Look along the canal here and you'll see the bell tower of San Giorgio dei Greci, the Greek Orthodox church, tilting quite visibly off true. The restaurant is the understated frontage at number thirty-three oh three.
+
+Local is run by a couple, Benedetta Fullin and Manuel Trevisan, who share the front of house between them.
+
+The room is the first thing you notice. Clean lines, pale surfaces, a few carefully chosen pieces. It feels more like a studio than a dining room, and it is the kind of restraint that is surprisingly rare in this city.
+
+The cooking is a tasting menu built on what the lagoon and the Veneto produce, treated with modern technique. The kitchen is led by Salvatore Sodano, a chef from Campania who took over shortly after the restaurant won its Michelin star in the early twenty twenties. So a southern Italian cooks Venetian ingredients, in a room that looks like neither place.
+
+The interesting bit is the name. Local is an English word, chosen on purpose. In a part of town where most menus are written for visitors, the point is to cook from here, for whoever is at the table.
+
+[beat]
+
+Before you go in, or once you come out, walk back to the canal and look properly at that leaning bell tower. Then follow the canal towards the lagoon. In two minutes you're back on the Riva, with San Giorgio Maggiore across the water.

@@ -1,0 +1,21 @@
+# The Iuav Gate at the Tolentini — TTS-safe
+
+Read this version to the voice. Each beat is a plain paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+The ee oo av Gate at the toe len tee nee
+
+Most people walk straight past this doorway. Have a proper look and you'll see that the old gate isn't standing up. It is lying down, in the water.
+
+kam pat so day toe len tee nee, in santa kro chay, a few minutes from pee at sah lay roma. This is the entrance to ee oo av, the architecture university of Venice. Facing you is a modern entrance in concrete and stone, set into an old wall,. Look down at your feet, just in front of it.
+
+The building behind was a convent, designed by veen chen zo ska mot see for the thee a tine fathers and finished around sixteen oh two. Napoleon closed it in eighteen ten. Over the next century and a half it was a barracks, an office and a refuge for flood victims. In nineteen fifty eight it was given to the university.
+
+The entrance is the work of karlo scarpa, who was Venice's greatest modern architect and taught here for decades. He began thinking about it in the late nineteen sixties, but he died in nineteen seventy eight before it was built. His student and colleague sair jo loss completed it from Scarpa's design, and it was inaugurated in nineteen eighty five.
+
+The gift detail is the old portal. Rather than throw away the original stone gateway, the arched doorframe was taken down and laid flat on the ground at the entrance, where it now holds a shallow pool of water. You walk past the old door to reach the new one.
+
+What's worth knowing, standing here, is that this is a lesson for every student who walks through it. In Venice you don't sweep the past away. You lay it down gently and build next to it.
+
+Before you go, look for the Latin carved into the entrance: vair um ipsum fak tum, roughly, the truth is in the making. It is a motto from the philosopher jam bat teesta vee ko, and it is Scarpa's whole approach in three words. Then walk back to the Grand Canal and compare it with kala trah va's bridge.

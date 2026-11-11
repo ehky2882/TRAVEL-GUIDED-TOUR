@@ -1,0 +1,19 @@
+# Il Mercante — TTS-safe
+
+Read this version to the voice. Each beat is a plain paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+eel mer kan tay
+
+There has been a café on this corner for more than a hundred and fifty years. These days it serves rather more interesting drinks.
+
+kampo day frah ree, in San Polo. The huge brick church in front of you is the Basilica dei frah ree, where tishun is buried. Keep it on your left and look for the bar on the corner by the canal, with a dark, wood panelled room inside.
+
+From eighteen seventy this was the kaff ay day frah ree, an elegant old Venetian café. In twenty sixteen alless andro zam pee eh ree reopened it as eel mer kan tay, The Merchant. He is the owner and the man behind the drinks list.
+
+The name is the theme. The drinks menu is built around famous merchants and explorers. It suits a city that made its fortune buying spices, silk and pepper in the East and selling them to the rest of Europe. The menus change with the seasons, and the drinks are made with real care: measured, balanced, nothing for show.
+
+What's worth knowing, standing here, is that Venice is not, on the whole, a cocktail city. It is a city of the spritz and the om bra, drunk standing at a counter. eel mer kan tay is part of a small, recent shift: a generation of bartenders treating cocktails with the same seriousness Venetians have always given to wine. One international list now ranks it among the five hundred best bars in the world.
+
+If you arrive before dark, go into the frah ree first. Find tishun's Assumption over the high altar, a blaze of red and gold that you can see from the far end of the church. Then come back out, and the bar will be open.

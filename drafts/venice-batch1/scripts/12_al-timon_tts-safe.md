@@ -1,0 +1,19 @@
+# Al Timon — TTS-safe
+
+Read this version to the voice. Each beat is a plain paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+al tee mon
+
+At a peh ree tee vo time, the best seat on this canal isn't a seat at all. It is a boat.
+
+The fonda menta del yee or meh zee nee, in kanna reh jo, a long, lively waterside walk in the north of the city. The bar is on the fonda menta itself. Moored against the bank in front of it is an old wooden boat, with people sitting on its deck holding glasses of wine and plates of chee ket tee.
+
+The boat is a bra got so, a traditional flat bottomed fishing boat of the northern Adriatic, now earning its keep as an extra terrace. When the evening is warm, the regulars spill out of the bar, along the edge of the canal and onto the boat.
+
+al tee mon means at the helm, or the tiller. It started as a back a ro serving chee ket tee, the small snacks you eat standing at the counter, and it still does. But it has become just as well known for steak, grilled over the coals, which is not what you expect in a city of fish.
+
+Here's what I love about this stretch. The or meh zee nee has become one of the places where young Venetians actually go out, and al tee mon is often credited with leading the way. In a city where the centre empties of locals after dark, the northern canals are still a neighbourhood.
+
+From here, carry on along the or meh zee nee and over the bridge onto the fonda menta della mizeh ree kor dee a, which continues in the same spirit. Or head into the old Ghetto, just a couple of minutes south. It is one of the oldest Jewish quarters in Europe, and it is quiet and rather moving at dusk.

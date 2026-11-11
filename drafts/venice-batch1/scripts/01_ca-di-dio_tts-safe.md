@@ -1,0 +1,21 @@
+# Ca' di Dio — TTS-safe
+
+Read this version to the voice. Each beat is a plain paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+car dee dee oh
+
+For roughly eight hundred years, people have arrived at this door needing somewhere to sleep. The difference now is the room service.
+
+ree va del yee skee a voh nee, the long stone waterfront east of San Marco. Stand with the lagoon at your back and the island of san jor jo somewhere behind your shoulder. In front of you is a long, plain building in pale render, with a little canal, the ree oh car dee dee oh, running along one side. The name means the House of God.
+
+It began in the thirteenth century as a hospice for pilgrims on their way to the Holy Land, who waited here for a ship. Later it took in women who had nowhere else to go, then soldiers, and for many years it was a home for the elderly. In the sixteenth century it was rebuilt to designs by Jacopo san so vee no, the architect who gave San Marco its library. His drawings have since been lost, but the long, sober front is his kind of building: useful first, grand only by accident.
+
+Now look at what happened inside. In twenty nineteen the Spanish designer patricia oor kee oh la began turning it into a hotel, and it opened with sixty six rooms, most of them facing the lagoon. The old courtyards became three gardens. Fabric, glass, stone and marble were worked by local craftspeople, and the colours are soft and pale, meant to recall light on the water.
+
+The gift detail is in the lobby. It rises double height where a chapel once stood, and hanging in it is a chandelier of fourteen thousand pieces of moo rah no glass.
+
+And here's the thing. oor kee oh la said she wanted to follow the lines the building already had, enhancing them without revolutionising them. In a city where almost every hotel shouts, this one keeps its voice down. It is still, in a sense, a hostel. It has simply moved up in the world.
+
+If you've got a few minutes, walk east along the ree va towards the arseh nah lay. Look for where the waterfront crosses the little canal beside the building. From that bridge you can see the side wall run back from the lagoon, which tells you just how deep these old charitable houses went.

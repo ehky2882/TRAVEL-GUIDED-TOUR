@@ -1,0 +1,21 @@
+# Fondazione Prada — TTS-safe
+
+Read this version to the voice. Each beat is a plain paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+fon dat see oh nay prah da
+
+A queen was born on this spot. For a century and a half, Venetians pawned their silver here. Now it shows contemporary art.
+
+The front of car corner della reh jee na faces the Grand Canal, on the santa kro chay side, between the ree al toe and the station. From land, the entrance is on kal lay day car corner. If you can see the canal, look for the tall, white classical pa lat so with its heavy ground floor of rough stone.
+
+It was built in the seventeen twenties by the architect do meh nee ko rossi, for the Corner family. The name, corner della reh jee na, refers to the Gothic pa lat so that stood here before. In fourteen fifty four, in that earlier house, ka teh ree na kor nah ro was born. She became Queen of Cyprus, and in the end gave her kingdom to the Venetian Republic.
+
+In the nineteenth century the pa lat so became the home of the mon tay dee pee eh tah, the city's pawn bank. For well over a century, Venetians brought their silver, their linen and their jewellery here in exchange for a loan. After that it held the archive of the bee en nah lay.
+
+The fon dat see oh nay prah da, set up by the fashion house, opened its Venice home here in twenty eleven. It shows ambitious exhibitions in the grand rooms. In twenty twenty four the Swiss artist kris toff boo shel turned the building back into a bankrupt pawnshop, following the layout of the original mon tay dee pee eh tah.
+
+What I find rather lovely is how much the building remembers. A queen, a bank for the poor, an archive, an art gallery. Venice rarely throws anything away. It just finds a new use for it.
+
+From here, walk a few minutes towards the ree al toe, to the fish market at the pesk eh ree a. It is liveliest in the morning. Its stalls sit under a neo Gothic lo ja, built in the early twentieth century to look as if it had always been there.

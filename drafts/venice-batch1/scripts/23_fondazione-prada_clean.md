@@ -1,0 +1,22 @@
+# Fondazione Prada
+
+**Visit** · Google Maps: *Fondazione Prada* · 45.440632, 12.332005  
+~314 words · about 2:05 at a natural pace
+
+---
+
+A queen was born on this spot. For a century and a half, Venetians pawned their silver here. Now it shows contemporary art.
+
+The front of Ca' Corner della Regina faces the Grand Canal, on the Santa Croce side, between the Rialto and the station. From land, the entrance is on Calle de Ca' Corner. If you can see the canal, look for the tall, white classical palazzo with its heavy ground floor of rough stone.
+
+It was built in the seventeen twenties by the architect Domenico Rossi, for the Corner family. The name, Corner della Regina, refers to the Gothic palazzo that stood here before. In fourteen fifty-four, in that earlier house, Caterina Cornaro was born. She became Queen of Cyprus, and in the end gave her kingdom to the Venetian Republic.
+
+In the nineteenth century the palazzo became the home of the Monte di Pietà, the city's pawn bank. For well over a century, Venetians brought their silver, their linen and their jewellery here in exchange for a loan. After that it held the archive of the Biennale.
+
+The Fondazione Prada, set up by the fashion house, opened its Venice home here in twenty eleven. It shows ambitious exhibitions in the grand rooms. In twenty twenty-four the Swiss artist Christoph Büchel turned the building back into a bankrupt pawnshop, following the layout of the original Monte di Pietà.
+
+What I find rather lovely is how much the building remembers. A queen, a bank for the poor, an archive, an art gallery. Venice rarely throws anything away. It just finds a new use for it.
+
+[beat]
+
+From here, walk a few minutes towards the Rialto, to the fish market at the Pescheria. It is liveliest in the morning. Its stalls sit under a neo-Gothic loggia, built in the early twentieth century to look as if it had always been there.

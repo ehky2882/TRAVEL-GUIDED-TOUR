@@ -1,0 +1,21 @@
+# Tessitura Luigi Bevilacqua — TTS-safe
+
+Read this version to the voice. Each beat is a plain paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+tessi too ra loo ee jee beh vee lak wa
+
+Somewhere behind these walls, an eighteenth century loom is weaving velvet a few centimetres at a time.
+
+kampo san zan deg o lah, in santa kro chay, a quiet square near the Grand Canal on the station side of the city. The weaving house is at santa kro chay thirteen twenty. You'll know it by the name, loo ee jee beh vee lak wa, beside the door. It is a working factory, open to visitors by appointment, so don't expect a shopfront.
+
+The family's link with Venetian silk goes back a very long way. A painting by jo vah nee man soo eh tee includes a small scroll naming a jah ko mo beh vee lak wa, weaver, around the year fourteen ninety nine. The present firm was founded in eighteen seventy five, when loo ee jee beh vee lak wa rescued old looms from the silk school of the Venetian Republic.
+
+They are still here. Eighteen looms, all of them original eighteenth century machines, worked by hand. The patterns are fed in on punched cards, the old jack ard system, the ancestor of every computer program.
+
+The gift detail is the velvet called so pra reet so. Its pattern is made of two kinds of pile: some loops left uncut, and some cut, which catch the light differently. It is so slow and skilled to weave that a day's work is measured in centimetres.
+
+Here's the thing. Velvet like this has gone into the ba zilli ka della sa loo tay here in Venice, into the Royal Palace in dresden and into Stockholm City Hall. It is one of the last places in the world making it this way. When you walk through grand interiors anywhere in Europe, you may well have touched its work without knowing.
+
+If you can't get inside, walk down to the Grand Canal from the kampo. You'll come out looking across the water to kanna reh jo. And if you'd rather see the velvets than the looms, look for the beh vee lak wa shops near San Marco, one of them by kampo santa maria del jeel yo.

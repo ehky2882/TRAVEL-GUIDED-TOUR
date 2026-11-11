@@ -1,0 +1,20 @@
+# Il Palazzo Experimental
+
+**Stay** · Google Maps: *Il Palazzo Experimental* · 45.430435, 12.323081  
+~308 words · about 2:03 at a natural pace
+
+---
+
+Three doors, side by side, on a Venetian waterfront: one for dinner, one for bed, and one for a cocktail. It is a very modern way to read an old palazzo.
+
+You're on the Zattere, the long sunny quay along the southern edge of Dorsoduro. The wide Giudecca Canal is behind you, and across it the island of Giudecca. Facing you is a palazzo of several storeys, with those three separate doors at street level. The restaurant, Adriatica, is behind one. Reception is behind another. The third belongs to the Experimental Cocktail Club.
+
+The building is said to have housed a naval headquarters in the nineteen thirties, before it became the hotel it is today, with thirty-two rooms. Some look out over the Giudecca Canal. Others look back onto a garden you would never guess was there, with its own landing stage on a quiet side canal.
+
+The interiors are by Dorothée Meilichzon, a Paris designer who looked hard at Venice before she drew anything. Terrazzo floors, the speckled stone-chip flooring you find in every old palazzo. Arched mirrors. Marble, and tiles glazed by hand. She took the house style of the city and turned the colour up.
+
+What I like about it is that it doesn't pretend. Plenty of Venetian hotels dress up as somewhere from the eighteenth century. This one is plainly from now, and it still couldn't be anywhere else. The stripes and the arches are Venetian ideas, borrowed and enjoyed rather than copied.
+
+[beat]
+
+Before you go, walk a little way along the Zattere in either direction. It is one of the few places in Venice where you can stroll in a straight line in full sun. Westwards, the quay runs out towards the old port; eastwards it brings you, eventually, to the tip of the customs house at Punta della Dogana.

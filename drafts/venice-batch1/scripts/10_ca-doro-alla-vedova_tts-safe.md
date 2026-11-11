@@ -1,0 +1,21 @@
+# Ca' d'Oro alla Vedova — TTS-safe
+
+Read this version to the voice. Each beat is a plain paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+car doro alla veh doh va
+
+Ask a Venetian where to find the best meatball in the city, and there's a fair chance they'll send you down this alley.
+
+Turn off the strah da no va, the wide, busy shopping street in kanna reh jo, close to the car doro water bus stop, and follow the narrow passage to its end. The doorway at the far end, with old lamps glowing yellow inside, is the tratto ree a. Venetians simply call it the veh doh va: the Widow.
+
+The name is a family story. When the owner's father died, his mother was left a widow, and the regulars started saying, let's meet at the widow's, when they wanted an om bra. An om bra is a small glass of wine, and it is the Venetian way to start an evening. The nickname stuck so firmly that it is now part of the official name.
+
+Inside, it looks the way you hope an old back a ro will look: copper pots hanging from the ceiling, old furniture, low yellow light. The place goes back more than a century, and it shows.
+
+Now have a look at the counter. That is where the pol pet tay sit: fried meatballs with a crisp, dark crust and a dense, savoury centre, served hot. Around them are the other chee ket tee, the small bar snacks of Venice. Sardines in sa or, sweet and sour with onions. bakka lah, the salt cod. Grilled cuttlefish, octopus salad.
+
+What's worth knowing is the difference between the counter and the tables. The tables are mostly visitors, and you'll want to book. The counter is where the neighbourhood comes for a meatball and a glass and is gone again in ten minutes. If you want to understand Venice, stand at the counter.
+
+When you come back out onto the strah da no va, walk a few steps towards the car doro stop and look for the lane down to the Grand Canal. The car doro itself, the Golden House, has one of the loveliest Gothic fronts on the canal, and it is best seen from the water.

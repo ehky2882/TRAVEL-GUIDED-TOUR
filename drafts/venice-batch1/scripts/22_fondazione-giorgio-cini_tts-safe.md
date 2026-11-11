@@ -1,0 +1,21 @@
+# Fondazione Giorgio Cini — TTS-safe
+
+Read this version to the voice. Each beat is a plain paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+fon dat see oh nay jor jo chee nee
+
+This whole island was rescued by a father in memory of his son.
+
+You're on san jor jo ma jor ay, the island directly across the water from San Marco. Stand on the quay with pa lah dee oh's white church to one side and the long monastery buildings behind it. The church is the part everyone sees from the ree va. The monastery, which most visitors never enter, is the fon dat see oh nay jor jo chee nee.
+
+For centuries this was a powerful Benedictine monastery. Then came Napoleon. The monks were driven out, and the island was used by the military and left to decay for almost a hundred and fifty years.
+
+In nineteen fifty one, the industrialist vee tor ee oh chee nee set up a foundation to restore the whole complex. He named it after his son jor jo, who had been killed in a plane crash in nineteen forty nine. The idea was to bring the island back to life as a centre for scholarship and culture, and it has been one ever since.
+
+Have a look at what was saved. There are two cloisters, one of them by pa lah dee oh. There is pa lah dee oh's refectory, the monks' great dining hall, for which pow lo veh ro neh zay painted his enormous Wedding at Cana. The original now hangs in the Louvre, a souvenir of Napoleon's visit. And there is a library and a grand staircase by bal da sah ray long gay na, the architect of the sa loo tay.
+
+What's worth knowing is that the foundation's spaces are visited only on guided tours. So the island stays quiet even when San Marco, five minutes across the water, is at its busiest.
+
+Book the guided tour if you can. If you have time afterwards, look for lay stan zay del veh tro, the foundation's glass gallery, also on the island. Then take the lift up the church bell tower next door for the best view in Venice.

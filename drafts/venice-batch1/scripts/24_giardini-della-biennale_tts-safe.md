@@ -1,0 +1,21 @@
+# Giardini della Biennale — TTS-safe
+
+Read this version to the voice. Each beat is a plain paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+jar dee nee della bee en nah lay
+
+Napoleon wanted Venice to have a public park. What it got, eventually, was the world's most famous art exhibition.
+
+The entrance to the jar dee nee, at the eastern end of kass tello, along the waterfront from San Marco. The trees and lawns in front of you are the only large public gardens in the historic city. Inside, scattered among them, are pavilions in every style of the last hundred and twenty years.
+
+Napoleon laid out the gardens in the early nineteenth century, clearing monasteries to do it. In eighteen ninety five the city held its first international art exhibition here, and it has been held every other year since. The first foreign country to build its own pavilion was Belgium, in nineteen oh seven. Today there are twenty nine national pavilions in the gardens, each country's statement of what it wanted to look like.
+
+Have a look for three of them. The Austrian pavilion, by yo sef hoffman, from nineteen thirty four. The little Venezuelan pavilion, by karlo scarpa, from the mid nineteen fifties: a small, careful study in light and concrete. And the Nordic pavilion, shared by Sweden, Norway and Finland, by svair reh fain, finished in nineteen sixty two.
+
+The gift detail is in Fehn's building. He didn't cut down the trees on his site. He built round them, and they grow up through his concrete roof. The roof itself is a lattice of thin concrete beams, which filters the light so it feels like daylight in a forest, even in Venice.
+
+And here's the thing. Most architecture is fixed in one place and one century. Here, a single walk takes you from nineteen oh seven to the present, building by building. It is the closest thing the world has to a library of national architecture.
+
+Outside the bee en nah lay season, the gardens are an ordinary park, and you can still see the pavilions from the outside. Walk on east to sant eh leh na, the quiet, leafy end of the city, where Venetians walk their dogs and nobody is in a hurry.

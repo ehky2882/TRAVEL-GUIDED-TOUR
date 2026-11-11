@@ -1,0 +1,21 @@
+# Basilica di San Giorgio Maggiore — TTS-safe
+
+Read this version to the voice. Each beat is a plain paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+ba zilli ka dee san jor jo ma jor ay
+
+You've almost certainly seen this church already, from across the water. Now see it the other way round.
+
+Stand on the little quay in front of the basilica, on the island of san jor jo ma jor ay. San Marco and the dohj's Palace are straight across the water. Behind you is the white front of the church, its columns and triangular pediments facing the city like a stage set.
+
+The church is by Andrea pa lah dee oh, the architect from vee chen za whose villas were copied across the English countryside for two hundred years. He began it in fifteen sixty six, but he died in fifteen eighty, before the front was built. It went up after his death, between about sixteen oh seven and sixteen eleven, under see mo nay so rella, following pa lah dee oh's design.
+
+Now have a look at the front. It is really two temple fronts laid over one another: a tall one for the nave, framed by four huge columns, and a wider, lower one behind it for the side aisles. It is pa lah dee oh's solution to an old problem: how to put the face of a Roman temple on a Christian church, which is a different shape.
+
+Inside, go up to the high altar and look for tinto retto's Last Supper, painted in the last years of his life, in the fifteen nineties. The table runs off at a steep diagonal, the room is lit by a single blazing lamp, and the angels swirl through the smoke.
+
+What's worth knowing is how carefully this was placed. The white front stands exactly opposite the pee at setta, so the view from San Marco and the view back are designed as a pair. Venice was looking at itself in a mirror.
+
+Take the lift up the bell tower. It costs a few euros, and the view from the top takes in San Marco, the joo deck a, the lee doe and on a clear day the Alps. It is, to my mind, the best view in Venice, and the queue is nothing like the one at San Marco's own tower.

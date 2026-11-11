@@ -1,0 +1,30 @@
+nn	slug	section	google_maps_name	lat	lon	words
+01	ca-di-dio	Stay	Ca' di Dio	45.433718	12.348677	367
+02	il-palazzo-experimental	Stay	Il Palazzo Experimental	45.430435	12.323081	308
+03	aman-venice	Stay	Aman Venice	45.436702	12.331960	353
+04	venissa	Stay	Venissa	45.488515	12.410955	319
+05	the-gritti-palace	Stay	The Gritti Palace, a Luxury Collection Hotel, Venice	45.431638	12.333107	270
+06	trattoria-antiche-carampane	Dine	Trattoria Antiche Carampane	45.438671	12.331115	298
+07	osteria-alle-testiere	Dine	Osteria alle Testiere	45.437119	12.340328	316
+08	local	Dine	Local	45.435632	12.345967	295
+09	trattoria-al-gatto-nero	Dine	Trattoria al Gatto Nero	45.484754	12.416360	291
+10	ca-doro-alla-vedova	Dine	Cà D'Oro alla Vedova	45.441372	12.334552	332
+11	cantinone-del-vino-gia-schiavi	Drink	Cantinone del Vino già Schiavi	45.430898	12.326667	305
+12	al-timon	Drink	Al Timon	45.445561	12.328437	270
+13	il-mercante	Drink	Il Mercante	45.437314	12.327291	280
+14	caffe-florian	Drink	Caffè Florian	45.433601	12.338283	308
+15	fortuny-showroom-and-factory	Shop	Fortuny Showroom and Factory	45.427601	12.320601	357
+16	tessitura-luigi-bevilacqua	Shop	Tessitura Luigi Bevilacqua	45.441494	12.327679	316
+17	ca-macana	Shop	Ca' Macana	45.434065	12.325566	319
+18	libreria-acqua-alta	Shop	Libreria Acqua Alta	45.438056	12.342269	335
+19	fondazione-querini-stampalia	Visit	Fondazione Querini Stampalia	45.436458	12.341035	352
+20	negozio-olivetti	Visit	Negozio Olivetti	45.434153	12.337532	319
+21	punta-della-dogana	Visit	Punta della Dogana	45.430740	12.336287	340
+22	fondazione-giorgio-cini	Visit	Fondazione Giorgio Cini	45.429283	12.342414	301
+23	fondazione-prada	Visit	Fondazione Prada	45.440632	12.332005	314
+24	giardini-della-biennale	Observe	Giardini della Biennale	45.429020	12.357933	337
+25	basilica-di-san-giorgio-maggiore	Observe	Basilica di San Giorgio Maggiore	45.429389	12.343279	337
+26	scala-contarini-del-bovolo	Observe	Scala Contarini del Bovolo	45.434810	12.334546	306
+27	ponte-della-costituzione	Observe	Ponte della Costituzione	45.438862	12.319459	363
+28	entrata-iuav-tolentini	Observe	Università Iuav di Venezia - Tolentini	45.437770	12.321834	328
+29	cimitero-di-san-michele	Observe	Cimitero di San Michele	45.446649	12.345638	346
