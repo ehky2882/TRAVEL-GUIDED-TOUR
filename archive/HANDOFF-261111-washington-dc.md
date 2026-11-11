@@ -21,6 +21,9 @@ against spelled-out numbers. gh-pages `493a56a`. Record: `drafts/washington-dc-b
 - ⚠️ **The DC scripts mark pauses as a bare `[beat]` line, not Philadelphia's `*[beat]*`.** Five more sit at the end of a
   sentence (W3). The first run leaked 48 into `transcriptText`, and `validate-tours-mirror` failed its control.
   The assembler now strips all three forms.
+- 🔴 **The first push shipped 101 fractional durations** (the manifest holds seconds to 0.1). `validate-tours-mirror`
+  passed them, but `LegacyCatalogCompatibilityTests` failed: old builds decode durations as `Int`, and one fraction loses
+  the whole catalogue. The assembler now rounds on read. Lesson in `docs/lessons.md` § 3.
 - Washington Monument joined its place (7.3 m) through `join-places.py`'s own `apply_join`, applied to that one entry only.
   The other eight joins `--max-move 100` reports were already pending on `main` before this batch and were left alone.
 

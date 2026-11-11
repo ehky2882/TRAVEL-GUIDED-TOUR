@@ -32,7 +32,9 @@ if not a.dry_run and not a.created:
 
 d = json.load(open(P))
 assert not any(m["id"] == MAKER for m in d["makers"]), "Atlas Studio WAS is already in the catalogue"
-DUR = {k: v["seconds"] for k, v in json.load(open(D + "audio-manifest.json")).items()}
+# Whole seconds: every build on phones decodes these as Int, and ONE fraction anywhere fails the whole
+# catalogue decode on those builds (LegacyCatalogCompatibilityTests caught 812.1 on the first DC run).
+DUR = {k: int(round(v["seconds"])) for k, v in json.load(open(D + "audio-manifest.json")).items()}
 
 
 def body(f):
@@ -209,7 +211,7 @@ for w, (title, herofrom, cat, tags, intro) in WALK.items():
     t = dict(id=U(f"atlas-tour:was:{slug}"), createdAt=a.created or "2026-11-11", title=title,
              shortDescription=cut(ip[0]), longDescription="\n\n".join(ip[:2]), makerId=MAKER,
              heroImageURL=hero, additionalImageURLs=gal, kind="multiStop", stops=stops, introAudioURL=None,
-             totalDurationSeconds=round(sum(s["audioDurationSeconds"] for s in stops), 1),
+             totalDurationSeconds=sum(s["audioDurationSeconds"] for s in stops),
              walkingDistanceMeters=DIST[w],
              centroidLatitude=round(sum(s["latitude"] for s in stops) / len(stops), 6),
              centroidLongitude=round(sum(s["longitude"] for s in stops) / len(stops), 6),

@@ -618,6 +618,15 @@ one file" shape `check-image-duplicates.py` exists to catch.
 
 ---
 
+### 🔴 Durations are WHOLE seconds — one fraction loses the catalogue on old builds (2026-11-11)
+
+Every build already on phones decodes `audioDurationSeconds` and `totalDurationSeconds` as `Int`. A
+single `812.1` anywhere in `Tours.json` makes that decode throw, and the build drops the **entire**
+catalogue, not one tour. The Washington DC assembler copied Philadelphia's line, but its audio manifest
+held fractional seconds, so 101 values shipped as floats. `validate-tours-mirror.py` passed it, and only
+`LegacyCatalogCompatibilityTests` in the simulator job caught it. **An assembler rounds with
+`int(round(seconds))` when it reads the manifest, never at the sum.**
+
 ## 4. Geocoding
 
 **A supplied coordinate is not a verified coordinate.** Reverse-verify every one at **zoom 18**.
