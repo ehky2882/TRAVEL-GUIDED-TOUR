@@ -314,3 +314,4 @@ Part-vs-whole rulings:
 | Monument to Richard Sorge (SovMod tour) + Richard Sorge Park (pin) | **YES**: the park exists for the monument; the place sits on the monument |
 | Weir Greenhouse (pin) + Green-Wood Cemetery (tour + pin) | **NO**: one building in a huge cemetery |
 | Magok Cultural Hall (pin) + Seoul Botanic Park (tour) | **NO**: a separate building in a big park |
+| Future Library (pin) + Deichman Bjørvika (place) | **YES**: joined, because the manuscripts are kept in Deichman's Silent Room |

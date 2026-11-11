@@ -3,6 +3,7 @@
 _opened 2026-10-02 · clear with `git rm status/owner/place-batch-261002-triage.md`_
 > ✅ **Answered 2026-11-11 (owner: "p all yes"):** Soho House Istanbul, Capilla San Bernardo, DDP and Zeitz MOCAA are now places (Žižkov had already been joined). Rows 6–8 are still open.
 > ✅ **Answered 2026-11-11 (owner: "Q1-3 YES", "Q4 NO"):** #8 Teshima Art Museum + café is now a place. Rows 6–7 are still open.
+> ✅ **Answered 2026-11-11:** #6 Future Library has joined Deichman ("Q11 YES"). Only #7 Sphere by Tim Raue (not a place in my read) is left.
 
 The 2026-10-02 triage batch (33 pins, 18 creators) landed new pins on sites the catalogue already has. Nothing was joined or created. Each one is your call (`docs/places.md`):
 

@@ -157372,7 +157372,8 @@
         "57C8A40C-E331-5B1F-913E-041B616649D2",
         "84C2C5C8-1CA0-542E-AA45-253050A817FC",
         "EE77BC04-4FBD-54B1-A0B9-1B3CD4B6BABF",
-        "fee8d132-bc35-5fc1-9f43-3d09244ddd88"
+        "fee8d132-bc35-5fc1-9f43-3d09244ddd88",
+        "7571CD81-5C0B-5FD7-BDA9-0E40FEEF3F92"
       ]
     },
     {
@@ -373470,8 +373471,8 @@
           "order": 0,
           "title": "Future Library",
           "caption": "meet the future library. one hundred authors, one a year, until 2114. @therealmargaretatwood wrote the first one in 2014. david mitchell, han kang and @ocean_vuong followed. all sealed in oslo until 2114. #futurelibrary #margaretatwood #bookcommunity",
-          "latitude": 59.9086875,
-          "longitude": 10.7525625,
+          "latitude": 59.908669,
+          "longitude": 10.752559,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -373483,8 +373484,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 59.9086875,
-      "centroidLongitude": 10.7525625,
+      "centroidLatitude": 59.908669,
+      "centroidLongitude": 10.752559,
       "city": "Oslo",
       "country": "Norway",
       "relatedTourIds": [
