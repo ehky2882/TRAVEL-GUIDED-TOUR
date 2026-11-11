@@ -3,7 +3,7 @@
 Worked with Edward's "Random 10/13" list (73 links). No place or hold question was ruled on in session; they are on `status/owner/random-batch-261111.md`.
 
 ## What shipped
-- **60 link pins** from 45 creators (22 new). Catalogue pins 4728 → 4788, makers 786 → 808, cities 1100 → 1108 (Aljezur, Richardson, Namwon, Margate, Malvern, San Vicente de Tagua Tagua, Waddesdon, Nazareth), countries and places unchanged.
+- **61 link pins** from 45 creators (22 new). Catalogue pins 4728 → 4789, makers 786 → 808, cities 1100 → 1108 (Aljezur, Richardson, Namwon, Margate, Malvern, San Vicente de Tagua Tagua, Waddesdon, Nazareth), countries and places unchanged.
 - **60 images** on gh-pages in one plumbing commit `e7febe9` (56 heroes + 4 TikTok avatars), 60 A, 0 modified. The existing `avatar-tiktok-francescobeggio.webp` was not re-uploaded.
 - Minted one URL at a time with `--title` (captions are paragraphs). The Chipperfield post (Turner Contemporary + Hepworth Wakefield) was split into two pins by city, ids re-derived with `merge-link-pins.py`'s own `expected_ids`.
 - 19 tags added to new pins so the validator's warning count stayed at the 742 baseline.
@@ -16,6 +16,7 @@ Worked with Edward's "Random 10/13" list (73 links). No place or hold question w
 - Zoo Sindang (@chaijoie): Edward gave 4 W 37th St, which is The Draper hotel (OSM hotel node 40.7504334, -73.9839857); the bar is pinned there.
 - Fung Wah Bus (@norbertobriceno): Edward gave 1 Allen St; pinned as The Fung Wah Bus Mural on that building's OSM point.
 - City of London sculpture (@livinglondonhistory): Edward gave 1 Poultry; pinned as The Reliefs at No 1 Poultry on the building's OSM node.
+- BIG block (@cityloop_nl): Edward gave Richard Mortensens Vej, Copenhagen — not Sluishuis. BIG's building on that street is 8 House (10 storeys); pinned on the existing @blessedarch 8 House coordinate. The VM Houses are on Ørestads Boulevard, not this street.
 - Held (see owner item): Zürich itinerary, Zoo Sindang NYC (no NYC address found), Fung Wah bus, City of London sculpture, BIG NL block (best guess Sluishuis), the dead post.
 - Sponsored posts pinned on the 10-11 precedent: Julia Ideson (Houston Chronicle), Institut français (ad).
 

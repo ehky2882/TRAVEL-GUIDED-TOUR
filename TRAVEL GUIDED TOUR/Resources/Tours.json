@@ -8079,6 +8079,16 @@
       "avatarEmoji": "🎵",
       "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.tiktok.com/@chaijoie"
+    },
+    {
+      "id": "644B1553-A609-5B67-BF32-7A41C2DD38FB",
+      "displayName": "Instagram @cityloop_nl",
+      "platform": "instagram",
+      "handle": "cityloop_nl",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/cityloop_nl/"
     }
   ],
   "tours": [
@@ -411487,6 +411497,53 @@
         "Art",
         "Hidden Gem",
         "Public Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "821773B8-2218-52EC-A67E-BCA7EA1DE069",
+      "createdAt": "2026-11-11",
+      "title": "8 House",
+      "shortDescription": "A post by @cityloop_nl on Instagram.",
+      "longDescription": "No daylight in the middle of a ten-storey block? Bjarke Ingels Group removed a part and mirrored it: terraces for everyone and light deep into the courtyard. 🌤️ #hiddengems #citytour #architecturetours",
+      "makerId": "644B1553-A609-5B67-BF32-7A41C2DD38FB",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/8-house-cityloopnl_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DfkocObReoG/",
+      "sourceAuthor": "@cityloop_nl",
+      "stops": [
+        {
+          "id": "3C0E8C18-BBE8-5E14-8789-6D4FF525FF3E",
+          "order": 0,
+          "title": "8 House",
+          "caption": "No daylight in the middle of a ten-storey block? Bjarke Ingels Group removed a part and mirrored it: terraces for everyone and light deep into the courtyard. 🌤️ #hiddengems #citytour #architecturetours",
+          "latitude": 55.6174713,
+          "longitude": 12.5717197,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/8-house-cityloopnl_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 55.6174713,
+      "centroidLongitude": 12.5717197,
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Contemporary",
+        "Designed by a Master",
+        "Bjarke Ingels"
       ],
       "priceUSD": 0
     }

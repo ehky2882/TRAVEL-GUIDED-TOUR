@@ -1,4 +1,4 @@
-# Random batch 11-11: 6 joins, 12 new places, 2 held links
+# Random batch 11-11: 6 joins, 13 new places, 1 held link
 
 _opened 2026-11-11 · clear with `git rm status/owner/random-batch-261111.md`_
 
@@ -20,10 +20,10 @@ The 2026-11-11 random batch (56 pins) landed several entries on sites the catalo
 | Lido Kaltern | @francescobeggio + @infinit.archive |
 | One Kearny Rooftop | @humminglion + @zorymory |
 | The Woolworth Building | NYC tour + @johnnymurtaugh vault pin (added after Edward named it) |
+| 8 House | @blessedarch + @cityloop_nl (added after Edward named the street) |
 | Nová scéna | @urban_garbagebin + @xanibi (the @insightcities "Nová Scéna & the National Theatre" pin sits 452 m east and may need moving) |
 
 **3. Held, not pinned — need a location or a ruling:**
-- @cityloop_nl BIG block with mirrored courtyard terraces: best guess Sluishuis, Amsterdam (already pinned by @blessedarch), unconfirmed.
 - Instagram DfN8sc9RHAv: embedding disabled, unreadable.
 
 **4. Skipped on precedent:** a private Park Ave apartment auction plug (@notenoughangers), and five same-creator repeats of buildings each creator has already pinned (Taichung Green Museumbrary, Park Seo-Bo Museum, House of the Redeemer, Toronto City Hall, Royal Bank Plaza).
