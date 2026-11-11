@@ -43194,13 +43194,13 @@
       "country": "France",
       "relatedTourIds": [
         "a3e0b206-b6c0-500f-b12e-b1c0961adc94",
+        "2235AA0B-E79C-5BD7-B705-1D564A66EEF5",
         "30300459-7c37-5aba-a5c7-b204827f4139",
         "a4561c4b-07ec-538a-a129-4a03c569ee88",
         "322cd311-c0e7-5fac-95cd-ff4825da045b",
         "22f6500a-08a3-5574-8b09-71a7b3844be8",
         "95104ff5-7467-5439-94a3-49282747578a",
-        "d24962af-60ab-52f4-9ad1-efa18d201a34",
-        "26414503-e43b-53a9-98b8-89ee80def03c"
+        "d24962af-60ab-52f4-9ad1-efa18d201a34"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -245415,8 +245415,8 @@
         "8e862c19-2481-5187-8e77-2dbbf7cbf18a",
         "280948c0-b59f-50d6-b237-2bb87253dede",
         "22f6500a-08a3-5574-8b09-71a7b3844be8",
-        "95104ff5-7467-5439-94a3-49282747578a",
-        "7138516c-1fdc-549e-a991-cacc60617242"
+        "2235AA0B-E79C-5BD7-B705-1D564A66EEF5",
+        "95104ff5-7467-5439-94a3-49282747578a"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -416099,6 +416099,16 @@
       "centroidLongitude": 2.31252,
       "city": "Paris",
       "country": "France",
+      "relatedTourIds": [
+        "e218cea4-0041-57b0-8ddf-194dab7f93c7",
+        "322cd311-c0e7-5fac-95cd-ff4825da045b",
+        "a3e0b206-b6c0-500f-b12e-b1c0961adc94",
+        "d24962af-60ab-52f4-9ad1-efa18d201a34",
+        "95104ff5-7467-5439-94a3-49282747578a",
+        "c5ef9a16-82d1-5366-a9d7-696ddd67b7ad",
+        "B5D1670D-63CA-5420-AE6D-102DADDB1945",
+        "30300459-7c37-5aba-a5c7-b204827f4139"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
