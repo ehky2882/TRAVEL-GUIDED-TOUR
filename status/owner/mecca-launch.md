@@ -5,6 +5,7 @@ _opened 2026-11-02 · clear with `git rm status/owner/mecca-launch.md`_
 > ✅ **Answered 2026-11-11 (owner: "Q5 YES"):** Abraj Al-Bait mall + the Abraj Al Bait pin are now one place, on the tour's point. Clock Tower museum / Fairmont: **NO** (owner: "Q6 NO"), so they stay separate. #2 and #3 are still open.
 > ✅ **Answered 2026-11-11 ("N FINE BUT DONT FORGET THEM"):** Raffles and Al Qurashi are kept separate for now (docs/places.md § Kept separate FOR NOW).
 > ✅ **Answered 2026-11-11 ("photos fine, for now"):** The photo licences are accepted for now and listed in drafts/CREDITS.md § Contributor-supplied photos… accepted FOR NOW. Still open: #2 the haram access note.
+> ✅ **Answered 2026-11-11 ("2. yes"): ADD the access note.** This is now a TASK for a session, not a question for the owner. For each Atlas Studio MAK tour whose site lies inside the haram boundary, append one plain sentence to `longDescription`: that entry is restricted to Muslims (and, where relevant, needs a permit or ticket). Check each site's location individually. Sites outside the boundary, e.g. hotels or malls that non-Muslims can't reach anyway, need judgement: say so only where it's true. Then validate and open a content PR, and clear this item.
 
 Mecca launched as **Atlas Studio MAK** (29 singles). For you to settle. The contributor is not the owner, so none of
 these were put to them as rulings, and nothing was created or joined.
