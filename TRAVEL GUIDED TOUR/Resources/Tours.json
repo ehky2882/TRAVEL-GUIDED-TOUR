@@ -162622,6 +162622,36 @@
         "77ace285-4381-5661-9c3e-017fac4d000e",
         "FE75D07B-D2A8-5E95-81F9-38F4B73FD4EF"
       ]
+    },
+    {
+      "id": "b5d4a532-10fb-5157-9462-593d60651f14",
+      "name": "City of Arts and Sciences",
+      "description": null,
+      "latitude": 39.45519405750457,
+      "longitude": -0.353149735581963,
+      "city": "Valencia",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "0ba914a0-2b66-5107-98c6-fc3b6d157194",
+        "6E3A00F4-7BAB-5066-B594-645008D93CE1"
+      ]
+    },
+    {
+      "id": "00a125a2-466b-5632-a56f-a57c12ce59f9",
+      "name": "Richard Sorge Park",
+      "description": null,
+      "latitude": 40.390673,
+      "longitude": 49.837101,
+      "city": "Baku",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "f68fb5ac-aaf0-54f1-bde5-ea002037e44e",
+        "942CC3C4-9538-5ECF-B64D-E015D7910A67"
+      ]
     }
   ],
   "linkPins": [
@@ -264940,8 +264970,8 @@
           "order": 0,
           "title": "City of Arts and Sciences",
           "caption": "The city of arts & sciences in Valencia #blessedarch #architecture #design #spain #valencia",
-          "latitude": 39.4557563,
-          "longitude": -0.352552,
+          "latitude": 39.45519405750457,
+          "longitude": -0.353149735581963,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -264953,8 +264983,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 39.4557563,
-      "centroidLongitude": -0.352552,
+      "centroidLatitude": 39.45519405750457,
+      "centroidLongitude": -0.353149735581963,
       "city": "Valencia",
       "country": "Spain",
       "primaryCategory": "architecture",
@@ -340354,8 +340384,8 @@
           "order": 0,
           "title": "Richard Sorge Park",
           "caption": "He saved millions of lives. The country he did it for pretended he didn’t exist. 📍 Richard Sorge Park, Baku, Azerbaijan #baku #ww2 #ussr #spy #japan",
-          "latitude": 40.38949,
-          "longitude": 49.83595,
+          "latitude": 40.390673,
+          "longitude": 49.837101,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -340367,8 +340397,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.38949,
-      "centroidLongitude": 49.83595,
+      "centroidLatitude": 40.390673,
+      "centroidLongitude": 49.837101,
       "city": "Baku",
       "country": "Azerbaijan",
       "relatedTourIds": [

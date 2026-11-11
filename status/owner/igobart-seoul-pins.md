@@ -2,6 +2,8 @@
 
 _opened 2026-10-26 · clear with `git rm status/owner/igobart-seoul-pins.md`_
 
+> ✅ **Answered 2026-11-11 (owner: "Q9 NO"):** Weir Greenhouse stays separate from Green-Wood. Magok Cultural Hall / Seoul Botanic Park and #2–#4 are still open.
+
 54 creator pins merged from a 71-link triage (mostly @igobart_'s Seoul history reels). The contributor is not necessarily the owner, so none of these were put to them as rulings, and nothing was created or joined.
 
 1. **Place questions (part vs whole — `docs/places.md` leaves this to you):**
