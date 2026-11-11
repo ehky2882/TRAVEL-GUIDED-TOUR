@@ -130427,8 +130427,8 @@
           "order": 0,
           "title": "Karl-Marx-Hof",
           "caption": "On Zwölfter-Februar-Platz, facing the great arches of the central block.",
-          "latitude": 48.25016,
-          "longitude": 16.364539,
+          "latitude": 48.24945,
+          "longitude": 16.36372,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vie-karl-marx-hof.mp3",
           "audioDurationSeconds": 116,
           "triggerMode": "geofenced",
@@ -130440,8 +130440,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 116,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 48.25016,
-      "centroidLongitude": 16.364539,
+      "centroidLatitude": 48.24945,
+      "centroidLongitude": 16.36372,
       "city": "Vienna",
       "country": "Austria",
       "relatedTourIds": [
@@ -133121,8 +133121,8 @@
           "order": 0,
           "title": "Deichman Bjørvika",
           "caption": "On the square between Oslo Central Station and the water, below the overhanging top floor.",
-          "latitude": 59.908885161683855,
-          "longitude": 10.752603142747933,
+          "latitude": 59.908669,
+          "longitude": 10.752559,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/osl-deichman-bjorvika.mp3",
           "audioDurationSeconds": 100,
           "triggerMode": "geofenced",
@@ -133134,8 +133134,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 100,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 59.908885161683855,
-      "centroidLongitude": 10.752603142747933,
+      "centroidLatitude": 59.908669,
+      "centroidLongitude": 10.752559,
       "city": "Oslo",
       "country": "Norway",
       "relatedTourIds": [
@@ -136785,8 +136785,8 @@
           "order": 0,
           "title": "Depot Boijmans Van Beuningen",
           "caption": "On the Museumpark lawn, far enough back to catch your reflection in the mirrored bowl.",
-          "latitude": 51.91393683358763,
-          "longitude": 4.471001291401594,
+          "latitude": 51.9139529,
+          "longitude": 4.471132,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rtm-depot-boijmans-van-beuningen.mp3",
           "audioDurationSeconds": 116,
           "triggerMode": "geofenced",
@@ -136798,8 +136798,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 116,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.91393683358763,
-      "centroidLongitude": 4.471001291401594,
+      "centroidLatitude": 51.9139529,
+      "centroidLongitude": 4.471132,
       "city": "Rotterdam",
       "country": "Netherlands",
       "relatedTourIds": [
@@ -154541,7 +154541,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "51fdf48f-2908-521e-86e9-5a49013fe49d",
-        "ED17F9C1-3111-5B3F-B5DB-8E5F326EEC53"
+        "ED17F9C1-3111-5B3F-B5DB-8E5F326EEC53",
+        "A6C1B75F-DA54-5070-A4A3-D0418E460CF8"
       ]
     },
     {
@@ -155188,7 +155189,8 @@
         "1fccf908-4bf6-4ce9-823d-a5145ec320e3",
         "60944363-58DF-54B1-90A4-EC2018EB3D19",
         "9FE0FC12-0930-567A-82C1-F97AFA8A8450",
-        "5A5E2A1A-D752-55A3-B09B-58ADEB1F4F42"
+        "5A5E2A1A-D752-55A3-B09B-58ADEB1F4F42",
+        "44CE9E59-31E5-5688-82B8-8A1BD6F89944"
       ]
     },
     {
@@ -155265,7 +155267,8 @@
       "tourIds": [
         "B522B7A5-C0A9-505E-808E-4E649A4F9D1E",
         "634E7A45-3154-5017-90B8-8D6B871361E2",
-        "881874E4-08F9-57C4-8713-150D3F47C8C0"
+        "881874E4-08F9-57C4-8713-150D3F47C8C0",
+        "997FD413-AB0C-569C-803D-77901FFEC974"
       ]
     },
     {
@@ -157308,7 +157311,8 @@
       "tourIds": [
         "57C8A40C-E331-5B1F-913E-041B616649D2",
         "84C2C5C8-1CA0-542E-AA45-253050A817FC",
-        "EE77BC04-4FBD-54B1-A0B9-1B3CD4B6BABF"
+        "EE77BC04-4FBD-54B1-A0B9-1B3CD4B6BABF",
+        "fee8d132-bc35-5fc1-9f43-3d09244ddd88"
       ]
     },
     {
@@ -157796,7 +157800,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "1f0bf5a5-e56d-5648-8b34-be4bc9cd10da",
-        "9c40bfd5-5e9c-55c4-a38a-c16bd38ccbf8"
+        "9c40bfd5-5e9c-55c4-a38a-c16bd38ccbf8",
+        "216E5EA2-DAAF-568F-9BF5-107F433E8BE2"
       ]
     },
     {
@@ -157860,7 +157865,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "27B39B0A-F6D6-584E-9F02-71AA6C694646",
-        "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F"
+        "06BDF086-8BC4-50C3-8BD8-1ADBF8A2184F",
+        "d10f1b9f-bee8-5dd0-be5a-c26a89dcf582"
       ]
     },
     {
@@ -159730,7 +159736,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "d2b4a854-c1ac-463a-bccd-fcf3f66f8399",
-        "7B38341C-D80D-5B9F-AC6F-259BEEA95A0E"
+        "7B38341C-D80D-5B9F-AC6F-259BEEA95A0E",
+        "B250524B-FD74-5D6F-A873-9701DAA15528"
       ]
     },
     {
@@ -160199,7 +160206,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "a342e458-5de5-4e74-82bf-26fc6b1ea4c0",
-        "961C83D0-A201-5117-B11C-47B55EA63DB5"
+        "961C83D0-A201-5117-B11C-47B55EA63DB5",
+        "C34B62B2-7FA5-5320-B769-C83F29E1B811"
       ]
     },
     {
@@ -160788,7 +160796,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "F8843370-1C63-50CB-85EE-6F1B12E3CDAA",
-        "2FD38570-D2AF-5F22-957B-B6CB9B76C1D6"
+        "2FD38570-D2AF-5F22-957B-B6CB9B76C1D6",
+        "12D16032-937F-5632-8734-2C5958564DAD"
       ]
     },
     {
@@ -160818,7 +160827,8 @@
       "additionalImageURLs": null,
       "tourIds": [
         "9FBA6174-676B-5E6C-A095-96F965D11D1C",
-        "8DA482EA-E980-5536-964C-5F68F1B79EAC"
+        "8DA482EA-E980-5536-964C-5F68F1B79EAC",
+        "058e446a-0d75-52a2-b775-cbf746f8edb9"
       ]
     },
     {
@@ -401058,8 +401068,8 @@
           "order": 0,
           "title": "Hampton Court Palace",
           "caption": "One of Britain's most iconic royal residences... (more content to come) 🏰 Once home to King Henry VIII, Hampton Court Palace is a stunning example of Tudor architecture and royal power. 🍗 Famous for its vast kitchens and courtly intrigues, including the fates of Henry’s wives. 🌹 The palace blends two architectural styles: the red-brick Tudor front and the elegant Baroque extensions by Christopher Wren. 🌿 Features one of the world’s oldest surviving mazes and beautifully maintained formal gardens. 👻 Said to be haunted by several royal ghosts, including Catherine Howard’s chilling screams echoing through the halls. #tudorhistory #hamptoncourtpalace #henryviii #englishheritage #royalhistory",
-          "latitude": 51.40368,
-          "longitude": -0.3377,
+          "latitude": 51.403684,
+          "longitude": -0.337696,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -401071,8 +401081,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 51.40368,
-      "centroidLongitude": -0.3377,
+      "centroidLatitude": 51.403684,
+      "centroidLongitude": -0.337696,
       "city": "London",
       "country": "United Kingdom",
       "relatedTourIds": [
@@ -404770,8 +404780,8 @@
           "order": 0,
           "title": "Operaparken",
           "caption": "Shared Copenhagen - Ep 6: Opera Park Completed in 2023 by Cobe Architects, this park replaces a modest lawn which sat here for almost 20 years. Now the new green space houses 6 separate gardens, from an English garden to an Oriental garden and even a subtropical winter garden which sits within the central cafe space. The curved paths create many routes through the space and the planting is arranged in layers so it gets lower towards the waterfront, inspired by an opera or theatre set. It’s free to enter from 7-11 all year!",
-          "latitude": 55.68095,
-          "longitude": 12.60012,
+          "latitude": 55.68103125138079,
+          "longitude": 12.600546768709197,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -404783,8 +404793,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 55.68095,
-      "centroidLongitude": 12.60012,
+      "centroidLatitude": 55.68103125138079,
+      "centroidLongitude": 12.600546768709197,
       "city": "Copenhagen",
       "country": "Denmark",
       "relatedTourIds": [

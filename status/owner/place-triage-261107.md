@@ -2,6 +2,8 @@
 
 _opened 2026-11-07 · clear with `git rm status/owner/place-triage-261107.md`_
 
+> ✅ **Answered 2026-11-11 (owner: "j all yes"):** Operaparken was joined to its place. The other 7 sites are still open.
+
 A 50-pin triage batch (2026-11-07) landed a second or third entry on eight sites. The contributor is not the owner, so none of these was put to them as a ruling, and nothing was created or joined.
 
 | Site | Entries | Distance | Check that found it |

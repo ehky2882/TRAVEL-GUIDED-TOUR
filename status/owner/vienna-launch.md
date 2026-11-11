@@ -2,6 +2,8 @@
 
 _opened 2026-10-18 · clear with `git rm status/owner/vienna-launch.md`_
 
+> ✅ **Answered 2026-11-11 (owner: "j all yes"):** #4 Karl-Marx-Hof was joined to its place. Rows 1–3, 5 and 6 are still open.
+
 Vienna launched as **Atlas Studio VIE** (35 singles). The contributor (arthur.yung) asked for six of the new tours to be
 **stacked on the existing creator pins** of the same subject ("same topic, different creators"). A place moves every
 member onto one point, so this is your call; nothing was created or joined.

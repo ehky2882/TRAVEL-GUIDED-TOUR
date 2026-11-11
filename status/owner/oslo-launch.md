@@ -2,6 +2,8 @@
 
 _opened 2026-10-21 · clear with `git rm status/owner/oslo-launch.md`_
 
+> ✅ **Answered 2026-11-11 (owner: "j all yes"):** Deichman Bjørvika was joined to its place. The Opera House, Future Library and photo licences are still open.
+
 Oslo launched as **Atlas Studio OSL** (17 singles). For you to settle. The contributor is not the owner, so none of
 these were put to them as rulings, and nothing was created or joined.
 
