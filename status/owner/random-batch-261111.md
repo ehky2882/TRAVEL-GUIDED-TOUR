@@ -1,4 +1,4 @@
-# Random batch 11-11: 6 joins, 11 new places, 7 held links
+# Random batch 11-11: 6 joins, 12 new places, 5 held links
 
 _opened 2026-11-11 · clear with `git rm status/owner/random-batch-261111.md`_
 
@@ -19,11 +19,10 @@ The 2026-11-11 random batch (56 pins) landed several entries on sites the catalo
 | Fondation Beyeler Expansion | @designboom + @dezeen |
 | Lido Kaltern | @francescobeggio + @infinit.archive |
 | One Kearny Rooftop | @humminglion + @zorymory |
+| The Woolworth Building | NYC tour + @johnnymurtaugh vault pin (added after Edward named it) |
 | Nová scéna | @urban_garbagebin + @xanibi (the @insightcities "Nová Scéna & the National Theatre" pin sits 452 m east and may need moving) |
 
 **3. Held, not pinned — need a location or a ruling:**
-- @johnnymurtaugh "What's in the vault?" (NYC; the cover shows a bank vault, no building named).
-- @myint.san.aung Zürich trip list (~20 places, a sponsored itinerary): explode, lead place only, or leave out?
 - @chaijoie "zoo sindang" cocktail bar "in midtown" NYC: every search finds only the Seoul bar. Need the NYC address.
 - @norbertobriceno Fung Wah Bus: the story of a bus route; the only fixed thing is the Allen Street mural. Pin the mural or leave out?
 - @livinglondonhistory "sculpture hiding in plain sight" in the City of London: the building is not named.

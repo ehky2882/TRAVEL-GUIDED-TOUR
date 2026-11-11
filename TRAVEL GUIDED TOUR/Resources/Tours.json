@@ -411294,6 +411294,52 @@
         "Notable Building"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "2A3B18EF-943B-53BD-848A-92A66384332E",
+      "createdAt": "2026-11-11",
+      "title": "The Woolworth Building Vault",
+      "shortDescription": "A post by @johnnymurtaugh on Instagram.",
+      "longDescription": "What’s in the vault? #vault #history #nyc",
+      "makerId": "3A1AD8A2-9D35-55A2-8F82-69FD99925964",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-woolworth-building-vault-johnnymurtaugh_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DekNY0xvyoO/",
+      "sourceAuthor": "@johnnymurtaugh",
+      "stops": [
+        {
+          "id": "1A6B8427-3BF7-5C69-951E-5AEE63848B0C",
+          "order": 0,
+          "title": "The Woolworth Building Vault",
+          "caption": "What’s in the vault? #vault #history #nyc",
+          "latitude": 40.7124,
+          "longitude": -74.0084,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-woolworth-building-vault-johnnymurtaugh_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7124,
+      "centroidLongitude": -74.0084,
+      "city": "New York",
+      "country": "United States",
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
     }
   ]
 }
