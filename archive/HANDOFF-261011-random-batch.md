@@ -25,3 +25,11 @@ Worked directly with **Edward (the owner)** in session, so place and advertising
 - He Art Museum's city is **Shunde**, matching the existing pin (not Foshan).
 - Hillstone Winter Park: OSM restaurant node, on Lake Killarney. Castelgrande entrance: Piazza del Sole.
 - Wikidata and Commons returned **HTTP 429** mid-session from this container; Photon (komoot) and Nominatim covered the gaps.
+
+## Follow-up 2026-11-11 — four held posts named by Edward
+- **Raffles London at The OWO** (@nicoletrilivas): OSM hotel node "The OWO", 57 Whitehall — 51.5055381, -0.1261729.
+- **Beaverbrook** (TikTok @emthenutritionist, formerly Cherkley Court): OSM manor node — 51.2771075, -0.3122992, city Leatherhead.
+- **Preserve Life Nutrition Nest** (TikTok @isaacfrench_): 1 Preserve Drive, Douglasville, GA 30135. No geocoder knows the road; the pin uses the venue's own JSON-LD geo, **33.6031, -84.824 — only 3–4 dp (~50–100 m)** on a 1,200-acre estate. Refine if a precise point turns up.
+- **CenTrio Cooling Plant** (@dan__asher): owner gave 300 W Van Buren St — 41.876906, -87.635344 (house-number point).
+- Heroes on gh-pages in `9c17737` (3 heroes + 2 avatars) and `88791ba` (1 hero), adds only.
+- Still held: Museum SAN and Evergreen (play-button covers) — `status/owner/random-batch-261011-held.md`.
