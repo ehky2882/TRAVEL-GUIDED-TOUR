@@ -162669,6 +162669,72 @@
         "43318a61-f8bd-51e1-a393-43ba4944b10e",
         "F9946337-3A37-591D-B5F2-EC0E8D3E268B"
       ]
+    },
+    {
+      "id": "bd68e36c-39fa-575c-a4c0-d3949a1e5e92",
+      "name": "St Stephen's Cathedral",
+      "description": null,
+      "latitude": 48.208492,
+      "longitude": 16.373127,
+      "city": "Vienna",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "D629228F-25C2-5392-A8F2-70F3099D83CC",
+        "DCEE1D70-8520-5EDA-8D69-92FC629235B1",
+        "05E14885-C833-5D28-A508-03747354DE81",
+        "BC7F7ECF-4EB5-5C9F-9002-5B3A013597BE",
+        "B4FB2A81-8E4F-5754-B6E6-835B45B95E22",
+        "954F83FF-1A38-52FB-85C4-C750980DBD47"
+      ]
+    },
+    {
+      "id": "97d25b2c-550b-5d30-b07d-f9d34a12a409",
+      "name": "Minorite Church",
+      "description": null,
+      "latitude": 48.209504,
+      "longitude": 16.363834,
+      "city": "Vienna",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "249F8C63-E1B4-5B7A-BC92-6F6AC2830A0C",
+        "CF1FAC10-88A3-51D1-AFC9-4CA6CF5569F5",
+        "C28BEB8C-2A30-57C4-8F93-E1273FAD4C24",
+        "D07FFD05-4FFD-5482-9D3F-2D199B7B735C"
+      ]
+    },
+    {
+      "id": "cd94c34b-7092-5c0c-8046-d568d65d1688",
+      "name": "St Michael's Church",
+      "description": null,
+      "latitude": 48.208028,
+      "longitude": 16.367376,
+      "city": "Vienna",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "D5E507B9-E670-5A65-9E82-CC36F3E6E54C",
+        "A9DC71C8-01D7-5E13-BA4B-F52C40026BFB"
+      ]
+    },
+    {
+      "id": "85beea34-1df6-581d-b014-ea46b8e45407",
+      "name": "Servite Church",
+      "description": null,
+      "latitude": 48.220682,
+      "longitude": 16.363638,
+      "city": "Vienna",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "C33F5AD9-FD84-5FF3-ABAE-4CB2540E91CB",
+        "64D3BC37-B816-5179-9C71-129FAC69CE63"
+      ]
     }
   ],
   "linkPins": [
