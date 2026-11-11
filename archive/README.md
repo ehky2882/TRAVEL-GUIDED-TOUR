@@ -397,4 +397,4 @@ Full text for every one of them is in
 - [HANDOFF-261108-fukuoka-marizon.md](HANDOFF-261108-fukuoka-marizon.md) — **Ocean & Resort Marizon** added to Atlas Studio FUK as its 31st single; coordinate from OSM (none supplied), no places
 - [HANDOFF-261109-fukuoka-pins.md](HANDOFF-261109-fukuoka-pins.md) — **22-pin Fukuoka/Kyushu batch** from 19 creators (17 new); 6 place questions and 1 held post to Edward
 - [HANDOFF-261110-kuala-lumpur.md](HANDOFF-261110-kuala-lumpur.md) — **Kuala Lumpur launch: Atlas Studio KUL**, 42 singles, 19 bilingual (Malay/Chinese mix), 18 new architect tags; no coordinate moved and no northward bias; 3 place questions to Edward
-- [HANDOFF-261111-random-batch.md](HANDOFF-261111-random-batch.md) — **Random batch: 59 link pins** from 73 links (45 creators, 22 new, 8 new cities); 6 joins, 12 new places and 3 held links to Edward
+- [HANDOFF-261111-random-batch.md](HANDOFF-261111-random-batch.md) — **Random batch: 60 link pins** from 73 links (45 creators, 22 new, 8 new cities); 6 joins, 12 new places and 2 held links to Edward
