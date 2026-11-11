@@ -316,3 +316,4 @@ Part-vs-whole rulings:
 | Magok Cultural Hall (pin) + Seoul Botanic Park (tour) | **NO**: a separate building in a big park |
 | Future Library (pin) + Deichman Bjørvika (place) | **YES**: joined, because the manuscripts are kept in Deichman's Silent Room |
 | Latin Quarter & Shakespeare and Company (tour) + Shakespeare and Company (pin) | **YES**: despite its title, the tour is a single stop on the shop and is about the shop |
+| Grace Farms — River Building (pin) + Grace Farms (place) | **YES**: all three pins are one place |
