@@ -17,7 +17,7 @@ Worked with Edward's "Random 10/13" list (73 links). No place or hold question w
 - Fung Wah Bus (@norbertobriceno): Edward gave 1 Allen St; pinned as The Fung Wah Bus Mural on that building's OSM point.
 - City of London sculpture (@livinglondonhistory): Edward gave 1 Poultry; pinned as The Reliefs at No 1 Poultry on the building's OSM node.
 - BIG block (@cityloop_nl): Edward gave Richard Mortensens Vej, Copenhagen — not Sluishuis. BIG's building on that street is 8 House (10 storeys); pinned on the existing @blessedarch 8 House coordinate (@cityloop_nl is a new creator). The VM Houses are on Ørestads Boulevard, not this street.
-- DfN8sc9RHAv: Edward says it is the Met Cloisters, but Instagram exposes no handle and no cover for it (embedding off), so it cannot be minted. Not worked around.
+- DfN8sc9RHAv: Edward says it is the Met Cloisters, but Instagram exposes no handle and no cover for it (embedding off), so it cannot be minted. Not worked around. Edward: drop it.
 - Held (see owner item): Zürich itinerary, Zoo Sindang NYC (no NYC address found), Fung Wah bus, City of London sculpture, BIG NL block (best guess Sluishuis), the dead post.
 - Sponsored posts pinned on the 10-11 precedent: Julia Ideson (Houston Chronicle), Institut français (ad).
 
