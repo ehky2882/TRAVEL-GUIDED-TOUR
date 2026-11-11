@@ -79,3 +79,4 @@ The owner said: *"if anything is being flagged because it appears as an ad, i do
 - Peter's Beach and Talo stay.
 - Five held posts are pinned: Vienna Central Cemetery, Ganterie Boon, Marisfrolg HQ, Kakinama and Hoshino Tea Museum. Their heroes were checked by eye (no play buttons) and pushed to gh-pages.
 - The ruling is now in the link-pin runbook and the atlas-upload skill, so contributor sessions stop holding ads.
+- Athens SNF Centre stays under Kallithea, and Udaipur keeps मांझी का घाट ("both keep it"). Cleared athens-launch and udaipur-launch.
