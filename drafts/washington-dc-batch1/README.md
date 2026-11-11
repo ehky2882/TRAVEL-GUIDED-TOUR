@@ -12,7 +12,7 @@ The author's newest handoff is **№8 (CLOSING)**, and its stale-upload check pa
 - **Audio:** 65 MP3s from the owner's Dropbox (2026-11-11), 31 singles + 34 walk segments, 7,799 s in all. Each was transcribed
   (faster-whisper base.en) and matched to its own script before upload. The low scorers differ only in digits against
   spelled-out numbers, and were read by eye. gh-pages `493a56a`. Record: `audio-manifest.json` (seconds, sha256, kbps and the
-  match score per file). **Whether the pronunciation pass happened is not known**. The owner should listen for *Nacotchtank*
+  match score per file). **Whether the pronunciation pass happened is not known**. **Owner, 2026-11-11: leave the pronunciation as recorded** (no listen-check owed). The flagged words were *Nacotchtank*
   (W2), *Lei Yixin* (06), *Bartholdi* (27) and the letter streets.
 - **Assembler:** `tools/wire_dc.py --created 2026-11-11`, adapted from Philadelphia's. Walk distances are the author's stated
   route lengths (W1 2.1 km, W2 3.2 km, W3 1.9 km, W4 2.6 km, W5 3.4 km), not straight-line × 1.25. Stage directions (`[beat]`, bare

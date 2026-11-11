@@ -35,7 +35,7 @@ are new. Union Station already existed as a two-pin place on OSM's station node,
 `drafts/washington-dc-batch1/tools/places_dc.py`.
 
 **Owner:** decided after launch to keep the Capitol pin on the building and the Ford's Theatre hero for now.
-`status/owner/washington-dc-launch.md` holds only the pronunciation listen.
+The owner then said to leave the pronunciation as recorded, so `status/owner/washington-dc-launch.md` is cleared and nothing is owed for DC.
 
 **Checks:** `validate-tours-mirror` 0 errors, 737 warnings (unchanged) · `check-image-duplicates --maker WAS` 168, clean, with
 Pillow · `spine-lookup` 36 asked, 0 failed · `swift scripts/validate-tours.swift` not run locally (no Swift on Linux), so CI runs it.
