@@ -162471,6 +162471,36 @@
         "5d1f8221-725a-5578-a79e-7c089c2a8014",
         "EBB987C9-7386-5FDB-A060-B0CAE64F0D36"
       ]
+    },
+    {
+      "id": "5d29334c-8300-5f5a-9c8f-453454c3c374",
+      "name": "Kolumba",
+      "description": null,
+      "latitude": 50.9385858,
+      "longitude": 6.953989,
+      "city": "Cologne",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "B8D5B36D-CFC3-582F-BB4A-7D580E6AE5E0",
+        "D87E4F94-DD1F-542A-9FAA-A6EB2D59EF82"
+      ]
+    },
+    {
+      "id": "8f356f72-07c1-5bf0-83b6-5dacc941575f",
+      "name": "FENIX",
+      "description": null,
+      "latitude": 51.9020903,
+      "longitude": 4.4843147,
+      "city": "Rotterdam",
+      "address": null,
+      "heroImageURL": null,
+      "additionalImageURLs": null,
+      "tourIds": [
+        "5f1bef3c-0cec-54af-9506-66f3a393ad2a",
+        "AFB5C454-4110-53FA-B529-AAD59AB3FE7A"
+      ]
     }
   ],
   "linkPins": [

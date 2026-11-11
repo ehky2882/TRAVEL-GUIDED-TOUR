@@ -49,3 +49,6 @@ cleared outright, and 16 partly answered ones carry an `> ✅ Answered` line.
 `validate-tours-mirror.py`: 0 errors, 2463 tours + 4721 pins + 580 places.
 `check-place-candidates.py`: NAME is now empty. `join-places.py`: only
 Parliament Square remains, which is deliberate.
+
+## Follow-up: Kolumba and FENIX
+The owner said yes ("kolumba and fenix yes"), so both are now places at 0 m and nothing moved. Places 580 → 582. `place-triage-261020` is cleared.
