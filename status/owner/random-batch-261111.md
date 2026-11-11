@@ -24,7 +24,7 @@ The 2026-11-11 random batch (56 pins) landed several entries on sites the catalo
 | Nová scéna | @urban_garbagebin + @xanibi (the @insightcities "Nová Scéna & the National Theatre" pin sits 452 m east and may need moving) |
 
 **3. Held, not pinned — need a location or a ruling:**
-- Instagram DfN8sc9RHAv: embedding disabled, unreadable.
+- Instagram DfN8sc9RHAv: Edward says it is **the Met Cloisters**. It still cannot be pinned: embedding is off and Instagram gives no creator handle or cover image. Send the creator's handle and a screenshot to use as the cover, or drop it.
 
 **4. Skipped on precedent:** a private Park Ave apartment auction plug (@notenoughangers), and five same-creator repeats of buildings each creator has already pinned (Taichung Green Museumbrary, Park Seo-Bo Museum, House of the Redeemer, Toronto City Hall, Royal Bank Plaza).
 
