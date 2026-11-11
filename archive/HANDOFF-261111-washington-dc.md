@@ -27,8 +27,11 @@ against spelled-out numbers. gh-pages `493a56a`. Record: `drafts/washington-dc-b
 **Architect tags (Job 5):** 11 new names, one line each in `Models/Tag.swift` and `scripts/validate-tours.swift`. The list and
 what was deliberately not tagged are in `drafts/washington-dc-batch1/README.md` § Wired.
 
-**Owner:** `status/owner/washington-dc-launch.md` holds 3 place questions (National Archives, Old Post Office, Union Station),
-the Capitol trigger point, the Ford's Theatre hero banner and a pronunciation listen.
+**Places (owner: "make the 3 places"):** places 513 → 515. National Archives (0 m) and Old Post Office (pin moved 38.5 m)
+are new. Union Station already existed as a two-pin place on OSM's station node, so the tour joined it (110.4 m). Done by
+`drafts/washington-dc-batch1/tools/places_dc.py`.
+
+**Owner:** `status/owner/washington-dc-launch.md` holds the Capitol trigger point, the Ford's Theatre hero banner and a pronunciation listen.
 
 **Checks:** `validate-tours-mirror` 0 errors, 737 warnings (unchanged) · `check-image-duplicates --maker WAS` 168, clean, with
 Pillow · `spine-lookup` 36 asked, 0 failed · `swift scripts/validate-tours.swift` not run locally (no Swift on Linux), so CI runs it.

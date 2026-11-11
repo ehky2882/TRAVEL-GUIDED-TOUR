@@ -154135,8 +154135,8 @@
           "order": 0,
           "title": "Union Station",
           "caption": "You should be standing in Columbus Circle, in front of the station, with the fountain behind you and the long white facade ahead — three great arches in the middle, a colonnade either side, six stone figures along the roofline.",
-          "latitude": 38.897643,
-          "longitude": -77.006146,
+          "latitude": 38.89777,
+          "longitude": -77.00741,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/washington-union-station.mp3",
           "audioDurationSeconds": 146.9,
           "triggerMode": "geofenced",
@@ -154148,8 +154148,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 146.9,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 38.897643,
-      "centroidLongitude": -77.006146,
+      "centroidLatitude": 38.89777,
+      "centroidLongitude": -77.00741,
       "city": "Washington",
       "country": "United States",
       "relatedTourIds": [],
@@ -163494,16 +163494,17 @@
     {
       "id": "a0261372-b7ee-56d6-b49f-9df3ab6f7611",
       "name": "Union Station",
-      "description": null,
+      "description": "Daniel Burnham's Beaux-Arts station at the foot of Capitol Hill, opened in 1907. Its triple-arched front borrows from Rome's triumphal arches, and its main hall from the Baths of Diocletian.",
       "latitude": 38.89777,
       "longitude": -77.00741,
       "city": "Washington",
-      "address": null,
-      "heroImageURL": null,
+      "address": "50 Massachusetts Avenue NE, Washington, DC",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/washington-union-station_hero.webp",
       "additionalImageURLs": null,
       "tourIds": [
         "CB462ED4-4B28-56C7-AA6E-62435D878E24",
-        "5F327DC1-72B4-5DC9-ACFA-E347D3341F2D"
+        "5F327DC1-72B4-5DC9-ACFA-E347D3341F2D",
+        "93ac542c-12ad-51b8-b5f3-564e97cdcd2a"
       ]
     },
     {
@@ -163685,6 +163686,36 @@
       "tourIds": [
         "2EB8F325-FD2B-564E-8C28-47E7785EE21E",
         "2100A100-CEA1-5567-ABED-8641E499EE12"
+      ]
+    },
+    {
+      "id": "22d21ee2-acd0-5a75-af22-cf170aeef18a",
+      "name": "National Archives",
+      "description": "John Russell Pope's temple between Constitution and Pennsylvania Avenues, finished in 1935 to hold the nation's records. The Declaration of Independence, the Constitution and the Bill of Rights are on show under the dome of its Rotunda.",
+      "latitude": 38.892737,
+      "longitude": -77.02292,
+      "city": "Washington",
+      "address": "700 Pennsylvania Avenue NW, Washington, DC",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-archives-dc_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "2ed82217-f8ff-5103-947a-edc78a52a601",
+        "89C85E50-E043-5277-B5C5-5D3C447B707C"
+      ]
+    },
+    {
+      "id": "5f9f4d7e-33fe-5e15-ab7b-4fe22fe6aab5",
+      "name": "Old Post Office",
+      "description": "Willoughby J. Edbrooke's granite Romanesque block on Pennsylvania Avenue, finished in 1899 as the city's main post office and saved from demolition in the 1970s. The rest of the building is now a hotel; the clock tower's observation deck is run by the National Park Service.",
+      "latitude": 38.894118,
+      "longitude": -77.027563,
+      "city": "Washington",
+      "address": "1100 Pennsylvania Avenue NW, Washington, DC",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-post-office-dc_hero.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "b175bd46-1ca3-55c0-bcc8-2d1db230dd22",
+        "687E8957-6DE8-5FC3-BC0A-AA3A98F514FC"
       ]
     }
   ],
@@ -370615,8 +370646,8 @@
           "order": 0,
           "title": "Old Post Office Tower",
           "caption": "🏛️✨ For almost a year, the Old Post Office Tower has been closed, but now it’s back open under the management of the Waldorf Astoria Hotel. 🕰️ It’s free to enter with no tickets required, and you get some of the best 360* views on DC! #washingtondc #thingstodoindc",
-          "latitude": 38.89398,
-          "longitude": -77.02797,
+          "latitude": 38.894118,
+          "longitude": -77.027563,
           "audioURL": "",
           "audioDurationSeconds": 0,
           "triggerMode": "manual",
@@ -370628,8 +370659,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 0,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 38.89398,
-      "centroidLongitude": -77.02797,
+      "centroidLatitude": 38.894118,
+      "centroidLongitude": -77.027563,
       "city": "Washington",
       "country": "United States",
       "relatedTourIds": [

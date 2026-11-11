@@ -29,12 +29,14 @@ The author's newest handoff is **№8 (CLOSING)**, and its stale-upload check pa
 - **Checks:** `validate-tours-mirror` 0 errors, 737 warnings (unchanged) · `check-image-duplicates --maker WAS` 168 images, no
   duplicates (Pillow) · `spine-lookup` 36 asked, 0 failed.
 
-### Places: for the owner, nothing created
+### Places: all three made on the owner's word (2026-11-11, "make the 3 places")
 | New Atlas tour | Existing entry | Distance | Note |
 |---|---|---|---|
 | 08 National Archives | pin *National Archives Building* | 0 m | EXACT · PROVEN |
 | 19 Old Post Office and Clock Tower | pin *Old Post Office Tower* | 38 m | same building |
 | 12 Union Station | pin *Union Station* | 110 m | same building; the *Continental Club, Union Station* pin is a tenant, not the site |
+
+`tools/places_dc.py` did it through `join-places.py`'s own `apply_join`. **National Archives** is new (both members already coincident, 0 m). **Old Post Office** is new, on the tour's point (the building, OSM way 66418840), with the pin moved 38.5 m. **Union Station already existed** as a place of two creator pins (*Union Station* and the *Continental Club*, which the owner had put in it), anchored on OSM's station node. The tour joined it, moving 110.4 m from the building's centroid; the place's empty description, address and hero were filled.
 
 01 Lincoln Memorial / W1 and 16 Tidal Basin / W2 share a point because each walk starts at the single. A walk is not a second
 name for its first stop, so these are not places.
