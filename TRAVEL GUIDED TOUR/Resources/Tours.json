@@ -14659,10 +14659,11 @@
         "109ccfc9-3c6d-4ec7-bc70-09ed412b9ff3",
         "715c30c6-bec9-49de-ba5d-f0686e3546a9",
         "c0d22a3f-9f61-5da3-b436-9c6fbabe2db0",
+        "93ac542c-12ad-51b8-b5f3-564e97cdcd2a",
         "c9431a16-1547-5e38-ae89-019ff33cceca",
         "722ece7b-41f5-5ea0-a6a4-e00155cdf7d6",
-        "1cf0e9cf-5edd-5c04-a250-7b58ec528c37",
-        "5F327DC1-72B4-5DC9-ACFA-E347D3341F2D"
+        "53c95df8-0b6d-5242-b393-d822e4a5f18d",
+        "1cf0e9cf-5edd-5c04-a250-7b58ec528c37"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -24132,9 +24133,9 @@
         "3ad6f369-1a73-595e-8a78-26e67a7b139b",
         "af71230e-eb66-5732-831b-f799b735f869",
         "0b030b2b-eab2-50d8-bf50-31e810357fb0",
+        "03f46680-ea6c-5eab-9020-167b59b0f0c5",
         "c2d24ddb-a962-53a1-a384-51764dc01f93",
-        "42D33D2D-6830-5CF8-9CD7-906DC26CAA39",
-        "136E6351-B1C3-4AA4-9153-460B6C1AE76B"
+        "42D33D2D-6830-5CF8-9CD7-906DC26CAA39"
       ],
       "walkingDistanceMeters": null
     },
@@ -29737,6 +29738,7 @@
         "743bc26a-541e-5c6d-bd99-a9cf859a3f6e",
         "a9fdb5d8-189d-551c-83c2-730376a9f0ae",
         "d6238f60-904e-55ea-b68b-0a72f6583c30",
+        "ea3b6973-1d7c-5d29-ba48-ccb95189b26e",
         "130b8289-d095-5823-a4c7-a5c8c4e30c34"
       ],
       "primaryCategory": "natureAndParks",
@@ -30569,7 +30571,7 @@
         "d39a0aca-478c-4f6f-9af0-73bfe7c8aef9",
         "8acb04c1-0a15-46d9-9c4e-5ac2ce7f9443",
         "1EE64FCC-09C6-520C-A387-F2CF4DA5856E",
-        "EA9A618A-D144-56EE-84BB-F755458B4D8C"
+        "ea3b6973-1d7c-5d29-ba48-ccb95189b26e"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -84933,11 +84935,11 @@
         "cf1036ca-7f9e-56b0-9181-3bb8ae043f46",
         "0b188d21-824e-4ced-8514-7f0032ed69b3",
         "7ad5059f-976e-4ecf-a17a-be8d5e907644",
+        "03f46680-ea6c-5eab-9020-167b59b0f0c5",
         "3ad6f369-1a73-595e-8a78-26e67a7b139b",
         "136E6351-B1C3-4AA4-9153-460B6C1AE76B",
         "1b7d0be6-3d92-57a3-a364-bb72fe106875",
-        "e6c19c3e-c40d-5b9d-a494-859e3e157759",
-        "1435E2BA-31B2-54A8-BAF1-EDF4A6420E68"
+        "e6c19c3e-c40d-5b9d-a494-859e3e157759"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -85110,11 +85112,11 @@
         "4e64ff24-e07b-5ebd-aedf-d562499e0899",
         "1acbaeeb-ba40-5c80-88a2-a7e51c060d10",
         "72d5ed46-fb94-55db-a377-d1b027f4236d",
+        "de01b721-a99d-5bc8-b6f4-0d46cd1ee31d",
+        "25316a4e-f259-560c-8190-45bed92ccdd4",
         "d5c8a6e1-9d47-4e54-8a06-3c9e7b2d1f9c",
         "06caa939-25fe-4f25-8936-5ac6b4993db8",
-        "bfe0f28d-ac77-574e-9439-bc65dc44cf1d",
-        "976c27db-1a0f-5341-b70e-950e461266b3",
-        "4e8b2a91-6d3c-4f57-8a1e-9c0b5d7e2f43"
+        "bfe0f28d-ac77-574e-9439-bc65dc44cf1d"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -85232,7 +85234,7 @@
         "92db00f1-f1d4-4067-ab7c-5ecc519bf949",
         "70a6cf56-ba03-4be2-b569-dda7b08ef7a4",
         "4f107980-4256-546b-9b85-07a73fa3cc7b",
-        "3dd57e77-d4fe-509e-a552-daf4d97c146c"
+        "82a16b73-b30c-5ced-ae23-6314b5349b40"
       ],
       "primaryCategory": "literature",
       "tags": [
@@ -85793,8 +85795,8 @@
         "4f107980-4256-546b-9b85-07a73fa3cc7b",
         "976c27db-1a0f-5341-b70e-950e461266b3",
         "d5c8a6e1-9d47-4e54-8a06-3c9e7b2d1f9c",
-        "eb3aeb11-522a-599c-831b-72336b5b48fd",
-        "2e042406-4c16-5fdc-a906-86694f87341c"
+        "de01b721-a99d-5bc8-b6f4-0d46cd1ee31d",
+        "eb3aeb11-522a-599c-831b-72336b5b48fd"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -88563,14 +88565,14 @@
       "city": "Cape Town",
       "country": "South Africa",
       "relatedTourIds": [
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "31a42b96-22b4-50ec-87d1-0cbd1bb058bb",
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "6b90eef5-8d1b-5e12-a1e2-2ce5730ccdb1",
+        "cdbd6dc8-d0f2-5b85-991e-d25f68f30a2e",
+        "4ab9592a-9f2f-547f-9335-c7ca377c18e0",
         "6f98734d-a213-59ee-92fe-11dac9e5dabb",
-        "f7c8a6e1-9d49-4e54-8a06-3c9e7b2d1f9e",
-        "F5344049-A11D-5976-B6D6-6749DE4C1CFB",
-        "5baca880-3ef2-5ac7-8c12-4470bfa451bc",
-        "20d42a62-3c4f-5cc1-8be6-f130b6a3637c",
-        "06caa939-25fe-4f25-8936-5ac6b4993db8",
-        "2f9dad4b-6c41-497e-a363-f8a6f5813ad7",
-        "e4581b3f-3f5b-5690-ae6f-9f10fe29c87f"
+        "25316a4e-f259-560c-8190-45bed92ccdd4"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -97868,6 +97870,7 @@
       "city": "Stockholm",
       "country": "Sweden",
       "relatedTourIds": [
+        "03f46680-ea6c-5eab-9020-167b59b0f0c5",
         "0b030b2b-eab2-50d8-bf50-31e810357fb0",
         "af71230e-eb66-5732-831b-f799b735f869",
         "4f5eb672-dc6e-5d4d-a807-9f79771ba281",
@@ -109286,7 +109289,7 @@
         "71dcd5cf-b253-51d6-b020-e259fbb5a128",
         "48c34282-9593-5667-9932-b2ce905860f7",
         "90beaf95-a629-5b1e-95f9-c16a4a6f06f3",
-        "6c8c4fd5-a437-56fc-a1b6-aa6c92944200"
+        "25316a4e-f259-560c-8190-45bed92ccdd4"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -114765,13 +114768,13 @@
       "country": "Romania",
       "relatedTourIds": [
         "2e042406-4c16-5fdc-a906-86694f87341c",
+        "25316a4e-f259-560c-8190-45bed92ccdd4",
         "455f7e84-75fe-5909-a6be-7a806f27f3e6",
         "ce456ec3-1071-5475-bcce-e0973b88d945",
         "1fcb4bcd-2b25-5b6c-acbb-12222610ac71",
         "0ce03565-8bb6-57fe-baea-e25a498289e9",
         "6ffca605-d730-57de-b935-06e37b29cf41",
-        "36ea545d-859f-5a0b-b4c0-6c5e6c2eb2c7",
-        "AA41DCD3-D243-5514-9A3F-639DF499F6DA"
+        "36ea545d-859f-5a0b-b4c0-6c5e6c2eb2c7"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -115093,14 +115096,14 @@
       "city": "Niš",
       "country": "Serbia",
       "relatedTourIds": [
+        "25316a4e-f259-560c-8190-45bed92ccdd4",
         "6ffca605-d730-57de-b935-06e37b29cf41",
         "2e042406-4c16-5fdc-a906-86694f87341c",
         "12fbc584-4e8d-5af5-8ff5-9987ee9e094a",
+        "e485c7cb-6305-5f2b-a888-98394d5695f7",
         "20d42a62-3c4f-5cc1-8be6-f130b6a3637c",
         "976c27db-1a0f-5341-b70e-950e461266b3",
-        "0ce03565-8bb6-57fe-baea-e25a498289e9",
-        "a6eea407-0e98-5fc9-badf-b8f6b25b2946",
-        "1db04a65-5308-5098-b30f-57de7f565a53"
+        "0ce03565-8bb6-57fe-baea-e25a498289e9"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -121269,9 +121272,9 @@
         "f379b0be-08ce-5afb-8de4-ad03719da9b5",
         "bfe0f28d-ac77-574e-9439-bc65dc44cf1d",
         "2d5545c6-9f84-5bdb-bac9-30f1cb2214d0",
+        "e485c7cb-6305-5f2b-a888-98394d5695f7",
         "8d25b87d-6ebf-5352-9faa-fb83e10170bc",
-        "2e042406-4c16-5fdc-a906-86694f87341c",
-        "135ca6c5-1512-5261-ba9c-7513bd0702d5"
+        "2e042406-4c16-5fdc-a906-86694f87341c"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -122042,8 +122045,8 @@
         "872b4591-c599-5182-ba13-f08a36163a72",
         "c056c499-76ae-5306-a407-b4eb22663f2e",
         "db7c779a-39ea-5e1b-a09a-b4e727b6a9d7",
-        "0ce03565-8bb6-57fe-baea-e25a498289e9",
-        "ba5ea7a0-1d86-5aa2-ab9f-047298dd2710"
+        "25316a4e-f259-560c-8190-45bed92ccdd4",
+        "6b90eef5-8d1b-5e12-a1e2-2ce5730ccdb1"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -153633,7 +153636,16 @@
       "centroidLongitude": -77.050172,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "cdbd6dc8-d0f2-5b85-991e-d25f68f30a2e",
+        "31a42b96-22b4-50ec-87d1-0cbd1bb058bb",
+        "25316a4e-f259-560c-8190-45bed92ccdd4",
+        "4ab9592a-9f2f-547f-9335-c7ca377c18e0",
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "6b90eef5-8d1b-5e12-a1e2-2ce5730ccdb1",
+        "de01b721-a99d-5bc8-b6f4-0d46cd1ee31d",
+        "7f2262d0-bd19-5a73-afb9-3691e07be7ea"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -153685,7 +153697,16 @@
       "centroidLongitude": -77.0353125,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "cdbd6dc8-d0f2-5b85-991e-d25f68f30a2e",
+        "4ab9592a-9f2f-547f-9335-c7ca377c18e0",
+        "6b90eef5-8d1b-5e12-a1e2-2ce5730ccdb1",
+        "31a42b96-22b4-50ec-87d1-0cbd1bb058bb",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40",
+        "25316a4e-f259-560c-8190-45bed92ccdd4",
+        "7f2262d0-bd19-5a73-afb9-3691e07be7ea"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -153740,7 +153761,16 @@
       "centroidLongitude": -77.009021,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40",
+        "2ed82217-f8ff-5103-947a-edc78a52a601",
+        "bfaa7896-1ca8-5057-bbc7-d7a616564e45",
+        "4523c911-a496-57f7-9b4a-b15cbc377960",
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "5ef33486-79d9-5ed3-8191-7a2d0ba34929",
+        "a2c80c9f-e154-5070-9d1e-ff739689e7ac"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Civic",
@@ -153793,7 +153823,16 @@
       "centroidLongitude": -77.036552,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "bfaa7896-1ca8-5057-bbc7-d7a616564e45",
+        "a2c80c9f-e154-5070-9d1e-ff739689e7ac",
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "e7e8605c-dcee-5645-b71f-91492b7bfa8f",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40",
+        "f1afe66f-3e63-5853-8b3e-44adc82e35fd",
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "2ed82217-f8ff-5103-947a-edc78a52a601"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Civic",
@@ -153847,7 +153886,16 @@
       "centroidLongitude": -77.036551,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "7f2262d0-bd19-5a73-afb9-3691e07be7ea",
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "6b90eef5-8d1b-5e12-a1e2-2ce5730ccdb1",
+        "cdbd6dc8-d0f2-5b85-991e-d25f68f30a2e",
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "31a42b96-22b4-50ec-87d1-0cbd1bb058bb",
+        "25316a4e-f259-560c-8190-45bed92ccdd4",
+        "de01b721-a99d-5bc8-b6f4-0d46cd1ee31d"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -153901,7 +153949,16 @@
       "centroidLongitude": -77.044456,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "cdbd6dc8-d0f2-5b85-991e-d25f68f30a2e",
+        "6b90eef5-8d1b-5e12-a1e2-2ce5730ccdb1",
+        "25316a4e-f259-560c-8190-45bed92ccdd4",
+        "7f2262d0-bd19-5a73-afb9-3691e07be7ea",
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "4ab9592a-9f2f-547f-9335-c7ca377c18e0",
+        "e485c7cb-6305-5f2b-a888-98394d5695f7"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -153953,7 +154010,16 @@
       "centroidLongitude": -77.048087,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "cdbd6dc8-d0f2-5b85-991e-d25f68f30a2e",
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "e485c7cb-6305-5f2b-a888-98394d5695f7",
+        "31a42b96-22b4-50ec-87d1-0cbd1bb058bb",
+        "6b90eef5-8d1b-5e12-a1e2-2ce5730ccdb1",
+        "de01b721-a99d-5bc8-b6f4-0d46cd1ee31d",
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "4ab9592a-9f2f-547f-9335-c7ca377c18e0"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -154004,7 +154070,16 @@
       "centroidLongitude": -77.02292,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40",
+        "e7e8605c-dcee-5645-b71f-91492b7bfa8f",
+        "bfaa7896-1ca8-5057-bbc7-d7a616564e45",
+        "ea0a1b42-b91d-5fd3-94ac-a4457c9ea0d6",
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "4ab9592a-9f2f-547f-9335-c7ca377c18e0"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Civic",
@@ -154058,7 +154133,16 @@
       "centroidLongitude": -77.004636,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "2ed82217-f8ff-5103-947a-edc78a52a601",
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "bfaa7896-1ca8-5057-bbc7-d7a616564e45",
+        "e7e8605c-dcee-5645-b71f-91492b7bfa8f",
+        "6b90eef5-8d1b-5e12-a1e2-2ce5730ccdb1",
+        "a2c80c9f-e154-5070-9d1e-ff739689e7ac",
+        "4523c911-a496-57f7-9b4a-b15cbc377960"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Library",
@@ -154112,7 +154196,16 @@
       "centroidLongitude": -77.004439,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "bfaa7896-1ca8-5057-bbc7-d7a616564e45",
+        "a2c80c9f-e154-5070-9d1e-ff739689e7ac",
+        "2ed82217-f8ff-5103-947a-edc78a52a601",
+        "4523c911-a496-57f7-9b4a-b15cbc377960",
+        "b175bd46-1ca3-55c0-bcc8-2d1db230dd22",
+        "e7e8605c-dcee-5645-b71f-91492b7bfa8f",
+        "a2275a27-18e1-5419-af4d-6400430b60eb"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Civic",
@@ -154161,7 +154254,16 @@
       "centroidLongitude": -77.060165,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "4d3fe66e-64c1-5359-be1b-a0dfffde0354",
+        "7f2262d0-bd19-5a73-afb9-3691e07be7ea",
+        "581F1578-98A2-5DFC-9F21-7EB969F78DAF",
+        "f1afe66f-3e63-5853-8b3e-44adc82e35fd",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40",
+        "4dcd4490-2d88-56cc-bf34-db2e405b464a",
+        "4ab9592a-9f2f-547f-9335-c7ca377c18e0",
+        "bfaa7896-1ca8-5057-bbc7-d7a616564e45"
+      ],
       "primaryCategory": "history",
       "tags": [
         "District",
@@ -154212,7 +154314,16 @@
       "centroidLongitude": -77.00741,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "5F327DC1-72B4-5DC9-ACFA-E347D3341F2D",
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40",
+        "e7e8605c-dcee-5645-b71f-91492b7bfa8f",
+        "a2c80c9f-e154-5070-9d1e-ff739689e7ac",
+        "5afdb722-7881-59e1-9228-840780c47e50",
+        "4ab9592a-9f2f-547f-9335-c7ca377c18e0"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -154265,7 +154376,16 @@
       "centroidLongitude": -77.040308,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "cdbd6dc8-d0f2-5b85-991e-d25f68f30a2e",
+        "25316a4e-f259-560c-8190-45bed92ccdd4",
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "e485c7cb-6305-5f2b-a888-98394d5695f7",
+        "6b90eef5-8d1b-5e12-a1e2-2ce5730ccdb1",
+        "4ab9592a-9f2f-547f-9335-c7ca377c18e0",
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "7f2262d0-bd19-5a73-afb9-3691e07be7ea"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -154315,7 +154435,16 @@
       "centroidLongitude": -77.047749,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "cdbd6dc8-d0f2-5b85-991e-d25f68f30a2e",
+        "25316a4e-f259-560c-8190-45bed92ccdd4",
+        "de01b721-a99d-5bc8-b6f4-0d46cd1ee31d",
+        "7f2262d0-bd19-5a73-afb9-3691e07be7ea",
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "31a42b96-22b4-50ec-87d1-0cbd1bb058bb",
+        "49129605-be4b-5e30-8618-e51bd4417ad2",
+        "6b90eef5-8d1b-5e12-a1e2-2ce5730ccdb1"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -154364,7 +154493,16 @@
       "centroidLongitude": -77.042737,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "7f2262d0-bd19-5a73-afb9-3691e07be7ea",
+        "cdbd6dc8-d0f2-5b85-991e-d25f68f30a2e",
+        "31a42b96-22b4-50ec-87d1-0cbd1bb058bb",
+        "4ab9592a-9f2f-547f-9335-c7ca377c18e0",
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "25316a4e-f259-560c-8190-45bed92ccdd4",
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "de01b721-a99d-5bc8-b6f4-0d46cd1ee31d"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -154415,7 +154553,16 @@
       "centroidLongitude": -77.034814,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "7f2262d0-bd19-5a73-afb9-3691e07be7ea",
+        "4ab9592a-9f2f-547f-9335-c7ca377c18e0",
+        "03f46680-ea6c-5eab-9020-167b59b0f0c5",
+        "4d3fe66e-64c1-5359-be1b-a0dfffde0354",
+        "6b90eef5-8d1b-5e12-a1e2-2ce5730ccdb1",
+        "ea3b6973-1d7c-5d29-ba48-ccb95189b26e",
+        "aa0c918c-cd08-53ce-be9f-8542fcee7d75",
+        "8d425963-d94b-5f40-8223-51c68ca46dc0"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -154464,7 +154611,16 @@
       "centroidLongitude": -77.025938,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "f1afe66f-3e63-5853-8b3e-44adc82e35fd",
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40",
+        "03f46680-ea6c-5eab-9020-167b59b0f0c5",
+        "2ed82217-f8ff-5103-947a-edc78a52a601",
+        "7e394223-e2e7-5725-bc2e-a6b00168ead5",
+        "02f278d5-bdd0-5c9e-a589-4ed917d89949"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Museum",
@@ -154517,7 +154673,16 @@
       "centroidLongitude": -77.025645,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "53c95df8-0b6d-5242-b393-d822e4a5f18d",
+        "bfaa7896-1ca8-5057-bbc7-d7a616564e45",
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "cdbd6dc8-d0f2-5b85-991e-d25f68f30a2e",
+        "2ed82217-f8ff-5103-947a-edc78a52a601",
+        "e7e8605c-dcee-5645-b71f-91492b7bfa8f",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Venue",
@@ -154564,7 +154729,16 @@
       "centroidLongitude": -77.027563,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "bfaa7896-1ca8-5057-bbc7-d7a616564e45",
+        "a2c80c9f-e154-5070-9d1e-ff739689e7ac",
+        "f1afe66f-3e63-5853-8b3e-44adc82e35fd",
+        "687E8957-6DE8-5FC3-BC0A-AA3A98F514FC",
+        "7e394223-e2e7-5725-bc2e-a6b00168ead5",
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "4523c911-a496-57f7-9b4a-b15cbc377960",
+        "a2275a27-18e1-5419-af4d-6400430b60eb"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Tower",
@@ -154614,7 +154788,16 @@
       "centroidLongitude": -77.030779,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "bfaa7896-1ca8-5057-bbc7-d7a616564e45",
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "4523c911-a496-57f7-9b4a-b15cbc377960",
+        "ea0a1b42-b91d-5fd3-94ac-a4457c9ea0d6",
+        "5afdb722-7881-59e1-9228-840780c47e50",
+        "b175bd46-1ca3-55c0-bcc8-2d1db230dd22",
+        "2ed82217-f8ff-5103-947a-edc78a52a601",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Public Square",
@@ -154663,7 +154846,16 @@
       "centroidLongitude": -77.021647,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "bfaa7896-1ca8-5057-bbc7-d7a616564e45",
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "5ef33486-79d9-5ed3-8191-7a2d0ba34929",
+        "a2c80c9f-e154-5070-9d1e-ff739689e7ac",
+        "b175bd46-1ca3-55c0-bcc8-2d1db230dd22",
+        "f1afe66f-3e63-5853-8b3e-44adc82e35fd",
+        "4523c911-a496-57f7-9b4a-b15cbc377960",
+        "ea0a1b42-b91d-5fd3-94ac-a4457c9ea0d6"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Monument",
@@ -154710,7 +154902,16 @@
       "centroidLongitude": -77.043438,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "bfaa7896-1ca8-5057-bbc7-d7a616564e45",
+        "a2c80c9f-e154-5070-9d1e-ff739689e7ac",
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "93ac542c-12ad-51b8-b5f3-564e97cdcd2a",
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "7f2262d0-bd19-5a73-afb9-3691e07be7ea",
+        "03f46680-ea6c-5eab-9020-167b59b0f0c5",
+        "cdbd6dc8-d0f2-5b85-991e-d25f68f30a2e"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -154759,7 +154960,16 @@
       "centroidLongitude": -77.050659,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "bfaa7896-1ca8-5057-bbc7-d7a616564e45",
+        "a2c80c9f-e154-5070-9d1e-ff739689e7ac",
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "4523c911-a496-57f7-9b4a-b15cbc377960",
+        "e7e8605c-dcee-5645-b71f-91492b7bfa8f",
+        "2ed82217-f8ff-5103-947a-edc78a52a601",
+        "cdbd6dc8-d0f2-5b85-991e-d25f68f30a2e"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "District",
@@ -154806,7 +155016,16 @@
       "centroidLongitude": -77.028986,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "77d626c1-fdec-5b74-aecb-f9b7f56728cd",
+        "bfaa7896-1ca8-5057-bbc7-d7a616564e45",
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40",
+        "5ef33486-79d9-5ed3-8191-7a2d0ba34929",
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "e7e8605c-dcee-5645-b71f-91492b7bfa8f"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "District",
@@ -154853,7 +155072,16 @@
       "centroidLongitude": -77.02597,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "25316a4e-f259-560c-8190-45bed92ccdd4",
+        "e485c7cb-6305-5f2b-a888-98394d5695f7",
+        "cdbd6dc8-d0f2-5b85-991e-d25f68f30a2e",
+        "31a42b96-22b4-50ec-87d1-0cbd1bb058bb",
+        "6b90eef5-8d1b-5e12-a1e2-2ce5730ccdb1",
+        "de01b721-a99d-5bc8-b6f4-0d46cd1ee31d",
+        "4ab9592a-9f2f-547f-9335-c7ca377c18e0"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -154901,7 +155129,16 @@
       "centroidLongitude": -76.99647,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "bfaa7896-1ca8-5057-bbc7-d7a616564e45",
+        "e7e8605c-dcee-5645-b71f-91492b7bfa8f",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40",
+        "a2c80c9f-e154-5070-9d1e-ff739689e7ac",
+        "b175bd46-1ca3-55c0-bcc8-2d1db230dd22",
+        "4523c911-a496-57f7-9b4a-b15cbc377960",
+        "f1afe66f-3e63-5853-8b3e-44adc82e35fd"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Market",
@@ -154950,7 +155187,16 @@
       "centroidLongitude": -77.013218,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "7f2262d0-bd19-5a73-afb9-3691e07be7ea",
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "5afdb722-7881-59e1-9228-840780c47e50",
+        "de01b721-a99d-5bc8-b6f4-0d46cd1ee31d",
+        "cdbd6dc8-d0f2-5b85-991e-d25f68f30a2e",
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40",
+        "6b90eef5-8d1b-5e12-a1e2-2ce5730ccdb1"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -155002,7 +155248,16 @@
       "centroidLongitude": -77.070595,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "2ed82217-f8ff-5103-947a-edc78a52a601",
+        "6b90eef5-8d1b-5e12-a1e2-2ce5730ccdb1",
+        "b175bd46-1ca3-55c0-bcc8-2d1db230dd22",
+        "4ab9592a-9f2f-547f-9335-c7ca377c18e0",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40",
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "cdbd6dc8-d0f2-5b85-991e-d25f68f30a2e"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -155052,7 +155307,16 @@
       "centroidLongitude": -77.028253,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "4d3fe66e-64c1-5359-be1b-a0dfffde0354",
+        "5ef33486-79d9-5ed3-8191-7a2d0ba34929",
+        "aa0c918c-cd08-53ce-be9f-8542fcee7d75",
+        "62769c54-cc8d-58ff-8575-17648a62f663",
+        "7f2262d0-bd19-5a73-afb9-3691e07be7ea",
+        "1890ebcb-eafa-4d4f-9126-674bfa37f8c4",
+        "98a1348c-467a-4572-984c-345a8be66d95",
+        "fec419f7-cb01-51c1-8a2f-ba9ed15f6840"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Waterfront",
@@ -155100,7 +155364,16 @@
       "centroidLongitude": -76.985171,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "4d3fe66e-64c1-5359-be1b-a0dfffde0354",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40",
+        "bfaa7896-1ca8-5057-bbc7-d7a616564e45",
+        "e7e8605c-dcee-5645-b71f-91492b7bfa8f",
+        "4523c911-a496-57f7-9b4a-b15cbc377960",
+        "7f2262d0-bd19-5a73-afb9-3691e07be7ea",
+        "6b90eef5-8d1b-5e12-a1e2-2ce5730ccdb1",
+        "f1afe66f-3e63-5853-8b3e-44adc82e35fd"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Museum",
@@ -155143,7 +155416,16 @@
       "centroidLongitude": -77.060379,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b175bd46-1ca3-55c0-bcc8-2d1db230dd22",
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "4d3fe66e-64c1-5359-be1b-a0dfffde0354",
+        "bfaa7896-1ca8-5057-bbc7-d7a616564e45",
+        "2ed82217-f8ff-5103-947a-edc78a52a601",
+        "4523c911-a496-57f7-9b4a-b15cbc377960",
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Museum",
@@ -155278,7 +155560,16 @@
       "centroidLongitude": -77.045199,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "e485c7cb-6305-5f2b-a888-98394d5695f7",
+        "de01b721-a99d-5bc8-b6f4-0d46cd1ee31d",
+        "25316a4e-f259-560c-8190-45bed92ccdd4",
+        "7f2262d0-bd19-5a73-afb9-3691e07be7ea",
+        "31a42b96-22b4-50ec-87d1-0cbd1bb058bb",
+        "6b90eef5-8d1b-5e12-a1e2-2ce5730ccdb1",
+        "a2275a27-18e1-5419-af4d-6400430b60eb"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -155398,7 +155689,16 @@
       "centroidLongitude": -77.03907,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "cdbd6dc8-d0f2-5b85-991e-d25f68f30a2e",
+        "6b90eef5-8d1b-5e12-a1e2-2ce5730ccdb1",
+        "4d3fe66e-64c1-5359-be1b-a0dfffde0354",
+        "4ab9592a-9f2f-547f-9335-c7ca377c18e0",
+        "31a42b96-22b4-50ec-87d1-0cbd1bb058bb",
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "e485c7cb-6305-5f2b-a888-98394d5695f7"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -155504,7 +155804,16 @@
       "centroidLongitude": -77.0622,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "aa0c918c-cd08-53ce-be9f-8542fcee7d75",
+        "7f2262d0-bd19-5a73-afb9-3691e07be7ea",
+        "bfaa7896-1ca8-5057-bbc7-d7a616564e45",
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "f1afe66f-3e63-5853-8b3e-44adc82e35fd",
+        "6b90eef5-8d1b-5e12-a1e2-2ce5730ccdb1",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40",
+        "4ab9592a-9f2f-547f-9335-c7ca377c18e0"
+      ],
       "primaryCategory": "history",
       "tags": [
         "District",
@@ -155655,7 +155964,16 @@
       "centroidLongitude": -77.027945,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "a2c80c9f-e154-5070-9d1e-ff739689e7ac",
+        "4523c911-a496-57f7-9b4a-b15cbc377960",
+        "b175bd46-1ca3-55c0-bcc8-2d1db230dd22",
+        "ea0a1b42-b91d-5fd3-94ac-a4457c9ea0d6",
+        "5afdb722-7881-59e1-9228-840780c47e50",
+        "4d3fe66e-64c1-5359-be1b-a0dfffde0354",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40"
+      ],
       "primaryCategory": "history",
       "tags": [
         "District",
@@ -155804,7 +156122,16 @@
       "centroidLongitude": -77.005169,
       "city": "Washington",
       "country": "United States",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "bfaa7896-1ca8-5057-bbc7-d7a616564e45",
+        "a2c80c9f-e154-5070-9d1e-ff739689e7ac",
+        "7f2262d0-bd19-5a73-afb9-3691e07be7ea",
+        "ea0a1b42-b91d-5fd3-94ac-a4457c9ea0d6",
+        "2ed82217-f8ff-5103-947a-edc78a52a601",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40",
+        "e7e8605c-dcee-5645-b71f-91492b7bfa8f",
+        "5ef33486-79d9-5ed3-8191-7a2d0ba34929"
+      ],
       "primaryCategory": "history",
       "tags": [
         "District",
@@ -169977,7 +170304,11 @@
         "B21162D5-7E84-5D0B-BEA1-5F3A195F56E4",
         "AFB075CB-37AC-58FE-B13B-DEC8DCBB6392",
         "EF4A3AC0-602B-51AB-8824-4F3784D8D0FD",
-        "89C85E50-E043-5277-B5C5-5D3C447B707C"
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "31a42b96-22b4-50ec-87d1-0cbd1bb058bb",
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "25316a4e-f259-560c-8190-45bed92ccdd4",
+        "49129605-be4b-5e30-8618-e51bd4417ad2"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -192250,6 +192581,9 @@
         "16464B1D-88E3-5327-86C2-0A94B006627A",
         "FFD8BF96-8641-505C-83E0-7083433504E5",
         "7E74E885-FBBC-5599-A3D8-62D10F9155D8",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40",
+        "4bd8cbc0-9193-5cdc-9b39-5ce356ea127b",
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
         "89C85E50-E043-5277-B5C5-5D3C447B707C"
       ],
       "primaryCategory": "architecture",
@@ -192301,7 +192635,8 @@
       "country": "United States",
       "relatedTourIds": [
         "16464B1D-88E3-5327-86C2-0A94B006627A",
-        "C2B693EA-A147-58F2-9313-68D00A729B3F"
+        "C2B693EA-A147-58F2-9313-68D00A729B3F",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -192354,7 +192689,9 @@
         "FFD8BF96-8641-505C-83E0-7083433504E5",
         "C2B693EA-A147-58F2-9313-68D00A729B3F",
         "7E74E885-FBBC-5599-A3D8-62D10F9155D8",
-        "89C85E50-E043-5277-B5C5-5D3C447B707C"
+        "89C85E50-E043-5277-B5C5-5D3C447B707C",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40",
+        "4bd8cbc0-9193-5cdc-9b39-5ce356ea127b"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -230806,11 +231143,12 @@
       "relatedTourIds": [
         "AFB075CB-37AC-58FE-B13B-DEC8DCBB6392",
         "B21162D5-7E84-5D0B-BEA1-5F3A195F56E4",
+        "6b90eef5-8d1b-5e12-a1e2-2ce5730ccdb1",
         "FF080F3A-D45A-581C-A029-55BA2EA14038",
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
         "89C85E50-E043-5277-B5C5-5D3C447B707C",
-        "BF0A9F8A-50E1-5DFB-B324-635EBF383AE4",
-        "687E8957-6DE8-5FC3-BC0A-AA3A98F514FC",
-        "7E74E885-FBBC-5599-A3D8-62D10F9155D8"
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "cdbd6dc8-d0f2-5b85-991e-d25f68f30a2e"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -230861,12 +231199,12 @@
       "relatedTourIds": [
         "EF4A3AC0-602B-51AB-8824-4F3784D8D0FD",
         "B21162D5-7E84-5D0B-BEA1-5F3A195F56E4",
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "31a42b96-22b4-50ec-87d1-0cbd1bb058bb",
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "4ab9592a-9f2f-547f-9335-c7ca377c18e0",
         "FF080F3A-D45A-581C-A029-55BA2EA14038",
-        "89C85E50-E043-5277-B5C5-5D3C447B707C",
-        "5F327DC1-72B4-5DC9-ACFA-E347D3341F2D",
-        "687E8957-6DE8-5FC3-BC0A-AA3A98F514FC",
-        "7E74E885-FBBC-5599-A3D8-62D10F9155D8",
-        "F1BE576C-C701-5101-B26A-566BDD59B0CC"
+        "6b90eef5-8d1b-5e12-a1e2-2ce5730ccdb1"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -257503,6 +257841,8 @@
       "country": "United States",
       "relatedTourIds": [
         "EF4A3AC0-602B-51AB-8824-4F3784D8D0FD",
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "7e394223-e2e7-5725-bc2e-a6b00168ead5",
         "AFB075CB-37AC-58FE-B13B-DEC8DCBB6392"
       ],
       "primaryCategory": "history",
@@ -257552,7 +257892,13 @@
       "city": "Washington",
       "country": "United States",
       "relatedTourIds": [
-        "5F327DC1-72B4-5DC9-ACFA-E347D3341F2D"
+        "aa0c918c-cd08-53ce-be9f-8542fcee7d75",
+        "93ac542c-12ad-51b8-b5f3-564e97cdcd2a",
+        "4d3fe66e-64c1-5359-be1b-a0dfffde0354",
+        "5F327DC1-72B4-5DC9-ACFA-E347D3341F2D",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40",
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "bfaa7896-1ca8-5057-bbc7-d7a616564e45"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -272502,6 +272848,7 @@
       "country": "United States",
       "relatedTourIds": [
         "9925C243-7BAE-537E-B8AE-739A24E2268C",
+        "4bd8cbc0-9193-5cdc-9b39-5ce356ea127b",
         "89C85E50-E043-5277-B5C5-5D3C447B707C",
         "AFB075CB-37AC-58FE-B13B-DEC8DCBB6392"
       ],
@@ -313181,7 +313528,9 @@
         "FF080F3A-D45A-581C-A029-55BA2EA14038",
         "89C85E50-E043-5277-B5C5-5D3C447B707C",
         "687E8957-6DE8-5FC3-BC0A-AA3A98F514FC",
-        "7E74E885-FBBC-5599-A3D8-62D10F9155D8"
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
+        "25316a4e-f259-560c-8190-45bed92ccdd4",
+        "31a42b96-22b4-50ec-87d1-0cbd1bb058bb"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -334522,6 +334871,9 @@
       "centroidLongitude": -77.0204,
       "city": "Washington",
       "country": "United States",
+      "relatedTourIds": [
+        "53c95df8-0b6d-5242-b393-d822e4a5f18d"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Venue",
@@ -370727,11 +371079,14 @@
       "city": "Washington",
       "country": "United States",
       "relatedTourIds": [
+        "b175bd46-1ca3-55c0-bcc8-2d1db230dd22",
+        "a2c80c9f-e154-5070-9d1e-ff739689e7ac",
         "7E74E885-FBBC-5599-A3D8-62D10F9155D8",
+        "bfaa7896-1ca8-5057-bbc7-d7a616564e45",
         "B21162D5-7E84-5D0B-BEA1-5F3A195F56E4",
         "AFB075CB-37AC-58FE-B13B-DEC8DCBB6392",
-        "EF4A3AC0-602B-51AB-8824-4F3784D8D0FD",
-        "89C85E50-E043-5277-B5C5-5D3C447B707C"
+        "604ea2b3-2ecc-56e1-b59a-3a586d9f9227",
+        "EF4A3AC0-602B-51AB-8824-4F3784D8D0FD"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -371526,10 +371881,10 @@
         "687E8957-6DE8-5FC3-BC0A-AA3A98F514FC",
         "C2B693EA-A147-58F2-9313-68D00A729B3F",
         "16464B1D-88E3-5327-86C2-0A94B006627A",
+        "4bd8cbc0-9193-5cdc-9b39-5ce356ea127b",
         "EF4A3AC0-602B-51AB-8824-4F3784D8D0FD",
         "AFB075CB-37AC-58FE-B13B-DEC8DCBB6392",
-        "5F327DC1-72B4-5DC9-ACFA-E347D3341F2D",
-        "B21162D5-7E84-5D0B-BEA1-5F3A195F56E4"
+        "5F327DC1-72B4-5DC9-ACFA-E347D3341F2D"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -383476,14 +383831,14 @@
       "city": "Washington",
       "country": "United States",
       "relatedTourIds": [
+        "2ed82217-f8ff-5103-947a-edc78a52a601",
+        "7e394223-e2e7-5725-bc2e-a6b00168ead5",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40",
         "EF4A3AC0-602B-51AB-8824-4F3784D8D0FD",
         "AFB075CB-37AC-58FE-B13B-DEC8DCBB6392",
         "7E74E885-FBBC-5599-A3D8-62D10F9155D8",
-        "B21162D5-7E84-5D0B-BEA1-5F3A195F56E4",
-        "F1BE576C-C701-5101-B26A-566BDD59B0CC",
-        "16464B1D-88E3-5327-86C2-0A94B006627A",
-        "FF080F3A-D45A-581C-A029-55BA2EA14038",
-        "C2B693EA-A147-58F2-9313-68D00A729B3F"
+        "4bd8cbc0-9193-5cdc-9b39-5ce356ea127b",
+        "B21162D5-7E84-5D0B-BEA1-5F3A195F56E4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -385163,8 +385518,13 @@
       "city": "Washington",
       "country": "United States",
       "relatedTourIds": [
+        "93ac542c-12ad-51b8-b5f3-564e97cdcd2a",
         "AFB075CB-37AC-58FE-B13B-DEC8DCBB6392",
         "581F1578-98A2-5DFC-9F21-7EB969F78DAF",
+        "82a16b73-b30c-5ced-ae23-6314b5349b40",
+        "4ab9592a-9f2f-547f-9335-c7ca377c18e0",
+        "a2275a27-18e1-5419-af4d-6400430b60eb",
+        "bf3725c7-9290-5941-b2c5-54714b9490f6",
         "7E74E885-FBBC-5599-A3D8-62D10F9155D8"
       ],
       "primaryCategory": "architecture",
