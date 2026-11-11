@@ -2,6 +2,8 @@
 
 _opened 2026-10-21 · clear with `git rm status/owner/belem-launch.md`_
 
+> ✅ **Answered 2026-11-11 ("photos fine, for now"):** The photo licences are accepted for now and listed in drafts/CREDITS.md § Contributor-supplied photos… accepted FOR NOW. Still open: #1 the Muamba location and #2 the museum reopening date.
+
 Belém launched as **Atlas Studio BEL** (10 singles; Muamba held). No place questions. For you to settle:
 
 1. **Muamba Bar e Coquetéis: location vs script.** The contributor's Google Maps pin (-1.44632, -48.49860) is on the
