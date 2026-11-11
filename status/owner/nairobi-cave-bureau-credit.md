@@ -3,6 +3,7 @@
 _opened 2026-10-14 · clear with `git rm status/owner/nairobi-cave-bureau-credit.md`_
 
 > ✅ **Answered 2026-11-11 ("photos fine, for now"):** The photo licences are accepted for now and listed in drafts/CREDITS.md § Contributor-supplied photos… accepted FOR NOW. Still open: #1 whether you're happy with the narration citing 'the cave_bureau guide'. The contributor has said it's fine.
+> ❌ **Owner 2026-11-11 ("5 no"):** the owner is **not** happy with the narration citing "the cave_bureau guide". The next step (re-record the 12 tours without it, or take them down until they're re-recorded) is waiting on the owner. The photo licences are settled.
 
 The Nairobi tours (Atlas Studio NBO, 13 singles, 2026-10-14) raised two questions. The contributor (arthur.yung)
 answered both on 2026-10-14. This is recorded as their answer; **clear this item if you agree.**

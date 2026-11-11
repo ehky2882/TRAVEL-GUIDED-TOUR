@@ -8149,6 +8149,16 @@
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.instagram.com/levinsonline/"
+    },
+    {
+      "id": "F8D46868-8292-5B47-B520-67593C1952E4",
+      "displayName": "Instagram @aikenchia",
+      "platform": "instagram",
+      "handle": "aikenchia",
+      "avatarURL": null,
+      "avatarEmoji": "📷",
+      "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.instagram.com/aikenchia/"
     }
   ],
   "tours": [
@@ -416404,6 +416414,49 @@
         "Museum",
         "Food",
         "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "12A6DFB8-79EC-5EBF-9691-7904BA512935",
+      "createdAt": "2026-11-11",
+      "title": "Menya Kanetora | 麺屋兼虎",
+      "shortDescription": "A post by @aikenchia on Instagram.",
+      "longDescription": "Trying out one of the most recommended ramen shops in Fukuoka and I really wouldn't recommend it. Know before you go! Hopefully it saves you some major queuing time. #fukuoka #ramen #tsukemen 📍: Ramen Kanetora",
+      "makerId": "F8D46868-8292-5B47-B520-67593C1952E4",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/menya-kanetora-aikenchia_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.instagram.com/reel/DZ1NBU5z5bu/",
+      "sourceAuthor": "@aikenchia",
+      "stops": [
+        {
+          "id": "7453D283-1034-57C0-8BBB-FED144927E99",
+          "order": 0,
+          "title": "Menya Kanetora | 麺屋兼虎",
+          "caption": "Trying out one of the most recommended ramen shops in Fukuoka and I really wouldn't recommend it. Know before you go! Hopefully it saves you some major queuing time. #fukuoka #ramen #tsukemen 📍: Ramen Kanetora",
+          "latitude": 33.58744,
+          "longitude": 130.401367,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/menya-kanetora-aikenchia_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.58744,
+      "centroidLongitude": 130.401367,
+      "city": "Fukuoka",
+      "country": "Japan",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food"
       ],
       "priceUSD": 0
     }
