@@ -11037,14 +11037,14 @@
       "city": "Braga",
       "country": "Portugal",
       "relatedTourIds": [
+        "a47bdbdc-7444-5884-ae78-883a0a137fe0",
         "896D7154-018A-4C5C-BC1A-33E64F5F32C6",
         "30cd96fc-8b3d-566a-bc88-f7d02f8873fb",
         "45fc4e96-4d9c-5a6a-9d8f-aae30897aaff",
         "00bc47f9-639f-44d9-9735-65c8ac608144",
         "da803a7d-61a5-44c7-a1b0-7c9f35994e64",
-        "7621CC87-818B-44CC-B7B4-FC5F14AB3DA2",
-        "d266002e-5084-59c7-ad42-66dfdbabeae4",
-        "ae287886-2c55-4c3e-b8c2-e2389323aec6"
+        "5741ea9c-0195-5331-82ff-17e79e93e91c",
+        "7621CC87-818B-44CC-B7B4-FC5F14AB3DA2"
       ],
       "walkingDistanceMeters": null
     },
@@ -13758,13 +13758,13 @@
       "country": "Portugal",
       "relatedTourIds": [
         "AAF6A3C7-3884-4ADD-B699-66CF5D91DD7F",
+        "a47bdbdc-7444-5884-ae78-883a0a137fe0",
         "3ca244af-c9ae-41a6-b2d7-b00b248b6cd9",
         "4b8c4701-45df-48a5-ac2f-a84d2d28da2b",
         "24A5FF02-DFF6-437B-9FD8-F3D71B70A627",
         "96B9CF6A-1BC1-48D6-B72C-8DB9573AD724",
         "6ACC3176-A4EF-4009-A772-E4085B4C2EA2",
-        "896D7154-018A-4C5C-BC1A-33E64F5F32C6",
-        "c1bf9e1d-4dda-5284-8541-b022fb6125c7"
+        "896D7154-018A-4C5C-BC1A-33E64F5F32C6"
       ],
       "walkingDistanceMeters": null
     },
@@ -14511,10 +14511,10 @@
         "62ce120d-8f20-514c-b657-fcf679eab005",
         "5e78d185-f167-5bb9-bfe2-9106957897ac",
         "3B78F99C-A031-4EF7-A55B-10D9D7C550A4",
+        "d077575c-1286-5851-8034-8473c6c819b3",
         "37f30f44-7a45-5398-9e86-6bed363415f7",
         "177b12c2-4081-5680-8c04-938ee5c232e9",
-        "b344b334-4402-55c1-808a-a192e52effc7",
-        "51BB962E-016A-4ABD-8E61-7E83D45E59FF"
+        "b344b334-4402-55c1-808a-a192e52effc7"
       ],
       "walkingDistanceMeters": null
     },
@@ -20049,11 +20049,11 @@
         "9283D1D6-A58F-43A4-BF69-8BBBE41C1735",
         "08FA5214-28A6-4678-9AD9-6B9F1E13F9CF",
         "633b095c-207f-4ccb-8936-920993e8793a",
+        "a7361e23-3885-527a-ab4e-aea546cbf5d2",
         "88e43e44-255c-55a1-968e-3bd879397f24",
         "364fbc84-62fe-590d-acbe-71fa035d5b87",
-        "FE2C76C3-3A27-46B8-8DB5-89C718B311AA",
-        "f7e9e489-f276-4681-9efa-b8064340d18b",
-        "2418E4CC-7611-4FC9-A915-4DC596D5D9C7"
+        "81f8d3f5-8462-5a39-bea6-a2e204a810b3",
+        "FE2C76C3-3A27-46B8-8DB5-89C718B311AA"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -71587,10 +71587,10 @@
         "21cee03a-e920-5018-adff-7b2f10f5ff91",
         "70a01d74-8edf-5f78-9d8b-a05850c0299a",
         "a648b9d7-4924-555c-8762-92c0c674ca1f",
+        "41ac5e81-ceae-5958-a8c4-4142930ae450",
         "0165232e-3d55-5685-a448-a7bf5afece8f",
         "E0B1BA3B-6515-5289-874A-3C269C19CD98",
-        "82823681-E708-50EC-8FDD-689371E92A8F",
-        "726c0fd2-ae39-5ed5-b84c-20c6783e67f5"
+        "82823681-E708-50EC-8FDD-689371E92A8F"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -72081,9 +72081,9 @@
         "DC0E9AA7-11B4-5131-BA7B-48C380C1C0F8",
         "62ce120d-8f20-514c-b657-fcf679eab005",
         "b2fc43ad-dfe1-511f-a6c6-9755f84ed95f",
-        "f4ce5978-958d-572f-8280-f4b06e9266b1",
-        "dcf0d9c4-4d40-587b-a06b-d8053f34a6a7",
-        "7A2C9E14-6B85-4F02-A1D3-8E4760B9C2F1"
+        "29e6193e-a17b-5ccd-928b-689f589ac62a",
+        "1a470802-995c-5ed3-8a97-112025180458",
+        "e62674d3-eec1-52c5-8a05-c8164533fd05"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -72592,8 +72592,8 @@
         "21cee03a-e920-5018-adff-7b2f10f5ff91",
         "fb585cdc-e8f5-5a2b-92bc-b4603191e30f",
         "cde97f1e-4c16-5ab7-8fe4-1988a8aa1815",
-        "e826724c-bb63-5a7a-b38f-6eb9e34dbac0",
-        "73c6f127-c1c7-49af-abd2-f889b57dc214"
+        "81f8d3f5-8462-5a39-bea6-a2e204a810b3",
+        "e826724c-bb63-5a7a-b38f-6eb9e34dbac0"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -73092,9 +73092,9 @@
         "8ee1cccf-a24a-5551-85e8-5260ea0b9ffd",
         "5c9e20e6-2c58-5265-8785-49c5bbaf15dd",
         "cde97f1e-4c16-5ab7-8fe4-1988a8aa1815",
+        "29e6193e-a17b-5ccd-928b-689f589ac62a",
         "9f22377f-ea12-4ecb-95c4-a96b56ad686a",
-        "6bd5fdba-455f-5002-98ec-66388935534f",
-        "7694e539-478c-5663-971f-53b3c63e28f8"
+        "6bd5fdba-455f-5002-98ec-66388935534f"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -73148,9 +73148,9 @@
         "DC0E9AA7-11B4-5131-BA7B-48C380C1C0F8",
         "62ce120d-8f20-514c-b657-fcf679eab005",
         "758481c1-1925-5d9a-8377-638c51c74ffb",
+        "1a470802-995c-5ed3-8a97-112025180458",
         "b2fc43ad-dfe1-511f-a6c6-9755f84ed95f",
-        "3f835ead-9829-5521-97f1-00d9ad78cfb0",
-        "7A2DD70F-D234-50C7-BCB4-F46584CCF85E"
+        "3f835ead-9829-5521-97f1-00d9ad78cfb0"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -75023,12 +75023,12 @@
       "relatedTourIds": [
         "1382e092-cf56-5761-b24e-66b83443c1e5",
         "62ce120d-8f20-514c-b657-fcf679eab005",
+        "5741ea9c-0195-5331-82ff-17e79e93e91c",
         "745dcaef-864b-4770-8bc6-aa3e8751371f",
         "d70278c3-dfa7-51d4-b26d-1222d96733a2",
+        "a47bdbdc-7444-5884-ae78-883a0a137fe0",
         "65a64a41-25c3-5b7f-a889-f61b0b1a5c31",
-        "da803a7d-61a5-44c7-a1b0-7c9f35994e64",
-        "30cd96fc-8b3d-566a-bc88-f7d02f8873fb",
-        "0084aa82-782f-5fc3-9b5d-3806d1946319"
+        "da803a7d-61a5-44c7-a1b0-7c9f35994e64"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -116048,14 +116048,14 @@
       "city": "Banja Luka",
       "country": "Bosnia and Herzegovina",
       "relatedTourIds": [
+        "70cf47eb-947f-5f56-bfa2-8b3177886871",
         "b2d278dc-b373-5b6a-8082-bd0fc44766e7",
         "46ae1b3d-591c-513f-bb30-318a1333c60b",
         "79FED394-1311-4446-A55C-9BEC9C772081",
         "CF1FAC10-88A3-51D1-AFC9-4CA6CF5569F5",
         "9776d9ce-94c5-490d-a0d8-cb5a0241d83f",
         "44435929-e4f2-5dbd-a6d7-d96b42d25097",
-        "98f0406d-f7fa-531f-8db0-540bcb932621",
-        "85D07EAB-88C2-5456-B3C8-492B743D534C"
+        "98f0406d-f7fa-531f-8db0-540bcb932621"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -120666,12 +120666,12 @@
       "relatedTourIds": [
         "1cf50ba8-aa01-5dc1-af81-d9b5d8cc1c84",
         "0e81ef76-f1a1-5477-b09d-45c1372b14a7",
+        "425e1cf4-b0bc-51bf-a4e9-902eca932bf5",
         "2e042406-4c16-5fdc-a906-86694f87341c",
         "12ae21f1-82f7-54d9-bce1-3c1f0207f2b1",
         "0ce03565-8bb6-57fe-baea-e25a498289e9",
         "ab1a8ded-8f62-5eb9-8f62-f1b2390971b5",
-        "fc4269a5-1cd4-500b-8c1a-89755c8f9e05",
-        "db7c779a-39ea-5e1b-a09a-b4e727b6a9d7"
+        "fc4269a5-1cd4-500b-8c1a-89755c8f9e05"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -120833,8 +120833,8 @@
         "d9553133-f19c-5246-af3b-35214ddde5fe",
         "4bd57de1-6494-5b3d-af3a-808ee518c111",
         "60de976a-a8da-4dfc-a1cc-9d2a26fea2fc",
-        "21cee03a-e920-5018-adff-7b2f10f5ff91",
-        "fb2eb675-600d-5884-b5c0-2db5f8f887e4"
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "21cee03a-e920-5018-adff-7b2f10f5ff91"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -134225,9 +134225,9 @@
         "2e0198e7-55ff-5f65-a197-6c1be6d7319a",
         "fe8af15c-f542-5dd2-be52-a39a052052da",
         "04429cad-7f7e-52d5-9f1c-ca7c77b26471",
+        "26b9009e-f823-5649-9183-9d7efe0e28be",
         "867fc656-e20a-569f-a0a5-297e6fbc00a6",
-        "75db02b7-50c7-59fa-9dac-1a400182cadc",
-        "2864f0e2-951e-54bb-afe1-bcc732f69d95"
+        "75db02b7-50c7-59fa-9dac-1a400182cadc"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -134457,10 +134457,10 @@
         "c014912d-5637-5290-a4cd-0628bd6058d7",
         "75539769-ab9e-5283-afbb-5358c3f2947b",
         "799af2cb-a13a-501d-845f-5a051627b7a7",
+        "d077575c-1286-5851-8034-8473c6c819b3",
         "c3ddaab3-461e-5665-81cb-428132e60f9a",
         "1ff51015-6af1-544e-91f5-bbd975bbfa28",
-        "AE09A378-A06A-4890-BD3D-435FAC5EB7A9",
-        "6D37E1F5-0083-5F5C-9364-EE17AC1C5CCB"
+        "41ac5e81-ceae-5958-a8c4-4142930ae450"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -134631,7 +134631,7 @@
         "8efa1abc-1274-475f-89ee-c506bb72f1ea",
         "62ce120d-8f20-514c-b657-fcf679eab005",
         "9f3aa784-002e-5e43-bad3-c68e2a88b022",
-        "dfeb21ed-ac84-5819-a177-24b08786691f"
+        "a47bdbdc-7444-5884-ae78-883a0a137fe0"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -145938,7 +145938,7 @@
         "867fc656-e20a-569f-a0a5-297e6fbc00a6",
         "35189aad-9ad8-58c4-966d-6bad58b7c2fa",
         "30ddfe99-5f42-56dc-8bea-fd05a38724f2",
-        "65eef272-b2e2-54f2-86f7-0928e9b97ec8"
+        "26b9009e-f823-5649-9183-9d7efe0e28be"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -156421,7 +156421,16 @@
       "centroidLongitude": -47.8308118,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e62674d3-eec1-52c5-8a05-c8164533fd05",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "5741ea9c-0195-5331-82ff-17e79e93e91c",
+        "f57808ef-e7c0-53a2-a1f4-9c0ed4e205d2",
+        "b846a8da-33c7-50e9-9753-3cee0232617c",
+        "1a470802-995c-5ed3-8a97-112025180458",
+        "b7225f80-2896-5852-9db2-8bec3808ede6",
+        "29e6193e-a17b-5ccd-928b-689f589ac62a"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -156472,7 +156481,16 @@
       "centroidLongitude": -47.8289297,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "1a470802-995c-5ed3-8a97-112025180458",
+        "b7225f80-2896-5852-9db2-8bec3808ede6",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "5741ea9c-0195-5331-82ff-17e79e93e91c",
+        "a7361e23-3885-527a-ab4e-aea546cbf5d2",
+        "f57808ef-e7c0-53a2-a1f4-9c0ed4e205d2",
+        "73c02852-c2a2-5d5d-90ff-8cd11d3feccb"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -156523,7 +156541,16 @@
       "centroidLongitude": -47.8369802,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "26b9009e-f823-5649-9183-9d7efe0e28be",
+        "b846a8da-33c7-50e9-9753-3cee0232617c",
+        "d8fff3c0-8bd7-56ca-a81a-90adb7347259",
+        "81f8d3f5-8462-5a39-bea6-a2e204a810b3",
+        "5741ea9c-0195-5331-82ff-17e79e93e91c",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "ecd229d4-4f4e-594f-870e-5d92bbc5887e",
+        "e62674d3-eec1-52c5-8a05-c8164533fd05"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -156569,7 +156596,16 @@
       "centroidLongitude": -47.8827935,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "d8fff3c0-8bd7-56ca-a81a-90adb7347259",
+        "26b9009e-f823-5649-9183-9d7efe0e28be",
+        "b846a8da-33c7-50e9-9753-3cee0232617c",
+        "73c02852-c2a2-5d5d-90ff-8cd11d3feccb",
+        "5741ea9c-0195-5331-82ff-17e79e93e91c",
+        "c05b2fb2-84a2-5295-98b0-d4f692de965c",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "05575f3a-3394-5e0c-a805-8462be17fb31"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -156615,7 +156651,16 @@
       "centroidLongitude": -47.9019064,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "b846a8da-33c7-50e9-9753-3cee0232617c",
+        "29e6193e-a17b-5ccd-928b-689f589ac62a",
+        "ecd229d4-4f4e-594f-870e-5d92bbc5887e",
+        "f57808ef-e7c0-53a2-a1f4-9c0ed4e205d2",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "73c02852-c2a2-5d5d-90ff-8cd11d3feccb",
+        "bf7cf3db-5d17-5638-a708-8c1e1a657e4a"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Market",
@@ -156663,7 +156708,16 @@
       "centroidLongitude": -47.9076129,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "73c02852-c2a2-5d5d-90ff-8cd11d3feccb",
+        "26b9009e-f823-5649-9183-9d7efe0e28be",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "b846a8da-33c7-50e9-9753-3cee0232617c",
+        "ecd229d4-4f4e-594f-870e-5d92bbc5887e",
+        "5741ea9c-0195-5331-82ff-17e79e93e91c",
+        "2d254d67-9500-5abc-99f4-21a97fd2f0c4",
+        "f57808ef-e7c0-53a2-a1f4-9c0ed4e205d2"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -156712,7 +156766,16 @@
       "centroidLongitude": -47.9242143,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b846a8da-33c7-50e9-9753-3cee0232617c",
+        "73c02852-c2a2-5d5d-90ff-8cd11d3feccb",
+        "d8fff3c0-8bd7-56ca-a81a-90adb7347259",
+        "5741ea9c-0195-5331-82ff-17e79e93e91c",
+        "2d254d67-9500-5abc-99f4-21a97fd2f0c4",
+        "bf7cf3db-5d17-5638-a708-8c1e1a657e4a",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "ecd229d4-4f4e-594f-870e-5d92bbc5887e"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -156757,7 +156820,16 @@
       "centroidLongitude": -47.8994194,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ecd229d4-4f4e-594f-870e-5d92bbc5887e",
+        "5741ea9c-0195-5331-82ff-17e79e93e91c",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "d8fff3c0-8bd7-56ca-a81a-90adb7347259",
+        "73c02852-c2a2-5d5d-90ff-8cd11d3feccb",
+        "f57808ef-e7c0-53a2-a1f4-9c0ed4e205d2",
+        "b846a8da-33c7-50e9-9753-3cee0232617c",
+        "a47bdbdc-7444-5884-ae78-883a0a137fe0"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Venue",
@@ -156805,7 +156877,16 @@
       "centroidLongitude": -47.8608551,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "26b9009e-f823-5649-9183-9d7efe0e28be",
+        "5741ea9c-0195-5331-82ff-17e79e93e91c",
+        "73c02852-c2a2-5d5d-90ff-8cd11d3feccb",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "1a470802-995c-5ed3-8a97-112025180458",
+        "ecd229d4-4f4e-594f-870e-5d92bbc5887e",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "d8fff3c0-8bd7-56ca-a81a-90adb7347259"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -156856,7 +156937,16 @@
       "centroidLongitude": -47.8947118,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "29e6193e-a17b-5ccd-928b-689f589ac62a",
+        "5741ea9c-0195-5331-82ff-17e79e93e91c",
+        "a47bdbdc-7444-5884-ae78-883a0a137fe0",
+        "41ac5e81-ceae-5958-a8c4-4142930ae450",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "b846a8da-33c7-50e9-9753-3cee0232617c",
+        "8e7e7f88-5913-5182-8474-cd40f27d8cb4",
+        "ecd229d4-4f4e-594f-870e-5d92bbc5887e"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Market",
@@ -156903,7 +156993,16 @@
       "centroidLongitude": -47.9122121,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "8e7e7f88-5913-5182-8474-cd40f27d8cb4",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "c05b2fb2-84a2-5295-98b0-d4f692de965c",
+        "a47bdbdc-7444-5884-ae78-883a0a137fe0",
+        "b7225f80-2896-5852-9db2-8bec3808ede6",
+        "ad3254a7-d52c-5eb5-a302-ec9f3a858f23",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "5741ea9c-0195-5331-82ff-17e79e93e91c"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Venue",
@@ -156952,7 +157051,16 @@
       "centroidLongitude": -47.8755038,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ad3254a7-d52c-5eb5-a302-ec9f3a858f23",
+        "8e7e7f88-5913-5182-8474-cd40f27d8cb4",
+        "ac8c2ee8-68d8-5d15-a575-9b8333843bb5",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "b7225f80-2896-5852-9db2-8bec3808ede6",
+        "2C52FBAF-D03D-5DA9-AC10-97F258778D34",
+        "29e6193e-a17b-5ccd-928b-689f589ac62a",
+        "f57808ef-e7c0-53a2-a1f4-9c0ed4e205d2"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -157002,7 +157110,16 @@
       "centroidLongitude": -47.8673072,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "a47bdbdc-7444-5884-ae78-883a0a137fe0",
+        "29e6193e-a17b-5ccd-928b-689f589ac62a",
+        "ac8c2ee8-68d8-5d15-a575-9b8333843bb5",
+        "5741ea9c-0195-5331-82ff-17e79e93e91c",
+        "41ac5e81-ceae-5958-a8c4-4142930ae450",
+        "f57808ef-e7c0-53a2-a1f4-9c0ed4e205d2",
+        "f162aa83-4f71-5f2f-81ca-8609b83f3ba1"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Civic",
@@ -157051,7 +157168,16 @@
       "centroidLongitude": -47.8642273,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "DE821A11-6EE0-5B2C-B0AF-E75541B8F50D",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "bf7cf3db-5d17-5638-a708-8c1e1a657e4a",
+        "29e6193e-a17b-5ccd-928b-689f589ac62a",
+        "b7225f80-2896-5852-9db2-8bec3808ede6",
+        "a47bdbdc-7444-5884-ae78-883a0a137fe0",
+        "ac8c2ee8-68d8-5d15-a575-9b8333843bb5",
+        "b846a8da-33c7-50e9-9753-3cee0232617c"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Civic",
@@ -157100,7 +157226,16 @@
       "centroidLongitude": -47.8947201,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b7225f80-2896-5852-9db2-8bec3808ede6",
+        "8e7e7f88-5913-5182-8474-cd40f27d8cb4",
+        "41ac5e81-ceae-5958-a8c4-4142930ae450",
+        "70cf47eb-947f-5f56-bfa2-8b3177886871",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "2C52FBAF-D03D-5DA9-AC10-97F258778D34",
+        "ac8c2ee8-68d8-5d15-a575-9b8333843bb5"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -157150,7 +157285,16 @@
       "centroidLongitude": -47.9036727,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b7225f80-2896-5852-9db2-8bec3808ede6",
+        "41ac5e81-ceae-5958-a8c4-4142930ae450",
+        "ad3254a7-d52c-5eb5-a302-ec9f3a858f23",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "c05b2fb2-84a2-5295-98b0-d4f692de965c",
+        "70cf47eb-947f-5f56-bfa2-8b3177886871",
+        "f57808ef-e7c0-53a2-a1f4-9c0ed4e205d2"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -157201,7 +157345,16 @@
       "centroidLongitude": -47.9133685,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f57808ef-e7c0-53a2-a1f4-9c0ed4e205d2",
+        "ac8c2ee8-68d8-5d15-a575-9b8333843bb5",
+        "a7361e23-3885-527a-ab4e-aea546cbf5d2",
+        "1a470802-995c-5ed3-8a97-112025180458",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "b7225f80-2896-5852-9db2-8bec3808ede6",
+        "17b56ef3-4d69-50a6-b20f-30edf1eeb557",
+        "29e6193e-a17b-5ccd-928b-689f589ac62a"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -157250,7 +157403,16 @@
       "centroidLongitude": -47.8781638,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "29e6193e-a17b-5ccd-928b-689f589ac62a",
+        "70cf47eb-947f-5f56-bfa2-8b3177886871",
+        "1a470802-995c-5ed3-8a97-112025180458",
+        "f57808ef-e7c0-53a2-a1f4-9c0ed4e205d2",
+        "af4abe6f-bbe8-5025-bb67-b8045bfc8335",
+        "a47bdbdc-7444-5884-ae78-883a0a137fe0",
+        "41ac5e81-ceae-5958-a8c4-4142930ae450"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Museum",
@@ -157298,7 +157460,16 @@
       "centroidLongitude": -47.8803283,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "41ac5e81-ceae-5958-a8c4-4142930ae450",
+        "5741ea9c-0195-5331-82ff-17e79e93e91c",
+        "29e6193e-a17b-5ccd-928b-689f589ac62a",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "ac8c2ee8-68d8-5d15-a575-9b8333843bb5",
+        "c05b2fb2-84a2-5295-98b0-d4f692de965c",
+        "1a470802-995c-5ed3-8a97-112025180458"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Venue",
@@ -157347,7 +157518,16 @@
       "centroidLongitude": -47.8692311,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "85cad224-9b9b-5e22-b6b7-240b64cd99b8",
+        "3EE92385-D8C1-50DE-9AC4-11666B374E78",
+        "5741ea9c-0195-5331-82ff-17e79e93e91c",
+        "f57808ef-e7c0-53a2-a1f4-9c0ed4e205d2",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "29e6193e-a17b-5ccd-928b-689f589ac62a",
+        "c05b2fb2-84a2-5295-98b0-d4f692de965c"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -157397,7 +157577,16 @@
       "centroidLongitude": -47.8293205,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f162aa83-4f71-5f2f-81ca-8609b83f3ba1",
+        "e62674d3-eec1-52c5-8a05-c8164533fd05",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "1a470802-995c-5ed3-8a97-112025180458",
+        "bf7cf3db-5d17-5638-a708-8c1e1a657e4a",
+        "a7361e23-3885-527a-ab4e-aea546cbf5d2",
+        "81f8d3f5-8462-5a39-bea6-a2e204a810b3",
+        "b7225f80-2896-5852-9db2-8bec3808ede6"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -157447,7 +157636,16 @@
       "centroidLongitude": -47.8383402,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "a7361e23-3885-527a-ab4e-aea546cbf5d2",
+        "b846a8da-33c7-50e9-9753-3cee0232617c",
+        "e62674d3-eec1-52c5-8a05-c8164533fd05",
+        "f57808ef-e7c0-53a2-a1f4-9c0ed4e205d2",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "b7225f80-2896-5852-9db2-8bec3808ede6",
+        "29e6193e-a17b-5ccd-928b-689f589ac62a"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Venue",
@@ -157498,7 +157696,16 @@
       "centroidLongitude": -47.9884076,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "5741ea9c-0195-5331-82ff-17e79e93e91c",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "1a470802-995c-5ed3-8a97-112025180458",
+        "29e6193e-a17b-5ccd-928b-689f589ac62a",
+        "a7361e23-3885-527a-ab4e-aea546cbf5d2",
+        "f162aa83-4f71-5f2f-81ca-8609b83f3ba1",
+        "41ac5e81-ceae-5958-a8c4-4142930ae450"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -157548,7 +157755,16 @@
       "centroidLongitude": -47.9055922,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "41ac5e81-ceae-5958-a8c4-4142930ae450",
+        "8e7e7f88-5913-5182-8474-cd40f27d8cb4",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "5741ea9c-0195-5331-82ff-17e79e93e91c",
+        "b846a8da-33c7-50e9-9753-3cee0232617c",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "bf7cf3db-5d17-5638-a708-8c1e1a657e4a",
+        "f162aa83-4f71-5f2f-81ca-8609b83f3ba1"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "District",
@@ -157599,7 +157815,16 @@
       "centroidLongitude": -47.8928939,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "bf7cf3db-5d17-5638-a708-8c1e1a657e4a",
+        "5741ea9c-0195-5331-82ff-17e79e93e91c",
+        "af4abe6f-bbe8-5025-bb67-b8045bfc8335",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "a7361e23-3885-527a-ab4e-aea546cbf5d2",
+        "ecd229d4-4f4e-594f-870e-5d92bbc5887e",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "ac8c2ee8-68d8-5d15-a575-9b8333843bb5"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Tower",
@@ -157647,7 +157872,16 @@
       "centroidLongitude": -47.883366,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "af4abe6f-bbe8-5025-bb67-b8045bfc8335",
+        "29e6193e-a17b-5ccd-928b-689f589ac62a",
+        "ecd229d4-4f4e-594f-870e-5d92bbc5887e",
+        "5741ea9c-0195-5331-82ff-17e79e93e91c",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "b846a8da-33c7-50e9-9753-3cee0232617c",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "c05b2fb2-84a2-5295-98b0-d4f692de965c"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Civic",
@@ -157693,7 +157927,16 @@
       "centroidLongitude": -47.8846815,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "5741ea9c-0195-5331-82ff-17e79e93e91c",
+        "bf7cf3db-5d17-5638-a708-8c1e1a657e4a",
+        "29e6193e-a17b-5ccd-928b-689f589ac62a",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "b846a8da-33c7-50e9-9753-3cee0232617c",
+        "b7225f80-2896-5852-9db2-8bec3808ede6",
+        "309c9c19-c2d0-599f-9cbb-e3fab33a51bd",
+        "73c02852-c2a2-5d5d-90ff-8cd11d3feccb"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "District",
@@ -157740,7 +157983,16 @@
       "centroidLongitude": -47.8095043,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ad3254a7-d52c-5eb5-a302-ec9f3a858f23",
+        "8e7e7f88-5913-5182-8474-cd40f27d8cb4",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "e62674d3-eec1-52c5-8a05-c8164533fd05",
+        "1a470802-995c-5ed3-8a97-112025180458",
+        "81f8d3f5-8462-5a39-bea6-a2e204a810b3",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "41ac5e81-ceae-5958-a8c4-4142930ae450"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -157787,7 +158039,16 @@
       "centroidLongitude": -47.8300645,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "1a470802-995c-5ed3-8a97-112025180458",
+        "29e6193e-a17b-5ccd-928b-689f589ac62a",
+        "81f8d3f5-8462-5a39-bea6-a2e204a810b3",
+        "f57808ef-e7c0-53a2-a1f4-9c0ed4e205d2",
+        "b7225f80-2896-5852-9db2-8bec3808ede6",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "e62674d3-eec1-52c5-8a05-c8164533fd05",
+        "d077575c-1286-5851-8034-8473c6c819b3"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Bridge",
@@ -157838,7 +158099,16 @@
       "centroidLongitude": -47.8734944,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "73c02852-c2a2-5d5d-90ff-8cd11d3feccb",
+        "a7361e23-3885-527a-ab4e-aea546cbf5d2",
+        "b7225f80-2896-5852-9db2-8bec3808ede6",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "e62674d3-eec1-52c5-8a05-c8164533fd05",
+        "1a470802-995c-5ed3-8a97-112025180458",
+        "b846a8da-33c7-50e9-9753-3cee0232617c",
+        "26b9009e-f823-5649-9183-9d7efe0e28be"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Waterfront",
@@ -157885,7 +158155,16 @@
       "centroidLongitude": -47.8612961,
       "city": "Brasília",
       "country": "Brazil",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "bf7cf3db-5d17-5638-a708-8c1e1a657e4a",
+        "29e6193e-a17b-5ccd-928b-689f589ac62a",
+        "ac8c2ee8-68d8-5d15-a575-9b8333843bb5",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "c05b2fb2-84a2-5295-98b0-d4f692de965c",
+        "ecd229d4-4f4e-594f-870e-5d92bbc5887e",
+        "5741ea9c-0195-5331-82ff-17e79e93e91c",
+        "a47bdbdc-7444-5884-ae78-883a0a137fe0"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Museum",
@@ -168263,7 +168542,10 @@
         "9CB7665B-B9DF-580D-8E7E-342B4CAA973A",
         "2C52FBAF-D03D-5DA9-AC10-97F258778D34",
         "3EE92385-D8C1-50DE-9AC4-11666B374E78",
-        "DE821A11-6EE0-5B2C-B0AF-E75541B8F50D"
+        "DE821A11-6EE0-5B2C-B0AF-E75541B8F50D",
+        "1a470802-995c-5ed3-8a97-112025180458",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "8f030814-2226-5f9b-b88a-41c22df66585"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -292510,7 +292792,10 @@
         "2C52FBAF-D03D-5DA9-AC10-97F258778D34",
         "3EE92385-D8C1-50DE-9AC4-11666B374E78",
         "9CB7665B-B9DF-580D-8E7E-342B4CAA973A",
-        "53C5F4E5-FCB1-529E-A74D-DE616516C278"
+        "53C5F4E5-FCB1-529E-A74D-DE616516C278",
+        "17b56ef3-4d69-50a6-b20f-30edf1eeb557",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "29e6193e-a17b-5ccd-928b-689f589ac62a"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -292563,7 +292848,10 @@
         "53C5F4E5-FCB1-529E-A74D-DE616516C278",
         "DE821A11-6EE0-5B2C-B0AF-E75541B8F50D",
         "3EE92385-D8C1-50DE-9AC4-11666B374E78",
-        "9CB7665B-B9DF-580D-8E7E-342B4CAA973A"
+        "8e7e7f88-5913-5182-8474-cd40f27d8cb4",
+        "ad3254a7-d52c-5eb5-a302-ec9f3a858f23",
+        "9CB7665B-B9DF-580D-8E7E-342B4CAA973A",
+        "70cf47eb-947f-5f56-bfa2-8b3177886871"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -294530,7 +294818,10 @@
         "2C52FBAF-D03D-5DA9-AC10-97F258778D34",
         "DE821A11-6EE0-5B2C-B0AF-E75541B8F50D",
         "9CB7665B-B9DF-580D-8E7E-342B4CAA973A",
-        "3EE92385-D8C1-50DE-9AC4-11666B374E78"
+        "3EE92385-D8C1-50DE-9AC4-11666B374E78",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "bf7cf3db-5d17-5638-a708-8c1e1a657e4a"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -294581,8 +294872,11 @@
         "53C5F4E5-FCB1-529E-A74D-DE616516C278",
         "E9F9BB96-F64C-5609-BA0C-CEBDF931CB63",
         "DE821A11-6EE0-5B2C-B0AF-E75541B8F50D",
+        "8f030814-2226-5f9b-b88a-41c22df66585",
+        "1a470802-995c-5ed3-8a97-112025180458",
         "3EE92385-D8C1-50DE-9AC4-11666B374E78",
-        "2C52FBAF-D03D-5DA9-AC10-97F258778D34"
+        "b846a8da-33c7-50e9-9753-3cee0232617c",
+        "d077575c-1286-5851-8034-8473c6c819b3"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -294681,7 +294975,10 @@
         "2C52FBAF-D03D-5DA9-AC10-97F258778D34",
         "E9F9BB96-F64C-5609-BA0C-CEBDF931CB63",
         "53C5F4E5-FCB1-529E-A74D-DE616516C278",
-        "9CB7665B-B9DF-580D-8E7E-342B4CAA973A"
+        "f162aa83-4f71-5f2f-81ca-8609b83f3ba1",
+        "9CB7665B-B9DF-580D-8E7E-342B4CAA973A",
+        "d077575c-1286-5851-8034-8473c6c819b3",
+        "ad3254a7-d52c-5eb5-a302-ec9f3a858f23"
       ],
       "primaryCategory": "architecture",
       "tags": [
