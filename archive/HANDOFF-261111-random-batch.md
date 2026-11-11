@@ -28,5 +28,12 @@ Worked with Edward's "Random 10/13" list (73 links). No place or hold question w
 - Renwick Gates: Enid A. Haupt Garden centroid (the gates are its Independence Ave entrance).
 - 1107 Fifth Ave: Nominatim's first answer was Watervliet, NY — re-queried with "Manhattan".
 
+## Places (Edward: "do all the places you're suggesting")
+- **Joins (0 m):** La Colombe d'Or, Coal Drops Yard, Ford Foundation Building, Populus, Grand Central Terminal, Tate Modern.
+- **New (0 m, places 515 → 528):** The Frick Collection, St. Paul's Chapel, 520 West 28th Street, Balfron Tower, Boston City Hall, The Hepworth Wakefield, Untermyer Gardens, Fondation Beyeler, Lido Kaltern, One Kearny Rooftop, Nová scéna, The Woolworth Building, 8 House.
+- Done with `join-places.apply_join` and `make-places.apply` on a hand-checked list, so the older backlog joins (Colosseum, Carpenter Center, Battersea, Hampton Court, Depot Boijmans, Deichman, Operaparken, Karl-Marx-Hof) were NOT applied.
+- Not touched: the @insightcities "Nová Scéna & the National Theatre" pin, 452 m east of the new Nová scéna place.
+- Merged `origin/main` (Washington DC, #1182) mid-flight; conflicts were docs, the Key facts line and `spine/lookups.json.gz`.
+
 ## Checks
 `validate-tours-mirror` 0 errors / 742 warnings (baseline) · filenames align (60) · `spine-lookup` 56 asked, 0 failed · `join-places --max-move 100` and `check-place-candidates` read (questions on the owner item).
