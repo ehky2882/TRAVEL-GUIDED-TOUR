@@ -1,0 +1,15 @@
+# Musée Matisse
+
+Most of the windows on this villa aren't windows at all. They're painted on.
+
+You should be in the park of the Cimiez Arènes, on the hill above the city, among the olive trees. The big red villa in front of you, with its rows of tall pale-framed windows and balconies, is the Musée Matisse. Look closely at the facade and you'll start to notice that some of those windows, and some of the shutters, are painted.
+
+It's called trompe-l'oeil, fool-the-eye, and it's a Genoese habit. The villa was built between sixteen seventy and sixteen eighty-five for Jean-Baptiste Gubernatis, a consul of Nice, who turned an older house into a grand villa in the Genoese style. Painting on architecture was cheaper than building it, and from the garden you'd never know.
+
+Matisse came to Nice in nineteen seventeen, meaning to stay a few weeks, and stayed for the rest of his life. He said that when he realised he would see this light every morning, he could hardly believe his luck. The museum opened in nineteen sixty-three, built around gifts from Matisse and his family. In nineteen ninety-three it gained a contemporary wing by the architect Jean-François Bodin, who also reworked the villa itself.
+
+[beat]
+
+And here's what I love about the pairing. Matisse spent his whole career painting decoration as if it were architecture, patterned walls and windows open to the sea. And he ended up in a house where the architecture is half decoration. It suits him perfectly.
+
+Before you go, walk a few minutes north through the olive grove to the Cimiez monastery and its cemetery. Matisse is buried there, looking out over the city he spent thirty-seven years painting. And on your way, look out for the ruins of the Roman town, just beside the museum.

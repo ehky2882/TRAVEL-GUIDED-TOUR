@@ -1,0 +1,15 @@
+# Lah par day zonj
+
+The name refers to the wine that escapes from the barrel into the air. In this shop, very little goes to waste.
+
+You should be on roo goo bair nah tees, a quiet street in the city centre, a few minutes north of Place mah say nah. Number seventeen is a narrow shopfront with wine bottles stacked to the ceiling and a few tables tucked between them. That's La par day zonj.
+
+The phrase means the angels' share. Winemakers use it for the small amount that evaporates through the wood as wine ages, the portion that goes up to heaven. It's a lovely name for a wine shop, and olivee ay lah bard, who opened this one in nineteen ninety eight, has spent the years since filling it with natural wine. That means wine made with as little interference as possible, from organic grapes, without much added in the cellar.
+
+It's a shop, a wine bar and a lunch counter at once. You can buy a bottle to take away, or sit down in the middle of the shelves with a glass and a plate of something hearty. In twenty twenty the French wine magazine lah ruh vyoo doo van duh fronss named it the best wine shop in the country.
+
+Look out for one local name on the shelves, bel lay. It's Neece's own wine appellation, tiny and old, with vineyards in the hills just behind the city. Most visitors have no idea that Neece makes wine at all.
+
+That's what a good wine shop is really for. It's not the famous names. It's the bottle you'd never have found on your own, from a hillside you can very nearly see from here.
+
+Before you leave, ask for a bel lay to take home. Then, if you fancy, the mew zay mah say nah's garden on the Promenade, fifteen minutes' walk south, is a fine place to sit and decide when to open it.

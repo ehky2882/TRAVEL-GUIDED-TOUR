@@ -1,0 +1,15 @@
+# Mew zay mah say nah
+
+This villa was built for a prince, then given away on one condition: that the garden stay open to everyone.
+
+You should be on the prom nahd day zong lay, close to the neh gress ko, at the gates of a white bel ay pock villa set back in its own garden. Look through the railings at the facade, with its columns and tall windows, and the lawn and palm trees in front. That's the veela mah say nah.
+
+It was built at the very end of the nineteenth century, between eighteen ninety eight and nineteen oh one, for victor mah say nah, Prince of Essling. He was the grandson of on dray mah say nah, the Neece born general whom Napoleon called the dear child of victory. The architect was the Danish designer hans gay org tersling, who designed villas and palaces all along the Riviera.
+
+The villa was meant as a winter residence, the kind of place the very rich built along this seafront in the age when Neece was where Europe's royalty came to avoid the cold. In nineteen nineteen it was given to the city, on the condition that it become a museum, and that the garden be open to the public. The museum opened in nineteen twenty one, devoted to the history of Neece.
+
+Inside, the rooms are still furnished as a bel ay pock house, and the collections tell the story of Neece, from Napoleon's general to the bel ay pock.
+
+Here's why the condition matters. The prom nahd day zong lay was once lined with villas like this one, gardens and all. Almost every one has gone, replaced by hotels and apartment blocks. This is one of the very few that survived, and it survived because somebody insisted it should belong to the city.
+
+Before you head on, step into the garden. It's free, and it's the shadiest place on the whole seafront. Then look back towards the neh gress ko next door. Two buildings from the same age of grandeur, one a hotel and one a gift.

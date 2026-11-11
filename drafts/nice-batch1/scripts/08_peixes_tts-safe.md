@@ -1,0 +1,13 @@
+# Pay shesh
+
+In a city famous for cooked down stews and slow braises, this place hardly cooks its fish at all.
+
+You should be on roo duh lopay rah, on the western edge of the old town, a few steps from the opera house. Look for a small, bright dining room tiled in white and nautical blue. That's pay shesh.
+
+The name is Portuguese for fish, and it opened in twenty fifteen with a simple, slightly radical idea for Neece. Raw fish. The menu is built around seh vee chay and teera deeto, two South American ways of preparing it. Ceviche is diced fish cured in citrus juice until it firms up. Tiradito is sliced thin, more like sashimi, and dressed just before it reaches you. Here it's done with Mediterranean fish and Mediterranean flavours.
+
+That combination is the clever part. Neece has always had wonderful fish at the market. What it hadn't really had was a local restaurant that trusted the fish to need almost nothing done to it. pay shesh took a technique from Peru and gave it a local accent, and the Michelin guide has noticed.
+
+And here's why it belongs in a guide to this city. Neece has always been a crossroads, Italian and French, mountain and sea. The food has absorbed everything that came through the port. A seh vee chay bar by the opera house isn't a break with that tradition. It's the latest chapter of it.
+
+If you fancy seeing where the fish comes from, the fish market on plass san fron swah, a ten minute walk into the old town, runs most mornings. Go early. By lunchtime the best of it is already on plates like the ones here.

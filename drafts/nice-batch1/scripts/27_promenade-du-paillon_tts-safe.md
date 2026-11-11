@@ -1,0 +1,15 @@
+# Prom nahd doo pie yon
+
+There's a river under your feet. You just can't see it.
+
+You should be on the prom nahd doo pie yon, the long green park that runs through the middle of Neece, from the sea up towards the mah mak. Find the big flat water feature, a shallow mirror of water laid into the paving, and, if it's running, the fountains rising out of it. You'll probably find children running through them.
+
+The park follows the course of the pie yon, the river that comes down from the mountains and once ran right through the city, dividing the old town from the newer streets. Over the years it was covered over, bit by bit. And on top of it, over time, the city built roads, car parks and a bus station, a long hard strip of concrete through the middle of town.
+
+In twenty thirteen that strip was replaced by this, a park around twelve hectares in size, designed by the landscape architect mee shell pay nah, the old bus station gone. It runs for more than a kilometre, with lawns, gardens, play areas and that water mirror.
+
+Look at the mirror itself. When the fountains are still, it's a sheet of water that reflects the sky and the buildings around it. When they come on, it turns into a playground. The river that used to be hidden underneath has, in a sense, come back up as a reflection.
+
+What's worth thinking about is what the city chose. Plenty of places would have put up offices. Neece gave its centre back to people.
+
+Walk north along the park and you'll come to the mah mak and the tet ka ray, the giant square head. Or walk south, and in a few minutes you'll reach the sea at the prom nahd day zong lay.

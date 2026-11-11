@@ -1,0 +1,17 @@
+# Le Plongeoir
+
+This is a restaurant on a rock in the sea, at the top of an old diving board.
+
+Follow the coast road east from the port, round the headland towards Mont Boron, and stop when you see it. Below the road, on a rocky outcrop just off the shore, is a white tower of platforms joined by a staircase, with a restaurant terrace on top. The terrace sits a little over six metres above the water.
+
+The rock has been feeding people for a long time. From the eighteen-seventies, a fishing boat moored here served meals, tea and cocktails to Belle Époque visitors, and was tied up to a little kiosk on the rock. Then, in nineteen forty-one, the boat was badly damaged, and an architect named René Livieri replaced it with this, a three-level Art Deco diving board, with a staircase you could climb before jumping off into the sea.
+
+For generations of Niçois, that was the game. Climb up, look down, work up the nerve. Later it fell out of use and was left to crumble.
+
+In twenty fifteen it was brought back as a restaurant, and the platforms were kept. So now, instead of jumping off the top, you sit there and eat Mediterranean fish with the sea all round you.
+
+[beat]
+
+I find it rather lovely that the building's real job was always about nerve. Somebody had the nerve to put a boat-restaurant on a rock. Somebody else had the nerve to build a diving board in the middle of a war. And now you need a bit of nerve, if not for the jump, then at least for the bill.
+
+If you've got time, walk back towards the port along the coast road. With the lighthouse, the harbour and the Castle Hill ahead of you, it's one of the loveliest walks in Nice, and it's free.

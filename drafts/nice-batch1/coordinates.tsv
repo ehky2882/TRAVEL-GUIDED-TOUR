@@ -1,0 +1,32 @@
+num	slug	google_maps_name	lat	lon	osm_note
+01	hotel-le-negresco	Hôtel Le Negresco	43.694710	7.257752	OSM relation 4563464 (tourism=hotel)
+02	hotel-la-perouse	Hôtel La Pérouse	43.693886	7.279299	OSM hotel "La Perouse", Quai Rauba Capèu
+03	hotel-du-couvent	Hôtel du Couvent	43.697272	7.278788	OSM hotel, 1 Rue Honoré Ugo
+04	hotel-windsor	Hôtel Windsor	43.697778	7.261215	OSM hotel "Windsor"; 11 Rue Dalpozzo at 43.697816,7.261385
+05	chez-pipo	Chez Pipo	43.699947	7.285503	OSM restaurant, 13 Rue Bavastro
+06	la-merenda	La Merenda	43.696509	7.273063	4 Rue Raoul Bosio (OSM node sits 4 m away at 10 Rue Alexandre Mari)
+07	chez-acchiardo	Chez Acchiardo	43.696512	7.277144	OSM restaurant, 38 Rue Droite
+08	peixes	Peixes	43.696016	7.271049	OSM restaurant (Michelin lists 4 Rue Jacques-Médecin, same building as 4 Rue de l'Opéra)
+09	le-plongeoir	Le Plongeoir	43.691911	7.290818	OSM restaurant, 60 Bd Franck Pilatte
+10	les-distilleries-ideales	Les Distilleries Idéales	43.696237	7.276646	OSM bar, 24 Rue de la Préfecture
+11	la-part-des-anges	La Part des Anges	43.700512	7.272452	OSM shop=alcohol, 17 Rue Gubernatis
+12	cafe-de-turin	Café de Turin	43.700578	7.279568	OSM restaurant, 5 Place Garibaldi
+13	cafe-du-cycliste	Café du Cycliste	43.696394	7.286115	OSM cafe, 16 Quai des Docks
+14	maison-auer	Maison Auer	43.695852	7.272440	OSM confectionery, Rue Saint-François-de-Paule
+15	moulin-a-huile-dolive-alziari	Moulin à Huile d'Olive Alziari	43.695644	7.271587	OSM deli, 14 Rue Saint-François-de-Paule
+16	confiserie-florian	Confiserie Florian	43.696870	7.283383	OSM confectionery at Rue Robilant / 14 Quai Papacino corner
+17	mamac-nice	MAMAC	43.701442	7.278228	OSM museum, Place Yves Klein
+18	musee-marc-chagall	Musée national Marc Chagall	43.709136	7.269527	OSM museum, 36 Av. du Docteur Ménard
+19	musee-matisse	Musée Matisse	43.719445	7.275974	OSM museum, 164 Av. des Arènes de Cimiez
+20	musee-des-arts-asiatiques	Musée départemental des Arts asiatiques	43.667990	7.216009	OSM museum, Parc Phoenix
+21	villa-arson	Villa Arson	43.720797	7.253167	OSM, 20 Av. Stephen Liégeard
+22	eglise-sainte-jeanne-darc	Église Sainte-Jeanne-d'Arc	43.713363	7.262585	OSM place_of_worship
+23	cathedrale-saint-nicolas	Cathédrale orthodoxe russe Saint-Nicolas de Nice	43.703825	7.253886	OSM place_of_worship, 2 Av. Nicolas II
+24	palais-lascaris	Palais Lascaris	43.697682	7.277154	OSM building, Rue Droite
+25	colline-du-chateau	Colline du Château	43.696342	7.280625	OSM park centroid; the viewpoint/cascade is on the summit
+26	monument-aux-morts-rauba-capeu	Monument aux morts de Rauba-Capèu	43.693716	7.281109	OSM historic=memorial
+27	promenade-du-paillon	Promenade du Paillon	43.697411	7.271791	OSM park centroid (1.2 km long); the water mirror is at the south end
+28	cours-saleya	Cours Saleya	43.695610	7.275104	OSM pedestrian way
+29	tete-carree	Tête carrée	43.702771	7.279103	OSM artwork
+30	place-garibaldi	Place Garibaldi	43.701120	7.280270	OSM pedestrian square
+31	musee-massena	Musée Masséna	43.695165	7.259033	OSM garden polygon; the villa is within it

@@ -1,0 +1,15 @@
+# La Merenda
+
+The chef at this tiny restaurant gave up two Michelin stars to cook here.
+
+You should be on Rue Raoul Bosio, a short street at the western edge of the old town, a couple of minutes from the Opéra. La Merenda is the small dining room with the plain shopfront. There's not much to see from outside, and that's rather deliberate. There's no telephone, either. If you want a table, you come here in person and book it.
+
+The name is Niçois for a snack, a workman's bite to eat. It opened in nineteen sixty-six as a family bistro. Then, in nineteen ninety-six, Dominique Le Stanc bought it. He'd been running the restaurant at the Negresco, with two Michelin stars to his name, and he walked away from all of it for a room with around twenty seats and diners perched on stools.
+
+The cooking is Niçois home food, done with a grand chef's precision. Fried courgette flowers. Stuffed sardines. Salt cod, and tripe in the old way. And the gift detail is the chef himself. Le Stanc has long been known for riding his old bicycle to the market every morning to choose what he'll cook that day.
+
+[beat]
+
+Here's the thing that's worth thinking about. Every serious chef eventually has to decide what all the training is for. Le Stanc decided it was for this, for cooking the food of the city properly, for whoever turned up in person to ask for a table.
+
+If it's closed, or you can't get in, walk two minutes south to the Cours Saleya market and look at what's on the stalls. The courgette flowers in season will tell you exactly where this kitchen does its shopping.
