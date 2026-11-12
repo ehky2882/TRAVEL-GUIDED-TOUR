@@ -30,3 +30,4 @@ num	slug	google_maps_name	lat	lon	osm_note
 29	tete-carree	Tête carrée	43.702771	7.279103	OSM artwork
 30	place-garibaldi	Place Garibaldi	43.701120	7.280270	OSM pedestrian square
 31	musee-massena	Musée Masséna	43.695165	7.259033	OSM garden polygon; the villa is within it
+32	les-delices-de-candice	Les Délices de Candice	43.696605	7.275043	acceslibre register point for 17 Rue de la Préfecture (OSM node 43.696615,7.275163). Supplied 43.697234,7.275324 sits ~70 m north on Rue du Pontin
