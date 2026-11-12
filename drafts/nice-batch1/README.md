@@ -24,10 +24,12 @@ safe common ground or leaves the claim out.
   Le Plongeoir's diving board dates from 1941.
 
 ## Images: picker published 2026-11-12, waiting on the owner's picks
-- Picker: https://claude.ai/artifact/2D3hgbfutVP3VHMdRgouE3. It has 157 candidates for 21 tours. **10 tours have none:** 04 Windsor,
-  05 Chez Pipo, 17 MAMAC, 18 Chagall, 20 Arts Asiatiques, 21 Villa Arson, 22 Sainte-Jeanne-d'Arc, 24 Lascaris,
-  29 Tête Carrée and 31 Masséna. 19 Matisse has only one.
-- Sources: Unsplash and Pexels only. Wikimedia Commons returned HTTP 429 for the whole session, and Openverse has almost no
+- Picker: https://claude.ai/artifact/2D3hgbfutVP3VHMdRgouE3 (version 2). It has 170 candidates for 24 tours. **7 tours have none:**
+  04 Windsor, 05 Chez Pipo, 17 MAMAC, 18 Chagall, 21 Villa Arson, 24 Lascaris and 29 Tête Carrée. 19 Matisse has only one.
+- Version 2 (2026-11-12) added 13 public-domain Wikimedia Commons photos once Commons stopped returning 429:
+  Arts Asiatiques (2), Sainte-Jeanne-d'Arc (3), Paillon (5) and Masséna (3). Commons offered nothing usable for the other
+  seven: only other Windsor hotels, paintings, a 1910 postcard and a 1930s black-and-white photo.
+- Sources: Unsplash, Pexels and (version 2) public-domain Commons. In version 1 Commons returned HTTP 429 throughout, and Openverse has almost no
   public-domain photos of these subjects. **No Gemini key was available, so both gates were run by eye** (Claude looked at
   every candidate): modern colour photo, and the right subject with its look-alikes rejected (Place Masséna for Garibaldi,
   Bordeaux's Miroir d'eau, Prague's Kafka head, St Basil's).
