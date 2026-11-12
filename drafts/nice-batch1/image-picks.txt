@@ -1,0 +1,12 @@
+01 hotel-le-negresco: 01-1 hero, 01-5, 01-12, 01-4
+09 le-plongeoir: 09-3 hero, 09-2, 09-4
+15 moulin-a-huile-dolive-alziari: 15-1 hero, 15-2, 15-3
+19 musee-matisse: 19-1 hero
+20 musee-des-arts-asiatiques: 20-1 hero
+22 eglise-sainte-jeanne-darc: 22-3 hero, 22-2
+23 cathedrale-saint-nicolas: 23-2 hero, 23-3, 23-1, 23-4, 23-8, 23-6
+25 colline-du-chateau: 25-6 hero, 25-9, 25-10, 25-12, 25-13, 25-17
+27 promenade-du-paillon: 27-2 hero
+28 cours-saleya: 28-6 hero, 28-9, 28-12, 28-5
+30 place-garibaldi: 30-3 hero, 30-4, 30-1
+31 musee-massena: 31-1 hero, 31-3, 31-2
