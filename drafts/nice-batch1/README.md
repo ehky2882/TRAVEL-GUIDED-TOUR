@@ -22,3 +22,14 @@ safe common ground or leaves the claim out.
 - **Corrections to the first guide list** (in chat, not in the catalogue): Gustave Eiffel did not design the Negresco's
   glass roof (Niermans did). Les Distilleries Idéales dates from the last couple of decades, not the 19th century.
   Le Plongeoir's diving board dates from 1941.
+
+## Images: picker published 2026-11-12, waiting on the owner's picks
+- Picker: https://claude.ai/artifact/2D3hgbfutVP3VHMdRgouE3. It has 157 candidates for 21 tours. **10 tours have none:** 04 Windsor,
+  05 Chez Pipo, 17 MAMAC, 18 Chagall, 20 Arts Asiatiques, 21 Villa Arson, 22 Sainte-Jeanne-d'Arc, 24 Lascaris,
+  29 Tête Carrée and 31 Masséna. 19 Matisse has only one.
+- Sources: Unsplash and Pexels only. Wikimedia Commons returned HTTP 429 for the whole session, and Openverse has almost no
+  public-domain photos of these subjects. **No Gemini key was available, so both gates were run by eye** (Claude looked at
+  every candidate): modern colour photo, and the right subject with its look-alikes rejected (Place Masséna for Garibaldi,
+  Bordeaux's Miroir d'eau, Prague's Kafka head, St Basil's).
+- `image-candidates.json` maps every picker code (`NN-k`) to its source page, photographer and download URL, plus the reason
+  each thin tour is thin. Several venues (restaurants, shops) show their dishes or street, not the venue itself.
