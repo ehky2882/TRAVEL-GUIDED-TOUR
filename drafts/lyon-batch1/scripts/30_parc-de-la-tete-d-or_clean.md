@@ -1,0 +1,17 @@
+# Parc de la Tête d'Or
+
+The park is named after a treasure nobody has ever found: a golden head of Christ, said to be buried somewhere under the lawns.
+
+The main gates on Place du Général Leclerc are the Porte des Enfants du Rhône, a grand entrance of gilded ironwork and stone. Through it, the park opens out in front of you, with the lake ahead and the paths spreading away under the trees. It's one of the largest city parks in France, and at a hundred and seventeen hectares you won't see the far end from here.
+
+The land was bought in 1856, and the park opened the following year, before the work was even finished. The designers were two brothers from Switzerland, Denis and Eugène Bühler. They gave the city something closer to the English idea of a park than the formal French one: a great lake, open meadows, clumps of trees, and winding paths, with surprises around every bend. Their original plan even included grazing for sheep and cows.
+
+Once you're inside, look out for the great greenhouses, a long range of iron and glass beside the botanical garden. The first ones were built in 1865, and they were rebuilt in the late eighteen-seventies. Inside is a tropical jungle, a rather lovely thing to find on a grey Lyon morning.
+
+Here's the gift detail. The name comes from the legend. According to the old story, a treasure, including a head of Christ in gold, was buried on this land long ago. People have looked. Nobody has found it. The city kept the name anyway, which seems the right decision.
+
+And here's the thing. A park like this was a political statement in the nineteenth century: fresh air, nature and space, for everyone in a crowded industrial city, free. It still works exactly as it was meant to. On a Sunday afternoon, half of Lyon seems to be here.
+
+[beat]
+
+If you've got an hour, walk to the lake and follow the path round to the island and the old botanical garden. And if you're here in June, don't miss the rose garden.

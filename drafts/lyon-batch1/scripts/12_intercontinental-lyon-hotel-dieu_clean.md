@@ -1,0 +1,17 @@
+# InterContinental Lyon - Hotel Dieu
+
+For more than eight hundred years, people came to this building to be cured. Now they come to sleep.
+
+Stand on the riverside of Quai Jules Courmont with the Rhône at your back and look across the road. Running away from you in both directions is one long, pale facade, nearly four hundred metres of it, and in the middle, rising above the roofline, a great dome. This is the Grand Hôtel-Dieu, and the hotel is inside it.
+
+The first hospital here was built in 1184, beside the old bridge over the Rhône. It had about a dozen beds, for travellers, the poor and pilgrims. It grew for centuries. In 1532 it appointed a new doctor, a man called François Rabelais, who is rather better remembered today as the author of Gargantua and Pantagruel. And in the eighteenth century the architect Jacques-Germain Soufflot gave it the riverside front you're looking at, the face of the city on the Rhône.
+
+Have a look at the dome. It was badly damaged in the Second World War, and rebuilt afterwards from the original plans. Then look along the facade for two statues. They're Childebert and Ultrogothe, a Frankish king and queen who founded Lyon's very first hospital in the sixth century. The building is keeping its own family history on the front.
+
+The hospital closed at the end of 2010, the oldest working hospital in the city. Work on its conversion began in 2015, and the building reopened in 2018 with shops, restaurants, public courtyards and the InterContinental hotel. And here's the gift detail. The bar of the hotel, Le Dôme, sits right underneath that great dome.
+
+And here's the thing. Most buildings like this become museums, and you visit them once. This one was turned back into a piece of the city. Its courtyards are open to anyone walking through, which means you can do what Lyon's residents have done for centuries, and simply wander in.
+
+[beat]
+
+Before you leave, step inside through any of the open doorways and find one of the courtyards. Then come back out, cross the Pont de la Guillotière and look back from the far bank. Only from across the river does the whole length of the facade make sense.

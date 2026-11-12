@@ -1,0 +1,17 @@
+# Gare de Lyon Saint-Exupéry TGV
+
+This is a railway station that looks like a bird about to take off, and it sits next to an airport.
+
+Out by the airport at Saint-Exupéry, east of Lyon, stand on the forecourt of the station. In front of you is a great steel and glass roof that rises to a point and then spreads two wings to either side. If it reminds you of a bird with its wings opening, you're seeing exactly what everybody else does.
+
+The architect was Santiago Calatrava, working with the station designers of the French railways. It was inaugurated on the twenty-eighth of June 1994, under its old name, Satolas TGV. The building is about four hundred metres long, forty metres wide and forty metres high, and it carries the high-speed line straight past the airport.
+
+Have a look underneath the great hall when you go in. The station has five tracks, and here's the gift detail. The two in the middle run through a concrete tube, so that trains that aren't stopping can pass straight through at full speed, three hundred kilometres an hour. Stand on the platform as one goes through and you'll feel the building take a breath.
+
+Then follow the signs for the airport. A footbridge two hundred and fifty metres long, with a moving walkway, links the station to the terminals. And since 2010 the Rhônexpress tram has run from here to Part-Dieu in under thirty minutes.
+
+And here's the thing. Most stations by airports are corridors. Calatrava took a piece of transport infrastructure in the middle of fields and gave it a sense of occasion. It's rather lovely that arriving in Lyon, for many people, starts with a building that's so clearly glad to see them.
+
+[beat]
+
+If you've got time before your train, walk out to the far end of the forecourt and look back. It's only from a distance that the bird really comes into focus, wings open, about to leave with the planes.

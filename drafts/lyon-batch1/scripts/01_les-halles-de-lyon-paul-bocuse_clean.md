@@ -1,0 +1,15 @@
+# Les Halles de Lyon Paul Bocuse
+
+From the outside, the most celebrated food market in France looks rather like a multi-storey car park.
+
+Cours Lafayette, at the corner of Rue Garibaldi. In front of you is a long, low, modern block of glass and concrete. No arches, no ironwork, no clock. If you're wondering whether you've come to the wrong place, you haven't. The point of this building is entirely on the inside.
+
+Lyon has had a covered market since 1859, when the open-air stalls of Place des Cordeliers were gathered under an iron hall down on the Presqu'île. The market moved here, to the new business district of Part-Dieu, on the first of January 1971. Thirteen and a half thousand square metres over three levels. In 2004 the city began a full renovation, and when it reopened two years later it carried a new name: Paul Bocuse, the chef who did more than anyone to make Lyon's cooking famous abroad.
+
+Have a look through the doors at the aisles. There are fifty-six merchants inside: fishmongers, cheesemongers, butchers, bakers, charcutiers, wine merchants and a good many counters where you can simply sit down and eat. The ritual, if you'd like to do it the Lyonnais way, is a dozen oysters and a glass of white wine at a counter, standing up, before noon. On a weekend morning that's exactly what half the room is doing.
+
+And here's the thing. People who come looking for a grand market hall are often a little disappointed by the outside. But that's rather the Lyon way. This is a working larder for the city's kitchens, the place where chefs buy before service, and it was never built to be admired. In 2026 the American magazine Food and Wine ranked it the third best food market in the world, behind Borough Market in London and Chatuchak in Bangkok. Not bad for a car park.
+
+[beat]
+
+If you fancy following the name, Paul Bocuse learned his trade from a woman called Eugénie Brazier, whose restaurant still stands on Rue Royale, a short ride across the Rhône. It's the next best way to understand why this market matters.

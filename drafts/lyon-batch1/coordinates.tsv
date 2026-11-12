@@ -1,0 +1,35 @@
+num	slug	google_maps_name	lat	lon	category	coord_source
+01	les-halles-de-lyon-paul-bocuse	Les Halles de Lyon Paul Bocuse	45.763402	4.850417	Dine	OSM address (102 Cours Lafayette)
+02	daniel-et-denise-saint-jean	Daniel et Denise Saint-Jean	45.760312	4.825455	Dine	OSM venue
+03	cafe-comptoir-abel	Café Comptoir Abel	45.754135	4.825912	Dine	OSM venue
+04	le-bouchon-des-filles	Le Bouchon des Filles	45.768677	4.829317	Dine	OSM venue
+05	la-mere-brazier	La Mère Brazier	45.771386	4.837171	Dine	OSM venue
+06	ombellule	Ombellule	45.768763	4.846935	Dine	OSM venue
+07	l-antiquaire	L'Antiquaire	45.767922	4.830635	Drink	OSM venue
+08	le-fantome-de-l-opera	Le Fantôme de l'Opéra	45.770981	4.837337	Drink	OSM venue
+09	mokxa	Mokxa	45.775270	4.831280	Drink	OSM venue (5 Rue Victor Fort)
+10	la-commune	La Commune	45.742205	4.834116	Drink	OSM venue
+11	le-sucre	Le Sucre	45.736643	4.815010	Drink	OSM venue
+12	intercontinental-lyon-hotel-dieu	InterContinental Lyon - Hotel Dieu	45.758858	4.836903	Stay	OSM venue
+13	cour-des-loges	Cour des Loges	45.763281	4.827399	Stay	OSM venue
+14	villa-florentine	Villa Florentine	45.762961	4.825821	Stay	OSM venue
+15	mob-hotel-lyon	MOB Hotel Lyon	45.734387	4.816196	Stay	OSM venue
+16	couvent-sainte-marie-de-la-tourette	Couvent Sainte-Marie de La Tourette	45.819358	4.622275	Visit	OSM building
+17	musee-des-confluences	Musée des Confluences	45.732678	4.818161	Visit	OSM building
+18	cite-musee-tony-garnier	Cité Musée Tony Garnier	45.733509	4.862983	Visit	OSM venue
+19	opera-de-lyon	Opéra de Lyon	45.767816	4.836596	Visit	OSM building
+20	lugdunum	Lugdunum	45.760473	4.819976	Visit	OSM address (17 Rue Cléberg)
+21	hotel-de-ville-de-villeurbanne	Hôtel de Ville de Villeurbanne	45.766518	4.879607	Visit	OSM building
+22	gare-de-lyon-saint-exupery-tgv	Gare de Lyon Saint-Exupéry TGV	45.721004	5.076040	Visit	OSM station
+23	institut-lumiere	Institut Lumière	45.745088	4.870615	Visit	OSM venue
+24	cour-des-voraces	Cour des Voraces	45.771962	4.834671	Observe	OSM attraction
+25	tour-rose	Tour Rose (Maison du Crible)	45.762880	4.827118	Observe	OSM address (16 Rue du Bœuf)
+26	mur-des-canuts	Mur des Canuts	45.777929	4.827969	Observe	OSM artwork
+27	jardin-rosa-mir	Jardin Rosa Mir	45.780524	4.832074	Observe	OSM park
+28	jardin-des-curiosites	Jardin des Curiosités	45.755220	4.822118	Observe	OSM park
+29	cube-orange	Cube Orange	45.739167	4.814566	Observe	OSM building
+30	parc-de-la-tete-d-or	Parc de la Tête d'Or	45.777248	4.845204	Observe	OSM main gate (Porte des Enfants du Rhône)
+31	passage-thiaffait	Passage Thiaffait	45.770251	4.833175	Shop	OSM passage
+32	le-bal-des-ardents	Librairie Le Bal des Ardents	45.765348	4.835440	Shop	OSM venue
+33	pralus-lyon-monplaisir	Pralus Lyon - Monplaisir	45.744270	4.870077	Shop	OSM venue
+34	marche-de-la-creation	Marché de la Création	45.761108	4.828552	Shop	OSM street (Quai Romain Rolland)
