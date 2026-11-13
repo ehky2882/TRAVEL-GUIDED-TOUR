@@ -5761,6 +5761,16 @@
       "websiteURL": null
     },
     {
+      "id": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "displayName": "Atlas Studio NCE",
+      "platform": "dozent",
+      "handle": "atlas.nce",
+      "avatarURL": null,
+      "avatarEmoji": "🇫🇷",
+      "bio": "Atlas Studio's Nice bureau — a city that was Italian until 1860 and still eats like it: socca from a wood-fired oven, a family kitchen on Rue Droite since 1927, candied fruit opposite the opera; the Belle Époque palaces of the Promenade des Anglais, a Russian cathedral built for a tsarevich, and the museums Matisse, Chagall and Kenzō Tange left on the hills above the bay.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -158233,6 +158243,1569 @@
         "Hidden Gem",
         "Designed by a Master",
         "Oscar Niemeyer"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "839593b9-93db-5d0d-8ddb-983bcfee97fc",
+      "createdAt": "2026-11-13",
+      "title": "Hôtel Le Negresco",
+      "shortDescription": "The man who built this hotel trained as a sweet-maker.",
+      "longDescription": "The man who built this hotel trained as a sweet-maker.\n\nHenri Negresco was born Alexandru Negrescu, the son of a Romanian innkeeper. He trained as a confectioner in Bucharest, worked his way across Paris and the Riviera, and ended up running the municipal casino here. Then he did what every hotel manager dreams of. He built his own. It opened just before the First World War, designed by Édouard-Jean Niermans, the architect of choice for Belle Époque pleasure palaces, and Niermans gave it that dome.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-le-negresco_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-le-negresco_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-le-negresco_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-le-negresco_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-le-negresco_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-le-negresco_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "af73a1c9-9604-5d85-8aa1-0beb6c2cff43",
+          "order": 0,
+          "title": "Hôtel Le Negresco",
+          "caption": "On the sea side of the Promenade des Anglais, looking inland at the pink-domed white hotel.",
+          "latitude": 43.6947118,
+          "longitude": 7.2583619,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-hotel-le-negresco.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-le-negresco_hero.webp",
+          "transcriptText": "The man who built this hotel trained as a sweet-maker.\n\nStand on the sea side of the Promenade des Anglais and look inland. The long white wedding cake of a building in front of you is the Negresco. You'll know it by the dome on its corner, pink, with a green cap, and by the doormen out front in eighteenth-century livery and hats with red plumes.\n\nHenri Negresco was born Alexandru Negrescu, the son of a Romanian innkeeper. He trained as a confectioner in Bucharest, worked his way across Paris and the Riviera, and ended up running the municipal casino here. Then he did what every hotel manager dreams of. He built his own. It opened just before the First World War, designed by Édouard-Jean Niermans, the architect of choice for Belle Époque pleasure palaces, and Niermans gave it that dome.\n\nHere's the bit the brochures sometimes get wrong. You may hear that the great glass roof inside was made by Gustave Eiffel. It wasn't. Eiffel never worked here. The building is Niermans from top to bottom.\n\nInside, under that roof, hangs a Baccarat chandelier of more than sixteen thousand crystals. It was ordered by Tsar Nicholas the Second. The Russian Revolution got in the way, the Tsar never took delivery, and it ended up here instead.\n\nAnd that's rather the story of the whole building. Within a couple of years of opening, the war turned it into a hospital, the rich stopped coming, and Negresco lost the lot. He died in Paris at fifty-two. The hotel he dreamed up has outlived him by more than a century, and since nineteen fifty-seven, when the Augier family bought it, it has filled up with paintings and sculpture as if it were a private museum with beds.\n\nIf you've got a few minutes, and you're dressed for it, ask at the door about seeing the Salon Royal. The chandelier is worth the detour. Then come back out and look along the seafront at the dome once more. It's still the most recognisable roofline on the whole Baie des Anges."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6947118,
+      "centroidLongitude": 7.2583619,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Venue",
+        "Waterfront",
+        "Architecture",
+        "History",
+        "Art",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Édouard-Jean Niermans"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d757a79d-b9eb-577f-997b-2e5da2fe444d",
+      "createdAt": "2026-11-13",
+      "title": "Hôtel La Pérouse",
+      "shortDescription": "This hotel doesn't sit at the foot of the cliff. It's built into it.",
+      "longDescription": "This hotel doesn't sit at the foot of the cliff. It's built into it.\n\nThe name comes from Jean-François de La Pérouse, the eighteenth-century French navigator who sailed off to map the Pacific and was never seen again. Fitting, for a building that spends its whole life staring at the horizon. The hotel says it has been carved into this rock since nineteen thirty-six.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-la-perouse_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-la-perouse_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-la-perouse_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-la-perouse_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2a4148f0-2de9-5952-9972-f89142c053fe",
+          "order": 0,
+          "title": "Hôtel La Pérouse",
+          "caption": "On the Quai Rauba Capèu, at the hotel pressed into the foot of the Castle Hill.",
+          "latitude": 43.6940939,
+          "longitude": 7.2792302,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-hotel-la-perouse.mp3",
+          "audioDurationSeconds": 101,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-la-perouse_hero.webp",
+          "transcriptText": "This hotel doesn't sit at the foot of the cliff. It's built into it.\n\nFind yourself on the Quai Rauba Capèu, at the far eastern end of the bay, where the Promenade des Anglais runs out of room and the Castle Hill drops straight into the sea. The building pressed against the rock face in front of you is La Pérouse. Look up from the entrance and you'll see that the hotel climbs the hill in terraces, the bare limestone showing between them.\n\nThe name comes from Jean-François de La Pérouse, the eighteenth-century French navigator who sailed off to map the Pacific and was never seen again. Fitting, for a building that spends its whole life staring at the horizon. The hotel says it has been carved into this rock since nineteen thirty-six.\n\nTwo details make the place. The first is the garden. Behind the front door there's a patio planted with lemon trees, some of them a century old, with jasmine climbing the walls. In the middle of a city it smells like a farmhouse in the hills. The second is the pool, which is cut into the rock itself, so you swim with the cliff at your back and the whole bay in front of you.\n\nWhat I love about this spot is the trick of it. From the Promenade, this end of the bay looks like a dead end, all rock and no room. Somebody looked at that cliff and saw a hotel. Climb high enough and every window has the view that the rest of the seafront pays a fortune for.\n\nFrom here, you don't need to be a guest to get the view. Carry on along the quay for a minute, past the war memorial cut into the same cliff, and take the steps or the lift up the Castle Hill. At the top, look back down at La Pérouse. From above, you'll finally see how much of it is hiding in the rock."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 101,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6940939,
+      "centroidLongitude": 7.2792302,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Waterfront",
+        "Viewpoint",
+        "Architecture",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "bc6ad19d-3355-5a1b-9fb5-f2317d266d7e",
+      "createdAt": "2026-11-13",
+      "title": "Hôtel du Couvent",
+      "shortDescription": "For nearly four hundred years, this was a place for people who'd given up the world. Now it's a hotel.",
+      "longDescription": "For nearly four hundred years, this was a place for people who'd given up the world. Now it's a hotel.\n\nIt was built as a convent in sixteen oh four, by nuns of the Order of Saint Clare. In the early nineteenth century the Visitation sisters moved in, and they stayed until the early nineteen-eighties.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-du-couvent_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-du-couvent_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-du-couvent_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-du-couvent_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-du-couvent_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8a246862-7f59-5fbc-b8eb-833c081b6132",
+          "order": 0,
+          "title": "Hôtel du Couvent",
+          "caption": "At the corner of Rue Honoré Ugo, before the long stone walls and shutters of the old convent.",
+          "latitude": 43.6973473,
+          "longitude": 7.2788356,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-hotel-du-couvent.mp3",
+          "audioDurationSeconds": 98,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-du-couvent_hero.webp",
+          "transcriptText": "For nearly four hundred years, this was a place for people who'd given up the world. Now it's a hotel.\n\nYou should be in the upper part of the old town, at the corner of Rue Honoré Ugo, where the lanes start climbing towards the Castle Hill. The long building with the old stone walls and shuttered windows is the Hôtel du Couvent. Look for the terraces rising up the slope behind it, green with trees.\n\nIt was built as a convent in sixteen oh four, by nuns of the Order of Saint Clare. In the early nineteenth century the Visitation sisters moved in, and they stayed until the early nineteen-eighties.\n\nThe man who brought it back, Valéry Grégo, spent roughly ten years on it, and the approach is what makes it worth a stop. The architects, Studio Mumbai with Studio Méditerranée, called it frugal. Timber and stone found on the site were reused. Some of the desks in the rooms are made from four-hundred-year-old beams pulled out of the convent's own roof.\n\nThen there's the water. Up the hill in Cimiez are the ruins of the Roman baths of the ancient town of Cemenelum. The hotel has built its own version, a run of pools that get warmer as you go, fed down through terraced gardens with more than three hundred kinds of plant.\n\nSo the convent ends up doing very nearly what it always did. It grows its own herbs, bakes its own bread with flour milled on site, and sends most guests away a bit calmer than they arrived. The vows have gone. The rhythm hasn't.\n\nIf you're passing on a Saturday morning, look in. There's a farmers' market in the courtyard, and it's the easiest way to see the cloister without booking a room."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 98,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6973473,
+      "centroidLongitude": 7.2788356,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Venue",
+        "History",
+        "Faith",
+        "Contemporary",
+        "Green Escape",
+        "Designed by a Master",
+        "Studio Mumbai"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "26197565-3862-5ed8-977e-05afc239d194",
+      "createdAt": "2026-11-13",
+      "title": "Hôtel Windsor",
+      "shortDescription": "Nobody planned for this hotel to become an art gallery. It happened one room at a time.",
+      "longDescription": "Nobody planned for this hotel to become an art gallery. It happened one room at a time.\n\nThe Redolfi family has run it for around eighty years. In nineteen eighty-nine, Bernard Redolfi did something no sensible hotelier would do. He handed one room, number eighty-three, to the artist Joël Ducoroy and let him do what he liked with it. Then he did it again. And again.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-windsor_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-windsor_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-windsor_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-windsor_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "53716b5a-608d-5f6e-b336-40858d4cea69",
+          "order": 0,
+          "title": "Hôtel Windsor",
+          "caption": "On Rue Dalpozzo, outside number eleven, a couple of blocks back from the Promenade.",
+          "latitude": 43.6979514,
+          "longitude": 7.2612944,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-hotel-windsor.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-hotel-windsor_hero.webp",
+          "transcriptText": "Nobody planned for this hotel to become an art gallery. It happened one room at a time.\n\nYou should be on Rue Dalpozzo, a quiet street a couple of blocks back from the Promenade des Anglais. The building in front of you, number eleven, is a nineteenth-century building in what the hotel calls the Eiffel School style. That's the Windsor.\n\nThe Redolfi family has run it for around eighty years. In nineteen eighty-nine, Bernard Redolfi did something no sensible hotelier would do. He handed one room, number eighty-three, to the artist Joël Ducoroy and let him do what he liked with it. Then he did it again. And again.\n\nToday most of the rooms are the work of a different contemporary artist, and no two are alike. Some of the names will be familiar if you know French art. Ben, the Nice artist famous for his handwritten slogans, is here. So is the British cartoonist Glen Baxter, and the video artist Pierrick Sorin. Every year a new artist takes over the lobby.\n\nThe other surprise is behind the building. There's a tropical garden, thick with palms and flowering plants, a heated pool, and a giant rubber tree that breakfast is served under in summer. At night, an installation by Mauro Benetti called La Luna is reflected in the water.\n\nWhat I find rather lovely about the Windsor is that it's the opposite of the grand seafront palaces a few streets away. They spent fortunes to look impressive. This one spent its imagination instead, and it has ended up with a collection a small museum would envy.\n\nIf you can, step into the bar for a drink. The installation in there is called Bar barrit, by Nicolas Rubinstein, and it's the quickest way to see what the fuss is about."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6979514,
+      "centroidLongitude": 7.2612944,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ae865b90-cc44-58be-a213-98f7c236bd31",
+      "createdAt": "2026-11-13",
+      "title": "Chez Pipo",
+      "shortDescription": "Chickpea flour, water, olive oil and salt. That's the whole recipe, and people queue for it.",
+      "longDescription": "Chickpea flour, water, olive oil and salt. That's the whole recipe, and people queue for it.\n\nThe dish is socca, Nice's chickpea pancake. The batter is poured thin into enormous round copper trays and pushed into a wood-fired oven running at around three hundred degrees. A few minutes later it comes out blistered and charred at the edges, still soft in the middle, and is cut into rough pieces with a scraper. You eat it with your fingers and plenty of black pepper.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-chez-pipo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-chez-pipo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-chez-pipo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-chez-pipo_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-chez-pipo_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "24258fea-7bf1-51d6-8e31-f1ede9d62de7",
+          "order": 0,
+          "title": "Chez Pipo",
+          "caption": "On Rue Bavastro, up from the old port: the low frontage, the queue, and the oven glowing at the back.",
+          "latitude": 43.700089,
+          "longitude": 7.285474,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-chez-pipo.mp3",
+          "audioDurationSeconds": 99,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-chez-pipo_hero.webp",
+          "transcriptText": "Chickpea flour, water, olive oil and salt. That's the whole recipe, and people queue for it.\n\nYou should be on Rue Bavastro, a narrow street running up from the old port towards Place Garibaldi. Look for the low frontage with the name Chez Pipo above the door, and very likely a queue outside it. Peer through the window, and at the back you'll see the oven glowing.\n\nThe dish is socca, Nice's chickpea pancake. The batter is poured thin into enormous round copper trays and pushed into a wood-fired oven running at around three hundred degrees. A few minutes later it comes out blistered and charred at the edges, still soft in the middle, and is cut into rough pieces with a scraper. You eat it with your fingers and plenty of black pepper.\n\nChez Pipo opened in nineteen twenty-three, named after its founder, and it's been doing more or less the same thing ever since. The oven is the heart of the room, and you can see it from the tables, which are long and shared, so you'll probably end up eating elbow to elbow with a stranger.\n\nHere's what's worth knowing. Socca began as working food, cheap, filling and eaten with your hands, not something you'd sit down to in a dining room. This place is one of the very few that has kept it exactly that simple.\n\nWhich is rather the point of coming. Plenty of restaurants in Nice will sell you a plate of local tradition with a tablecloth underneath. Here, the tradition is the plate, and the tablecloth never made it.\n\nIf you'd like the full set, order a slice of pissaladière too, the onion tart with anchovies and black olives. Then walk five minutes down to the port and eat the rest looking at the boats."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 99,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.700089,
+      "centroidLongitude": 7.285474,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9f424c3d-d654-5164-a686-29dc634a47c9",
+      "createdAt": "2026-11-13",
+      "title": "La Merenda",
+      "shortDescription": "The chef at this tiny restaurant gave up two Michelin stars to cook here.",
+      "longDescription": "The chef at this tiny restaurant gave up two Michelin stars to cook here.\n\nThe name is Niçois for a snack, a workman's bite to eat. It opened in nineteen sixty-six as a family bistro. Then, in nineteen ninety-six, Dominique Le Stanc bought it. He'd been running the restaurant at the Negresco, with two Michelin stars to his name, and he walked away from all of it for a room with around twenty seats and diners perched on stools.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-la-merenda_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-la-merenda_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-la-merenda_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-la-merenda_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "fb5626bd-1043-5173-87ee-e27d2f1844a8",
+          "order": 0,
+          "title": "La Merenda",
+          "caption": "On Rue Raoul Bosio, by the small dining room with the plain shopfront, near the Opéra.",
+          "latitude": 43.6967048,
+          "longitude": 7.2728636,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-la-merenda.mp3",
+          "audioDurationSeconds": 93,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-la-merenda_hero.webp",
+          "transcriptText": "The chef at this tiny restaurant gave up two Michelin stars to cook here.\n\nYou should be on Rue Raoul Bosio, a short street at the western edge of the old town, a couple of minutes from the Opéra. La Merenda is the small dining room with the plain shopfront. There's not much to see from outside, and that's rather deliberate. There's no telephone, either. If you want a table, you come here in person and book it.\n\nThe name is Niçois for a snack, a workman's bite to eat. It opened in nineteen sixty-six as a family bistro. Then, in nineteen ninety-six, Dominique Le Stanc bought it. He'd been running the restaurant at the Negresco, with two Michelin stars to his name, and he walked away from all of it for a room with around twenty seats and diners perched on stools.\n\nThe cooking is Niçois home food, done with a grand chef's precision. Fried courgette flowers. Stuffed sardines. Salt cod, and tripe in the old way. And the gift detail is the chef himself. Le Stanc has long been known for riding his old bicycle to the market every morning to choose what he'll cook that day.\n\nHere's the thing that's worth thinking about. Every serious chef eventually has to decide what all the training is for. Le Stanc decided it was for this, for cooking the food of the city properly, for whoever turned up in person to ask for a table.\n\nIf it's closed, or you can't get in, walk two minutes south to the Cours Saleya market and look at what's on the stalls. The courgette flowers in season will tell you exactly where this kitchen does its shopping."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 93,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6967048,
+      "centroidLongitude": 7.2728636,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "be57ca70-4886-5ab0-8b1d-a8f9205a3e43",
+      "createdAt": "2026-11-13",
+      "title": "Chez Acchiardo",
+      "shortDescription": "The same family has been cooking in this room since nineteen twenty-seven.",
+      "longDescription": "The same family has been cooking in this room since nineteen twenty-seven.\n\nThe family came to Nice from the Val Maira, a valley in the mountains of Piedmont, on the Italian side of the Alps. That isn't as far-fetched as it sounds. For most of its history Nice wasn't French at all. It belonged to the House of Savoy, ruled from Turin, and only joined France in eighteen sixty. Families moved down from those valleys to the coast for generations, and they brought their cooking with them.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-chez-acchiardo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-chez-acchiardo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-chez-acchiardo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-chez-acchiardo_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-chez-acchiardo_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6a4b29d5-b12b-5736-88c6-083fff468ea9",
+          "order": 0,
+          "title": "Chez Acchiardo",
+          "caption": "Halfway along Rue Droite, at number thirty-eight, with the name Acchiardo over the door.",
+          "latitude": 43.6966003,
+          "longitude": 7.2770665,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-chez-acchiardo.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 15,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-chez-acchiardo_hero.webp",
+          "transcriptText": "The same family has been cooking in this room since nineteen twenty-seven.\n\nYou should be about halfway along Rue Droite, the narrow lane that runs through the heart of the old town. Look for number thirty-eight, a plain old shopfront with the name Acchiardo over the door and, at lunchtime, the clatter of a busy dining room coming out of it.\n\nThe family came to Nice from the Val Maira, a valley in the mountains of Piedmont, on the Italian side of the Alps. That isn't as far-fetched as it sounds. For most of its history Nice wasn't French at all. It belonged to the House of Savoy, ruled from Turin, and only joined France in eighteen sixty. Families moved down from those valleys to the coast for generations, and they brought their cooking with them.\n\nFour generations on, the menu is still the food of that world. Daube, the beef stewed for hours in wine. Gnocchi. Stuffed vegetables, the Niçois way. Tripe, for the brave. And red mullet with tapenade, the paste of black olives and capers that tastes of this whole coast.\n\nThe restaurant carries the Cuisine Nissarde label, which the city gives to places cooking the genuine local repertoire. But the label is rather beside the point. Nobody here needs telling.\n\nWhat I like about Acchiardo is that it isn't preserving anything. It simply never stopped. While the old town around it filled up with souvenir shops and gelato counters, this room went on serving lunch to people who live here.\n\nBefore you go, walk north along Rue Droite for a minute or so, and you'll come to the Palais Lascaris, a seventeenth-century palace squeezed into the same lane. It's a reminder that this narrow street was once the smartest address in town."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6966003,
+      "centroidLongitude": 7.2770665,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Immigration"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "23af7918-9f65-54f6-82be-e3d4dd03cf1d",
+      "createdAt": "2026-11-13",
+      "title": "Peixes",
+      "shortDescription": "In a city famous for cooked-down stews and slow braises, this place hardly cooks its fish at all.",
+      "longDescription": "In a city famous for cooked-down stews and slow braises, this place hardly cooks its fish at all.\n\nThe name is Portuguese for fish, and it opened in twenty fifteen with a simple, slightly radical idea for Nice. Raw fish. The menu is built around ceviche and tiradito, two South American ways of preparing it. Ceviche is diced fish cured in citrus juice until it firms up. Tiradito is sliced thin, more like sashimi, and dressed just before it reaches you. Here it's done with Mediterranean fish and Mediterranean flavours.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-peixes_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-peixes_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-peixes_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-peixes_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "99ee250e-d906-579d-aeb3-ad720c2b8931",
+          "order": 0,
+          "title": "Peixes",
+          "caption": "On Rue de l'Opéra, at the small bright dining room tiled in white and nautical blue.",
+          "latitude": 43.6961873,
+          "longitude": 7.2710305,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-peixes.mp3",
+          "audioDurationSeconds": 96,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-peixes_hero.webp",
+          "transcriptText": "In a city famous for cooked-down stews and slow braises, this place hardly cooks its fish at all.\n\nYou should be on Rue de l'Opéra, on the western edge of the old town, a few steps from the opera house. Look for a small, bright dining room tiled in white and nautical blue. That's Peixes.\n\nThe name is Portuguese for fish, and it opened in twenty fifteen with a simple, slightly radical idea for Nice. Raw fish. The menu is built around ceviche and tiradito, two South American ways of preparing it. Ceviche is diced fish cured in citrus juice until it firms up. Tiradito is sliced thin, more like sashimi, and dressed just before it reaches you. Here it's done with Mediterranean fish and Mediterranean flavours.\n\nThat combination is the clever part. Nice has always had wonderful fish at the market. What it hadn't really had was a local restaurant that trusted the fish to need almost nothing done to it. Peixes took a technique from Peru and gave it a local accent, and the Michelin guide has noticed.\n\nAnd here's why it belongs in a guide to this city. Nice has always been a crossroads, Italian and French, mountain and sea. The food has absorbed everything that came through the port. A ceviche bar by the opera house isn't a break with that tradition. It's the latest chapter of it.\n\nIf you fancy seeing where the fish comes from, the fish market on Place Saint-François, a ten-minute walk into the old town, runs most mornings. Go early. By lunchtime the best of it is already on plates like the ones here."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 96,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6961873,
+      "centroidLongitude": 7.2710305,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "84d27b91-80ff-5d96-ab28-953a7bbc7c82",
+      "createdAt": "2026-11-13",
+      "title": "Le Plongeoir",
+      "shortDescription": "This is a restaurant on a rock in the sea, at the top of an old diving board.",
+      "longDescription": "This is a restaurant on a rock in the sea, at the top of an old diving board.\n\nThe rock has been feeding people for a long time. From the eighteen-seventies, a fishing boat moored here served meals, tea and cocktails to Belle Époque visitors, and was tied up to a little kiosk on the rock. Then, in nineteen forty-one, the boat was badly damaged, and an architect named René Livieri replaced it with this, a three-level Art Deco diving board, with a staircase you could climb before jumping off into the sea.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-le-plongeoir_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-le-plongeoir_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-le-plongeoir_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-le-plongeoir_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-le-plongeoir_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "87a054aa-20ec-59aa-acc4-93b4ec89c85f",
+          "order": 0,
+          "title": "Le Plongeoir",
+          "caption": "On the coast road east of the port, above the white diving-board tower on its rock in the sea.",
+          "latitude": 43.6920578,
+          "longitude": 7.2909519,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-le-plongeoir.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-le-plongeoir_hero.webp",
+          "transcriptText": "This is a restaurant on a rock in the sea, at the top of an old diving board.\n\nFollow the coast road east from the port, round the headland towards Mont Boron, and stop when you see it. Below the road, on a rocky outcrop just off the shore, is a white tower of platforms joined by a staircase, with a restaurant terrace on top. The terrace sits a little over six metres above the water.\n\nThe rock has been feeding people for a long time. From the eighteen-seventies, a fishing boat moored here served meals, tea and cocktails to Belle Époque visitors, and was tied up to a little kiosk on the rock. Then, in nineteen forty-one, the boat was badly damaged, and an architect named René Livieri replaced it with this, a three-level Art Deco diving board, with a staircase you could climb before jumping off into the sea.\n\nFor generations of Niçois, that was the game. Climb up, look down, work up the nerve. Later it fell out of use and was left to crumble.\n\nIn twenty fifteen it was brought back as a restaurant, and the platforms were kept. So now, instead of jumping off the top, you sit there and eat Mediterranean fish with the sea all round you.\n\nI find it rather lovely that the building's real job was always about nerve. Somebody had the nerve to put a boat-restaurant on a rock. Somebody else had the nerve to build a diving board in the middle of a war. And now you need a bit of nerve, if not for the jump, then at least for the bill.\n\nIf you've got time, walk back towards the port along the coast road. With the lighthouse, the harbour and the Castle Hill ahead of you, it's one of the loveliest walks in Nice, and it's free."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6920578,
+      "centroidLongitude": 7.2909519,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Waterfront",
+        "Maritime",
+        "Viewpoint",
+        "Art Deco",
+        "Designed by a Master",
+        "René Livieri"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "54acd589-bb34-57ca-98df-4f220870468f",
+      "createdAt": "2026-11-13",
+      "title": "Les Distilleries Idéales",
+      "shortDescription": "This bar looks as if it's been here for a century. It hasn't.",
+      "longDescription": "This bar looks as if it's been here for a century. It hasn't.\n\nThe name means the ideal distilleries, and the room is dressed for it. Inside there's a Belle Époque and industrial look, all wood, metal and old bottles, the sort of décor that makes you assume your great-grandfather drank here. In fact it's been on this corner for a couple of decades, which by old-town standards is practically yesterday.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-les-distilleries-ideales_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-les-distilleries-ideales_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-les-distilleries-ideales_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7395d34c-5340-5bf9-b70d-5c3d29ef7544",
+          "order": 0,
+          "title": "Les Distilleries Idéales",
+          "caption": "On Rue de la Préfecture, at the corner terrace under the old-fashioned lettering.",
+          "latitude": 43.6964015,
+          "longitude": 7.2767603,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-les-distilleries-ideales.mp3",
+          "audioDurationSeconds": 95,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 15,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-les-distilleries-ideales_hero.webp",
+          "transcriptText": "This bar looks as if it's been here for a century. It hasn't.\n\nYou should be on Rue de la Préfecture, in the old town, at the corner where the bar's terrace spills out onto the lane. Look for the old-fashioned lettering over the windows, the dark wood frontage and, after six in the evening, a crowd of locals with drinks in hand.\n\nThe name means the ideal distilleries, and the room is dressed for it. Inside there's a Belle Époque and industrial look, all wood, metal and old bottles, the sort of décor that makes you assume your great-grandfather drank here. In fact it's been on this corner for a couple of decades, which by old-town standards is practically yesterday.\n\nThat doesn't make it a fake. It makes it rather good at something Nice has always done. This whole city is a bit of a stage set. The seafront hotels were built to look like palaces, and the Promenade itself began life so the English winter visitors could have somewhere to stroll. A bar dressed to look old fits right in.\n\nWhat's actually in the glasses is simple. There are around eighteen beers on tap, a reasonable list of wines, and boards of charcuterie to go with them. And the crowd is mostly from Nice, not from tour groups, which is the best review any bar in this part of town can have.\n\nSo treat it as what it is, the neighbourhood's front room. The apéritif hour between six and eight is the moment to come.\n\nWhen you've finished your drink, walk a couple of minutes towards the sea. You'll come out onto the Cours Saleya, and if the market is packing up, you'll catch the last of the flower stalls being folded away."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 95,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6964015,
+      "centroidLongitude": 7.2767603,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "84cf4dd8-695b-53ee-870d-db36eb7c6dd5",
+      "createdAt": "2026-11-13",
+      "title": "La Part des Anges",
+      "shortDescription": "The name refers to the wine that escapes from the barrel into the air. In this shop, very little goes to waste.",
+      "longDescription": "The name refers to the wine that escapes from the barrel into the air. In this shop, very little goes to waste.\n\nThe phrase means the angels' share. Winemakers use it for the small amount that evaporates through the wood as wine ages, the portion that goes up to heaven. It's a lovely name for a wine shop, and Olivier Labarde, who opened this one in nineteen ninety-eight, has spent the years since filling it with natural wine. That means wine made with as little interference as possible, from organic grapes, without much added in the cellar.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-la-part-des-anges_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-la-part-des-anges_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-la-part-des-anges_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-la-part-des-anges_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5100b2a5-a087-5190-b338-e01238cf8f02",
+          "order": 0,
+          "title": "La Part des Anges",
+          "caption": "On Rue Gubernatis, at number seventeen, the narrow shop with wine stacked to the ceiling.",
+          "latitude": 43.7006973,
+          "longitude": 7.272332,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-la-part-des-anges.mp3",
+          "audioDurationSeconds": 100,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-la-part-des-anges_hero.webp",
+          "transcriptText": "The name refers to the wine that escapes from the barrel into the air. In this shop, very little goes to waste.\n\nYou should be on Rue Gubernatis, a quiet street in the city centre, a few minutes north of Place Masséna. Number seventeen is a narrow shopfront with wine bottles stacked to the ceiling and a few tables tucked between them. That's La Part des Anges.\n\nThe phrase means the angels' share. Winemakers use it for the small amount that evaporates through the wood as wine ages, the portion that goes up to heaven. It's a lovely name for a wine shop, and Olivier Labarde, who opened this one in nineteen ninety-eight, has spent the years since filling it with natural wine. That means wine made with as little interference as possible, from organic grapes, without much added in the cellar.\n\nIt's a shop, a wine bar and a lunch counter at once. You can buy a bottle to take away, or sit down in the middle of the shelves with a glass and a plate of something hearty. In twenty twenty the French wine magazine La Revue du Vin de France named it the best wine shop in the country.\n\nLook out for one local name on the shelves, Bellet. It's Nice's own wine appellation, tiny and old, with vineyards in the hills just behind the city. Most visitors have no idea that Nice makes wine at all.\n\nThat's what a good wine shop is really for. It's not the famous names. It's the bottle you'd never have found on your own, from a hillside you can very nearly see from here.\n\nBefore you leave, ask for a Bellet to take home. Then, if you fancy, the Musée Masséna's garden on the Promenade, fifteen minutes' walk south, is a fine place to sit and decide when to open it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 100,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7006973,
+      "centroidLongitude": 7.272332,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "205409d0-071e-5612-9e9e-2d6027b4e027",
+      "createdAt": "2026-11-13",
+      "title": "Café de Turin",
+      "shortDescription": "The arcades over your head were built by an architect from Turin, which is why the café underneath them is named after his city.",
+      "longDescription": "The arcades over your head were built by an architect from Turin, which is why the café underneath them is named after his city.\n\nCafé de Turin has been an institution in Nice for more than a hundred years, and it does one thing. Seafood platters, all sizes. Oysters, clams, prawns, crab, mussels. In season, it's also one of the places to try oursins, the local sea urchins, broken open and eaten raw with a spoon. They taste of nothing so much as the sea itself.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-cafe-de-turin_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-cafe-de-turin_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-cafe-de-turin_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-cafe-de-turin_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "deac5e6c-92fe-565f-8a24-fc8ea12dfc17",
+          "order": 0,
+          "title": "Café de Turin",
+          "caption": "Under the arcades of Place Garibaldi, by the terrace and the counter piled with ice and shellfish.",
+          "latitude": 43.700734,
+          "longitude": 7.2794337,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-cafe-de-turin.mp3",
+          "audioDurationSeconds": 95,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-cafe-de-turin_hero.webp",
+          "transcriptText": "The arcades over your head were built by an architect from Turin, which is why the café underneath them is named after his city.\n\nYou should be standing on Place Garibaldi, under the arcades. Look for the café's terrace and its counter piled with ice and shellfish. The man in the apron opening oysters at the front has the most important job here.\n\nCafé de Turin has been an institution in Nice for more than a hundred years, and it does one thing. Seafood platters, all sizes. Oysters, clams, prawns, crab, mussels. In season, it's also one of the places to try oursins, the local sea urchins, broken open and eaten raw with a spoon. They taste of nothing so much as the sea itself.\n\nThe name isn't decoration. When this square was laid out in the seventeen-seventies, Nice belonged to the House of Savoy, ruled from Turin. The square was designed as a grand gateway at the end of the road from Turin, with matching arcades on the Turin model so that people could walk in the shade. For most of its life, Nice faced north towards the Alps and Italy, not towards Paris.\n\nSo eating oysters here is a small piece of time travel. The arcades are Piedmontese, the statue in the middle is the Italian hero Garibaldi, who was born in this city, and the café is named after a capital Nice no longer answers to.\n\nIf you've got a few minutes afterwards, head south-east out of the square, towards the port. Walk a couple of blocks down to the water and you'll see the boats that supply a good deal of what's on these platters."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 95,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.700734,
+      "centroidLongitude": 7.2794337,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Maritime",
+        "History",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "db750aed-fe1f-55cf-9977-aa3295785672",
+      "createdAt": "2026-11-13",
+      "title": "Café du Cycliste",
+      "shortDescription": "The cyclists here are about to ride up mountains. The coffee is part of the training.",
+      "longDescription": "The cyclists here are about to ride up mountains. The coffee is part of the training.\n\nIt's a clothing brand first. It was founded in Nice in two thousand and nine, and the story goes that it was dreamt up in a traditional café in the hills above the coast, the kind of place riders stop at halfway up a climb. In twenty fifteen it moved down here, to a big space on the port, and became a shop, a café and something like a clubhouse at once.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-cafe-du-cycliste_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-cafe-du-cycliste_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-cafe-du-cycliste_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-cafe-du-cycliste_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "aea34f62-bcd6-537a-ac38-11abe785c984",
+          "order": 0,
+          "title": "Café du Cycliste",
+          "caption": "On the Quai des Docks, at number sixteen, bicycles leaning outside on the east side of the port.",
+          "latitude": 43.6965468,
+          "longitude": 7.2860986,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-cafe-du-cycliste.mp3",
+          "audioDurationSeconds": 89,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-cafe-du-cycliste_hero.webp",
+          "transcriptText": "The cyclists here are about to ride up mountains. The coffee is part of the training.\n\nYou should be on the Quai des Docks, along the east side of the old port. Look for the café and shop at number sixteen, with bicycles leaning outside and riders in Lycra standing about with espresso cups in hand. That's Café du Cycliste.\n\nIt's a clothing brand first. It was founded in Nice in two thousand and nine, and the story goes that it was dreamt up in a traditional café in the hills above the coast, the kind of place riders stop at halfway up a climb. In twenty fifteen it moved down here, to a big space on the port, and became a shop, a café and something like a clubhouse at once.\n\nThe reason it's here, and not in Paris, is outside the door. Nice has the sea on one side and the Alps on the other, and the roads that link them are some of the most famous in cycling. Professional riders live along this coast because they can train on serious climbs within half an hour of their front door. The Col d'Èze, behind the city, is one of the famous climbs of the Paris to Nice race. The routes start right here.\n\nWhat I like about this place is that it gets something right about Nice that the postcards miss. People come here for the beach. The locals, quite a lot of them, come here for the hills.\n\nIf you're not riding, order a coffee and watch the groups set off. Then walk to the end of the quay and look up at the hills behind the port. Every one of those switchbacks has someone on a bicycle somewhere on it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 89,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6965468,
+      "centroidLongitude": 7.2860986,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce",
+        "Fashion",
+        "Waterfront"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "be7082f6-6ea8-5175-8b32-7f396f132a89",
+      "createdAt": "2026-11-13",
+      "title": "Maison Auer",
+      "shortDescription": "The fruit in this window has been soaking in sugar for weeks.",
+      "longDescription": "The fruit in this window has been soaking in sugar for weeks.\n\nThe house goes back to eighteen twenty. Its founder, Henri Auer, was a Swiss confectioner who came to the Côte d'Azur and was dazzled by the fruit, the oranges, lemons, figs and apricots that grew here almost without trying. His son Henri-Chrétien took over in eighteen ninety and made the family's candied fruit famous far beyond the city. Five generations of the family ran it after that.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-maison-auer_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-maison-auer_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-maison-auer_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "13de1419-c353-50f7-b7a0-febd5f2db46e",
+          "order": 0,
+          "title": "Maison Auer",
+          "caption": "On Rue Saint-François-de-Paule, opposite the opera house, at the window of shining fruit.",
+          "latitude": 43.6959985,
+          "longitude": 7.2723799,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-maison-auer.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-maison-auer_hero.webp",
+          "transcriptText": "The fruit in this window has been soaking in sugar for weeks.\n\nYou should be on Rue Saint-François-de-Paule, directly opposite the opera house, at the western edge of the old town. Look for the old shopfront with the name Auer above it, and behind the glass, rows of fruit that shine as if they've been lacquered. They have, in a way.\n\nThe house goes back to eighteen twenty. Its founder, Henri Auer, was a Swiss confectioner who came to the Côte d'Azur and was dazzled by the fruit, the oranges, lemons, figs and apricots that grew here almost without trying. His son Henri-Chrétien took over in eighteen ninety and made the family's candied fruit famous far beyond the city. Five generations of the family ran it after that.\n\nThe candying is the gift detail. A piece of fruit is soaked in syrup that's made stronger, little by little, over weeks, until the sugar has replaced the water inside it. A whole clementine done this way glows like amber, and keeps for months.\n\nStep inside if you can. The interior is in a Florentine style, with gilded counters and mirrors, and it has barely changed. It's less a shop than a jewellery box, and it's listed as part of the city's heritage.\n\nHere's what's worth knowing. Before refrigeration, candying was how you kept summer. Fruit that would rot in days could be eaten at Christmas, posted across Europe, served to kings. What looks like a treat in the window was once one of the cleverest bits of food technology this coast had.\n\nWhen you leave, look across the street at the opera house. Then walk a few doors along the same street to Alziari, the olive-oil shop. Between them, these two shops have been selling the flavours of this coast for well over three hundred years combined."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6959985,
+      "centroidLongitude": 7.2723799,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "da3d0907-8854-5cf2-b3b1-dc54c1eac697",
+      "createdAt": "2026-11-13",
+      "title": "Moulin à Huile d'Olive Alziari",
+      "shortDescription": "Look for the blue and yellow tins. They've become the unofficial flag of Niçois olive oil.",
+      "longDescription": "Look for the blue and yellow tins. They've become the unofficial flag of Niçois olive oil.\n\nThe business goes back to eighteen sixty-eight, when a man named César Martin bought a ruined old mill in the Madeleine district, in the hills on the west of the city, and rebuilt it. In nineteen hundred his son-in-law, Nicolas Alziari, took it over and gave it his name. The mill is still working today, the oldest of its kind still running in Nice.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-moulin-a-huile-dolive-alziari_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-moulin-a-huile-dolive-alziari_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a4ab5363-482a-5121-a8ff-70aa649131ab",
+          "order": 0,
+          "title": "Moulin à Huile d'Olive Alziari",
+          "caption": "On Rue Saint-François-de-Paule, by the little shop with shelves of blue and yellow tins.",
+          "latitude": 43.6956708,
+          "longitude": 7.2715903,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-moulin-a-huile-dolive-alziari.mp3",
+          "audioDurationSeconds": 96,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-moulin-a-huile-dolive-alziari_hero.webp",
+          "transcriptText": "Look for the blue and yellow tins. They've become the unofficial flag of Niçois olive oil.\n\nYou should be on Rue Saint-François-de-Paule, a few steps from the opera house. The little shop with its shelves of painted tins is Alziari. If the door's open, you'll smell it before you see it.\n\nThe business goes back to eighteen sixty-eight, when a man named César Martin bought a ruined old mill in the Madeleine district, in the hills on the west of the city, and rebuilt it. In nineteen hundred his son-in-law, Nicolas Alziari, took it over and gave it his name. The mill is still working today, the oldest of its kind still running in Nice.\n\nThe shop came later. Nicolas's daughter Pauline opened it here at some point between the wars, and it's been the house's best-known address ever since. The tins came with it, in that azure blue and sunflower yellow, decorated in the Provençal style.\n\nThe local olive is called the Cailletier, small and dark, and it's the only variety grown in this area. It's also the olive that ends up, brined and black, in a salade niçoise.\n\nAnd here's the gift detail. Nicolas Alziari's idea was to blend, to mix oils from different olives to get a flavour he liked, rather than rely on any single one. That's why a tin from here never tastes quite like anybody else's. A family recipe for oil, of all things, kept going for more than a century.\n\nWhen you've bought your tin, walk on to the Cours Saleya, a few minutes away. In autumn and winter, look out for the market stalls selling the season's olives. That's where all of this begins."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 96,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6956708,
+      "centroidLongitude": 7.2715903,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "629a9806-f4dd-5f40-8b8f-92ba8a2b2e3d",
+      "createdAt": "2026-11-13",
+      "title": "Confiserie Florian",
+      "shortDescription": "You can eat a violet here. You can eat a rose petal, too.",
+      "longDescription": "You can eat a violet here. You can eat a rose petal, too.\n\nThe Florian name has been tied to this harbour for about a century. A chocolate maker called Florian worked on the port here from the nineteen-twenties. The confectionery family that now runs it began up in the hills near Grasse, in the Gorges du Loup, and took over this shop in nineteen seventy-four.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-confiserie-florian_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-confiserie-florian_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-confiserie-florian_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-confiserie-florian_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1b97246c-a209-5904-b3d3-0abde379f9b3",
+          "order": 0,
+          "title": "Confiserie Florian",
+          "caption": "On the Quai Papacino, west side of the old port, at the window full of glazed fruit.",
+          "latitude": 43.6970779,
+          "longitude": 7.2832636,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-confiserie-florian.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-confiserie-florian_hero.webp",
+          "transcriptText": "You can eat a violet here. You can eat a rose petal, too.\n\nYou should be on the Quai Papacino, along the west side of the old port, near where it meets Rue Robilant. Look for the shopfront with Florian over the door, and the window full of fruit glazed until it shines. That's the confiserie.\n\nThe Florian name has been tied to this harbour for about a century. A chocolate maker called Florian worked on the port here from the nineteen-twenties. The confectionery family that now runs it began up in the hills near Grasse, in the Gorges du Loup, and took over this shop in nineteen seventy-four.\n\nThe gift detail is the flowers. Grasse, an hour inland, is the perfume capital of the world, surrounded by fields of rose and jasmine. The violets come from the village of Tourrettes, in the same hills. Here, the flowers are crystallised, coated in sugar until they keep, and they still taste faintly of their scent. It's like eating a perfume bottle, in the nicest possible way.\n\nThe fruit is the other half of the business. Clementines, lemons from Menton, oranges, cherries. A big piece of fruit can soak for up to three months, with the syrup changed every couple of days, before it's ready.\n\nWhat I find rather wonderful is that nothing about this is new. People along this coast have been sugaring their fruit and flowers for centuries because they had too much of both. What began as a way of not wasting the harvest has become one of the prettiest windows on the port.\n\nIf you have a little time, ask inside about a tour. They've long offered free visits of the workshop, with tastings. And on the way out, look at the boats in front of you, the little wooden ones painted in bright colours. They're called pointus, and they're as Niçois as anything in the shop."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6970779,
+      "centroidLongitude": 7.2832636,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce",
+        "Maritime"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f3e9b55e-4b3a-5382-8e4d-a0fd273e62e4",
+      "createdAt": "2026-11-13",
+      "title": "MAMAC – Museum of Modern and Contemporary Art | Musée d'Art Moderne et d'Art Contemporain",
+      "shortDescription": "Four marble towers, linked by glass bridges, standing on top of a river you can't see.",
+      "longDescription": "Four marble towers, linked by glass bridges, standing on top of a river you can't see.\n\nIt was designed by the architects Yves Bayard and Henri Vidal and opened in nineteen ninety. The four-legged form was a deliberate choice. The building stands astride the course of the Paillon, the river that once ran through the middle of Nice and has since been covered over, so it acts as a sort of grand gateway between the old town and the newer city.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-mamac_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-mamac_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-mamac_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-mamac_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-mamac_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-mamac_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "93c6b279-a810-594a-a756-8ea3736c547a",
+          "order": 0,
+          "title": "MAMAC – Museum of Modern and Contemporary Art | Musée d'Art Moderne et d'Art Contemporain",
+          "caption": "On Place Yves Klein, facing the four white marble towers joined by glass bridges.",
+          "latitude": 43.7016505,
+          "longitude": 7.2783298,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-mamac.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-mamac_hero.webp",
+          "transcriptText": "Four marble towers, linked by glass bridges, standing on top of a river you can't see.\n\nYou should be on Place Yves Klein, on the edge of the long park called the Promenade du Paillon, looking at a large white building made of four square towers. They're clad in smooth white marble from Carrara, and they're joined high up by glazed walkways. That's the museum of modern and contemporary art, which everyone here calls the MAMAC.\n\nIt was designed by the architects Yves Bayard and Henri Vidal and opened in nineteen ninety. The four-legged form was a deliberate choice. The building stands astride the course of the Paillon, the river that once ran through the middle of Nice and has since been covered over, so it acts as a sort of grand gateway between the old town and the newer city.\n\nThe square in front is named after Yves Klein, and that's the clue to what's inside. Klein was born in Nice in nineteen twenty-eight and became famous for a single, impossibly deep blue that he patented. He and the artists around him, the New Realists, many of them from Nice, are the heart of the museum's collection. Klein has a room of his own.\n\nA word of warning. The museum is closed for a long renovation and isn't expected to reopen until twenty twenty-eight, so for now this is a building to look at rather than walk into.\n\nWhich turns out to be no bad thing. From out here you can see what Bayard and Vidal were up to. They didn't put the art in a box. They built a set of white frames against the Mediterranean sky, and in this light, the white is doing what Klein's blue did. It makes you look.\n\nBefore you leave, walk round the back of the building towards the Tête Carrée, the giant square head next door. It's by Sacha Sosno, and it's part of the same story."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7016505,
+      "centroidLongitude": 7.2783298,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Contemporary",
+        "Designed by a Master",
+        "Yves Bayard",
+        "Henri Vidal"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9b67b300-1f87-570f-96e4-c77186d445ed",
+      "createdAt": "2026-11-13",
+      "title": "Musée National Marc Chagall",
+      "shortDescription": "This is a rare thing, a museum designed around an artist while he was still alive to argue about it.",
+      "longDescription": "This is a rare thing, a museum designed around an artist while he was still alive to argue about it.\n\nIn nineteen sixty-nine the French culture minister, André Malraux, decided to build a home for a gift. Marc Chagall had given the nation seventeen huge paintings on stories from the Bible, called the Biblical Message. The architect André Hermant designed the building to hold them, and the museum opened in nineteen seventy-three. Chagall came to the opening himself.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-marc-chagall_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-marc-chagall_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-marc-chagall_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-marc-chagall_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-marc-chagall_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "26e450d5-58fe-5a6e-a4a9-176bf00dc029",
+          "order": 0,
+          "title": "Musée National Marc Chagall",
+          "caption": "On Avenue du Docteur Ménard, at the entrance to the low white building in its blue and white garden.",
+          "latitude": 43.7099097,
+          "longitude": 7.2701355,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-musee-marc-chagall.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-marc-chagall_hero.webp",
+          "transcriptText": "This is a rare thing, a museum designed around an artist while he was still alive to argue about it.\n\nYou should be on Avenue du Docteur Ménard, on the lower slopes of Cimiez, at the entrance to a low white building half-hidden in a garden. You'll notice that the planting is mostly in blue and white. That's not an accident.\n\nIn nineteen sixty-nine the French culture minister, André Malraux, decided to build a home for a gift. Marc Chagall had given the nation seventeen huge paintings on stories from the Bible, called the Biblical Message. The architect André Hermant designed the building to hold them, and the museum opened in nineteen seventy-three. Chagall came to the opening himself.\n\nLook at the architecture first. It's sober and low, pale stone and glass, more like a modern villa than a monument. It sits in a Mediterranean garden designed by Henri Fisch, who chose, with Chagall's agreement, cool colours and white and blue flowers, so that the outside prepares your eye for the inside.\n\nThen there's the gift detail, and it's inside the auditorium. Chagall designed the stained-glass windows for that room himself, working with the master glassmaker Charles Marcq. They tell the creation of the world, in deep blues, and when the sun comes through, the whole concert hall turns the colour of the sea. He also made the large mosaic that you'll see reflected in the pool outside.\n\nWhat I find rather moving is that this isn't a museum about Chagall's career. It's a museum built for one idea he had, and he was able to shape every bit of it, down to the flowers. Most artists get a building after they're gone. He got to choose the colour of the garden.\n\nIf you've got the energy afterwards, keep walking up the hill to Cimiez. Twenty minutes or so brings you to the Musée Matisse, among the olive trees. Two of the century's great colourists, on the same hillside."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7099097,
+      "centroidLongitude": 7.2701355,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Faith",
+        "Modernist",
+        "Green Escape",
+        "Designed by a Master",
+        "André Hermant"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "862699b1-0f51-5cd5-bd20-3c8916eec8b7",
+      "createdAt": "2026-11-13",
+      "title": "Musée Matisse",
+      "shortDescription": "Most of the windows on this villa aren't windows at all. They're painted on.",
+      "longDescription": "Most of the windows on this villa aren't windows at all. They're painted on.\n\nIt's called trompe-l'oeil, fool-the-eye, and it's a Genoese habit. The villa was built between sixteen seventy and sixteen eighty-five for Jean-Baptiste Gubernatis, a consul of Nice, who turned an older house into a grand villa in the Genoese style. Painting on architecture was cheaper than building it, and from the garden you'd never know.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-matisse_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-matisse_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-matisse_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-matisse_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-matisse_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c4e5aa60-ad4e-5976-a3ee-37826fa2b205",
+          "order": 0,
+          "title": "Musée Matisse",
+          "caption": "In the olive grove of the Cimiez Arènes park, facing the big red villa and its painted windows.",
+          "latitude": 43.7196944,
+          "longitude": 7.2758466,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-musee-matisse.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-matisse_hero.webp",
+          "transcriptText": "Most of the windows on this villa aren't windows at all. They're painted on.\n\nYou should be in the park of the Cimiez Arènes, on the hill above the city, among the olive trees. The big red villa in front of you, with its rows of tall pale-framed windows and balconies, is the Musée Matisse. Look closely at the facade and you'll start to notice that some of those windows, and some of the shutters, are painted.\n\nIt's called trompe-l'oeil, fool-the-eye, and it's a Genoese habit. The villa was built between sixteen seventy and sixteen eighty-five for Jean-Baptiste Gubernatis, a consul of Nice, who turned an older house into a grand villa in the Genoese style. Painting on architecture was cheaper than building it, and from the garden you'd never know.\n\nMatisse came to Nice in nineteen seventeen, meaning to stay a few weeks, and stayed for the rest of his life. He said that when he realised he would see this light every morning, he could hardly believe his luck. The museum opened in nineteen sixty-three, built around gifts from Matisse and his family. In nineteen ninety-three it gained a contemporary wing by the architect Jean-François Bodin, who also reworked the villa itself.\n\nAnd here's what I love about the pairing. Matisse spent his whole career painting decoration as if it were architecture, patterned walls and windows open to the sea. And he ended up in a house where the architecture is half decoration. It suits him perfectly.\n\nBefore you go, walk a few minutes north through the olive grove to the Cimiez monastery and its cemetery. Matisse is buried there, looking out over the city he spent thirty-seven years painting. And on your way, look out for the ruins of the Roman town, just beside the museum."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7196944,
+      "centroidLongitude": 7.2758466,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "History",
+        "Green Escape",
+        "Designed by a Master",
+        "Jean-François Bodin"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ff986084-8657-53d6-bfc2-30acd550571d",
+      "createdAt": "2026-11-13",
+      "title": "Museum of Asian Arts | Musée des Arts Asiatiques",
+      "shortDescription": "A square for the earth, a circle for the sky, and the whole thing floating on water.",
+      "longDescription": "A square for the earth, a circle for the sky, and the whole thing floating on water.\n\nIt was designed by the Japanese architect Kenzo Tange, one of the great names of twentieth-century architecture, and it opened in nineteen ninety-eight. Tange built it from two shapes. The square stands for the earth. The circle stands for the sky. Put them together and you get something close to a mandala, the diagram of the universe in Buddhist art.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-des-arts-asiatiques_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-des-arts-asiatiques_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-des-arts-asiatiques_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-des-arts-asiatiques_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "701ebf65-6b36-5b2b-8c74-cb1c01f30fa5",
+          "order": 0,
+          "title": "Museum of Asian Arts | Musée des Arts Asiatiques",
+          "caption": "On the edge of the lake in Parc Phoenix, before the white marble cubes floating on the water.",
+          "latitude": 43.6682361,
+          "longitude": 7.2160902,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-musee-des-arts-asiatiques.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-des-arts-asiatiques_hero.webp",
+          "transcriptText": "A square for the earth, a circle for the sky, and the whole thing floating on water.\n\nYou should be on the edge of the lake in Parc Phoenix, on the western side of the city, near the airport. The building in front of you is white marble and glass, made of four cubes around a central drum, and it seems to hover just above the surface of the water. That's the Asian Arts Museum.\n\nIt was designed by the Japanese architect Kenzo Tange, one of the great names of twentieth-century architecture, and it opened in nineteen ninety-eight. Tange built it from two shapes. The square stands for the earth. The circle stands for the sky. Put them together and you get something close to a mandala, the diagram of the universe in Buddhist art.\n\nNow look at the four cubes. Each one is dedicated to a civilisation, India, China, Japan and South-East Asia. And in the middle, on the first floor, is a cylindrical rotunda topped with a glass pyramid, given over to Buddhist sculpture. Notice too how the walls step back at the water's edge. That's what creates the effect of floating.\n\nIt nearly didn't happen. The project began in the nineteen-eighties, when a collector offered the city his Asian art. That plan collapsed, and the finished building stood empty for years before the regional government took it on and made it into this museum.\n\nSo it's a building that waited for its purpose. And once it found it, the fit was remarkable. A Japanese master, a pool of still water, white marble in Mediterranean light. Few museums anywhere are this calm.\n\nIf you can, time your visit for one of the tea ceremonies the museum holds through the year. And then walk round the lake to the far side. The view back across the water is where Tange's floating trick works best."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6682361,
+      "centroidLongitude": 7.2160902,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Contemporary",
+        "Green Escape",
+        "Designed by a Master",
+        "Kenzō Tange"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d9a11279-819c-5d88-a483-2e7178f81518",
+      "createdAt": "2026-11-13",
+      "title": "Villa Arson",
+      "shortDescription": "An art school built as a village, hidden on a hill behind an eighteenth-century villa.",
+      "longDescription": "An art school built as a village, hidden on a hill behind an eighteenth-century villa.\n\nThe old villa dates from the eighteenth century. The concrete is the work of Michel Marot, an architect who was asked in the nineteen-sixties by France's culture ministry to design a national art school here. He built it between nineteen sixty-seven and nineteen seventy, and it was inaugurated in nineteen seventy-two.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-villa-arson_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-villa-arson_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-villa-arson_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-villa-arson_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-villa-arson_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "68296f08-d691-546f-9082-13fa573025da",
+          "order": 0,
+          "title": "Villa Arson",
+          "caption": "At the gates on Avenue Stephen Liégeard, the old villa and the stepped concrete school beyond.",
+          "latitude": 43.7219274,
+          "longitude": 7.2528943,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-villa-arson.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-villa-arson_hero.webp",
+          "transcriptText": "An art school built as a village, hidden on a hill behind an eighteenth-century villa.\n\nYou should be on Avenue Stephen Liégeard, on the hill of Saint-Barthélemy, north of the city centre, at the gates of the Villa Arson. Through the gates you'll see an old Italianate villa, and around it, stepping down the slope, a cluster of low concrete buildings with terraces and gardens on their roofs.\n\nThe old villa dates from the eighteenth century. The concrete is the work of Michel Marot, an architect who was asked in the nineteen-sixties by France's culture ministry to design a national art school here. He built it between nineteen sixty-seven and nineteen seventy, and it was inaugurated in nineteen seventy-two.\n\nMarot made two decisions that give the place its character. First, he kept it low and horizontal, so the new buildings slip behind the trees and never shout over the old villa. Second, he designed it as a village rather than a block, a network of courtyards, passages and stairs, with the studios and galleries treated as the most important rooms. Walk the roof terraces and you'll find low walls steering you along, and the sea appearing between them.\n\nIt's a protected example of twentieth-century architecture now. For a long time, though, people found it hard to love, the way brutalist concrete often is.\n\nHere's the thing worth noticing. Most art schools are built to be seen. This one was built to disappear into its hill, so that the people inside could get on with making things. It still feels rather like a secret.\n\nThe Villa Arson is still a working art school, and it runs a contemporary art centre with exhibitions open to the public. If one's on, go in. And on your way out, stop on the upper terraces. The view across Nice to the Baie des Anges is one most visitors never see."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7219274,
+      "centroidLongitude": 7.2528943,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Art",
+        "Architecture",
+        "Brutalist",
+        "Green Escape",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Michel Marot"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e7ac00cd-a7af-5826-b2fd-7b551b3f4789",
+      "createdAt": "2026-11-13",
+      "title": "Church of Saint Joan of Arc | Église Sainte-Jeanne-d'Arc",
+      "shortDescription": "Nice calls it the meringue. Once you've seen it, you'll understand why.",
+      "longDescription": "Nice calls it the meringue. Once you've seen it, you'll understand why.\n\nIt was built by the architect Jacques Droz. The foundations had been laid before the First World War, but the church you're looking at was started in nineteen twenty-six and finished in nineteen thirty-three. It's reinforced concrete, poured as a thin shell, three great oval domes and eight smaller ones, swelling out of each other like rising bread.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-eglise-sainte-jeanne-darc_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-eglise-sainte-jeanne-darc_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f1bc9961-6acd-5639-ab00-e09882c3254f",
+          "order": 0,
+          "title": "Church of Saint Joan of Arc | Église Sainte-Jeanne-d'Arc",
+          "caption": "On Avenue Saint-Lambert, before the white egg-shaped domes and the tall, thin bell tower.",
+          "latitude": 43.7135434,
+          "longitude": 7.2626311,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-eglise-sainte-jeanne-darc.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-eglise-sainte-jeanne-darc_hero.webp",
+          "transcriptText": "Nice calls it the meringue. Once you've seen it, you'll understand why.\n\nYou should be on Avenue Saint-Lambert, in the residential streets north of the railway station. In front of you is a church that looks like nothing else in the city, a white mass of rounded, egg-shaped domes, and beside it a tall, thin bell tower that rises more than sixty metres.\n\nIt was built by the architect Jacques Droz. The foundations had been laid before the First World War, but the church you're looking at was started in nineteen twenty-six and finished in nineteen thirty-three. It's reinforced concrete, poured as a thin shell, three great oval domes and eight smaller ones, swelling out of each other like rising bread.\n\nThat was a bold thing to do with a church in the nineteen-twenties. Concrete was the material of bridges and factories, not of places of worship. Droz used it because it let him make shapes that stone simply couldn't. Inside, the domes give you a vast open space with no columns getting in the way, and the walls carry frescoes by the Russian painter Eugène Klementieff.\n\nAnd here's the thing. For decades, Nice's architectural reputation rested on the old town and the seafront palaces. This church spent much of the twentieth century being called odd. In nineteen ninety-two it was listed as a historic monument. The odd building turned out to be one of the most original things the city ever built.\n\nIf the door's open, go in. Stand under the central dome and look up. The light coming through the shell is the best argument for concrete you'll ever see. And if you're heading back into town, Cimiez is uphill to the east, for the Matisse and Chagall museums."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7135434,
+      "centroidLongitude": 7.2626311,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Architecture",
+        "Art Deco",
+        "Engineering",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Jacques Droz"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1065fc50-7486-5c17-bfd7-f26a444adbdb",
+      "createdAt": "2026-11-13",
+      "title": "Saint Nicholas Russian Orthodox Cathedral | Cathédrale Orthodoxe Russe Saint-Nicolas",
+      "shortDescription": "Five onion domes on the Côte d'Azur, built as a memorial to a prince who died here at twenty-one.",
+      "longDescription": "Five onion domes on the Côte d'Azur, built as a memorial to a prince who died here at twenty-one.\n\nIt's here because of a death. In the eighteen-sixties the Russian court discovered the Riviera, and Russian aristocrats wintered in Nice the way the English did. In eighteen sixty-five, the heir to the Russian throne, the Tsarevich Nicholas Alexandrovich, died in Nice at the age of twenty-one. A small memorial chapel was built on the spot, which stands in the grounds to this day.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-cathedrale-saint-nicolas_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-cathedrale-saint-nicolas_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-cathedrale-saint-nicolas_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-cathedrale-saint-nicolas_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f346ffba-40c9-5d0e-83b0-0a507a99895f",
+          "order": 0,
+          "title": "Saint Nicholas Russian Orthodox Cathedral | Cathédrale Orthodoxe Russe Saint-Nicolas",
+          "caption": "On Avenue Nicolas II, west of the station, facing the five onion domes.",
+          "latitude": 43.7040923,
+          "longitude": 7.2539011,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-cathedrale-saint-nicolas.mp3",
+          "audioDurationSeconds": 100,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-cathedrale-saint-nicolas_hero.webp",
+          "transcriptText": "Five onion domes on the Côte d'Azur, built as a memorial to a prince who died here at twenty-one.\n\nYou should be on Avenue Nicolas the Second, in the quiet residential streets west of the railway station. In front of you is the cathedral, patterned brick and stone, with five onion domes above it. The central dome stands about fifty-two metres high.\n\nIt's here because of a death. In the eighteen-sixties the Russian court discovered the Riviera, and Russian aristocrats wintered in Nice the way the English did. In eighteen sixty-five, the heir to the Russian throne, the Tsarevich Nicholas Alexandrovich, died in Nice at the age of twenty-one. A small memorial chapel was built on the spot, which stands in the grounds to this day.\n\nThe cathedral came later, built between nineteen oh three and nineteen twelve by the architect Mikhail Preobrazhensky, and funded by Tsar Nicholas the Second. Preobrazhensky modelled it on sixteenth-century churches around Moscow, so you're looking at a piece of old Russia, brought south a few thousand kilometres. It's often described as the largest Orthodox cathedral in Western Europe.\n\nHere's what's worth thinking about. Five years after it was consecrated, the Russian empire that built it was gone. The court never came back to winter here. And yet the cathedral carried on, and in twenty ten a French court ruled that it belonged to the Russian state, a very modern quarrel over a very old building.\n\nIf it's open, step inside. The interior is dense with icons and gold. And then take a moment to find the little memorial chapel in the grounds. It's where the whole story begins."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 100,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7040923,
+      "centroidLongitude": 7.2539011,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History",
+        "Immigration",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Mikhail Preobrazhensky"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "fd133b3d-f314-52d6-bf99-35798d82c4d8",
+      "createdAt": "2026-11-13",
+      "title": "Palais Lascaris",
+      "shortDescription": "The lane outside is barely wide enough for two people to pass. The staircase inside was built for a procession.",
+      "longDescription": "The lane outside is barely wide enough for two people to pass. The staircase inside was built for a procession.\n\nIt was built in the middle of the seventeenth century for the Lascaris-Vintimille family, one of the great noble houses of the county of Nice. It stayed in the family until the time of the French Revolution, and then passed through other hands. The city bought it in nineteen forty-two, restored it, and opened it as a museum in nineteen seventy.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-palais-lascaris_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-palais-lascaris_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-palais-lascaris_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-palais-lascaris_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-palais-lascaris_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7c8ec3af-ba22-57ab-8c66-4de4c6f2eece",
+          "order": 0,
+          "title": "Palais Lascaris",
+          "caption": "On Rue Droite, at the tall facade with the carved doorway and stone balconies.",
+          "latitude": 43.6978317,
+          "longitude": 7.2773316,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-palais-lascaris.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-palais-lascaris_hero.webp",
+          "transcriptText": "The lane outside is barely wide enough for two people to pass. The staircase inside was built for a procession.\n\nYou should be on Rue Droite, the narrow street running through the middle of the old town. Look for the tall facade with a carved doorway, stone balconies and the words Palais Lascaris. From out here it barely looks like a palace. That's the old town for you.\n\nIt was built in the middle of the seventeenth century for the Lascaris-Vintimille family, one of the great noble houses of the county of Nice. It stayed in the family until the time of the French Revolution, and then passed through other hands. The city bought it in nineteen forty-two, restored it, and opened it as a museum in nineteen seventy.\n\nGo through the door and the scale changes completely. A grand staircase rises in front of you, with carved balustrades and marble statues set in niches. Upstairs, the state rooms have ceilings painted with scenes from mythology, framed in stucco from the end of the seventeenth century. And on the ground floor, there's an eighteenth-century pharmacy.\n\nThe gift detail is what lives in those rooms now. The palace holds the second-largest public collection of historic musical instruments in France, harpsichords, guitars, horns, much of it left to the city by a collector in nineteen-oh-four.\n\nWhat I love about this place is the surprise. In a city of wide promenades and seafront palaces, one of the finest Baroque interiors in Nice is hidden behind a doorway on a lane you could touch both sides of.\n\nWhen you leave, carry on along Rue Droite and take any turn uphill. Within a couple of minutes you'll be on the lower steps of the Castle Hill. Look back down at the rooftops, and try to pick out the Lascaris from above."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 102,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6978317,
+      "centroidLongitude": 7.2773316,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "Notable Building",
+        "History",
+        "Baroque"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2cc364cf-8f11-5b67-b0ef-5b7e1e4836ea",
+      "createdAt": "2026-11-13",
+      "title": "Castle Hill | Colline du Château",
+      "shortDescription": "They call this the Castle Hill. There hasn't been a castle on it for three hundred years.",
+      "longDescription": "They call this the Castle Hill. There hasn't been a castle on it for three hundred years.\n\nThis hill is where Nice began. The Greeks traded here, and through the Middle Ages the town lived on top of the rock, inside walls. The castle itself was one of the strongest on the coast, until the armies of Louis the Fourteenth laid siege to it in seventeen oh five. The fortress was destroyed soon after, and the town finally came down the hill to live by the sea.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-colline-du-chateau_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-colline-du-chateau_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-colline-du-chateau_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-colline-du-chateau_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-colline-du-chateau_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-colline-du-chateau_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3d1358dd-f3f4-58a1-a589-f5941c10f3af",
+          "order": 0,
+          "title": "Castle Hill | Colline du Château",
+          "caption": "On the upper terraces of the hill, at the viewpoint looking west over the old town and the bay.",
+          "latitude": 43.6960593,
+          "longitude": 7.2797245,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-colline-du-chateau.mp3",
+          "audioDurationSeconds": 99,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-colline-du-chateau_hero.webp",
+          "transcriptText": "They call this the Castle Hill. There hasn't been a castle on it for three hundred years.\n\nYou should be on the upper terraces of the Colline du Château, the rocky hill that rises between the old town and the port. Find the viewpoint looking west, and there it is, the whole of Nice, the terracotta rooftops of the old town below you and the long curve of the Baie des Anges sweeping off towards the airport.\n\nThis hill is where Nice began. The Greeks traded here, and through the Middle Ages the town lived on top of the rock, inside walls. The castle itself was one of the strongest on the coast, until the armies of Louis the Fourteenth laid siege to it in seventeen oh five. The fortress was destroyed soon after, and the town finally came down the hill to live by the sea.\n\nFor more than a century the summit was a ruin. Then, in the eighteen-eighties, the city made it into a public park, planted it, and built the thing you can probably hear from where you're standing. The waterfall. It was built in eighteen eighty-five, on the ruins of the old keep, and it's fed by water brought down from the River Vésubie in the mountains, by a canal that, for the first time, gave modern Nice a proper water supply.\n\nSo the waterfall is a monument, really, just not a stone one. It celebrates the moment the town stopped worrying about water. They put it at the top of the hill so that everyone could see it, and they've been coming up to look at it ever since.\n\nIf you've got time, walk round to the far side of the hill, facing east. You'll look straight down into the port, with its brightly painted fishing boats. And on the way down, look in at the old castle cemetery, one of the most beautiful in France."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 99,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6960593,
+      "centroidLongitude": 7.2797245,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Viewpoint",
+        "History",
+        "Green Escape",
+        "Free to Visit",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5f4f32a0-433c-5b9e-953d-7766874eb219",
+      "createdAt": "2026-11-13",
+      "title": "Rauba-Capèu War Memorial | Monument aux Morts de Rauba-Capèu",
+      "shortDescription": "The wind on this corner is so strong that the locals named it after it. Rauba capèu means steal-the-hat.",
+      "longDescription": "The wind on this corner is so strong that the locals named it after it. Rauba capèu means steal-the-hat.\n\nIt was designed by a Niçois architect, Roger Séassal, who had won the Prix de Rome, the top award for a French architect, in nineteen thirteen. Work began in nineteen twenty-four, and the monument was inaugurated in nineteen twenty-eight by Marshal Foch, who'd commanded the Allied armies at the end of the war.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-monument-aux-morts-rauba-capeu_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-monument-aux-morts-rauba-capeu_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d23a6327-d0f6-5f0e-b28e-5fc14bc9803d",
+          "order": 0,
+          "title": "Rauba-Capèu War Memorial | Monument aux Morts de Rauba-Capèu",
+          "caption": "On the Quai Rauba Capèu, before the tall arched niche and stone urn set into the cliff.",
+          "latitude": 43.6936189,
+          "longitude": 7.2812889,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-monument-aux-morts-rauba-capeu.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-monument-aux-morts-rauba-capeu_hero.webp",
+          "transcriptText": "The wind on this corner is so strong that the locals named it after it. Rauba capèu means steal-the-hat.\n\nYou should be on the Quai Rauba Capèu, at the eastern end of the Promenade, where the road swings round the foot of the Castle Hill. On the cliff side, set into the rock, is a tall arched niche with a great stone urn inside it, framed by carved reliefs. That's Nice's memorial to the First World War.\n\nIt was designed by a Niçois architect, Roger Séassal, who had won the Prix de Rome, the top award for a French architect, in nineteen thirteen. Work began in nineteen twenty-four, and the monument was inaugurated in nineteen twenty-eight by Marshal Foch, who'd commanded the Allied armies at the end of the war.\n\nThe urn is the centre of it. On it are thousands of nameplates, one for each of the men of Nice who died, more than three and a half thousand of them. On either side are two high reliefs by the sculptor Alfred Janniot. One shows war. The other shows peace. With everything around it, the whole composition rises over thirty metres up the rock face.\n\nHere's a curious footnote. In twenty eighteen, during work on the monument, a hidden reliquary was found inside it, shaped like an eagle, holding plaques with around two thousand more names. Nobody knew it was there. No record mentioned it.\n\nWhat I find quietly extraordinary is the choice of place. Séassal didn't put the monument in a square. He set it into the oldest rock in the city, the hill Nice was born on, looking out to sea.\n\nBefore you leave, look at the base. There's a sundial inscribed into it. Then step out to the sea wall and look along the bay. It's the classic view of Nice, and you'll probably have to hold on to your hat."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6936189,
+      "centroidLongitude": 7.2812889,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "Remembrance",
+        "War",
+        "Waterfront",
+        "Art Deco",
+        "Free to Visit",
+        "Designed by a Master",
+        "Roger Séassal"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4d5cb0dd-2744-552d-ac3f-df58202376f4",
+      "createdAt": "2026-11-13",
+      "title": "Promenade du Paillon",
+      "shortDescription": "There's a river under your feet. You just can't see it.",
+      "longDescription": "There's a river under your feet. You just can't see it.\n\nThe park follows the course of the Paillon, the river that comes down from the mountains and once ran right through the city, dividing the old town from the newer streets. Over the years it was covered over, bit by bit. And on top of it, over time, the city built roads, car parks and a bus station, a long hard strip of concrete through the middle of town.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-promenade-du-paillon_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-promenade-du-paillon_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b76e8fbe-17f3-559a-b88b-f7e3e4cbb651",
+          "order": 0,
+          "title": "Promenade du Paillon",
+          "caption": "By the big shallow water mirror in the park, its fountains rising out of the paving.",
+          "latitude": 43.697597,
+          "longitude": 7.2714846,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-promenade-du-paillon.mp3",
+          "audioDurationSeconds": 98,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-promenade-du-paillon_hero.webp",
+          "transcriptText": "There's a river under your feet. You just can't see it.\n\nYou should be on the Promenade du Paillon, the long green park that runs through the middle of Nice, from the sea up towards the MAMAC. Find the big flat water feature, a shallow mirror of water laid into the paving, and, if it's running, the fountains rising out of it. You'll probably find children running through them.\n\nThe park follows the course of the Paillon, the river that comes down from the mountains and once ran right through the city, dividing the old town from the newer streets. Over the years it was covered over, bit by bit. And on top of it, over time, the city built roads, car parks and a bus station, a long hard strip of concrete through the middle of town.\n\nIn twenty thirteen that strip was replaced by this, a park around twelve hectares in size, designed by the landscape architect Michel Péna, the old bus station gone. It runs for more than a kilometre, with lawns, gardens, play areas and that water mirror.\n\nLook at the mirror itself. When the fountains are still, it's a sheet of water that reflects the sky and the buildings around it. When they come on, it turns into a playground. The river that used to be hidden underneath has, in a sense, come back up as a reflection.\n\nWhat's worth thinking about is what the city chose. Plenty of places would have put up offices. Nice gave its centre back to people.\n\nWalk north along the park and you'll come to the MAMAC and the Tête Carrée, the giant square head. Or walk south, and in a few minutes you'll reach the sea at the Promenade des Anglais."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 98,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.697597,
+      "centroidLongitude": 7.2714846,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Green Escape",
+        "History",
+        "Contemporary",
+        "Free to Visit",
+        "Designed by a Master",
+        "Michel Péna"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b5013294-7605-5684-ab58-a59178b1ed62",
+      "createdAt": "2026-11-13",
+      "title": "Cours Saleya",
+      "shortDescription": "Matisse lived on the top floors of the building at the end of this market for seventeen years.",
+      "longDescription": "Matisse lived on the top floors of the building at the end of this market for seventeen years.\n\nThe market has been here since the eighteen-sixties, when the wholesale, flower and produce markets were all brought together on this stretch. These days the flowers and fruit and vegetables are out from Tuesday to Sunday. On Mondays, the whole square turns over to antiques and the flea market.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-cours-saleya_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-cours-saleya_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-cours-saleya_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-cours-saleya_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1b567ab4-b602-5e1c-880f-fa694707f05a",
+          "order": 0,
+          "title": "Cours Saleya",
+          "caption": "In the market square, at the eastern end, facing the tall yellow building where Matisse lived.",
+          "latitude": 43.69561,
+          "longitude": 7.2751,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-cours-saleya.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-cours-saleya_hero.webp",
+          "transcriptText": "Matisse lived on the top floors of the building at the end of this market for seventeen years.\n\nYou should be standing in the Cours Saleya, the long open square in the old town, just behind the seafront. Down the middle are the market stalls, with their striped awnings. Find the eastern end, where the square closes off, and look for the tall yellow building with rows of windows facing straight down the market. That's the one.\n\nThe market has been here since the eighteen-sixties, when the wholesale, flower and produce markets were all brought together on this stretch. These days the flowers and fruit and vegetables are out from Tuesday to Sunday. On Mondays, the whole square turns over to antiques and the flea market.\n\nLook along the seaward side of the square at the long, low row of buildings. Those are the Ponchettes. They were built in the eighteenth century, after the old city walls came down, and they're backed onto by a raised terrace where you can walk along the roof line above the sea.\n\nNow back to that yellow building, the Palais Caïs de Pierlas, at number one Place Charles-Félix. Matisse moved in in nineteen twenty-one and stayed until nineteen thirty-eight, on the third and fourth floors. From his windows he could see the market on one side and the sea on the other. A lot of the light-filled interiors he painted in those years, with their patterned fabrics and open windows, were painted up there.\n\nSo when you see a Matisse interior in a museum somewhere, the shutters open onto the Mediterranean, there's a decent chance you're looking at this square, seen from that window.\n\nBefore you go, buy something from a stall, a bunch of flowers or a handful of olives. Then walk up onto the terrace above the Ponchettes and look down on the market. It's the view Matisse had, give or take a few storeys."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.69561,
+      "centroidLongitude": 7.2751,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "Public Square",
+        "Food",
+        "Art",
+        "History",
+        "Free to Visit",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b65dd3d1-ca8d-5232-8579-ab9d7e9825e7",
+      "createdAt": "2026-11-13",
+      "title": "Square Head | Tête Carrée",
+      "shortDescription": "This is a sculpture of a head, and people go to work inside it.",
+      "longDescription": "This is a sculpture of a head, and people go to work inside it.\n\nIt's the work of the Nice artist Sacha Sosno, who was associated with the New Realists, the group of artists around Yves Klein. Sosno built his career on what he called obliteration, hiding part of a figure to make you look harder at the rest. Here, he obliterated the face entirely. He worked with the architects Yves Bayard and Francis Chapus, and it was inaugurated in two thousand and two.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-tete-carree_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-tete-carree_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c73523d6-41ab-5626-b9f1-b82216fbd8f0",
+          "order": 0,
+          "title": "Square Head | Tête Carrée",
+          "caption": "Behind the MAMAC, by the Louis Nucéra library, looking up at the giant faceless cube of a head.",
+          "latitude": 43.7029939,
+          "longitude": 7.2790792,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-tete-carree.mp3",
+          "audioDurationSeconds": 100,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-tete-carree_hero.webp",
+          "transcriptText": "This is a sculpture of a head, and people go to work inside it.\n\nYou should be on the edge of the Promenade du Paillon, just behind the MAMAC, near the Louis Nucéra library. In front of you is a giant figure, a bust whose head is a cube, faceless, square and enormous. That's the Tête Carrée, the square head.\n\nIt's the work of the Nice artist Sacha Sosno, who was associated with the New Realists, the group of artists around Yves Klein. Sosno built his career on what he called obliteration, hiding part of a figure to make you look harder at the rest. Here, he obliterated the face entirely. He worked with the architects Yves Bayard and Francis Chapus, and it was inaugurated in two thousand and two.\n\nNow for the gift detail. The head isn't solid. It's a building. The cube, fourteen metres on each side, holds seven floors of offices for the city's library network, set on a vast aluminium neck and shoulders. The whole thing stands about thirty metres high. It's often called the first inhabited monumental sculpture in the world.\n\nIt isn't open to the public, unfortunately. The librarians get the view.\n\nWhat I like about it is the joke. A library is a building full of other people's heads, and Sosno made a head to put the library's brains in. And he left off the face, so that every passer-by fills in an expression of their own.\n\nIf you've time, walk round it slowly. From one side it reads as a sculpture and from another as a tower block, and the change happens in a few steps. Then go into the library itself, next door, which is open to everyone."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 100,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7029939,
+      "centroidLongitude": 7.2790792,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Public Art",
+        "Art",
+        "Library",
+        "Contemporary",
+        "Free to Visit",
+        "Designed by a Master",
+        "Yves Bayard",
+        "Francis Chapus"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3c827097-b647-5595-940f-9aa7a901d8a8",
+      "createdAt": "2026-11-13",
+      "title": "Place Garibaldi",
+      "shortDescription": "This square was built as a front door for travellers arriving from Turin.",
+      "longDescription": "This square was built as a front door for travellers arriving from Turin.\n\nThe square was begun in seventeen seventy-three, when Nice still belonged to the kingdom of Sardinia, ruled from Turin. The architect, Antoine Spinelli, was from Turin too, and he designed it on the Turin model, with uniform facades, arcades to walk under in the shade, and strict symmetry. It was meant to be the grand entrance to the city at the end of the road from Turin. Over the years it's been Place Royale, Place Victor-Emmanuel, Place Napoléon, depending on who was in charge.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-place-garibaldi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-place-garibaldi_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1675103d-e098-524f-b2bb-88ba7b28f6c9",
+          "order": 0,
+          "title": "Place Garibaldi",
+          "caption": "In the arcaded ochre square, by Garibaldi's statue in its little garden.",
+          "latitude": 43.7011038,
+          "longitude": 7.2801705,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-place-garibaldi.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-place-garibaldi_hero.webp",
+          "transcriptText": "This square was built as a front door for travellers arriving from Turin.\n\nYou should be standing in Place Garibaldi, the big arcaded square on the northern edge of the old town. All around you are the buildings painted in ochre and yellow, with matching arcades at street level, and in the middle, in a little garden, a bronze statue on a high pedestal. That's Garibaldi.\n\nThe square was begun in seventeen seventy-three, when Nice still belonged to the kingdom of Sardinia, ruled from Turin. The architect, Antoine Spinelli, was from Turin too, and he designed it on the Turin model, with uniform facades, arcades to walk under in the shade, and strict symmetry. It was meant to be the grand entrance to the city at the end of the road from Turin. Over the years it's been Place Royale, Place Victor-Emmanuel, Place Napoléon, depending on who was in charge.\n\nIt got its current name in eighteen seventy, after Giuseppe Garibaldi, who was born in Nice, in eighteen oh seven, and went on to become one of the heroes of the unification of Italy. The statue went up in eighteen ninety-one.\n\nThe gift detail is the irony in that. In eighteen sixty, Nice was handed over to France, and Garibaldi was furious about it. His own birthplace had been traded away. And yet here he stands, in the middle of a French city's grandest square, built in the Italian style, on the old road to Italy.\n\nSo this is one of the best places in Nice to feel what the city was before it was French. Not a Riviera resort, but an Italian port with its back to the mountains.\n\nIf you've got a few minutes, find the chapel of the Blue Penitents, on the square itself. Then head east down to the port. And if you're hungry, the oysters at the Café de Turin, under these same arcades, are hard to beat."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7011038,
+      "centroidLongitude": 7.2801705,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Public Square",
+        "History",
+        "Architecture",
+        "Neoclassical",
+        "Free to Visit",
+        "Designed by a Master",
+        "Antoine Spinelli"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "bc4e36d1-540e-5d3f-a05f-e98da74420a2",
+      "createdAt": "2026-11-13",
+      "title": "Musée Masséna",
+      "shortDescription": "This villa was built for a prince, then given away on one condition: that the garden stay open to everyone.",
+      "longDescription": "This villa was built for a prince, then given away on one condition: that the garden stay open to everyone.\n\nIt was built at the very end of the nineteenth century, between eighteen ninety-eight and nineteen oh one, for Victor Masséna, Prince of Essling. He was the grandson of André Masséna, the Nice-born general whom Napoleon called the dear child of victory. The architect was the Danish designer Hans-Georg Tersling, who designed villas and palaces all along the Riviera.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-massena_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-massena_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-massena_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-massena_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-massena_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-massena_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c34b1f2e-cb01-5869-b44d-cd68d788df25",
+          "order": 0,
+          "title": "Musée Masséna",
+          "caption": "On the Promenade des Anglais, at the garden gates of the white Belle Époque villa.",
+          "latitude": 43.6955575,
+          "longitude": 7.2589826,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-musee-massena.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-musee-massena_hero.webp",
+          "transcriptText": "This villa was built for a prince, then given away on one condition: that the garden stay open to everyone.\n\nYou should be on the Promenade des Anglais, close to the Negresco, at the gates of a white Belle Époque villa set back in its own garden. Look through the railings at the facade, with its columns and tall windows, and the lawn and palm trees in front. That's the Villa Masséna.\n\nIt was built at the very end of the nineteenth century, between eighteen ninety-eight and nineteen oh one, for Victor Masséna, Prince of Essling. He was the grandson of André Masséna, the Nice-born general whom Napoleon called the dear child of victory. The architect was the Danish designer Hans-Georg Tersling, who designed villas and palaces all along the Riviera.\n\nThe villa was meant as a winter residence, the kind of place the very rich built along this seafront in the age when Nice was where Europe's royalty came to avoid the cold. In nineteen nineteen it was given to the city, on the condition that it become a museum, and that the garden be open to the public. The museum opened in nineteen twenty-one, devoted to the history of Nice.\n\nInside, the rooms are still furnished as a Belle Époque house, and the collections tell the story of Nice, from Napoleon's general to the Belle Époque.\n\nHere's why the condition matters. The Promenade des Anglais was once lined with villas like this one, gardens and all. Almost every one has gone, replaced by hotels and apartment blocks. This is one of the very few that survived, and it survived because somebody insisted it should belong to the city.\n\nBefore you head on, step into the garden. It's free, and it's the shadiest place on the whole seafront. Then look back towards the Negresco next door. Two buildings from the same age of grandeur, one a hotel and one a gift."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6955575,
+      "centroidLongitude": 7.2589826,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "History",
+        "Art",
+        "Waterfront",
+        "Green Escape",
+        "Designed by a Master",
+        "Hans-Georg Tersling"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "37f9be4a-8abb-598e-a41c-d3b90a3d652b",
+      "createdAt": "2026-11-13",
+      "title": "Les Délices de Candice",
+      "shortDescription": "Despite the name, there's nothing to eat in here.",
+      "longDescription": "Despite the name, there's nothing to eat in here.\n\nEverything in the window is made by one person, Candice, in a small workshop at the back of the shop. The gift detail is what she makes it from. Each piece starts with something old, original pieces from roughly the nineteen-twenties to the nineteen-seventies, which she combines with brass, semi-precious stones and crystal. Nothing is quite a copy of anything else, and the skull rings have something of a following.",
+      "makerId": "d4bc287f-3584-5f25-9479-331c0ee1205d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-les-delices-de-candice_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-les-delices-de-candice_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-les-delices-de-candice_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-les-delices-de-candice_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6179e89f-5e75-566b-a18e-5c0b4603c46f",
+          "order": 0,
+          "title": "Les Délices de Candice",
+          "caption": "On Rue de la Préfecture, at number seventeen, the small window full of rings and necklaces.",
+          "latitude": 43.696614,
+          "longitude": 7.27507,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nce-les-delices-de-candice.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nce-les-delices-de-candice_hero.webp",
+          "transcriptText": "Despite the name, there's nothing to eat in here.\n\nRue de la Préfecture, in the old town, a few steps from the Palais de Justice square. Find number seventeen, a small shopfront with a window full of rings, bracelets and necklaces. Délices means delights, and in a city famous for its sweet shops you'd be forgiven for expecting chocolates. What you get instead is jewellery.\n\nEverything in the window is made by one person, Candice, in a small workshop at the back of the shop. The gift detail is what she makes it from. Each piece starts with something old, original pieces from roughly the nineteen-twenties to the nineteen-seventies, which she combines with brass, semi-precious stones and crystal. Nothing is quite a copy of anything else, and the skull rings have something of a following.\n\nNow, the room itself has a longer story than the jewellery. For a hundred and sixty-seven years, number seventeen belonged to Maison Bestagno, an umbrella maker. It was founded in eighteen fifty, ten years before Nice became French, by a man named Felipe Colombo, who walked here from Lake Maggiore in the Italian Alps and sold umbrellas door to door. After him it passed down the family, nephew to nephew, brother to brother. Until nineteen seventy, the umbrellas were made by hand on the floor above. Belmondo and Brigitte Bardot bought them here, and the shop made the umbrellas for Prince Albert's wedding in Monaco. The last of the family, Gino Bestagno, retired at the end of twenty seventeen with nobody to take over, and the shop was let to another artisan.\n\nAnd that's what I like about this doorway. In most old towns, a closing like that means a souvenir shop. Here, a room that spent a century and a half with somebody making things at the back has, once again, somebody making things at the back. Different objects, same habit.\n\nBefore you go, look up at the four floors above the shop. The Bestagno family bought the whole building in eighteen fifty. Then walk a few doors further along Rue de la Préfecture to Les Distilleries Idéales, if the hour is right for a drink."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 129,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.696614,
+      "centroidLongitude": 7.27507,
+      "city": "Nice",
+      "country": "France",
+      "relatedTourIds": [],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Fashion",
+        "Art",
+        "Hidden Gem"
       ],
       "priceUSD": 0
     }
