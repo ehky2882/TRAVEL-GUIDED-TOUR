@@ -422,6 +422,7 @@ let architectTags: Set<String> = [
     "Arthur Benison Hubback", "Hijjas Kasturi", "William Ivor Shipley", "Ho Kok Hoe", "Stanley Jewkes", "T. Y. Lee", "Baharuddin Abu Kassim", "Hisham Albakri", "Howard Ashley", "Kumpulan Akitek", "Arkitek MAA", "BEP Architects", "Keys and Dowdeswell", "James Robert Vethavanam", "Domaine Architects", "VERITAS Design Group", "A. C. Norman", "R. A. J. Bidwell",
     "Henry Bacon", "James Hoban", "Maya Lin", "Smithmeyer & Pelz", "Friedrich St. Florian", "Lawrence Halprin", "Alfred Liu", "Adolf Cluss", "Robert Mills", "Willoughby J. Edbrooke", "John A. Lankford",
     "João Filgueiras Lima", "Ruy Ohtake", "Alexandre Chan", "BLOCO Arquitetos", "Carlos Alberto Naves", "Sérgio Rocha", "Marcelo Campelo",
+    "Édouard-Jean Niermans", "Studio Mumbai", "René Livieri", "Yves Bayard", "Henri Vidal", "André Hermant", "Jean-François Bodin", "Michel Marot", "Jacques Droz", "Mikhail Preobrazhensky", "Roger Séassal", "Michel Péna", "Francis Chapus", "Antoine Spinelli", "Hans-Georg Tersling",
 ]
 let validTags: Set<String> = placeTypeTags
     .union(themeTags).union(styleEraTags)
