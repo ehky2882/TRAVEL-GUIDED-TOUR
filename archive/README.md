@@ -402,3 +402,4 @@ Full text for every one of them is in
 - [HANDOFF-261111-washington-dc.md](HANDOFF-261111-washington-dc.md) — **Washington DC launch: Atlas Studio WAS**, 31 singles + 5 walks (34 stops), 65 MP3s transcript-matched, 11 new architect tags; places 513 → 515 (National Archives, Old Post Office new; Washington Monument and Union Station joined); Capitol trigger + Ford's hero to Edward
 - [HANDOFF-261111-brasilia.md](HANDOFF-261111-brasilia.md) — **Brasília launch: Atlas Studio BSB**, 31 singles, 7 new architect tags; 3 pins moved onto their buildings; 5 place questions to Edward
 - [HANDOFF-261113-nice.md](HANDOFF-261113-nice.md) — **Nice launch: Atlas Studio NCE**, 32 singles, 15 new architect tags; 1 pin moved; 1 place question to Edward
+- [HANDOFF-261114-lyon.md](HANDOFF-261114-lyon.md) — **Lyon launch: Atlas Studio LYS**, 34 singles, 12 new architect tags; 1 pin moved; 1 place question to Edward
