@@ -5771,6 +5771,16 @@
       "websiteURL": null
     },
     {
+      "id": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "displayName": "Atlas Studio LYS",
+      "platform": "dozent",
+      "handle": "atlas.lys",
+      "avatarURL": null,
+      "avatarEmoji": "🇫🇷",
+      "bio": "Atlas Studio's Lyon bureau — the city the mères lyonnaises taught to eat: bouchons, quenelles and a market named for Paul Bocuse; the silk weavers' traboules of the Croix-Rousse and the Renaissance courtyards of Saint-Jean; and the architecture that keeps arriving, from Tony Garnier's model city to Jean Nouvel's opera roof and Le Corbusier's convent at La Tourette.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -78800,10 +78810,10 @@
         "9211a356-fa7e-570c-b012-e86b0c646e83",
         "4ee9a90a-96ad-5913-9c64-3f8efbe3ec0c",
         "CD8A37C5-4FAF-5EC2-9D7A-783FB8DE11CA",
+        "db3f55c5-f986-5451-98a9-77d5f97e36f8",
+        "f8b71eb3-0757-52a7-ba27-fe693ec1aca9",
         "29e01aee-c177-552b-aba8-4533f3ed2935",
-        "862699b1-0f51-5cd5-bd20-3c8916eec8b7",
-        "932acd4f-66df-5152-ba4d-3ca6e8d7381c",
-        "b4f87483-ebae-567e-896f-b7b4042ca34a"
+        "862699b1-0f51-5cd5-bd20-3c8916eec8b7"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -101057,9 +101067,9 @@
         "e22d016c-8f54-5600-a12b-8bf341649795",
         "ada17ad9-8c2d-5e74-b104-88c92eec5299",
         "eaf2d4d8-d282-54d3-bf6b-94da15be04f2",
+        "05b1a473-c1f7-5ba8-acec-b507971542aa",
         "D9C23B1C-ED95-5AF9-8522-669A0C32E75D",
-        "54acd589-bb34-57ca-98df-4f220870468f",
-        "460ceef0-c1ba-5f88-9bd5-b61dd3296059"
+        "54acd589-bb34-57ca-98df-4f220870468f"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -107303,7 +107313,7 @@
         "761fda34-6b55-5052-8379-fc9259b73894",
         "64b5ec25-e709-5022-b2d5-044553817e03",
         "269acc17-2165-501e-a05f-5c8fdeabc252",
-        "FE2C76C3-3A27-46B8-8DB5-89C718B311AA"
+        "cf6cfb54-c37e-5da3-880b-0820aef3d2ad"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -116893,10 +116903,10 @@
         "fe2cbf01-fba7-57c4-8788-5ca761c33e81",
         "3f835ead-9829-5521-97f1-00d9ad78cfb0",
         "e8630587-812e-583a-9bd4-af283c885a85",
+        "6a48b1a8-2896-58d6-af40-4af1c584eac2",
         "a0261a5e-a433-5289-afad-dd77b481afb1",
         "5d1f8221-725a-5578-a79e-7c089c2a8014",
-        "30234cc2-792a-5ef5-9588-e7646e04c81d",
-        "45c2ace9-a42f-55c7-8248-ce90f58a663a"
+        "30234cc2-792a-5ef5-9588-e7646e04c81d"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -123866,11 +123876,11 @@
         "1ff51015-6af1-544e-91f5-bbd975bbfa28",
         "e9740319-7b4f-5e89-ac29-7471dd0f3881",
         "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
+        "f87c7a98-a4fe-5923-9b16-93cce44fb281",
         "8e8cfd3d-279e-5d8c-ac59-0134465d123e",
         "30300459-7c37-5aba-a5c7-b204827f4139",
         "49b2c18c-616f-57e5-81db-efb59ef54a89",
-        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
-        "280948c0-b59f-50d6-b237-2bb87253dede"
+        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -123926,11 +123936,11 @@
         "1C3123A0-4025-57AF-82F5-7974297D1882",
         "e9740319-7b4f-5e89-ac29-7471dd0f3881",
         "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
+        "f8b71eb3-0757-52a7-ba27-fe693ec1aca9",
         "726c0fd2-ae39-5ed5-b84c-20c6783e67f5",
         "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
         "ba5ea7a0-1d86-5aa2-ab9f-047298dd2710",
-        "8e8cfd3d-279e-5d8c-ac59-0134465d123e",
-        "26576879-3416-5c4a-9f17-6ac88f56a688"
+        "8e8cfd3d-279e-5d8c-ac59-0134465d123e"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -124163,10 +124173,10 @@
         "12941F35-7822-5498-9CD5-93718AD4B692",
         "26576879-3416-5c4a-9f17-6ac88f56a688",
         "e9740319-7b4f-5e89-ac29-7471dd0f3881",
+        "f87c7a98-a4fe-5923-9b16-93cce44fb281",
         "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
         "ba5ea7a0-1d86-5aa2-ab9f-047298dd2710",
-        "30300459-7c37-5aba-a5c7-b204827f4139",
-        "726c0fd2-ae39-5ed5-b84c-20c6783e67f5"
+        "30300459-7c37-5aba-a5c7-b204827f4139"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -136084,11 +136094,11 @@
         "4feadb69-9ce2-566a-92f1-4cc76882304a",
         "A957C31E-38FE-564B-8F0D-C11F7EA24456",
         "87197947-f2f1-5565-aad8-7575508ea9df",
+        "db3f55c5-f986-5451-98a9-77d5f97e36f8",
         "C37E821E-F28A-560E-B1F5-DC02771E47E9",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
         "51ee454f-b3dc-56e7-add8-4b8cdbc055c9",
-        "db750aed-fe1f-55cf-9977-aa3295785672",
-        "347dab13-ec7d-5f13-811a-40fdd9c2f9e3",
-        "B039CF72-99D4-5AEE-B1AB-C5D01BB41DB6"
+        "db750aed-fe1f-55cf-9977-aa3295785672"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -139184,7 +139194,7 @@
         "90e0be12-a790-56b0-9b3f-e9323e42371c",
         "01deaa74-c2af-5cab-b0bb-cbf71651d47b",
         "c4dda1cf-5ada-5965-bf7d-3e280e7b2a7b",
-        "54acd589-bb34-57ca-98df-4f220870468f"
+        "05b1a473-c1f7-5ba8-acec-b507971542aa"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -160094,6 +160104,1972 @@
         "Fashion",
         "Art",
         "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5d0809d0-9af3-5f19-a7c9-f5f90a8cf1e6",
+      "createdAt": "2026-11-14",
+      "title": "Les Halles de Lyon Paul Bocuse",
+      "shortDescription": "From the outside, the most celebrated food market in France looks rather like a multi-storey car park.",
+      "longDescription": "From the outside, the most celebrated food market in France looks rather like a multi-storey car park.\n\nLyon has had a covered market since 1859, when the open-air stalls of Place des Cordeliers were gathered under an iron hall down on the Presqu'île. The market moved here, to the new business district of Part-Dieu, on the first of January 1971. Thirteen and a half thousand square metres over three levels. In 2004 the city began a full renovation, and when it reopened two years later it carried a new name: Paul Bocuse, the chef who did more than anyone to make Lyon's cooking famous abroad.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-les-halles-de-lyon-paul-bocuse_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-les-halles-de-lyon-paul-bocuse_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-les-halles-de-lyon-paul-bocuse_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-les-halles-de-lyon-paul-bocuse_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-les-halles-de-lyon-paul-bocuse_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6f39ba99-1a3c-54a5-a953-5cbdf0046ce5",
+          "order": 0,
+          "title": "Les Halles de Lyon Paul Bocuse",
+          "caption": "On Cours Lafayette at Rue Garibaldi, before the long, low block of glass and concrete.",
+          "latitude": 45.7629126,
+          "longitude": 4.8506076,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-les-halles-de-lyon-paul-bocuse.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-les-halles-de-lyon-paul-bocuse_hero.webp",
+          "transcriptText": "From the outside, the most celebrated food market in France looks rather like a multi-storey car park.\n\nCours Lafayette, at the corner of Rue Garibaldi. In front of you is a long, low, modern block of glass and concrete. No arches, no ironwork, no clock. If you're wondering whether you've come to the wrong place, you haven't. The point of this building is entirely on the inside.\n\nLyon has had a covered market since 1859, when the open-air stalls of Place des Cordeliers were gathered under an iron hall down on the Presqu'île. The market moved here, to the new business district of Part-Dieu, on the first of January 1971. Thirteen and a half thousand square metres over three levels. In 2004 the city began a full renovation, and when it reopened two years later it carried a new name: Paul Bocuse, the chef who did more than anyone to make Lyon's cooking famous abroad.\n\nHave a look through the doors at the aisles. There are fifty-six merchants inside: fishmongers, cheesemongers, butchers, bakers, charcutiers, wine merchants and a good many counters where you can simply sit down and eat. The ritual, if you'd like to do it the Lyonnais way, is a dozen oysters and a glass of white wine at a counter, standing up, before noon. On a weekend morning that's exactly what half the room is doing.\n\nAnd here's the thing. People who come looking for a grand market hall are often a little disappointed by the outside. But that's rather the Lyon way. This is a working larder for the city's kitchens, the place where chefs buy before service, and it was never built to be admired. In 2026 the American magazine Food and Wine ranked it the third best food market in the world, behind Borough Market in London and Chatuchak in Bangkok. Not bad for a car park.\n\nIf you fancy following the name, Paul Bocuse learned his trade from a woman called Eugénie Brazier, whose restaurant still stands on Rue Royale, a short ride across the Rhône. It's the next best way to understand why this market matters."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7629126,
+      "centroidLongitude": 4.8506076,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "1b0a297d-fd54-5748-9491-cbba67b3a189",
+        "6b2da0b2-4da0-5ee6-847e-5c8d50c572e4",
+        "addf1c03-3778-5fe4-b13e-fc20ebc7d923",
+        "4677556e-e4ad-5839-a18d-7dc9c8ba6c5e",
+        "238edc04-da90-5ac3-8250-22a6771f71e1",
+        "a881eca9-3fc8-5c13-9d14-dcbce52336cb",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Market",
+        "Food",
+        "Commerce",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6b2da0b2-4da0-5ee6-847e-5c8d50c572e4",
+      "createdAt": "2026-11-14",
+      "title": "Daniel et Denise Saint-Jean",
+      "shortDescription": "The best pâté en croûte in the world is made a couple of streets back from the cathedral.",
+      "longDescription": "The best pâté en croûte in the world is made a couple of streets back from the cathedral.\n\nA bouchon, if you haven't met one yet, is Lyon's own kind of restaurant: small, crowded, checked tablecloths, and food that is rich, generous and entirely unbothered by fashion. This one belongs to Joseph Viola, who in 2004 was named Meilleur Ouvrier de France, the title French craftsmen spend years working towards. In the same year he and his wife Françoise took over the original Daniel et Denise on Rue de Créqui from its founder, Daniel Léron, who had won the same title himself back in 1976.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-daniel-et-denise-saint-jean_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-daniel-et-denise-saint-jean_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-daniel-et-denise-saint-jean_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-daniel-et-denise-saint-jean_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-daniel-et-denise-saint-jean_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "435dbbdd-96f4-5016-99af-da9fcbabcd82",
+          "order": 0,
+          "title": "Daniel et Denise Saint-Jean",
+          "caption": "On Rue Tramassac in Saint-Jean, at the small bouchon with the name over the door.",
+          "latitude": 45.7605108,
+          "longitude": 4.8254871,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-daniel-et-denise-saint-jean.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-daniel-et-denise-saint-jean_hero.webp",
+          "transcriptText": "The best pâté en croûte in the world is made a couple of streets back from the cathedral.\n\nRue Tramassac is one of the narrow streets of Saint-Jean, the old Renaissance quarter at the foot of Fourvière hill. Look for a small bouchon with the name over the door. That's Daniel et Denise, the Saint-Jean branch, which opened here in 2012.\n\nA bouchon, if you haven't met one yet, is Lyon's own kind of restaurant: small, crowded, checked tablecloths, and food that is rich, generous and entirely unbothered by fashion. This one belongs to Joseph Viola, who in 2004 was named Meilleur Ouvrier de France, the title French craftsmen spend years working towards. In the same year he and his wife Françoise took over the original Daniel et Denise on Rue de Créqui from its founder, Daniel Léron, who had won the same title himself back in 1976.\n\nNow, the gift detail. In 2009, Viola's pâté en croûte, duck foie gras and veal sweetbreads baked in pastry, won the world championship. Yes, there is a world championship for pâté en croûte, and yes, it is held in Lyon. It's still on the menu, and it's the thing to order.\n\nThe rest of the menu reads like a list of Lyonnais classics. Quenelle de brochet with sauce Nantua, a pike dumpling in a crayfish sauce. Omelette du curé with crayfish. Bresse chicken with morels and cream. And a tarte tatin made with pink praline, the bright pink sugared nuts this city puts into everything.\n\nWhat I like about this place is that it takes a championship-level skill and serves it on a paper napkin. All three Daniel et Denise bouchons hold a Michelin Bib Gourmand, which is the guide's way of saying very good food at a fair price. That, if you ask me, is the whole bouchon idea in one line.\n\nWhen you've eaten, walk a few minutes north to the cathedral of Saint-Jean, and then on into Rue du Bœuf. The courtyards behind those doors are where Lyon's Renaissance merchants lived."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7605108,
+      "centroidLongitude": 4.8254871,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "4677556e-e4ad-5839-a18d-7dc9c8ba6c5e",
+        "1b0a297d-fd54-5748-9491-cbba67b3a189",
+        "addf1c03-3778-5fe4-b13e-fc20ebc7d923",
+        "238edc04-da90-5ac3-8250-22a6771f71e1",
+        "5d0809d0-9af3-5f19-a7c9-f5f90a8cf1e6",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "97456deb-3588-50a0-a1fc-7d5c4563149e"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1b0a297d-fd54-5748-9491-cbba67b3a189",
+      "createdAt": "2026-11-14",
+      "title": "Café Comptoir Abel",
+      "shortDescription": "This restaurant has been serving the same kind of food in the same rooms since 1928.",
+      "longDescription": "This restaurant has been serving the same kind of food in the same rooms since 1928.\n\nCafé Comptoir Abel opened in 1928 in a building that was already around two centuries old. Step inside, if the door's open, and you'll see why people treat it as a museum of the Lyonnais bouchon. Waxed parquet floors. Wood panelling. Big old mirrors. And a great clutter of objects, collected over the decades by one owner after another, none of whom seems ever to have thrown anything away.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cafe-comptoir-abel_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cafe-comptoir-abel_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cafe-comptoir-abel_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cafe-comptoir-abel_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "70a380c3-a06f-5467-b7ce-84894376fabf",
+          "order": 0,
+          "title": "Café Comptoir Abel",
+          "caption": "On Rue Guynemer in Ainay, at the old shopfront with the name painted above it.",
+          "latitude": 45.754179,
+          "longitude": 4.8258522,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-cafe-comptoir-abel.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cafe-comptoir-abel_hero.webp",
+          "transcriptText": "This restaurant has been serving the same kind of food in the same rooms since 1928.\n\nYou'll find it on Rue Guynemer, a quiet street in Ainay, the old quarter at the southern end of the Presqu'île, just a few steps from the Romanesque church of Saint-Martin d'Ainay. Look for the old shopfront with the name painted above it. It looks as if it has always been here, which, for most practical purposes, it has.\n\nCafé Comptoir Abel opened in 1928 in a building that was already around two centuries old. Step inside, if the door's open, and you'll see why people treat it as a museum of the Lyonnais bouchon. Waxed parquet floors. Wood panelling. Big old mirrors. And a great clutter of objects, collected over the decades by one owner after another, none of whom seems ever to have thrown anything away.\n\nThe cooking is just as loyal. The dish people cross the city for is the quenelle de brochet, a soft dumpling of pike baked in a crayfish sauce called Nantua, and plenty of locals will tell you this is the best one in Lyon. Then there's the salade lyonnaise, with bacon and a soft egg. And, for the brave, the tablier de sapeur, which translates as the fireman's apron. It is tripe, breaded and fried, and the name is said to come from its shape.\n\nAnd here's the thing. A restaurant like this survives not by changing but by refusing to. Abel carries the Bouchons Lyonnais label, which exists to protect exactly this sort of place from being smartened up into something else. Old rooms, old recipes, and a menu that would have been familiar to the first customers who sat here.\n\nBefore you go, walk round the corner to the church of Saint-Martin d'Ainay. It's one of the oldest churches in Lyon, and it makes the restaurant look positively young."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.754179,
+      "centroidLongitude": 4.8258522,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "4677556e-e4ad-5839-a18d-7dc9c8ba6c5e",
+        "6b2da0b2-4da0-5ee6-847e-5c8d50c572e4",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "5d0809d0-9af3-5f19-a7c9-f5f90a8cf1e6",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "f15bece3-8852-56e8-bb3e-45ced7b532ee",
+        "addf1c03-3778-5fe4-b13e-fc20ebc7d923",
+        "a881eca9-3fc8-5c13-9d14-dcbce52336cb"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4677556e-e4ad-5839-a18d-7dc9c8ba6c5e",
+      "createdAt": "2026-11-14",
+      "title": "Le Bouchon des Filles",
+      "shortDescription": "Lyon's cooking was built by women. This little bouchon is carrying on the family business.",
+      "longDescription": "Lyon's cooking was built by women. This little bouchon is carrying on the family business.\n\nIt opened at the end of 2007. The founders were two young Lyonnaises who had run the dining room at the Café des Fédérations, one of the city's best-known bouchons, and decided to open one of their own. The space had been a restaurant called the Gousse d'Ail, the garlic clove. They kept the bouchon spirit and softened the look. The tablecloths here are checked in white and pink rather than the usual red.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-bouchon-des-filles_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-bouchon-des-filles_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-bouchon-des-filles_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-bouchon-des-filles_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ea34e8ea-abf8-556e-a157-bfe00009895e",
+          "order": 0,
+          "title": "Le Bouchon des Filles",
+          "caption": "On Rue Sergent Blandan, at number twenty, below the slopes of the Croix-Rousse.",
+          "latitude": 45.7687776,
+          "longitude": 4.8293492,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-le-bouchon-des-filles.mp3",
+          "audioDurationSeconds": 100,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-bouchon-des-filles_hero.webp",
+          "transcriptText": "Lyon's cooking was built by women. This little bouchon is carrying on the family business.\n\nRue Sergent Blandan runs along the lower slopes of the Croix-Rousse, a few minutes' climb from Place des Terreaux. You're looking for number twenty, a small restaurant with a sign that reads Le Bouchon des Filles. It only opens in the evening, so by day you may simply see a dark window and the checked tablecloths waiting inside.\n\nIt opened at the end of 2007. The founders were two young Lyonnaises who had run the dining room at the Café des Fédérations, one of the city's best-known bouchons, and decided to open one of their own. The space had been a restaurant called the Gousse d'Ail, the garlic clove. They kept the bouchon spirit and softened the look. The tablecloths here are checked in white and pink rather than the usual red.\n\nHave a look at the menu if it's posted. It's a set menu of Lyonnais cooking with a lighter hand: the bouchon classics, served without ceremony, to tables of friends who have usually booked.\n\nAnd here's what's worth knowing, standing here. Lyon's food reputation rests on the mères lyonnaises, the mothers of Lyon. They were women, mostly from the countryside, who left service in rich households in the late nineteenth and early twentieth centuries and opened their own restaurants. Eugénie Brazier, the most famous of them, became the first chef anywhere to hold six Michelin stars. A bouchon called the girls' bouchon, run by women, is a rather neat continuation of that story.\n\nFrom here, carry on uphill. A few minutes above you is the Cour des Voraces, with its great open staircase, the most famous of the passages the silk weavers used to cut through these slopes."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 100,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7687776,
+      "centroidLongitude": 4.8293492,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "6b2da0b2-4da0-5ee6-847e-5c8d50c572e4",
+        "1b0a297d-fd54-5748-9491-cbba67b3a189",
+        "addf1c03-3778-5fe4-b13e-fc20ebc7d923",
+        "238edc04-da90-5ac3-8250-22a6771f71e1",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "5d0809d0-9af3-5f19-a7c9-f5f90a8cf1e6",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "05b1a473-c1f7-5ba8-acec-b507971542aa"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "238edc04-da90-5ac3-8250-22a6771f71e1",
+      "createdAt": "2026-11-14",
+      "title": "La Mère Brazier",
+      "shortDescription": "In 1933, the woman who cooked here became the first chef anywhere to hold six Michelin stars.",
+      "longDescription": "In 1933, the woman who cooked here became the first chef anywhere to hold six Michelin stars.\n\nEugénie Brazier was born on a farm in the late nineteenth century and came to Lyon as a young woman to work as a wet nurse and then as a cook in private houses. She learned her trade with another great cook, the Mère Fillioux, and in 1921 she opened her own restaurant here. She later opened a second, up in the hills at the Col de la Luère. In 1933 the Michelin guide gave three stars to each of them. Six stars, held by one cook. Nobody had done it before.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-la-mere-brazier_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-la-mere-brazier_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-la-mere-brazier_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-la-mere-brazier_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-la-mere-brazier_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3fd800d9-498b-5be8-a956-4be0d7d58da9",
+          "order": 0,
+          "title": "La Mère Brazier",
+          "caption": "On Rue Royale, at number twelve, the corner building with the discreet sign.",
+          "latitude": 45.771615,
+          "longitude": 4.8372456,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-la-mere-brazier.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-la-mere-brazier_hero.webp",
+          "transcriptText": "In 1933, the woman who cooked here became the first chef anywhere to hold six Michelin stars.\n\nYou're on Rue Royale, a narrow street running parallel to the Rhône, just north of the Opéra. Look for number twelve, a corner building with a discreet sign reading La Mère Brazier. From the pavement it looks like a comfortable family house. That's deliberate.\n\nEugénie Brazier was born on a farm in the late nineteenth century and came to Lyon as a young woman to work as a wet nurse and then as a cook in private houses. She learned her trade with another great cook, the Mère Fillioux, and in 1921 she opened her own restaurant here. She later opened a second, up in the hills at the Col de la Luère. In 1933 the Michelin guide gave three stars to each of them. Six stars, held by one cook. Nobody had done it before.\n\nHere's the gift detail. In the years just after the Second World War, a young apprentice called Paul Bocuse came to work for her at the Col de la Luère. He went on to become the most famous chef in France. When people talk about a Lyonnais school of cooking, this is where much of it began.\n\nBrazier died in 1977. Her granddaughter Jacotte kept the restaurant going for many years, and today it belongs to Mathieu Viannay, himself a Meilleur Ouvrier de France, and it holds two Michelin stars. When he restored it, he brought back the original nineteen-thirties tilework and kept the layout of a family house, with a main dining room and small salons upstairs.\n\nAnd here's the thing. The great names of French cooking are mostly men, but the foundations in this city were laid by women like Brazier, cooking simple food perfectly. This doorway is one of the places where that history is still being served for lunch.\n\nIf you've a few minutes, walk a few doors along Rue Royale to number nineteen and the cocktail bar Le Fantôme de l'Opéra, and then on to Jean Nouvel's opera house itself. The whole street is a rather good evening in miniature."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 123,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.771615,
+      "centroidLongitude": 4.8372456,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "addf1c03-3778-5fe4-b13e-fc20ebc7d923",
+        "4677556e-e4ad-5839-a18d-7dc9c8ba6c5e",
+        "6b2da0b2-4da0-5ee6-847e-5c8d50c572e4",
+        "5d0809d0-9af3-5f19-a7c9-f5f90a8cf1e6",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "1b0a297d-fd54-5748-9491-cbba67b3a189",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "97456deb-3588-50a0-a1fc-7d5c4563149e"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "addf1c03-3778-5fe4-b13e-fc20ebc7d923",
+      "createdAt": "2026-11-14",
+      "title": "Ombellule",
+      "shortDescription": "The chef in this kitchen came to Lyon from Brazil, and has now won a Michelin star in this city twice.",
+      "longDescription": "The chef in this kitchen came to Lyon from Brazil, and has now won a Michelin star in this city twice.\n\nThe chefs are Tabata and Ludovic Mey, a married couple who cook together. Their first restaurant, Les Apothicaires, was round the corner on Rue de Sèze. They opened it in 2016 and won a Michelin star in 2020. In April 2023 they closed it, saying they wanted a new chapter, and in the autumn of 2024 they opened here. The Michelin inspectors came back within six months and gave Ombellule a star of its own.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-ombellule_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-ombellule_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-ombellule_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-ombellule_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-ombellule_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ded856f6-9107-50b9-b5ec-ce3fb9446d74",
+          "order": 0,
+          "title": "Ombellule",
+          "caption": "On Cours Franklin Roosevelt, outside number thirty-six, near the Foch metro.",
+          "latitude": 45.7689503,
+          "longitude": 4.8469625,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-ombellule.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-ombellule_hero.webp",
+          "transcriptText": "The chef in this kitchen came to Lyon from Brazil, and has now won a Michelin star in this city twice.\n\nCours Franklin Roosevelt is one of the broad, smart streets of the sixth arrondissement, a few minutes' walk from the Foch metro station. You should be outside number thirty-six, where a former luxury brasserie has become a restaurant called Ombellule.\n\nThe chefs are Tabata and Ludovic Mey, a married couple who cook together. Their first restaurant, Les Apothicaires, was round the corner on Rue de Sèze. They opened it in 2016 and won a Michelin star in 2020. In April 2023 they closed it, saying they wanted a new chapter, and in the autumn of 2024 they opened here. The Michelin inspectors came back within six months and gave Ombellule a star of its own.\n\nHave a look at the menu if it's displayed. The longer tasting menus are called Floraison and Éclosion, flowering and blooming, and the name of the restaurant has the same botanical ring to it. That's a fair guide to the cooking. The Michelin guide says the kitchen gives vegetables the red-carpet treatment, and that's the point here. In a city famous for butter, cream and offal, the plants are the stars.\n\nAnd here's what's interesting, standing on this pavement. Lyon has a reputation for looking backwards, for bouchons and quenelles and recipes that haven't changed since the nineteen-thirties. That's true, and it's lovely. But the city's cooking is also being written right now by people like the Meys, who arrived from elsewhere and cook something new in the old capital of French food.\n\nFrom here, the Parc de la Tête d'Or is about fifteen minutes' walk north. If you'd like to see what Lyon grows, the great glasshouses there are a rather good place to finish the thought."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7689503,
+      "centroidLongitude": 4.8469625,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "238edc04-da90-5ac3-8250-22a6771f71e1",
+        "4677556e-e4ad-5839-a18d-7dc9c8ba6c5e",
+        "6b2da0b2-4da0-5ee6-847e-5c8d50c572e4",
+        "5d0809d0-9af3-5f19-a7c9-f5f90a8cf1e6",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "1b0a297d-fd54-5748-9491-cbba67b3a189",
+        "db3f55c5-f986-5451-98a9-77d5f97e36f8",
+        "0e2c1645-a98b-557e-ae6d-efe0fdb4c76b"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Immigration",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "05b1a473-c1f7-5ba8-acec-b507971542aa",
+      "createdAt": "2026-11-14",
+      "title": "L'Antiquaire",
+      "shortDescription": "Lyon's cocktail revival has an address, and you're standing outside it.",
+      "longDescription": "Lyon's cocktail revival has an address, and you're standing outside it.\n\nIt has been here since 2010, and it was the first bar of Marc Bonneton, who has since become one of the best-known figures in French cocktail making. The style is what people call a neo-speakeasy: a bar that borrows the look of the American Prohibition years without pretending to be hidden. Inside, dark wood, bottle-green banquettes, dim light, and bartenders in shirtsleeves.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-l-antiquaire_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-l-antiquaire_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-l-antiquaire_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-l-antiquaire_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-l-antiquaire_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a150109f-68ee-592b-b449-fd095e38a054",
+          "order": 0,
+          "title": "L'Antiquaire",
+          "caption": "On Rue Hippolyte Flandrin, at number twenty: a dark frontage and low light behind the glass.",
+          "latitude": 45.7680373,
+          "longitude": 4.8306209,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-l-antiquaire.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-l-antiquaire_hero.webp",
+          "transcriptText": "Lyon's cocktail revival has an address, and you're standing outside it.\n\nRue Hippolyte Flandrin is a short street in the first arrondissement, between the Saône and Place des Terreaux. Number twenty is easy to miss: a dark frontage, low light behind the glass, and nothing that shouts. That's L'Antiquaire, and the quiet is part of the act.\n\nIt has been here since 2010, and it was the first bar of Marc Bonneton, who has since become one of the best-known figures in French cocktail making. The style is what people call a neo-speakeasy: a bar that borrows the look of the American Prohibition years without pretending to be hidden. Inside, dark wood, bottle-green banquettes, dim light, and bartenders in shirtsleeves.\n\nHave a look at the drinks list if you go in. The classics are done precisely, the Dry Martini, the Negroni, the White Russian. Then there are the house creations, which are where the fun is. The Pandan Killer is rum infused with pandan leaf, with house-made coconut cream, pineapple and bitters. And the Dirty Parmesan, which I'd call brave, is vodka infused with parmesan, vermouth flavoured with oregano and a dash of olive brine. A martini that tastes faintly of pizza. It is, I'm told, rather good.\n\nAnd here's the thing. Lyon has always been a wine city first, a place of Beaujolais and Côtes du Rhône on the bouchon table. A bar like this one helped give it a second habit, and the counter seats now get booked like restaurant tables. Locals will tell you to arrive before eight on a weekend if you'd like to get in at all.\n\nIf one bar isn't enough, walk across Place des Terreaux and up Rue Royale to number nineteen, Le Fantôme de l'Opéra. Two very different ideas of a cocktail bar, ten minutes apart."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7680373,
+      "centroidLongitude": 4.8306209,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "4376463f-2aef-534e-8bb5-ab31baa95ead",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "5d0809d0-9af3-5f19-a7c9-f5f90a8cf1e6",
+        "4677556e-e4ad-5839-a18d-7dc9c8ba6c5e",
+        "1b0a297d-fd54-5748-9491-cbba67b3a189",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "6b2da0b2-4da0-5ee6-847e-5c8d50c572e4",
+        "addf1c03-3778-5fe4-b13e-fc20ebc7d923"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4376463f-2aef-534e-8bb5-ab31baa95ead",
+      "createdAt": "2026-11-14",
+      "title": "Le Fantôme de l'Opéra",
+      "shortDescription": "This bar is named after a ghost, and it's dressed like the dressing room he might have haunted.",
+      "longDescription": "This bar is named after a ghost, and it's dressed like the dressing room he might have haunted.\n\nThe idea inside is an artist's dressing room. Deep sofas, little alcoves for two, sepia photographs on the walls, and an old gramophone. It's the sort of place where you lower your voice without being asked. The lighting does most of the persuading.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-fantome-de-l-opera_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-fantome-de-l-opera_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-fantome-de-l-opera_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-fantome-de-l-opera_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-fantome-de-l-opera_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-fantome-de-l-opera_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "67badc51-f1c3-5f58-9e7c-906cb1dac2a2",
+          "order": 0,
+          "title": "Le Fantôme de l'Opéra",
+          "caption": "On Rue Royale, at number nineteen, the small dark frontage north of the opera house.",
+          "latitude": 45.7711597,
+          "longitude": 4.8373195,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-le-fantome-de-l-opera.mp3",
+          "audioDurationSeconds": 99,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-fantome-de-l-opera_hero.webp",
+          "transcriptText": "This bar is named after a ghost, and it's dressed like the dressing room he might have haunted.\n\nRue Royale is the narrow street that runs north from the opera house, parallel to the Rhône. Number nineteen is a small, dark frontage, and the bar behind it is called Le Fantôme de l'Opéra, the Phantom of the Opera. The name is a nod to Gaston Leroux's novel, and to Jean Nouvel's opera house just round the corner.\n\nThe idea inside is an artist's dressing room. Deep sofas, little alcoves for two, sepia photographs on the walls, and an old gramophone. It's the sort of place where you lower your voice without being asked. The lighting does most of the persuading.\n\nHave a look at the drinks if you go in. There's a serious list of whisky, gin and rum, and a run of house cocktails. The one people talk about is called Banzai My Love. It's made with sake and served in a Japanese bowl, with a rim decorated like a little rose garden. Theatrical, which seems fair, given the name.\n\nWhat's worth knowing, standing here, is how much this street has to offer in a very short stretch. A few doors along, at number twelve, is La Mère Brazier, where the first chef in the world to hold six Michelin stars cooked. Round the corner is the opera house. And this bar sits between them, the place to go before the curtain or after the last course. The bar is open from Tuesday to Saturday, in the evenings only.\n\nWhen you leave, walk down to the end of Rue Royale and turn round to face the opera house at night. After dark the glass vault on its roof glows red, and from here you can see why a phantom might feel at home."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 99,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7711597,
+      "centroidLongitude": 4.8373195,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "6a48b1a8-2896-58d6-af40-4af1c584eac2",
+        "05b1a473-c1f7-5ba8-acec-b507971542aa",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "18b2bca0-8b7f-5e54-9a80-65a3185e6c78",
+        "745a3300-6dc1-5429-b69b-d552431aa3b9",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "ab53472e-33f4-53a9-8530-7c5355d2e5b4",
+        "5d0809d0-9af3-5f19-a7c9-f5f90a8cf1e6"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark",
+        "Literature"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "eb3a5cad-8996-5fd4-a9a4-6ab57d43a514",
+      "createdAt": "2026-11-14",
+      "title": "Mokxa",
+      "shortDescription": "In 2011, the idea of paying extra for a good coffee in Lyon was so unfamiliar that the people who brought it here had to teach their customers…",
+      "longDescription": "In 2011, the idea of paying extra for a good coffee in Lyon was so unfamiliar that the people who brought it here had to teach their customers how to drink it.\n\nThe story starts on the other side of the world. Roz Morris James is a New Zealander who worked as a barista at Matakana Coffee Roasters in her home town. Sadry Abidi is from Lyon. They met in Barcelona in 2006, spent six months in New Zealand in 2010, and came back convinced that French coffee could be much better than it was. In April 2011 they opened a café of just twenty-nine square metres in a former halal butcher's shop on the slopes below here. It was the first specialty coffee shop in Lyon.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-mokxa_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-mokxa_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-mokxa_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-mokxa_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2b5a0eb6-ee5c-58d9-9a5d-59dd70c0fc62",
+          "order": 0,
+          "title": "Mokxa",
+          "caption": "On Rue Victor Fort, on the Croix-Rousse plateau, at the café with Mokxa over the door.",
+          "latitude": 45.7753643,
+          "longitude": 4.8311839,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-mokxa.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-mokxa_hero.webp",
+          "transcriptText": "In 2011, the idea of paying extra for a good coffee in Lyon was so unfamiliar that the people who brought it here had to teach their customers how to drink it.\n\nUp here on the plateau of the Croix-Rousse, a few minutes' walk from the Place de la Croix-Rousse, is Rue Victor Fort. Look for a small café with the name Mokxa over the door. This is a café run by a roaster, rather than a café that simply buys its beans in.\n\nThe story starts on the other side of the world. Roz Morris James is a New Zealander who worked as a barista at Matakana Coffee Roasters in her home town. Sadry Abidi is from Lyon. They met in Barcelona in 2006, spent six months in New Zealand in 2010, and came back convinced that French coffee could be much better than it was. In April 2011 they opened a café of just twenty-nine square metres in a former halal butcher's shop on the slopes below here. It was the first specialty coffee shop in Lyon.\n\nHere's the gift detail. It took about six months for anyone to understand what they were doing. Roz said they had to train their customers, explaining filter coffee and single origins to people who had grown up on a quick, bitter espresso at the bar. That first little shop has since passed to new owners, but Mokxa carried on roasting, and this café on the plateau is where you can drink it now.\n\nHave a look at the counter if you step in. The brewing is the point here: syphon, V60 filter and other slow methods, alongside the espresso. It's coffee made the way you might make tea, carefully and with time.\n\nFrom here, walk north up the Grande Rue de la Croix-Rousse. At number eighty-seven, on Saturday afternoons from spring to autumn, there's a garden built entirely of shells and stones by a single mason. It's one of the strangest and most touching places in the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7753643,
+      "centroidLongitude": 4.8311839,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "f8b71eb3-0757-52a7-ba27-fe693ec1aca9",
+        "5d0809d0-9af3-5f19-a7c9-f5f90a8cf1e6",
+        "745a3300-6dc1-5429-b69b-d552431aa3b9",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "6b2da0b2-4da0-5ee6-847e-5c8d50c572e4",
+        "1b0a297d-fd54-5748-9491-cbba67b3a189",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "4677556e-e4ad-5839-a18d-7dc9c8ba6c5e"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce",
+        "Immigration"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+      "createdAt": "2026-11-14",
+      "title": "La Commune",
+      "shortDescription": "For a hundred years this was a joiner's workshop. Now it's where Lyon's young chefs practise before they open restaurants of their own.",
+      "longDescription": "For a hundred years this was a joiner's workshop. Now it's where Lyon's young chefs practise before they open restaurants of their own.\n\nA family carpentry business worked here from 1907. In 2018 the building, about fifteen hundred square metres of it, became what Lyon's tourist office calls the city's first food court. The project was led by the architect Déborah Hirigoyen with Damien Doublet and Damien Beaufils, and the industrial shell was kept rather than tidied away. You can still see the workshop in the bones of the place.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-la-commune_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-la-commune_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-la-commune_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-la-commune_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ca2ea724-e232-5d4d-bee1-4776c76bf9a1",
+          "order": 0,
+          "title": "La Commune",
+          "caption": "On Rue Pré-Gaudry in Gerland, at the long, low workshop with big doors and a terrace.",
+          "latitude": 45.7422779,
+          "longitude": 4.8339807,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-la-commune.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-la-commune_hero.webp",
+          "transcriptText": "For a hundred years this was a joiner's workshop. Now it's where Lyon's young chefs practise before they open restaurants of their own.\n\nRue Pré-Gaudry is in Gerland, the old industrial district south of the city centre. Look for a long, low workshop building with big doors and, on a fine evening, a crowd spilling out on to the terrace. That's La Commune.\n\nA family carpentry business worked here from 1907. In 2018 the building, about fifteen hundred square metres of it, became what Lyon's tourist office calls the city's first food court. The project was led by the architect Déborah Hirigoyen with Damien Doublet and Damien Beaufils, and the industrial shell was kept rather than tidied away. You can still see the workshop in the bones of the place.\n\nHere's the clever bit. La Commune isn't only a place to eat, it's an incubator. Chefs take a small equipped stall, about ten square metres each, for a residency. It's a chance to try out a restaurant idea for six months to a year in front of real customers, without the cost and risk of signing a lease. Some of them leave to open restaurants of their own. So the menu here changes as the chefs change, and in a sense you're tasting the next few years of Lyon's food scene.\n\nThen there's the bar in the middle, and the terrace, which is why I've put it among the places to drink. On a summer evening, with a beer and three different kitchens to choose from, it's one of the most relaxed spots in the city.\n\nAnd here's the thing. For a long time Gerland was a part of Lyon people drove through rather than visited. Places like this are what changed that. The idea has done well enough that the same team has since taken over the old market halls in Saint-Étienne.\n\nWhen you're done, head west towards the Rhône and cross on to the Confluence. The Musée des Confluences sits right at the point where the two rivers meet, and it's even better lit up at night."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7422779,
+      "centroidLongitude": 4.8339807,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "5d0809d0-9af3-5f19-a7c9-f5f90a8cf1e6",
+        "1b0a297d-fd54-5748-9491-cbba67b3a189",
+        "d3dc29c5-20c2-5545-86d8-e922243ddbe1",
+        "18b2bca0-8b7f-5e54-9a80-65a3185e6c78",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "0e2c1645-a98b-557e-ae6d-efe0fdb4c76b",
+        "a881eca9-3fc8-5c13-9d14-dcbce52336cb",
+        "4677556e-e4ad-5839-a18d-7dc9c8ba6c5e"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark",
+        "History",
+        "Designed by a Master",
+        "Déborah Hirigoyen"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0c03eab0-264b-54c2-abf6-6f0d32dd9db0",
+      "createdAt": "2026-11-14",
+      "title": "Le Sucre",
+      "shortDescription": "Lyon's best-known club is on the roof of a sugar warehouse.",
+      "longDescription": "Lyon's best-known club is on the roof of a sugar warehouse.\n\nHave a look at the building first. The first warehouse here, a hundred metres long, was built in 1925 to store sugar for the river port. Two more floors were added in 1927, and it was extended again in 1930 and 1960. By the early nineteen-nineties the port trade had gone and the building was empty. Then, in the early two thousands, it was renovated and renamed La Sucrière, the sugar refinery, and became one of the main venues for the Lyon Biennale of contemporary art.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-sucre_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-sucre_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-sucre_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-sucre_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-sucre_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f543b1ca-0903-5711-bcdf-61733dafd645",
+          "order": 0,
+          "title": "Le Sucre",
+          "caption": "On Quai Rambaud, the Saône behind you, facing La Sucrière with the club on its roof.",
+          "latitude": 45.7367221,
+          "longitude": 4.8151122,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-le-sucre.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-sucre_hero.webp",
+          "transcriptText": "Lyon's best-known club is on the roof of a sugar warehouse.\n\nPut the Saône behind you on Quai Rambaud, on the Confluence. In front is La Sucrière, a long concrete warehouse, and on its roof, behind the parapet, is Le Sucre, a club and cultural venue for seven hundred and eighty people.\n\nHave a look at the building first. The first warehouse here, a hundred metres long, was built in 1925 to store sugar for the river port. Two more floors were added in 1927, and it was extended again in 1930 and 1960. By the early nineteen-nineties the port trade had gone and the building was empty. Then, in the early two thousands, it was renovated and renamed La Sucrière, the sugar refinery, and became one of the main venues for the Lyon Biennale of contemporary art.\n\nThe roof came later. In October 2011, during the Biennale, a temporary bar opened up there. It was so popular that it was made permanent, and after a renovation costing around a million euros, Le Sucre opened in the summer of 2013. It's run by the people behind Arty Farty, the organisation that created Nuits Sonores, Lyon's festival of electronic music.\n\nHere's the gift detail. Come at sunset and you'll understand the appeal straight away: the Saône below, Fourvière on the hill, and the whole Confluence lit up around you. Club nights run on Friday and Saturday from eleven until five in the morning, and on Sunday from six in the evening until midnight. In between there are concerts, early-evening sessions and talks.\n\nAnd here's the thing. Old ports usually lose their buildings when they lose their trade. This one kept its warehouse and gave it a second life as a place to dance.\n\nBefore you leave, walk a few minutes north along the quay to the Cube Orange, the bright orange building with a great hole cut out of its side. It's one of the boldest new buildings on the Confluence, and it's hard to miss."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7367221,
+      "centroidLongitude": 4.8151122,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "18b2bca0-8b7f-5e54-9a80-65a3185e6c78",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "a881eca9-3fc8-5c13-9d14-dcbce52336cb",
+        "5d0809d0-9af3-5f19-a7c9-f5f90a8cf1e6",
+        "6acbbdb3-5fc4-550f-9c71-26900af8115d",
+        "d3dc29c5-20c2-5545-86d8-e922243ddbe1",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "cf6cfb54-c37e-5da3-880b-0820aef3d2ad"
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance",
+        "After Dark",
+        "Waterfront",
+        "Maritime",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d3dc29c5-20c2-5545-86d8-e922243ddbe1",
+      "createdAt": "2026-11-14",
+      "title": "InterContinental Lyon – Hôtel-Dieu",
+      "shortDescription": "For more than eight hundred years, people came to this building to be cured. Now they come to sleep.",
+      "longDescription": "For more than eight hundred years, people came to this building to be cured. Now they come to sleep.\n\nThe first hospital here was built in 1184, beside the old bridge over the Rhône. It had about a dozen beds, for travellers, the poor and pilgrims. It grew for centuries. In 1532 it appointed a new doctor, a man called François Rabelais, who is rather better remembered today as the author of Gargantua and Pantagruel. And in the eighteenth century the architect Jacques-Germain Soufflot gave it the riverside front you're looking at, the face of the city on the Rhône.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-intercontinental-hotel-dieu_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-intercontinental-hotel-dieu_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-intercontinental-hotel-dieu_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-intercontinental-hotel-dieu_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-intercontinental-hotel-dieu_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "06fee622-b245-5d74-9d98-b7e9f3a0459a",
+          "order": 0,
+          "title": "InterContinental Lyon – Hôtel-Dieu",
+          "caption": "On Quai Jules Courmont, the Rhône at your back, facing the long facade and its dome.",
+          "latitude": 45.7586633,
+          "longitude": 4.8367703,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-intercontinental-hotel-dieu.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-intercontinental-hotel-dieu_hero.webp",
+          "transcriptText": "For more than eight hundred years, people came to this building to be cured. Now they come to sleep.\n\nStand on the riverside of Quai Jules Courmont with the Rhône at your back and look across the road. Running away from you in both directions is one long, pale facade, nearly four hundred metres of it, and in the middle, rising above the roofline, a great dome. This is the Grand Hôtel-Dieu, and the hotel is inside it.\n\nThe first hospital here was built in 1184, beside the old bridge over the Rhône. It had about a dozen beds, for travellers, the poor and pilgrims. It grew for centuries. In 1532 it appointed a new doctor, a man called François Rabelais, who is rather better remembered today as the author of Gargantua and Pantagruel. And in the eighteenth century the architect Jacques-Germain Soufflot gave it the riverside front you're looking at, the face of the city on the Rhône.\n\nHave a look at the dome. It was badly damaged in the Second World War, and rebuilt afterwards from the original plans. Then look along the facade for two statues. They're Childebert and Ultrogothe, a Frankish king and queen who founded Lyon's very first hospital in the sixth century. The building is keeping its own family history on the front.\n\nThe hospital closed at the end of 2010, the oldest working hospital in the city. Work on its conversion began in 2015, and the building reopened in 2018 with shops, restaurants, public courtyards and the InterContinental hotel. And here's the gift detail. The bar of the hotel, Le Dôme, sits right underneath that great dome.\n\nAnd here's the thing. Most buildings like this become museums, and you visit them once. This one was turned back into a piece of the city. Its courtyards are open to anyone walking through, which means you can do what Lyon's residents have done for centuries, and simply wander in.\n\nBefore you leave, step inside through any of the open doorways and find one of the courtyards. Then come back out, cross the Pont de la Guillotière and look back from the far bank. Only from across the river does the whole length of the facade make sense."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7586633,
+      "centroidLongitude": 4.8367703,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "f15bece3-8852-56e8-bb3e-45ced7b532ee",
+        "0e2c1645-a98b-557e-ae6d-efe0fdb4c76b",
+        "cf6cfb54-c37e-5da3-880b-0820aef3d2ad",
+        "18b2bca0-8b7f-5e54-9a80-65a3185e6c78",
+        "f8b71eb3-0757-52a7-ba27-fe693ec1aca9",
+        "65677262-92a0-5caf-9c5f-cca090559bef"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "Venue",
+        "History",
+        "Waterfront",
+        "Neoclassical",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Jacques-Germain Soufflot"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5ded54be-bc68-5295-b9d3-f8e79200c173",
+      "createdAt": "2026-11-14",
+      "title": "Cour des Loges",
+      "shortDescription": "Italian merchants built the first of these houses in the fourteenth century. Behind this door, you can still sleep in them.",
+      "longDescription": "Italian merchants built the first of these houses in the fourteenth century. Behind this door, you can still sleep in them.\n\nThe hotel is made up of four houses built between the fourteenth and sixteenth centuries, joined by six inner courtyards. The oldest part dates from 1341, when it was built as a home for Italian merchants, part of the community of Italian traders who did so much to make medieval and Renaissance Lyon rich. Later the buildings became a Jesuit college. Then, until the nineteen-sixties, they were simply flats for families of modest means. In 1987 they were turned into a luxury hotel.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cour-des-loges_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cour-des-loges_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cour-des-loges_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cour-des-loges_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cour-des-loges_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ae967170-9763-553c-a395-dbf91bc1d887",
+          "order": 0,
+          "title": "Cour des Loges",
+          "caption": "On Rue du Bœuf, at number six, before the old stone doorway into the courtyards.",
+          "latitude": 45.7636698,
+          "longitude": 4.8272474,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-cour-des-loges.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cour-des-loges_hero.webp",
+          "transcriptText": "Italian merchants built the first of these houses in the fourteenth century. Behind this door, you can still sleep in them.\n\nYou're on Rue du Bœuf, the long, narrow street that runs through the old quarter of Saint-Jean, parallel to the Saône. Number six is the entrance to the Cour des Loges. From the street you see an old stone doorway, and very little else. Lyon's old quarter likes to keep its best rooms hidden.\n\nThe hotel is made up of four houses built between the fourteenth and sixteenth centuries, joined by six inner courtyards. The oldest part dates from 1341, when it was built as a home for Italian merchants, part of the community of Italian traders who did so much to make medieval and Renaissance Lyon rich. Later the buildings became a Jesuit college. Then, until the nineteen-sixties, they were simply flats for families of modest means. In 1987 they were turned into a luxury hotel.\n\nHave a look through the entrance if you can. The main courtyard, in the Florentine style, is covered by a contemporary glass roof seventeen metres high, so you can stand among Renaissance galleries and spiral staircases and look up at the sky. Here's the gift detail. The hotel bar, rather neatly, is called 1341.\n\nThe hotel reopened in May 2025 after a thirty-month renovation, which was planned to take nine. That's old buildings for you. It now has sixty-one rooms and suites, and two restaurants under the chef Anthony Bonnet, including Les Loges, with one Michelin star.\n\nAnd here's the thing. In most cities the old quarter is a set of facades. In Vieux Lyon the interesting part is always through the door: the courtyards, the galleries, the passages the Lyonnais call traboules. This hotel is simply the grandest example of that.\n\nWhen you step back out, walk a few doors along Rue du Bœuf to number sixteen. Through that doorway is the Tour Rose, a pink stair tower in a courtyard. It's one of the most beautiful corners in the old town, and it's free to look at."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7636698,
+      "centroidLongitude": 4.8272474,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "d3dc29c5-20c2-5545-86d8-e922243ddbe1",
+        "65677262-92a0-5caf-9c5f-cca090559bef",
+        "f15bece3-8852-56e8-bb3e-45ced7b532ee",
+        "745a3300-6dc1-5429-b69b-d552431aa3b9",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "1b0a297d-fd54-5748-9491-cbba67b3a189",
+        "6cb05e4a-ef60-59c0-b318-3d3cd207c2c4",
+        "18b2bca0-8b7f-5e54-9a80-65a3185e6c78"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "Venue",
+        "History",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f15bece3-8852-56e8-bb3e-45ced7b532ee",
+      "createdAt": "2026-11-14",
+      "title": "Villa Florentine",
+      "shortDescription": "This hotel sits halfway up the hill that Lyon calls the hill that prays, and it began as a convent.",
+      "longDescription": "This hotel sits halfway up the hill that Lyon calls the hill that prays, and it began as a convent.\n\nThe building dates from the seventeenth century, a time when Italian artists and merchants were still arriving in Lyon and leaving their mark on it. It was a convent first, and later a place of education. Fourvière is crowded with religious houses like it. The basilica at the top of the hill is the most famous, but the whole slope was built around convents, schools and chapels, which is why the Lyonnais call Fourvière the hill that prays and the Croix-Rousse, across the river, the hill that works.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-villa-florentine_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-villa-florentine_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-villa-florentine_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-villa-florentine_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-villa-florentine_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "34dd170b-5852-5562-a95d-fe80c6e4d2d8",
+          "order": 0,
+          "title": "Villa Florentine",
+          "caption": "On the Montée Saint-Barthélémy, looking up at the villa set into the slope of Fourvière.",
+          "latitude": 45.7631838,
+          "longitude": 4.8258103,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-villa-florentine.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-villa-florentine_hero.webp",
+          "transcriptText": "This hotel sits halfway up the hill that Lyon calls the hill that prays, and it began as a convent.\n\nThe Montée Saint-Barthélémy is the steep, winding street that climbs the slope of Fourvière from the old quarter of Saint-Paul. Look up the hill and you'll see the Villa Florentine, set into the slope with its terraces looking out over the city.\n\nThe building dates from the seventeenth century, a time when Italian artists and merchants were still arriving in Lyon and leaving their mark on it. It was a convent first, and later a place of education. Fourvière is crowded with religious houses like it. The basilica at the top of the hill is the most famous, but the whole slope was built around convents, schools and chapels, which is why the Lyonnais call Fourvière the hill that prays and the Croix-Rousse, across the river, the hill that works.\n\nHave a look at the view behind you. From the terraces of the villa you get the whole of Lyon laid out below: the Saône, the Presqu'île, the Rhône beyond, and on a clear day, the Alps. Here's the gift detail. The hotel has turned part of itself into a speakeasy bar called Segreto, which is Italian for secret. It seems the right word for a hotel tucked into a hillside of hidden gardens.\n\nThe hotel belongs to the Beauvallon collection and was recently renovated by the interior designer and curator Joséphine Fossey. Its restaurant, La Table, is run by the chef Henri Carlier.\n\nAnd here's the thing. Most visitors take the funicular straight to the top of Fourvière and back down again. The slope itself, with its stairways, terraces and walled gardens, is the real pleasure, and this is one of the few places where you can stay on it.\n\nFrom here, keep climbing to the top of the hill and the Roman theatres. Then walk round to the Jardin des Curiosités in Saint-Just for the best view in the city, with six chairs placed there just for looking."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7631838,
+      "centroidLongitude": 4.8258103,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "745a3300-6dc1-5429-b69b-d552431aa3b9",
+        "db3f55c5-f986-5451-98a9-77d5f97e36f8",
+        "d3dc29c5-20c2-5545-86d8-e922243ddbe1",
+        "65677262-92a0-5caf-9c5f-cca090559bef",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "1b0a297d-fd54-5748-9491-cbba67b3a189",
+        "c2a919f0-bed8-5856-955a-5d6c0e60cd40"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Faith",
+        "History",
+        "Viewpoint",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "18b2bca0-8b7f-5e54-9a80-65a3185e6c78",
+      "createdAt": "2026-11-14",
+      "title": "MOB Hotel Lyon",
+      "shortDescription": "This hotel would rather you thought of it as a neighbourhood than a place to sleep.",
+      "longDescription": "This hotel would rather you thought of it as a neighbourhood than a place to sleep.\n\nThe project was led by Cyril Aouizerate, with the designer Philippe Starck among the partners behind the MOB idea. There are ninety-nine rooms over four floors, and nearly all of them have a balcony. They're not large. The Michelin guide describes them as thriftily decorated without feeling bare, which is a very polite way of putting it, and also quite true.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-mob-hotel_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-mob-hotel_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-mob-hotel_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-mob-hotel_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-mob-hotel_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b1ccada6-920c-5d68-b5dc-c511a64e7dc5",
+          "order": 0,
+          "title": "MOB Hotel Lyon",
+          "caption": "On Quai Rambaud, facing the chocolate-coloured cubes behind a perforated metal facade.",
+          "latitude": 45.7345864,
+          "longitude": 4.8161144,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-mob-hotel.mp3",
+          "audioDurationSeconds": 99,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-mob-hotel_hero.webp",
+          "transcriptText": "This hotel would rather you thought of it as a neighbourhood than a place to sleep.\n\nYou should be on Quai Rambaud, on the Confluence, with the Saône on one side. In front of you is a building of chocolate-coloured metal cubes behind a perforated metal facade, with balconies stacked up its front. That's the MOB Hotel, which opened here in September 2017.\n\nThe project was led by Cyril Aouizerate, with the designer Philippe Starck among the partners behind the MOB idea. There are ninety-nine rooms over four floors, and nearly all of them have a balcony. They're not large. The Michelin guide describes them as thriftily decorated without feeling bare, which is a very polite way of putting it, and also quite true.\n\nHere's the gift detail. The kitchen is ninety-five per cent organic, and the company is a certified B Corporation, which means it's been independently assessed for its social and environmental record. The hotel calls itself a place to live in common, open to everyone, and it means it. People who aren't staying come for the restaurant, the bar and the outdoor spaces.\n\nAnd here's the thing. When the Confluence was being rebuilt, the risk was that it would become a district of offices and expensive flats, empty after six in the evening. Places like this, and Le Sucre on the roof of the old sugar warehouse two minutes away, are why it isn't. They give people a reason to stay after dark.\n\nFrom here, walk south along the quay. In about five minutes you'll reach the Musée des Confluences, standing right at the point where the Saône and the Rhône meet. Go at sunset, if you can."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 99,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7345864,
+      "centroidLongitude": 4.8161144,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "0c03eab0-264b-54c2-abf6-6f0d32dd9db0",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "1b0a297d-fd54-5748-9491-cbba67b3a189",
+        "d3dc29c5-20c2-5545-86d8-e922243ddbe1",
+        "cf6cfb54-c37e-5da3-880b-0820aef3d2ad",
+        "5d0809d0-9af3-5f19-a7c9-f5f90a8cf1e6",
+        "6a48b1a8-2896-58d6-af40-4af1c584eac2"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Food",
+        "Waterfront",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "49e9e3fd-b001-50b5-a427-b246fd90d240",
+      "createdAt": "2026-11-14",
+      "title": "Convent of La Tourette | Couvent Sainte-Marie de La Tourette",
+      "shortDescription": "Le Corbusier said of this building that it doesn't speak to you. You live it from the inside.",
+      "longDescription": "Le Corbusier said of this building that it doesn't speak to you. You live it from the inside.\n\nHe began designing it in May 1953 for the Dominican order, and it was finished in 1960. It's a monastery in the old sense, a set of wings arranged round a central courtyard, with a church closing one side. But nothing about it is old-fashioned. The three wings stand on columns of many different shapes, the friars' cells are on the top floor, and the whole thing is made of raw concrete.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-couvent-de-la-tourette_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-couvent-de-la-tourette_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-couvent-de-la-tourette_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-couvent-de-la-tourette_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-couvent-de-la-tourette_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "189eb8e1-9982-53c9-8a97-2844acb0fc99",
+          "order": 0,
+          "title": "Convent of La Tourette | Couvent Sainte-Marie de La Tourette",
+          "caption": "On the slope below the convent at Éveux, the concrete block raised on its thin columns.",
+          "latitude": 45.8220812,
+          "longitude": 4.6253229,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-couvent-de-la-tourette.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-couvent-de-la-tourette_hero.webp",
+          "transcriptText": "Le Corbusier said of this building that it doesn't speak to you. You live it from the inside.\n\nThe park at Éveux is about half an hour west of Lyon. Stand on the slope below the convent. In front of you is a great concrete block sitting on the hillside. It's raised up on thin columns, so that the ground slips away underneath it. That's the Couvent Sainte-Marie de La Tourette, the last major building Le Corbusier completed in France.\n\nHe began designing it in May 1953 for the Dominican order, and it was finished in 1960. It's a monastery in the old sense, a set of wings arranged round a central courtyard, with a church closing one side. But nothing about it is old-fashioned. The three wings stand on columns of many different shapes, the friars' cells are on the top floor, and the whole thing is made of raw concrete.\n\nHave a look at the windows on the long facades. Some of them are tall panes of glass divided by thin concrete fins set at irregular intervals, like the lines of a musical score. That's no accident. They were designed by Iannis Xenakis, who was working in Le Corbusier's office at the time and later became one of the most important composers of the twentieth century. He gave the building a rhythm you can almost hear.\n\nHere's the gift detail. You can stay here. The convent still houses a community of about ten Dominican friars, and it offers fifty single rooms for guests, in more than fifty hectares of park. Guided tours run every day.\n\nAnd here's the thing. People often call Le Corbusier's concrete harsh. Stand here, and then go inside, and you'll find the opposite: a building made almost entirely of light, silence and proportion. Since 2016 it has been on the UNESCO World Heritage list, as part of the architectural work of Le Corbusier.\n\nBefore you go in, walk round to the church side and look at the plain, windowless wall. The light inside comes from slots and openings you can't see from here, and that's the surprise worth saving for the tour."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.8220812,
+      "centroidLongitude": 4.6253229,
+      "city": "Éveux",
+      "country": "France",
+      "relatedTourIds": [
+        "f5fbccad-9389-501a-96e6-f9a322f7ec6a",
+        "6a48b1a8-2896-58d6-af40-4af1c584eac2",
+        "9f048578-4538-5dec-ab87-406d4eed58c7",
+        "bc6ad19d-3355-5a1b-9fb5-f2317d266d7e",
+        "5E8454BF-D088-5A05-8621-9BA2CFB1C78E",
+        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
+        "4053D78D-C33B-54DC-805A-3C09E26CB3EB",
+        "e1e5e09b-36e0-51ff-bde3-e8b2b7f65187"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Architecture",
+        "Brutalist",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Le Corbusier",
+        "Iannis Xenakis"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cf6cfb54-c37e-5da3-880b-0820aef3d2ad",
+      "createdAt": "2026-11-14",
+      "title": "Confluences Museum | Musée des Confluences",
+      "shortDescription": "Lyon built a museum at the exact point where its two rivers meet, and then made it look like a cloud that had landed there.",
+      "longDescription": "Lyon built a museum at the exact point where its two rivers meet, and then made it look like a cloud that had landed there.\n\nThe architects were Coop Himmelb(l)au, from Vienna, and the museum opened on the twentieth of December 2014. The glass part at the front, the crystal, is the entrance hall, a sort of covered public square. The cloud behind it is the steel-clad block that holds the galleries. The whole thing is forty-four metres high and a hundred and fifty metres long, and much of it seems to float above the ground.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-musee-des-confluences_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-musee-des-confluences_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-musee-des-confluences_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-musee-des-confluences_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-musee-des-confluences_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-musee-des-confluences_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "fa28af69-7114-5e40-995c-4448acdb179d",
+          "order": 0,
+          "title": "Confluences Museum | Musée des Confluences",
+          "caption": "At the tip of the Presqu'île, where the Rhône and the Saône meet, below the crystal and the cloud.",
+          "latitude": 45.7327996,
+          "longitude": 4.8182282,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-musee-des-confluences.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-musee-des-confluences_hero.webp",
+          "transcriptText": "Lyon built a museum at the exact point where its two rivers meet, and then made it look like a cloud that had landed there.\n\nStand on the walkway at the southern end of the museum, at the very tip of the Presqu'île. The Rhône is on one side, the Saône on the other, and they join just ahead of you. Behind you, rising up on its legs, is a shape of glass and stainless steel that the architects described as a crystal and a cloud.\n\nThe architects were Coop Himmelb(l)au, from Vienna, and the museum opened on the twentieth of December 2014. The glass part at the front, the crystal, is the entrance hall, a sort of covered public square. The cloud behind it is the steel-clad block that holds the galleries. The whole thing is forty-four metres high and a hundred and fifty metres long, and much of it seems to float above the ground.\n\nHave a look underneath. The building stands on piers so that you can walk beneath it, all the way to the point. The point is the reason for the whole site. For a long time this tip of the Presqu'île was industrial land beside the motorway, not somewhere you'd come for a walk. This building, and the walk under it, gave it back to the city.\n\nHere's the gift detail. The collection inside comes largely from Lyon's old natural history museum, the Guimet, and runs to about two point two million objects, from fossils and meteorites to masks and religious objects from all over the world. The permanent exhibitions are arranged in four parts: Origins, Species, Societies and Eternities.\n\nAnd here's the thing. The building cost far more than planned. The budget was a hundred and fifty-three million euros, and the final bill was forecast at close to three hundred. People argued about it for years. But on a summer evening, sitting at the point with the two rivers meeting in front of you, it's quite hard to stay cross.\n\nBefore you leave, turn round and look north along the Saône. The orange building with the great round hole in it is the Cube Orange, ten minutes' walk up the quay, and it's worth seeing up close."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 126,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7327996,
+      "centroidLongitude": 4.8182282,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "a881eca9-3fc8-5c13-9d14-dcbce52336cb",
+        "d3dc29c5-20c2-5545-86d8-e922243ddbe1",
+        "c1d018fa-f81b-5ca8-a5ef-b7ad5327945d",
+        "18b2bca0-8b7f-5e54-9a80-65a3185e6c78",
+        "c2a919f0-bed8-5856-955a-5d6c0e60cd40",
+        "6a48b1a8-2896-58d6-af40-4af1c584eac2",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "0e2c1645-a98b-557e-ae6d-efe0fdb4c76b"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Architecture",
+        "Waterfront",
+        "Contemporary",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Coop Himmelb(l)au"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c5a4bbff-0522-5d78-9c34-8f9afa2bd042",
+      "createdAt": "2026-11-14",
+      "title": "Tony Garnier Urban Museum | Cité Musée Tony Garnier",
+      "shortDescription": "This is a museum where the paintings are the size of buildings, and people live behind them.",
+      "longDescription": "This is a museum where the paintings are the size of buildings, and people live behind them.\n\nTony Garnier was born in Lyon in 1869, and he's the architect who shaped the city in the early twentieth century: the stadium at Gerland, the great cattle market hall that's now a concert venue, the hospital at Grange Blanche. As a young man he had drawn an imaginary industrial city, a complete plan for a modern town where housing, factories and parks were organised to make ordinary life better. These blocks, built between the wars and once known as the Cité des États-Unis, were his chance to build a piece of that dream for real, as housing for working families.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cite-musee-tony-garnier_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cite-musee-tony-garnier_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cite-musee-tony-garnier_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cite-musee-tony-garnier_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "86092a0f-ab78-52dc-a8cb-3116c7fb8ac9",
+          "order": 0,
+          "title": "Tony Garnier Urban Museum | Cité Musée Tony Garnier",
+          "caption": "On Rue des Serpollières, among the blocks of flats with murals on their end walls.",
+          "latitude": 45.7336709,
+          "longitude": 4.8630482,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-cite-musee-tony-garnier.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cite-musee-tony-garnier_hero.webp",
+          "transcriptText": "This is a museum where the paintings are the size of buildings, and people live behind them.\n\nRue des Serpollières, in the eighth arrondissement, runs among blocks of flats laid out around gardens. On the end walls of the buildings around you are huge painted murals. This is the Cité Tony Garnier, and the whole estate is the museum.\n\nTony Garnier was born in Lyon in 1869, and he's the architect who shaped the city in the early twentieth century: the stadium at Gerland, the great cattle market hall that's now a concert venue, the hospital at Grange Blanche. As a young man he had drawn an imaginary industrial city, a complete plan for a modern town where housing, factories and parks were organised to make ordinary life better. These blocks, built between the wars and once known as the Cité des États-Unis, were his chance to build a piece of that dream for real, as housing for working families.\n\nBy the nineteen-eighties the estate was run down. The residents wanted to do something about it, and working with CitéCréation, the Lyon studio of mural painters, the project brought huge paintings to the blank end walls. The first went up around 1991, and there are now twenty-five of them. Have a look at the nearest mural. Many show Garnier's own drawings of his imagined city. Six others were designed by artists from around the world, each painting their idea of an ideal city.\n\nHere's the gift detail. In 1992 UNESCO recognised the project as part of its World Decade for Cultural Development. And inside one of the blocks, a flat has been furnished as it would have been in the nineteen-thirties, so you can see what Garnier's tenants came home to. In 2024 the museum took its present name, the Cité Musée Tony Garnier.\n\nAnd here's the thing. Most social housing projects end up being demolished, or forgotten. This one was saved by the people who lived in it, and turned into a gallery.\n\nFrom here, walk north for about twenty minutes to Monplaisir and the Institut Lumière. Garnier's city was about making modern life better, and that's where the brothers Lumière invented a very modern pleasure: going to the pictures."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 131,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7336709,
+      "centroidLongitude": 4.8630482,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "ab53472e-33f4-53a9-8530-7c5355d2e5b4",
+        "ccd1709f-e964-5afd-ae22-de587bb4a506",
+        "d3dc29c5-20c2-5545-86d8-e922243ddbe1",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "18b2bca0-8b7f-5e54-9a80-65a3185e6c78",
+        "f8b71eb3-0757-52a7-ba27-fe693ec1aca9",
+        "745a3300-6dc1-5429-b69b-d552431aa3b9"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Public Art",
+        "Art",
+        "Architecture",
+        "History",
+        "Free to Visit",
+        "Designed by a Master",
+        "Tony Garnier"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6a48b1a8-2896-58d6-af40-4af1c584eac2",
+      "createdAt": "2026-11-14",
+      "title": "Lyon Opera House | Opéra de Lyon",
+      "shortDescription": "This opera house has eight muses on its roofline. There should be nine, and the ninth was never made.",
+      "longDescription": "This opera house has eight muses on its roofline. There should be nine, and the ninth was never made.\n\nThe stone building opened on the first of July 1831, designed by Antoine-Marie Chenavard and Jean-Marie Pollet. By the nineteen-eighties it was worn out. In 1986 the city held a competition, which was won by Jean Nouvel, and the works ran from 1989 to 1993. Nouvel kept the four outer walls and the public foyer, and replaced almost everything else.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-opera-de-lyon_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-opera-de-lyon_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-opera-de-lyon_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-opera-de-lyon_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-opera-de-lyon_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-opera-de-lyon_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b2956ebf-399c-5d71-abba-3bcc2e0af94d",
+          "order": 0,
+          "title": "Lyon Opera House | Opéra de Lyon",
+          "caption": "On Place de la Comédie, facing the stone front and the black glass vault on top.",
+          "latitude": 45.7679576,
+          "longitude": 4.8363117,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-opera-de-lyon.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-opera-de-lyon_hero.webp",
+          "transcriptText": "This opera house has eight muses on its roofline. There should be nine, and the ninth was never made.\n\nYou should be on Place de la Comédie, with the back of the Hôtel de Ville behind you. In front of you is the Opéra de Lyon: a classical stone front with arches at street level, and on top of it, far too big for it in the best possible way, a great black half-cylinder of glass.\n\nThe stone building opened on the first of July 1831, designed by Antoine-Marie Chenavard and Jean-Marie Pollet. By the nineteen-eighties it was worn out. In 1986 the city held a competition, which was won by Jean Nouvel, and the works ran from 1989 to 1993. Nouvel kept the four outer walls and the public foyer, and replaced almost everything else.\n\nHave a look at the vault. The top of it is forty-two metres above the street. Here's the clever bit: Nouvel went just as far down as up. Below your feet the building goes another twenty metres into the ground. Of its eighteen storeys, the first five are underground and the last five are inside that glass vault. In between, a black auditorium for eleven hundred people, hung inside the old shell like a box inside a box.\n\nNow look along the top of the stone facade for the statues. They're the muses of Greek mythology. Eight were commissioned in 1862 and put up the following year. One fell off in 1895, so in 1896 all of them were taken down, and the ones you see are cast-iron copies put back in 1912. The ninth muse, Urania, the muse of astronomy, was never made at all.\n\nAnd here's the thing. This building divided opinion when it opened, a modern glass hat on a classical head. Thirty years later it's simply part of the skyline, and one of the few places where you can see an old building and a new one share the same body without either losing face.\n\nCome back after dark if you can. The vault glows red, and the bar Le Fantôme de l'Opéra, a few minutes up Rue Royale behind you, is the obvious place to end the evening."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 129,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7679576,
+      "centroidLongitude": 4.8363117,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "4376463f-2aef-534e-8bb5-ab31baa95ead",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "18b2bca0-8b7f-5e54-9a80-65a3185e6c78",
+        "cf6cfb54-c37e-5da3-880b-0820aef3d2ad",
+        "65677262-92a0-5caf-9c5f-cca090559bef",
+        "ab53472e-33f4-53a9-8530-7c5355d2e5b4",
+        "745a3300-6dc1-5429-b69b-d552431aa3b9",
+        "db3f55c5-f986-5451-98a9-77d5f97e36f8"
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance",
+        "Architecture",
+        "Neoclassical",
+        "Contemporary",
+        "After Dark",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Jean Nouvel",
+        "Antoine-Marie Chenavard",
+        "Jean-Marie Pollet"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c2a919f0-bed8-5856-955a-5d6c0e60cd40",
+      "createdAt": "2026-11-14",
+      "title": "Lugdunum",
+      "shortDescription": "The museum of Roman Lyon is almost invisible, and that was the whole idea.",
+      "longDescription": "The museum of Roman Lyon is almost invisible, and that was the whole idea.\n\nThe architect was Bernard Zehrfuss, and the museum opened on the fifteenth of November 1975. He set it half into the flank of the hill, beside the great theatre and the smaller odeon, so that the building wouldn't compete with the ruins it was built to explain. Inside, the visit goes downwards, on a long concrete ramp that winds through the hill, and at the windows you look straight out at the theatres.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-lugdunum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-lugdunum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-lugdunum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-lugdunum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-lugdunum_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0d38d9aa-e394-583c-88f2-0c850d231e3c",
+          "order": 0,
+          "title": "Lugdunum",
+          "caption": "On Rue Cléberg near the top of Fourvière, above the two Roman theatres cut into the slope.",
+          "latitude": 45.7605976,
+          "longitude": 4.8199237,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-lugdunum.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-lugdunum_hero.webp",
+          "transcriptText": "The museum of Roman Lyon is almost invisible, and that was the whole idea.\n\nNear the top of Fourvière hill, on Rue Cléberg, is the entrance to the archaeological park. Below you are the two Roman theatres cut into the slope. Now look for the museum. You'll find only a concrete entrance and, if you look down the hillside, a few long windows in the slope itself. The rest of the building is in the hill.\n\nThe architect was Bernard Zehrfuss, and the museum opened on the fifteenth of November 1975. He set it half into the flank of the hill, beside the great theatre and the smaller odeon, so that the building wouldn't compete with the ruins it was built to explain. Inside, the visit goes downwards, on a long concrete ramp that winds through the hill, and at the windows you look straight out at the theatres.\n\nHere's the gift detail. Lyon was Lugdunum, one of the great cities of Roman Gaul, and the Emperor Claudius was born here. The museum holds the Claudian Table, a large bronze tablet found in 1528 on the slopes of the Croix-Rousse. It records a speech Claudius gave to the Senate in Rome, arguing that leading men from Gaul should be allowed to become senators. A speech about who belongs, preserved in bronze for two thousand years.\n\nThen there's the circus mosaic, from the third century, found on the Presqu'île. It shows a chariot race in full flight, the whole thing from start to finish: the starting gates, the track, the chariots. It's a Roman sports report in tiles.\n\nAnd here's the thing. Most museums want to be noticed. This one deliberately hides, and lets the hill and the theatres take the attention. Nearly fifty years on, that modesty looks rather wise.\n\nWhen you come out, walk down into the great theatre and climb the stone seats to the top row. From there you can see the whole of Lyon, much as the Romans did, only with rather more roofs."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7605976,
+      "centroidLongitude": 4.8199237,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "ccd1709f-e964-5afd-ae22-de587bb4a506",
+        "f15bece3-8852-56e8-bb3e-45ced7b532ee",
+        "cf6cfb54-c37e-5da3-880b-0820aef3d2ad",
+        "a881eca9-3fc8-5c13-9d14-dcbce52336cb",
+        "d3dc29c5-20c2-5545-86d8-e922243ddbe1",
+        "65677262-92a0-5caf-9c5f-cca090559bef",
+        "0e2c1645-a98b-557e-ae6d-efe0fdb4c76b",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "History",
+        "Architecture",
+        "Brutalist",
+        "Viewpoint",
+        "Designed by a Master",
+        "Bernard Zehrfuss"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f87c7a98-a4fe-5923-9b16-93cce44fb281",
+      "createdAt": "2026-11-14",
+      "title": "Villeurbanne Town Hall | Hôtel de Ville de Villeurbanne",
+      "shortDescription": "In 1934, a doctor turned mayor built a skyline for working families, and called it the Gratte-Ciel, the skyscrapers.",
+      "longDescription": "In 1934, a doctor turned mayor built a skyline for working families, and called it the Gratte-Ciel, the skyscrapers.\n\nThe man behind it was Lazare Goujon, a doctor who was elected mayor in 1924. Villeurbanne was a crowded industrial suburb, with poor housing and poor health, and he wanted a proper centre for it. He got the land, held competitions, and the whole district went up between 1927 and 1934. It was inaugurated on the tenth of June 1934.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-hotel-de-ville-de-villeurbanne_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-hotel-de-ville-de-villeurbanne_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-hotel-de-ville-de-villeurbanne_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-hotel-de-ville-de-villeurbanne_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-hotel-de-ville-de-villeurbanne_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-hotel-de-ville-de-villeurbanne_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8e00bfd4-2b8c-52b5-9e67-e02a0ae598b9",
+          "order": 0,
+          "title": "Villeurbanne Town Hall | Hôtel de Ville de Villeurbanne",
+          "caption": "On Place Lazare Goujon, facing the pale town hall and its tall clock tower.",
+          "latitude": 45.7666767,
+          "longitude": 4.8796244,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-hotel-de-ville-de-villeurbanne.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-hotel-de-ville-de-villeurbanne_hero.webp",
+          "transcriptText": "In 1934, a doctor turned mayor built a skyline for working families, and called it the Gratte-Ciel, the skyscrapers.\n\nPlace Lazare Goujon is the heart of Villeurbanne, the town that runs on from Lyon to the east. In front of you is the town hall, a stern, pale building with a tall clock tower. Turn round and look down the avenue behind you. On either side, in pairs, are tall stepped blocks of flats. Together they're the Gratte-Ciel.\n\nThe man behind it was Lazare Goujon, a doctor who was elected mayor in 1924. Villeurbanne was a crowded industrial suburb, with poor housing and poor health, and he wanted a proper centre for it. He got the land, held competitions, and the whole district went up between 1927 and 1934. It was inaugurated on the tenth of June 1934.\n\nHave a look at the town hall first. It's by Robert Giroud, a winner of the Prix de Rome, and its belfry is sixty-five metres high. Then look down the avenue at the towers. They were designed by Môrice Leroux, who also built the Palais du Travail, the Palace of Work, with a theatre, a swimming pool, a clinic and public showers. The plan was for around fifteen hundred homes, and the two tallest towers have nineteen storeys.\n\nHere's the gift detail. The flats had central heating from the start, which was rare for working-class housing at the time. And the heating plant on Rue Verlaine, which went into service in 1932, ran on burning the town's rubbish.\n\nAnd here's the thing. We tend to think of social housing as a post-war idea. This is from before the war, and it's built with genuine pride: stepped towers, a civic square, a theatre. It wasn't housing for the poor. It was a new town centre, and everybody was meant to have a share of it.\n\nBefore you go, walk round to the Palais du Travail, which is now home to the Théâtre National Populaire. And if you walk on down the avenue, you'll see the new blocks of the Gratte-Ciel's extension, still being added to almost a century later."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7666767,
+      "centroidLongitude": 4.8796244,
+      "city": "Villeurbanne",
+      "country": "France",
+      "relatedTourIds": [
+        "1ff51015-6af1-544e-91f5-bbd975bbfa28",
+        "280948c0-b59f-50d6-b237-2bb87253dede",
+        "26576879-3416-5c4a-9f17-6ac88f56a688",
+        "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
+        "e9740319-7b4f-5e89-ac29-7471dd0f3881",
+        "8751aa0e-b1e8-530f-8df7-2914cef14602",
+        "49b2c18c-616f-57e5-81db-efb59ef54a89",
+        "c5a4bbff-0522-5d78-9c34-8f9afa2bd042"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Civic",
+        "District",
+        "Architecture",
+        "Power",
+        "History",
+        "Art Deco",
+        "Designed by a Master",
+        "Robert Giroud",
+        "Môrice Leroux"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "412035a5-5bf2-55f3-ab99-5e22658381cc",
+      "createdAt": "2026-11-14",
+      "title": "Lyon Saint-Exupéry TGV Station | Gare de Lyon Saint-Exupéry TGV",
+      "shortDescription": "This is a railway station that looks like a bird about to take off, and it sits next to an airport.",
+      "longDescription": "This is a railway station that looks like a bird about to take off, and it sits next to an airport.\n\nThe architect was Santiago Calatrava, working with the station designers of the French railways. It was inaugurated on the twenty-eighth of June 1994, under its old name, Satolas TGV. The building is about four hundred metres long, forty metres wide and forty metres high, and it carries the high-speed line straight past the airport.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-gare-saint-exupery-tgv_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-gare-saint-exupery-tgv_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-gare-saint-exupery-tgv_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-gare-saint-exupery-tgv_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-gare-saint-exupery-tgv_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1d3f1a5d-d29f-562f-89b6-b695a50f23d3",
+          "order": 0,
+          "title": "Lyon Saint-Exupéry TGV Station | Gare de Lyon Saint-Exupéry TGV",
+          "caption": "On the station forecourt by the airport, below the steel and glass roof spreading its wings.",
+          "latitude": 45.7210588,
+          "longitude": 5.0758766,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-gare-saint-exupery-tgv.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-gare-saint-exupery-tgv_hero.webp",
+          "transcriptText": "This is a railway station that looks like a bird about to take off, and it sits next to an airport.\n\nOut by the airport at Saint-Exupéry, east of Lyon, stand on the forecourt of the station. In front of you is a great steel and glass roof that rises to a point and then spreads two wings to either side. If it reminds you of a bird with its wings opening, you're seeing exactly what everybody else does.\n\nThe architect was Santiago Calatrava, working with the station designers of the French railways. It was inaugurated on the twenty-eighth of June 1994, under its old name, Satolas TGV. The building is about four hundred metres long, forty metres wide and forty metres high, and it carries the high-speed line straight past the airport.\n\nHave a look underneath the great hall when you go in. The station has five tracks, and here's the gift detail. The two in the middle run through a concrete tube, so that trains that aren't stopping can pass straight through at full speed, three hundred kilometres an hour. Stand on the platform as one goes through and you'll feel the building take a breath.\n\nThen follow the signs for the airport. A footbridge two hundred and fifty metres long, with a moving walkway, links the station to the terminals. And since 2010 the Rhônexpress tram has run from here to Part-Dieu in under thirty minutes.\n\nAnd here's the thing. Most stations by airports are corridors. Calatrava took a piece of transport infrastructure in the middle of fields and gave it a sense of occasion. It's rather lovely that arriving in Lyon, for many people, starts with a building that's so clearly glad to see them.\n\nIf you've got time before your train, walk out to the far end of the forecourt and look back. It's only from a distance that the bird really comes into focus, wings open, about to leave with the planes."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7210588,
+      "centroidLongitude": 5.0758766,
+      "city": "Colombier-Saugnieu",
+      "country": "France",
+      "relatedTourIds": [
+        "d3dc29c5-20c2-5545-86d8-e922243ddbe1",
+        "cf6cfb54-c37e-5da3-880b-0820aef3d2ad",
+        "0e2c1645-a98b-557e-ae6d-efe0fdb4c76b",
+        "f15bece3-8852-56e8-bb3e-45ced7b532ee",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "45fc4e96-4d9c-5a6a-9d8f-aae30897aaff",
+        "db3f55c5-f986-5451-98a9-77d5f97e36f8",
+        "0c03eab0-264b-54c2-abf6-6f0d32dd9db0"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Engineering",
+        "Architecture",
+        "Contemporary",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Santiago Calatrava"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ccd1709f-e964-5afd-ae22-de587bb4a506",
+      "createdAt": "2026-11-14",
+      "title": "Institut Lumière",
+      "shortDescription": "The first film in history shows workers walking out of a factory. You're standing on the street where it was shot.",
+      "longDescription": "The first film in history shows workers walking out of a factory. You're standing on the street where it was shot.\n\nThe villa was built between 1899 and 1902 by Antoine Lumière, the father of the brothers Auguste and Louis. The family ran a large business making photographic plates, and their factory stood right here. In 1895 the brothers set up their new invention, the cinematograph, and filmed the workers leaving the factory gates at the end of the day. Workers Leaving the Lumière Factory in Lyon is often called the first film ever made.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-institut-lumiere_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-institut-lumiere_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-institut-lumiere_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1a45ea40-a3d8-5ffb-a9aa-bb06122164a3",
+          "order": 0,
+          "title": "Institut Lumière",
+          "caption": "On Rue du Premier Film in Monplaisir, between the ornate villa and the long, plain hangar.",
+          "latitude": 45.7451984,
+          "longitude": 4.8707323,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-institut-lumiere.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-institut-lumiere_hero.webp",
+          "transcriptText": "The first film in history shows workers walking out of a factory. You're standing on the street where it was shot.\n\nYou should be on Rue du Premier Film in Monplaisir, in the eighth arrondissement. On one side is a large, ornate villa set in its gardens. That's the Villa Lumière. And nearby is a long, plain building, the Hangar du Premier Film. The street is named for what happened here.\n\nThe villa was built between 1899 and 1902 by Antoine Lumière, the father of the brothers Auguste and Louis. The family ran a large business making photographic plates, and their factory stood right here. In 1895 the brothers set up their new invention, the cinematograph, and filmed the workers leaving the factory gates at the end of the day. Workers Leaving the Lumière Factory in Lyon is often called the first film ever made.\n\nHave a look at the hangar. It's the last surviving piece of the Lumière factory. It was restored in 1998 and is now a cinema with two hundred and sixty-nine seats. Here's the gift detail. The cinema stands on the very ground where those first workers walked out into the light, so when you watch a film inside, you're sitting where the very first film's subjects walked.\n\nThe Institut Lumière was founded here in 1982 to preserve and show films. The director Bertrand Tavernier was its president until his death in 2021, and its director, Thierry Frémaux, also runs the Cannes Film Festival. Every October since 2009 it has held the Festival Lumière, and given the Prix Lumière to a filmmaker for a lifetime's work.\n\nAnd here's the thing. Most inventions are commemorated with a plaque. This one is commemorated by doing the thing itself, every day, in the same place. Lyon didn't build a museum to the cinema. It kept going to the pictures.\n\nBefore you leave, step into the villa's garden and look at the house. It's an extravagant building, and it tells you how successful the Lumière family already were before cinema. Then, if you fancy something sweet, there's a Pralus shop just round the corner on Avenue des Frères Lumière."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 129,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7451984,
+      "centroidLongitude": 4.8707323,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "c2a919f0-bed8-5856-955a-5d6c0e60cd40",
+        "c5a4bbff-0522-5d78-9c34-8f9afa2bd042",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "d3dc29c5-20c2-5545-86d8-e922243ddbe1",
+        "a881eca9-3fc8-5c13-9d14-dcbce52336cb",
+        "97456deb-3588-50a0-a1fc-7d5c4563149e",
+        "65677262-92a0-5caf-9c5f-cca090559bef"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "Venue",
+        "History",
+        "Art",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "745a3300-6dc1-5429-b69b-d552431aa3b9",
+      "createdAt": "2026-11-14",
+      "title": "Cour des Voraces",
+      "shortDescription": "This courtyard was a hiding place, a shortcut and a fortress, and it's still somebody's front hall.",
+      "longDescription": "This courtyard was a hiding place, a shortcut and a fortress, and it's still somebody's front hall.\n\nIt was built around 1840, when the Croix-Rousse was the heart of Lyon's silk industry. The workers were called canuts, and they lived and worked in buildings like this one, with ceilings high enough for their great looms. To get their silk down the hill to the merchants without getting it wet, they used traboules, covered passages that cut through buildings and courtyards from one street to the next. This is the most famous of them. It has three ways in and out: here, on Montée Saint-Sébastien and on Rue Imbert-Colomès.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cour-des-voraces_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cour-des-voraces_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cour-des-voraces_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "41b9b8cc-8fbc-5a52-bd22-2a591ffb5411",
+          "order": 0,
+          "title": "Cour des Voraces",
+          "caption": "Through the doorway at number nine, Place Colbert, below the great open staircase.",
+          "latitude": 45.7720491,
+          "longitude": 4.8346793,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-cour-des-voraces.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cour-des-voraces_hero.webp",
+          "transcriptText": "This courtyard was a hiding place, a shortcut and a fortress, and it's still somebody's front hall.\n\nNumber nine, Place Colbert, on the slopes of the Croix-Rousse. Go through the doorway and you'll find yourself in a tall courtyard. In front of you is a vast open staircase climbing six storeys up the face of the building, with landings at every floor. This is the Cour des Voraces.\n\nIt was built around 1840, when the Croix-Rousse was the heart of Lyon's silk industry. The workers were called canuts, and they lived and worked in buildings like this one, with ceilings high enough for their great looms. To get their silk down the hill to the merchants without getting it wet, they used traboules, covered passages that cut through buildings and courtyards from one street to the next. This is the most famous of them. It has three ways in and out: here, on Montée Saint-Sébastien and on Rue Imbert-Colomès.\n\nHere's the gift detail. The name comes, most likely, from the Voraces, a society of canuts who took part in the republican uprisings of 1848 and 1849. A passage that runs through a whole block is a very useful thing in a revolt. You can disappear from one street and come out on another before anyone has noticed.\n\nHave a look at the plaque on the wall. It remembers the courtyard as a hive of silk work, where the canuts fought for their lives and their dignity.\n\nAnd here's the thing. People live here. This isn't a museum, it's a block of flats that the city opens to walkers. So come quietly, keep to the stairs and the courtyard, and remember that this is somebody's home.\n\nWhen you leave, take the exit to Montée Saint-Sébastien and walk on up the hill. At the top, on the Boulevard des Canuts, there's a whole building painted to look like a Croix-Rousse street, and it's the best way to see how this neighbourhood thinks about itself."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7720491,
+      "centroidLongitude": 4.8346793,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "ab53472e-33f4-53a9-8530-7c5355d2e5b4",
+        "6cb05e4a-ef60-59c0-b318-3d3cd207c2c4",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "f8b71eb3-0757-52a7-ba27-fe693ec1aca9",
+        "f15bece3-8852-56e8-bb3e-45ced7b532ee",
+        "db3f55c5-f986-5451-98a9-77d5f97e36f8",
+        "0e2c1645-a98b-557e-ae6d-efe0fdb4c76b",
+        "65677262-92a0-5caf-9c5f-cca090559bef"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Power",
+        "Hidden Gem",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "65677262-92a0-5caf-9c5f-cca090559bef",
+      "createdAt": "2026-11-14",
+      "title": "Pink Tower | Tour Rose (Maison du Crible)",
+      "shortDescription": "Behind a door in the old town is a tower so tall and so pink that it has become one of the best-loved sights of Vieux Lyon.",
+      "longDescription": "Behind a door in the old town is a tower so tall and so pink that it has become one of the best-loved sights of Vieux Lyon.\n\nThe tower holds the staircase that served the house, and it's the height that's remarkable. In Renaissance Lyon, it's often said, a tall stair tower was a status symbol, a way for a merchant to show his wealth from the courtyard, where his neighbours would see it, rather than from the street. Some historians have dated the house to the sixteenth century, others to the seventeenth, and the arguments go on.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-tour-rose_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-tour-rose_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-tour-rose_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ea969df6-1f61-579d-9a37-70dc7416b83e",
+          "order": 0,
+          "title": "Pink Tower | Tour Rose (Maison du Crible)",
+          "caption": "Through the doorway at sixteen Rue du Bœuf, in the courtyard below the pink stair tower.",
+          "latitude": 45.7628976,
+          "longitude": 4.8268945,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-tour-rose.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-tour-rose_hero.webp",
+          "transcriptText": "Behind a door in the old town is a tower so tall and so pink that it has become one of the best-loved sights of Vieux Lyon.\n\nFind number sixteen, Rue du Bœuf, in Saint-Jean. Go through the doorway and along the passage into the courtyard. Look up. Rising out of the courtyard is a stair tower, washed in a warm pink, much taller than the houses around it. This is the Tour Rose, in the house once known as the Maison du Crible.\n\nThe tower holds the staircase that served the house, and it's the height that's remarkable. In Renaissance Lyon, it's often said, a tall stair tower was a status symbol, a way for a merchant to show his wealth from the courtyard, where his neighbours would see it, rather than from the street. Some historians have dated the house to the sixteenth century, others to the seventeenth, and the arguments go on.\n\nHave a look at the doorway as you come in. Its design has been linked to the Italian architect Sebastiano Serlio, whose books of architecture travelled across Europe in the Renaissance, and whose ideas are all over this part of Lyon. The influence of Italy is everywhere in this street, from the merchants who lived here to the shapes of the doors.\n\nHere's the gift detail. The pink is the colour the tower came to be known by, after its restoration, and the house took its present name from it. You'll hear people say it wasn't always pink at all.\n\nAnd here's the thing. The tower can no longer be climbed. It's a thing to stand under and look up at, which is rather what its builder had in mind. A staircase built to impress, still doing the job four or five centuries on.\n\nWhen you come back out on to Rue du Bœuf, walk a few doors along to number six, the Cour des Loges. Its courtyard, under a modern glass roof, is the grandest of the old town's hidden spaces."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7628976,
+      "centroidLongitude": 4.8268945,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "f15bece3-8852-56e8-bb3e-45ced7b532ee",
+        "745a3300-6dc1-5429-b69b-d552431aa3b9",
+        "6cb05e4a-ef60-59c0-b318-3d3cd207c2c4",
+        "d3dc29c5-20c2-5545-86d8-e922243ddbe1",
+        "6a48b1a8-2896-58d6-af40-4af1c584eac2",
+        "ab53472e-33f4-53a9-8530-7c5355d2e5b4",
+        "c2a919f0-bed8-5856-955a-5d6c0e60cd40"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "History",
+        "Architecture",
+        "Commerce",
+        "Hidden Gem",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ab53472e-33f4-53a9-8530-7c5355d2e5b4",
+      "createdAt": "2026-11-14",
+      "title": "Silk Weavers' Wall | Mur des Canuts",
+      "shortDescription": "The street in front of you is real. The one on the wall is not, and it's far busier.",
+      "longDescription": "The street in front of you is real. The one on the wall is not, and it's far busier.\n\nIt was first painted in 1987 by CitéCréation, the Lyon studio of mural painters, on a blind facade of around twelve hundred square metres. It's often described as one of the largest murals in Europe. It's certainly one of the most convincing. On a grey day, from a little way back, it can be genuinely hard to tell where the real buildings stop and the painted ones begin.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-mur-des-canuts_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e1fc9ba4-1878-5e53-9baf-5154a8d8ea2d",
+          "order": 0,
+          "title": "Silk Weavers' Wall | Mur des Canuts",
+          "caption": "At Boulevard des Canuts and Rue Denfert-Rochereau, facing the painted Croix-Rousse street.",
+          "latitude": 45.7781111,
+          "longitude": 4.827995,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-mur-des-canuts.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-mur-des-canuts_hero.webp",
+          "transcriptText": "The street in front of you is real. The one on the wall is not, and it's far busier.\n\nAt the corner of the Boulevard des Canuts and Rue Denfert-Rochereau, on the plateau of the Croix-Rousse, look at the building in front of you. In front of you is the side of a building, and on it, a whole Croix-Rousse street: tall houses, steps, shop windows, people. It's painted. All of it. This is the Mur des Canuts, the wall of the silk weavers.\n\nIt was first painted in 1987 by CitéCréation, the Lyon studio of mural painters, on a blind facade of around twelve hundred square metres. It's often described as one of the largest murals in Europe. It's certainly one of the most convincing. On a grey day, from a little way back, it can be genuinely hard to tell where the real buildings stop and the painted ones begin.\n\nHave a look at the great staircase in the middle. Those steep stairways are the signature of the Croix-Rousse, where the hill is so steep that streets turn into steps. Then look at the people on the wall. There are figures from every age, and they've changed over time.\n\nHere's the gift detail. The wall is repainted every so often to keep up with the neighbourhood. It was updated in 1997, and again in 2013. The people in it get older, the shops change, and the children painted in the first version grow up. It's a portrait of a neighbourhood that ages along with it.\n\nAnd here's the thing. The canuts were the silk weavers who made the Croix-Rousse, and who rose up in famous revolts in the eighteen-thirties. Their looms are long gone. This wall is how the neighbourhood remembers them: not with a statue, but with a crowded, ordinary street.\n\nFrom here, walk a few minutes south and down the hill. Through the doorway at Place Colbert is the Cour des Voraces, the real staircase that this painted one might have been modelled on."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7781111,
+      "centroidLongitude": 4.827995,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "745a3300-6dc1-5429-b69b-d552431aa3b9",
+        "6cb05e4a-ef60-59c0-b318-3d3cd207c2c4",
+        "c5a4bbff-0522-5d78-9c34-8f9afa2bd042",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "f8b71eb3-0757-52a7-ba27-fe693ec1aca9",
+        "65677262-92a0-5caf-9c5f-cca090559bef",
+        "6a48b1a8-2896-58d6-af40-4af1c584eac2",
+        "6acbbdb3-5fc4-550f-9c71-26900af8115d"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Public Art",
+        "Notable Building",
+        "Art",
+        "History",
+        "Free to Visit",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f8b71eb3-0757-52a7-ba27-fe693ec1aca9",
+      "createdAt": "2026-11-14",
+      "title": "Rosa Mir Garden | Jardin Rosa Mir",
+      "shortDescription": "A mason fell ill and made a promise: if he lived, he'd build a garden for his mother. He lived, and here it is.",
+      "longDescription": "A mason fell ill and made a promise: if he lived, he'd build a garden for his mother. He lived, and here it is.\n\nThe builder was Jules Senis, a mason, born in 1913 near Valencia, in Spain. He moved to France in 1947 and settled in Lyon in 1951. Then he developed cancer. He made a vow that, if he recovered, he'd build a garden in honour of his mother, Rosa Mir. He recovered, and in 1957 he began.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-jardin-rosa-mir_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-jardin-rosa-mir_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-jardin-rosa-mir_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7f66bd7c-c98d-5150-962a-19beb229b410",
+          "order": 0,
+          "title": "Rosa Mir Garden | Jardin Rosa Mir",
+          "caption": "Outside number eighty-seven, Grande Rue de la Croix-Rousse, the doorway to the shell garden.",
+          "latitude": 45.7806808,
+          "longitude": 4.8320803,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-jardin-rosa-mir.mp3",
+          "audioDurationSeconds": 128,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-jardin-rosa-mir_hero.webp",
+          "transcriptText": "A mason fell ill and made a promise: if he lived, he'd build a garden for his mother. He lived, and here it is.\n\nYou should be on the Grande Rue de la Croix-Rousse, outside number eighty-seven. From the pavement there's not much to see. The garden is tucked inside the block, and you go in through the doorway when it's open, which is only on Saturdays, from spring to autumn.\n\nThe builder was Jules Senis, a mason, born in 1913 near Valencia, in Spain. He moved to France in 1947 and settled in Lyon in 1951. Then he developed cancer. He made a vow that, if he recovered, he'd build a garden in honour of his mother, Rosa Mir. He recovered, and in 1957 he began.\n\nHe worked on it for around twenty years, on his own, stone by stone. Have a look around you once you're inside. Pillars and arches, baskets and basins, all of stone, and every surface covered with shells and coloured pebbles set into the mortar in stars and geometric patterns. Many of the stones came from building sites he worked on. There's a small shrine with a statue of the Virgin, and everywhere, Mediterranean plants. It's a little piece of Spain, in a courtyard in Lyon.\n\nHere's the gift detail. The whole garden is only a few hundred square metres, and only fifteen visitors can be inside at a time, so you may have to wait at the door. It's worth it.\n\nSenis died in 1983. His friends looked after the garden, then the city took it over, and today it's a listed historic monument. It closed for some years when it became unsafe, and reopened in 2016 after restoration.\n\nAnd here's the thing. Lyon is full of grand architecture paid for by merchants, bishops and kings. This is architecture paid for by one man's gratitude. It might be the most moving building in the city.\n\nWhen you come out, carry on to the Place de la Croix-Rousse and then down to the Boulevard des Canuts, where a whole building is painted to look like the neighbourhood. It's another way of telling the same story about who built this hill."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 128,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7806808,
+      "centroidLongitude": 4.8320803,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "745a3300-6dc1-5429-b69b-d552431aa3b9",
+        "db3f55c5-f986-5451-98a9-77d5f97e36f8",
+        "0e2c1645-a98b-557e-ae6d-efe0fdb4c76b",
+        "ab53472e-33f4-53a9-8530-7c5355d2e5b4",
+        "6cb05e4a-ef60-59c0-b318-3d3cd207c2c4",
+        "d3dc29c5-20c2-5545-86d8-e922243ddbe1",
+        "eb3a5cad-8996-5fd4-a9a4-6ab57d43a514",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Park",
+        "Art",
+        "Faith",
+        "Immigration",
+        "Green Escape",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "db3f55c5-f986-5451-98a9-77d5f97e36f8",
+      "createdAt": "2026-11-14",
+      "title": "Garden of Curiosities | Jardin des Curiosités",
+      "shortDescription": "This viewpoint was a present from Montréal, and it came with six chairs.",
+      "longDescription": "This viewpoint was a present from Montréal, and it came with six chairs.\n\nThe garden was a gift from the city of Montréal to Lyon, to mark twenty years of twinning between the two cities. It was inaugurated in 2000 and opened to the public in August 2001. It's about six thousand square metres, and it was designed with the help of the Canadian landscape firm Vlan Paysages. Lyon sent a garden back, and it's in the centre of Montréal.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-jardin-des-curiosites_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "04199dbe-916c-5345-af84-b429b2ee6fba",
+          "order": 0,
+          "title": "Garden of Curiosities | Jardin des Curiosités",
+          "caption": "In the walled garden at the end of Place de Montréal, by the six chairs and the view.",
+          "latitude": 45.755126,
+          "longitude": 4.8218822,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-jardin-des-curiosites.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-jardin-des-curiosites_hero.webp",
+          "transcriptText": "This viewpoint was a present from Montréal, and it came with six chairs.\n\nThis small walled garden sits on the hill of Saint-Just, high above the old town, at the end of Place de Montréal. In front of you, over the low wall, the whole of Lyon is spread out: the roofs of Saint-Jean below, the Saône, the Presqu'île, the Rhône beyond, and in the distance, on a clear day, the Alps.\n\nThe garden was a gift from the city of Montréal to Lyon, to mark twenty years of twinning between the two cities. It was inaugurated in 2000 and opened to the public in August 2001. It's about six thousand square metres, and it was designed with the help of the Canadian landscape firm Vlan Paysages. Lyon sent a garden back, and it's in the centre of Montréal.\n\nHave a look at the chairs. There are six of them, by the Québec sculptor Michel Goulet. They're said to echo a set of chairs on a belvedere back in Montréal, and they give the garden its name. Each is a little curiosity of its own, and between them they tell you exactly what this place is for: sit down, and look.\n\nHere's the gift detail. The garden has several names. Some people call it the Jardin de Montréal, some the Belvédère Abbé Larue. Most locals simply call it the best view in Lyon that the visitors haven't found yet.\n\nAnd here's the thing. Most people see Lyon from the top of Fourvière, beside the basilica, with a crowd. This view is from lower down and closer in, and somehow you see the city better for it. You can pick out the streets and the roofs, not just the skyline.\n\nBefore you go, find the chair with the best view, sit in it, and stay for a while. Then walk down the steps of the Montée du Gourguillon into Saint-Jean. It's one of the oldest streets in Lyon, and you'll come out right by the cathedral."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.755126,
+      "centroidLongitude": 4.8218822,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "0e2c1645-a98b-557e-ae6d-efe0fdb4c76b",
+        "f8b71eb3-0757-52a7-ba27-fe693ec1aca9",
+        "f15bece3-8852-56e8-bb3e-45ced7b532ee",
+        "745a3300-6dc1-5429-b69b-d552431aa3b9",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "5d0809d0-9af3-5f19-a7c9-f5f90a8cf1e6",
+        "1b0a297d-fd54-5748-9491-cbba67b3a189"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Viewpoint",
+        "Public Art",
+        "Art",
+        "Green Escape",
+        "Free to Visit",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c1d018fa-f81b-5ca8-a5ef-b7ad5327945d",
+      "createdAt": "2026-11-14",
+      "title": "Orange Cube | Cube Orange",
+      "shortDescription": "Someone has taken a bite out of this building. Quite a large one.",
+      "longDescription": "Someone has taken a bite out of this building. Quite a large one.\n\nThe architects were Jakob and MacFarlane, a practice from Paris, who won the competition for the building in 2005. It was finished in 2011, an office building for the regeneration of Lyon's old river port. The structure behind it is simple: a regular grid of concrete columns, twenty-nine metres by thirty-three, over five levels. Then they cut into it.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cube-orange_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cube-orange_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cube-orange_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cube-orange_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f3bc3b5d-86c0-53d9-baec-286d7bbc85cb",
+          "order": 0,
+          "title": "Orange Cube | Cube Orange",
+          "caption": "On Quai Rambaud, facing the orange block with the great round hole cut through it.",
+          "latitude": 45.7392376,
+          "longitude": 4.8145229,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-cube-orange.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-cube-orange_hero.webp",
+          "transcriptText": "Someone has taken a bite out of this building. Quite a large one.\n\nQuai Rambaud, on the Confluence, with the Saône beside you. In front is a bright orange block, covered all over in small, irregular holes, and with a huge round void cut right through one side of it. That's the Cube Orange. Next door, slightly greener, is its sibling.\n\nThe architects were Jakob and MacFarlane, a practice from Paris, who won the competition for the building in 2005. It was finished in 2011, an office building for the regeneration of Lyon's old river port. The structure behind it is simple: a regular grid of concrete columns, twenty-nine metres by thirty-three, over five levels. Then they cut into it.\n\nHave a look at the big hole first. It's a cone-shaped void carved through the volume of the building. It lets light and air deep into the middle, and it opens the offices out towards the river and the view. Then look at the smaller holes in the facade. They're not random. The outer skin is pierced in a pixelated pattern that's meant to follow the movement of the river beside it, like ripples turned into a building.\n\nHere's the gift detail. The orange isn't just cheerful. It's a nod to the orange lead paint that once protected the metalwork of industrial ports. The building is wearing the colours of the docks it replaced.\n\nAnd here's the thing. Most office buildings try to disappear. This one stands on the quay of a former industrial port and refuses to. It's playful, a bit absurd, and it's rather done its job: everyone who walks along the Confluence remembers it.\n\nNow look next door at the green building. It's by the same architects, and it's the headquarters of the news channel Euronews. Then carry on south along the quay to the Sucrière and the Musée des Confluences. The whole walk is one of the best sequences of new architecture in France."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7392376,
+      "centroidLongitude": 4.8145229,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "cf6cfb54-c37e-5da3-880b-0820aef3d2ad",
+        "ab53472e-33f4-53a9-8530-7c5355d2e5b4",
+        "18b2bca0-8b7f-5e54-9a80-65a3185e6c78",
+        "a881eca9-3fc8-5c13-9d14-dcbce52336cb",
+        "65677262-92a0-5caf-9c5f-cca090559bef",
+        "745a3300-6dc1-5429-b69b-d552431aa3b9",
+        "f8b71eb3-0757-52a7-ba27-fe693ec1aca9",
+        "d3dc29c5-20c2-5545-86d8-e922243ddbe1"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Waterfront",
+        "Contemporary",
+        "Designed by a Master",
+        "Jakob + MacFarlane"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0e2c1645-a98b-557e-ae6d-efe0fdb4c76b",
+      "createdAt": "2026-11-14",
+      "title": "Tête d'Or Park | Parc de la Tête d'Or",
+      "shortDescription": "The park is named after a treasure nobody has ever found: a golden head of Christ, said to be buried somewhere under the lawns.",
+      "longDescription": "The park is named after a treasure nobody has ever found: a golden head of Christ, said to be buried somewhere under the lawns.\n\nThe land was bought in 1856, and the park opened the following year, before the work was even finished. The designers were two brothers from Switzerland, Denis and Eugène Bühler. They gave the city something closer to the English idea of a park than the formal French one: a great lake, open meadows, clumps of trees, and winding paths, with surprises around every bend. Their original plan even included grazing for sheep and cows.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-parc-de-la-tete-d-or_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-parc-de-la-tete-d-or_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-parc-de-la-tete-d-or_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-parc-de-la-tete-d-or_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-parc-de-la-tete-d-or_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-parc-de-la-tete-d-or_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "48c44950-f0fb-59f3-b347-13070c7b8387",
+          "order": 0,
+          "title": "Tête d'Or Park | Parc de la Tête d'Or",
+          "caption": "At the gilded Porte des Enfants du Rhône on Place du Général Leclerc, the lake ahead.",
+          "latitude": 45.7774201,
+          "longitude": 4.8452219,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-parc-de-la-tete-d-or.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-parc-de-la-tete-d-or_hero.webp",
+          "transcriptText": "The park is named after a treasure nobody has ever found: a golden head of Christ, said to be buried somewhere under the lawns.\n\nThe main gates on Place du Général Leclerc are the Porte des Enfants du Rhône, a grand entrance of gilded ironwork and stone. Through it, the park opens out in front of you, with the lake ahead and the paths spreading away under the trees. It's one of the largest city parks in France, and at a hundred and seventeen hectares you won't see the far end from here.\n\nThe land was bought in 1856, and the park opened the following year, before the work was even finished. The designers were two brothers from Switzerland, Denis and Eugène Bühler. They gave the city something closer to the English idea of a park than the formal French one: a great lake, open meadows, clumps of trees, and winding paths, with surprises around every bend. Their original plan even included grazing for sheep and cows.\n\nOnce you're inside, look out for the great greenhouses, a long range of iron and glass beside the botanical garden. The first ones were built in 1865, and they were rebuilt in the late eighteen-seventies. Inside is a tropical jungle, a rather lovely thing to find on a grey Lyon morning.\n\nHere's the gift detail. The name comes from the legend. According to the old story, a treasure, including a head of Christ in gold, was buried on this land long ago. People have looked. Nobody has found it. The city kept the name anyway, which seems the right decision.\n\nAnd here's the thing. A park like this was a political statement in the nineteenth century: fresh air, nature and space, for everyone in a crowded industrial city, free. It still works exactly as it was meant to. On a Sunday afternoon, half of Lyon seems to be here.\n\nIf you've got an hour, walk to the lake and follow the path round to the island and the old botanical garden. And if you're here in June, don't miss the rose garden."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7774201,
+      "centroidLongitude": 4.8452219,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "db3f55c5-f986-5451-98a9-77d5f97e36f8",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "f8b71eb3-0757-52a7-ba27-fe693ec1aca9",
+        "d3dc29c5-20c2-5545-86d8-e922243ddbe1",
+        "745a3300-6dc1-5429-b69b-d552431aa3b9",
+        "f15bece3-8852-56e8-bb3e-45ced7b532ee",
+        "1b0a297d-fd54-5748-9491-cbba67b3a189",
+        "6cb05e4a-ef60-59c0-b318-3d3cd207c2c4"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Green Escape",
+        "History",
+        "Free to Visit",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Denis & Eugène Bühler"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6cb05e4a-ef60-59c0-b318-3d3cd207c2c4",
+      "createdAt": "2026-11-14",
+      "title": "Passage Thiaffait",
+      "shortDescription": "This passage was built in 1827 and fell into such a bad way that people were afraid to walk through it. Then the designers moved in.",
+      "longDescription": "This passage was built in 1827 and fell into such a bad way that people were afraid to walk through it. Then the designers moved in.\n\nThe passage was built in 1827 by a man called Thiaffait, who built both the house and the traboule through it. He was a local benefactor, involved in charity and education, and he died in 1861. For more than a century it was simply part of the warren of passages that the silk workers of the Croix-Rousse used to move around the hill.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-passage-thiaffait_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-passage-thiaffait_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0fba4058-35a9-5ff2-b97b-6cb0efc08087",
+          "order": 0,
+          "title": "Passage Thiaffait",
+          "caption": "On Rue René Leynaud, at the portico into the curving passage of little shopfronts.",
+          "latitude": 45.7701182,
+          "longitude": 4.8330854,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-passage-thiaffait.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-passage-thiaffait_hero.webp",
+          "transcriptText": "This passage was built in 1827 and fell into such a bad way that people were afraid to walk through it. Then the designers moved in.\n\nYou should be on Rue René Leynaud, on the lower slopes of the Croix-Rousse. Look for the portico, the covered entrance in the building front. Go through it and you'll find yourself in a curving passage lined with small shopfronts, which ends in a staircase climbing up to Rue Burdeau on the hill above.\n\nThe passage was built in 1827 by a man called Thiaffait, who built both the house and the traboule through it. He was a local benefactor, involved in charity and education, and he died in 1861. For more than a century it was simply part of the warren of passages that the silk workers of the Croix-Rousse used to move around the hill.\n\nThen it fell into decline. For about twenty years it was neglected, and it had a reputation for being unsafe. In 1997 a renovation was approved, and it was finished in 2001. The shops were turned into studios and workshops for young designers, and the passage was given a new name, the Village des Créateurs, the designers' village. For more than twenty years it was one of the places in Lyon where new fashion labels got their start.\n\nHere's the gift detail. The Village des Créateurs closed in 2023. But the passage didn't go quiet. The landlord kept the designers' leases going, and the space now houses a hub for responsible fashion and a textile lab, still working with makers and small labels. So the story of fabric on this hill, which began with the canuts and their silk, carries on.\n\nAnd here's the thing. Many traboules like this one are private property that the city has agreed with the owners to keep open to walkers. It's an old Lyon habit, and it still makes the city feel rather generous, as though the buildings were letting you in on a secret.\n\nWhen you reach the top of the stairs, turn round and look back down the passage. Then carry on up to the Cour des Voraces, a few minutes away. It's the grandest of all the traboules on the hill."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7701182,
+      "centroidLongitude": 4.8330854,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "745a3300-6dc1-5429-b69b-d552431aa3b9",
+        "ab53472e-33f4-53a9-8530-7c5355d2e5b4",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "22565BCA-3994-5C2E-B1AF-0317A72DF404",
+        "65677262-92a0-5caf-9c5f-cca090559bef",
+        "f8b71eb3-0757-52a7-ba27-fe693ec1aca9",
+        "0e2c1645-a98b-557e-ae6d-efe0fdb4c76b",
+        "f15bece3-8852-56e8-bb3e-45ced7b532ee"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Notable Building",
+        "Fashion",
+        "Commerce",
+        "History",
+        "Hidden Gem",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6acbbdb3-5fc4-550f-9c71-26900af8115d",
+      "createdAt": "2026-11-14",
+      "title": "Librairie Le Bal des Ardents",
+      "shortDescription": "The way into this bookshop is through an archway made of books.",
+      "longDescription": "The way into this bookshop is through an archway made of books.\n\nThe shop opened in March 2003, in premises that had housed a rather different kind of bookshop, an erotic one called La Musardine. It has since become one of the best-loved independent bookshops in Lyon, with a well-chosen stock and a strong taste for independent publishing.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-bal-des-ardents_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-bal-des-ardents_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e218b936-a2c4-5445-ad29-8034abada550",
+          "order": 0,
+          "title": "Librairie Le Bal des Ardents",
+          "caption": "On Rue Neuve, at number seventeen, before the archway built out of books.",
+          "latitude": 45.7655084,
+          "longitude": 4.8355273,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-le-bal-des-ardents.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-le-bal-des-ardents_hero.webp",
+          "transcriptText": "The way into this bookshop is through an archway made of books.\n\nRue Neuve runs through the first arrondissement, between Place des Terreaux and the Cordeliers. Look for number seventeen. Around the doorway is a great arch built out of dozens of books, stacked and fixed in place around the entrance. That's Le Bal des Ardents, and you'll know it the moment you see it.\n\nThe shop opened in March 2003, in premises that had housed a rather different kind of bookshop, an erotic one called La Musardine. It has since become one of the best-loved independent bookshops in Lyon, with a well-chosen stock and a strong taste for independent publishing.\n\nHave a look at the arch on your way in. It's both a sign and a statement of intent. No poster or slogan could tell you more clearly what the shop is for.\n\nHere's the gift detail. The name comes from a book by the writer and artist Pierre Bettencourt. And the phrase itself goes back further, to a notorious evening in Paris in 1393, when King Charles the Sixth and his courtiers danced at a masked ball dressed as wild men, in costumes of linen and pitch. A torch came too close. Several of the dancers burned to death, and the king only just survived. It was remembered as the Bal des Ardents, the ball of the burning ones. It's a rather dramatic name for a bookshop, but readers can be a passionate lot.\n\nAnd here's the thing. Independent bookshops are always said to be in danger, and this one has had its uncertain moments. But it's still here, and its entrance is still the most memorable doorway on the Presqu'île.\n\nWhen you come out, walk five minutes north to Place des Terreaux and the Musée des Beaux-Arts. It's in a former abbey, and its cloister garden is one of the quietest places in the city centre."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7655084,
+      "centroidLongitude": 4.8355273,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "0c03eab0-264b-54c2-abf6-6f0d32dd9db0",
+        "ab53472e-33f4-53a9-8530-7c5355d2e5b4",
+        "745a3300-6dc1-5429-b69b-d552431aa3b9",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "18b2bca0-8b7f-5e54-9a80-65a3185e6c78",
+        "ccd1709f-e964-5afd-ae22-de587bb4a506",
+        "6cb05e4a-ef60-59c0-b318-3d3cd207c2c4",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c"
+      ],
+      "primaryCategory": "literature",
+      "tags": [
+        "Venue",
+        "Literature",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "97456deb-3588-50a0-a1fc-7d5c4563149e",
+      "createdAt": "2026-11-14",
+      "title": "Pralus Lyon – Monplaisir",
+      "shortDescription": "In Lyon, pink is a flavour, and this is where you go to taste it.",
+      "longDescription": "In Lyon, pink is a flavour, and this is where you go to taste it.\n\nThe pink is praline, but not the praline you might know. In Lyon, pralines are almonds and hazelnuts coated in a crisp shell of sugar coloured a vivid pink. They turn up everywhere in the city: in tarts, in brioches, scattered on cakes.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-pralus-monplaisir_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-pralus-monplaisir_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-pralus-monplaisir_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d0379c32-96e9-5146-b1cf-72882137a6a8",
+          "order": 0,
+          "title": "Pralus Lyon – Monplaisir",
+          "caption": "On Avenue des Frères Lumière, at the window of golden brioches studded with pink praline.",
+          "latitude": 45.7444356,
+          "longitude": 4.8700875,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-pralus-monplaisir.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-pralus-monplaisir_hero.webp",
+          "transcriptText": "In Lyon, pink is a flavour, and this is where you go to taste it.\n\nYou should be on Avenue des Frères Lumière in Monplaisir, a few minutes from the Institut Lumière. Look for the Pralus shop, and in the window, the thing everybody comes for: a round, golden brioche studded all through with bright pink pieces. That's the Praluline.\n\nThe pink is praline, but not the praline you might know. In Lyon, pralines are almonds and hazelnuts coated in a crisp shell of sugar coloured a vivid pink. They turn up everywhere in the city: in tarts, in brioches, scattered on cakes.\n\nThe family business was started in 1948 by Auguste Pralus, a pastry chef, and his wife Noëlie. Their first shop was in Roanne, north-west of Lyon. And here's the gift detail. Around 1955, the same year Auguste was named Meilleur Ouvrier de France, he came up with the idea of folding his pink pralines into brioche dough. The Praluline was born, and it has made the family name ever since. In 1988 his son, François, took over.\n\nHave a look at how it's made, if you can see the counter. The pralines aren't just on top. They're folded right through the dough, so the sugar melts into the crumb as it bakes, and every slice is different.\n\nAnd here's the thing. Most famous regional specialities are hundreds of years old and nobody knows who made them first. This one has an inventor, a date and an address, and it's still made by the same family.\n\nBefore you go, buy a Praluline, or at least half of one, and take it with you. Then take it round the corner to the Institut Lumière, and eat it on the street where cinema began."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7444356,
+      "centroidLongitude": 4.8700875,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "6b2da0b2-4da0-5ee6-847e-5c8d50c572e4",
+        "addf1c03-3778-5fe4-b13e-fc20ebc7d923",
+        "4677556e-e4ad-5839-a18d-7dc9c8ba6c5e",
+        "ccd1709f-e964-5afd-ae22-de587bb4a506",
+        "1b0a297d-fd54-5748-9491-cbba67b3a189",
+        "238edc04-da90-5ac3-8250-22a6771f71e1",
+        "a881eca9-3fc8-5c13-9d14-dcbce52336cb",
+        "5d0809d0-9af3-5f19-a7c9-f5f90a8cf1e6"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a881eca9-3fc8-5c13-9d14-dcbce52336cb",
+      "createdAt": "2026-11-14",
+      "title": "Creators' Market | Marché de la Création",
+      "shortDescription": "Every Sunday morning since 1979, the quay along the Saône has become an open-air gallery.",
+      "longDescription": "Every Sunday morning since 1979, the quay along the Saône has become an open-air gallery.\n\nThe market began in 1979. Today more than a hundred and fifty artists and makers set up here every Sunday, from eight in the morning until around two in the afternoon. Painters, sculptors, potters, jewellers, printmakers, photographers. And there's a rule that makes all the difference. Every piece must be sold by the person who made it. No dealers, no resellers, and no decorating of factory-made objects either.",
+      "makerId": "666b2520-de5e-5261-9834-031e34ca8adb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-marche-de-la-creation_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-marche-de-la-creation_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-marche-de-la-creation_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f6ae350b-1484-5164-a2c9-fccffe192cd6",
+          "order": 0,
+          "title": "Creators' Market | Marché de la Création",
+          "caption": "On Quai Romain Rolland, the Saône beside you, among the Sunday stalls of artists and makers.",
+          "latitude": 45.7659912,
+          "longitude": 4.8290742,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lys-marche-de-la-creation.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lys-marche-de-la-creation_hero.webp",
+          "transcriptText": "Every Sunday morning since 1979, the quay along the Saône has become an open-air gallery.\n\nQuai Romain Rolland is on the Vieux Lyon side of the Saône, with the river beside you and the hill of Fourvière rising behind. On a Sunday morning the quay is lined with stalls, and behind every one of them is the person who made what's on it.\n\nThe market began in 1979. Today more than a hundred and fifty artists and makers set up here every Sunday, from eight in the morning until around two in the afternoon. Painters, sculptors, potters, jewellers, printmakers, photographers. And there's a rule that makes all the difference. Every piece must be sold by the person who made it. No dealers, no resellers, and no decorating of factory-made objects either.\n\nHere's the gift detail. You can't simply turn up and set out a table. Exhibitors have to be working professionals, registered as artists or craftspeople, and a committee chooses who gets a pitch. So the standard is higher than at most street markets, and it's a good place to buy something that will remind you of Lyon long after the Praluline has gone.\n\nHave a look along the stalls towards the bridges. Since 1997 a craft market has run alongside it as well, so on a good morning the whole quay is lined with makers.\n\nAnd here's the thing. Most of the art you'll see on this trip is behind glass, in museums. This is art you can talk to. Ask the person behind the stall how they made something, and they'll tell you, usually at length, and usually with pleasure.\n\nWhen you've finished browsing, cross the footbridge over the Saône and look back at the stalls, the old town and the basilica above. Then come back across and climb up into Saint-Jean for lunch in a bouchon. That's a Lyon Sunday done properly."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7659912,
+      "centroidLongitude": 4.8290742,
+      "city": "Lyon",
+      "country": "France",
+      "relatedTourIds": [
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "cf6cfb54-c37e-5da3-880b-0820aef3d2ad",
+        "5d0809d0-9af3-5f19-a7c9-f5f90a8cf1e6",
+        "1b0a297d-fd54-5748-9491-cbba67b3a189",
+        "0c03eab0-264b-54c2-abf6-6f0d32dd9db0",
+        "c2a919f0-bed8-5856-955a-5d6c0e60cd40",
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "6b2da0b2-4da0-5ee6-847e-5c8d50c572e4"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Market",
+        "Art",
+        "Commerce",
+        "Waterfront",
+        "Free to Visit"
       ],
       "priceUSD": 0
     }
@@ -253335,8 +255311,13 @@
       "country": "France",
       "relatedTourIds": [
         "5F96D3C6-0133-5FD8-8F16-DF84D9A3789D",
+        "6cb05e4a-ef60-59c0-b318-3d3cd207c2c4",
+        "745a3300-6dc1-5429-b69b-d552431aa3b9",
+        "ab53472e-33f4-53a9-8530-7c5355d2e5b4",
         "86114E7E-1970-53DB-9ED8-CAD57A07CA75",
-        "0952869E-7094-58A7-9939-DCBAFC80E636"
+        "5ded54be-bc68-5295-b9d3-f8e79200c173",
+        "6a48b1a8-2896-58d6-af40-4af1c584eac2",
+        "d3dc29c5-20c2-5545-86d8-e922243ddbe1"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -254665,7 +256646,12 @@
       "relatedTourIds": [
         "22565BCA-3994-5C2E-B1AF-0317A72DF404",
         "86114E7E-1970-53DB-9ED8-CAD57A07CA75",
-        "0952869E-7094-58A7-9939-DCBAFC80E636"
+        "6a48b1a8-2896-58d6-af40-4af1c584eac2",
+        "6b2da0b2-4da0-5ee6-847e-5c8d50c572e4",
+        "0952869E-7094-58A7-9939-DCBAFC80E636",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "18b2bca0-8b7f-5e54-9a80-65a3185e6c78",
+        "ab53472e-33f4-53a9-8530-7c5355d2e5b4"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -254714,9 +256700,12 @@
       "city": "Lyon",
       "country": "France",
       "relatedTourIds": [
+        "c2a919f0-bed8-5856-955a-5d6c0e60cd40",
         "22565BCA-3994-5C2E-B1AF-0317A72DF404",
         "0952869E-7094-58A7-9939-DCBAFC80E636",
-        "5F96D3C6-0133-5FD8-8F16-DF84D9A3789D"
+        "5F96D3C6-0133-5FD8-8F16-DF84D9A3789D",
+        "a881eca9-3fc8-5c13-9d14-dcbce52336cb",
+        "6acbbdb3-5fc4-550f-9c71-26900af8115d"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -254862,9 +256851,14 @@
       "city": "Lyon",
       "country": "France",
       "relatedTourIds": [
+        "5d0809d0-9af3-5f19-a7c9-f5f90a8cf1e6",
+        "1b0a297d-fd54-5748-9491-cbba67b3a189",
+        "4677556e-e4ad-5839-a18d-7dc9c8ba6c5e",
+        "3cf9e48e-a4cd-52d1-99eb-7b225af5c54c",
+        "6b2da0b2-4da0-5ee6-847e-5c8d50c572e4",
         "86114E7E-1970-53DB-9ED8-CAD57A07CA75",
-        "5F96D3C6-0133-5FD8-8F16-DF84D9A3789D",
-        "22565BCA-3994-5C2E-B1AF-0317A72DF404"
+        "addf1c03-3778-5fe4-b13e-fc20ebc7d923",
+        "0e2c1645-a98b-557e-ae6d-efe0fdb4c76b"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
