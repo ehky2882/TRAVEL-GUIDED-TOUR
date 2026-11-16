@@ -403,3 +403,4 @@ Full text for every one of them is in
 - [HANDOFF-261111-brasilia.md](HANDOFF-261111-brasilia.md) — **Brasília launch: Atlas Studio BSB**, 31 singles, 7 new architect tags; 3 pins moved onto their buildings; 5 place questions to Edward
 - [HANDOFF-261113-nice.md](HANDOFF-261113-nice.md) — **Nice launch: Atlas Studio NCE**, 32 singles, 15 new architect tags; 1 pin moved; 1 place question to Edward
 - [HANDOFF-261114-lyon.md](HANDOFF-261114-lyon.md) — **Lyon launch: Atlas Studio LYS**, 34 singles, 12 new architect tags; 1 pin moved; 1 place question to Edward
+- [HANDOFF-261116-triage-batch.md](HANDOFF-261116-triage-batch.md) — **Triage batch: 38 link pins** from 35 creators (21 new); 3 skipped, 1 held, 9 place questions left for Edward.
