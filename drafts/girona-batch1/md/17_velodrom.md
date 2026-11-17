@@ -1,0 +1,33 @@
+# 17 · Velodrom
+
+*316 words · about 126 seconds at an unhurried pace*
+
+## Clean script
+
+This was a nineteenth century theatre, then a dance hall, then a workshop, and now it is a temple to the bicycle.
+
+You are on the Pujada de Sant Domènec, by the broad steps in the old town, next door to the tables of Café Le Bistrot. Look at the building at number six, the old Odeon. It has been a place of leisure in Girona since the nineteenth century, first as a theatre and then as a dance hall. In more recent years it was a carpentry and chrome workshop. Then it closed, and for more than a decade it sat in decline.
+
+A Girona businessman, Miquel Casals, bought it and spent about two million euros and four years restoring it. The architect, Bruna Vila, kept the original character. She preserved part of the painted ceiling, the oval structure of wrought iron, and the old sofas. In May twenty twenty five the Velodrom group, a cycling brand from Girona, opened its shop across both floors, timed for a big gravel race called The Traka.
+
+Have a look inside if you can. You have an old performance hall full of beautiful bikes and kit, with a café and sofas, and plans for concerts, podcasts and book launches, all on the theme of cycling. Outside, the steps next door have been fitted with racks for bicycles.
+
+What I like is how naturally it suits the city. Girona has become one of the best known cycling towns in Europe, and the riders needed a gathering place. Rather than build a new one, the city found an old hall that had always been about entertainment and gave it a new kind of audience.
+
+[beat]
+
+Now turn round and look up the steps towards Sant Martí Sacosta. On a summer morning you'll often see riders setting off from here into the hills, and it's worth a moment to watch them go.
+
+## TTS-safe script
+
+This was a nineteenth century theatre, then a dance hall, then a workshop, and now it is a temple to the bicycle.
+
+You are on the Poojahda duh San Doomennek, by the broad steps in the old town, next door to the tables of Kaffay luh Beestro. Look at the building at number six, the old Odeon. It has been a place of leisure in Jeerohna since the nineteenth century, first as a theatre and then as a dance hall. In more recent years it was a carpentry and chrome workshop. Then it closed, and for more than a decade it sat in decline.
+
+A Jeerohna businessman, Meekel Kasals, bought it and spent about two million euros and four years restoring it. The architect, Broona Veela, kept the original character. She preserved part of the painted ceiling, the oval structure of wrought iron, and the old sofas. In May twenty twenty five the Vellodrom group, a cycling brand from Jeerohna, opened its shop across both floors, timed for a big gravel race called The Trakka.
+
+Have a look inside if you can. You have an old performance hall full of beautiful bikes and kit, with a cafe and sofas, and plans for concerts, podcasts and book launches, all on the theme of cycling. Outside, the steps next door have been fitted with racks for bicycles.
+
+What I like is how naturally it suits the city. Jeerohna has become one of the best known cycling towns in Europe, and the riders needed a gathering place. Rather than build a new one, the city found an old hall that had always been about entertainment and gave it a new kind of audience.
+
+Now turn round and look up the steps towards San Martee Sakosta. On a summer morning you'll often see riders setting off from here into the hills, and it's worth a moment to watch them go.

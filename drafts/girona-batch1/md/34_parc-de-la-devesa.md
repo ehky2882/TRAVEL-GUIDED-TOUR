@@ -1,0 +1,33 @@
+# 34 · Parc de la Devesa
+
+*299 words · about 120 seconds at an unhurried pace*
+
+## Clean script
+
+Look up. Some of these plane trees are taller than the cathedral's vault is high.
+
+You are in the Parc de la Devesa, on the western edge of the city centre, beside the river Ter, close to where the Onyar flows into it. Stand in one of the long straight avenues and look up into the canopy, a grid of grey and cream trunks rising as far as you can see.
+
+This is the largest urban park in Catalonia, about forty hectares, and it is filled with roughly two thousand six hundred London plane trees. Most of them were planted in the eighteen fifties, so many are now around a hundred and seventy years old. By most accounts the tallest are more than fifty metres high, which makes them taller than the thirty five metre vault of the cathedral across the river. The park is protected as a site of national interest.
+
+Have a look at how it's laid out. The trees stand in strict rows, forming high green avenues, rather like the nave of a church. In summer the shade here is total, and the park is where the city escapes the heat. You'll often find a local story that Napoleon ordered them planted, but there's no record that he did.
+
+And here's the thing. Girona's old town gets all the attention, but this is its other great monument, and it was made by gardeners, not by masons. The plane trees are a living structure, a building that grows. The city looks after them with great care, replanting as the oldest begin to fail.
+
+[beat]
+
+From here, walk to the edge of the park, where the Ter flows past. A path runs along the riverbank, and it's one of the best walks in the city on a summer evening.
+
+## TTS-safe script
+
+Look up. Some of these plane trees are taller than the cathedral's vault is high.
+
+You are in the Park duh la Duhvayza, on the western edge of the city centre, beside the river Tair, close to where the Oonyar flows into it. Stand in one of the long straight avenues and look up into the canopy, a grid of grey and cream trunks rising as far as you can see.
+
+This is the largest urban park in Catalonia, about forty hectares, and it is filled with roughly two thousand six hundred London plane trees. Most of them were planted in the eighteen fifties, so many are now around a hundred and seventy years old. By most accounts the tallest are more than fifty metres high, which makes them taller than the thirty five metre vault of the cathedral across the river. The park is protected as a site of national interest.
+
+Have a look at how it's laid out. The trees stand in strict rows, forming high green avenues, rather like the nave of a church. In summer the shade here is total, and the park is where the city escapes the heat. You'll often find a local story that Napoleon ordered them planted, but there's no record that he did.
+
+And here's the thing. Jeerohna's old town gets all the attention, but this is its other great monument, and it was made by gardeners, not by masons. The plane trees are a living structure, a building that grows. The city looks after them with great care, replanting as the oldest begin to fail.
+
+From here, walk to the edge of the park, where the Tair flows past. A path runs along the riverbank, and it's one of the best walks in the city on a summer evening.

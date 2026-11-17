@@ -1,0 +1,36 @@
+num	slug	google_maps_name	lat	lon	category
+01	casa-cacao	Casa Cacao	41.981756	2.822679	Stay
+02	nord-1901	Nord 1901	41.984902	2.822682	Stay
+03	hotel-museu-llegendes	Hotel Museu Llegendes de Girona	41.988580	2.824602	Stay
+04	pensio-bellmirall	Pensió Bellmirall	41.986261	2.826364	Stay
+05	el-celler-de-can-roca	El Celler de Can Roca	41.993401	2.807767	Dine
+06	restaurant-normal	Restaurant Normal	41.984691	2.825610	Dine
+07	divinum	Divinum	41.982255	2.824108	Dine
+08	cal-ros	Cal Ros	41.984474	2.824968	Dine
+09	rocambolesc	Rocambolesc	41.984792	2.823531	Dine
+10	la-fabrica	La Fábrica	41.983926	2.825950	Drink
+11	espresso-mafia	Espresso Mafia	41.984660	2.824974	Drink
+12	federal-cafe	Federal Cafe	41.985714	2.825216	Drink
+13	nykteris-cocktail-bar	Nykteri's Cocktail Bar	41.986284	2.821413	Drink
+14	cafe-le-bistrot	Cafè Le Bistrot	41.984856	2.826143	Drink
+15	llibreria-22	Llibreria 22	41.984416	2.822142	Shop
+16	mercat-del-lleo	Mercat del Lleó	41.979618	2.822880	Shop
+17	velodrom	Velodrom	41.984862	2.826358	Shop
+18	banys-arabs	Banys Àrabs	41.988058	2.825702	Visit
+19	catedral-de-girona	Catedral de Girona	41.987509	2.826274	Visit
+20	sant-pere-de-galligants	Església de Sant Pere de Galligants	41.988735	2.826606	Visit
+21	museu-historia-jueus	Museu d'Història dels Jueus	41.986015	2.825436	Visit
+22	bolit-sant-nicolau	Bòlit-Capella de Sant Nicolau	41.989041	2.826099	Visit
+23	museu-del-cinema	Museu del Cinema	41.983564	2.822361	Visit
+24	museu-dart	Museu d'Art	41.987025	2.826703	Visit
+25	pont-de-sant-agusti	Pont de Sant Agustí	41.985443	2.824337	Observe
+26	pont-de-les-peixateries-velles	Pont de les Peixateries Velles	41.984548	2.823904	Observe
+27	casa-maso	Casa Masó	41.986054	2.824744	Observe
+28	farinera-teixidor	Farinera Teixidor	41.981443	2.816058	Observe
+29	edifici-de-les-aligues	Edifici de les Aligues	41.985899	2.827455	Observe
+30	placa-de-sant-domenec	Plaça de Sant Domènec	41.985441	2.827489	Observe
+31	torre-gironella	Torre Gironella	41.986620	2.829431	Observe
+32	basilica-de-sant-feliu	Basilica de Sant Feliu	41.987969	2.824864	Observe
+33	placa-de-la-independencia	Plaça de la Independència	41.985873	2.823548	Observe
+34	parc-de-la-devesa	Parc de la Devesa	41.985830	2.814297	Observe
+35	auditori-de-girona	Auditori de Girona	41.985656	2.811621	Observe

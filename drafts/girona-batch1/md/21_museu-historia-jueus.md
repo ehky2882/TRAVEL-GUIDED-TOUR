@@ -1,0 +1,33 @@
+# 21 · Museu d'Història dels Jueus
+
+*307 words · about 123 seconds at an unhurried pace*
+
+## Clean script
+
+For about six hundred years Girona had one of the most important Jewish communities in Europe, and it ended with a single document.
+
+You are on Carrer de la Força, in the old town, outside number eight. This is the Bonastruc ça Porta Centre, named after the scholar better known as Nahmanides, one of the great Jewish thinkers of the thirteenth century, who was born in Girona. The building houses the Museum of Jewish History. All around you is the Call, the old Jewish quarter, a tangle of steep, narrow lanes.
+
+Go in through the courtyard. The building is a set of old houses, and it is thought to stand on the site of the last synagogue of the Jewish community and the rooms around it. In twenty fourteen, archaeologists from the University of Girona lifted the floor of a space next to the courtyard and found a mikveh, a ritual bath, belonging to that synagogue, which was in use from fourteen thirty five until fourteen ninety two.
+
+Then there is the document. In fourteen ninety two the Catholic Monarchs ordered all Jews to convert or leave, and the order was copied into the city's own register. The museum displays it, and the original is still kept in the city archive. Six centuries of shared life came to an end with it.
+
+And here's the thing. For centuries afterwards the Call was simply forgotten, with houses built over the old streets. Only from the nineteen eighties did the city begin to uncover it again. So walking these lanes is, in a small way, an act of remembering.
+
+[beat]
+
+When you come out, wander up the narrow lane called Carrer de Sant Llorenç, just beside the museum. It's the steepest and narrowest part of the Call, and it feels much as it must have done in the Middle Ages.
+
+## TTS-safe script
+
+For about six hundred years Jeerohna had one of the most important Jewish communities in Europe, and it ended with a single document.
+
+You are on Karreh duh la Forsa, in the old town, outside number eight. This is the Bonastrook sa Porta Centre, named after the scholar better known as Nahmannideez, one of the great Jewish thinkers of the thirteenth century, who was born in Jeerohna. The building houses the Museum of Jewish History. All around you is the Kye, the old Jewish quarter, a tangle of steep, narrow lanes.
+
+Go in through the courtyard. The building is a set of old houses, and it is thought to stand on the site of the last synagogue of the Jewish community and the rooms around it. In twenty fourteen, archaeologists from the University of Jeerohna lifted the floor of a space next to the courtyard and found a mikvuh, a ritual bath, belonging to that synagogue, which was in use from fourteen thirty five until fourteen ninety two.
+
+Then there is the document. In fourteen ninety two the Catholic Monarchs ordered all Jews to convert or leave, and the order was copied into the city's own register. The museum displays it, and the original is still kept in the city archive. Six centuries of shared life came to an end with it.
+
+And here's the thing. For centuries afterwards the Kye was simply forgotten, with houses built over the old streets. Only from the nineteen eighties did the city begin to uncover it again. So walking these lanes is, in a small way, an act of remembering.
+
+When you come out, wander up the narrow lane called Karreh duh San Lyoorens, just beside the museum. It's the steepest and narrowest part of the Kye, and it feels much as it must have done in the Middle Ages.

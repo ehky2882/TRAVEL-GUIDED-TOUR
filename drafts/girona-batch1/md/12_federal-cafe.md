@@ -1,0 +1,33 @@
+# 12 · Federal Cafe
+
+*276 words · about 110 seconds at an unhurried pace*
+
+## Clean script
+
+This street was once part of a Roman road, and these days it is where Girona comes for brunch.
+
+You are on Carrer de la Força, the long, narrow street that climbs through the old town towards the cathedral. Find number nine, with a bright café on the ground floor and, on a good day, a few tables outside.
+
+Federal opened here, by its own account, in twenty fifteen, and it has become one of the most recommended breakfast spots in the city. Its draw is a full day of brunch, from eggs to pastries, with plenty of vegetarian and vegan options, served in a light, airy room. It is the kind of place you fall into after a morning of museums and stay for longer than you planned.
+
+Now look along the street in both directions. Carrer de la Força follows the line of the Via Augusta, the great Roman road that ran down the coast of Spain, and for centuries this was the main way through Girona. It also runs through the heart of the Call, the old Jewish quarter. Almost opposite is the Museum of Jewish History.
+
+And here's the thing. You are having breakfast on one of the oldest streets in Catalonia, a street that has carried legions, merchants and pilgrims. The café itself is very much of now, but the setting is about two thousand years old, and that contrast is half the pleasure.
+
+[beat]
+
+When you've eaten, carry on uphill along the same street. Within a couple of minutes you will reach the foot of the great stairway up to the cathedral, which is quite a sight on a full stomach.
+
+## TTS-safe script
+
+This street was once part of a Roman road, and these days it is where Jeerohna comes for brunch.
+
+You are on Karreh duh la Forsa, the long, narrow street that climbs through the old town towards the cathedral. Find number nine, with a bright cafe on the ground floor and, on a good day, a few tables outside.
+
+Federal opened here, by its own account, in twenty fifteen, and it has become one of the most recommended breakfast spots in the city. Its draw is a full day of brunch, from eggs to pastries, with plenty of vegetarian and vegan options, served in a light, airy room. It is the kind of place you fall into after a morning of museums and stay for longer than you planned.
+
+Now look along the street in both directions. Karreh duh la Forsa follows the line of the Veea Owgusta, the great Roman road that ran down the coast of Spain, and for centuries this was the main way through Jeerohna. It also runs through the heart of the Kye, the old Jewish quarter. Almost opposite is the Museum of Jewish History.
+
+And here's the thing. You are having breakfast on one of the oldest streets in Catalonia, a street that has carried legions, merchants and pilgrims. The cafe itself is very much of now, but the setting is about two thousand years old, and that contrast is half the pleasure.
+
+When you've eaten, carry on uphill along the same street. Within a couple of minutes you will reach the foot of the great stairway up to the cathedral, which is quite a sight on a full stomach.
