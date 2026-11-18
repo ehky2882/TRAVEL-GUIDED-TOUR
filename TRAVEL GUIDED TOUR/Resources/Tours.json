@@ -11344,7 +11344,7 @@
         "00bc47f9-639f-44d9-9735-65c8ac608144",
         "da803a7d-61a5-44c7-a1b0-7c9f35994e64",
         "5741ea9c-0195-5331-82ff-17e79e93e91c",
-        "7621CC87-818B-44CC-B7B4-FC5F14AB3DA2"
+        "04c4e027-004d-58a1-8535-0225f97b384a"
       ],
       "walkingDistanceMeters": null
     },
@@ -13828,11 +13828,11 @@
         "24A5FF02-DFF6-437B-9FD8-F3D71B70A627",
         "7621CC87-818B-44CC-B7B4-FC5F14AB3DA2",
         "f52baac3-7f4d-43c2-b516-4b703451f15a",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
         "ae287886-2c55-4c3e-b8c2-e2389323aec6",
+        "3b0fd179-acf5-5dae-9891-3150740aae7b",
         "4e227a06-777e-571a-80ad-4c53decfc0d6",
-        "76EE8E9A-F77F-5467-9189-8568A5BA2877",
-        "896D7154-018A-4C5C-BC1A-33E64F5F32C6",
-        "ed91593f-60d4-597c-86c5-cd8e6efaf207"
+        "76EE8E9A-F77F-5467-9189-8568A5BA2877"
       ],
       "walkingDistanceMeters": null
     },
@@ -45844,9 +45844,9 @@
         "58068E68-7C3A-5997-B72D-A1CF8DF93AC0",
         "829ae210-e5ef-5370-886e-dfec80d6fa71",
         "c5bf4a63-0b85-5c3e-92f2-5dab1cd7f614",
+        "84cb50f9-fd76-5f67-8167-7cf0f551167f",
         "0e585845-3bdb-5ffd-8da1-b9db2d7d2daf",
-        "adcc230b-75fc-56de-85e9-c3192383dd6e",
-        "ccf6f620-660b-4a88-ba94-606221d0cf7c"
+        "adcc230b-75fc-56de-85e9-c3192383dd6e"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -93910,7 +93910,7 @@
         "221df301-bbf0-5288-be84-4a8da8410e32",
         "fd5f496b-16ee-56c4-83c2-0050cf4c8957",
         "b1fb37af-feb1-5d87-be76-7540c2768cc1",
-        "e816a1e6-2368-55d1-a947-9059c5645bb7"
+        "f1f1d615-c789-5075-8b21-440d490c89b6"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -95425,10 +95425,10 @@
         "734793f0-1df7-51c2-ac12-6506dd88681e",
         "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
         "6169243c-cc0b-5e2c-839a-608d63268c90",
+        "244d9961-3c36-5950-960c-38de6b7e3d92",
         "40a5cbe9-fb42-5101-9655-127f8f9d803c",
         "9ce70403-81e1-566e-8288-349f2be37e9c",
-        "fb9c16a1-8a99-585a-abee-c5869052f50f",
-        "b9994181-63a7-5869-b713-2a619339f314"
+        "fb9c16a1-8a99-585a-abee-c5869052f50f"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -107093,8 +107093,8 @@
         "f0ca6266-2db1-5c67-834e-886fe5c4e94c",
         "59387ac3-5340-5f61-910c-dcb255898752",
         "84cf4dd8-695b-53ee-870d-db36eb7c6dd5",
-        "19ba1c62-05e0-52dc-ba26-261f7f00dbac",
-        "A85DFD9B-B406-5A93-B7EC-0ABEEC88955E"
+        "eb282ed1-5fe8-5ead-8b51-d8f76804ef8f",
+        "19ba1c62-05e0-52dc-ba26-261f7f00dbac"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -137305,10 +137305,10 @@
         "862699b1-0f51-5cd5-bd20-3c8916eec8b7",
         "e01770af-347d-5f43-a63e-1fa97ce3551d",
         "70a01d74-8edf-5f78-9d8b-a05850c0299a",
+        "75524167-b50d-5eb4-8070-cda9113f0e3c",
         "89443016-9aea-5422-a33a-be72636e89f1",
         "ad1e75de-62e8-50df-84a0-4fbf77031178",
-        "d9a11279-819c-5d88-a483-2e7178f81518",
-        "47bc0a50-cd97-5013-9d84-352523ee74e6"
+        "d9a11279-819c-5d88-a483-2e7178f81518"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -144693,7 +144693,7 @@
         "f0ff8c57-b498-53d5-9738-58f3f4904243",
         "dd2fb227-ec66-5e26-a4ec-e65dc08f61fb",
         "7A7F41DE-5830-5679-BDB0-7CC9D41D8D0E",
-        "d757a79d-b9eb-577f-997b-2e5da2fe444d"
+        "75524167-b50d-5eb4-8070-cda9113f0e3c"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -162329,7 +162329,16 @@
       "centroidLongitude": 11.2255718,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "f1f1d615-c789-5075-8b21-440d490c89b6",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "88BE67C8-7E9E-520C-B4D3-8C5E81E3B07A",
+        "3d8887ff-eb4a-5695-9d04-424b72ff8d6f"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Notable Building",
@@ -162380,7 +162389,16 @@
       "centroidLongitude": 11.243214,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "3d8887ff-eb4a-5695-9d04-424b72ff8d6f",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "75524167-b50d-5eb4-8070-cda9113f0e3c",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "244d9961-3c36-5950-960c-38de6b7e3d92"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Notable Building",
@@ -162430,7 +162448,16 @@
       "centroidLongitude": 11.2515027,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f1f1d615-c789-5075-8b21-440d490c89b6",
+        "75524167-b50d-5eb4-8070-cda9113f0e3c",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "76858496-cf7a-57b0-a076-283a91b491e5",
+        "65deaa22-8fc8-5ad0-becc-e96996c53c4b",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Notable Building",
@@ -162482,7 +162509,16 @@
       "centroidLongitude": 11.2475125,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "4f57408c-2fe0-59d8-9936-4128dcda4647",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -162530,7 +162566,16 @@
       "centroidLongitude": 11.2470819,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
+        "F9B2DDA8-C635-5C52-9279-5010B792942F",
+        "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "BE068749-30D5-57E4-A5AC-6246FEB72058",
+        "df28f59a-1734-5ea0-a505-aa939a414eba"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -162576,7 +162621,16 @@
       "centroidLongitude": 11.2546562,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
+        "b6a6ca1b-3be7-5fe3-881e-15b83aaf1c2e",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "21FEC2C3-4085-56DA-A561-3FF40BBB8197"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -162624,7 +162678,16 @@
       "centroidLongitude": 11.2468174,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
+        "2f00b721-e779-5ae0-b238-d3089bf9ab7e",
+        "3d8887ff-eb4a-5695-9d04-424b72ff8d6f",
+        "d6a5e0f4-c797-555f-9381-abd85767fa5d",
+        "eb282ed1-5fe8-5ead-8b51-d8f76804ef8f"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -162671,7 +162734,16 @@
       "centroidLongitude": 11.2499008,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "b6a6ca1b-3be7-5fe3-881e-15b83aaf1c2e",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+        "BE068749-30D5-57E4-A5AC-6246FEB72058",
+        "aafc8126-49f3-5425-a79d-ef1523406c01"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -162719,7 +162791,16 @@
       "centroidLongitude": 11.260027,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "76858496-cf7a-57b0-a076-283a91b491e5",
+        "3d8887ff-eb4a-5695-9d04-424b72ff8d6f",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -162765,7 +162846,16 @@
       "centroidLongitude": 11.2528174,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "A94E4477-2234-5766-B07C-5FD2A7E3B214",
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
+        "f1f1d615-c789-5075-8b21-440d490c89b6",
+        "14e01635-4715-545b-bb64-ddaffda41f82"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -162812,7 +162902,16 @@
       "centroidLongitude": 11.2508941,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "c878b9be-ac0c-54b4-9d72-d85f77ac12fc",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+        "700B85E8-585C-55C5-9FDD-F261A2C11A91",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -162862,7 +162961,16 @@
       "centroidLongitude": 11.2550319,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "76858496-cf7a-57b0-a076-283a91b491e5",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -162910,7 +163018,16 @@
       "centroidLongitude": 11.2473322,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "75524167-b50d-5eb4-8070-cda9113f0e3c",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
+        "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "244d9961-3c36-5950-960c-38de6b7e3d92"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Notable Building",
@@ -162960,7 +163077,16 @@
       "centroidLongitude": 11.2477851,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "d6a5e0f4-c797-555f-9381-abd85767fa5d",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "26a5bcfb-6a0d-5ba0-9a0e-d1cf26abdf06",
+        "b6a6ca1b-3be7-5fe3-881e-15b83aaf1c2e"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
@@ -163009,7 +163135,16 @@
       "centroidLongitude": 11.2413394,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "26a5bcfb-6a0d-5ba0-9a0e-d1cf26abdf06",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "84cb50f9-fd76-5f67-8167-7cf0f551167f",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "0fc566b0-b131-54ce-9088-5bb4df2068c0",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Venue",
@@ -163058,7 +163193,16 @@
       "centroidLongitude": 11.2503967,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "4f57408c-2fe0-59d8-9936-4128dcda4647",
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "0fc566b0-b131-54ce-9088-5bb4df2068c0",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "84cb50f9-fd76-5f67-8167-7cf0f551167f"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Venue",
@@ -163106,7 +163250,16 @@
       "centroidLongitude": 11.2639548,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "4f57408c-2fe0-59d8-9936-4128dcda4647",
+        "0fc566b0-b131-54ce-9088-5bb4df2068c0",
+        "26a5bcfb-6a0d-5ba0-9a0e-d1cf26abdf06",
+        "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "7b60d399-189a-52ce-8d68-2e5f95d7c72a"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Venue",
@@ -163154,7 +163307,16 @@
       "centroidLongitude": 11.2629727,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "52e98312-2fc5-5714-a1a8-7f344f4dbd7a",
+        "7b60d399-189a-52ce-8d68-2e5f95d7c72a",
+        "f1f1d615-c789-5075-8b21-440d490c89b6",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+        "76858496-cf7a-57b0-a076-283a91b491e5",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
+        "0fc566b0-b131-54ce-9088-5bb4df2068c0"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Venue",
@@ -163206,7 +163368,16 @@
       "centroidLongitude": 11.2537735,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "88BE67C8-7E9E-520C-B4D3-8C5E81E3B07A",
+        "1f17e306-6bf8-545e-8b91-150b721ef9b8",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "244d9961-3c36-5950-960c-38de6b7e3d92",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "52e98312-2fc5-5714-a1a8-7f344f4dbd7a",
+        "26a5bcfb-6a0d-5ba0-9a0e-d1cf26abdf06"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Library",
@@ -163256,7 +163427,16 @@
       "centroidLongitude": 11.2581335,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "244d9961-3c36-5950-960c-38de6b7e3d92",
+        "52e98312-2fc5-5714-a1a8-7f344f4dbd7a",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "88BE67C8-7E9E-520C-B4D3-8C5E81E3B07A",
+        "0fc566b0-b131-54ce-9088-5bb4df2068c0"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Museum",
@@ -163307,7 +163487,16 @@
       "centroidLongitude": 11.2491171,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "1f17e306-6bf8-545e-8b91-150b721ef9b8",
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "76858496-cf7a-57b0-a076-283a91b491e5",
+        "4f57408c-2fe0-59d8-9936-4128dcda4647",
+        "0fc566b0-b131-54ce-9088-5bb4df2068c0"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Museum",
@@ -163354,7 +163543,16 @@
       "centroidLongitude": 11.251804,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "7b60d399-189a-52ce-8d68-2e5f95d7c72a",
+        "52e98312-2fc5-5714-a1a8-7f344f4dbd7a",
+        "76858496-cf7a-57b0-a076-283a91b491e5"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -163405,7 +163603,16 @@
       "centroidLongitude": 11.2582613,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "26a5bcfb-6a0d-5ba0-9a0e-d1cf26abdf06",
+        "7b60d399-189a-52ce-8d68-2e5f95d7c72a",
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "84cb50f9-fd76-5f67-8167-7cf0f551167f",
+        "4f57408c-2fe0-59d8-9936-4128dcda4647",
+        "aafc8126-49f3-5425-a79d-ef1523406c01"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Museum",
@@ -163451,7 +163658,16 @@
       "centroidLongitude": 11.2595487,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "52e98312-2fc5-5714-a1a8-7f344f4dbd7a",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "0fc566b0-b131-54ce-9088-5bb4df2068c0",
+        "d6a5e0f4-c797-555f-9381-abd85767fa5d",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "1f17e306-6bf8-545e-8b91-150b721ef9b8"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Religious Building",
@@ -163500,7 +163716,16 @@
       "centroidLongitude": 11.2476262,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "3d8887ff-eb4a-5695-9d04-424b72ff8d6f",
+        "A876901E-52ED-5357-8514-2C448BC23840",
+        "76858496-cf7a-57b0-a076-283a91b491e5"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Civic",
@@ -163550,7 +163775,16 @@
       "centroidLongitude": 11.2833823,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Venue",
@@ -163599,7 +163833,16 @@
       "centroidLongitude": 11.1572137,
       "city": "Campi Bisenzio",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "AAF6A3C7-3884-4ADD-B699-66CF5D91DD7F",
+        "9ce70403-81e1-566e-8288-349f2be37e9c",
+        "1163c8d4-a4f8-594d-9e87-75fdc7f42aee",
+        "8B322D5E-F6F8-54B4-9EEE-80AD6DFC7B6A",
+        "03023be8-eaa8-50c4-a879-27755a370487",
+        "95f420f0-645a-52c7-8723-23ab385830df",
+        "34ee1c47-2571-56ff-becb-d719f43c3efc"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Religious Building",
@@ -163652,7 +163895,16 @@
       "centroidLongitude": 11.2629088,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "7b60d399-189a-52ce-8d68-2e5f95d7c72a",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "d6a5e0f4-c797-555f-9381-abd85767fa5d",
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "1f17e306-6bf8-545e-8b91-150b721ef9b8",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "76858496-cf7a-57b0-a076-283a91b491e5"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Religious Building",
@@ -163703,7 +163955,16 @@
       "centroidLongitude": 11.2650118,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "52e98312-2fc5-5714-a1a8-7f344f4dbd7a",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "7b60d399-189a-52ce-8d68-2e5f95d7c72a",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "1f17e306-6bf8-545e-8b91-150b721ef9b8",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "76858496-cf7a-57b0-a076-283a91b491e5"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -163751,7 +164012,16 @@
       "centroidLongitude": 11.2503536,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f1f1d615-c789-5075-8b21-440d490c89b6",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
+        "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
+        "75524167-b50d-5eb4-8070-cda9113f0e3c",
+        "d6a5e0f4-c797-555f-9381-abd85767fa5d",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Bridge",
@@ -163801,7 +164071,16 @@
       "centroidLongitude": 11.2570208,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "0fc566b0-b131-54ce-9088-5bb4df2068c0",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "75524167-b50d-5eb4-8070-cda9113f0e3c"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -163849,7 +164128,16 @@
       "centroidLongitude": 11.2675877,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "244d9961-3c36-5950-960c-38de6b7e3d92"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Civic",
@@ -163898,7 +164186,16 @@
       "centroidLongitude": 11.2599636,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "1f17e306-6bf8-545e-8b91-150b721ef9b8",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "76858496-cf7a-57b0-a076-283a91b491e5",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "3d8887ff-eb4a-5695-9d04-424b72ff8d6f"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Library",
@@ -163944,7 +164241,16 @@
       "centroidLongitude": 11.2531757,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "65deaa22-8fc8-5ad0-becc-e96996c53c4b",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
+        "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
+        "75524167-b50d-5eb4-8070-cda9113f0e3c",
+        "d6a5e0f4-c797-555f-9381-abd85767fa5d",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "30CF0118-B1D0-506A-BFD6-FD82707D2A29"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Bridge",
@@ -181966,7 +182272,14 @@
       "city": "Florence",
       "country": "Italy",
       "relatedTourIds": [
-        "88BE67C8-7E9E-520C-B4D3-8C5E81E3B07A"
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "244d9961-3c36-5950-960c-38de6b7e3d92",
+        "88BE67C8-7E9E-520C-B4D3-8C5E81E3B07A",
+        "75524167-b50d-5eb4-8070-cda9113f0e3c",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "76858496-cf7a-57b0-a076-283a91b491e5",
+        "3d8887ff-eb4a-5695-9d04-424b72ff8d6f"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -183986,11 +184299,11 @@
         "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
         "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
         "700B85E8-585C-55C5-9FDD-F261A2C11A91",
-        "22729270-A072-5E55-845D-D5FBB3FBED84",
-        "21FEC2C3-4085-56DA-A561-3FF40BBB8197",
-        "BE068749-30D5-57E4-A5AC-6246FEB72058"
+        "22729270-A072-5E55-845D-D5FBB3FBED84"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -199834,10 +200147,10 @@
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
         "88BE67C8-7E9E-520C-B4D3-8C5E81E3B07A",
         "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
-        "98D29A22-8F9D-5B7D-BE3B-B06B62323328",
-        "A94E4477-2234-5766-B07C-5FD2A7E3B214",
-        "D765D19F-658C-5795-B7D4-4812075FB9E7",
-        "B2495278-DEEA-5D59-B655-65523FFF4DC4"
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "c878b9be-ac0c-54b4-9d72-d85f77ac12fc"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -206585,8 +206898,10 @@
       "country": "Italy",
       "relatedTourIds": [
         "4A239611-BDB6-5D48-982A-35E2F8E44688",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
         "B2495278-DEEA-5D59-B655-65523FFF4DC4",
-        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB"
+        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
+        "4f57408c-2fe0-59d8-9936-4128dcda4647"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -206636,13 +206951,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
         "A94E4477-2234-5766-B07C-5FD2A7E3B214",
-        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
-        "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA",
-        "88BE67C8-7E9E-520C-B4D3-8C5E81E3B07A",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688",
-        "22729270-A072-5E55-845D-D5FBB3FBED84",
-        "B2495278-DEEA-5D59-B655-65523FFF4DC4"
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "f1f1d615-c789-5075-8b21-440d490c89b6",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "aafc8126-49f3-5425-a79d-ef1523406c01"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -206692,13 +207007,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
+        "f1f1d615-c789-5075-8b21-440d490c89b6",
+        "65deaa22-8fc8-5ad0-becc-e96996c53c4b",
         "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
         "A94E4477-2234-5766-B07C-5FD2A7E3B214",
-        "22729270-A072-5E55-845D-D5FBB3FBED84",
-        "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
-        "D765D19F-658C-5795-B7D4-4812075FB9E7",
-        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2"
+        "22729270-A072-5E55-845D-D5FBB3FBED84"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -206747,14 +207062,14 @@
       "city": "Florence",
       "country": "Italy",
       "relatedTourIds": [
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
         "91D1E21B-AAA0-500A-8624-3CCBF3FACE06",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
-        "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
-        "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
-        "21FEC2C3-4085-56DA-A561-3FF40BBB8197",
-        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
-        "22729270-A072-5E55-845D-D5FBB3FBED84"
+        "26a5bcfb-6a0d-5ba0-9a0e-d1cf26abdf06",
+        "30CF0118-B1D0-506A-BFD6-FD82707D2A29"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -206804,13 +207119,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
+        "eb282ed1-5fe8-5ead-8b51-d8f76804ef8f",
         "B2495278-DEEA-5D59-B655-65523FFF4DC4",
-        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
-        "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688",
-        "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA",
-        "700B85E8-585C-55C5-9FDD-F261A2C11A91"
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -206921,8 +207236,8 @@
         "22729270-A072-5E55-845D-D5FBB3FBED84",
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
         "BE068749-30D5-57E4-A5AC-6246FEB72058",
-        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688"
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
+        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -243144,6 +243459,16 @@
       "centroidLongitude": 11.2566875,
       "city": "Florence",
       "country": "Italy",
+      "relatedTourIds": [
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "52e98312-2fc5-5714-a1a8-7f344f4dbd7a",
+        "1f17e306-6bf8-545e-8b91-150b721ef9b8",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "244d9961-3c36-5950-960c-38de6b7e3d92",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Religious Building",
@@ -312223,7 +312548,7 @@
         "BE068749-30D5-57E4-A5AC-6246FEB72058",
         "936C8C54-469F-597B-BD56-C2BFAFA9B622",
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688"
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
@@ -312273,8 +312598,8 @@
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
         "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
-        "936C8C54-469F-597B-BD56-C2BFAFA9B622",
-        "A94E4477-2234-5766-B07C-5FD2A7E3B214"
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
+        "936C8C54-469F-597B-BD56-C2BFAFA9B622"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
@@ -312325,7 +312650,7 @@
         "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
         "936C8C54-469F-597B-BD56-C2BFAFA9B622",
         "BE068749-30D5-57E4-A5AC-6246FEB72058",
-        "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4"
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -312418,8 +312743,8 @@
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
         "BE068749-30D5-57E4-A5AC-6246FEB72058",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
-        "936C8C54-469F-597B-BD56-C2BFAFA9B622",
-        "30CF0118-B1D0-506A-BFD6-FD82707D2A29"
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "936C8C54-469F-597B-BD56-C2BFAFA9B622"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -312468,11 +312793,11 @@
         "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
         "22729270-A072-5E55-845D-D5FBB3FBED84",
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
-        "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
-        "936C8C54-469F-597B-BD56-C2BFAFA9B622",
-        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
-        "A94E4477-2234-5766-B07C-5FD2A7E3B214"
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "b6a6ca1b-3be7-5fe3-881e-15b83aaf1c2e",
+        "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
@@ -319645,7 +319970,9 @@
         "936C8C54-469F-597B-BD56-C2BFAFA9B622",
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
         "700B85E8-585C-55C5-9FDD-F261A2C11A91",
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
         "21FEC2C3-4085-56DA-A561-3FF40BBB8197",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
         "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2"
       ],
@@ -347529,6 +347856,9 @@
       "city": "Florence",
       "country": "Italy",
       "relatedTourIds": [
+        "b6a6ca1b-3be7-5fe3-881e-15b83aaf1c2e",
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
         "BE068749-30D5-57E4-A5AC-6246FEB72058"
       ],
       "primaryCategory": "foodAndDrink",
@@ -374049,13 +374379,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "A94E4477-2234-5766-B07C-5FD2A7E3B214",
+        "4f57408c-2fe0-59d8-9936-4128dcda4647",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
         "21FEC2C3-4085-56DA-A561-3FF40BBB8197",
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
         "91D1E21B-AAA0-500A-8624-3CCBF3FACE06",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
-        "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688",
-        "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA"
+        "30CF0118-B1D0-506A-BFD6-FD82707D2A29"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -374194,14 +374524,14 @@
       "city": "Florence",
       "country": "Italy",
       "relatedTourIds": [
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
         "21FEC2C3-4085-56DA-A561-3FF40BBB8197",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
         "936C8C54-469F-597B-BD56-C2BFAFA9B622",
+        "c878b9be-ac0c-54b4-9d72-d85f77ac12fc",
         "DEC7CEFF-8BEF-57FD-AAAE-E09F7A8B4949",
-        "D765D19F-658C-5795-B7D4-4812075FB9E7",
-        "22729270-A072-5E55-845D-D5FBB3FBED84",
-        "A94E4477-2234-5766-B07C-5FD2A7E3B214",
-        "63166E79-D792-588E-8179-6328F82FD06C",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688"
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "D765D19F-658C-5795-B7D4-4812075FB9E7"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -374250,13 +374580,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "700B85E8-585C-55C5-9FDD-F261A2C11A91",
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
         "936C8C54-469F-597B-BD56-C2BFAFA9B622",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
+        "26a5bcfb-6a0d-5ba0-9a0e-d1cf26abdf06",
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688",
-        "DEC7CEFF-8BEF-57FD-AAAE-E09F7A8B4949",
-        "B2495278-DEEA-5D59-B655-65523FFF4DC4",
-        "A94E4477-2234-5766-B07C-5FD2A7E3B214",
-        "63166E79-D792-588E-8179-6328F82FD06C"
+        "4A239611-BDB6-5D48-982A-35E2F8E44688"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -411420,14 +411750,14 @@
       "city": "Florence",
       "country": "Italy",
       "relatedTourIds": [
+        "c12be314-082d-5864-a541-b088b3e92d09",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
         "88BE67C8-7E9E-520C-B4D3-8C5E81E3B07A",
         "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA",
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
-        "A94E4477-2234-5766-B07C-5FD2A7E3B214",
-        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
-        "D765D19F-658C-5795-B7D4-4812075FB9E7",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688"
+        "244d9961-3c36-5950-960c-38de6b7e3d92",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "A94E4477-2234-5766-B07C-5FD2A7E3B214"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -416985,11 +417315,14 @@
       "city": "Florence",
       "country": "Italy",
       "relatedTourIds": [
-        "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA",
-        "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
-        "98D29A22-8F9D-5B7D-BE3B-B06B62323328",
-        "AE8B8242-FB66-58F7-BC97-D6276F144CF1",
-        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB"
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "75524167-b50d-5eb4-8070-cda9113f0e3c",
+        "1f17e306-6bf8-545e-8b91-150b721ef9b8",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "76858496-cf7a-57b0-a076-283a91b491e5",
+        "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA"
       ],
       "primaryCategory": "visualArt",
       "tags": [
