@@ -264,6 +264,7 @@ RESPELL = {
     "spritz": "spritz",
     "Arsenale": "arseh nah lay",
     "Antiche": "an tee kay",
+    "Osteria Contemporanea": "osteh ree a kon tem po rah neh a",
     "Schiavi": "skee ah vee",
     "Rampani": "ram pah nee",
     "Il Palazzo Experimental": "eel pa lat so experimental",

@@ -8,7 +8,7 @@ secondary sources used to confirm or fill gaps. Coordinates: OpenStreetMap via p
 | 01 | Ca' di Dio | designdiffusion.com (Urquiola project feature); search cross-check: archilovers, falstaff |
 | 02 | Il Palazzo Experimental | experimentalgroup.com (hotel's own group); Michelin Guide; Vogue PH (naval HQ claim, single source) |
 | 03 | Aman Venice | aman.com hotel page + aman.com "storied elegance of Palazzo Papadopoli"; Wikipedia (Palazzo Papadopoli) |
-| 04 | Venissa | venissa.it; vinfolio.com editorial; search cross-check (Decanter, Spear's) for the bottle and the vineyard |
+| 04 | Venissa | venissa.it (restaurant, Osteria Contemporanea, Michelin star); vinfolio.com editorial; Dissapore review (osteria menu); search cross-check (Decanter, Spear's) for the bottle and the vineyard |
 | 05 | The Gritti Palace | marriott.com 403; Marriott press area + Cabana, airmail.news via search |
 | 06 | Trattoria Antiche Carampane | antichecarampane.com/it (history, family, menu, Tassini on the name) |
 | 07 | Osteria alle Testiere | own site blocked by network policy; Dissapore review (headboards, Da Mario), Gayot, venicexplorer |
