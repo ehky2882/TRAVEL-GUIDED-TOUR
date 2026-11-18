@@ -5781,6 +5781,16 @@
       "websiteURL": null
     },
     {
+      "id": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "displayName": "Atlas Studio FLR",
+      "platform": "dozent",
+      "handle": "atlas.flr",
+      "avatarURL": null,
+      "avatarEmoji": "🇮🇹",
+      "bio": "Atlas Studio's Florence bureau — the city that taught Europe to build again: Brunelleschi's chapel, Michelangelo's staircase and the bridges of the Arno; the bookbinders, silk weavers and shoemakers still at work in the Oltrarno; trattorias that have barely changed their menus since the war; and a modern century too, from Michelucci's station to Nervi's stadium.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -11334,7 +11344,7 @@
         "00bc47f9-639f-44d9-9735-65c8ac608144",
         "da803a7d-61a5-44c7-a1b0-7c9f35994e64",
         "5741ea9c-0195-5331-82ff-17e79e93e91c",
-        "7621CC87-818B-44CC-B7B4-FC5F14AB3DA2"
+        "04c4e027-004d-58a1-8535-0225f97b384a"
       ],
       "walkingDistanceMeters": null
     },
@@ -13818,11 +13828,11 @@
         "24A5FF02-DFF6-437B-9FD8-F3D71B70A627",
         "7621CC87-818B-44CC-B7B4-FC5F14AB3DA2",
         "f52baac3-7f4d-43c2-b516-4b703451f15a",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
         "ae287886-2c55-4c3e-b8c2-e2389323aec6",
+        "3b0fd179-acf5-5dae-9891-3150740aae7b",
         "4e227a06-777e-571a-80ad-4c53decfc0d6",
-        "76EE8E9A-F77F-5467-9189-8568A5BA2877",
-        "896D7154-018A-4C5C-BC1A-33E64F5F32C6",
-        "ed91593f-60d4-597c-86c5-cd8e6efaf207"
+        "76EE8E9A-F77F-5467-9189-8568A5BA2877"
       ],
       "walkingDistanceMeters": null
     },
@@ -45834,9 +45844,9 @@
         "58068E68-7C3A-5997-B72D-A1CF8DF93AC0",
         "829ae210-e5ef-5370-886e-dfec80d6fa71",
         "c5bf4a63-0b85-5c3e-92f2-5dab1cd7f614",
+        "84cb50f9-fd76-5f67-8167-7cf0f551167f",
         "0e585845-3bdb-5ffd-8da1-b9db2d7d2daf",
-        "adcc230b-75fc-56de-85e9-c3192383dd6e",
-        "ccf6f620-660b-4a88-ba94-606221d0cf7c"
+        "adcc230b-75fc-56de-85e9-c3192383dd6e"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -93900,7 +93910,7 @@
         "221df301-bbf0-5288-be84-4a8da8410e32",
         "fd5f496b-16ee-56c4-83c2-0050cf4c8957",
         "b1fb37af-feb1-5d87-be76-7540c2768cc1",
-        "e816a1e6-2368-55d1-a947-9059c5645bb7"
+        "f1f1d615-c789-5075-8b21-440d490c89b6"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -95415,10 +95425,10 @@
         "734793f0-1df7-51c2-ac12-6506dd88681e",
         "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
         "6169243c-cc0b-5e2c-839a-608d63268c90",
+        "244d9961-3c36-5950-960c-38de6b7e3d92",
         "40a5cbe9-fb42-5101-9655-127f8f9d803c",
         "9ce70403-81e1-566e-8288-349f2be37e9c",
-        "fb9c16a1-8a99-585a-abee-c5869052f50f",
-        "b9994181-63a7-5869-b713-2a619339f314"
+        "fb9c16a1-8a99-585a-abee-c5869052f50f"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -107083,8 +107093,8 @@
         "f0ca6266-2db1-5c67-834e-886fe5c4e94c",
         "59387ac3-5340-5f61-910c-dcb255898752",
         "84cf4dd8-695b-53ee-870d-db36eb7c6dd5",
-        "19ba1c62-05e0-52dc-ba26-261f7f00dbac",
-        "A85DFD9B-B406-5A93-B7EC-0ABEEC88955E"
+        "eb282ed1-5fe8-5ead-8b51-d8f76804ef8f",
+        "19ba1c62-05e0-52dc-ba26-261f7f00dbac"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -137295,10 +137305,10 @@
         "862699b1-0f51-5cd5-bd20-3c8916eec8b7",
         "e01770af-347d-5f43-a63e-1fa97ce3551d",
         "70a01d74-8edf-5f78-9d8b-a05850c0299a",
+        "75524167-b50d-5eb4-8070-cda9113f0e3c",
         "89443016-9aea-5422-a33a-be72636e89f1",
         "ad1e75de-62e8-50df-84a0-4fbf77031178",
-        "d9a11279-819c-5d88-a483-2e7178f81518",
-        "47bc0a50-cd97-5013-9d84-352523ee74e6"
+        "d9a11279-819c-5d88-a483-2e7178f81518"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -144683,7 +144693,7 @@
         "f0ff8c57-b498-53d5-9738-58f3f4904243",
         "dd2fb227-ec66-5e26-a4ec-e65dc08f61fb",
         "7A7F41DE-5830-5679-BDB0-7CC9D41D8D0E",
-        "d757a79d-b9eb-577f-997b-2e5da2fe444d"
+        "75524167-b50d-5eb4-8070-cda9113f0e3c"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -162279,6 +162289,1975 @@
         "Art",
         "Commerce",
         "Waterfront",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "75524167-b50d-5eb4-8070-cda9113f0e3c",
+      "createdAt": "2026-11-18",
+      "title": "Riva Lofts Florence",
+      "shortDescription": "Most hotels are built to look like somewhere. This one was an architect's own house first, and it still behaves like one.",
+      "longDescription": "Most hotels are built to look like somewhere. This one was an architect's own house first, and it still behaves like one.\n\nThe building went up in eighteen eighty as a small factory, and later it was split into craftsmen's workshops. Then in nineteen ninety-nine the Florentine architect Claudio Nardi took it over as his home and studio, and eventually opened it to guests as a handful of lofts. No two are the same shape. Each one has its own relationship with the outside, whether that's the garden, the river, the park or the pool.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-riva-lofts-florence_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-riva-lofts-florence_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-riva-lofts-florence_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3b902d14-c8c2-538b-a147-c283a10f1d07",
+          "order": 0,
+          "title": "Riva Lofts Florence",
+          "caption": "On Via Baccio Bandinelli, at the old factory set back behind a garden wall by the river.",
+          "latitude": 43.776715,
+          "longitude": 11.2255718,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-riva-lofts-florence.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-riva-lofts-florence_hero.webp",
+          "transcriptText": "Most hotels are built to look like somewhere. This one was an architect's own house first, and it still behaves like one.\n\nVia Baccio Bandinelli, on the south bank of the Arno, a little way downstream from the old centre. You should be at the entrance to Riva Lofts, an old industrial building set back behind a garden wall, with the river just beyond it. Across the water, the trees of the Cascine park run along the opposite bank.\n\nThe building went up in eighteen eighty as a small factory, and later it was split into craftsmen's workshops. Then in nineteen ninety-nine the Florentine architect Claudio Nardi took it over as his home and studio, and eventually opened it to guests as a handful of lofts. No two are the same shape. Each one has its own relationship with the outside, whether that's the garden, the river, the park or the pool.\n\nHave a look, if you can get a glimpse inside, at the main lounge. Stone walls, cross-vaulted ceilings, a library and a big fireplace. That's the old industrial building, left honest. And through a large window, a pool lined in white sandstone sits in a private garden.\n\nThe furniture is a mix of antique, mid-century and contemporary pieces, and the palette is mostly stone, wood and glass. Nothing shouts. It's the kind of interior that only works if the bones are good, and here the bones are a working building from the eighteen eighties.\n\nAnd here's the thing. Florence is a city that tends to preserve itself as a monument. This is the other approach, quieter and rather more useful. Keep the old structure, let people live in it, and add only what's needed.\n\nIt's a reminder that the best conversions don't hide what a building used to be. They let you feel it every time you look up at the ceiling.\n\nIf you're staying, borrow one of the vintage bicycles, cross the river and ride the length of the Cascine. It's the largest park in the city, and in the early morning you'll have most of it to yourself."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.776715,
+      "centroidLongitude": 11.2255718,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "f1f1d615-c789-5075-8b21-440d490c89b6",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "88BE67C8-7E9E-520C-B4D3-8C5E81E3B07A",
+        "3d8887ff-eb4a-5695-9d04-424b72ff8d6f"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Waterfront",
+        "Contemporary",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Claudio Nardi"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "df28f59a-1734-5ea0-a505-aa939a414eba",
+      "createdAt": "2026-11-18",
+      "title": "AdAstra",
+      "shortDescription": "Behind the wall at the end of this street is a garden you're not allowed into. This is the next best thing.",
+      "longDescription": "Behind the wall at the end of this street is a garden you're not allowed into. This is the next best thing.\n\nThe hotel occupies the first and second floors of an old family mansion. Sixteen rooms, some lining this street, a couple tucked into the green of the garden itself. The architecture was handled by Francesco Maestrelli, and the interiors by the brothers Matteo and Marco Perduca, who mixed original mouldings and high ceilings with Italian furniture from the mid-century to the seventies, and framed art down to old Pucci scarves.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-adastra_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-adastra_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-adastra_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-adastra_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-adastra_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "42eaf151-36f7-580c-be01-b2f5e30f07b9",
+          "order": 0,
+          "title": "AdAstra",
+          "caption": "On Via del Campuccio in the Oltrarno, at the entrance in the long, plain-fronted old mansion.",
+          "latitude": 43.766189,
+          "longitude": 11.243214,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-adastra.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-adastra_hero.webp",
+          "transcriptText": "Behind the wall at the end of this street is a garden you're not allowed into. This is the next best thing.\n\nYou should be on Via del Campuccio, in the Oltrarno, a quiet residential street a short walk from Santo Spirito. Look for the entrance to AdAstra, set in a long, plain-fronted old mansion. Behind the houses on this side lies the Giardino Torrigiani, and if you look above the rooftops you might catch the top of a slim, castellated tower.\n\nThe hotel occupies the first and second floors of an old family mansion. Sixteen rooms, some lining this street, a couple tucked into the green of the garden itself. The architecture was handled by Francesco Maestrelli, and the interiors by the brothers Matteo and Marco Perduca, who mixed original mouldings and high ceilings with Italian furniture from the mid-century to the seventies, and framed art down to old Pucci scarves.\n\nThe prize is the terrace. A wraparound terrace of around two hundred and seventy square metres, looking straight over the Torrigiani garden. It's often described as the largest private garden in Europe inside city walls, at around seven hectares, and it's still privately owned, which is why most people never see it.\n\nNow, that tower. It's neo-Gothic, built in eighteen twenty-four by the architect Gaetano Baccani for the Torrigiani family, and it was fitted out as an astronomical observatory, with instruments, a library and an open terrace at the top. The hotel's name comes from it. Ad astra, Latin for \"to the stars\".\n\nWhat I like about this place is that it makes a virtue of looking at something you can't touch. Florence is full of private gardens hidden behind long walls. Here, for once, you get to see over one.\n\nWalk to the end of Via del Campuccio and turn along Via de' Serragli. The garden wall runs beside you most of the way, and every so often a gate or a gap gives you a glimpse of the trees."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.766189,
+      "centroidLongitude": 11.243214,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "3d8887ff-eb4a-5695-9d04-424b72ff8d6f",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "75524167-b50d-5eb4-8070-cda9113f0e3c",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "244d9961-3c36-5950-960c-38de6b7e3d92"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Green Escape",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Francesco Maestrelli"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
+      "createdAt": "2026-11-18",
+      "title": "Hotel Lungarno",
+      "shortDescription": "From some of the windows here, the Ponte Vecchio fills the whole frame. That's the first reason to come. The second is on the walls.",
+      "longDescription": "From some of the windows here, the Ponte Vecchio fills the whole frame. That's the first reason to come. The second is on the walls.\n\nThis street has a hard history. In August nineteen forty-four, as the German army retreated, it blew up the bridges of Florence, sparing only the Ponte Vecchio, and destroyed the buildings at either end of it to block the approaches. Borgo San Jacopo took a lot of that damage. So what you're walking through is a patchwork of medieval towers and post-war rebuilding, and it's worth reading it that way.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-hotel-lungarno_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-hotel-lungarno_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-hotel-lungarno_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-hotel-lungarno_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-hotel-lungarno_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "dc0e7d06-3edc-5246-96c4-11ccb9b9d46e",
+          "order": 0,
+          "title": "Hotel Lungarno",
+          "caption": "On Borgo San Jacopo, a few steps from the Ponte Vecchio, at the hotel door on the river side.",
+          "latitude": 43.7681376,
+          "longitude": 11.2515027,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-hotel-lungarno.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-hotel-lungarno_hero.webp",
+          "transcriptText": "From some of the windows here, the Ponte Vecchio fills the whole frame. That's the first reason to come. The second is on the walls.\n\nBorgo San Jacopo, south bank, a few steps from the Ponte Vecchio. You should be at the entrance of Hotel Lungarno, on the river side of this narrow street. If you walk onto the bridge and look downstream, along the bank on your left, you'll see the hotel's riverfront rising straight out of the water.\n\nThis street has a hard history. In August nineteen forty-four, as the German army retreated, it blew up the bridges of Florence, sparing only the Ponte Vecchio, and destroyed the buildings at either end of it to block the approaches. Borgo San Jacopo took a lot of that damage. So what you're walking through is a patchwork of medieval towers and post-war rebuilding, and it's worth reading it that way.\n\nThe hotel itself is the founding property of the Lungarno Collection, which belongs to the Ferragamo family. They bought it in the nineteen nineties. The interiors are by the Florentine architect Michele Bönan, who refurbished them again in twenty seventeen, and the brief was always a private house rather than a grand hotel.\n\nHave a look inside at the art. There are more than four hundred and fifty twentieth-century works hung through the public rooms and bedrooms, among them pieces by Picasso and Jean Cocteau. It's a collection you'd expect in a gallery, hung casually beside armchairs.\n\nAnd that's rather the Florentine way of doing it. In a city where the Renaissance hangs in museums, the twentieth century hangs in someone's sitting room, and you're invited to have a drink beneath it.\n\nBefore you go, walk a hundred metres west along Borgo San Jacopo and look up. Several medieval tower-houses survived the war here, and their narrow, fortified faces sit right beside the post-war buildings. The contrast tells you exactly what happened in nineteen forty-four."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7681376,
+      "centroidLongitude": 11.2515027,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "f1f1d615-c789-5075-8b21-440d490c89b6",
+        "75524167-b50d-5eb4-8070-cda9113f0e3c",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "76858496-cf7a-57b0-a076-283a91b491e5",
+        "65deaa22-8fc8-5ad0-becc-e96996c53c4b",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Notable Building",
+        "Waterfront",
+        "History",
+        "War",
+        "Art",
+        "Viewpoint",
+        "Designed by a Master",
+        "Michele Bönan"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "aafc8126-49f3-5425-a79d-ef1523406c01",
+      "createdAt": "2026-11-18",
+      "title": "Villa Cora",
+      "shortDescription": "For six years, Florence was the capital of Italy. This villa is one of the things it left behind.",
+      "longDescription": "For six years, Florence was the capital of Italy. This villa is one of the things it left behind.\n\nFlorence was capital from eighteen sixty-five to eighteen seventy-one, and the city remade itself to suit. The road you're standing on was part of that, the great boulevard of hills laid out by the architect Giuseppe Poggi. In the late eighteen sixties, Baron Gustave Oppenheim, of the German banking family, commissioned this house for his young bride, Eugenia Fenzi. The exterior was designed by Pietro Comparini, and the interiors were finished in Carrara marble, yellow Siena marble, Murano glass, ebony and silk.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-villa-cora_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-villa-cora_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-villa-cora_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-villa-cora_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-villa-cora_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c1374ca9-fc76-512a-ada9-04dc7b33bdb5",
+          "order": 0,
+          "title": "Villa Cora",
+          "caption": "On Viale Machiavelli, at the gates and gravel drive up to the pale neoclassical villa.",
+          "latitude": 43.7574172,
+          "longitude": 11.2475125,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-villa-cora.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-villa-cora_hero.webp",
+          "transcriptText": "For six years, Florence was the capital of Italy. This villa is one of the things it left behind.\n\nYou should be on Viale Machiavelli, the tree-lined road that climbs the hill south of the Boboli Gardens. Look for the gates and the gravel drive, and at the end of it, a pale neoclassical villa standing in its own park.\n\nFlorence was capital from eighteen sixty-five to eighteen seventy-one, and the city remade itself to suit. The road you're standing on was part of that, the great boulevard of hills laid out by the architect Giuseppe Poggi. In the late eighteen sixties, Baron Gustave Oppenheim, of the German banking family, commissioned this house for his young bride, Eugenia Fenzi. The exterior was designed by Pietro Comparini, and the interiors were finished in Carrara marble, yellow Siena marble, Murano glass, ebony and silk.\n\nHere's where it gets dramatic. According to the house's own history, the baron came to believe his wife was unfaithful and planned to burn the villa down. He was stopped, left Florence and sold it. The next owner was the Empress Eugénie, widow of Napoleon the Third, who turned it into a meeting place for Florentine society. In eighteen ninety-four it passed to Egidio Cora, and his name is the one that stuck.\n\nSo it's a capital-city house in a city that stopped being the capital almost as soon as it was finished. That's the quiet irony of this whole hillside. It was built for a future that moved to Rome.\n\nWhat survives is a rather lovely piece of nineteenth-century confidence, and it's now a hotel, so you can have a drink on the roof terrace and see what the baron saw.\n\nWhen you leave, carry on up Viale Machiavelli and follow Poggi's road round to Piazzale Michelangelo. It's the same project, the same ambition, and the view at the end is the one he designed the whole road to deliver."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7574172,
+      "centroidLongitude": 11.2475125,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "4f57408c-2fe0-59d8-9936-4128dcda4647",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Neoclassical",
+        "Designed by a Master",
+        "Pietro Comparini"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b6a6ca1b-3be7-5fe3-881e-15b83aaf1c2e",
+      "createdAt": "2026-11-18",
+      "title": "Trattoria Sostanza",
+      "shortDescription": "There's one dish people come here for, and it involves an alarming quantity of butter.",
+      "longDescription": "There's one dish people come here for, and it involves an alarming quantity of butter.\n\nThe trattoria has been open since the eighteen sixties, by most accounts since eighteen sixty-nine, and locals still call it by its nickname, \"il Troia\", which is Florentine slang and best not translated in polite company. Inside, it looks like an old butcher's shop. White tiled walls, marble, shared tables and waiters in grey jackets that feel as though they've been here since the nineteen fifties.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-trattoria-sostanza_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-trattoria-sostanza_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-trattoria-sostanza_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-trattoria-sostanza_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "92a2b60d-7855-5c4c-ab38-a63578735057",
+          "order": 0,
+          "title": "Trattoria Sostanza",
+          "caption": "On Via del Porcellana, at the small shopfront with Sostanza over the door and white tiles inside.",
+          "latitude": 43.7728268,
+          "longitude": 11.2470819,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-trattoria-sostanza.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-trattoria-sostanza_hero.webp",
+          "transcriptText": "There's one dish people come here for, and it involves an alarming quantity of butter.\n\nVia del Porcellana is a narrow lane between Santa Maria Novella and the river. You should be outside a small shopfront with the name Sostanza above the door, and through the window, a narrow room lined with white tiles. If there's a queue, you're in the right place.\n\nThe trattoria has been open since the eighteen sixties, by most accounts since eighteen sixty-nine, and locals still call it by its nickname, \"il Troia\", which is Florentine slang and best not translated in polite company. Inside, it looks like an old butcher's shop. White tiled walls, marble, shared tables and waiters in grey jackets that feel as though they've been here since the nineteen fifties.\n\nHave a look towards the back. The kitchen is right there in the room, and the cooking is done over charcoal. Some dishes arrive in small metal pans that have been sitting over the embers.\n\nThat's how they do the famous one, petti di pollo al burro, chicken breasts cooked in butter. They come to the table still sizzling, glossy and brown, and you mop up the butter with bread. Then there's the bistecca, grilled over the same coals. And for pudding, the torta meringata, a tall meringue cake layered with cream and wild strawberries, looking slightly too pleased with itself.\n\nHere's what's worth knowing. Places like this survive because they refuse to change the room. The tiles, the tables, the open kitchen. The food tastes the way it does partly because you're eating it in exactly the same space people have eaten it in for well over a century.\n\nIt isn't cheap for a trattoria, and it isn't trying to be charming. It just carries on.\n\nBook ahead, because walk-ins rarely work. And afterwards, wander to the end of the lane and out onto the riverbank. The Ponte alla Carraia is just to your left, and the evening light on the water does the digesting for you."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7728268,
+      "centroidLongitude": 11.2470819,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
+        "F9B2DDA8-C635-5C52-9279-5010B792942F",
+        "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "BE068749-30D5-57E4-A5AC-6246FEB72058",
+        "df28f59a-1734-5ea0-a505-aa939a414eba"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+      "createdAt": "2026-11-18",
+      "title": "Trattoria Mario",
+      "shortDescription": "Lunch only, no fuss, and you'll probably share a table with someone you've never met. That's the deal here.",
+      "longDescription": "Lunch only, no fuss, and you'll probably share a table with someone you've never met. That's the deal here.\n\nIt's been run by the same family, the Colzi family, for generations, and it's been feeding the San Lorenzo market crowd since the early nineteen fifties. Market traders, office workers, students, a few tourists who've been tipped off. The menu is Tuscan home cooking, built on family recipes that have barely moved in decades, with ingredients bought from the market next door.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-trattoria-mario_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-trattoria-mario_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-trattoria-mario_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "da40c125-2fe7-5caa-9e27-0d07449b5b14",
+          "order": 0,
+          "title": "Trattoria Mario",
+          "caption": "On Via Rosina by the Mercato Centrale, at the small trattoria with the plain sign reading Mario.",
+          "latitude": 43.7766457,
+          "longitude": 11.2546562,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-trattoria-mario.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-trattoria-mario_hero.webp",
+          "transcriptText": "Lunch only, no fuss, and you'll probably share a table with someone you've never met. That's the deal here.\n\nVia Rosina, a short street at the corner of the Mercato Centrale. You should be outside a small trattoria with a plain sign reading Mario, a few steps from the market hall's iron and glass. At midday there's usually a crowd at the door.\n\nIt's been run by the same family, the Colzi family, for generations, and it's been feeding the San Lorenzo market crowd since the early nineteen fifties. Market traders, office workers, students, a few tourists who've been tipped off. The menu is Tuscan home cooking, built on family recipes that have barely moved in decades, with ingredients bought from the market next door.\n\nThe rhythm of the week is the gift detail here. Tripe on Mondays and Thursdays. Fresh fish on Fridays. And the bistecca alla fiorentina every day, served one way only, rare. If you'd like it well done, you've come to the wrong room.\n\nHave a look at the tables. Long, simple and shared, packed in tight. Nobody lingers for hours. You order, you eat, you pay, and the next group sits down. It's lunch as it was meant to work for people with jobs to go back to.\n\nAnd here's the thing. Florence is often sold to visitors as an open-air museum. A room like this is the living city carrying on beside the museum, cooking for itself, at its own pace, on its own terms.\n\nThat's the reason to come, rather more than any single dish.\n\nAfterwards, walk next door into the Mercato Centrale. The ground floor is still a working food market, with butchers, tripe stalls and greengrocers, and it's the best place in the city to see what Florentines actually buy and cook."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7766457,
+      "centroidLongitude": 11.2546562,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
+        "b6a6ca1b-3be7-5fe3-881e-15b83aaf1c2e",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "21FEC2C3-4085-56DA-A561-3FF40BBB8197"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+      "createdAt": "2026-11-18",
+      "title": "Il Santo Bevitore",
+      "shortDescription": "The name means \"the holy drinker\". It comes from a novel, and the room has been many things before it was a restaurant.",
+      "longDescription": "The name means \"the holy drinker\". It comes from a novel, and the room has been many things before it was a restaurant.\n\nThe space has a properly layered history. It began as a coaching inn, a place to stable horses, then became a garage, then a shop selling riding equipment, then a restaurant called Taverna Ceccobeppe. In the early two thousands three friends took it over, Marco Baldesi, his sister Martina and the lawyer Stefano Sebastiani, and renovated it largely by hand, with family and friends. A local craftsman built the big bookshelf that still defines the room.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-il-santo-bevitore_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-il-santo-bevitore_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-il-santo-bevitore_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-il-santo-bevitore_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-il-santo-bevitore_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c7f75c50-73a2-5a53-abfc-983561f3e201",
+          "order": 0,
+          "title": "Il Santo Bevitore",
+          "caption": "On Via di Santo Spirito, at numbers sixty-four and sixty-six, one block back from the river.",
+          "latitude": 43.7691709,
+          "longitude": 11.2468174,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-il-santo-bevitore.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-il-santo-bevitore_hero.webp",
+          "transcriptText": "The name means \"the holy drinker\". It comes from a novel, and the room has been many things before it was a restaurant.\n\nVia di Santo Spirito, in the Oltrarno, one block back from the river. You should be outside the restaurant's doorway, at numbers sixty-four and sixty-six, with the name Il Santo Bevitore above it. Through the glass, a long dining room, and at one end a big wall of shelving.\n\nThe space has a properly layered history. It began as a coaching inn, a place to stable horses, then became a garage, then a shop selling riding equipment, then a restaurant called Taverna Ceccobeppe. In the early two thousands three friends took it over, Marco Baldesi, his sister Martina and the lawyer Stefano Sebastiani, and renovated it largely by hand, with family and friends. A local craftsman built the big bookshelf that still defines the room.\n\nTheir idea was a bistro, which in Florence at the time was rather new. Good, lighter food rooted in Tuscan tradition, fairly priced wine, and service that's professional without being stiff. The name points the same way. \"Il Santo Bevitore\" is the Italian title of Joseph Roth's last novella, \"The Legend of the Holy Drinker\", and the restaurant's website still opens with Roth.\n\nLook a few doors along the street. Their wine bar, Il Santino, opened nearby because the restaurant didn't have a cellar. And round the corner on Via di Santa Monaca is their bakery, Sforno, in the space of the baker who had supplied the neighbourhood for over a century.\n\nSo it's less a single restaurant than a small piece of the neighbourhood, kept alive one shopfront at a time.\n\nIf you're early for your table, stop at Il Santino for a glass first. Then, after dinner, walk two minutes to Piazza Santo Spirito, where Brunelleschi's plain church front glows under the streetlights."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7691709,
+      "centroidLongitude": 11.2468174,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
+        "2f00b721-e779-5ae0-b238-d3089bf9ab7e",
+        "3d8887ff-eb4a-5695-9d04-424b72ff8d6f",
+        "d6a5e0f4-c797-555f-9381-abd85767fa5d",
+        "eb282ed1-5fe8-5ead-8b51-d8f76804ef8f"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Literature"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
+      "createdAt": "2026-11-18",
+      "title": "Trattoria Cammillo",
+      "shortDescription": "There's a dish on this menu that has no business being in a Florentine trattoria, and it's been here since the nineteen fifties.",
+      "longDescription": "There's a dish on this menu that has no business being in a Florentine trattoria, and it's been here since the nineteen fifties.\n\nThe same family has run it since nineteen forty-five. The story travels through Bruno Masiero, who came from Bologna, and that's why the handmade tortellini here are so good. Bologna is the home of tortellini, and the recipe came with him. His daughter Chiara runs the place now, and her brother Francesco makes the olive oil and the house wine on the family farm, Il Peraccio.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-trattoria-cammillo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-trattoria-cammillo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-trattoria-cammillo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-trattoria-cammillo_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-trattoria-cammillo_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e512e0af-bc26-53d8-8ab2-5538a00d0c5d",
+          "order": 0,
+          "title": "Trattoria Cammillo",
+          "caption": "On Borgo San Jacopo, at number fifty-seven, the trattoria front with Cammillo over the door.",
+          "latitude": 43.7682594,
+          "longitude": 11.2499008,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-trattoria-cammillo.mp3",
+          "audioDurationSeconds": 100,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-trattoria-cammillo_hero.webp",
+          "transcriptText": "There's a dish on this menu that has no business being in a Florentine trattoria, and it's been here since the nineteen fifties.\n\nBorgo San Jacopo, on the south bank, a short walk west of the Ponte Vecchio. You should be outside number fifty-seven, a traditional trattoria front with the name Cammillo above the door.\n\nThe same family has run it since nineteen forty-five. The story travels through Bruno Masiero, who came from Bologna, and that's why the handmade tortellini here are so good. Bologna is the home of tortellini, and the recipe came with him. His daughter Chiara runs the place now, and her brother Francesco makes the olive oil and the house wine on the family farm, Il Peraccio.\n\nThe menu is the Florentine canon done carefully. Bistecca alla fiorentina, a mixed Tuscan fry, and in season, fried artichokes, light and crisp, which are reason enough to come in winter.\n\nAnd then the curiosity. Curry prawns with rice and homemade mango chutney. It's been served in Florence, by this family, since the nineteen fifties. Nobody quite expects it, and regulars order it without a second thought.\n\nWhich says something rather nice about tradition. In Florence it's never quite as pure as it claims to be. A Bolognese grandfather and a plate of curry are part of this city's food history too.\n\nBefore your meal, or after it, walk back towards the Ponte Vecchio along the Borgo. On the way you'll pass the Torre dei Marsili, a twelfth-century tower whose doorway carries a glazed terracotta Annunciation in the della Robbia manner. The one you see is a copy protecting the original, but it's easy to miss and well worth a look."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 100,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7682594,
+      "centroidLongitude": 11.2499008,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "b6a6ca1b-3be7-5fe3-881e-15b83aaf1c2e",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+        "BE068749-30D5-57E4-A5AC-6246FEB72058",
+        "aafc8126-49f3-5425-a79d-ef1523406c01"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+      "createdAt": "2026-11-18",
+      "title": "Locale",
+      "shortDescription": "The cocktails are thoroughly modern. The cellar underneath them was dug in the twelve hundreds.",
+      "longDescription": "The cocktails are thoroughly modern. The cellar underneath them was dug in the twelve hundreds.\n\nThe building is Palazzo Concini. Its vaulted cellars date to the twelve hundreds. Above them are Renaissance reception rooms added in the fifteen hundreds, when the house belonged to a prominent diplomat in the service of the Medici. Inside, you drink under stone arches and old chandeliers, on velvet, in candlelight.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-locale_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-locale_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-locale_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-locale_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-locale_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-locale_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "92f322c5-9d7f-5a0f-b622-92ad817be5e1",
+          "order": 0,
+          "title": "Locale",
+          "caption": "On Via delle Seggiole, at number twelve, the old palazzo front with Locale beside the door.",
+          "latitude": 43.7713297,
+          "longitude": 11.260027,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-locale.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-locale_hero.webp",
+          "transcriptText": "The cocktails are thoroughly modern. The cellar underneath them was dug in the twelve hundreds.\n\nVia delle Seggiole is a narrow street between the Bargello and Santa Croce. You should be outside number twelve, a big old palazzo front with a discreet entrance and the name Locale beside the door. In the evening, look for the low light through the windows and people drifting in.\n\nThe building is Palazzo Concini. Its vaulted cellars date to the twelve hundreds. Above them are Renaissance reception rooms added in the fifteen hundreds, when the house belonged to a prominent diplomat in the service of the Medici. Inside, you drink under stone arches and old chandeliers, on velvet, in candlelight.\n\nHave a look, if you're shown downstairs, at the medieval basement. It's called the Labo-ttega, a play on laboratory and bottega, the Italian workshop. It's where the bar develops its flavours, with modern techniques sitting beside very old ones, and it also hosts small, multi-course food and cocktail pairings.\n\nThe approach upstairs is low-waste and seasonal, reworking familiar classics with a twist. One house favourite, Fumare, is a herbal gin sour with basil, mint and hemp. The menu is kept short on purpose. And in twenty twenty-six, Locale was ranked number thirty-three on the Fifty Best Bars list.\n\nAnd here's what's worth knowing. Florence has spent five hundred years using these grand rooms for exactly this sort of thing, hospitality, display, a good evening among friends. The furniture has changed. The purpose hasn't.\n\nIt's an old palazzo doing the job it was built for, just with better ice.\n\nWhen you leave, walk two minutes south to Piazza Santa Croce. At night the square is quiet, the basilica's marble front is lit, and it's one of the loveliest places in the city to finish an evening."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7713297,
+      "centroidLongitude": 11.260027,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "76858496-cf7a-57b0-a076-283a91b491e5",
+        "3d8887ff-eb4a-5695-9d04-424b72ff8d6f",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "eb282ed1-5fe8-5ead-8b51-d8f76804ef8f",
+      "createdAt": "2026-11-18",
+      "title": "Le Volpi e l'Uva",
+      "shortDescription": "The name is a fable. A fox can't reach the grapes, so it decides they must be sour. The people who run this bar have spent over thirty years…",
+      "longDescription": "The name is a fable. A fox can't reach the grapes, so it decides they must be sour. The people who run this bar have spent over thirty years proving the fox wrong.\n\nIt was founded in nineteen ninety-two by three friends, Emilio Monechi, Riccardo Comparini and Ciro Beligni. Their idea, unusual at the time, was to build relationships with small, independent winemakers, and to make good wine feel accessible rather than grand.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-le-volpi-e-l-uva_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-le-volpi-e-l-uva_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-le-volpi-e-l-uva_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e897139a-1e7b-5243-af0a-78db711c262e",
+          "order": 0,
+          "title": "Le Volpi e l'Uva",
+          "caption": "In tiny Piazza dei Rossi, off the south end of the Ponte Vecchio, at the corner wine bar.",
+          "latitude": 43.7671769,
+          "longitude": 11.2528174,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-le-volpi-e-l-uva.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-le-volpi-e-l-uva_hero.webp",
+          "transcriptText": "The name is a fable. A fox can't reach the grapes, so it decides they must be sour. The people who run this bar have spent over thirty years proving the fox wrong.\n\nPiazza dei Rossi is a tiny square tucked just off the south end of the Ponte Vecchio, a few steps from the crowds and quite separate from them. You should be in front of a small wine bar on the corner, with Le Volpi e l'Uva over the door and a few tables outside when the weather allows.\n\nIt was founded in nineteen ninety-two by three friends, Emilio Monechi, Riccardo Comparini and Ciro Beligni. Their idea, unusual at the time, was to build relationships with small, independent winemakers, and to make good wine feel accessible rather than grand.\n\nThat's still the house rule. The wines are chosen to express their own corner of their own region. Native grape varieties, organic and biodynamic growing, producers you probably won't have heard of. The team buys directly from the winemakers, and visits them, so that each bottle comes with a story about the person who made it.\n\nLook at the counter. It's a small room, and it works like a proper neighbourhood wine bar. You lean on the bar, ask what's open, and let someone pour you something you'd never have chosen.\n\nHere's the interesting bit. Florence sits in the middle of some of the most famous wine country in the world, and it would be easy to pour the same few big names all night. This place does the opposite. It argues, glass by glass, that Italian wine is far bigger than its labels.\n\nWhich, given how close you are to the busiest bridge in the city, is a rather quiet act of defiance.\n\nWhen you're done, walk back to the Ponte Vecchio at dusk and stop in the middle, at the gap between the goldsmiths' shops. The view downstream, with the light going, is the one everyone comes for, and it earns it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7671769,
+      "centroidLongitude": 11.2528174,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "A94E4477-2234-5766-B07C-5FD2A7E3B214",
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
+        "f1f1d615-c789-5075-8b21-440d490c89b6",
+        "14e01635-4715-545b-bb64-ddaffda41f82"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e54f16d9-df0d-57ab-8524-43bd86308e03",
+      "createdAt": "2026-11-18",
+      "title": "Ditta Artigianale",
+      "shortDescription": "The coffee here is roasted by one of the most talked-about roasters in Italy. The building it's served in was designed by one of the best…",
+      "longDescription": "The coffee here is roasted by one of the most talked-about roasters in Italy. The building it's served in was designed by one of the best architects Florence had in the twentieth century.\n\nDitta Artigianale was founded in Florence in twenty thirteen by Francesco Sanapo, a much-decorated champion barista and coffee taster, together with Patrick Hoffer. It began as a micro-roastery with one coffee bar on Via de' Neri. This was the second Florence site, and it's the one I'd send you to. The idea throughout has been specialty coffee, small lots bought from individual farms and roasted to bring out each one's character, at a time when that was still unusual in Italy.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-ditta-artigianale_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-ditta-artigianale_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-ditta-artigianale_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-ditta-artigianale_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-ditta-artigianale_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f2f72f46-27c9-5327-894e-14d45209c233",
+          "order": 0,
+          "title": "Ditta Artigianale",
+          "caption": "On Via dello Sprone, at number five, the wide shopfront near Piazza della Passera.",
+          "latitude": 43.767066,
+          "longitude": 11.2508941,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-ditta-artigianale.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-ditta-artigianale_hero.webp",
+          "transcriptText": "The coffee here is roasted by one of the most talked-about roasters in Italy. The building it's served in was designed by one of the best architects Florence had in the twentieth century.\n\nVia dello Sprone, in the Oltrarno, a short street running off Via de' Guicciardini near the little square of Piazza della Passera. You should be at number five, outside a wide shopfront with Ditta Artigianale above it, a big airy room inside, and people working on laptops at the long tables.\n\nDitta Artigianale was founded in Florence in twenty thirteen by Francesco Sanapo, a much-decorated champion barista and coffee taster, together with Patrick Hoffer. It began as a micro-roastery with one coffee bar on Via de' Neri. This was the second Florence site, and it's the one I'd send you to. The idea throughout has been specialty coffee, small lots bought from individual farms and roasted to bring out each one's character, at a time when that was still unusual in Italy.\n\nNow look at the building itself. It was designed by Giovanni Michelucci, the architect behind Santa Maria Novella station, and the café's interior takes its cue from his era, with clean lines and plenty of room to sit.\n\nThat matters because this whole area was rebuilt after nineteen forty-four, when the retreating German army destroyed the buildings around the approaches to the Ponte Vecchio. Michelucci was among the architects who shaped how that part of the city was rebuilt, modern, but not out of place.\n\nSo you're drinking a very modern cup of coffee inside a quiet piece of post-war Florence that most people walk past without noticing.\n\nWhen you've finished, walk round the corner into Piazza della Passera. It's one of the smallest squares in the Oltrarno, with a couple of good places to eat and a lovely, slightly crooked village feel."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.767066,
+      "centroidLongitude": 11.2508941,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "c878b9be-ac0c-54b4-9d72-d85f77ac12fc",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+        "700B85E8-585C-55C5-9FDD-F261A2C11A91",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Architecture",
+        "Modernist",
+        "Designed by a Master",
+        "Giovanni Michelucci"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c878b9be-ac0c-54b4-9d72-d85f77ac12fc",
+      "createdAt": "2026-11-18",
+      "title": "Rivoire",
+      "shortDescription": "You can drink hot chocolate here facing the Palazzo Vecchio. That's been possible since eighteen seventy-two.",
+      "longDescription": "You can drink hot chocolate here facing the Palazzo Vecchio. That's been possible since eighteen seventy-two.\n\nThe story starts in Turin. Enrico Rivoire was master chocolatier to the royal House of Savoy, and when Florence became the capital of the new Kingdom of Italy, from eighteen sixty-five to eighteen seventy-one, the court came here and so, before long, did he. In eighteen seventy-two he opened in this square. It began as a chocolate factory driven by steam, and it was famous from the start for thick hot chocolate in the Turin style.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-rivoire_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-rivoire_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-rivoire_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-rivoire_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-rivoire_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "61a4c233-7ccd-58d9-b116-76141644968a",
+          "order": 0,
+          "title": "Rivoire",
+          "caption": "On Piazza della Signoria, at the café tables facing the tower of the Palazzo Vecchio.",
+          "latitude": 43.7697361,
+          "longitude": 11.2550319,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-rivoire.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-rivoire_hero.webp",
+          "transcriptText": "You can drink hot chocolate here facing the Palazzo Vecchio. That's been possible since eighteen seventy-two.\n\nPiazza della Signoria, the civic heart of Florence. You should be at Rivoire, the café whose outdoor tables face straight onto the square, with the Palazzo Vecchio's tower ahead of you, the Neptune fountain to one side, and the Loggia dei Lanzi full of sculpture.\n\nThe story starts in Turin. Enrico Rivoire was master chocolatier to the royal House of Savoy, and when Florence became the capital of the new Kingdom of Italy, from eighteen sixty-five to eighteen seventy-one, the court came here and so, before long, did he. In eighteen seventy-two he opened in this square. It began as a chocolate factory driven by steam, and it was famous from the start for thick hot chocolate in the Turin style.\n\nThat's still the order. A cup of it, dense enough that the spoon thinks about standing up, with whipped cream on the side if you're feeling brave.\n\nHave a look at the building behind the café, too. The palazzo of the Assicurazioni Generali was finished in eighteen seventy-one, and it was the last building to go up on this square. So Rivoire arrived just as the Piazza della Signoria took the shape it still has.\n\nAnd here's the thing. It's easy to be sniffy about cafés on famous squares. But this square was designed to be lived in, a public room where the city met, argued and was seen. A table here, with a cup of chocolate, is a perfectly good way of using it as intended.\n\nYou're paying for the view, yes. You're also paying for a seat in the oldest living room in Florence.\n\nBefore you go, walk to the corner of the Palazzo Vecchio nearest the Uffizi and look closely at the stone wall beside the doorway. Carved roughly into it is a small profile of a face, which local legend attributes to Michelangelo. It's easy to miss, and nobody can prove it either way."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7697361,
+      "centroidLongitude": 11.2550319,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "76858496-cf7a-57b0-a076-283a91b491e5",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Public Square",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3d8887ff-eb4a-5695-9d04-424b72ff8d6f",
+      "createdAt": "2026-11-18",
+      "title": "Loggia Roof Bar, Palazzo Guadagni",
+      "shortDescription": "At the top of this palazzo is an open loggia, a kind of room with no outside wall. It's one of the best ideas the Renaissance ever had.",
+      "longDescription": "At the top of this palazzo is an open loggia, a kind of room with no outside wall. It's one of the best ideas the Renaissance ever had.\n\nThe palazzo was built in the early fifteen hundreds for a Florentine silk merchant, Rinieri Dei, replacing some of his family's older houses. In sixteen eighty-three the Guadagni family bought it, and it has carried their name ever since. It's now a hotel, and the loggia is a roof bar.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-loggia-palazzo-guadagni_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-loggia-palazzo-guadagni_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-loggia-palazzo-guadagni_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-loggia-palazzo-guadagni_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5bc0198e-6a8c-535b-9fed-56d113bcd6e8",
+          "order": 0,
+          "title": "Loggia Roof Bar, Palazzo Guadagni",
+          "caption": "In Piazza Santo Spirito, facing the corner palazzo at number nine and its open roof loggia.",
+          "latitude": 43.7664023,
+          "longitude": 11.2473322,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-loggia-palazzo-guadagni.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-loggia-palazzo-guadagni_hero.webp",
+          "transcriptText": "At the top of this palazzo is an open loggia, a kind of room with no outside wall. It's one of the best ideas the Renaissance ever had.\n\nPiazza Santo Spirito, the heart of the Oltrarno. You should be in the square, facing the big palazzo on the corner at number nine. Look right up to the top floor and you'll see it, a long open gallery tucked under the roof, with the sky showing through.\n\nThe palazzo was built in the early fifteen hundreds for a Florentine silk merchant, Rinieri Dei, replacing some of his family's older houses. In sixteen eighty-three the Guadagni family bought it, and it has carried their name ever since. It's now a hotel, and the loggia is a roof bar.\n\nHave a look at how light that top floor is compared with the solid walls below it. A roof loggia like this was where a Florentine family went for air, for shade in summer and for a look across the city.\n\nFrom up there, the view is the whole point. Across the square sits Brunelleschi's church of Santo Spirito, its front left as a plain, unfinished wall, and behind and around it the roofs of the Oltrarno roll away towards the hills.\n\nThe bar is open from lunchtime into the evening, for a light lunch, tea or an aperitivo, and it's worth booking.\n\nWhat I love about it is the idea. Not a balcony and not a room, but something in between. Open to the weather, sheltered from the sun, and built purely for the pleasure of looking out.\n\nOnce you've looked out, come down and look in. Santo Spirito is open most days, and Brunelleschi's interior, all grey stone columns and calm proportion, is one of the most serene spaces in the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 102,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7664023,
+      "centroidLongitude": 11.2473322,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "75524167-b50d-5eb4-8070-cda9113f0e3c",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
+        "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "244d9961-3c36-5950-960c-38de6b7e3d92"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Food",
+        "Viewpoint",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2f00b721-e779-5ae0-b238-d3089bf9ab7e",
+      "createdAt": "2026-11-18",
+      "title": "Santa Maria Novella Pharmacy | Officina Profumo-Farmaceutica di Santa Maria Novella",
+      "shortDescription": "It looks like a church, it smells like a garden, and it's a shop. Rather a good combination.",
+      "longDescription": "It looks like a church, it smells like a garden, and it's a shop. Rather a good combination.\n\nThe house traces its story back to twelve twenty-one, when the Dominican friars arrived here and began to grow herbs for their medicines. In sixteen twelve the pharmacy opened its doors to the public. It's sometimes called the oldest pharmacy in the world, though strictly it no longer is one, since it doesn't sell medicines. What it sells are perfumes, soaps, creams and the like, many still made to very old recipes.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-officina-santa-maria-novella_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-officina-santa-maria-novella_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-officina-santa-maria-novella_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-officina-santa-maria-novella_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-officina-santa-maria-novella_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-officina-santa-maria-novella_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "81bcf94c-c434-5686-82fb-f12cd8752aed",
+          "order": 0,
+          "title": "Santa Maria Novella Pharmacy | Officina Profumo-Farmaceutica di Santa Maria Novella",
+          "caption": "On Via della Scala, outside the entrance to the old pharmacy in the convent wall.",
+          "latitude": 43.7743371,
+          "longitude": 11.2477851,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-officina-santa-maria-novella.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-officina-santa-maria-novella_hero.webp",
+          "transcriptText": "It looks like a church, it smells like a garden, and it's a shop. Rather a good combination.\n\nVia della Scala, a few minutes' walk from Santa Maria Novella station. You should be outside the entrance with the name Officina Profumo-Farmaceutica di Santa Maria Novella above it. Behind this wall lies the Dominican convent of Santa Maria Novella, and the shop occupies part of it.\n\nThe house traces its story back to twelve twenty-one, when the Dominican friars arrived here and began to grow herbs for their medicines. In sixteen twelve the pharmacy opened its doors to the public. It's sometimes called the oldest pharmacy in the world, though strictly it no longer is one, since it doesn't sell medicines. What it sells are perfumes, soaps, creams and the like, many still made to very old recipes.\n\nHave a look, once you're inside, at the rooms. The historic sales halls run one into another, with old wooden cabinets, glass jars and the hush of a church. There's a small museum and a library telling the history of the place. It's one of those shops where you can easily spend half an hour without buying a thing.\n\nThe house's favourite story is about its most famous patron, Catherine de' Medici. For her wedding in fifteen thirty-three, which would eventually make her Queen of France, she's said to have commissioned a special scent, and the house still makes a fragrance, Acqua della Regina, in tribute.\n\nHere's what I like about it. In most cities, a building this beautiful would be roped off. Here it's still doing a version of what it has always done, making things and selling them.\n\nWhen you come out, walk round the corner into Piazza Santa Maria Novella and look at the basilica's marble front. Alberti finished it in the fourteen hundreds, and it's the same convent you've just been shopping in."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7743371,
+      "centroidLongitude": 11.2477851,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "d6a5e0f4-c797-555f-9381-abd85767fa5d",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "26a5bcfb-6a0d-5ba0-9a0e-d1cf26abdf06",
+        "b6a6ca1b-3be7-5fe3-881e-15b83aaf1c2e"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "Commerce",
+        "History",
+        "Faith",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4f57408c-2fe0-59d8-9936-4128dcda4647",
+      "createdAt": "2026-11-18",
+      "title": "Antico Setificio Fiorentino",
+      "shortDescription": "Somewhere behind this door, a machine built to a design by Leonardo da Vinci is still being used to make silk.",
+      "longDescription": "Somewhere behind this door, a machine built to a design by Leonardo da Vinci is still being used to make silk.\n\nThe workshop's history goes back to seventeen eighty-six, and it's one of the very few places in the world still producing silk this way. The weavers work on old looms, with hands and feet moving together, an action the house compares to playing a vast instrument.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-antico-setificio-fiorentino_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-antico-setificio-fiorentino_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-antico-setificio-fiorentino_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-antico-setificio-fiorentino_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-antico-setificio-fiorentino_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a0ef360e-0e0a-5857-9b1b-82e0369bbb6d",
+          "order": 0,
+          "title": "Antico Setificio Fiorentino",
+          "caption": "On Via Lorenzo Bartolini in San Frediano, at number four, the modest door of the silk workshop.",
+          "latitude": 43.7710013,
+          "longitude": 11.2413394,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-antico-setificio-fiorentino.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-antico-setificio-fiorentino_hero.webp",
+          "transcriptText": "Somewhere behind this door, a machine built to a design by Leonardo da Vinci is still being used to make silk.\n\nVia Lorenzo Bartolini, in San Frediano, the old artisans' quarter at the western end of the Oltrarno. You should be at number four, in front of a modest entrance with the name Antico Setificio Fiorentino beside it. The workshop is behind it, and visits are by appointment, so book ahead.\n\nThe workshop's history goes back to seventeen eighty-six, and it's one of the very few places in the world still producing silk this way. The weavers work on old looms, with hands and feet moving together, an action the house compares to playing a vast instrument.\n\nThe gift detail is the warping machine. Warping is the stage where the long threads are laid out before weaving begins, and the machine here was built in the eighteenth century to a design by Leonardo. It's still in use.\n\nHave a look at what comes off the looms. Renaissance silk damasks, brocades of silk and linen, eighteenth-century patterns, all from an archive of designs that the workshop has kept for generations. Its fabrics have gone into palaces, private houses, yachts and hotels, Villa Cora on the hill among them.\n\nAnd here's the thing. Florence's wealth was built on cloth. Silk and wool paid for a great deal of the Renaissance art you've come to see. Places like this are the last working link to that economy, not a reconstruction of it.\n\nYou're standing at the source of the money that built the city.\n\nWhen you've finished, walk the length of Borgo San Frediano towards the old city gate, Porta San Frediano. It's the best street in the city for workshops, small bars and the kind of everyday Florence that still makes things."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7710013,
+      "centroidLongitude": 11.2413394,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "26a5bcfb-6a0d-5ba0-9a0e-d1cf26abdf06",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "84cb50f9-fd76-5f67-8167-7cf0f551167f",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "0fc566b0-b131-54ce-9088-5bb4df2068c0",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Fashion",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "26a5bcfb-6a0d-5ba0-9a0e-d1cf26abdf06",
+      "createdAt": "2026-11-18",
+      "title": "Giulio Giannini e Figlio",
+      "shortDescription": "Opposite the grandest palace in Florence is a shop that has been binding books by hand since eighteen fifty-six.",
+      "longDescription": "Opposite the grandest palace in Florence is a shop that has been binding books by hand since eighteen fifty-six.\n\nIt was founded in eighteen fifty-six by Pietro Giannini, who was above all a bookbinder, and it has been passed from father to son for six generations. In the nineteenth century the shop became a favourite of English visitors, who were living in Florence in large numbers and who loved fine paper and fine bindings. Today the family still does artistic bookbinding and book restoration.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-giulio-giannini-e-figlio_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-giulio-giannini-e-figlio_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-giulio-giannini-e-figlio_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-giulio-giannini-e-figlio_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-giulio-giannini-e-figlio_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "fe3ce41f-1aca-5e8e-97f8-fab4a841752f",
+          "order": 0,
+          "title": "Giulio Giannini e Figlio",
+          "caption": "On Piazza de' Pitti, your back to the palace, facing the old shopfront at number thirty-seven.",
+          "latitude": 43.7666972,
+          "longitude": 11.2503967,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-giulio-giannini-e-figlio.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-giulio-giannini-e-figlio_hero.webp",
+          "transcriptText": "Opposite the grandest palace in Florence is a shop that has been binding books by hand since eighteen fifty-six.\n\nPiazza de' Pitti. Stand with your back to Palazzo Pitti and look across the sloping square. On the far side, at number thirty-seven, you should see the old shopfront of Giulio Giannini e Figlio, with marbled papers, notebooks and leather-bound books in the window.\n\nIt was founded in eighteen fifty-six by Pietro Giannini, who was above all a bookbinder, and it has been passed from father to son for six generations. In the nineteenth century the shop became a favourite of English visitors, who were living in Florence in large numbers and who loved fine paper and fine bindings. Today the family still does artistic bookbinding and book restoration.\n\nHave a look at the marbled paper. It's made by floating colours on the surface of a liquid bath, combing them into patterns, and then laying a sheet of paper on top to lift the design off in one go. No two sheets are ever quite the same, and the patterns are as old as the trade.\n\nThen look at the bindings, the leather, the gold tooling, the boxes and albums. It's what's sometimes called the Florentine style of bookbinding, and this family is among the last to keep it going in its own shop.\n\nWhat I find touching is the scale of it. Across the square is a palace built to be seen from miles away. Over here is a craft measured in millimetres, done by a family, at a bench.\n\nIf you'd like the full set, cross back over and climb the slope into the Boboli Gardens behind Palazzo Pitti. Keep going uphill to the top, and the view back over the palace roof to the city is one of the best in Florence."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7666972,
+      "centroidLongitude": 11.2503967,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "4f57408c-2fe0-59d8-9936-4128dcda4647",
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "0fc566b0-b131-54ce-9088-5bb4df2068c0",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "84cb50f9-fd76-5f67-8167-7cf0f551167f"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "History",
+        "Literature",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "84cb50f9-fd76-5f67-8167-7cf0f551167f",
+      "createdAt": "2026-11-18",
+      "title": "Stefano Bemer",
+      "shortDescription": "A pair of shoes made here can take months. They're made inside what used to be a church.",
+      "longDescription": "A pair of shoes made here can take months. They're made inside what used to be a church.\n\nStefano Bemer was a largely self-taught shoemaker who set up in nineteen eighty-three with the aim of making the perfect Italian shoe. He built a following among people who care a great deal about their feet. The actor Daniel Day-Lewis is widely reported to have spent months here learning the craft. After Bemer died in twenty twelve, the Florentine Tommaso Melani, from a family long tied to the leather trade, took the business on. Its workshop is now here.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-stefano-bemer_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-stefano-bemer_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-stefano-bemer_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-stefano-bemer_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "42abad76-1bee-50b8-9a20-f9fc6f6cc660",
+          "order": 0,
+          "title": "Stefano Bemer",
+          "caption": "On Via di San Niccolò, at number two, the tall building with the workshop behind its windows.",
+          "latitude": 43.7646251,
+          "longitude": 11.2639548,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-stefano-bemer.mp3",
+          "audioDurationSeconds": 97,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-stefano-bemer_hero.webp",
+          "transcriptText": "A pair of shoes made here can take months. They're made inside what used to be a church.\n\nVia di San Niccolò, on the south bank, in the quiet stretch just below the old city gate. You should be at number two, outside a tall building with the name Stefano Bemer on it. Through the windows, you'll see the workshop, wooden lasts, leather and craftsmen at their benches.\n\nStefano Bemer was a largely self-taught shoemaker who set up in nineteen eighty-three with the aim of making the perfect Italian shoe. He built a following among people who care a great deal about their feet. The actor Daniel Day-Lewis is widely reported to have spent months here learning the craft. After Bemer died in twenty twelve, the Florentine Tommaso Melani, from a family long tied to the leather trade, took the business on. Its workshop is now here.\n\nHave a look at the building itself. It's a converted church, so the workshop has height and light that most workshops can only dream of, and the craft is done in the open, where you can watch it.\n\nThe heart of it is bespoke. Your foot is measured and a wooden last is carved to its shape, then the shoe is cut, stitched and built by hand around it. There are ready-to-wear shoes too now, but the made-to-measure work is what the name rests on.\n\nAnd it's rather fitting. A space built for slow, careful ritual is now given over to another kind of slow, careful work.\n\nWhen you leave, walk up the street to the Porta San Niccolò, the tall old gate tower standing by itself near the river. From there the ramps climb to Piazzale Michelangelo, or you can wander up the steep little lanes to San Miniato."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 97,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7646251,
+      "centroidLongitude": 11.2639548,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "4f57408c-2fe0-59d8-9936-4128dcda4647",
+        "0fc566b0-b131-54ce-9088-5bb4df2068c0",
+        "26a5bcfb-6a0d-5ba0-9a0e-d1cf26abdf06",
+        "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "7b60d399-189a-52ce-8d68-2e5f95d7c72a"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Fashion",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d6a5e0f4-c797-555f-9381-abd85767fa5d",
+      "createdAt": "2026-11-18",
+      "title": "Scuola del Cuoio",
+      "shortDescription": "This leather school began in nineteen fifty, to give the orphans of the war a trade. It's tucked inside a Medici building behind Santa Croce.",
+      "longDescription": "This leather school began in nineteen fifty, to give the orphans of the war a trade. It's tucked inside a Medici building behind Santa Croce.\n\nIn nineteen fifty, Marcello Gori, together with his brother-in-law Silvano Casini, both from Florentine leather families, agreed with the Franciscan friars of Santa Croce to teach orphans of the war the craft of leatherwork. The friars gave them their old dormitory, and the first workbenches were set up in the corridor.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-scuola-del-cuoio_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-scuola-del-cuoio_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-scuola-del-cuoio_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-scuola-del-cuoio_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-scuola-del-cuoio_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "abf2161c-bf5a-5387-a6d7-57938ee8198e",
+          "order": 0,
+          "title": "Scuola del Cuoio",
+          "caption": "On Via di San Giuseppe, at the garden entrance on the side of the Basilica of Santa Croce.",
+          "latitude": 43.7678485,
+          "longitude": 11.2629727,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-scuola-del-cuoio.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 15,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-scuola-del-cuoio_hero.webp",
+          "transcriptText": "This leather school began in nineteen fifty, to give the orphans of the war a trade. It's tucked inside a Medici building behind Santa Croce.\n\nVia di San Giuseppe runs along the side of the Basilica of Santa Croce. You should be at the garden entrance to the Scuola del Cuoio, on the side of the church, rather than at the main front on the square. A short walk through the garden brings you to the old friars' building.\n\nIn nineteen fifty, Marcello Gori, together with his brother-in-law Silvano Casini, both from Florentine leather families, agreed with the Franciscan friars of Santa Croce to teach orphans of the war the craft of leatherwork. The friars gave them their old dormitory, and the first workbenches were set up in the corridor.\n\nHave a look at that corridor. The building was commissioned by the Medici from the architect Michelozzo in the fifteenth century and given to the Franciscans. The ceiling is vaulted, there are Medici coats of arms over the doorways, and the walls carry frescoes by followers of Domenico Ghirlandaio. That's where people still sit cutting and stitching.\n\nThe location makes sense. Since the thirteenth century this was the tanners' district, because tanning needs a great deal of water, and the Arno is just there. The street names still remember it. Via delle Conce, the street of the tanneries, and Corso dei Tintori, the dyers' street.\n\nAnd then the flood. On the fourth of November nineteen sixty-six, the Arno burst its banks, and Santa Croce was the hardest hit part of the city. The school was engulfed in water and mud, and it took almost a year to get going again.\n\nIt did, and it's still run by the family. A school built to give lost children a living, inside a building the Medici gave to the friars.\n\nBefore you go, walk round to Piazza Santa Croce and look for the small plaques on the buildings marking how high the water rose in nineteen sixty-six. Some of them are well above your head."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7678485,
+      "centroidLongitude": 11.2629727,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "52e98312-2fc5-5714-a1a8-7f344f4dbd7a",
+        "7b60d399-189a-52ce-8d68-2e5f95d7c72a",
+        "f1f1d615-c789-5075-8b21-440d490c89b6",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "1af99058-4aac-5af2-b7ec-72499e95bbbe",
+        "76858496-cf7a-57b0-a076-283a91b491e5",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
+        "0fc566b0-b131-54ce-9088-5bb4df2068c0"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Fashion",
+        "History",
+        "War",
+        "Designed by a Master",
+        "Michelozzo"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c12be314-082d-5864-a541-b088b3e92d09",
+      "createdAt": "2026-11-18",
+      "title": "Laurentian Library | Biblioteca Medicea Laurenziana",
+      "shortDescription": "Michelangelo was asked to design a staircase to a library. What he made is a staircase that seems to pour downhill at you.",
+      "longDescription": "Michelangelo was asked to design a staircase to a library. What he made is a staircase that seems to pour downhill at you.\n\nThe library grew out of the manuscripts Cosimo the Elder began collecting in the fourteen hundreds, and that Lorenzo the Magnificent expanded. It was his nephew Giulio, by then Pope Clement the Seventh, who gave Michelangelo the commission. Work began in fifteen twenty-four and ran until fifteen thirty-four, when Michelangelo left Florence for good. The library finally opened to the public in fifteen seventy-one.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-biblioteca-medicea-laurenziana_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-biblioteca-medicea-laurenziana_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-biblioteca-medicea-laurenziana_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-biblioteca-medicea-laurenziana_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-biblioteca-medicea-laurenziana_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-biblioteca-medicea-laurenziana_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1a8096d9-0858-5e6f-91f3-a1991dd40a2e",
+          "order": 0,
+          "title": "Laurentian Library | Biblioteca Medicea Laurenziana",
+          "caption": "In the cloister of San Lorenzo, by the stair that climbs to the library's vestibule.",
+          "latitude": 43.7744207,
+          "longitude": 11.2537735,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-biblioteca-medicea-laurenziana.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-biblioteca-medicea-laurenziana_hero.webp",
+          "transcriptText": "Michelangelo was asked to design a staircase to a library. What he made is a staircase that seems to pour downhill at you.\n\nThe cloister of San Lorenzo, the Medici family church. You should be in the peaceful two-storey cloister beside the basilica. In the far corner, a stair leads up to the upper walk, and from there you enter the library. If you're inside the vestibule already, you'll be standing in a tall grey-and-white room, with a great stone stair filling most of the floor.\n\nThe library grew out of the manuscripts Cosimo the Elder began collecting in the fourteen hundreds, and that Lorenzo the Magnificent expanded. It was his nephew Giulio, by then Pope Clement the Seventh, who gave Michelangelo the commission. Work began in fifteen twenty-four and ran until fifteen thirty-four, when Michelangelo left Florence for good. The library finally opened to the public in fifteen seventy-one.\n\nHave a look at the walls of this vestibule. Pairs of columns sit sunk into the wall, as though they've been pushed back into it. Brackets that hold up nothing. Window frames with no windows, framed by pilasters that taper the wrong way, narrower at the bottom. It's every rule of classical architecture, deliberately turned inside out.\n\nThen the stair. Michelangelo first imagined it in walnut. It was built in grey pietra serena in fifteen fifty-nine by Bartolomeo Ammannati, from Michelangelo's model. Three flights, and the central one has oval steps that spill outwards like a slow wave.\n\nAnd here's the thing. This room was meant as a dark prelude. You climb that stair out of the gloom and into the long, calm, light-filled reading room above, with its rows of carved desks. The vestibule is anxiety, the reading room is peace, and Michelangelo designed you through it on purpose.\n\nOn your way out, stop in the cloister, where a statue of the historian Paolo Giovio sits in a niche. Then walk round the back of the basilica to Piazza di Madonna degli Aldobrandini, where the Medici Chapels have their entrance. It's the family's other great monument, with Michelangelo's New Sacristy inside."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7744207,
+      "centroidLongitude": 11.2537735,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "88BE67C8-7E9E-520C-B4D3-8C5E81E3B07A",
+        "1f17e306-6bf8-545e-8b91-150b721ef9b8",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "244d9961-3c36-5950-960c-38de6b7e3d92",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "52e98312-2fc5-5714-a1a8-7f344f4dbd7a",
+        "26a5bcfb-6a0d-5ba0-9a0e-d1cf26abdf06"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Library",
+        "Architecture",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Michelangelo",
+        "Bartolomeo Ammannati"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1f17e306-6bf8-545e-8b91-150b721ef9b8",
+      "createdAt": "2026-11-18",
+      "title": "Opera del Duomo Museum | Museo dell'Opera del Duomo",
+      "shortDescription": "Michelangelo carved the David on this spot. That alone would justify a visit. It's far from the best thing here.",
+      "longDescription": "Michelangelo carved the David on this spot. That alone would justify a visit. It's far from the best thing here.\n\nThis site has belonged to the Opera del Duomo, the office that built and still looks after the cathedral, since twelve ninety-six. Around fifteen hundred, the young Michelangelo worked here on the block of marble that became the David. The museum itself opened in eighteen ninety-one, and between twenty twelve and twenty fifteen it was reimagined by the architect Adolfo Natalini with the studio Guicciardini and Magni. They absorbed an old eighteenth-century theatre next door into the plan, and the museum now has twenty-eight rooms across three floors.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-museo-dell-opera-del-duomo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-museo-dell-opera-del-duomo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-museo-dell-opera-del-duomo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-museo-dell-opera-del-duomo_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-museo-dell-opera-del-duomo_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "43f6d518-72d8-5888-91a1-2e40c751533e",
+          "order": 0,
+          "title": "Opera del Duomo Museum | Museo dell'Opera del Duomo",
+          "caption": "At the east end of Piazza del Duomo, behind the cathedral's apse, facing number nine.",
+          "latitude": 43.7733642,
+          "longitude": 11.2581335,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-museo-dell-opera-del-duomo.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-museo-dell-opera-del-duomo_hero.webp",
+          "transcriptText": "Michelangelo carved the David on this spot. That alone would justify a visit. It's far from the best thing here.\n\nPiazza del Duomo, at the east end, behind the cathedral's great apse. You should be facing a long, sober building on the far side of the square from the dome, at number nine, with the entrance to the Museo dell'Opera del Duomo. Behind you rises the back of Brunelleschi's dome.\n\nThis site has belonged to the Opera del Duomo, the office that built and still looks after the cathedral, since twelve ninety-six. Around fifteen hundred, the young Michelangelo worked here on the block of marble that became the David. The museum itself opened in eighteen ninety-one, and between twenty twelve and twenty fifteen it was reimagined by the architect Adolfo Natalini with the studio Guicciardini and Magni. They absorbed an old eighteenth-century theatre next door into the plan, and the museum now has twenty-eight rooms across three floors.\n\nThe room to head for is the Sala del Paradiso. It holds a full-scale reconstruction of the cathedral's original medieval front by Arnolfo di Cambio, the one that was pulled down in the sixteenth century and never properly replaced until the eighteen hundreds. Opposite it stand Ghiberti's original bronze doors from the Baptistery, the Gates of Paradise.\n\nThe scale is the point. The cathedral front and the Baptistery doors face each other across the room, as they once faced each other across the square outside.\n\nUpstairs, there's Michelangelo's Bandini Pietà, Donatello's wooden Mary Magdalene, and the wooden models and actual tools used to build Brunelleschi's dome.\n\nWhat I love is that this museum doesn't treat the cathedral as finished. It shows you the drafts, the arguments, the tools. You see a building as a long, unfinished conversation.\n\nAfterwards, if your legs are willing, climb the dome itself. The stairs run between the inner and outer shells that you've just seen in the models, and you'll understand exactly how Brunelleschi did it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7733642,
+      "centroidLongitude": 11.2581335,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "244d9961-3c36-5950-960c-38de6b7e3d92",
+        "52e98312-2fc5-5714-a1a8-7f344f4dbd7a",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "88BE67C8-7E9E-520C-B4D3-8C5E81E3B07A",
+        "0fc566b0-b131-54ce-9088-5bb4df2068c0"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Faith",
+        "Engineering",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Adolfo Natalini"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+      "createdAt": "2026-11-18",
+      "title": "Museo Novecento",
+      "shortDescription": "The building is a medieval hospital and school. The art inside is twentieth century. And the courtyard carries a sentence in neon.",
+      "longDescription": "The building is a medieval hospital and school. The art inside is twentieth century. And the courtyard carries a sentence in neon.\n\nThis was once the Ospedale di San Paolo, later known as the Scuole Leopoldine. It's now a museum of twentieth- and twenty-first-century Italian art, opened by the city in twenty fourteen. Florence is so identified with the Renaissance that a museum like this is a deliberate statement. The city had a modern century too.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-museo-novecento_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-museo-novecento_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-museo-novecento_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-museo-novecento_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-museo-novecento_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d61ffbbb-fcd4-53c2-b8d3-ff8a66c47b8e",
+          "order": 0,
+          "title": "Museo Novecento",
+          "caption": "In Piazza Santa Maria Novella, the basilica behind you, facing the arcaded loggia at number ten.",
+          "latitude": 43.7731366,
+          "longitude": 11.2491171,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-museo-novecento.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-museo-novecento_hero.webp",
+          "transcriptText": "The building is a medieval hospital and school. The art inside is twentieth century. And the courtyard carries a sentence in neon.\n\nPiazza Santa Maria Novella. Stand in the square facing the basilica's marble front, then turn right round so the church is behind you. The long arcaded loggia now ahead of you belongs to the former Spedale delle Leopoldine, and the entrance to the Museo Novecento is under it, at number ten.\n\nThis was once the Ospedale di San Paolo, later known as the Scuole Leopoldine. It's now a museum of twentieth- and twenty-first-century Italian art, opened by the city in twenty fourteen. Florence is so identified with the Renaissance that a museum like this is a deliberate statement. The city had a modern century too.\n\nHave a look, once you're inside, at the courtyard. The first floor is wrapped by a Renaissance loggia on all four sides, and it carries a neon work by the Florentine artist Maurizio Nannucci. It reads \"Everything might be different\". It's a good line to meet in a city that rarely lets anything change.\n\nThe core of the collection was given to the city in nineteen seventy by the collector Alberto Della Ragione. Two hundred and forty-one works from roughly nineteen twenty to nineteen forty-five, including Morandi, de Chirico, Carrà, Guttuso and Casorati. There's also a story about the flood of nineteen sixty-six. The critic Carlo Ludovico Ragghianti appealed to artists to donate work to help Florence recover, and many answered.\n\nAnd here's the thing. A city that only looks backwards becomes a stage set. This building quietly argues that Florence is still part of the conversation.\n\nWhen you leave, cross the square and look at the basilica's façade. Alberti designed its upper half in the fourteen hundreds, and if you've just been looking at twentieth-century geometry inside, you'll suddenly notice how geometric he was too."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7731366,
+      "centroidLongitude": 11.2491171,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "1f17e306-6bf8-545e-8b91-150b721ef9b8",
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "76858496-cf7a-57b0-a076-283a91b491e5",
+        "4f57408c-2fe0-59d8-9936-4128dcda4647",
+        "0fc566b0-b131-54ce-9088-5bb4df2068c0"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Contemporary",
+        "Public Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+      "createdAt": "2026-11-18",
+      "title": "Palazzo Strozzi",
+      "shortDescription": "The first stone of this palace was laid at dawn on the sixth of August, fourteen eighty-nine, at a moment chosen by the astrologers. The top of…",
+      "longDescription": "The first stone of this palace was laid at dawn on the sixth of August, fourteen eighty-nine, at a moment chosen by the astrologers. The top of it was never finished.\n\nThe palace was built by Filippo Strozzi the Elder. The Medici had sent him into exile for around twenty-five years, and when he came back in fourteen sixty-six, he set out to rebuild his family's standing. He spent his last years on this. The plot was assembled at what was then called the most convenient and most beautiful spot in the city, and the building site involved leading architects, Giuliano da Sangallo and Simone del Pollaiolo, known as il Cronaca.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-palazzo-strozzi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-palazzo-strozzi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-palazzo-strozzi_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-palazzo-strozzi_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "509f8aca-31f3-5d9e-8509-e00ce4613188",
+          "order": 0,
+          "title": "Palazzo Strozzi",
+          "caption": "On Piazza Strozzi, standing back from the great rough-stone block of the palace.",
+          "latitude": 43.7713911,
+          "longitude": 11.251804,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-palazzo-strozzi.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-palazzo-strozzi_hero.webp",
+          "transcriptText": "The first stone of this palace was laid at dawn on the sixth of August, fourteen eighty-nine, at a moment chosen by the astrologers. The top of it was never finished.\n\nPiazza Strozzi, between Via de' Tornabuoni and Via Strozzi. You should be standing back from a vast, free-standing stone block of a palace, rough-cut stone from top to bottom, with an enormous cornice at the roofline. Then walk round to the south side of the building, along Via dello Strozzino, and look up.\n\nThe palace was built by Filippo Strozzi the Elder. The Medici had sent him into exile for around twenty-five years, and when he came back in fourteen sixty-six, he set out to rebuild his family's standing. He spent his last years on this. The plot was assembled at what was then called the most convenient and most beautiful spot in the city, and the building site involved leading architects, Giuliano da Sangallo and Simone del Pollaiolo, known as il Cronaca.\n\nHave a look at the stone. The rustication is graduated. It's deepest and roughest at street level, then gets flatter as it rises. It makes a building this size feel planted rather than heavy.\n\nNow the cornice. Follow it along the top and you'll find that it stops. When Filippo died, the south front and half the cornice were still unfinished. His family's political troubles under the Medici meant nobody ever completed it. From the south side, you can see it simply end.\n\nSo the most perfect palace of Renaissance Florence is a ruin of ambition, frozen mid-sentence, and rather more human for it.\n\nBefore you go, walk through into the courtyard. It's open to everyone, often with a contemporary art installation from the foundation that runs the exhibitions here, and it's one of the best free spaces in the city to sit for ten minutes."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7713911,
+      "centroidLongitude": 11.251804,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "7b60d399-189a-52ce-8d68-2e5f95d7c72a",
+        "52e98312-2fc5-5714-a1a8-7f344f4dbd7a",
+        "76858496-cf7a-57b0-a076-283a91b491e5"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Power",
+        "Art",
+        "Designed by a Master",
+        "Giuliano da Sangallo",
+        "Il Cronaca"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0fc566b0-b131-54ce-9088-5bb4df2068c0",
+      "createdAt": "2026-11-18",
+      "title": "Stefano Bardini Museum | Museo Stefano Bardini",
+      "shortDescription": "A dealer in antiquities turned a church into a palace, painted the walls an unexpected blue, and then gave the whole lot to the city.",
+      "longDescription": "A dealer in antiquities turned a church into a palace, painted the walls an unexpected blue, and then gave the whole lot to the city.\n\nStefano Bardini, who lived from eighteen thirty-six to nineteen twenty-two, was one of the most powerful art dealers in Italy, known in his lifetime as the prince of antiquarians. In eighteen eighty-one he bought what had been the church and convent of San Gregorio della Pace, and turned it into a neo-Renaissance palace, reusing old doorways, staircases and pediments he'd collected, and setting up workshops to restore works for sale.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-museo-stefano-bardini_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-museo-stefano-bardini_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-museo-stefano-bardini_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-museo-stefano-bardini_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-museo-stefano-bardini_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "eb5ff0d1-ab4f-5d99-9285-2a9ffe187519",
+          "order": 0,
+          "title": "Stefano Bardini Museum | Museo Stefano Bardini",
+          "caption": "On Via dei Renai by Piazza Demidoff, facing the severe building at number thirty-seven.",
+          "latitude": 43.7652169,
+          "longitude": 11.2582613,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-museo-stefano-bardini.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-museo-stefano-bardini_hero.webp",
+          "transcriptText": "A dealer in antiquities turned a church into a palace, painted the walls an unexpected blue, and then gave the whole lot to the city.\n\nVia dei Renai, on the south bank, beside the little garden of Piazza Demidoff. You should be in front of a large, rather severe building at number thirty-seven, with the entrance to the Museo Stefano Bardini. The river is just behind you.\n\nStefano Bardini, who lived from eighteen thirty-six to nineteen twenty-two, was one of the most powerful art dealers in Italy, known in his lifetime as the prince of antiquarians. In eighteen eighty-one he bought what had been the church and convent of San Gregorio della Pace, and turned it into a neo-Renaissance palace, reusing old doorways, staircases and pediments he'd collected, and setting up workshops to restore works for sale.\n\nHave a look at the walls inside. They're painted a deep, electric blue, known as Bardini blue. His clients loved it. The collector Nélie Jacquemart used it in her Paris house, and Isabella Stewart Gardner asked for it in hers. After his death the walls were painted over, and the blue was rediscovered under later paint during restoration.\n\nThen find the covered courtyard on the ground floor, lit from above. There are more than eighty stone and marble coats of arms set into the walls. Many were rescued when the old centre of Florence was demolished between eighteen eighty-one and eighteen ninety-five, to make way for the Piazza della Repubblica.\n\nAnd that's what makes this place so interesting. Florence was knocking down its own past just as Bardini was selling it to the world, and he kept some of the pieces for himself.\n\nWhen you leave, walk a few steps along the river to the Ponte alle Grazie and look back. Behind the museum, the green slope rising up the hill is the Giardino Bardini, also his, and well worth the climb."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7652169,
+      "centroidLongitude": 11.2582613,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "26a5bcfb-6a0d-5ba0-9a0e-d1cf26abdf06",
+        "7b60d399-189a-52ce-8d68-2e5f95d7c72a",
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "84cb50f9-fd76-5f67-8167-7cf0f551167f",
+        "4f57408c-2fe0-59d8-9936-4128dcda4647",
+        "aafc8126-49f3-5425-a79d-ef1523406c01"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7b60d399-189a-52ce-8d68-2e5f95d7c72a",
+      "createdAt": "2026-11-18",
+      "title": "Cloister of the Scalzo | Chiostro dello Scalzo",
+      "shortDescription": "A tiny cloister, almost always empty, painted entirely in shades of a single colour by one of the great painters of the High Renaissance.",
+      "longDescription": "A tiny cloister, almost always empty, painted entirely in shades of a single colour by one of the great painters of the High Renaissance.\n\nThis was the entrance portico of a religious brotherhood, the Company of the Disciplined of Saint John the Baptist. The church was known as \"dello Scalzo\", of the barefoot one, because the member who carried the cross in their processions walked barefoot.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-chiostro-dello-scalzo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-chiostro-dello-scalzo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-chiostro-dello-scalzo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-chiostro-dello-scalzo_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8dee08ea-e9d1-518f-951d-69b1878529df",
+          "order": 0,
+          "title": "Cloister of the Scalzo | Chiostro dello Scalzo",
+          "caption": "On Via Cavour, at number sixty-nine, the plain doorway into the small painted cloister.",
+          "latitude": 43.7798109,
+          "longitude": 11.2595487,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-chiostro-dello-scalzo.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 20,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-chiostro-dello-scalzo_hero.webp",
+          "transcriptText": "A tiny cloister, almost always empty, painted entirely in shades of a single colour by one of the great painters of the High Renaissance.\n\nVia Cavour, a long straight street running north from the Duomo. You should be at number sixty-nine, outside a plain doorway that's easy to walk straight past. Inside is a small, rectangular, covered cloister, with painted scenes on every wall.\n\nThis was the entrance portico of a religious brotherhood, the Company of the Disciplined of Saint John the Baptist. The church was known as \"dello Scalzo\", of the barefoot one, because the member who carried the cross in their processions walked barefoot.\n\nHave a look at the paintings. They tell the life of Saint John the Baptist, Florence's patron saint, and they're the work of Andrea del Sarto, painted on and off between fifteen oh nine and fifteen twenty-six. Instead of full colour, they're painted in monochrome, in light and shade alone. That was partly a matter of money, since it was cheaper for the brotherhood. But it makes the figures look almost sculptural, like carved reliefs come to life.\n\nLook for the scenes that feel slightly different. While Andrea was away in France, in fifteen eighteen and fifteen nineteen, his friend and collaborator Franciabigio painted two of them.\n\nHere's what I love about this place. Del Sarto had a whole career's worth of colour at his disposal, and for nearly twenty years, on these walls, he chose to do without. It's restraint as a kind of virtuosity.\n\nThe cloister keeps short and irregular hours, so check before you come. And if it's closed, walk two minutes to the Cenacolo di Sant'Apollonia, on Via Ventisette Aprile, where Andrea del Castagno's Last Supper fills an entire wall."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7798109,
+      "centroidLongitude": 11.2595487,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "52e98312-2fc5-5714-a1a8-7f344f4dbd7a",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "0fc566b0-b131-54ce-9088-5bb4df2068c0",
+        "d6a5e0f4-c797-555f-9381-abd85767fa5d",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "1f17e306-6bf8-545e-8b91-150b721ef9b8"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Religious Building",
+        "Art",
+        "Faith",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "14e01635-4715-545b-bb64-ddaffda41f82",
+      "createdAt": "2026-11-18",
+      "title": "Santa Maria Novella Station | Stazione di Firenze Santa Maria Novella",
+      "shortDescription": "Most people experience this building at a run, dragging a suitcase. It deserves rather better. It's one of the great modern buildings in Italy.",
+      "longDescription": "Most people experience this building at a run, dragging a suitcase. It deserves rather better. It's one of the great modern buildings in Italy.\n\nIn nineteen thirty-two the city held a competition for a new station. More than a hundred entries came in, and it was won by the Gruppo Toscano, six young architects led by Giovanni Michelucci. It was a bold choice, a frankly modern building right beside one of the most important churches in the city.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-firenze-santa-maria-novella-station_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-firenze-santa-maria-novella-station_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-firenze-santa-maria-novella-station_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-firenze-santa-maria-novella-station_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-firenze-santa-maria-novella-station_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-firenze-santa-maria-novella-station_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c9c876c8-4076-5eaf-99ca-bd2f27a6cd8e",
+          "order": 0,
+          "title": "Santa Maria Novella Station | Stazione di Firenze Santa Maria Novella",
+          "caption": "In Piazza della Stazione, the long, low stone front ahead and Santa Maria Novella behind you.",
+          "latitude": 43.776656,
+          "longitude": 11.2476262,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-firenze-santa-maria-novella-station.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-firenze-santa-maria-novella-station_hero.webp",
+          "transcriptText": "Most people experience this building at a run, dragging a suitcase. It deserves rather better. It's one of the great modern buildings in Italy.\n\nPiazza della Stazione. Stand in the square so that the long, low station front is ahead of you, and the back of the church of Santa Maria Novella is behind you. You should see a broad, horizontal building in rough brown stone, with a band of glass that seems to slide down its face and spill into the entrance hall.\n\nIn nineteen thirty-two the city held a competition for a new station. More than a hundred entries came in, and it was won by the Gruppo Toscano, six young architects led by Giovanni Michelucci. It was a bold choice, a frankly modern building right beside one of the most important churches in the city.\n\nHave a look at the stone. It's pietra forte, the same brown sandstone that so much of old Florence is built from, laid in square blocks. That was the trick. The building is radical in shape and completely local in material, so it sits quietly beside its old neighbour.\n\nNow the glass. Seven long bands of it run across the building, and the designers called it the cascade of glass. It pours daylight into the ticket hall. Beyond it, the platforms are covered by a train shed about a hundred and sixty metres long, with no supports in the middle.\n\nThe building was controversial. Traditionalists hated it. But in June nineteen thirty-four Mussolini summoned the architects to Rome and praised it, and that settled the argument.\n\nAnd here's the thing. A building made for arriving and leaving can still be calm, low and careful with its city. That was a radical idea then, and it's not a bad one now.\n\nBefore you go, walk to the left of the main front, towards the side of the station, and find the Palazzina Reale, the separate pavilion built in nineteen thirty-five for the royal family's visits to Florence. It's a perfect little cube, and almost nobody looks at it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.776656,
+      "centroidLongitude": 11.2476262,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "3d8887ff-eb4a-5695-9d04-424b72ff8d6f",
+        "A876901E-52ED-5357-8514-2C448BC23840",
+        "76858496-cf7a-57b0-a076-283a91b491e5"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Civic",
+        "Architecture",
+        "Modernist",
+        "Designed by a Master",
+        "Giovanni Michelucci"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "04c4e027-004d-58a1-8535-0225f97b384a",
+      "createdAt": "2026-11-18",
+      "title": "Artemio Franchi Stadium | Stadio Artemio Franchi",
+      "shortDescription": "Look at the stairs. They spiral up the outside of the stadium in concrete, with nothing holding them but their own shape.",
+      "longDescription": "Look at the stairs. They spiral up the outside of the stadium in concrete, with nothing holding them but their own shape.\n\nThe stadium was designed by the engineer Pier Luigi Nervi from nineteen twenty-nine, and built in two phases between nineteen thirty and nineteen thirty-two. It opened in September nineteen thirty-one. It was originally named after a Fascist militant, Giovanni Berta, then became simply the municipal stadium after the war, and since nineteen ninety-one it has carried the name of Artemio Franchi, a Florentine football administrator.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-stadio-artemio-franchi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-stadio-artemio-franchi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-stadio-artemio-franchi_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-stadio-artemio-franchi_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-stadio-artemio-franchi_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-stadio-artemio-franchi_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2cb1be8f-f3a2-5102-9ff6-f5a3c981d5d5",
+          "order": 0,
+          "title": "Artemio Franchi Stadium | Stadio Artemio Franchi",
+          "caption": "In Campo di Marte, by the Marathon Tower at the main entrance and the spiral stairs.",
+          "latitude": 43.7805776,
+          "longitude": 11.2833823,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-stadio-artemio-franchi.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-stadio-artemio-franchi_hero.webp",
+          "transcriptText": "Look at the stairs. They spiral up the outside of the stadium in concrete, with nothing holding them but their own shape.\n\nCampo di Marte, the residential district east of the centre. You should be outside the stadium, near the tall, slender tower that marks the main entrance, the Torre di Maratona. From here you'll also see one of the spiral staircases winding up the outside wall.\n\nThe stadium was designed by the engineer Pier Luigi Nervi from nineteen twenty-nine, and built in two phases between nineteen thirty and nineteen thirty-two. It opened in September nineteen thirty-one. It was originally named after a Fascist militant, Giovanni Berta, then became simply the municipal stadium after the war, and since nineteen ninety-one it has carried the name of Artemio Franchi, a Florentine football administrator.\n\nHave a look at those staircases first. There are three spiral stairs on the outside of the stadium, and another inside leading to the royal stand. They're made of reinforced concrete, and they seem to coil upwards without any visible support. Then the tower, slim and vertical, a counterweight to the long, low bowl.\n\nInside, the main stand is covered by a cantilevered canopy, a roof held out over the seats with no columns underneath. It was a big part of why the building made Nervi's name.\n\nWhat I find moving here is that Nervi treated concrete like a material with its own logic. Not an imitation of stone, but something that could curl, reach and float. A football ground became a lesson in engineering for the rest of the century.\n\nThe stadium is being renovated, so check what you can see. On your way back into town, you'll cross the Viali, the broad ring road Giuseppe Poggi laid out in the eighteen sixties where the medieval walls had stood. Stop at Piazza della Libertà, where an old city gate and a triumphal arch still stand in the middle of the traffic."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7805776,
+      "centroidLongitude": 11.2833823,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Architecture",
+        "Engineering",
+        "Modernist",
+        "Designed by a Master",
+        "Pier Luigi Nervi"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3b0fd179-acf5-5dae-9891-3150740aae7b",
+      "createdAt": "2026-11-18",
+      "title": "Church of the Motorway | Chiesa dell'Autostrada del Sole",
+      "shortDescription": "A church built beside a motorway, to remember the men who died building it.",
+      "longDescription": "A church built beside a motorway, to remember the men who died building it.\n\nThe Autostrada del Sole, the great motorway linking Milan and Rome, was built in the nineteen fifties and sixties, and many workers died building it. The motorway company commissioned this church to remember them, on a site roughly halfway along the route. Giovanni Michelucci took over the project in September nineteen sixty, and it was inaugurated in April nineteen sixty-four, by which point he was in his seventies.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-chiesa-dell-autostrada_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-chiesa-dell-autostrada_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-chiesa-dell-autostrada_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-chiesa-dell-autostrada_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f92756f5-d9ec-5e65-b777-8bf487e91d58",
+          "order": 0,
+          "title": "Church of the Motorway | Chiesa dell'Autostrada del Sole",
+          "caption": "By the Firenze Nord exit of the A1 at Campi Bisenzio, below the church's copper tent of a roof.",
+          "latitude": 43.8318073,
+          "longitude": 11.1572137,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-chiesa-dell-autostrada.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-chiesa-dell-autostrada_hero.webp",
+          "transcriptText": "A church built beside a motorway, to remember the men who died building it.\n\nCampi Bisenzio, just outside Florence, beside the Firenze Nord exit of the A one motorway. You'll most likely have come by car. You should be standing by the church, looking at a low base of hand-cut stone, and above it a huge, swooping roof of copper sheet, peaked and folded like a tent.\n\nThe Autostrada del Sole, the great motorway linking Milan and Rome, was built in the nineteen fifties and sixties, and many workers died building it. The motorway company commissioned this church to remember them, on a site roughly halfway along the route. Giovanni Michelucci took over the project in September nineteen sixty, and it was inaugurated in April nineteen sixty-four, by which point he was in his seventies.\n\nHave a look at the roof. Michelucci said \"the general form is that of a tent\", a building for people passing through rather than settling down. The copper weathers green on the outside, and inside it looks golden.\n\nThen go in, if it's open. Reinforced concrete supports lean and branch through the space. Writers on the building often reach for three images, the tent, the ark and the tree, and inside you can see all three. The plan is unconventional, with a baptistery gallery, an entrance and the church laid out in three parts, little gardens of olive trees between them, and the altar turned away from the traditional axis. There are ten bronze reliefs of patron saints.\n\nWhen it opened, critics were divided. Bruno Zevi praised its break with tradition. The architect Luigi Figini called the interior \"controlled anarchy\", and he didn't entirely mean it as an insult.\n\nIt's the same Michelucci who designed the calm, orderly station in the city centre, thirty years earlier. Here he let everything move.\n\nSpend a moment walking right round the outside before you leave. The roof changes completely from every side, and from one angle, against the traffic, it really does look like a tent pitched for the night."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.8318073,
+      "centroidLongitude": 11.1572137,
+      "city": "Campi Bisenzio",
+      "country": "Italy",
+      "relatedTourIds": [
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "AAF6A3C7-3884-4ADD-B699-66CF5D91DD7F",
+        "9ce70403-81e1-566e-8288-349f2be37e9c",
+        "1163c8d4-a4f8-594d-9e87-75fdc7f42aee",
+        "8B322D5E-F6F8-54B4-9EEE-80AD6DFC7B6A",
+        "03023be8-eaa8-50c4-a879-27755a370487",
+        "95f420f0-645a-52c7-8723-23ab385830df",
+        "34ee1c47-2571-56ff-becb-d719f43c3efc"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Religious Building",
+        "Architecture",
+        "Remembrance",
+        "Modernist",
+        "Designed by a Master",
+        "Giovanni Michelucci"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "52e98312-2fc5-5714-a1a8-7f344f4dbd7a",
+      "createdAt": "2026-11-18",
+      "title": "Pazzi Chapel | Cappella de' Pazzi",
+      "shortDescription": "A room built on simple whole numbers. Walk in, stand in the middle, and you'll feel the maths before you understand it.",
+      "longDescription": "A room built on simple whole numbers. Walk in, stand in the middle, and you'll feel the maths before you understand it.\n\nIt was commissioned by Andrea de' Pazzi, a banker, who offered to rebuild the chapter house of Santa Croce after a fire in fourteen twenty-three. That's the room where the friars met. Look at the low stone bench running round the walls, which is where they sat. It was also the Pazzi family's own chapel. Filippo Brunelleschi is generally thought to have been involved from around fourteen twenty-nine, though historians still argue about how much of the final design is his. He died in fourteen forty-six, long before it was finished.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-cappella-de-pazzi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-cappella-de-pazzi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-cappella-de-pazzi_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-cappella-de-pazzi_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-cappella-de-pazzi_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-cappella-de-pazzi_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-cappella-de-pazzi_7.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-cappella-de-pazzi_8.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "efb81772-9b47-51f8-9a86-216db07c42ed",
+          "order": 0,
+          "title": "Pazzi Chapel | Cappella de' Pazzi",
+          "caption": "In the first cloister of Santa Croce, facing the porch of six columns and the small dome.",
+          "latitude": 43.7681284,
+          "longitude": 11.2629088,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-cappella-de-pazzi.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 15,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-cappella-de-pazzi_hero.webp",
+          "transcriptText": "A room built on simple whole numbers. Walk in, stand in the middle, and you'll feel the maths before you understand it.\n\nThe first cloister of Santa Croce. Go through the basilica's ticketed entrance to the cloister on its south side. At the far end of the lawn, you should see a porch of six slender columns and a small dome. That's the Pazzi Chapel.\n\nIt was commissioned by Andrea de' Pazzi, a banker, who offered to rebuild the chapter house of Santa Croce after a fire in fourteen twenty-three. That's the room where the friars met. Look at the low stone bench running round the walls, which is where they sat. It was also the Pazzi family's own chapel. Filippo Brunelleschi is generally thought to have been involved from around fourteen twenty-nine, though historians still argue about how much of the final design is his. He died in fourteen forty-six, long before it was finished.\n\nNow stand in the centre. The space is built on a module of twenty Florentine braccia, an old unit of length, so the main room is essentially a cube topped by a hemisphere. The structure is drawn in grey pietra serena against white plaster, so you can read the geometry like a diagram.\n\nThen look up and around. Twelve glazed terracotta roundels of the Apostles by Luca della Robbia sit in the walls, and four coloured roundels of the Evangelists in the corners of the dome, arranged to be seen from just where you're standing.\n\nAnd here's the thing. In fourteen seventy-eight, the Pazzi family led a plot to murder the Medici, inside the cathedral. It failed, and the family was ruined. The calmest room in Florence was built by the family behind its most violent conspiracy.\n\nBefore you leave, go back into the basilica and find Donatello's wooden crucifix in the left transept. According to Vasari, Brunelleschi teased his friend that he'd put a peasant on the cross, then carved his own, for Santa Maria Novella, to show him how."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7681284,
+      "centroidLongitude": 11.2629088,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "7b60d399-189a-52ce-8d68-2e5f95d7c72a",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "d6a5e0f4-c797-555f-9381-abd85767fa5d",
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "1f17e306-6bf8-545e-8b91-150b721ef9b8",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "76858496-cf7a-57b0-a076-283a91b491e5"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Religious Building",
+        "Architecture",
+        "Faith",
+        "Designed by a Master",
+        "Filippo Brunelleschi"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+      "createdAt": "2026-11-18",
+      "title": "San Miniato al Monte | Basilica di San Miniato al Monte",
+      "shortDescription": "Carved into the marble here is an old inscription. It says, \"This is the gate of heaven.\" Standing on these steps at sunset, you can see why…",
+      "longDescription": "Carved into the marble here is an old inscription. It says, \"This is the gate of heaven.\" Standing on these steps at sunset, you can see why someone thought so.\n\nThe church you see was begun in ten eighteen under Bishop Alibrando, with the support of the Holy Roman Emperor Henry the Second, and completed in the twelfth century. It's dedicated to Miniato, said to be Florence's first martyr, who, according to legend, after being beheaded, picked up his own head and walked back across the Arno to this hillside.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-basilica-di-san-miniato-al-monte_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-basilica-di-san-miniato-al-monte_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-basilica-di-san-miniato-al-monte_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-basilica-di-san-miniato-al-monte_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-basilica-di-san-miniato-al-monte_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-basilica-di-san-miniato-al-monte_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-basilica-di-san-miniato-al-monte_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c158c52e-ce5e-5d34-a6be-a4ac20f9f681",
+          "order": 0,
+          "title": "San Miniato al Monte | Basilica di San Miniato al Monte",
+          "caption": "At the top of the stairway above Piazzale Michelangelo, facing the white and green marble front.",
+          "latitude": 43.7595579,
+          "longitude": 11.2650118,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-basilica-di-san-miniato-al-monte.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-basilica-di-san-miniato-al-monte_hero.webp",
+          "transcriptText": "Carved into the marble here is an old inscription. It says, \"This is the gate of heaven.\" Standing on these steps at sunset, you can see why someone thought so.\n\nThe hill above Piazzale Michelangelo. You should be at the top of the broad stairway leading up to the church, facing its front of white and green marble, with a golden mosaic in the upper half and a small copper eagle perched at the very top. Turn round, and the whole of Florence is laid out below you.\n\nThe church you see was begun in ten eighteen under Bishop Alibrando, with the support of the Holy Roman Emperor Henry the Second, and completed in the twelfth century. It's dedicated to Miniato, said to be Florence's first martyr, who, according to legend, after being beheaded, picked up his own head and walked back across the Arno to this hillside.\n\nHave a look at the front. White marble and dark green serpentine from Prato, cut into pure geometry, circles, squares and arches. The mosaic of Christ between the Virgin and Saint Miniato dates from twelve sixty. And the eagle on top is the emblem of the Arte di Calimala, the guild of cloth merchants who paid for the upper part of the façade.\n\nInside, look down at the floor of the nave, an inlaid marble floor of twelve oh seven with the signs of the zodiac. Then up to the raised choir and the apse mosaic of twelve ninety-seven.\n\nDuring the siege of Florence in fifteen twenty-nine and fifteen thirty, this hill was fortified, and Michelangelo had the bell tower protected because it was being used for artillery. Since nineteen twenty-four Benedictine monks have lived here again.\n\nNearly a thousand years after it was begun, it still does what the inscription promised. It gives a city a door to look out of.\n\nBefore you leave, wander into the cemetery of the Porte Sante beside the church. It's full of nineteenth-century Florentine families, and its paths look straight over the rooftops."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7595579,
+      "centroidLongitude": 11.2650118,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "52e98312-2fc5-5714-a1a8-7f344f4dbd7a",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "7b60d399-189a-52ce-8d68-2e5f95d7c72a",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "1f17e306-6bf8-545e-8b91-150b721ef9b8",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "76858496-cf7a-57b0-a076-283a91b491e5"
+      ],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Viewpoint",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "65deaa22-8fc8-5ad0-becc-e96996c53c4b",
+      "createdAt": "2026-11-18",
+      "title": "Santa Trinita Bridge | Ponte Santa Trinita",
+      "shortDescription": "People argue about the exact curve of these arches. They've been arguing for four hundred years.",
+      "longDescription": "People argue about the exact curve of these arches. They've been arguing for four hundred years.\n\nThe bridge was designed by Bartolomeo Ammannati, for Cosimo the First de' Medici, in the fifteen sixties. Ammannati is thought to have drawn on ideas from Michelangelo. Have a look at the arches. They're unusually flat and elegant, and the shape has been described as close to a catenary, the curve a hanging chain makes, flipped upside down. Nobody quite agrees what it is, which rather adds to the charm.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-ponte-santa-trinita_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-ponte-santa-trinita_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-ponte-santa-trinita_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-ponte-santa-trinita_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-ponte-santa-trinita_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6b702732-0a25-5ee9-a51d-7e3b9ffe5591",
+          "order": 0,
+          "title": "Santa Trinita Bridge | Ponte Santa Trinita",
+          "caption": "On the Lungarno Corsini, just downstream, looking up at the three flat arches and four statues.",
+          "latitude": 43.7691602,
+          "longitude": 11.2503536,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-ponte-santa-trinita.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-ponte-santa-trinita_hero.webp",
+          "transcriptText": "People argue about the exact curve of these arches. They've been arguing for four hundred years.\n\nYou should be on the riverbank, ideally on the Lungarno Corsini, just downstream of the bridge, looking upstream. Ahead of you is a low, wide bridge of three very flat arches, with a statue standing at each of its four corners. Behind it, further upstream, you'll see the Ponte Vecchio.\n\nThe bridge was designed by Bartolomeo Ammannati, for Cosimo the First de' Medici, in the fifteen sixties. Ammannati is thought to have drawn on ideas from Michelangelo. Have a look at the arches. They're unusually flat and elegant, and the shape has been described as close to a catenary, the curve a hanging chain makes, flipped upside down. Nobody quite agrees what it is, which rather adds to the charm.\n\nThen the statues. They're the Four Seasons, added in sixteen oh eight for the wedding of Cosimo the Second.\n\nOn the night of the third of August nineteen forty-four, retreating German troops mined and blew up the bridge. After the war, Florence decided to rebuild it exactly as it had been. Work began in nineteen fifty-five, led by Riccardo Gizdulich, with the engineer Emilio Brizzi doing the calculations, and it reopened in nineteen fifty-eight.\n\nAnd the detail I love most. When the bridge was rebuilt, Spring's head was missing. It was finally found in the river in nineteen sixty-one, a few dozen metres downstream, and it was put back. Her right arm never turned up.\n\nIt's a bridge that the city chose to put back exactly as it was, because it couldn't imagine the river without it.\n\nWalk out to the middle of the bridge at sunset and look upstream. The view of the Ponte Vecchio, framed by the river and the houses, is the one most people take from here, and it's best when the light is going."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7691602,
+      "centroidLongitude": 11.2503536,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "f1f1d615-c789-5075-8b21-440d490c89b6",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
+        "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
+        "75524167-b50d-5eb4-8070-cda9113f0e3c",
+        "d6a5e0f4-c797-555f-9381-abd85767fa5d",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Bridge",
+        "Architecture",
+        "Engineering",
+        "War",
+        "Free to Visit",
+        "Designed by a Master",
+        "Bartolomeo Ammannati"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+      "createdAt": "2026-11-18",
+      "title": "Bardini Garden | Giardino Bardini",
+      "shortDescription": "A wisteria tunnel, a baroque staircase and the Duomo, all in one view. It's the garden Florentines go to when Boboli is too busy.",
+      "longDescription": "A wisteria tunnel, a baroque staircase and the Duomo, all in one view. It's the garden Florentines go to when Boboli is too busy.\n\nThe garden covers around four hectares of woodland, orchard and kitchen garden, held inside the city's medieval walls. In the seventeenth and eighteenth centuries it was a baroque garden, with grottoes, statues and fountains. In the nineteenth century it went through an Anglo-Chinese phase and then a Victorian one. Then, in nineteen thirteen, the antiques dealer Stefano Bardini bought the villa and filled the garden with sculpture and fountains from his collection.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-giardino-bardini_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-giardino-bardini_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-giardino-bardini_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-giardino-bardini_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b107ae3b-8cfc-5719-b461-11779db02a84",
+          "order": 0,
+          "title": "Bardini Garden | Giardino Bardini",
+          "caption": "At the Via de' Bardi gate at the foot of the hill, or the top gate on Costa San Giorgio.",
+          "latitude": 43.7634811,
+          "longitude": 11.2570208,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-giardino-bardini.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-giardino-bardini_hero.webp",
+          "transcriptText": "A wisteria tunnel, a baroque staircase and the Duomo, all in one view. It's the garden Florentines go to when Boboli is too busy.\n\nYou should be at the entrance on Via de' Bardi, at the foot of the hill, or at the top entrance on Costa San Giorgio, near Villa Bardini. Either way, the garden climbs steeply between them, and at the top, the whole city lies in front of you.\n\nThe garden covers around four hectares of woodland, orchard and kitchen garden, held inside the city's medieval walls. In the seventeenth and eighteenth centuries it was a baroque garden, with grottoes, statues and fountains. In the nineteenth century it went through an Anglo-Chinese phase and then a Victorian one. Then, in nineteen thirteen, the antiques dealer Stefano Bardini bought the villa and filled the garden with sculpture and fountains from his collection.\n\nBardini described it as the garden of three gardens. There's an Italian garden with a great baroque staircase running down the slope. There's an English-style wood, with exotic touches. And there's an agricultural park, now with an orchard and that famous wisteria pergola.\n\nHave a look at the staircase first. It's lined with statues and flowers, and from its top the view runs straight down the slope and over the river to the dome of the cathedral. Then find the pergola. In spring, usually late April or early May, the wisteria blooms in a long purple tunnel, and it's quite something.\n\nThere are about two hundred pieces of sculpture here, thirteen fountains and three grottoes, though they've been placed so that you discover them rather than being confronted by them.\n\nWhat I love about it is the scale. It's big enough to get lost in, and still small enough to feel like someone's garden.\n\nFrom the top gate, walk a few minutes up Costa San Giorgio to the Forte di Belvedere, the Medici fortress at the top of the hill. When it's open, its ramparts give you one of the widest views of Florence there is."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7634811,
+      "centroidLongitude": 11.2570208,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "0fc566b0-b131-54ce-9088-5bb4df2068c0",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "75524167-b50d-5eb4-8070-cda9113f0e3c"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Art",
+        "Green Escape",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "76858496-cf7a-57b0-a076-283a91b491e5",
+      "createdAt": "2026-11-18",
+      "title": "Le Murate",
+      "shortDescription": "For five hundred years, people lived behind these walls who couldn't leave. First they were nuns, then prisoners. Now it's the neighbourhood's…",
+      "longDescription": "For five hundred years, people lived behind these walls who couldn't leave. First they were nuns, then prisoners. Now it's the neighbourhood's living room.\n\nThe name comes from a group of women who had themselves walled in to live as hermits, around thirteen ninety. They were called the Murate, the walled-up ones. In fourteen twenty-four they moved here, the convent grew large, and many noble Florentine women lived in it until the last nuns left in eighteen seventeen.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-le-murate_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-le-murate_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-le-murate_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-le-murate_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-le-murate_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ac120516-435e-5d8c-a635-0ea5ffb716c5",
+          "order": 0,
+          "title": "Le Murate",
+          "caption": "In Piazza delle Murate on Via Ghibellina, below the galleries of old wooden cell doors.",
+          "latitude": 43.7696506,
+          "longitude": 11.2675877,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-le-murate.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-le-murate_hero.webp",
+          "transcriptText": "For five hundred years, people lived behind these walls who couldn't leave. First they were nuns, then prisoners. Now it's the neighbourhood's living room.\n\nPiazza delle Murate, on Via Ghibellina, east of Santa Croce. You should be in a long, paved courtyard with old buildings around it, and on one side, rows of wooden doors set along open galleries on the upper floors. There's usually a café spilling out into the square.\n\nThe name comes from a group of women who had themselves walled in to live as hermits, around thirteen ninety. They were called the Murate, the walled-up ones. In fourteen twenty-four they moved here, the convent grew large, and many noble Florentine women lived in it until the last nuns left in eighteen seventeen.\n\nThen the complex became a prison. It held men from the eighteen thirties, and it went on as the main prison in Florence until the nineteen eighties. The cells were tiny, less than nine square metres each.\n\nHave a look at those galleries and doors. When the site was restored from two thousand and one, with Renzo Piano involved in the scheme, the original wooden cell doors and the walkways along the galleries were kept on purpose. So you can stand in this square and look straight at the prison's architecture, still in place.\n\nToday, the upper floors hold around forty-five homes of social housing, and the ground floors have shops, offices and exhibition spaces. In twenty eleven the Caffè Letterario opened inside the old prison, with talks, concerts and festivals.\n\nAnd here's the thing. Most cities would have demolished it. Florence kept the walls and let people back in, and the memory became part of the neighbourhood rather than something to forget.\n\nBefore you go, have a drink at the Caffè Letterario, and look for the old cells that have been kept for exhibitions. Then walk west along Via Ghibellina towards Casa Buonarroti, the house that Michelangelo's family owned."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7696506,
+      "centroidLongitude": 11.2675877,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "244d9961-3c36-5950-960c-38de6b7e3d92"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Civic",
+        "History",
+        "Crime",
+        "Public Square",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "244d9961-3c36-5950-960c-38de6b7e3d92",
+      "createdAt": "2026-11-18",
+      "title": "Oblate Library | Biblioteca delle Oblate",
+      "shortDescription": "There's a library in Florence where the reward for going up to the roof is the dome of the cathedral, very close indeed.",
+      "longDescription": "There's a library in Florence where the reward for going up to the roof is the dome of the cathedral, very close indeed.\n\nThis was the house of the Oblate, a community of women who worked at the nearby hospital of Santa Maria Nuova, caring for women who were ill. The building dates back to the fourteenth century. The city library moved here in nineteen fifty-three, and after a long renovation it reopened as the Biblioteca delle Oblate in May two thousand and seven.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-biblioteca-delle-oblate_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-biblioteca-delle-oblate_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-biblioteca-delle-oblate_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-biblioteca-delle-oblate_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-biblioteca-delle-oblate_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "dce9c379-ade1-592c-b968-70b52ca951fc",
+          "order": 0,
+          "title": "Oblate Library | Biblioteca delle Oblate",
+          "caption": "On Via dell'Oriuolo, at number twenty-six, the entrance to the long medieval library building.",
+          "latitude": 43.7724708,
+          "longitude": 11.2599636,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-biblioteca-delle-oblate.mp3",
+          "audioDurationSeconds": 93,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-biblioteca-delle-oblate_hero.webp",
+          "transcriptText": "There's a library in Florence where the reward for going up to the roof is the dome of the cathedral, very close indeed.\n\nVia dell'Oriuolo, a few minutes' walk east of the Duomo. You should be at number twenty-six, outside a long, plain medieval building with the entrance to the Biblioteca delle Oblate. Inside, the building is arranged around a cloister.\n\nThis was the house of the Oblate, a community of women who worked at the nearby hospital of Santa Maria Nuova, caring for women who were ill. The building dates back to the fourteenth century. The city library moved here in nineteen fifty-three, and after a long renovation it reopened as the Biblioteca delle Oblate in May two thousand and seven.\n\nHave a look at the reading rooms first. It's a working public library, busy with students and readers, and the old convent spaces carry that well. Then head up to the top floor and out onto the altana, the rooftop terrace. In twenty twenty-one it was named after the Brazilian activist Marielle Franco.\n\nAnd there it is. Brunelleschi's dome, right in front of you, close enough that you can make out the red tiles and the white ribs climbing to the lantern. There's a café up there too, so you can have a coffee with the view.\n\nWhat I love about this is that it isn't a viewpoint. It's a library that just happens to have the best seat in the house, and it's open to anyone who walks in.\n\nWhen you leave, walk down Via dell'Oriuolo towards the Duomo. You'll come out right at the cathedral's east end, and after seeing the dome up close from the roof, you'll find yourself looking at it differently."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 93,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7724708,
+      "centroidLongitude": 11.2599636,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "1f17e306-6bf8-545e-8b91-150b721ef9b8",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "76858496-cf7a-57b0-a076-283a91b491e5",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "3d8887ff-eb4a-5695-9d04-424b72ff8d6f"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Library",
+        "History",
+        "Viewpoint",
+        "Free to Visit",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f1f1d615-c789-5075-8b21-440d490c89b6",
+      "createdAt": "2026-11-18",
+      "title": "Ponte Vecchio",
+      "shortDescription": "The shops on this bridge used to sell meat. The butchers threw the scraps straight into the river below. That's how the gold got here.",
+      "longDescription": "The shops on this bridge used to sell meat. The butchers threw the scraps straight into the river below. That's how the gold got here.\n\nA flood swept the previous bridge away in November thirteen thirty-three, and this one was finished around thirteen forty-five. Look at the arches. Three of them, very low and very wide. That was a bold idea for its day, and it's part of why the bridge has come through every flood since.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-ponte-vecchio_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-ponte-vecchio_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e4d0f234-f80d-5207-8611-0c4262adecfc",
+          "order": 0,
+          "title": "Ponte Vecchio",
+          "caption": "In the middle of the bridge, at the downstream opening by the bronze bust, facing the water.",
+          "latitude": 43.7680877,
+          "longitude": 11.2531757,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-ponte-vecchio.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-ponte-vecchio_hero.webp",
+          "transcriptText": "The shops on this bridge used to sell meat. The butchers threw the scraps straight into the river below. That's how the gold got here.\n\nYou should be in the middle of the bridge, where the rows of little shops break open on both sides. Stand at the downstream opening, the one with a bronze bust on a tall stone plinth, and face the water. The Arno flows away from you, towards the next bridge, Ponte Santa Trinita. Behind you, across the bridge, the opposite gap is roofed over by a long, plain passageway running along the top of the shops.\n\nA flood swept the previous bridge away in November thirteen thirty-three, and this one was finished around thirteen forty-five. Look at the arches. Three of them, very low and very wide. That was a bold idea for its day, and it's part of why the bridge has come through every flood since.\n\nNow the shops. In the fourteen hundreds the city gave them to butchers and greengrocers, who could tip their waste into the Arno. Owners later built back rooms out over the water, propped on brackets, which is why the bridge looks so wonderfully lumpy from the riverbank. Then, in fifteen ninety-four, Grand Duke Ferdinando de' Medici threw the butchers out and moved the goldsmiths in. The bust beside you is the goldsmith and sculptor Benvenuto Cellini, who learned his trade in this city.\n\nThe reason was that passageway above the shops. The Vasari Corridor was built in fifteen sixty-five for Cosimo de' Medici, so the family could walk from their offices in the Palazzo Vecchio to their home at the Palazzo Pitti without meeting the public. A Duke walking over a meat market. The smell had to go.\n\nAnd here's the thing. On the night of the third of August, nineteen forty-four, the retreating German army blew up every bridge in Florence except this one. They destroyed the streets at either end instead. So the oldest bridge still standing in Florence is the one that was spared.\n\nBefore you go, walk to the south end of the bridge and look up at the old stone tower on the corner. The corridor bends round it on brackets instead of going through. The story goes that the family who owned it, the Mannelli, wouldn't give way, even for a Medici. And since December twenty twenty-four, you can walk that corridor yourself, with a ticket from the Uffizi."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7680877,
+      "centroidLongitude": 11.2531757,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [
+        "65deaa22-8fc8-5ad0-becc-e96996c53c4b",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
+        "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
+        "75524167-b50d-5eb4-8070-cda9113f0e3c",
+        "d6a5e0f4-c797-555f-9381-abd85767fa5d",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "30CF0118-B1D0-506A-BFD6-FD82707D2A29"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Bridge",
+        "Commerce",
+        "History",
+        "Iconic Landmark",
+        "Viewpoint",
         "Free to Visit"
       ],
       "priceUSD": 0
@@ -180293,7 +182272,14 @@
       "city": "Florence",
       "country": "Italy",
       "relatedTourIds": [
-        "88BE67C8-7E9E-520C-B4D3-8C5E81E3B07A"
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "244d9961-3c36-5950-960c-38de6b7e3d92",
+        "88BE67C8-7E9E-520C-B4D3-8C5E81E3B07A",
+        "75524167-b50d-5eb4-8070-cda9113f0e3c",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "76858496-cf7a-57b0-a076-283a91b491e5",
+        "3d8887ff-eb4a-5695-9d04-424b72ff8d6f"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -182313,11 +184299,11 @@
         "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
         "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
         "700B85E8-585C-55C5-9FDD-F261A2C11A91",
-        "22729270-A072-5E55-845D-D5FBB3FBED84",
-        "21FEC2C3-4085-56DA-A561-3FF40BBB8197",
-        "BE068749-30D5-57E4-A5AC-6246FEB72058"
+        "22729270-A072-5E55-845D-D5FBB3FBED84"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -198161,10 +200147,10 @@
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
         "88BE67C8-7E9E-520C-B4D3-8C5E81E3B07A",
         "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
-        "98D29A22-8F9D-5B7D-BE3B-B06B62323328",
-        "A94E4477-2234-5766-B07C-5FD2A7E3B214",
-        "D765D19F-658C-5795-B7D4-4812075FB9E7",
-        "B2495278-DEEA-5D59-B655-65523FFF4DC4"
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "c878b9be-ac0c-54b4-9d72-d85f77ac12fc"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -204912,8 +206898,10 @@
       "country": "Italy",
       "relatedTourIds": [
         "4A239611-BDB6-5D48-982A-35E2F8E44688",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
         "B2495278-DEEA-5D59-B655-65523FFF4DC4",
-        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB"
+        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
+        "4f57408c-2fe0-59d8-9936-4128dcda4647"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -204963,13 +206951,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
         "A94E4477-2234-5766-B07C-5FD2A7E3B214",
-        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
-        "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA",
-        "88BE67C8-7E9E-520C-B4D3-8C5E81E3B07A",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688",
-        "22729270-A072-5E55-845D-D5FBB3FBED84",
-        "B2495278-DEEA-5D59-B655-65523FFF4DC4"
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "f1f1d615-c789-5075-8b21-440d490c89b6",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "aafc8126-49f3-5425-a79d-ef1523406c01"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -205019,13 +207007,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
+        "f1f1d615-c789-5075-8b21-440d490c89b6",
+        "65deaa22-8fc8-5ad0-becc-e96996c53c4b",
         "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
         "A94E4477-2234-5766-B07C-5FD2A7E3B214",
-        "22729270-A072-5E55-845D-D5FBB3FBED84",
-        "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
-        "D765D19F-658C-5795-B7D4-4812075FB9E7",
-        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2"
+        "22729270-A072-5E55-845D-D5FBB3FBED84"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -205074,14 +207062,14 @@
       "city": "Florence",
       "country": "Italy",
       "relatedTourIds": [
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
         "91D1E21B-AAA0-500A-8624-3CCBF3FACE06",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
-        "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
-        "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
-        "21FEC2C3-4085-56DA-A561-3FF40BBB8197",
-        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
-        "22729270-A072-5E55-845D-D5FBB3FBED84"
+        "26a5bcfb-6a0d-5ba0-9a0e-d1cf26abdf06",
+        "30CF0118-B1D0-506A-BFD6-FD82707D2A29"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -205131,13 +207119,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
+        "eb282ed1-5fe8-5ead-8b51-d8f76804ef8f",
         "B2495278-DEEA-5D59-B655-65523FFF4DC4",
-        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
-        "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688",
-        "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA",
-        "700B85E8-585C-55C5-9FDD-F261A2C11A91"
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -205248,8 +207236,8 @@
         "22729270-A072-5E55-845D-D5FBB3FBED84",
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
         "BE068749-30D5-57E4-A5AC-6246FEB72058",
-        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688"
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
+        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -241471,6 +243459,16 @@
       "centroidLongitude": 11.2566875,
       "city": "Florence",
       "country": "Italy",
+      "relatedTourIds": [
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "52e98312-2fc5-5714-a1a8-7f344f4dbd7a",
+        "1f17e306-6bf8-545e-8b91-150b721ef9b8",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "244d9961-3c36-5950-960c-38de6b7e3d92",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Religious Building",
@@ -310550,7 +312548,7 @@
         "BE068749-30D5-57E4-A5AC-6246FEB72058",
         "936C8C54-469F-597B-BD56-C2BFAFA9B622",
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688"
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
@@ -310600,8 +312598,8 @@
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
         "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
-        "936C8C54-469F-597B-BD56-C2BFAFA9B622",
-        "A94E4477-2234-5766-B07C-5FD2A7E3B214"
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
+        "936C8C54-469F-597B-BD56-C2BFAFA9B622"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
@@ -310652,7 +312650,7 @@
         "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
         "936C8C54-469F-597B-BD56-C2BFAFA9B622",
         "BE068749-30D5-57E4-A5AC-6246FEB72058",
-        "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4"
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -310745,8 +312743,8 @@
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
         "BE068749-30D5-57E4-A5AC-6246FEB72058",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
-        "936C8C54-469F-597B-BD56-C2BFAFA9B622",
-        "30CF0118-B1D0-506A-BFD6-FD82707D2A29"
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "936C8C54-469F-597B-BD56-C2BFAFA9B622"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -310795,11 +312793,11 @@
         "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
         "22729270-A072-5E55-845D-D5FBB3FBED84",
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
-        "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D",
-        "936C8C54-469F-597B-BD56-C2BFAFA9B622",
-        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
-        "A94E4477-2234-5766-B07C-5FD2A7E3B214"
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "b6a6ca1b-3be7-5fe3-881e-15b83aaf1c2e",
+        "2A2CCCCF-F6F7-50A1-8182-EFBEBA4F0D8D"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [],
@@ -317972,7 +319970,9 @@
         "936C8C54-469F-597B-BD56-C2BFAFA9B622",
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
         "700B85E8-585C-55C5-9FDD-F261A2C11A91",
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
         "21FEC2C3-4085-56DA-A561-3FF40BBB8197",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
         "6B83B3CB-92C3-5341-A3E9-94A4229B5CCD",
         "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2"
       ],
@@ -345856,6 +347856,9 @@
       "city": "Florence",
       "country": "Italy",
       "relatedTourIds": [
+        "b6a6ca1b-3be7-5fe3-881e-15b83aaf1c2e",
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
         "BE068749-30D5-57E4-A5AC-6246FEB72058"
       ],
       "primaryCategory": "foodAndDrink",
@@ -372376,13 +374379,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "A94E4477-2234-5766-B07C-5FD2A7E3B214",
+        "4f57408c-2fe0-59d8-9936-4128dcda4647",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
         "21FEC2C3-4085-56DA-A561-3FF40BBB8197",
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
         "91D1E21B-AAA0-500A-8624-3CCBF3FACE06",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
-        "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688",
-        "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA"
+        "30CF0118-B1D0-506A-BFD6-FD82707D2A29"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -372521,14 +374524,14 @@
       "city": "Florence",
       "country": "Italy",
       "relatedTourIds": [
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
         "21FEC2C3-4085-56DA-A561-3FF40BBB8197",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
         "936C8C54-469F-597B-BD56-C2BFAFA9B622",
+        "c878b9be-ac0c-54b4-9d72-d85f77ac12fc",
         "DEC7CEFF-8BEF-57FD-AAAE-E09F7A8B4949",
-        "D765D19F-658C-5795-B7D4-4812075FB9E7",
-        "22729270-A072-5E55-845D-D5FBB3FBED84",
-        "A94E4477-2234-5766-B07C-5FD2A7E3B214",
-        "63166E79-D792-588E-8179-6328F82FD06C",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688"
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
+        "D765D19F-658C-5795-B7D4-4812075FB9E7"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -372577,13 +374580,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "700B85E8-585C-55C5-9FDD-F261A2C11A91",
+        "ce63505a-2dac-5c9c-8e45-8acffd47d208",
         "936C8C54-469F-597B-BD56-C2BFAFA9B622",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "67c1ff4d-8a09-55f6-b2f6-7c194b66dfd7",
+        "26a5bcfb-6a0d-5ba0-9a0e-d1cf26abdf06",
         "D765D19F-658C-5795-B7D4-4812075FB9E7",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688",
-        "DEC7CEFF-8BEF-57FD-AAAE-E09F7A8B4949",
-        "B2495278-DEEA-5D59-B655-65523FFF4DC4",
-        "A94E4477-2234-5766-B07C-5FD2A7E3B214",
-        "63166E79-D792-588E-8179-6328F82FD06C"
+        "4A239611-BDB6-5D48-982A-35E2F8E44688"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -409747,14 +411750,14 @@
       "city": "Florence",
       "country": "Italy",
       "relatedTourIds": [
+        "c12be314-082d-5864-a541-b088b3e92d09",
         "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB",
         "88BE67C8-7E9E-520C-B4D3-8C5E81E3B07A",
         "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA",
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
-        "A94E4477-2234-5766-B07C-5FD2A7E3B214",
-        "96867FA5-E7BC-541E-9E6E-1C6BEA3907B2",
-        "D765D19F-658C-5795-B7D4-4812075FB9E7",
-        "4A239611-BDB6-5D48-982A-35E2F8E44688"
+        "244d9961-3c36-5950-960c-38de6b7e3d92",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "A94E4477-2234-5766-B07C-5FD2A7E3B214"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -415312,11 +417315,14 @@
       "city": "Florence",
       "country": "Italy",
       "relatedTourIds": [
-        "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA",
-        "30CF0118-B1D0-506A-BFD6-FD82707D2A29",
-        "98D29A22-8F9D-5B7D-BE3B-B06B62323328",
-        "AE8B8242-FB66-58F7-BC97-D6276F144CF1",
-        "58FFD56F-68C5-5E7A-A3A6-14348A9DFCCB"
+        "c12be314-082d-5864-a541-b088b3e92d09",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "75524167-b50d-5eb4-8070-cda9113f0e3c",
+        "1f17e306-6bf8-545e-8b91-150b721ef9b8",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "76858496-cf7a-57b0-a076-283a91b491e5",
+        "E02B7011-DFFF-5EA0-9A0A-A776B515F3CA"
       ],
       "primaryCategory": "visualArt",
       "tags": [
