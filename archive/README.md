@@ -406,3 +406,4 @@ Full text for every one of them is in
 - [HANDOFF-261118-florence.md](HANDOFF-261118-florence.md) — **Florence launch: Atlas Studio FLR**, 34 singles, 13 new architect tags; 1 pin moved; 3 place questions to Edward
 - [HANDOFF-261116-triage-batch.md](HANDOFF-261116-triage-batch.md) — **Triage batch: 38 link pins** from 35 creators (21 new); 3 skipped, 1 held, 9 place questions left for Edward.
 - [HANDOFF-261118-triage-batch.md](HANDOFF-261118-triage-batch.md) — **Triage batch: 69 link pins** from 14 creators (9 new); 6 skipped, 1 held (Ahwahnee), 16 place questions left for Edward.
+- [HANDOFF-261118-scenescout.md](HANDOFF-261118-scenescout.md) — **Triage batch: 32 link pins** from one new TikTok creator (@scenescout_), LA filming locations; 0 skipped; 4 place questions left for Edward.
