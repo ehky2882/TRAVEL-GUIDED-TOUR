@@ -51774,11 +51774,11 @@
         "2265790d-8d17-5a46-9c81-875bb2b46277",
         "0ec2a834-b9f6-56ff-9eba-2f3e33b3c2fe",
         "d865d08e-350d-5fd0-8a89-9e2bdddb436c",
+        "4AD73B58-D683-529A-BB77-F2D7EAD24F50",
         "0fb3060c-c89f-5b94-9896-5ffbe01905bb",
         "9a737ba5-95d8-5e77-b3fb-84babc1aa423",
         "E857F697-FF9D-56CF-936F-D3AE2D36EDC0",
-        "9b06ec4a-8e0d-59af-af1c-3a8cf6870342",
-        "0187e605-c21e-5862-9c6d-0554f1777e6f"
+        "9b06ec4a-8e0d-59af-af1c-3a8cf6870342"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -185185,8 +185185,8 @@
         "F1F59415-AA33-5001-A4F4-AA0D9B696556",
         "B979272D-42C9-578F-882C-F5DCAB4E8D6D",
         "1E5878A8-D8BF-597D-90BB-E838A9B5F9F7",
-        "13c93799-efad-5b2b-b76e-b0002d14aa2a",
-        "e13e0884-96ef-5e45-9fd6-145316f2394e"
+        "C5E6A8C8-5F87-595E-8CF9-5E39E43EDD2D",
+        "13c93799-efad-5b2b-b76e-b0002d14aa2a"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -430172,6 +430172,9 @@
       "centroidLongitude": -118.1507832,
       "city": "South Pasadena",
       "country": "United States",
+      "relatedTourIds": [
+        "D1075402-2C18-5B31-A892-F9162BFEFBC8"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Venue",
@@ -430217,6 +430220,10 @@
       "centroidLongitude": -118.2838024,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "04F59E44-AE7C-5703-8187-A4D5FE6FE005",
+        "de3e074a-dfc1-51d1-a1ad-437aad4f1ad8"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Park",
@@ -430261,6 +430268,16 @@
       "centroidLongitude": -118.2407929,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "B979272D-42C9-578F-882C-F5DCAB4E8D6D",
+        "3a43c0fd-c641-5e02-ba26-f7644ee6ebb3",
+        "E0DF335E-71C7-5049-BDE4-ECE48C9DC401",
+        "62ECCD3D-535D-5168-9299-54AEECE3FD16",
+        "636F5F7F-11D4-55C0-B54D-E185DE7D934A",
+        "BFE4FED1-4A1E-5397-BE8A-61EF0989E081",
+        "4754C562-061B-582E-82AC-A09CE93C6098",
+        "FC0298CF-65AB-5508-A446-67DBA1E663D3"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -430306,6 +430323,11 @@
       "centroidLongitude": -118.3963778,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "212FB1AC-2015-5082-9167-F43D3F50EA76",
+        "871828DC-B6CB-5132-8C13-6CBAB27CB966",
+        "F1F59415-AA33-5001-A4F4-AA0D9B696556"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
@@ -430350,6 +430372,9 @@
       "centroidLongitude": -118.3963778,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "C5E6A8C8-5F87-595E-8CF9-5E39E43EDD2D"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
@@ -430394,6 +430419,10 @@
       "centroidLongitude": -118.3699254,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "13c93799-efad-5b2b-b76e-b0002d14aa2a",
+        "8e6551f2-dd32-58c6-8abe-6c6050adf4fc"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Commerce",
@@ -430483,6 +430512,10 @@
       "centroidLongitude": -118.3167763,
       "city": "Burbank",
       "country": "United States",
+      "relatedTourIds": [
+        "BDF0B103-087C-59E2-88A9-E39D51430A92",
+        "5F84DAF4-4BBB-55FA-AEDB-0CDBD6921F64"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -430527,6 +430560,10 @@
       "centroidLongitude": -118.3167763,
       "city": "Burbank",
       "country": "United States",
+      "relatedTourIds": [
+        "29034499-15F2-5700-97A1-B50581D296A4",
+        "5F84DAF4-4BBB-55FA-AEDB-0CDBD6921F64"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -430571,6 +430608,10 @@
       "centroidLongitude": -118.3369977,
       "city": "Burbank",
       "country": "United States",
+      "relatedTourIds": [
+        "29034499-15F2-5700-97A1-B50581D296A4",
+        "BDF0B103-087C-59E2-88A9-E39D51430A92"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Food",
@@ -430659,6 +430700,9 @@
       "centroidLongitude": -118.4805983,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "B0E00142-1759-5BC2-8229-9528D85C4C2D"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
@@ -430923,6 +430967,9 @@
       "centroidLongitude": -118.1425004,
       "city": "Pasadena",
       "country": "United States",
+      "relatedTourIds": [
+        "BFB0CE38-FA87-571D-BA30-5D602D90D8A5"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -431055,6 +431102,9 @@
       "centroidLongitude": -118.1393445,
       "city": "Pasadena",
       "country": "United States",
+      "relatedTourIds": [
+        "DC90E578-37B1-5DC1-994A-0B7F67C9314B"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -431099,6 +431149,9 @@
       "centroidLongitude": -118.1507832,
       "city": "South Pasadena",
       "country": "United States",
+      "relatedTourIds": [
+        "6910465A-A56A-5928-838E-157763BD5994"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Venue",
@@ -431231,6 +431284,10 @@
       "centroidLongitude": -118.3866257,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "C8F66497-2544-5E6A-8F37-EA15C95074E1",
+        "C75189FB-C16F-5F59-BC68-16CBE0C653D2"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building"
@@ -431274,6 +431331,9 @@
       "centroidLongitude": -118.3866257,
       "city": "Los Angeles",
       "country": "United States",
+      "relatedTourIds": [
+        "636F5F7F-11D4-55C0-B54D-E185DE7D934A"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building"
