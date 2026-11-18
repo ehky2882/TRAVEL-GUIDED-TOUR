@@ -247,6 +247,7 @@ enum Tag {
             "João Filgueiras Lima", "Ruy Ohtake", "Alexandre Chan", "BLOCO Arquitetos", "Carlos Alberto Naves", "Sérgio Rocha", "Marcelo Campelo",
             "Édouard-Jean Niermans", "Studio Mumbai", "René Livieri", "Yves Bayard", "Henri Vidal", "André Hermant", "Jean-François Bodin", "Michel Marot", "Jacques Droz", "Mikhail Preobrazhensky", "Roger Séassal", "Michel Péna", "Francis Chapus", "Antoine Spinelli", "Hans-Georg Tersling",
             "Déborah Hirigoyen", "Iannis Xenakis", "Coop Himmelb(l)au", "Robert Giroud", "Môrice Leroux", "Jakob + MacFarlane", "Jacques-Germain Soufflot", "Bernard Zehrfuss", "Antoine-Marie Chenavard", "Jean-Marie Pollet", "Tony Garnier", "Denis & Eugène Bühler",
+            "Michelangelo", "Filippo Brunelleschi", "Bartolomeo Ammannati", "Giovanni Michelucci", "Pier Luigi Nervi", "Michelozzo", "Giuliano da Sangallo", "Il Cronaca", "Adolfo Natalini", "Claudio Nardi", "Michele Bönan", "Francesco Maestrelli", "Pietro Comparini",
         ]),
     ]
 
