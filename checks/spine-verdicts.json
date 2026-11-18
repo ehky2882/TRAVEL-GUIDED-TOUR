@@ -2167,5 +2167,14 @@
     "date": "2026-10-29",
     "note": "Our point is OSM's mapped Kinnitty Castle Hotel building; Wikidata Q281195 is rounded to one decimal (53.1,-7.7). NOT MOVED.",
     "verdict": "wikidata-wrong"
+  },
+  "Gipsoteca Canoviana": {
+    "at": [
+      45.854288,
+      11.88132
+    ],
+    "date": "2026-11-18",
+    "note": "Wikidata Q3768553 puts the museum on Viale Antonio Canova, 571 m south-west. The museum's own address is Via Antonio Canova 74, which is where OSM's 'Gypsoteca Canova' node sits and where the pin is. NOT MOVED.",
+    "verdict": "wikidata-wrong"
   }
 }
