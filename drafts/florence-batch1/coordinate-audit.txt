@@ -1,0 +1,61 @@
+RUN check-coordinates.py · rev 02bd1f9f · 2026-11-18T15:40:12Z · args: --drop /tmp/claude-0/drop/x --city Florence, Italy --out /tmp/claude-0/coords.txt
+auditing 34 coordinate(s) against 'Florence, Italy'  (~1.2 min at Nominatim's rate limit)
+
+  [  1/34] Basilica di San Miniato al Monte   fwd     18m  at: Basilica di San Miniato al Mon
+  [  2/34] Ponte Santa Trinita                fwd     15m  at: Estate
+  [  3/34] Ditta Artigianale Via dello Sprone fwd    n/a  at: -
+  [  4/34] Le Murate                          fwd     53m  at: Università degli Studi di Fire
+  [  5/34] Museo dell'Opera del Duomo         fwd     12m  at: Mandragora
+  [  6/34] Chiostro dello Scalzo              fwd     18m  at: Poste Italiane
+  [  7/34] Museo Novecento                    fwd     25m  at: -
+  [  8/34] Trattoria Cammillo                 fwd     19m  at: -
+  [  9/34] Rivoire                            fwd     13m  at: -
+  [ 10/34] Villa Cora                         fwd     17m  at: Hotel Villa Cora
+  [ 11/34] Il Santo Bevitore                  fwd     16m  at: Minimarket
+  [ 12/34] Firenze Santa Maria Novella        fwd    103m  at: -
+  [ 13/34] Scuola del Cuoio                   fwd     28m  at: Cappella de' Pazzi
+  [ 14/34] Giulio Giannini e Figlio           fwd    n/a  at: -
+  [ 15/34] Officina Profumo-Farmaceutica di S fwd     22m  at: Museo dell'Officina Profumo - 
+  [ 16/34] Ad Astra                           fwd    n/a  at: -
+  [ 17/34] Stefano Bemer                      fwd     17m  at: Museo Casa Rodolfo Siviero
+  [ 18/34] Ponte Vecchio                      fwd      6m  at: Ponte Vecchio
+  [ 19/34] Giardino Bardini                   fwd     82m  at: -
+  [ 20/34] Hotel Lungarno                     fwd     24m  at: -
+  [ 21/34] Locale                             fwd     16m  at: -
+  [ 22/34] Trattoria Sostanza                 fwd     18m  at: -
+  [ 23/34] Cappella de' Pazzi                 fwd     17m  at: Basilica di Santa Croce
+  [ 24/34] Stadio Artemio Franchi             fwd     57m  at: Stadio comunale Artemio Franch
+  [ 25/34] Antico Setificio Fiorentino        fwd    n/a  at: -
+  [ 26/34] Biblioteca delle Oblate            fwd     25m  at: -
+  [ 27/34] Trattoria Mario                    fwd     13m  at: -
+  [ 28/34] Biblioteca Medicea Laurenziana     fwd     84m  at: Basilica di San Lorenzo
+  [ 29/34] Palazzo Strozzi                    fwd     20m  at: Gabinetto Scientifico Letterar
+  [ 30/34] Loggia Roof Bar, Palazzo Guadagni  fwd    n/a  at: Hotel Palazzo Guadagni
+  [ 31/34] Museo Stefano Bardini              fwd     29m  at: -
+  [ 32/34] Chiesa di San Giovanni Battista, t fwd    n/a  at: -
+  [ 33/34] Riva Lofts Florence                fwd    n/a  at: -
+  [ 34/34] Le Volpi e l'Uva                   fwd     21m  at: Corridoio Vasariano
+
+========================================================================
+GROSS - none: every coordinate is at or beside its venue
+
+UNVERIFIABLE - 7: no automatic verdict, and that is
+not the same as a pass. A towpath, a square and a long street have no
+single point to measure against; read the script and judge by hand.
+    Ditta Artigianale Via dello Sprone Speci venue could not be geocoded
+    Giulio Giannini e Figlio                 venue could not be geocoded
+    Ad Astra                                 venue could not be geocoded
+    Antico Setificio Fiorentino              venue could not be geocoded
+    Loggia Roof Bar, Palazzo Guadagni        venue could not be geocoded
+    Chiesa di San Giovanni Battista, the Chu venue could not be geocoded
+    Riva Lofts Florence                      venue could not be geocoded
+  (a GROSS verdict needs the geocoder to have found the venue itself;
+   where it did not, the distance is reported and not acted on)
+
+========================================================================
+BIAS - 11/20 north of true position, median +1.8 m, p = 0.82
+  reference, measured 2026-08-22:
+    old-sourced cities (NYC, London)   24/51   -0.9 m   p = 1.0
+    drop-pipeline cities (BCN, MIL)    41/50  +10.3 m   p = 5.6e-06
+
+  >> No significant directional bias. Consistent with upstream fixed.
