@@ -8499,6 +8499,16 @@
       "avatarEmoji": "📷",
       "bio": "Instagram creator. These pins link to their posts; Dozent hosts none of this content.",
       "websiteURL": "https://www.instagram.com/blondejemima/"
+    },
+    {
+      "id": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "displayName": "TikTok @scenescout_",
+      "platform": "tiktok",
+      "handle": "scenescout_",
+      "avatarURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/avatar-tiktok-scenescout.webp",
+      "avatarEmoji": "🎵",
+      "bio": "TikTok creator. These pins link to their posts; Dozent hosts none of this content.",
+      "websiteURL": "https://www.tiktok.com/@scenescout_"
     }
   ],
   "tours": [
@@ -51764,11 +51774,11 @@
         "2265790d-8d17-5a46-9c81-875bb2b46277",
         "0ec2a834-b9f6-56ff-9eba-2f3e33b3c2fe",
         "d865d08e-350d-5fd0-8a89-9e2bdddb436c",
+        "4AD73B58-D683-529A-BB77-F2D7EAD24F50",
         "0fb3060c-c89f-5b94-9896-5ffbe01905bb",
         "9a737ba5-95d8-5e77-b3fb-84babc1aa423",
         "E857F697-FF9D-56CF-936F-D3AE2D36EDC0",
-        "9b06ec4a-8e0d-59af-af1c-3a8cf6870342",
-        "0187e605-c21e-5862-9c6d-0554f1777e6f"
+        "9b06ec4a-8e0d-59af-af1c-3a8cf6870342"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -185175,8 +185185,8 @@
         "F1F59415-AA33-5001-A4F4-AA0D9B696556",
         "B979272D-42C9-578F-882C-F5DCAB4E8D6D",
         "1E5878A8-D8BF-597D-90BB-E838A9B5F9F7",
-        "13c93799-efad-5b2b-b76e-b0002d14aa2a",
-        "e13e0884-96ef-5e45-9fd6-145316f2394e"
+        "C5E6A8C8-5F87-595E-8CF9-5E39E43EDD2D",
+        "13c93799-efad-5b2b-b76e-b0002d14aa2a"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -430034,6 +430044,1473 @@
         "Designed by a Master",
         "Frank Gehry",
         "Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1A21A22E-EB6C-5C2E-A416-8807C5C12418",
+      "createdAt": "2026-11-18",
+      "title": "The Space Jam House",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "Can you believe it’s been 30 years since Space Jam? 🤯🏀 This is the real house where Michael Jordan’s unforgettable adventure began before becoming one of the most iconic family films of the ’90s. How old were you when you first watched it? 📍1002 Highland St, South Pasadena, Ca Follow for more! #filminglocations #nostalgic #90s #spacejam #michaeljordan",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-space-jam-house-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7708459314192633102",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "EA940FF9-B77B-5D11-AE89-46F1BD9D2BE1",
+          "order": 0,
+          "title": "The Space Jam House",
+          "caption": "Can you believe it’s been 30 years since Space Jam? 🤯🏀 This is the real house where Michael Jordan’s unforgettable adventure began before becoming one of the most iconic family films of the ’90s. How old were you when you first watched it? 📍1002 Highland St, South Pasadena, Ca Follow for more! #filminglocations #nostalgic #90s #spacejam #michaeljordan",
+          "latitude": 34.121959,
+          "longitude": -118.1569128,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-space-jam-house-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.121959,
+      "centroidLongitude": -118.1569128,
+      "city": "South Pasadena",
+      "country": "United States",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "946304FB-B755-5F99-A72A-94754BE3C21E",
+      "createdAt": "2026-11-18",
+      "title": "Torrance High School (She's All That)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "One bet. One unforgettable ’90s classic. 🎓❤️ This is the real high school from She’s All That, where one of the most iconic teen rom-coms of the ’90s came to life. Nearly 30 years later, it’s still a must-visit filming location for movie fans. Who else still loves She’s All That? 📍Torrance High School, Torrance, Ca Follow for more! #filminglocation #nostalgic #shesallthat #90s #romcom",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/torrance-high-school-she-s-all-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7703325804884757790",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "BC6E6E92-5A91-5568-B6A4-E6CFB71DCA10",
+          "order": 0,
+          "title": "Torrance High School (She's All That)",
+          "caption": "One bet. One unforgettable ’90s classic. 🎓❤️ This is the real high school from She’s All That, where one of the most iconic teen rom-coms of the ’90s came to life. Nearly 30 years later, it’s still a must-visit filming location for movie fans. Who else still loves She’s All That? 📍Torrance High School, Torrance, Ca Follow for more! #filminglocation #nostalgic #shesallthat #90s #romcom",
+          "latitude": 33.8283805,
+          "longitude": -118.3202349,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/torrance-high-school-she-s-all-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.8283805,
+      "centroidLongitude": -118.3202349,
+      "city": "Torrance",
+      "country": "United States",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "Civic"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6910465A-A56A-5928-838E-157763BD5994",
+      "createdAt": "2026-11-18",
+      "title": "Rialto Theatre (Scream 2)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "This wasn’t just a movie premiere…It was the beginning of one of horror’s most unforgettable sequels. 🎬🔪 This is the real filming location where audiences lined up for the premiere of Stab in Scream 2—a scene every horror fan remembers. What’s your favorite scary movie? 🍿 📍Rialto Theater, South Pasadena, Ca Follow for more! #filminglocation #nostalgic #scream2 #stab #scarymovies",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rialto-theatre-scream-2-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7695086260272008478",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "E68E56CD-D21C-5B60-8D9F-99706AB3FEEE",
+          "order": 0,
+          "title": "Rialto Theatre (Scream 2)",
+          "caption": "This wasn’t just a movie premiere…It was the beginning of one of horror’s most unforgettable sequels. 🎬🔪 This is the real filming location where audiences lined up for the premiere of Stab in Scream 2—a scene every horror fan remembers. What’s your favorite scary movie? 🍿 📍Rialto Theater, South Pasadena, Ca Follow for more! #filminglocation #nostalgic #scream2 #stab #scarymovies",
+          "latitude": 34.1140166,
+          "longitude": -118.1507832,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rialto-theatre-scream-2-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1140166,
+      "centroidLongitude": -118.1507832,
+      "city": "South Pasadena",
+      "country": "United States",
+      "relatedTourIds": [
+        "D1075402-2C18-5B31-A892-F9162BFEFBC8"
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance",
+        "Notable Building"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "B0E00142-1759-5BC2-8229-9528D85C4C2D",
+      "createdAt": "2026-11-18",
+      "title": "Griffith Park Merry-Go-Round (Grey's Anatomy)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "If you’re a Grey’s Anatomy fan… You probably heard the quote before you even saw the carousel. 🎠💙 “The carousel never stops turning.” This is the real film location behind one of the series’ most emotional moments. Who else instantly recognized this place? 📍4730 Crystal Springs Dr, Los Angeles, Ca Follow for more! #greysanatomy #thecarouselneverstopsturning #filmlocation #nostalgic #tvshow",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/griffith-park-merry-go-round-grey-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7674666719524162847",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "7E319703-2E37-5F12-B461-51F715DEA5DB",
+          "order": 0,
+          "title": "Griffith Park Merry-Go-Round (Grey's Anatomy)",
+          "caption": "If you’re a Grey’s Anatomy fan… You probably heard the quote before you even saw the carousel. 🎠💙 “The carousel never stops turning.” This is the real film location behind one of the series’ most emotional moments. Who else instantly recognized this place? 📍4730 Crystal Springs Dr, Los Angeles, Ca Follow for more! #greysanatomy #thecarouselneverstopsturning #filmlocation #nostalgic #tvshow",
+          "latitude": 34.1327078,
+          "longitude": -118.2838024,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/griffith-park-merry-go-round-grey-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1327078,
+      "centroidLongitude": -118.2838024,
+      "city": "Los Angeles",
+      "country": "United States",
+      "relatedTourIds": [
+        "04F59E44-AE7C-5703-8187-A4D5FE6FE005",
+        "de3e074a-dfc1-51d1-a1ad-437aad4f1ad8"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Park",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "C75189FB-C16F-5F59-BC68-16CBE0C653D2",
+      "createdAt": "2026-11-18",
+      "title": "Terminator 2 Playground, Elysian Park",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 Terminator 2: Judgement Day (1991) If THIS scene traumatized you as a kid…you’re not alone 😭🔥 What age were you when you first watched T2?👇🏼 🎬 Fun Fact: The apocalypse scene was filmed at a real playground in Los Angeles, using practical effects, miniatures, & groundbreaking CGI — making it feel disturbingly real instead of Cartoonish. 📍Elysian Park, Los Angeles, Ca Follow for more! #terminator2 #arnoldswarzenegger #filmlocation #dreamscene #nostalgic",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/terminator-2-playground-elysian-park-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7672076611025456415",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "B8BF07A8-5AE1-5786-AAA7-AE53E7BAF990",
+          "order": 0,
+          "title": "Terminator 2 Playground, Elysian Park",
+          "caption": "🎥 Terminator 2: Judgement Day (1991) If THIS scene traumatized you as a kid…you’re not alone 😭🔥 What age were you when you first watched T2?👇🏼 🎬 Fun Fact: The apocalypse scene was filmed at a real playground in Los Angeles, using practical effects, miniatures, & groundbreaking CGI — making it feel disturbingly real instead of Cartoonish. 📍Elysian Park, Los Angeles, Ca Follow for more! #terminator2 #arnoldswarzenegger #filmlocation #dreamscene #nostalgic",
+          "latitude": 34.085328,
+          "longitude": -118.2407929,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/terminator-2-playground-elysian-park-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.085328,
+      "centroidLongitude": -118.2407929,
+      "city": "Los Angeles",
+      "country": "United States",
+      "relatedTourIds": [
+        "B979272D-42C9-578F-882C-F5DCAB4E8D6D",
+        "3a43c0fd-c641-5e02-ba26-f7644ee6ebb3",
+        "E0DF335E-71C7-5049-BDE4-ECE48C9DC401",
+        "62ECCD3D-535D-5168-9299-54AEECE3FD16",
+        "636F5F7F-11D4-55C0-B54D-E185DE7D934A",
+        "BFE4FED1-4A1E-5397-BE8A-61EF0989E081",
+        "4754C562-061B-582E-82AC-A09CE93C6098",
+        "FC0298CF-65AB-5508-A446-67DBA1E663D3"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Viewpoint",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "C5E6A8C8-5F87-595E-8CF9-5E39E43EDD2D",
+      "createdAt": "2026-11-18",
+      "title": "Pink Motel & Cadillac Jack's (Be Like That)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "Some places become famous because of a movie… Others because of a song. 🎶✨ This is the real filming location from Kane Brown’s “Be Like That” music video—a place that proves music videos can leave behind iconic locations too. Did you recognize it? 📍9457 San Fernando Rd, Sun Valley, Ca Follow for more! #filmlocation #belikethat #kanebrown #musicvideo",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pink-motel-cadillac-jack-s-be-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7671696418494631199",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "65BC8FC2-99C7-50A6-9375-68ED030B8714",
+          "order": 0,
+          "title": "Pink Motel & Cadillac Jack's (Be Like That)",
+          "caption": "Some places become famous because of a movie… Others because of a song. 🎶✨ This is the real filming location from Kane Brown’s “Be Like That” music video—a place that proves music videos can leave behind iconic locations too. Did you recognize it? 📍9457 San Fernando Rd, Sun Valley, Ca Follow for more! #filmlocation #belikethat #kanebrown #musicvideo",
+          "latitude": 34.2414436,
+          "longitude": -118.3963778,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pink-motel-cadillac-jack-s-be-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.2414436,
+      "centroidLongitude": -118.3963778,
+      "city": "Los Angeles",
+      "country": "United States",
+      "relatedTourIds": [
+        "212FB1AC-2015-5082-9167-F43D3F50EA76",
+        "871828DC-B6CB-5132-8C13-6CBAB27CB966",
+        "F1F59415-AA33-5001-A4F4-AA0D9B696556"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "212FB1AC-2015-5082-9167-F43D3F50EA76",
+      "createdAt": "2026-11-18",
+      "title": "Cadillac Jack's Diner (Candy)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "This location is so sweet… 🍭✨ Just found the real filming location from Mandy Moore’s “Candy” music video, & it’s giving all the early-2000s nostalgia. Who else remembers watching this on MTV? 📍9475 San Fernando Rd, Sun Valley, CA Follow for more! #filmlocation #candy #mandymoore #90s #nostalgic",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cadillac-jack-s-diner-candy-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7667601189898407198",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "B92BEB72-83C4-5C0C-B178-BDC55571359A",
+          "order": 0,
+          "title": "Cadillac Jack's Diner (Candy)",
+          "caption": "This location is so sweet… 🍭✨ Just found the real filming location from Mandy Moore’s “Candy” music video, & it’s giving all the early-2000s nostalgia. Who else remembers watching this on MTV? 📍9475 San Fernando Rd, Sun Valley, CA Follow for more! #filmlocation #candy #mandymoore #90s #nostalgic",
+          "latitude": 34.2414436,
+          "longitude": -118.3963778,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cadillac-jack-s-diner-candy-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.2414436,
+      "centroidLongitude": -118.3963778,
+      "city": "Los Angeles",
+      "country": "United States",
+      "relatedTourIds": [
+        "C5E6A8C8-5F87-595E-8CF9-5E39E43EDD2D"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "A042F564-5355-524F-9495-D92AA4E18F0F",
+      "createdAt": "2026-11-18",
+      "title": "Circus Liquor (Clueless)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "Some filming locations are iconic… This one is way harsh. 💅🏼 This is the real liquor store where Cher Horowitz had one of the most unforgettable moments in Clueless. What your favorite memory of clueless? 📍5600 Vineland Ave, North Hollywood, Ca Follow for more! #clueless #alaia #90s #filmlocation #nostalgia",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/circus-liquor-clueless-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7666944906199321887",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "2CAAC730-69DD-595C-90ED-A910D8C45A98",
+          "order": 0,
+          "title": "Circus Liquor (Clueless)",
+          "caption": "Some filming locations are iconic… This one is way harsh. 💅🏼 This is the real liquor store where Cher Horowitz had one of the most unforgettable moments in Clueless. What your favorite memory of clueless? 📍5600 Vineland Ave, North Hollywood, Ca Follow for more! #clueless #alaia #90s #filmlocation #nostalgia",
+          "latitude": 34.1725015,
+          "longitude": -118.3699254,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/circus-liquor-clueless-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1725015,
+      "centroidLongitude": -118.3699254,
+      "city": "Los Angeles",
+      "country": "United States",
+      "relatedTourIds": [
+        "13c93799-efad-5b2b-b76e-b0002d14aa2a",
+        "8e6551f2-dd32-58c6-8abe-6c6050adf4fc"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "26FE9F57-BCC6-548C-BA7C-177688642F7F",
+      "createdAt": "2026-11-18",
+      "title": "T&K Food Market Gate (The Fast and the Furious)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "If you’re a Fast & Furious fan… You know this isn’t just another street. 👀🚗 This is the film location where Brian & Dom were stopped by Johnny Tran, setting up one of the most memorable rivalries in the first film. What’s your favorite scene from the original The Fast and the Furious? 📍 Hai Ba Trung Wy, Garden Grove, CA Follow for more! #thefastandthefurious #johnnytran #toretto #brianoconner #filmlocation",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/t-k-food-market-gate-the-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7665092489618935070",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "EE477C93-489C-512E-B571-A5A679075BF8",
+          "order": 0,
+          "title": "T&K Food Market Gate (The Fast and the Furious)",
+          "caption": "If you’re a Fast & Furious fan… You know this isn’t just another street. 👀🚗 This is the film location where Brian & Dom were stopped by Johnny Tran, setting up one of the most memorable rivalries in the first film. What’s your favorite scene from the original The Fast and the Furious? 📍 Hai Ba Trung Wy, Garden Grove, CA Follow for more! #thefastandthefurious #johnnytran #toretto #brianoconner #filmlocation",
+          "latitude": 33.7451118,
+          "longitude": -117.9605365,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/t-k-food-market-gate-the-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.7451118,
+      "centroidLongitude": -117.9605365,
+      "city": "Westminster",
+      "country": "United States",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Commerce",
+        "Immigration",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "29034499-15F2-5700-97A1-B50581D296A4",
+      "createdAt": "2026-11-18",
+      "title": "Frank's Restaurant (Sweatpants)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "One diner. Dozens of Childish Gambinos. 👀🎬 This is the film location from the “Sweatpants” music video—where one of the most visually unforgettable scenes unfolds. Did you recognize this location right away? 📍916 W Olive Ave, Burbank, Ca Follow for more! #chidlishgambino #Burbank #filminglocation #sweatpants #musicvideo",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/frank-s-restaurant-sweatpants-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7661684849240968478",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "A0987C87-EAED-53E8-864E-51E626D607C6",
+          "order": 0,
+          "title": "Frank's Restaurant (Sweatpants)",
+          "caption": "One diner. Dozens of Childish Gambinos. 👀🎬 This is the film location from the “Sweatpants” music video—where one of the most visually unforgettable scenes unfolds. Did you recognize this location right away? 📍916 W Olive Ave, Burbank, Ca Follow for more! #chidlishgambino #Burbank #filminglocation #sweatpants #musicvideo",
+          "latitude": 34.1728532,
+          "longitude": -118.3167763,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/frank-s-restaurant-sweatpants-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1728532,
+      "centroidLongitude": -118.3167763,
+      "city": "Burbank",
+      "country": "United States",
+      "relatedTourIds": [
+        "BDF0B103-087C-59E2-88A9-E39D51430A92",
+        "5F84DAF4-4BBB-55FA-AEDB-0CDBD6921F64"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Notable Building"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "BDF0B103-087C-59E2-88A9-E39D51430A92",
+      "createdAt": "2026-11-18",
+      "title": "Frank's Restaurant (Euphoria)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "Sometimes the quietest scenes leave the biggest impact. This diner gave us one of the most powerful moments between Rue and Ali. ☕️✨ What’s the most memorable scene from Euphoria for you? 📍916 W Olive Ave, Burbank, Ca Follow for more! #euphoria #diner #tvshow #rueandali #filmlocation",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/frank-s-restaurant-euphoria-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7659085228752899359",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "4D2053A0-E31C-5143-8EA4-7B4823EC2000",
+          "order": 0,
+          "title": "Frank's Restaurant (Euphoria)",
+          "caption": "Sometimes the quietest scenes leave the biggest impact. This diner gave us one of the most powerful moments between Rue and Ali. ☕️✨ What’s the most memorable scene from Euphoria for you? 📍916 W Olive Ave, Burbank, Ca Follow for more! #euphoria #diner #tvshow #rueandali #filmlocation",
+          "latitude": 34.1728532,
+          "longitude": -118.3167763,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/frank-s-restaurant-euphoria-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1728532,
+      "centroidLongitude": -118.3167763,
+      "city": "Burbank",
+      "country": "United States",
+      "relatedTourIds": [
+        "29034499-15F2-5700-97A1-B50581D296A4",
+        "5F84DAF4-4BBB-55FA-AEDB-0CDBD6921F64"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Notable Building"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5F84DAF4-4BBB-55FA-AEDB-0CDBD6921F64",
+      "createdAt": "2026-11-18",
+      "title": "Habanero Mexican Grill (Dude, Where's My Car)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 Dude Where’s My Car Be honest…How many times did you quote this Drive-Thru scene after watching this movie? AND THEEEEENNNN! 🎬Did you know: The building is now a Mexican takeout, not a Chinese takeout. The Asian themed décor was added temporarily for filming. 📍2320 W Victory Blvd, Burbank, Ca Follow for more locations! #dudewheresmycar #comedy #filminglocation #2000s #andthen",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dude-where-s-my-car-drive-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7648347877235772703",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "FEC5A8A8-EA8F-52CF-B5D4-2B5CBF6AFFA8",
+          "order": 0,
+          "title": "Habanero Mexican Grill (Dude, Where's My Car)",
+          "caption": "🎥 Dude Where’s My Car Be honest…How many times did you quote this Drive-Thru scene after watching this movie? AND THEEEEENNNN! 🎬Did you know: The building is now a Mexican takeout, not a Chinese takeout. The Asian themed décor was added temporarily for filming. 📍2320 W Victory Blvd, Burbank, Ca Follow for more locations! #dudewheresmycar #comedy #filminglocation #2000s #andthen",
+          "latitude": 34.1844073,
+          "longitude": -118.3369977,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dude-where-s-my-car-drive-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1844073,
+      "centroidLongitude": -118.3369977,
+      "city": "Burbank",
+      "country": "United States",
+      "relatedTourIds": [
+        "29034499-15F2-5700-97A1-B50581D296A4",
+        "BDF0B103-087C-59E2-88A9-E39D51430A92"
+      ],
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "C42F3DD8-5AFA-5BB2-9340-CF73709AC182",
+      "createdAt": "2026-11-18",
+      "title": "Daniel Webster Elementary School (The Hangover)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 The Hangover 17 years since the First movie premiered! This is where Phil pretended to be responsible. Which Hangover movie was your favorite? 👇🏼 🎬Did you know: Director Todd Phillips, encouraged improvisation, leading to many of the movie’s funniest & most quotable moments. 📍2101 E Washington Blvd, Pasadena, CA Follow for more locations! #thehangover #17thanniversary #comedy#filmlocations #movies",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/daniel-webster-elementary-school-the-hangover-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7647945242863291678",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "D843AC16-4D6A-5F99-A55D-B50B795EE1C2",
+          "order": 0,
+          "title": "Daniel Webster Elementary School (The Hangover)",
+          "caption": "🎥 The Hangover 17 years since the First movie premiered! This is where Phil pretended to be responsible. Which Hangover movie was your favorite? 👇🏼 🎬Did you know: Director Todd Phillips, encouraged improvisation, leading to many of the movie’s funniest & most quotable moments. 📍2101 E Washington Blvd, Pasadena, CA Follow for more locations! #thehangover #17thanniversary #comedy#filmlocations #movies",
+          "latitude": 34.1697582,
+          "longitude": -118.1069044,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/daniel-webster-elementary-school-the-hangover-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1697582,
+      "centroidLongitude": -118.1069044,
+      "city": "Pasadena",
+      "country": "United States",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "Gothic"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "04F59E44-AE7C-5703-8187-A4D5FE6FE005",
+      "createdAt": "2026-11-18",
+      "title": "Sepulveda VA Medical Center (Grey's Anatomy)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 Grey’s Anatomy This is isn’t just a building, it’s where many seasons of emotion live 🩺😭 What’s your favorite Grey’s Anatomy quote or moment? 👇🏼 📍North Hills (Sepulveda VA Medical Center) Follow for more locations!",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sepulveda-va-medical-center-grey-s-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7646824583965740318",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "03BC74CF-6753-520E-B9BC-C1DD0DDD9987",
+          "order": 0,
+          "title": "Sepulveda VA Medical Center (Grey's Anatomy)",
+          "caption": "🎥 Grey’s Anatomy This is isn’t just a building, it’s where many seasons of emotion live 🩺😭 What’s your favorite Grey’s Anatomy quote or moment? 👇🏼 📍North Hills (Sepulveda VA Medical Center) Follow for more locations!",
+          "latitude": 34.2461012,
+          "longitude": -118.4805983,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sepulveda-va-medical-center-grey-s-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.2461012,
+      "centroidLongitude": -118.4805983,
+      "city": "Los Angeles",
+      "country": "United States",
+      "relatedTourIds": [
+        "B0E00142-1759-5BC2-8229-9528D85C4C2D"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "Civic"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4AD73B58-D683-529A-BB77-F2D7EAD24F50",
+      "createdAt": "2026-11-18",
+      "title": "Globo Gym Building (Dodgeball)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 Dodgeball: A True Underdog Story Welcome to Globo Gym… where the ego was bigger than the workout 😭🏋️‍♂️ Put your favorite quotes from this movie in the comments! 👇🏼 🎬Did you know?: The movie originally had a much darker ending where Average Joe’s actually LOST the tournament. Test audiences hated it, so the ending was changed 📍52 Discovery, Irvine, Ca Follow for more locations! #dodgeball #comedy #filmlocation #vincevaughn #benstiller",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/globo-gym-building-dodgeball-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7645371664582053151",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "FAAD3B34-4244-52C1-B9DB-A840F4A8D93F",
+          "order": 0,
+          "title": "Globo Gym Building (Dodgeball)",
+          "caption": "🎥 Dodgeball: A True Underdog Story Welcome to Globo Gym… where the ego was bigger than the workout 😭🏋️‍♂️ Put your favorite quotes from this movie in the comments! 👇🏼 🎬Did you know?: The movie originally had a much darker ending where Average Joe’s actually LOST the tournament. Test audiences hated it, so the ending was changed 📍52 Discovery, Irvine, Ca Follow for more locations! #dodgeball #comedy #filmlocation #vincevaughn #benstiller",
+          "latitude": 33.6625557,
+          "longitude": -117.7568811,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/globo-gym-building-dodgeball-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.6625557,
+      "centroidLongitude": -117.7568811,
+      "city": "Irvine",
+      "country": "United States",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "36B34F91-EBA5-5747-BCCC-BFCD30504CE6",
+      "createdAt": "2026-11-18",
+      "title": "Pote Field (Jerry Maguire)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 Jerry Maguire Just a park, a baseball, & life finally slowing down for a second Quote your favorite line from this film? 👇🏼 🎬Did you know?: The character Rod Tidwell was inspired by several real NFL players. The quiet final park scene was intentionally designed to contrast the chaos of Jerry’s career & personal life throughout the movie. (This same field was also in the movie Hook!) 📍4663 Crystal Springs Dr, Los Angeles, Ca (Pote Field) Follow for more locations! #jerrymaguiremovie #tomcruise #movies #nostalgic #filmlocations",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pote-field-jerry-maguire-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7642360886476295455",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "F8DB52C3-3F01-5975-8752-DDEC59186AF0",
+          "order": 0,
+          "title": "Pote Field (Jerry Maguire)",
+          "caption": "🎥 Jerry Maguire Just a park, a baseball, & life finally slowing down for a second Quote your favorite line from this film? 👇🏼 🎬Did you know?: The character Rod Tidwell was inspired by several real NFL players. The quiet final park scene was intentionally designed to contrast the chaos of Jerry’s career & personal life throughout the movie. (This same field was also in the movie Hook!) 📍4663 Crystal Springs Dr, Los Angeles, Ca (Pote Field) Follow for more locations! #jerrymaguiremovie #tomcruise #movies #nostalgic #filmlocations",
+          "latitude": 34.1330948,
+          "longitude": -118.2781036,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pote-field-jerry-maguire-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1330948,
+      "centroidLongitude": -118.2781036,
+      "city": "Los Angeles",
+      "country": "United States",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "97572B72-7027-52F7-ADBE-994A8AB11B6C",
+      "createdAt": "2026-11-18",
+      "title": "Excelsior High School (Grease 2)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 Grease 2 Not every high school is iconic… but this one had a whole identity crisis in leather jackets. Which movie did you prefer, Grease or Grease 2?👇🏼 🎬Did you know?: Grease 2 was supposed to kick off multiple sequels? It ended up becoming a cult classic instead. Michelle Pfeiffer was relatively unknown at the time. This role helped launch her career into stardom. 📍Excelsior High School, Norwalk, Ca Follow for more locations! #grease2 #michellepfeiffer #musical #nostalgic #filmlocation",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/excelsior-high-school-grease-2-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7632346384879848734",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "7B2546BB-7A59-53BA-970B-D3018FF5FCCB",
+          "order": 0,
+          "title": "Excelsior High School (Grease 2)",
+          "caption": "🎥 Grease 2 Not every high school is iconic… but this one had a whole identity crisis in leather jackets. Which movie did you prefer, Grease or Grease 2?👇🏼 🎬Did you know?: Grease 2 was supposed to kick off multiple sequels? It ended up becoming a cult classic instead. Michelle Pfeiffer was relatively unknown at the time. This role helped launch her career into stardom. 📍Excelsior High School, Norwalk, Ca Follow for more locations! #grease2 #michellepfeiffer #musical #nostalgic #filmlocation",
+          "latitude": 33.8898787,
+          "longitude": -118.0859781,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/excelsior-high-school-grease-2-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.8898787,
+      "centroidLongitude": -118.0859781,
+      "city": "Norwalk",
+      "country": "United States",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "Civic"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "DFDB3573-6994-5B05-BB0C-909E63B7859C",
+      "createdAt": "2026-11-18",
+      "title": "George's 50's Diner (A Cinderella Story)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 A Cinderella Story “Never let the fear of striking out, keep you from playing the game” What’s your favorite scene or line from this movie?👇🏼 🎬Did you know?: This movie helped launch Hilary Duff as a leading role in teen rom-coms outside of Disney Channel. The diner location has actually been used in multiple films and shows — making it a recognizable spot for movie fans. 📍4390 Atlantic Ave, Long Beach, Ca Follow for more locations! #acinderellastory #dinergirl #hilaryduff #2000s #filmlocation",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/george-s-50-s-diner-a-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7629374997680622878",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "D154170A-FF74-5A15-8B8C-69AEAA62B2FE",
+          "order": 0,
+          "title": "George's 50's Diner (A Cinderella Story)",
+          "caption": "🎥 A Cinderella Story “Never let the fear of striking out, keep you from playing the game” What’s your favorite scene or line from this movie?👇🏼 🎬Did you know?: This movie helped launch Hilary Duff as a leading role in teen rom-coms outside of Disney Channel. The diner location has actually been used in multiple films and shows — making it a recognizable spot for movie fans. 📍4390 Atlantic Ave, Long Beach, Ca Follow for more locations! #acinderellastory #dinergirl #hilaryduff #2000s #filmlocation",
+          "latitude": 33.8365506,
+          "longitude": -118.1849016,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/george-s-50-s-diner-a-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.8365506,
+      "centroidLongitude": -118.1849016,
+      "city": "Long Beach",
+      "country": "United States",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Food",
+        "Notable Building"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0BAE4288-103C-53B7-8A64-D1EDE51053EF",
+      "createdAt": "2026-11-18",
+      "title": "Jack Rabbit Slim's Site (Pulp Fiction)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 Pulp Fiction This is where milkshakes & dance moves became legendary What’s your favorite scene or line from this movie?👇🏼 🎬Did you know?: The famous dance scene between John Travolta & Uma Thurman was inspired by classic dance moves from older films. Pulp Fiction helped revive John Travolta’s career, turning him back into a major Hollywood star. 📍1435 Flower St, Glendale, Ca Follow for more locations! #pulpfiction #quentintarantino #movies #nostalgic #filmlocations",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jack-rabbit-slim-s-site-pulp-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7628632949046414622",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "FB6083F3-EEAF-57C6-BEDE-1312AF355C6F",
+          "order": 0,
+          "title": "Jack Rabbit Slim's Site (Pulp Fiction)",
+          "caption": "🎥 Pulp Fiction This is where milkshakes & dance moves became legendary What’s your favorite scene or line from this movie?👇🏼 🎬Did you know?: The famous dance scene between John Travolta & Uma Thurman was inspired by classic dance moves from older films. Pulp Fiction helped revive John Travolta’s career, turning him back into a major Hollywood star. 📍1435 Flower St, Glendale, Ca Follow for more locations! #pulpfiction #quentintarantino #movies #nostalgic #filmlocations",
+          "latitude": 34.1629822,
+          "longitude": -118.2902472,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jack-rabbit-slim-s-site-pulp-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1629822,
+      "centroidLongitude": -118.2902472,
+      "city": "Glendale",
+      "country": "United States",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "DC90E578-37B1-5DC1-994A-0B7F67C9314B",
+      "createdAt": "2026-11-18",
+      "title": "All Saints Episcopal Church (Cruel Intentions)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 Cruel Intentions Where Katherine’s whole world came crashing down in front of everyone! 😳 What’s your favorite moment from the movie? 👇🏼 🎬Did you know?: The production used both the exterior & interior of the All Saints Episcopal Church in Pasadena exactly as it was. This is also the same courtyard used in Legally Blonde. Where Elle meets Emmett for the first time. 📍132 N Euclid Ave, Pasadena, Ca Follow for more locations! #cruelintentions #reesewitherspoon #sarahmichellegellar #nostalgic #filmlocations",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/all-saints-episcopal-church-cruel-intentions-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7619366854775065887",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "BFC8280D-0418-5478-8B3A-B19C44F1EEC4",
+          "order": 0,
+          "title": "All Saints Episcopal Church (Cruel Intentions)",
+          "caption": "🎥 Cruel Intentions Where Katherine’s whole world came crashing down in front of everyone! 😳 What’s your favorite moment from the movie? 👇🏼 🎬Did you know?: The production used both the exterior & interior of the All Saints Episcopal Church in Pasadena exactly as it was. This is also the same courtyard used in Legally Blonde. Where Elle meets Emmett for the first time. 📍132 N Euclid Ave, Pasadena, Ca Follow for more locations! #cruelintentions #reesewitherspoon #sarahmichellegellar #nostalgic #filmlocations",
+          "latitude": 34.1482647,
+          "longitude": -118.1425004,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/all-saints-episcopal-church-cruel-intentions-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1482647,
+      "centroidLongitude": -118.1425004,
+      "city": "Pasadena",
+      "country": "United States",
+      "relatedTourIds": [
+        "BFB0CE38-FA87-571D-BA30-5D602D90D8A5"
+      ],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "545F4CCE-D37C-5C41-A3C7-D751D29E67E3",
+      "createdAt": "2026-11-18",
+      "title": "Everything Everywhere All at Once Laundromat",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 Everything Everywhere All At Once POV: You walk into this laundromat & accidentally unlock the multiverse! What’s your favorite moment from the movie? 👇🏼 🎬Did you know?: A lot of the film’s wild visual effects were created by a very small team (around 5–10 artists) instead of a massive studio, which is rare for a movie with this level of effects. Michelle Yeoh performed many of her own stunts, even during scenes that transition in and out of the laundromat setting. 📍260 S Meyer St, San Fernando, Ca Follow for more locations! #everythingeverywhereallatonce #michelleyeoh #sanfernandovalley #movies #filminglocation",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/everything-everywhere-all-at-once-laundromat-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7618638208506580254",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "11E813F7-1244-5E41-8A66-10647DE49FAA",
+          "order": 0,
+          "title": "Everything Everywhere All at Once Laundromat",
+          "caption": "🎥 Everything Everywhere All At Once POV: You walk into this laundromat & accidentally unlock the multiverse! What’s your favorite moment from the movie? 👇🏼 🎬Did you know?: A lot of the film’s wild visual effects were created by a very small team (around 5–10 artists) instead of a massive studio, which is rare for a movie with this level of effects. Michelle Yeoh performed many of her own stunts, even during scenes that transition in and out of the laundromat setting. 📍260 S Meyer St, San Fernando, Ca Follow for more locations! #everythingeverywhereallatonce #michelleyeoh #sanfernandovalley #movies #filminglocation",
+          "latitude": 34.2897517,
+          "longitude": -118.4492161,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/everything-everywhere-all-at-once-laundromat-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.2897517,
+      "centroidLongitude": -118.4492161,
+      "city": "San Fernando",
+      "country": "United States",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6C7B682B-6CE8-5811-A742-97A6329B2B2E",
+      "createdAt": "2026-11-18",
+      "title": "Montana Management (Scarface)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 ScarFace You walk past this building… and realize Tony Montana once ran his ‘business’ here. What’s the most iconic line from the movie? 👇🏼 🎬Did you know?: Director Brian De Palma originally planned to film most of the movie in Miami, but local opposition forced the production to move many scenes to Los Angeles. Tony Montana became one of the most iconic performances of Al Pacino, even though the movie received mixed reviews when it first came out before later becoming a cult classic! 📍8623 Sunset Blvd, Hollywood, Ca /8619 Follow for more locations! #scarface #tonymontana #alpacino #classics #filminglocation",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/montana-management-scarface-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7617135112550927646",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "063FA8C6-6D16-5FAB-A969-B62FFF883115",
+          "order": 0,
+          "title": "Montana Management (Scarface)",
+          "caption": "🎥 ScarFace You walk past this building… and realize Tony Montana once ran his ‘business’ here. What’s the most iconic line from the movie? 👇🏼 🎬Did you know?: Director Brian De Palma originally planned to film most of the movie in Miami, but local opposition forced the production to move many scenes to Los Angeles. Tony Montana became one of the most iconic performances of Al Pacino, even though the movie received mixed reviews when it first came out before later becoming a cult classic! 📍8623 Sunset Blvd, Hollywood, Ca /8619 Follow for more locations! #scarface #tonymontana #alpacino #classics #filminglocation",
+          "latitude": 34.0925845,
+          "longitude": -118.3800494,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/montana-management-scarface-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.0925845,
+      "centroidLongitude": -118.3800494,
+      "city": "West Hollywood",
+      "country": "United States",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "Crime"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "BFB0CE38-FA87-571D-BA30-5D602D90D8A5",
+      "createdAt": "2026-11-18",
+      "title": "First Church of Christ, Scientist (Agents of S.H.I.E.L.D.)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 Agents of S.H.I.E.L.D. Marvel fans might recognize this location. Not D.C…but TV magic made it look like it. Production used this church as the US Department of Justice🏛️ What’s your favorite Agents of S.H.I.E.L.D scene? 👇🦸🏻‍♀️🦸‍♂️ 🎬Did you know?: Because of its neoclassical architecture, this Pasadena church has doubled as government buildings, courthouses, & institutions in several film & television productions. The location was also used in scenes from the hit FX series Sons of Anarchy. 📍80 S Oakland Ave, Pasadena, Ca Follow for more locations! #agentsofshield #marvel #mcu #usdepartmentofjustice #filminglocation",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/first-church-of-christ-scientist-agents-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7615650878510451999",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "7D13323D-A146-5582-859D-B065689F4F5C",
+          "order": 0,
+          "title": "First Church of Christ, Scientist (Agents of S.H.I.E.L.D.)",
+          "caption": "🎥 Agents of S.H.I.E.L.D. Marvel fans might recognize this location. Not D.C…but TV magic made it look like it. Production used this church as the US Department of Justice🏛️ What’s your favorite Agents of S.H.I.E.L.D scene? 👇🦸🏻‍♀️🦸‍♂️ 🎬Did you know?: Because of its neoclassical architecture, this Pasadena church has doubled as government buildings, courthouses, & institutions in several film & television productions. The location was also used in scenes from the hit FX series Sons of Anarchy. 📍80 S Oakland Ave, Pasadena, Ca Follow for more locations! #agentsofshield #marvel #mcu #usdepartmentofjustice #filminglocation",
+          "latitude": 34.1443141,
+          "longitude": -118.1393445,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/first-church-of-christ-scientist-agents-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1443141,
+      "centroidLongitude": -118.1393445,
+      "city": "Pasadena",
+      "country": "United States",
+      "relatedTourIds": [
+        "DC90E578-37B1-5DC1-994A-0B7F67C9314B"
+      ],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Neoclassical"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "D1075402-2C18-5B31-A892-F9162BFEFBC8",
+      "createdAt": "2026-11-18",
+      "title": "Rialto Theatre (La La Land)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 La La Land If this theater looks familiar…you know what movie Mia & Sebastian were watching. This is where Mia and Sebastian skipped reality for a classic movie night 📽️🎞️ What was your favorite moment of La La Land? 🎬Did you know?: The scene was designed as a love letter to classic Hollywood moviegoing — showing the magic of watching old films in a historic single-screen theater. 📍1023 Fair Oaks Ave, South Pasadena, Ca Follow for more locations! #lalaland #movies #rebelwithoutacause #musicals #filmlocations",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rialto-theatre-la-la-land-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7614213942054866206",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "69A06358-2885-5CAB-8E4B-28DCA7ABBA42",
+          "order": 0,
+          "title": "Rialto Theatre (La La Land)",
+          "caption": "🎥 La La Land If this theater looks familiar…you know what movie Mia & Sebastian were watching. This is where Mia and Sebastian skipped reality for a classic movie night 📽️🎞️ What was your favorite moment of La La Land? 🎬Did you know?: The scene was designed as a love letter to classic Hollywood moviegoing — showing the magic of watching old films in a historic single-screen theater. 📍1023 Fair Oaks Ave, South Pasadena, Ca Follow for more locations! #lalaland #movies #rebelwithoutacause #musicals #filmlocations",
+          "latitude": 34.1140166,
+          "longitude": -118.1507832,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rialto-theatre-la-la-land-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1140166,
+      "centroidLongitude": -118.1507832,
+      "city": "South Pasadena",
+      "country": "United States",
+      "relatedTourIds": [
+        "6910465A-A56A-5928-838E-157763BD5994"
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E91B3956-2744-5348-A0D4-F99A4E2F701F",
+      "createdAt": "2026-11-18",
+      "title": "ROW DTLA (The Fast and the Furious)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 The Fast & The Furious If these buildings looks familiar, you KNOW this is where the meetup happened before the epic race!🔥🏁 What are your favorite fast & furious quotes?👇🏼 🎬Did you know?: Brian and Dom’s first race was filmed on real working industrial streets in L.A. — not on a backlot. Production had to shut down multiple city blocks at night to safely film the high-speed driving scenes. 📍777 Alameda St, Los Angeles, Ca Follow for more locations! #thefastandthefurious #racing #nostalgia #dtla #filminglocation",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/row-dtla-the-fast-and-the-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7609724128794397983",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "49415C2B-94A7-5DF9-B6F7-0A3D194718CB",
+          "order": 0,
+          "title": "ROW DTLA (The Fast and the Furious)",
+          "caption": "🎥 The Fast & The Furious If these buildings looks familiar, you KNOW this is where the meetup happened before the epic race!🔥🏁 What are your favorite fast & furious quotes?👇🏼 🎬Did you know?: Brian and Dom’s first race was filmed on real working industrial streets in L.A. — not on a backlot. Production had to shut down multiple city blocks at night to safely film the high-speed driving scenes. 📍777 Alameda St, Los Angeles, Ca Follow for more locations! #thefastandthefurious #racing #nostalgia #dtla #filminglocation",
+          "latitude": 34.0342948,
+          "longitude": -118.240639,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/row-dtla-the-fast-and-the-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.0342948,
+      "centroidLongitude": -118.240639,
+      "city": "Los Angeles",
+      "country": "United States",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9E4B30D3-1057-5509-99F7-480E6DCEB9AB",
+      "createdAt": "2026-11-18",
+      "title": "Whittier High School (Back to the Future)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 Back To The Future (Hill Valley High) This school raised a whole generation of movie fans 🕰️⚡ Quote your favorite Back To the Future line? 👇🏼 🎬Did you know?: Whittier High had been used in other productions before, but Back to the Future made it one of the most recognizable movie schools ever! 📍Whittier High School, Ca Follow for more locations! #backtothefuture #hillvalleyhigh #80s #nostalgia #filminglocation",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/whittier-high-school-back-to-the-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7607871229382429983",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "4A7CC7E1-30A9-598B-AA92-B6C551D474A0",
+          "order": 0,
+          "title": "Whittier High School (Back to the Future)",
+          "caption": "🎥 Back To The Future (Hill Valley High) This school raised a whole generation of movie fans 🕰️⚡ Quote your favorite Back To the Future line? 👇🏼 🎬Did you know?: Whittier High had been used in other productions before, but Back to the Future made it one of the most recognizable movie schools ever! 📍Whittier High School, Ca Follow for more locations! #backtothefuture #hillvalleyhigh #80s #nostalgia #filminglocation",
+          "latitude": 33.9805373,
+          "longitude": -118.0446916,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/whittier-high-school-back-to-the-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 33.9805373,
+      "centroidLongitude": -118.0446916,
+      "city": "Whittier",
+      "country": "United States",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "636F5F7F-11D4-55C0-B54D-E185DE7D934A",
+      "createdAt": "2026-11-18",
+      "title": "Walter Reed Middle School (License to Drive)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 License To Drive (1988) Recognize this school? 👀🚗 You’re an 80s movie fan for sure What memories do you still have watching this movie? 👇🏼 🎬Did you know?: Even though it feels like a simple teen comedy, the movie quietly became a time capsule of 80s suburban culture — from driver’s ed pressure to cruising culture before cell phones existed 📍4525 Irvine Ave, North Hollywood, Ca (Walter Reed Middle School) Follow for more locations! #licensetodrive #coreyhaim #80s #nostalgic #filminglocation",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/walter-reed-middle-school-license-to-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7606386718845013279",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "C8BB7D74-726F-55DA-867E-3C5ED027CDF7",
+          "order": 0,
+          "title": "Walter Reed Middle School (License to Drive)",
+          "caption": "🎥 License To Drive (1988) Recognize this school? 👀🚗 You’re an 80s movie fan for sure What memories do you still have watching this movie? 👇🏼 🎬Did you know?: Even though it feels like a simple teen comedy, the movie quietly became a time capsule of 80s suburban culture — from driver’s ed pressure to cruising culture before cell phones existed 📍4525 Irvine Ave, North Hollywood, Ca (Walter Reed Middle School) Follow for more locations! #licensetodrive #coreyhaim #80s #nostalgic #filminglocation",
+          "latitude": 34.1525846,
+          "longitude": -118.3866257,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/walter-reed-middle-school-license-to-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1525846,
+      "centroidLongitude": -118.3866257,
+      "city": "Los Angeles",
+      "country": "United States",
+      "relatedTourIds": [
+        "C8F66497-2544-5E6A-8F37-EA15C95074E1",
+        "C75189FB-C16F-5F59-BC68-16CBE0C653D2"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "C8F66497-2544-5E6A-8F37-EA15C95074E1",
+      "createdAt": "2026-11-18",
+      "title": "Walter Reed Middle School (PEN15)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 PEN15 You thought you healed from middle school but then watched PEN15. 😆🏫 What was your favorite moment of this show?👇🏼 🎬 Did you know?: Maya Erskine & Anna Konkle didn’t just star in PEN15, they created, wrote, & executive produced the show. Several of the show’s most cringeworthy moments were inspired by real events that actually happened to them. (This school was also used in the 1980s classic, License to Drive) 📍4525 Irvine Ave, North Hollywood, Ca (Walter Reed Middle School) Where should I go next? Follow for more locations! #mayaandanna #middleschool #tvshows #comedy #filminglocations",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/walter-reed-middle-school-pen15-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7600089679395900702",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "064851AD-C3CD-5216-91F9-89DA30DAD72B",
+          "order": 0,
+          "title": "Walter Reed Middle School (PEN15)",
+          "caption": "🎥 PEN15 You thought you healed from middle school but then watched PEN15. 😆🏫 What was your favorite moment of this show?👇🏼 🎬 Did you know?: Maya Erskine & Anna Konkle didn’t just star in PEN15, they created, wrote, & executive produced the show. Several of the show’s most cringeworthy moments were inspired by real events that actually happened to them. (This school was also used in the 1980s classic, License to Drive) 📍4525 Irvine Ave, North Hollywood, Ca (Walter Reed Middle School) Where should I go next? Follow for more locations! #mayaandanna #middleschool #tvshows #comedy #filminglocations",
+          "latitude": 34.1525846,
+          "longitude": -118.3866257,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/walter-reed-middle-school-pen15-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1525846,
+      "centroidLongitude": -118.3866257,
+      "city": "Los Angeles",
+      "country": "United States",
+      "relatedTourIds": [
+        "636F5F7F-11D4-55C0-B54D-E185DE7D934A"
+      ],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "64950BA1-93B7-58D4-BB16-2BF9377CF65D",
+      "createdAt": "2026-11-18",
+      "title": "Harwood Court, Pomona College (The Facts of Life)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 The Facts Of Life If this school looks familiar…you grew up on classic TV 📚🏫 Who was your favorite Facts of Life Character?👇🏼 🎬 Did you know?: Eastland School on The Facts of Life wasn’t a real boarding school — the interior scenes were filmed on a soundstage, and exterior school shots were minimal and reused, making the dorm sets at Pomona College feel like the entire world of the show. 📍Pomona College (Hardwood Court, E) Where should I go next? Follow for more locations! #thefactsoflife #eastland #classics #70s #filminglocations",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/harwood-court-pomona-college-the-facts-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7599745943885384990",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "C79682F8-9EE8-55C5-9832-4FA15977356C",
+          "order": 0,
+          "title": "Harwood Court, Pomona College (The Facts of Life)",
+          "caption": "🎥 The Facts Of Life If this school looks familiar…you grew up on classic TV 📚🏫 Who was your favorite Facts of Life Character?👇🏼 🎬 Did you know?: Eastland School on The Facts of Life wasn’t a real boarding school — the interior scenes were filmed on a soundstage, and exterior school shots were minimal and reused, making the dorm sets at Pomona College feel like the entire world of the show. 📍Pomona College (Hardwood Court, E) Where should I go next? Follow for more locations! #thefactsoflife #eastland #classics #70s #filminglocations",
+          "latitude": 34.09673,
+          "longitude": -117.7127938,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/harwood-court-pomona-college-the-facts-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.09673,
+      "centroidLongitude": -117.7127938,
+      "city": "Claremont",
+      "country": "United States",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "C5DA09CC-63CC-5262-94AD-7758F5F004D3",
+      "createdAt": "2026-11-18",
+      "title": "La Verne United Methodist Church (The Graduate)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 The Graduate (1967) Recognize THIS church? You know one of the most iconic endings in film history happened here 😳⛪ What did you think of that final look on the bus?👇🏼 🎬 Fun Fact: More than 50 years later, audiences still argue about whether this moment is romantic, reckless, or tragic — which is exactly what the filmmakers wanted. 📍La Verne, Ca (La Verne United Methodist Church) Where should I go next? Follow for more locations! #thegraduate #dustinhoffman #60s #nostalgic #filminglocation",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-verne-united-methodist-church-the-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7596733776063941919",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "DBFB2D81-9C3D-5AAC-A6E7-FF1904EC80E0",
+          "order": 0,
+          "title": "La Verne United Methodist Church (The Graduate)",
+          "caption": "🎥 The Graduate (1967) Recognize THIS church? You know one of the most iconic endings in film history happened here 😳⛪ What did you think of that final look on the bus?👇🏼 🎬 Fun Fact: More than 50 years later, audiences still argue about whether this moment is romantic, reckless, or tragic — which is exactly what the filmmakers wanted. 📍La Verne, Ca (La Verne United Methodist Church) Where should I go next? Follow for more locations! #thegraduate #dustinhoffman #60s #nostalgic #filminglocation",
+          "latitude": 34.1083847,
+          "longitude": -117.7672395,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-verne-united-methodist-church-the-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1083847,
+      "centroidLongitude": -117.7672395,
+      "city": "La Verne",
+      "country": "United States",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ED1FBF84-E5B6-5018-9CEE-9D38F0DA3C30",
+      "createdAt": "2026-11-18",
+      "title": "Marshall Fundamental School (Max Keeble's Big Move)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 Max Keebles Big Move (2001) If you recognize this school, you definitely grew up on early 2000s Disney 😭🏫 What’s the FIRST prank or moment from Max Keeble’s Big Move that comes to mind? 👇 📍Pasadena, Ca (Marshall Fundamental Secondary School) Follow for more locations #maxkeeblesbigmove #disney #2000s #nostalgic #filminglocation",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/marshall-fundamental-school-max-keeble-s-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7585237843065195806",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "6DC91525-87E7-53CF-8349-7017E9F7E94F",
+          "order": 0,
+          "title": "Marshall Fundamental School (Max Keeble's Big Move)",
+          "caption": "🎥 Max Keebles Big Move (2001) If you recognize this school, you definitely grew up on early 2000s Disney 😭🏫 What’s the FIRST prank or moment from Max Keeble’s Big Move that comes to mind? 👇 📍Pasadena, Ca (Marshall Fundamental Secondary School) Follow for more locations #maxkeeblesbigmove #disney #2000s #nostalgic #filminglocation",
+          "latitude": 34.1632218,
+          "longitude": -118.1110019,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/marshall-fundamental-school-max-keeble-s-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.1632218,
+      "centroidLongitude": -118.1110019,
+      "city": "Pasadena",
+      "country": "United States",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E27B6DBB-AAF6-5DB6-8B53-0088EEFA1168",
+      "createdAt": "2026-11-18",
+      "title": "Rosemead High School (The Wonder Years)",
+      "shortDescription": "A post by @scenescout_ on TikTok.",
+      "longDescription": "🎥 The Wonder Years (McKinley High School) POV: You’re walking to class while Kevin narrates your life in voiceover 😆 What’s your favorite memory of The Wonder Years tv show? 📍 Rosemead, Ca (Rosemead High School) #thewonderyears #nostalgic #mckinleyhighschool #tvshows #80s",
+      "makerId": "5B6B83B2-6CEA-5CDC-AB82-F6C809EE14AA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rosemead-high-school-the-wonder-years-scenescout_hero.webp",
+      "additionalImageURLs": null,
+      "videoURLs": null,
+      "videoRole": null,
+      "kind": "link",
+      "sourceURL": "https://www.tiktok.com/@scenescout_/video/7568933409163185439",
+      "sourceAuthor": "@scenescout_",
+      "stops": [
+        {
+          "id": "DC79EBFF-D782-5950-A379-113943E17D7B",
+          "order": 0,
+          "title": "Rosemead High School (The Wonder Years)",
+          "caption": "🎥 The Wonder Years (McKinley High School) POV: You’re walking to class while Kevin narrates your life in voiceover 😆 What’s your favorite memory of The Wonder Years tv show? 📍 Rosemead, Ca (Rosemead High School) #thewonderyears #nostalgic #mckinleyhighschool #tvshows #80s",
+          "latitude": 34.0853442,
+          "longitude": -118.0716196,
+          "audioURL": "",
+          "audioDurationSeconds": 0,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rosemead-high-school-the-wonder-years-scenescout_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 0,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.0853442,
+      "centroidLongitude": -118.0716196,
+      "city": "Rosemead",
+      "country": "United States",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building"
       ],
       "priceUSD": 0
     }
