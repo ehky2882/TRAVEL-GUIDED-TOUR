@@ -1,6 +1,6 @@
 # Venissa
 
-**Stay** · Google Maps: *Venissa* · 45.488515, 12.410955  
+**Stay** · Google Maps: *Azienda vinicola Venissa* · 45.488849, 12.411570  
 ~319 words · about 2:07 at a natural pace
 
 ---

@@ -47,7 +47,7 @@ What's worth knowing, standing here, is that the hotel was laid over the house r
 
 From here, walk to the Rialto Bridge and stand at the top of it, looking down the Grand Canal. Pick out the two obelisks on the roofline. Once you know what they mean, you'll start spotting them on other palazzi all the way along.
 
-=== 04 | venissa | Stay | Venissa | 45.488515 | 12.410955 | Venissa
+=== 04 | venissa | Stay | Azienda vinicola Venissa | 45.488849 | 12.411570 | Venissa
 This vineyard is surrounded by water and protected by a medieval wall. What grows here is a grape that was very nearly lost.
 
 You're on Mazzorbo, the quiet island joined to Burano by a long wooden footbridge. Facing you, behind old brick walls, are rows of vines. Above them stands a lone bell tower, the last fragment of a medieval monastery that once stood here. The low buildings beside it hold a restaurant and a handful of rooms.
