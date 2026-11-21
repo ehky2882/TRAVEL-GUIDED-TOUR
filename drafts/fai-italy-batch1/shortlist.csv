@@ -1,0 +1,78 @@
+name,comune,province,region,lat,lon,confidence,tier
+Castello della Manta,Manta,Cuneo,Piemonte,44.61440,7.48280,exact,strong
+Castello e Parco di Masino,Caravino,Torino,Piemonte,45.39188,7.95978,exact,strong
+Collezione Enrico a Villa Flecchia,Magnano,Biella,Piemonte,45.46145,8.00323,exact,limited opening
+Villa Della Porta Bozzolo,Casalzuigno,Varese,Lombardia,45.90699,8.71147,exact,strong
+Villa e Collezione Panza,Varese,Varese,Lombardia,45.82502,8.82928,exact,strong
+Casa Macchi,Morazzone,Varese,Lombardia,45.76474,8.83136,exact,limited opening
+Monastero di Torba,Gornate Olona,Varese,Lombardia,45.72953,8.86365,exact,strong
+Villa Fogazzaro Roi,Valsolda (Oria),Como,Lombardia,46.02148,9.03345,exact,strong
+Villa del Balbianello,Tremezzina,Como,Lombardia,45.96509,9.20250,exact,strong
+La Velarca,Tremezzina (Ossuccio),Como,Lombardia,45.96798,9.17325,exact,limited opening
+Palazzo Moroni,Bergamo,Bergamo,Lombardia,45.70344,9.66803,exact,strong
+Castel Grumello,Montagna in Valtellina,Sondrio,Lombardia,46.17366,9.89645,exact,limited opening
+Aula del Simonino,Trento,Trento,Trentino-Alto Adige,46.06864,11.12372,exact,limited opening
+Castello di Avio,Avio (Sabbionara),Trento,Trentino-Alto Adige,45.74652,10.95167,exact,strong
+Villa dei Vescovi,Torreglia (Luvigliano),Padova,Veneto,45.34324,11.71154,exact,strong
+Casa e Collezione Laura,Ospedaletti,Imperia,Liguria,43.80160,7.72371,exact,limited opening
+Antica barberia Giacalone,Genova,Genova,Liguria,44.40800,8.92923,exact,limited opening
+Abbazia di San Fruttuoso,Camogli,Genova,Liguria,44.31649,9.17519,exact,strong
+Casa Carbone,Lavagna,Genova,Liguria,44.30979,9.34508,exact,limited opening
+Villa Rezzola,Lerici (Pugliola),La Spezia,Liguria,44.08599,9.90981,exact,limited opening
+Teatrino di Vetriano,Pescaglia (Vetriano),Lucca,Toscana,43.98228,10.47149,exact,limited opening
+Torre e Casa Campatelli,San Gimignano,Siena,Toscana,43.46677,11.04299,exact,strong
+Bosco di San Francesco,Assisi,Perugia,Umbria,43.07761,12.61849,area,strong
+Orto sul Colle dell'Infinito,Recanati,Macerata,Marche,43.39798,13.54984,exact,strong
+Villa Gregoriana,Tivoli,Roma,Lazio,41.96647,12.80229,exact,strong
+Baia di Ieranto,Massa Lubrense,Napoli,Campania,40.57295,14.34118,area,strong
+Abbazia di Santa Maria di Cerrate,Lecce,Lecce,Puglia,40.45859,18.11559,exact,strong
+Casa Noha,Matera,Matera,Basilicata,40.66634,16.61214,exact,strong
+Giganti della Sila e Casino Mollo,Spezzano della Sila,Cosenza,Calabria,39.32470,16.46749,area,limited opening
+Giardino della Kolymbethra,Agrigento,Agrigento,Sicilia,37.29167,13.58109,exact,strong
+Giardino Pantesco Donnafugata,Pantelleria (Khamma),Trapani,Sicilia,36.80803,12.02141,exact,limited opening
+Batteria Militare Talmone,Palau,Sassari,Sardegna,41.20461,9.34029,exact,limited opening
+Saline Conti Vecchi,Assemini,Cagliari,Sardegna,39.22391,9.02382,exact,strong
+Abbazia di San Galgano,Chiusdino,Siena,Toscana,43.14941,11.15532,exact,new (FB photos) - strong
+Villa Carlotta,Tremezzina,Como,Lombardia,45.9864,9.23084,exact,new (FB photos) - strong
+Castel Savoia,Gressoney-Saint-Jean,Aosta,Valle d'Aosta,45.76403,7.82671,exact,new (FB photos) - strong
+Ponte San Michele,Paderno d'Adda,Lecco,Lombardia,45.68211,9.45204,exact (bridge),new (FB photos) - strong
+Castello Tramontano,Matera,Matera,Basilicata,40.66392,16.60595,exact,new (FB photos) - check opening
+Santuario Madonna della Corona,Ferrara di Monte Baldo (Spiazzi),Verona,Veneto,45.64959,10.85617,exact,new (FB photos) - strong
+Sacra di San Michele,Sant'Ambrogio di Torino,Torino,Piemonte,45.09799,7.34305,exact,new (FB photos) - strong
+Palazzo della Ragione,Padova,Padova,Veneto,45.40725,11.87522,exact,new (FB photos) - strong
+Villa Gamberaia,Firenze (Settignano),Firenze,Toscana,43.7794,11.32824,exact,new (FB photos) - strong
+San Giorgio Maggiore,Venezia,Venezia,Veneto,45.42939,12.34328,exact,new (FB photos) - strong
+Caffè Pedrocchi,Padova,Padova,Veneto,45.40769,11.87709,exact,new (FB photos) - strong
+Ponte delle Torri,Spoleto,Perugia,Umbria,42.733,12.74385,exact,new (FB photos) - strong
+Casa del Petrarca,Arquà Petrarca,Padova,Veneto,45.27073,11.71568,exact,new (FB photos) - strong
+Mausoleo di Teodorico,Ravenna,Ravenna,Emilia-Romagna,44.42504,12.20915,exact,new (FB photos) - strong
+Basilica di Sant'Apollinare in Classe,Ravenna (Classe),Ravenna,Emilia-Romagna,44.38028,12.23302,exact,new (FB photos) - strong
+Cattedrale di Troia,Troia,Foggia,Puglia,41.36097,15.30869,exact,new (FB photos) - strong
+Ponte del Diavolo,Cividale del Friuli,Udine,Friuli-Venezia Giulia,46.09186,13.43167,exact,new (FB photos) - strong
+Fontana Pretoria,Palermo,Palermo,Sicilia,38.11549,13.36208,exact,new (FB photos) - strong
+Giardini della Biennale,Venezia,Venezia,Veneto,45.42902,12.35793,exact,new (FB photos) - strong
+Villa Pisani (Museo Nazionale),Stra,Venezia,Veneto,45.4083,12.01286,exact (villa),new (FB photos) - strong
+Tempio di Segesta,Calatafimi-Segesta,Trapani,Sicilia,37.94144,12.83237,exact,new (FB photos) - strong
+Villa Reale di Monza,Monza,Monza e della Brianza,Lombardia,45.59346,9.27478,exact,new (FB photos) - strong
+Giardini Botanici di Villa Taranto,Verbania (Pallanza),Verbano-Cusio-Ossola,Piemonte,45.92546,8.56169,exact,new (FB photos) - strong
+Teatro Margherita,Bari,Bari,Puglia,41.12636,16.87286,exact,new (FB photos) - strong
+Ippodromo San Siro (Leonardo's Horse),Milano,Milano,Lombardia,45.48087,9.12965,exact (horse statue at entrance),new (FB photos) - strong
+Palazzo di Teodorico,Ravenna,Ravenna,Emilia-Romagna,44.41611,12.20463,exact,new (FB photos) - strong
+San Giovanni degli Eremiti,Palermo,Palermo,Sicilia,38.10956,13.3546,exact,new (FB photos) - strong
+Ca' Giustinian,Venezia (San Marco),Venezia,Veneto,45.43250,12.33670,"approx ~30 m (Calle Vallaresso, beside Harry's Bar)",new (FB photos) - strong
+Parco degli Acquedotti,Roma,Roma,Lazio,41.84484,12.56237,exact,new (FB photos) - strong
+Teatro Petruzzelli,Bari,Bari,Puglia,41.12356,16.87316,exact,new (FB photos) - strong
+Traghetto di Leonardo da Vinci,Imbersago,Lecco,Lombardia,45.7079,9.45629,exact (ferry landing),new (FB photos) - strong
+Duomo di Salerno (Cattedrale di San Matteo),Salerno,Salerno,Campania,40.68022,14.75939,"approx ~50 m (Piazza Alfano I, in front of the cathedral)",new (FB photos) - strong
+Ca' Pesaro (Galleria d'Arte Moderna),Venezia (Santa Croce),Venezia,Veneto,45.44097,12.33154,exact,new (FB photos) - strong
+Teatro Massimo Bellini,Catania,Catania,Sicilia,37.50416,15.08983,exact,new (FB photos) - strong
+Rocca di Lonato (with Casa del Podestà),Lonato del Garda,Brescia,Lombardia,45.46295,10.48647,exact (Rocca); Casa del Podestà is ~170 m south,new (FB photos) - strong
+Monte Fontana Secca (malga),Quero Vas / Seren del Grappa,Belluno,Veneto,45.9226,11.84261,"approx: OSM Malga Fontana Secca, ~1 km from the summit; not confirmed as the FAI building",FAI property - re-added (restored malga)
+Fontana Greca,Gallipoli,Lecce,Puglia,40.05591,17.98108,exact,new (FB photos) - strong
+Tellaro (Chiesa di San Giorgio),Lerici (Tellaro),La Spezia,Liguria,44.05755,9.92923,exact (seafront church),new (FB photos) - strong
+Rotonda a Mare,Senigallia,Ancona,Marche,43.71656,13.22607,exact,new (FB photos) - strong
+Ponte Vecchio (Ponte degli Alpini),Bassano del Grappa,Vicenza,Veneto,45.76751,11.73111,exact,new (FB photos) - strong
+Castello del Buonconsiglio,Trento,Trento,Trentino-Alto Adige,46.07102,11.12727,exact,new (FB photos) - strong
+MUSE - Museo delle Scienze (Renzo Piano),Trento,Trento,Trentino-Alto Adige,46.06261,11.11474,exact,new (FB photos) - strong
+Mart - Museo di arte moderna e contemporanea,Rovereto,Trento,Trentino-Alto Adige,45.894,11.04502,exact,new (FB photos) - strong
+Basilica di Aquileia (Santa Maria Assunta),Aquileia,Udine,Friuli-Venezia Giulia,45.76963,13.37087,exact,new (FB photos) - strong

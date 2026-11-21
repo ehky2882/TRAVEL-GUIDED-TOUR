@@ -1,0 +1,74 @@
+# Sacra di San Michele
+
+*363 words, about 145 seconds at a natural pace.*
+
+## Clean script
+
+You came up here by road. For a thousand years, most people came up on their knees.
+
+At the top of the path from the car park, stop and look up. The abbey rises straight out of the rock of Monte Pirchiriano, nine hundred and sixty-two metres up, at the mouth of the Susa Valley. Its foundations are a base of masonry twenty-six metres tall, built because there simply wasn't enough mountain to stand a church on.
+
+The story begins with a hermit, Giovanni Vincenzo, who came up here to be alone, and a French count, Hugh of Montboissier, who paid for something rather grander. The official date for the building is between nine eighty-three and nine eighty-seven. Benedictine monks arrived in the eleventh century, and since eighteen thirty-six the abbey has been in the care of the Rosminian fathers.
+
+Inside, you'll climb the Staircase of the Dead. It's called that because it was once lined with tombs, and the monks were buried along the way up. At the top is the Zodiac Portal, carved by a sculptor called Niccolò in the eleven twenties. The signs of the zodiac run up the stone, and they're there as a reminder that time is passing. The portal is being restored at the moment, so you may find some of it under wraps.
+
+If the place feels familiar, there's a reason. Umberto Eco was partly inspired by this abbey when he wrote The Name of the Rose.
+
+[beat]
+
+But the real point of the Sacra is the line it sits on. It was a stop on the Way of Saint Michael, the pilgrim route that linked Mont-Saint-Michel in France with the sanctuary of Monte Sant'Angelo in the south of Italy. Three abbeys to the same archangel, each one perched somewhere improbable. Piedmont now calls this its symbol, and standing here you can see why.
+
+Before you go, find the ruins on the north side and the lonely tower of the Bell'Alda. The legend says a young woman called Alda leapt from it to escape soldiers, and angels caught her. She survived, tried it again to show off to the village, and that time the angels didn't bother.
+
+## TTS-safe script
+
+**sack ra dee san mee kay lay**
+
+You came up here by road. For a thousand years, most people came up on their knees.
+
+At the top of the path from the car park, stop and look up. The abbey rises straight out of the rock of Monte peer kee ree ah no, nine hundred and sixty two metres up, at the mouth of the soo za Valley. Its foundations are a base of masonry twenty six metres tall, built because there simply wasn't enough mountain to stand a church on.
+
+The story begins with a hermit, jo van nee vin chen tso, who came up here to be alone, and a French count, Hugh of mon bwah see ay, who paid for something rather grander. The official date for the building is between nine eighty three and nine eighty seven. Benedictine monks arrived in the eleventh century, and since eighteen thirty six the abbey has been in the care of the roz min ee an fathers.
+
+Inside, you'll climb the Staircase of the Dead. It's called that because it was once lined with tombs, and the monks were buried along the way up. At the top is the Zodiac Portal, carved by a sculptor called nee ko loh in the eleven twenties. The signs of the zodiac run up the stone, and they're there as a reminder that time is passing. The portal is being restored at the moment, so you may find some of it under wraps.
+
+If the place feels familiar, there's a reason. oom bair toh ay ko was partly inspired by this abbey when he wrote The Name of the Rose.
+
+But the real point of the sack ra is the line it sits on. It was a stop on the Way of Saint Michael, the pilgrim route that linked mon san mee shell in France with the sanctuary of mon tay san tan jeh lo in the south of Italy. Three abbeys to the same archangel, each one perched somewhere improbable. peed mont now calls this its symbol, and standing here you can see why.
+
+Before you go, find the ruins on the north side and the lonely tower of the bel al da. The legend says a young woman called al da leapt from it to escape soldiers, and angels caught her. She survived, tried it again to show off to the village, and that time the angels didn't bother.
+
+## Respellings
+
+| Written | Spoken as |
+|---|---|
+| Sacra di San Michele | sack ra dee san mee kay lay |
+| Sacra | sack ra |
+| Pirchiriano | peer kee ree ah no |
+| Susa | soo za |
+| Giovanni Vincenzo | jo van nee vin chen tso |
+| Montboissier | mon bwah see ay |
+| Rosminian | roz min ee an |
+| Niccolò | nee ko loh |
+| Umberto Eco | oom bair toh ay ko |
+| Mont-Saint-Michel | mon san mee shell |
+| Monte Sant'Angelo | mon tay san tan jeh lo |
+| Bell'Alda | bel al da |
+| Alda | al da |
+| Piedmont | peed mont |
+
+## Sources read
+
+- https://www.sacradisanmichele.com/
+- https://sacradisanmichele.com/la-sacra/
+- https://sacradisanmichele.com/informazioni/
+- https://it.wikipedia.org/wiki/Sacra_di_San_Michele
+
+## Fact-check notes
+
+- Altitude: 962 m is the summit (official site); Wikipedia puts the building at 960 m on a 26 m base. Script says 962 m 'up'.
+- Founding: the official site's 983–987 is used. Wikipedia also cites 999–1002.
+- Rosminians: the official homepage says 1837; the history page and Wikipedia say 1836. Script uses 1836.
+- Sculptor is spelled Niccolò (Wikipedia); his dates are 1120–1130.
+- Zodiac Portal restoration notice dated 21 Oct 2026; re-check before recording.
+- Symbol of Piedmont: designation confirmed on Wikipedia; the regional law number was not verified, so it isn't cited.
