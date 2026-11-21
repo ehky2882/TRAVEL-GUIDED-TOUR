@@ -1,0 +1,68 @@
+# Palazzo di Teodorico, Ravenna
+
+*297 words, about 119 seconds at a natural pace.*
+
+## Clean script
+
+This is called Theodoric's Palace. It almost certainly isn't.
+
+On Via di Roma, at the corner of Via Alberoni, stop in front of the tall brick facade. A big central arch, a row of smaller arches above, and two columns set into the windows facing the street. It looks like the front of something rather grand, and that's exactly the problem.
+
+For centuries people assumed this was what was left of the palace of Theodoric, the Ostrogoth king. The name stuck, and it's stuck ever since. But the building is later than him, probably from the middle of the seven hundreds, more than two centuries after he died.
+
+So what is it? The leading idea, put forward in nineteen twenty-one, is that it's the front of a church, San Salvatore ad Calchi, which was pulled down in the early fifteen hundreds. Behind the facade were two round staircases leading up to a gallery, which fits a church rather well. Scholars still argue about it, but the church has the better case.
+
+[beat]
+
+And here's a curious link. For more than three hundred years, from fifteen sixty-four until eighteen ninety-seven, the great porphyry tub from Theodoric's tomb was set into this very building. So the king's supposed coffin was on show in the king's supposed palace, and neither of them was quite what it said.
+
+The two columns in the windows, by the way, were put in during the restoration of the eighteen nineties and nineteen hundreds.
+
+If you want to see the real palace, walk a short way along Via di Roma to Sant'Apollinare Nuovo. On its wall is a mosaic of Theodoric's palace from the early five hundreds, his court made in glass and gold. It's the nearest any of us will get to the real thing.
+
+## TTS-safe script
+
+**pa lat so dee teh oh doh ree ko, ra ven na**
+
+This is called thee odd or ick's Palace. It almost certainly isn't.
+
+On vee ah dee ro ma, at the corner of vee ah al beh ro nee, stop in front of the tall brick facade. A big central arch, a row of smaller arches above, and two columns set into the windows facing the street. It looks like the front of something rather grand, and that's exactly the problem.
+
+For centuries people assumed this was what was left of the palace of thee odd or ick, the oss tro goth king. The name stuck, and it's stuck ever since. But the building is later than him, probably from the middle of the seven hundreds, more than two centuries after he died.
+
+So what is it? The leading idea, put forward in nineteen twenty one, is that it's the front of a church, san sal va toh reh ad kal kee, which was pulled down in the early fifteen hundreds. Behind the facade were two round staircases leading up to a gallery, which fits a church rather well. Scholars still argue about it, but the church has the better case.
+
+And here's a curious link. For more than three hundred years, from fifteen sixty four until eighteen ninety seven, the great por fur ee tub from thee odd or ick's tomb was set into this very building. So the king's supposed coffin was on show in the king's supposed palace, and neither of them was quite what it said.
+
+The two columns in the windows, by the way, were put in during the restoration of the eighteen nineties and nineteen hundreds.
+
+If you want to see the real palace, walk a short way along vee ah dee ro ma to san tap pol lee nah reh nwo vo. On its wall is a mosaic of thee odd or ick's palace from the early five hundreds, his court made in glass and gold. It's the nearest any of us will get to the real thing.
+
+## Respellings
+
+| Written | Spoken as |
+|---|---|
+| Palazzo di Teodorico | pa lat so dee teh oh doh ree ko |
+| Theodoric | thee odd or ick |
+| Via di Roma | vee ah dee ro ma |
+| Via Alberoni | vee ah al beh ro nee |
+| Ostrogoth | oss tro goth |
+| San Salvatore ad Calchi | san sal va toh reh ad kal kee |
+| porphyry | por fur ee |
+| Sant'Apollinare Nuovo | san tap pol lee nah reh nwo vo |
+| Ravenna | ra ven na |
+
+## Sources read
+
+- https://it.wikipedia.org/wiki/Palazzo_di_Teodorico
+- https://www.turismo.ra.it/cultura-e-storia/palazzo-teodorico/ (HTTP 404)
+- https://it.wikipedia.org/wiki/Mausoleo_di_Teodorico (for the porphyry tub's time here, 1564–1897)
+
+## Fact-check notes
+
+- The San Salvatore ad Calchi identification is the prevailing hypothesis (Gerola, 1921), not certain.
+- The mid-eighth-century date is 'verosimilmente' (probably).
+- The two columns were inserted during Corrado Ricci's 1897–1907 restoration.
+- The tub's stay here is from the Mausoleum's Wikipedia page.
+- Check the walk from here to Sant'Apollinare Nuovo on a map.
+- Opening status is unverified.
