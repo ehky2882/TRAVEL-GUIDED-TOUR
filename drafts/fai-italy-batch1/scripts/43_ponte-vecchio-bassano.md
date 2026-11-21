@@ -1,0 +1,74 @@
+# Ponte Vecchio, Bassano del Grappa
+
+*369 words, about 148 seconds at a natural pace.*
+
+## Clean script
+
+Palladio was asked for a stone bridge. He offered one, the town said no, and he gave them a wooden one instead. It's been washed away, burned and blown up since, and it keeps coming back.
+
+Stand on the riverbank at Bassano and look at the bridge across the Brenta. A long, covered timber bridge on wooden piers, five spans, with a pitched roof and simple columns along each side, like a barn laid across the water.
+
+There's been a bridge here since at least twelve oh nine. After a flood in fifteen sixty-seven, the town asked Andrea Palladio to rebuild it. He proposed three stone arches, and the council turned him down. So in the summer of fifteen sixty-nine he drew a wooden bridge, much like the one before, but refined, and that's the shape that has lasted.
+
+It has had to be rebuilt again and again. A flood took it in seventeen forty-eight, and it was rebuilt to Palladio's design. Napoleon's stepson Eugène burned it in eighteen thirteen. And on the seventeenth of February nineteen forty-five, partisans blew it up. Each time, the town put back the same bridge.
+
+It's also called the Ponte degli Alpini, the bridge of the Alpine troops. Since nineteen twenty-eight it's been dedicated to the soldiers, especially the Alpini, who crossed it on their way to the front in the First World War. There's even a popular song about it, Sul ponte di Bassano, often sung by the Alpini.
+
+[beat]
+
+People will tell you the Alpini rebuilt it after the last war. Strictly speaking, a building firm did, in nineteen forty-eight. But many of the workmen were former Alpini, and they wore their feathered hats on the job, and that's how the legend was born. I think it's a better story than the truth, and it might even be truer.
+
+The bridge was restored again between twenty fifteen and twenty twenty-one, lifted about forty-five centimetres, and reopened in October twenty twenty-one.
+
+At the end of the bridge is the Nardini distillery, founded in seventeen seventy-nine and said to be the oldest in Italy. Bassano is grappa country, so stop for a small glass, and look back at the bridge while you drink it.
+
+## TTS-safe script
+
+**pon tay vek yo, bas sah no del grap pa**
+
+pa lah dee oh was asked for a stone bridge. He offered one, the town said no, and he gave them a wooden one instead. It's been washed away, burned and blown up since, and it keeps coming back.
+
+Stand on the riverbank at bas sah no and look at the bridge across the bren ta. A long, covered timber bridge on wooden piers, five spans, with a pitched roof and simple columns along each side, like a barn laid across the water.
+
+There's been a bridge here since at least twelve oh nine. After a flood in fifteen sixty seven, the town asked an dray ah pa lah dee oh to rebuild it. He proposed three stone arches, and the council turned him down. So in the summer of fifteen sixty nine he drew a wooden bridge, much like the one before, but refined, and that's the shape that has lasted.
+
+It has had to be rebuilt again and again. A flood took it in seventeen forty eight, and it was rebuilt to pa lah dee oh's design. Napoleon's stepson er zhen burned it in eighteen thirteen. And on the seventeenth of February nineteen forty five, partisans blew it up. Each time, the town put back the same bridge.
+
+It's also called the pon tay del yee al pee nee, the bridge of the Alpine troops. Since nineteen twenty eight it's been dedicated to the soldiers, especially the al pee nee, who crossed it on their way to the front in the First World War. There's even a popular song about it, sool pon tay dee bas sah no, often sung by the al pee nee.
+
+People will tell you the al pee nee rebuilt it after the last war. Strictly speaking, a building firm did, in nineteen forty eight. But many of the workmen were former al pee nee, and they wore their feathered hats on the job, and that's how the legend was born. I think it's a better story than the truth, and it might even be truer.
+
+The bridge was restored again between twenty fifteen and twenty twenty one, lifted about forty five centimetres, and reopened in October twenty twenty one.
+
+At the end of the bridge is the nar dee nee distillery, founded in seventeen seventy nine and said to be the oldest in Italy. bas sah no is grap pa country, so stop for a small glass, and look back at the bridge while you drink it.
+
+## Respellings
+
+| Written | Spoken as |
+|---|---|
+| Ponte Vecchio | pon tay vek yo |
+| Bassano del Grappa | bas sah no del grap pa |
+| Bassano | bas sah no |
+| Brenta | bren ta |
+| Andrea Palladio | an dray ah pa lah dee oh |
+| Palladio | pa lah dee oh |
+| Eugène | er zhen |
+| Ponte degli Alpini | pon tay del yee al pee nee |
+| Alpini | al pee nee |
+| Sul ponte di Bassano | sool pon tay dee bas sah no |
+| Nardini | nar dee nee |
+| grappa | grap pa |
+
+## Sources read
+
+- https://it.wikipedia.org/wiki/Ponte_Vecchio_(Bassano_del_Grappa)
+- https://www.comune.bassano.vi.it/ (homepage only)
+- https://www.vivibassano.it (DNS failure, not read)
+
+## Fact-check notes
+
+- Only Wikipedia was readable; re-check before recording.
+- 1209 is the first documented mention, not a construction date.
+- 1945: Wikipedia credits partisans with the sabotage of 17 February 1945.
+- The 1948 rebuild was by Impresa Giulio Tessarolo & Figli; the Alpini rebuilding is a 'leggenda' (Wikipedia).
+- Nardini 1779, 'the oldest distillery in Italy', is a claim via nardini.it, hence 'said to be'.

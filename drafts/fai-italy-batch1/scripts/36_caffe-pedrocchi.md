@@ -1,0 +1,74 @@
+# Caffè Pedrocchi, Padua
+
+*337 words, about 135 seconds at a natural pace.*
+
+## Clean script
+
+For more than eighty years this café never closed, day or night. People called it the café without doors.
+
+Stand on Via Otto Febbraio and look at the building. It's a long, pale, columned thing, more like a temple than a coffee shop, and at one end there's a pointed neo-Gothic wing that looks as if it wandered in from a different century. That's the Pedrocchino, added in eighteen thirty-nine for the pastry kitchen.
+
+The café belonged to Antonio Pedrocchi, who inherited his father's coffee shop and dreamed of something monumental. He hired the Venetian architect Giuseppe Jappelli, and the Caffè Pedrocchi opened in eighteen thirty-one. The French writer Stendhal sat here and said it was in Padua that he first began to see life the Venetian way, with women sitting in cafés.
+
+Inside, there are three famous rooms in a row, white, red and green, the colours of the Italian flag, given their hangings after the Veneto joined Italy. Have a look at the green room in particular. By tradition, this was where you could sit and read the newspapers without having to buy anything, so it was full of penniless students, and people say it's where the Italian phrase for being broke, essere al verde, being in the green, comes from. I can't swear to that one, but I'd like it to be true.
+
+[beat]
+
+The students mattered here. On the eighth of February eighteen forty-eight, a student was wounded inside the café during the uprising against Austrian rule, a spark for the revolts that followed. In the white room, you'll find what's said to be a bullet hole in the wall.
+
+Upstairs, the first floor opened in eighteen forty-two, with rooms in every style Jappelli could think of: Etruscan, Greek, Roman, Gothic, Moorish and Egyptian. It now holds the city's Museum of the Risorgimento.
+
+Before you go, order the house speciality, the caffè Pedrocchi. There's one rule, and the café insists on it: you don't add sugar, and you don't stir. They'll tell you why.
+
+## TTS-safe script
+
+**kaf feh peh drok kee, pad yoo ah**
+
+For more than eighty years this café never closed, day or night. People called it the café without doors.
+
+Stand on vee ah ot toh feb bry oh and look at the building. It's a long, pale, columned thing, more like a temple than a coffee shop, and at one end there's a pointed neo Gothic wing that looks as if it wandered in from a different century. That's the peh drok kee no, added in eighteen thirty nine for the pastry kitchen.
+
+The café belonged to an toe nee oh peh drok kee, who inherited his father's coffee shop and dreamed of something monumental. He hired the Venetian architect joo sep pay yap pel lee, and the kaf feh peh drok kee opened in eighteen thirty one. The French writer sten dal sat here and said it was in pad yoo ah that he first began to see life the Venetian way, with women sitting in cafés.
+
+Inside, there are three famous rooms in a row, white, red and green, the colours of the Italian flag, given their hangings after the ven eh toh joined Italy. Have a look at the green room in particular. By tradition, this was where you could sit and read the newspapers without having to buy anything, so it was full of penniless students, and people say it's where the Italian phrase for being broke, es seh reh al vair deh, being in the green, comes from. I can't swear to that one, but I'd like it to be true.
+
+The students mattered here. On the eighth of February eighteen forty eight, a student was wounded inside the café during the uprising against Austrian rule, a spark for the revolts that followed. In the white room, you'll find what's said to be a bullet hole in the wall.
+
+Upstairs, the first floor opened in eighteen forty two, with rooms in every style yap pel lee could think of: eh trus kan, Greek, Roman, Gothic, Moorish and Egyptian. It now holds the city's Museum of the ree sor jee men toh.
+
+Before you go, order the house speciality, the caffè peh drok kee. There's one rule, and the café insists on it: you don't add sugar, and you don't stir. They'll tell you why.
+
+## Respellings
+
+| Written | Spoken as |
+|---|---|
+| Caffè Pedrocchi | kaf feh peh drok kee |
+| Pedrocchi | peh drok kee |
+| Pedrocchino | peh drok kee no |
+| Via Otto Febbraio | vee ah ot toh feb bry oh |
+| Antonio | an toe nee oh |
+| Giuseppe Jappelli | joo sep pay yap pel lee |
+| Jappelli | yap pel lee |
+| Stendhal | sten dal |
+| Padua | pad yoo ah |
+| Veneto | ven eh toh |
+| essere al verde | es seh reh al vair deh |
+| Etruscan | eh trus kan |
+| Risorgimento | ree sor jee men toh |
+
+## Sources read
+
+- https://www.caffepedrocchi.it/
+- https://www.caffepedrocchi.it/la-storia/
+- https://www.caffepedrocchi.it/le-sale/
+- https://www.caffepedrocchi.it/contatti/
+- https://it.wikipedia.org/wiki/Caff%C3%A8_Pedrocchi
+
+## Fact-check notes
+
+- 'Open day and night until 1916' and 'café without doors' are Wikipedia-only.
+- The 1839 Pedrocchino is Wikipedia-only.
+- The Stendhal quote is from the official history page; the book isn't named because the sources disagree.
+- The 'essere al verde' etymology is Wikipedia's claim; the script frames it as hearsay.
+- The bullet hole is Wikipedia, unfootnoted; the script says 'what's said to be'.
+- 'Don't sugar, don't stir' is from the official homepage.
