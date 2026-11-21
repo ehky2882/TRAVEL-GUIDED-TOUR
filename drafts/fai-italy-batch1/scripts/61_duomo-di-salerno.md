@@ -1,0 +1,74 @@
+# Duomo di Salerno
+
+*327 words, about 131 seconds at a natural pace.*
+
+## Clean script
+
+A Norman warlord built this cathedral, an exiled pope consecrated it, and an apostle is buried in the crypt.
+
+Go through the Lion Gate, named for the stone lion and lioness either side of it, and stop in the great courtyard beyond. Arcades run round all four sides on columns taken from older buildings, and Roman sarcophagi line the walls. Nearby rises the bell tower, more than fifty metres of it.
+
+The cathedral was begun after the Norman Robert Guiscard conquered Salerno, in the ten seventies. In ten eighty-four it was consecrated by Pope Gregory the Seventh, who'd taken refuge here in exile from Rome.
+
+This courtyard is rare. A square Romanesque cloister in front of a church: the only other in Italy is at Sant'Ambrogio in Milan. And those Roman sarcophagi were reused in the Middle Ages as tombs for the families of Salerno, which makes the courtyard a sort of pantheon of the city.
+
+Now the doors into the church. They're bronze, cast in Constantinople in ten ninety-nine and given by a Salerno couple, Landolfo and Guisana Butrumile, fifty-four panels, most of them with Byzantine crosses.
+
+[beat]
+
+But the real heart of the place is downstairs. Go down to the crypt. The relics of Saint Matthew, the apostle and evangelist, were laid here, and according to tradition they'd been in Salerno since nine fifty-four. The crypt was rebuilt in the early sixteen hundreds by the architect Domenico Fontana and his son, and covered with frescoes, so it glows with colour.
+
+Above the tomb stands a double statue of Saint Matthew, made by Michelangelo Naccherino in the early sixteen hundreds, two figures back to back, so the saint faces both ways.
+
+When you come up, step back out into the courtyard and look up at the bell tower, built in the eleven hundreds, part Arab, part Norman. It's the best summary of Salerno's history you'll find: everyone who passed through left something on top of everyone else.
+
+## TTS-safe script
+
+**dwo mo dee sa lair no**
+
+A Norman warlord built this cathedral, an exiled pope consecrated it, and an apostle is buried in the crypt.
+
+Go through the Lion Gate, named for the stone lion and lioness either side of it, and stop in the great courtyard beyond. Arcades run round all four sides on columns taken from older buildings, and Roman sarcophagi line the walls. Nearby rises the bell tower, more than fifty metres of it.
+
+The cathedral was begun after the Norman robert gwees kar conquered sa lair no, in the ten seventies. In ten eighty four it was consecrated by Pope greg or ee the Seventh, who'd taken refuge here in exile from Rome.
+
+This courtyard is rare. A square ro man esk cloister in front of a church: the only other in Italy is at san tam bro jo in Milan. And those Roman sarcophagi were reused in the Middle Ages as tombs for the families of sa lair no, which makes the courtyard a sort of pantheon of the city.
+
+Now the doors into the church. They're bronze, cast in kon stan tin oh pel in ten ninety nine and given by a sa lair no couple, lan dol fo and gwee zah na boo troo mee leh, fifty four panels, most of them with biz an teen crosses.
+
+But the real heart of the place is downstairs. Go down to the crypt. The relics of Saint Matthew, the apostle and evangelist, were laid here, and according to tradition they'd been in sa lair no since nine fifty four. The crypt was rebuilt in the early sixteen hundreds by the architect doh meh nee ko fon tah na and his son, and covered with frescoes, so it glows with colour.
+
+Above the tomb stands a double statue of Saint Matthew, made by mee kel an jeh lo nak keh ree no in the early sixteen hundreds, two figures back to back, so the saint faces both ways.
+
+When you come up, step back out into the courtyard and look up at the bell tower, built in the eleven hundreds, part Arab, part Norman. It's the best summary of sa lair no's history you'll find: everyone who passed through left something on top of everyone else.
+
+## Respellings
+
+| Written | Spoken as |
+|---|---|
+| Duomo di Salerno | dwo mo dee sa lair no |
+| Salerno | sa lair no |
+| Robert Guiscard | robert gwees kar |
+| Gregory | greg or ee |
+| Sant'Ambrogio | san tam bro jo |
+| Romanesque | ro man esk |
+| Constantinople | kon stan tin oh pel |
+| Landolfo and Guisana Butrumile | lan dol fo and gwee zah na boo troo mee leh |
+| Byzantine | biz an teen |
+| Domenico Fontana | doh meh nee ko fon tah na |
+| Michelangelo Naccherino | mee kel an jeh lo nak keh ree no |
+
+## Sources read
+
+- https://it.wikipedia.org/wiki/Duomo_di_Salerno
+- https://www.cattedraledisalerno.it
+- https://www.cattedraledisalerno.it/la-cripta.html
+- https://www.cattedraledisalerno.it/visitatori.html
+
+## Fact-check notes
+
+- Consecration month conflicts (June per Wikipedia, July per the official site), so the script gives the year only.
+- The columns are 'spolia' (official); Wikipedia says they came from the Roman forum. Paestum is not supported.
+- Gregory VII's burial here was not verified, so it isn't mentioned.
+- 954 is a tradition; the official site says Alfano laid the relics in the new crypt in 1081.
+- The Naccherino statue: official 1606, Wikipedia summary 1605. The script says 'early 1600s'.
