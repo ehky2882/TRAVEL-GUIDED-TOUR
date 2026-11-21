@@ -1,0 +1,75 @@
+# Villa e Collezione Panza
+
+*344 words, about 138 seconds at a natural pace.*
+
+## Clean script
+
+An old aristocratic villa, chandeliers and all, and in the stables, rooms made of nothing but light.
+
+Piazza Litta, on the hill of Biumo above Varese. The long, pale villa in front of you looks exactly like what it is: a country house of the Milanese nobility, with a formal Italian garden in front and an English park beyond, more than thirty thousand square metres of it, looking out over the city.
+
+Its history is a parade of owners. The Menafoglio family built it. In eighteen twenty-three it passed to Pompeo Litta, who had the architect Luigi Canonica enlarge it and turn the farm buildings into stables. In nineteen thirty-five it was bought by Ernesto Panza, and his son Giuseppe grew up here.
+
+Giuseppe Panza became one of the great collectors of his century. From the nineteen fifties until his death in twenty ten he gathered more than two and a half thousand works of contemporary art, much of it American, and much of it about light and colour. Around a hundred and fifty pieces live here now.
+
+Go to the old stables first. That's where you'll find the work of Dan Flavin, who made art out of coloured fluorescent tubes, and this villa has the largest concentration of his work on permanent show anywhere. Alongside him are rooms by James Turrell and Robert Irwin, each one built for this house, each one a kind of small temple to light.
+
+And here's what I love about it. Upstairs, the rooms are still a home: Renaissance wedding chests, nineteenth-century furniture, African and pre-Columbian sculpture. Panza didn't empty the house to make a gallery. He let the eighteenth century and the twentieth sit in the same rooms and argue it out.
+
+[beat]
+
+He and his wife Giovanna gave the villa to the FAI in nineteen ninety-six, and they kept living on the top floor.
+
+Before you leave, walk out into the park and find the greenhouse. Inside it, Sean Scully has replaced the glass with panels of colour, so the plants and the light come through together.
+
+## TTS-safe script
+
+**Villa e Collezione pant sa**
+
+An old aristocratic villa, chandeliers and all, and in the stables, rooms made of nothing but light.
+
+Piazza lit ta, on the hill of bee oo mo above va ray zeh. The long, pale villa in front of you looks exactly like what it is: a country house of the Milanese nobility, with a formal Italian garden in front and an English park beyond, more than thirty thousand square metres of it, looking out over the city.
+
+Its history is a parade of owners. The meh na fol yo family built it. In eighteen twenty three it passed to pom pay oh lit ta, who had the architect loo ee jee ka no nee ka enlarge it and turn the farm buildings into stables. In nineteen thirty five it was bought by er nes to pant sa, and his son joo sep pay grew up here.
+
+joo sep pay pant sa became one of the great collectors of his century. From the nineteen fifties until his death in twenty ten he gathered more than two and a half thousand works of contemporary art, much of it American, and much of it about light and colour. Around a hundred and fifty pieces live here now.
+
+Go to the old stables first. That's where you'll find the work of Dan Flavin, who made art out of coloured fluorescent tubes, and this villa has the largest concentration of his work on permanent show anywhere. Alongside him are rooms by James tur rel and Robert Irwin, each one built for this house, each one a kind of small temple to light.
+
+And here's what I love about it. Upstairs, the rooms are still a home: Renaissance wedding chests, nineteenth century furniture, African and pre Columbian sculpture. pant sa didn't empty the house to make a gallery. He let the eighteenth century and the twentieth sit in the same rooms and argue it out.
+
+He and his wife jo van na gave the villa to the fy in nineteen ninety six, and they kept living on the top floor.
+
+Before you leave, walk out into the park and find the greenhouse. Inside it, Sean skully has replaced the glass with panels of colour, so the plants and the light come through together.
+
+## Respellings
+
+| Written | Spoken as |
+|---|---|
+| Panza | pant sa |
+| Biumo | bee oo mo |
+| Varese | va ray zeh |
+| Menafoglio | meh na fol yo |
+| Pompeo Litta | pom pay oh lit ta |
+| Litta | lit ta |
+| Luigi Canonica | loo ee jee ka no nee ka |
+| Ernesto | er nes to |
+| Giuseppe | joo sep pay |
+| Giovanna | jo van na |
+| Turrell | tur rel |
+| Scully | skully |
+| FAI | fy |
+
+## Sources read
+
+- https://fondoambiente.it/luoghi/villa-e-collezione-panza
+- https://it.wikipedia.org/wiki/Villa_Panza
+
+## Fact-check notes
+
+- Construction date conflict: FAI says late sixteenth century, Wikipedia says 1755–1766. The script avoids a date and says only 'the Menafoglio family built it'.
+- Collecting start: FAI 1955, Wikipedia 1956. Script says 'the nineteen fifties'.
+- The Flavin 'largest concentration on permanent display' claim is FAI's wording.
+- No Turrell or Irwin work titles are confirmed, so none are named.
+- Sean Scully's greenhouse 'Looking Outward' is from Wikipedia only.
+- Donor name: FAI says Giovanna, Wikipedia says Rosa Giovanna.

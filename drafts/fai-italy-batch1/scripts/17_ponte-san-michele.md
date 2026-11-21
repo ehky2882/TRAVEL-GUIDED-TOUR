@@ -1,0 +1,68 @@
+# Ponte San Michele
+
+*330 words, about 132 seconds at a natural pace.*
+
+## Clean script
+
+Eighty-five metres above the river, the trains run underneath the cars.
+
+From the bank of the Adda, or from the walkway on the bridge itself, take in the whole span. One great iron arch leaps the gorge between Paderno and Calusco, and the deck sits on top of it like a long straight shelf. Look closely and you'll see there are two decks. The road runs along the top, with a footpath either side. The railway runs through the level below.
+
+It was built between eighteen eighty-seven and eighteen eighty-nine by the Società Nazionale delle Officine di Savigliano, to a design by their head engineer, a Swiss called Jules Röthlisberger. It's two hundred and sixty-six metres long. The arch spans a hundred and fifty. About four hundred and seventy men put it together from around two and a half thousand tonnes of iron, all of it riveted. There isn't a weld anywhere.
+
+If that sounds like something Gustave Eiffel might have done, you're not wrong. It belongs to exactly the same moment as his great iron bridges in France and Portugal, and as the Eiffel Tower itself.
+
+[beat]
+
+And here's the thing worth knowing. This isn't a monument you look at. It's a working bridge, well over a hundred and thirty years old, still carrying a railway line. In September twenty eighteen it was closed overnight after sensors picked up worrying readings. Walkers were back in March twenty nineteen, cars that November, and trains in September twenty twenty.
+
+There was a plan to put it forward for UNESCO alongside its sister bridges abroad, but it was dropped in twenty twenty-four, because a new bridge is planned right next to this one. Enjoy it while it stands alone.
+
+From here, the paths along the Adda are the Ecomuseo Adda di Leonardo, the river Leonardo da Vinci knew. Follow the river a few kilometres upstream and you'll come to Imbersago, and a ferry that still crosses the Adda with no engine at all.
+
+## TTS-safe script
+
+**pon tay san mee kay lay**
+
+Eighty five metres above the river, the trains run underneath the cars.
+
+From the bank of the ad da, or from the walkway on the bridge itself, take in the whole span. One great iron arch leaps the gorge between pa dair no and ka loos ko, and the deck sits on top of it like a long straight shelf. Look closely and you'll see there are two decks. The road runs along the top, with a footpath either side. The railway runs through the level below.
+
+It was built between eighteen eighty seven and eighteen eighty nine by the so chee eh tah nat syo nah leh del leh of fee chee neh dee sa vee lyah no, to a design by their head engineer, a Swiss called zhool rert lis bair ger. It's two hundred and sixty six metres long. The arch spans a hundred and fifty. About four hundred and seventy men put it together from around two and a half thousand tonnes of iron, all of it riveted. There isn't a weld anywhere.
+
+If that sounds like something goo stav eye fel might have done, you're not wrong. It belongs to exactly the same moment as his great iron bridges in France and Portugal, and as the eye fel Tower itself.
+
+And here's the thing worth knowing. This isn't a monument you look at. It's a working bridge, well over a hundred and thirty years old, still carrying a railway line. In September twenty eighteen it was closed overnight after sensors picked up worrying readings. Walkers were back in March twenty nineteen, cars that November, and trains in September twenty twenty.
+
+There was a plan to put it forward for you ness co alongside its sister bridges abroad, but it was dropped in twenty twenty four, because a new bridge is planned right next to this one. Enjoy it while it stands alone.
+
+From here, the paths along the ad da are the eh ko moo zeh oh ad da dee lay oh nar doh, the river Leonardo da Vinci knew. Follow the river a few kilometres upstream and you'll come to im bair sah go, and a ferry that still crosses the ad da with no engine at all.
+
+## Respellings
+
+| Written | Spoken as |
+|---|---|
+| Ponte San Michele | pon tay san mee kay lay |
+| Adda | ad da |
+| Paderno | pa dair no |
+| Calusco | ka loos ko |
+| Società Nazionale delle Officine di Savigliano | so chee eh tah nat syo nah leh del leh of fee chee neh dee sa vee lyah no |
+| Jules Röthlisberger | zhool rert lis bair ger |
+| Gustave Eiffel | goo stav eye fel |
+| Eiffel | eye fel |
+| Ecomuseo Adda di Leonardo | eh ko moo zeh oh ad da dee lay oh nar doh |
+| Imbersago | im bair sah go |
+| UNESCO | you ness co |
+
+## Sources read
+
+- https://it.wikipedia.org/wiki/Ponte_San_Michele
+- https://www.parcoaddanord.it/
+
+## Fact-check notes
+
+- Closure: Wikipedia gives both the 14 and 15 September 2018. The script says 'September twenty eighteen'.
+- Builder name: Wikipedia says 'Società Nazionale Officine di Savigliano'; the script uses the common form with 'delle'. Use Wikipedia's form if strictness matters.
+- Leonardo isn't linked to the bridge itself. The script refers only to the Ecomuseo's name and the river.
+- The 'largest arch bridge in the world when built' claim is uncited on Wikipedia, so it isn't used.
+- The distance from the bridge to Imbersago ('a few kilometres upstream') should be checked on a map.
