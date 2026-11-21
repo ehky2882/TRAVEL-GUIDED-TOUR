@@ -1,0 +1,71 @@
+# Casa Noha, Matera
+
+*313 words, about 125 seconds at a natural pace.*
+
+## Clean script
+
+This small house in the Sassi was the FAI's first property in Basilicata, and it doesn't so much show you Matera as tell it.
+
+You're at Recinto Cavone, in the Civita, the old heart of Matera, just a few steps from the cathedral. Look out from the doorway and the Sassi fall away below you: thousands of houses and churches cut into and built onto the rock of the ravine.
+
+The house is part of the old home of the de Noha, a noble family, from the fifteen hundreds. In two thousand and four the Fodale and Latorre families gave it to the FAI, and the foundation decided not to fill it with furniture, but with a story.
+
+So, inside, in two rooms on the ground floor, the walls themselves become screens. The film is narrated by the actress Lella Costa, and it's projected right onto the stone and the vaults of the house, so the building you're standing in is part of the picture. It runs in two chapters. The first takes Matera from its beginnings up to nineteen forty-five. The second takes it from nineteen forty-five to today.
+
+That split is the whole point. People have lived in these rocks for an extraordinarily long time, and much of what happened to them happened after the war. Here you'll get both halves.
+
+[beat]
+
+Downstairs, in the old cellars, there's also a section on how the people of the Sassi collected and stored water, which in a town built of rock above a dry ravine was the difference between living here and not.
+
+Allow about half an hour to forty minutes for the visit.
+
+When you come out, walk down into the Sassi themselves, with the film still fresh in your head. You'll see the steps, the cisterns and the cave houses differently, because now you'll know what it took to live in them.
+
+## TTS-safe script
+
+**kah za no ah, ma teh ra**
+
+This small house in the sas see was the fy's first property in ba zee lee ka ta, and it doesn't so much show you ma teh ra as tell it.
+
+You're at reh chin toh ka vo neh, in the chee vee ta, the old heart of ma teh ra, just a few steps from the cathedral. Look out from the doorway and the sas see fall away below you: thousands of houses and churches cut into and built onto the rock of the ravine.
+
+The house is part of the old home of the de no ah, a noble family, from the fifteen hundreds. In two thousand and four the fo dah leh and la tor reh families gave it to the fy, and the foundation decided not to fill it with furniture, but with a story.
+
+So, inside, in two rooms on the ground floor, the walls themselves become screens. The film is narrated by the actress lel la kos ta, and it's projected right onto the stone and the vaults of the house, so the building you're standing in is part of the picture. It runs in two chapters. The first takes ma teh ra from its beginnings up to nineteen forty five. The second takes it from nineteen forty five to today.
+
+That split is the whole point. People have lived in these rocks for an extraordinarily long time, and much of what happened to them happened after the war. Here you'll get both halves.
+
+Downstairs, in the old cellars, there's also a section on how the people of the sas see collected and stored water, which in a town built of rock above a dry ravine was the difference between living here and not.
+
+Allow about half an hour to forty minutes for the visit.
+
+When you come out, walk down into the sas see themselves, with the film still fresh in your head. You'll see the steps, the cisterns and the cave houses differently, because now you'll know what it took to live in them.
+
+## Respellings
+
+| Written | Spoken as |
+|---|---|
+| Casa Noha | kah za no ah |
+| Noha | no ah |
+| Matera | ma teh ra |
+| Sassi | sas see |
+| Basilicata | ba zee lee ka ta |
+| Recinto Cavone | reh chin toh ka vo neh |
+| Civita | chee vee ta |
+| Fodale | fo dah leh |
+| Latorre | la tor reh |
+| Lella Costa | lel la kos ta |
+| FAI | fy |
+
+## Sources read
+
+- https://fondoambiente.it/luoghi/casa-noha
+- https://www.fondoambiente.it/casa-noha-eng/
+
+## Fact-check notes
+
+- Donated in 2004 by the Fodale and Latorre families (not 'Ruggiero'). It was FAI's first property in Basilicata.
+- The film is by Giovanni Carrada and Rosalba Demetrio, narrated by Lella Costa, in two chapters (origins to 1945, 1945 to today).
+- 'Sassi I invisibili', the 1952 law, Carlo Levi, UNESCO 1993 and the Capital of Culture are unsupported by the FAI pages, so they're omitted.
+- The screening is Italian-only from 22 October to 30 November 2026.
