@@ -1,0 +1,67 @@
+# Torre e Casa Campatelli, San Gimignano
+
+*308 words, about 123 seconds at a natural pace.*
+
+## Clean script
+
+San Gimignano once had seventy-two towers. Fourteen are left, and this is the only one that's still exactly the size it was built.
+
+You're on Via San Giovanni, the main street climbing into the town. Look up at the tall, plain tower of stone rising out of the house in front of you. It's twenty-eight metres high, and it's the Torre Campatelli.
+
+Most of the town's medieval towers were later cut down or lost altogether. This one kept its full original volume, which makes it rather special among the fourteen survivors.
+
+In the eighteen hundreds the tower and the eighteenth-century house built around it were bought by the Campatelli, a Florentine family of landowners and businesspeople, who turned it into a comfortable upper-middle-class home. Inside, have a look at the great salon with its neo-Renaissance fireplace and seventeenth-century portraits, the little sitting room, the study and the dining room. On the dining room walls are paintings by Guido Peyron, the uncle of the last owner. There's even a tiny family chapel.
+
+[beat]
+
+That last owner was Lydia Campatelli, who was born in nineteen twenty-five and died in two thousand and five. It's thanks to her that the house came down to us intact, and in two thousand and five she left it to the FAI.
+
+So you get two things here at once. A medieval tower, from a town that built them like trophies. And inside it, a nineteenth-century family who simply lived there, among the furniture and the portraits, with San Gimignano going on outside the windows.
+
+Before you leave, climb up to the attic, where the FAI projects a short film about a thousand years of the town's history on the walls of the tower itself. Then step back out onto Via San Giovanni and count the towers you can see. Fourteen is fewer than you'd think.
+
+## TTS-safe script
+
+**tor reh eh kah za kam pa tel lee, san jee meen yah no**
+
+san jee meen yah no once had seventy two towers. Fourteen are left, and this is the only one that's still exactly the size it was built.
+
+You're on vee ah san jo van nee, the main street climbing into the town. Look up at the tall, plain tower of stone rising out of the house in front of you. It's twenty eight metres high, and it's the tor reh kam pa tel lee.
+
+Most of the town's medieval towers were later cut down or lost altogether. This one kept its full original volume, which makes it rather special among the fourteen survivors.
+
+In the eighteen hundreds the tower and the eighteenth century house built around it were bought by the kam pa tel lee, a flor en tine family of landowners and businesspeople, who turned it into a comfortable upper middle class home. Inside, have a look at the great salon with its neo Renaissance fireplace and seventeenth century portraits, the little sitting room, the study and the dining room. On the dining room walls are paintings by gwee doh peh ron, the uncle of the last owner. There's even a tiny family chapel.
+
+That last owner was lid ee ah kam pa tel lee, who was born in nineteen twenty five and died in two thousand and five. It's thanks to her that the house came down to us intact, and in two thousand and five she left it to the fy.
+
+So you get two things here at once. A medieval tower, from a town that built them like trophies. And inside it, a nineteenth century family who simply lived there, among the furniture and the portraits, with san jee meen yah no going on outside the windows.
+
+Before you leave, climb up to the attic, where the fy projects a short film about a thousand years of the town's history on the walls of the tower itself. Then step back out onto vee ah san jo van nee and count the towers you can see. Fourteen is fewer than you'd think.
+
+## Respellings
+
+| Written | Spoken as |
+|---|---|
+| Torre e Casa Campatelli | tor reh eh kah za kam pa tel lee |
+| Campatelli | kam pa tel lee |
+| San Gimignano | san jee meen yah no |
+| Via San Giovanni | vee ah san jo van nee |
+| Torre Campatelli | tor reh kam pa tel lee |
+| Guido Peyron | gwee doh peh ron |
+| Lydia | lid ee ah |
+| Florentine | flor en tine |
+| FAI | fy |
+
+## Sources read
+
+- https://fondoambiente.it/luoghi/torre-e-casa-campatelli
+- https://fondoambiente.it/torre-e-casa-campatelli-eng
+- https://en.wikipedia.org/wiki/Torre_e_Casa_Campatelli (HTTP 404)
+
+## Fact-check notes
+
+- The 72 towers once and 14 now, and 'the only one to keep its original volume', are from FAI.
+- No construction date for the tower is given (the English page's '1300' is inconsistent), so none is stated.
+- 'Most of the towers were later cut down or lost' is inferred from 72 to 14.
+- Donated by Lydia Campatelli (1925–2005) in 2005.
+- 'Fourteen is fewer than you'd think' is the narrator's flourish.
