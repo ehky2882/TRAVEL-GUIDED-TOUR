@@ -482,3 +482,41 @@ Now the modern part. Space has always been the problem here, and in nineteen nin
 What I find rather moving is that Chipperfield didn't try to compete with Codussi. He made something quieter and darker, and let the white church keep the light.
 
 Walk through the cemetery to find the Chipperfield courtyards; there are signs at the entrance. Please keep your voice down. This is a working cemetery, and people are visiting their own. Then take the water bus on to Murano, a few minutes away.
+
+=== 30 | st-marks-basilica | Observe | Basilica di San Marco | 45.434715 | 12.339734 | St Mark's Basilica
+This whole building exists to hold a body. And the body, by Venice's own account, was stolen.
+
+Piazza San Marco, at the eastern end of the square, facing the church. In front of you, at ground level, are five great arched doorways. Above them runs a terrace with four bronze horses. And above that, rising behind the arches, are the five domes.
+
+The story goes like this. In eight twenty-eight, two Venetian merchants, Buono da Malamocco and Rustico da Torcello, took the body of Saint Mark the Evangelist from his tomb in Alexandria. Legend says they smuggled it past the harbour officials in a basket covered with pork, which no Muslim official would want to touch. Venice now had an apostle of its own.
+
+The first church here was consecrated in eight thirty-two. It burned in a revolt in nine seventy-six. The building you're looking at was begun in ten sixty-three and consecrated in ten ninety-four.
+
+Have a look at the doorway on the far left first. The mosaic in its arch dates from the twelve sixties, and it is the only one of the medieval mosaics left on the front of the church. It shows Saint Mark's body being carried into the basilica, and it shows the basilica itself, as it looked seven and a half centuries ago.
+
+Then look up at the horses. They are ancient bronze, brought here from Constantinople after the Fourth Crusade, in twelve oh four. In seventeen ninety-seven Napoleon took them to Paris, where they ended up on his triumphal arch by the Louvre. They came home in eighteen fifteen. The ones on the terrace now are copies. The originals are kept indoors, safe from the weather.
+
+And here's the thing. For nearly a thousand years this wasn't Venice's cathedral at all. It was the doge's private chapel, and it only became the cathedral in eighteen oh seven. Much of the marble on this front, and the horses, were brought back from the East as trophies. The Republic's church was also its display case.
+
+[beat]
+
+When you go inside, let your eyes adjust, then look straight up. The gold mosaics in the domes were begun in the ten seventies, and the work went on for centuries. In the low light, the whole ceiling seems to glow.
+
+=== 31 | ponte-di-rialto | Observe | Ponte di Rialto | 45.438154 | 12.335866 | Ponte di Rialto
+Until eighteen fifty-four, this was the only bridge across the Grand Canal. If you wanted to cross the city on foot, you came through here.
+
+The top of the bridge, at the centre, where the two rows of shops part and open onto the canal. Step to the stone balustrade on either side. The Grand Canal runs away beneath you in both directions. On one bank is the San Marco side of the city. On the other is San Polo, with the Rialto markets just beyond the foot of the bridge.
+
+There has been a crossing here since the eleven eighties. It started as a bridge of boats, then became a wooden bridge with a section in the middle that could be raised for tall ships. In fourteen forty-four this one collapsed under a crowd that had packed onto it to watch the bride of the Marquis of Ferrara go by. It collapsed again in fifteen twenty-four.
+
+So Venice asked for a stone one. Some of the most famous names of the century put forward designs, including Sansovino, Palladio and Vignola. Most of them proposed several arches. In fifteen eighty-eight the job went to Antonio da Ponte, whose name, rather neatly, means Anthony of the Bridge. He offered a single arch, about twenty-eight metres across. It was finished in fifteen ninety-one.
+
+A single span meant boats could pass beneath without any piers in the way. And underneath, the whole bridge stands on twelve thousand elm piles driven into the mud.
+
+Then look at the carvings on the outer face. On the south side is an Annunciation: the angel Gabriel on one side of the arch, the Virgin Mary on the other, and the dove of the Holy Spirit in the middle. On the other face are Venice's patron saints, Mark and Theodore.
+
+What's worth knowing is that this was never just a bridge. It carries two dozen shops on its ramps, at the commercial heart of the Republic. It was built to do business on. A major restoration, paid for by a single private sponsor, was finished in twenty twenty-one, and it was the first big work on the bridge since it was built.
+
+[beat]
+
+When you come down on the San Polo side, keep going. The fruit and vegetable stalls start almost at once, and a few minutes beyond them is the fish market at the Pescheria. It is at its liveliest early in the morning.

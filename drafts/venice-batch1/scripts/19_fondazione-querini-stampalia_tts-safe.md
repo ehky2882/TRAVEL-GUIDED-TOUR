@@ -20,4 +20,4 @@ Then the garden. Water runs the length of it in a narrow channel, past little ma
 
 This is the place I'd send anyone who wants to understand modern architecture in Venice. It doesn't pretend the city isn't sinking. It accepts that, and it makes something rather lovely of it.
 
-Go in, buy a coffee in the café, and sit by the garden. Then, if you're curious, walk ten minutes to Piazza San Marco and find Scarpa's other small masterpiece, the olly vetty showroom, under the arcades.
+Go in, buy a coffee in the café, and sit by the garden. Then, if you're curious, walk ten minutes to pee at sa san mar ko and find Scarpa's other small masterpiece, the olly vetty showroom, under the arcades.

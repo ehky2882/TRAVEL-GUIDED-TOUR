@@ -8,7 +8,7 @@ eel mer kan tay
 
 There has been a café on this corner for more than a hundred and fifty years. These days it serves rather more interesting drinks.
 
-kampo day frah ree, in San Polo. The huge brick church in front of you is the Basilica dei frah ree, where tishun is buried. Keep it on your left and look for the bar on the corner by the canal, with a dark, wood panelled room inside.
+kampo day frah ree, in san polo. The huge brick church in front of you is the Basilica dei frah ree, where tishun is buried. Keep it on your left and look for the bar on the corner by the canal, with a dark, wood panelled room inside.
 
 From eighteen seventy this was the kaff ay day frah ree, an elegant old Venetian café. In twenty sixteen alless andro zam pee eh ree reopened it as eel mer kan tay, The Merchant. He is the owner and the man behind the drinks list.
 

@@ -8,9 +8,9 @@ car dee dee oh
 
 For roughly eight hundred years, people have arrived at this door needing somewhere to sleep. The difference now is the room service.
 
-ree va del yee skee a voh nee, the long stone waterfront east of San Marco. Stand with the lagoon at your back and the island of san jor jo somewhere behind your shoulder. In front of you is a long, plain building in pale render, with a little canal, the ree oh car dee dee oh, running along one side. The name means the House of God.
+ree va del yee skee a voh nee, the long stone waterfront east of san mar ko. Stand with the lagoon at your back and the island of san jor jo somewhere behind your shoulder. In front of you is a long, plain building in pale render, with a little canal, the ree oh car dee dee oh, running along one side. The name means the House of God.
 
-It began in the thirteenth century as a hospice for pilgrims on their way to the Holy Land, who waited here for a ship. Later it took in women who had nowhere else to go, then soldiers, and for many years it was a home for the elderly. In the sixteenth century it was rebuilt to designs by Jacopo san so vee no, the architect who gave San Marco its library. His drawings have since been lost, but the long, sober front is his kind of building: useful first, grand only by accident.
+It began in the thirteenth century as a hospice for pilgrims on their way to the Holy Land, who waited here for a ship. Later it took in women who had nowhere else to go, then soldiers, and for many years it was a home for the elderly. In the sixteenth century it was rebuilt to designs by Jacopo san so vee no, the architect who gave san mar ko its library. His drawings have since been lost, but the long, sober front is his kind of building: useful first, grand only by accident.
 
 Now look at what happened inside. In twenty nineteen the Spanish designer patricia oor kee oh la began turning it into a hotel, and it opened with sixty six rooms, most of them facing the lagoon. The old courtyards became three gardens. Fabric, glass, stone and marble were worked by local craftspeople, and the colours are soft and pale, meant to recall light on the water.
 

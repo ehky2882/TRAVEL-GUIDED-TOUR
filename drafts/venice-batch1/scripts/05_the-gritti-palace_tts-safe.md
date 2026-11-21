@@ -8,7 +8,7 @@ The gree tee Palace
 
 A doge lived here. Centuries later, Ernest Hemingway treated it rather like home.
 
-kampo santa maria del jeel yo, just off the busy route from San Marco to the akka deh mee a. The hotel entrance is on this side, but the pa lat so really faces the other way, onto the Grand Canal, with the great white dome of the sa loo tay directly across the water. If you can, walk through to the waterside terrace, or look from the tra get toe landing nearby.
+kampo santa maria del jeel yo, just off the busy route from san mar ko to the akka deh mee a. The hotel entrance is on this side, but the pa lat so really faces the other way, onto the Grand Canal, with the great white dome of the sa loo tay directly across the water. If you can, walk through to the waterside terrace, or look from the tra get toe landing nearby.
 
 It was built in fourteen seventy five for the pee zah nee family. In fifteen twenty five it became the private residence of an dray a gree tee, dohj of Venice. His name stuck to the building long after he had gone.
 

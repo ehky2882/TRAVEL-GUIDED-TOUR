@@ -8,7 +8,7 @@ neh got see oh olly vetty
 
 It was built to sell typewriters. It ended up as a calling card for an entire company, in what its owner called the most beautiful square in the world.
 
-Piazza San Marco, north side, under the arcades of the pro koo rah tee eh vek ee eh, about halfway along the square. Look for a narrow shopfront with dark wood, glass and the name olly vetty. Through the window you'll see a staircase that seems to float.
+pee at sa san mar ko, north side, under the arcades of the pro koo rah tee eh vek ee eh, about halfway along the square. Look for a narrow shopfront with dark wood, glass and the name olly vetty. Through the window you'll see a staircase that seems to float.
 
 In nineteen fifty seven, Adriano olly vetty, the industrialist behind Italy's most celebrated typewriters, asked karlo scarpa to design a showroom here. olly vetty didn't want a shop. He wanted, as he put it, a calling card in the most beautiful square in the world. Scarpa finished it in nineteen fifty eight.
 

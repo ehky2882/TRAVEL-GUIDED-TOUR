@@ -18,4 +18,4 @@ The gift detail is the velvet called so pra reet so. Its pattern is made of two 
 
 Here's the thing. Velvet like this has gone into the ba zilli ka della sa loo tay here in Venice, into the Royal Palace in dresden and into Stockholm City Hall. It is one of the last places in the world making it this way. When you walk through grand interiors anywhere in Europe, you may well have touched its work without knowing.
 
-If you can't get inside, walk down to the Grand Canal from the kampo. You'll come out looking across the water to kanna reh jo. And if you'd rather see the velvets than the looms, look for the beh vee lak wa shops near San Marco, one of them by kampo santa maria del jeel yo.
+If you can't get inside, walk down to the Grand Canal from the kampo. You'll come out looking across the water to kanna reh jo. And if you'd rather see the velvets than the looms, look for the beh vee lak wa shops near san mar ko, one of them by kampo santa maria del jeel yo.

@@ -1,0 +1,23 @@
+# Ponte di Rialto — TTS-safe
+
+Read this version to the voice. Each beat is a plain paragraph break; names are respelled; years are spelled out; no hyphens, capitals-for-emphasis or brackets.
+
+---
+
+pon tay dee ree al toe
+
+Until eighteen fifty four, this was the only bridge across the Grand Canal. If you wanted to cross the city on foot, you came through here.
+
+The top of the bridge, at the centre, where the two rows of shops part and open onto the canal. Step to the stone balustrade on either side. The Grand Canal runs away beneath you in both directions. On one bank is the san mar ko side of the city. On the other is san polo, with the ree al toe markets just beyond the foot of the bridge.
+
+There has been a crossing here since the eleven eighties. It started as a bridge of boats, then became a wooden bridge with a section in the middle that could be raised for tall ships. In fourteen forty four this one collapsed under a crowd that had packed onto it to watch the bride of the Marquis of feh rah ra go by. It collapsed again in fifteen twenty four.
+
+So Venice asked for a stone one. Some of the most famous names of the century put forward designs, including san so vee no, pa lah dee oh and veen yo la. Most of them proposed several arches. In fifteen eighty eight the job went to an toe nee oh da pon tay, whose name, rather neatly, means Anthony of the Bridge. He offered a single arch, about twenty eight metres across. It was finished in fifteen ninety one.
+
+A single span meant boats could pass beneath without any piers in the way. And underneath, the whole bridge stands on twelve thousand elm piles driven into the mud.
+
+Then look at the carvings on the outer face. On the south side is an Annunciation: the angel Gabriel on one side of the arch, the Virgin Mary on the other, and the dove of the Holy Spirit in the middle. On the other face are Venice's patron saints, Mark and Theodore.
+
+What's worth knowing is that this was never just a bridge. It carries two dozen shops on its ramps, at the commercial heart of the Republic. It was built to do business on. A major restoration, paid for by a single private sponsor, was finished in twenty twenty one, and it was the first big work on the bridge since it was built.
+
+When you come down on the san polo side, keep going. The fruit and vegetable stalls start almost at once, and a few minutes beyond them is the fish market at the pesk eh ree a. It is at its liveliest early in the morning.

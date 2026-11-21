@@ -34,3 +34,5 @@ secondary sources used to confirm or fill gaps. Coordinates: OpenStreetMap via p
 | 27 | Ponte della Costituzione | Wikipedia; Dezeen (2019 fine); Architectural Record (glass steps removal) |
 | 28 | Iuav Tolentini entrance | iuav.it/en/node/37 (Tolentini history, 1985, Sergio Los); unive.it; search (portal laid flat) |
 | 29 | Cimitero di San Michele | davidchipperfield.com project page; Wikipedia (San Michele in Isola) |
+| 30 | St Mark's Basilica | basilicasanmarco.it (Essential Chronology; The Doges and the Basilica); Wikipedia (St Mark's Basilica, Saint Mark's relics, Horses of Saint Mark); arte.it + Columbia MCID (Sant'Alipio mosaic, 13th c., only one left on the facade) |
+| 31 | Ponte di Rialto | it.wikipedia (Ponte di Rialto: 12,000 elm piles, 24 shops, sole Grand Canal bridge until 1854, sculptures); en.wikipedia (Rialto Bridge); The Art Newspaper, Artribune, Finestre sull'Arte (2015–2021 restoration, €5m single sponsor) |

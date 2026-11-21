@@ -8,7 +8,7 @@ Aman Venice
 
 There's a curious thing about this pa lat so. It is a luxury hotel, but the family who own it still live upstairs.
 
-The best view is from the water, but from the land you'll find the entrance on kal lay tee eh polo, in San Polo, a few minutes' walk from the ree al toe Bridge. This is pa lat so pappa doppo lee. Its front faces the Grand Canal, and two pointed obelisks stand on its roof. In the old Republic, obelisks like that were the mark of a family that had produced a great naval commander.
+The best view is from the water, but from the land you'll find the entrance on kal lay tee eh polo, in san polo, a few minutes' walk from the ree al toe Bridge. This is pa lat so pappa doppo lee. Its front faces the Grand Canal, and two pointed obelisks stand on its roof. In the old Republic, obelisks like that were the mark of a family that had produced a great naval commander.
 
 It was built in the mid sixteenth century by the architect jan jah ko mo day gree jee for the kot chee na family, merchants who had come to Venice from bair ga mo. In the eighteenth century it passed to a branch of the tee eh polo family. In eighteen sixty four it was bought by the pappa doppo lee, who added gardens and a ballroom. And in nineteen twenty two it passed by inheritance to the arree va beh nay va len tee gon zah ga. Count jil bair toe and Countess Bianca still live in the private apartments at the top.
 

@@ -8,7 +8,7 @@ jar dee nee della bee en nah lay
 
 Napoleon wanted Venice to have a public park. What it got, eventually, was the world's most famous art exhibition.
 
-The entrance to the jar dee nee, at the eastern end of kass tello, along the waterfront from San Marco. The trees and lawns in front of you are the only large public gardens in the historic city. Inside, scattered among them, are pavilions in every style of the last hundred and twenty years.
+The entrance to the jar dee nee, at the eastern end of kass tello, along the waterfront from san mar ko. The trees and lawns in front of you are the only large public gardens in the historic city. Inside, scattered among them, are pavilions in every style of the last hundred and twenty years.
 
 Napoleon laid out the gardens in the early nineteenth century, clearing monasteries to do it. In eighteen ninety five the city held its first international art exhibition here, and it has been held every other year since. The first foreign country to build its own pavilion was Belgium, in nineteen oh seven. Today there are twenty nine national pavilions in the gardens, each country's statement of what it wanted to look like.
 

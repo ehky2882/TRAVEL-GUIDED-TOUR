@@ -8,7 +8,7 @@ kaff ay flor ee an
 
 On the twenty ninth of December, seventeen twenty, a man called flor ee ah no opened a coffee house on this square. It is still open.
 
-Piazza San Marco, on the south side, under the arcades of the pro koo rah tee eh nwo vay. The basilica is at the far end of the square to your left. The café is the run of arched windows, glowing inside, with an orchestra stand out front and tables in the square.
+pee at sa san mar ko, on the south side, under the arcades of the pro koo rah tee eh nwo vay. The basilica is at the far end of the square to your left. The café is the run of arched windows, glowing inside, with an orchestra stand out front and tables in the square.
 
 flor ee ah no fran cheh sko nee called it alla veh net see a tree on fan tay, Venice Triumphant. Everyone simply called it Florian's, after him, and the name stuck. It is generally said to be the oldest café still trading in Italy, and one of the oldest in the world.
 
