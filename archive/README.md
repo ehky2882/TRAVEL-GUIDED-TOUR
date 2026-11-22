@@ -407,3 +407,4 @@ Full text for every one of them is in
 - [HANDOFF-261116-triage-batch.md](HANDOFF-261116-triage-batch.md) — **Triage batch: 38 link pins** from 35 creators (21 new); 3 skipped, 1 held, 9 place questions left for Edward.
 - [HANDOFF-261118-triage-batch.md](HANDOFF-261118-triage-batch.md) — **Triage batch: 69 link pins** from 14 creators (9 new); 6 skipped, 1 held (Ahwahnee), 16 place questions left for Edward.
 - [HANDOFF-261118-scenescout.md](HANDOFF-261118-scenescout.md) — **Triage batch: 32 link pins** from one new TikTok creator (@scenescout_), LA filming locations; 0 skipped; 4 place questions left for Edward.
+- [HANDOFF-261122-venice.md](HANDOFF-261122-venice.md) — **Venice launch:** Atlas Studio VCE (68th studio), 31 singles, 11 bilingual, 14 new architect tags; 5 place questions left for Edward.
