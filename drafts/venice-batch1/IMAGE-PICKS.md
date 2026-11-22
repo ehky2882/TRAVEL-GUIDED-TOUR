@@ -23,4 +23,4 @@ Per CLAUDE.md § Image Pipeline step 9, never overwrite a live file. Publish a c
 | `ponte-della-costituzione_3.webp` | 27-3 | Pexels | sabrina martins | https://www.pexels.com/photo/underneath-the-modern-ponte-della-costituzione-in-venice-36767954/ |
 | `cimitero-di-san-michele_hero.webp` | 29-1 | Unsplash | Yiwen | https://unsplash.com/photos/a-building-with-a-domed-roof-by-water-2kurL51wxq0 |
 
-Tours with no picks yet: 01, 02, 03, 04–17 except 18, 19, 20, 21, 24, 28, 30, 31. Some had candidates the owner did not choose; others had no checked candidates at all.
+Picks so far cover 7 of the 31 tours: 18, 22, 23, 25, 26, 27 and 29. The rest are still open, and the picker has candidates for 17 of them.
