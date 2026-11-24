@@ -1,6 +1,6 @@
 # Monastero di Torba
 
-*342 words, about 137 seconds at a natural pace.*
+*346 words, about 138 seconds at a natural pace.*
 
 ## Clean script
 
@@ -16,7 +16,7 @@ Here's the thing about Torba. It's a place that kept changing its mind about wha
 
 [beat]
 
-It was rescued in the nineteen seventies by Giulia Maria Crespi, one of the founders of the FAI, who bought it and gave it to the foundation. Since twenty eleven it's been part of the UNESCO site for the Lombards in Italy, together with Castelseprio up the hill.
+It was rescued in the nineteen seventies by Giulia Maria Crespi, a Milanese campaigner for Italy's heritage, who bought it so that it could be saved and opened to the public. Since twenty eleven it's been part of the UNESCO site for the Lombards in Italy, together with Castelseprio up the hill.
 
 Before you go, step into the church to see its newest addition, an altar designed and given by the architect Mario Botta in twenty twenty-five. Then, if you've the time, take the path up through the woods to the ruins of Castelseprio, which is the other half of the story.
 
@@ -34,7 +34,7 @@ In the eighth century, Benedictine nuns arrived and turned the tower into a chap
 
 Here's the thing about tor ba. It's a place that kept changing its mind about what it was for. Fort, convent, and then, after the nuns left for good in the fourteen eighties and Napoleon closed what remained, a farm. The church became a store for carts. The frescoes vanished under fresh plaster.
 
-It was rescued in the nineteen seventies by joo lee ah maria kres pee, one of the founders of the fy, who bought it and gave it to the foundation. Since twenty eleven it's been part of the you ness co site for the Lombards in Italy, together with kas tel seh pree oh up the hill.
+It was rescued in the nineteen seventies by joo lee ah maria kres pee, a Milanese campaigner for Italy's heritage, who bought it so that it could be saved and opened to the public. Since twenty eleven it's been part of the you ness co site for the Lombards in Italy, together with kas tel seh pree oh up the hill.
 
 Before you go, step into the church to see its newest addition, an altar designed and given by the architect mario bot ta in twenty twenty five. Then, if you've the time, take the path up through the woods to the ruins of kas tel seh pree oh, which is the other half of the story.
 
@@ -51,7 +51,6 @@ Before you go, step into the church to see its newest addition, an altar designe
 | Mario Botta | mario bot ta |
 | Byzantines | biz an teens |
 | UNESCO | you ness co |
-| FAI | fy |
 
 ## Sources read
 

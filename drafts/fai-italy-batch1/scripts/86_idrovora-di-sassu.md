@@ -1,0 +1,62 @@
+# Idrovora di Sassu, Arborea
+
+*356 words, about 142 seconds at a natural pace.*
+
+## Clean script
+
+The ground you're standing on used to be under water. This building is why it isn't.
+
+You're on the road out of Arborea, on the flat land south of Oristano, where long straight canals run between the fields. In front of you, standing out above the flat land, is a pale building with a tower and rounded wings, which looks a bit like a ship, and a bit like a power station drawn by a futurist painter.
+
+It's a drainage pumping station, an idrovora, and it opened on the fourth of November, nineteen thirty-four, in front of the most senior Fascist officials on the island. All of this flat country was once marsh and lagoon. The pond of Sassu alone covered about two thousand hectares, and it was a breeding ground for malaria. From nineteen eighteen a company drained it field by field, and built a brand-new town to farm it. They called the town Mussolinia. After the war, unsurprisingly, it became Arborea.
+
+Have a look at the shape. The engineer, Flavio Scano, gave it a tall central block with long windows and two half-round towers either side. Now look at the small tower for the power lines. On its flat roof sits a little square block ringed with teeth, which is meant to look like an electrical transformer. And all over, as decoration, you'll find the bundle of rods that was the Fascist emblem.
+
+[beat]
+
+What's worth knowing, standing here, is that it still works. The pumps inside are still keeping the water out, ninety years on. A machine, dressed up as a monument to the regime that built it, that has quietly gone on outlasting it. When it turned ninety, in twenty twenty-four, people were let inside to see it for the first time.
+
+It's a working site, so the gates are usually closed. But follow the canals back towards the centre of Arborea and look out for the museum of the land reclamation. It tells the story of how a swamp became one of the most orderly farm landscapes in Italy, and you'll see the grid of it all around you as you drive.
+
+## TTS-safe script
+
+**eedrovora dee sassoo, arboraya**
+
+The ground you're standing on used to be under water. This building is why it isn't.
+
+You're on the road out of arboraya, on the flat land south of oristahno, where long straight canals run between the fields. In front of you, standing out above the flat land, is a pale building with a tower and rounded wings, which looks a bit like a ship, and a bit like a power station drawn by a futurist painter.
+
+It's a drainage pumping station, an eedrovora, and it opened on the fourth of November, nineteen thirty four, in front of the most senior Fascist officials on the island. All of this flat country was once marsh and lagoon. The pond of sassoo alone covered about two thousand hectares, and it was a breeding ground for malaria. From nineteen eighteen a company drained it field by field, and built a brand new town to farm it. They called the town moosoleenya. After the war, unsurprisingly, it became arboraya.
+
+Have a look at the shape. The engineer, flahvyo skahno, gave it a tall central block with long windows and two half round towers either side. Now look at the small tower for the power lines. On its flat roof sits a little square block ringed with teeth, which is meant to look like an electrical transformer. And all over, as decoration, you'll find the bundle of rods that was the Fascist emblem.
+
+What's worth knowing, standing here, is that it still works. The pumps inside are still keeping the water out, ninety years on. A machine, dressed up as a monument to the regime that built it, that has quietly gone on outlasting it. When it turned ninety, in twenty twenty four, people were let inside to see it for the first time.
+
+It's a working site, so the gates are usually closed. But follow the canals back towards the centre of arboraya and look out for the museum of the land reclamation. It tells the story of how a swamp became one of the most orderly farm landscapes in Italy, and you'll see the grid of it all around you as you drive.
+
+## Respellings
+
+| Written | Spoken as |
+|---|---|
+| Idrovora di Sassu | eedrovora dee sassoo |
+| idrovora | eedrovora |
+| Sassu | sassoo |
+| Arborea | arboraya |
+| Oristano | oristahno |
+| Mussolinia | moosoleenya |
+| Flavio Scano | flahvyo skahno |
+
+## Sources read
+
+- https://www.sardegnacultura.it/en/articles/arborea-idrovora-di-sassu
+- https://www.unionesarda.it/news-sardegna/oristano-provincia/arborea-festeggiati-i-90-anni-dellidrovora-di-sassu-g2cx5o75
+- https://www.lonelyplanet.com/italy/sardinia/arborea/attractions/mub-museo-della-bonifica/a/poi-sig/1457759/1325266
+
+## Fact-check notes
+
+- COORDINATE: the owner supplied 39.93087, 8.56061, which reverse-geocodes to SP 5 near Cabras, about 12 km north. OpenStreetMap has a named node 'Idrovora Sassu' on the SP 49 at Arborea (39.82326, 8.57722), matching the sources (SP 49, Arborea, 09092). The shortlist uses the OSM point; confirm with the owner.
+- Inaugurated 4 November 1934 with Fascist authorities; Sassu pond about 2,000 ha; engineer Flavio Scano; transformer-like toothed block on the power-line tower; fasces as decoration: Sardegna Cultura.
+- Società Bonifiche Sarde from 1918: Sardegna Cultura caption.
+- Opened to the public for the first time for its 90th anniversary (2024): L'Unione Sarda.
+- 'Still working': L'Unione Sarda describes the pumps as draining the canals of Arborea; treat 'still works' as current per that 2024 report.
+- Museum: MUB, Museo della Bonifica, Arborea (Lonely Planet listing); opening hours not checked.

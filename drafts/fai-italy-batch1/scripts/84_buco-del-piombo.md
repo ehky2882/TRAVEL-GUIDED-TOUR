@@ -1,0 +1,68 @@
+# Buco del Piombo, Erba
+
+*353 words, about 141 seconds at a natural pace.*
+
+## Clean script
+
+This cave is so big that people compare it to the Duomo of Milan. Wait until you see the front door.
+
+You're in the Valle Bova, above Crevenna, high over the town of Erba, at the foot of a sheer cliff of pale grey limestone. Ahead of you the cliff opens into an enormous mouth, forty-five metres high and thirty-eight wide, and set into it, like a cork in a bottle, is a stone building with windows.
+
+That's the first thing to have a look at. In the Middle Ages someone built a wall across the entrance and turned the cave into a fortress. You can still see the square holes in the rock where the beams of its floors once rested. For centuries the people of Erba came up here to hide, in times of war and of plague. Today the old building holds a small museum, a ticket office and a café.
+
+The name means the hole of lead. It isn't about any mine. Look at the walls inside the entrance and you'll see why: the limestone has been turned grey by the tiny living things growing on it, very much the colour of lead.
+
+Long before people, the cave belonged to bears. A whole layer of cave bear bones was found inside, and later the Romans used it too. By the nineteenth century it was a fashionable outing. The viceroy Eugène de Beauharnais came, and on the first of September eighteen eighty, so did Queen Margherita.
+
+[beat]
+
+What's worth knowing, standing here, is how close it came to being lost. It was shut for twelve years, tangled up in rockfalls and paperwork, and only opened again in May twenty twenty-four, with cavers leading the visits. Beyond the entrance run more than four hundred metres of passages, still not fully explored.
+
+Check before you come, because visits are guided and not every day. And if you have time afterwards, follow the path down the Valle Bova. On the far side, hidden in the woods, is a much smaller cave, the Tamborin, where people lived thousands of years before the bears were forgotten.
+
+## TTS-safe script
+
+**bookoh del pyombo, airba**
+
+This cave is so big that people compare it to the dwomo of Milan. Wait until you see the front door.
+
+You're in the vallay bova, above krevenna, high over the town of airba, at the foot of a sheer cliff of pale grey limestone. Ahead of you the cliff opens into an enormous mouth, forty five metres high and thirty eight wide, and set into it, like a cork in a bottle, is a stone building with windows.
+
+That's the first thing to have a look at. In the Middle Ages someone built a wall across the entrance and turned the cave into a fortress. You can still see the square holes in the rock where the beams of its floors once rested. For centuries the people of airba came up here to hide, in times of war and of plague. Today the old building holds a small museum, a ticket office and a café.
+
+The name means the hole of lead. It isn't about any mine. Look at the walls inside the entrance and you'll see why: the limestone has been turned grey by the tiny living things growing on it, very much the colour of lead.
+
+Long before people, the cave belonged to bears. A whole layer of cave bear bones was found inside, and later the Romans used it too. By the nineteenth century it was a fashionable outing. The viceroy oozhen duh boharnay came, and on the first of September eighteen eighty, so did Queen margereeta.
+
+What's worth knowing, standing here, is how close it came to being lost. It was shut for twelve years, tangled up in rockfalls and paperwork, and only opened again in May twenty twenty four, with cavers leading the visits. Beyond the entrance run more than four hundred metres of passages, still not fully explored.
+
+Check before you come, because visits are guided and not every day. And if you have time afterwards, follow the path down the vallay bova. On the far side, hidden in the woods, is a much smaller cave, the tamboreen, where people lived thousands of years before the bears were forgotten.
+
+## Respellings
+
+| Written | Spoken as |
+|---|---|
+| Buco del Piombo | bookoh del pyombo |
+| Valle Bova | vallay bova |
+| Crevenna | krevenna |
+| Erba | airba |
+| Duomo | dwomo |
+| Eugène de Beauharnais | oozhen duh boharnay |
+| Margherita | margereeta |
+| Tamborin | tamboreen |
+
+## Sources read
+
+- https://showcaves.com/english/it/showcaves/Piombo.html
+- https://www.ilgiorno.it/lecco/cronaca/il-buco-del-piombo-la-caverna-e-accessibile-59624e53
+- https://fondoambiente.it/luoghi/valle-bova-val-caino-e-grotta-del-buco-del-piombo
+
+## Fact-check notes
+
+- Entrance 45 m high and 38 m wide: Il Giorno (2024) and showcaves.com agree. The Duomo comparison is Il Giorno's.
+- Name from the lead-grey colour of the limestone (microorganisms): showcaves.com.
+- Medieval fortification with beam holes, refuge in war and disease, cave bear deposit ('Banco degli Orsi'), late Roman use: showcaves.com.
+- Queen Margherita on 1 September 1880: Il Giorno. Beauharnais visit: the Valle Bova page.
+- Reopened May 2024 after twelve years, with speleologists; more than 400 m of passages: Il Giorno.
+- Tamborin cave on the opposite side of the valley: the Valle Bova page.
+- Owner's coordinate is on the waterfall path about 100 m from the cave-entrance node in OpenStreetMap (45.82594, 9.19896).

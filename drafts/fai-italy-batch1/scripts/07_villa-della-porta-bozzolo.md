@@ -1,6 +1,6 @@
 # Villa Della Porta Bozzolo
 
-*339 words, about 136 seconds at a natural pace.*
+*346 words, about 138 seconds at a natural pace.*
 
 ## Clean script
 
@@ -16,7 +16,7 @@ And here's the thing. This was never just a pleasure house. Downstairs and round
 
 [beat]
 
-In the late eighteen hundreds the house went to Senator Camillo Bozzolo, a doctor who'd fought with Garibaldi, and in nineteen eighty-nine his heirs gave it to the FAI.
+In the late eighteen hundreds the house went to Senator Camillo Bozzolo, a doctor who'd fought with Garibaldi, and in nineteen eighty-nine his heirs gave it away, so that it could be opened to the public.
 
 When you've done the rooms, climb all the way up to the theatre and keep going. A path leads on into the woods to a viewpoint over the Valcuvia, with the little fifteenth-century church of San Bernardino close by.
 
@@ -34,7 +34,7 @@ Inside, the walls were painted between seventeen twenty four and seventeen twent
 
 And here's the thing. This was never just a pleasure house. Downstairs and round the back are the working buildings: an ice house, a spinning mill for silk, a cellar of old barrels, and a huge wooden wine press from the sixteenth century. A villa of delight, yes, but one that still had to pay its way.
 
-In the late eighteen hundreds the house went to Senator ka mee lo bot so lo, a doctor who'd fought with gah ree bal dee, and in nineteen eighty nine his heirs gave it to the fy.
+In the late eighteen hundreds the house went to Senator ka mee lo bot so lo, a doctor who'd fought with gah ree bal dee, and in nineteen eighty nine his heirs gave it away, so that it could be opened to the public.
 
 When you've done the rooms, climb all the way up to the theatre and keep going. A path leads on into the woods to a viewpoint over the val koo vee ah, with the little fifteenth century church of san bair nar dee no close by.
 
@@ -52,7 +52,6 @@ When you've done the rooms, climb all the way up to the theatre and keep going. 
 | Garibaldi | gah ree bal dee |
 | Valcuvia | val koo vee ah |
 | San Bernardino | san bair nar dee no |
-| FAI | fy |
 
 ## Sources read
 

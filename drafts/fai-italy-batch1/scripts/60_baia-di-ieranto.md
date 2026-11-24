@@ -1,6 +1,6 @@
 # Baia di Ieranto
 
-*300 words, about 120 seconds at a natural pace.*
+*298 words, about 119 seconds at a natural pace.*
 
 ## Clean script
 
@@ -14,7 +14,7 @@ The quieter history is the quarry. From the early nineteen hundreds, limestone w
 
 [beat]
 
-And then the company did something unusual. Rather than sell the land for villas, it gave the whole bay to the FAI, in the late nineteen eighties, so it couldn't be built on. That's why it looks like this. The water belongs to the Punta Campanella marine reserve, and the land has been left to the olives, the scrub and the walkers.
+And then the company did something unusual. Rather than sell the land for villas, it gave the whole bay away, in the late nineteen eighties, so it couldn't be built on. That's why it looks like this. The water belongs to the Punta Campanella marine reserve, and the land has been left to the olives, the scrub and the walkers.
 
 There are no bars and no bins down here. Bring water, and take everything home with you.
 
@@ -32,7 +32,7 @@ Look up to your left, to the headland of mon tal toh, and you'll see an old ston
 
 The quieter history is the quarry. From the early nineteen hundreds, limestone was dug out of these cliffs, and from nineteen eighteen the quarry belonged to the steel company eel va, part of what later became ee tal see der. Workers came all the way from Sardinia to cut the rock. It closed for good in nineteen fifty two.
 
-And then the company did something unusual. Rather than sell the land for villas, it gave the whole bay to the fy, in the late nineteen eighties, so it couldn't be built on. That's why it looks like this. The water belongs to the poon ta kam pa nel la marine reserve, and the land has been left to the olives, the scrub and the walkers.
+And then the company did something unusual. Rather than sell the land for villas, it gave the whole bay away, in the late nineteen eighties, so it couldn't be built on. That's why it looks like this. The water belongs to the poon ta kam pa nel la marine reserve, and the land has been left to the olives, the scrub and the walkers.
 
 There are no bars and no bins down here. Bring water, and take everything home with you.
 
@@ -56,7 +56,6 @@ If you've the energy for one more climb, go up to the tor reh dee mon tal toh. F
 | Ilva | eel va |
 | Italsider | ee tal see der |
 | Torre di Montalto | tor reh dee mon tal toh |
-| FAI | fy |
 
 ## Sources read
 

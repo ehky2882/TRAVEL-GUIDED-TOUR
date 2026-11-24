@@ -1,10 +1,10 @@
 # Castello e Parco di Masino
 
-*348 words, about 139 seconds at a natural pace.*
+*347 words, about 139 seconds at a natural pace.*
 
 ## Clean script
 
-One family held this hilltop for more than nine hundred years. When the last of them sold it, in nineteen eighty-eight, the FAI had to find the money from a whole roll call of backers to keep it in one piece.
+One family held this hilltop for more than nine hundred years. When the last of them sold it, in nineteen eighty-eight, it took money from a whole roll call of backers to buy it and keep it in one piece.
 
 The hill you're on is part of the Serra d'Ivrea, the long, straight ridge you can see stretching away across the plain. It isn't a range of hills at all. It's rubble, pushed here by a glacier, and it's one of the largest and best preserved glacial ridges in Europe. The castle sits on top, looking out over the Canavese.
 
@@ -24,7 +24,7 @@ If you've time, find the maze first and get yourself properly lost. Then come ba
 
 **Castello e Parco di ma zee no**
 
-One family held this hilltop for more than nine hundred years. When the last of them sold it, in nineteen eighty eight, the fy had to find the money from a whole roll call of backers to keep it in one piece.
+One family held this hilltop for more than nine hundred years. When the last of them sold it, in nineteen eighty eight, it took money from a whole roll call of backers to buy it and keep it in one piece.
 
 The hill you're on is part of the sair ra dee vray ah, the long, straight ridge you can see stretching away across the plain. It isn't a range of hills at all. It's rubble, pushed here by a glacier, and it's one of the largest and best preserved glacial ridges in Europe. The castle sits on top, looking out over the ka na vay zeh.
 
@@ -51,7 +51,6 @@ If you've time, find the maze first and get yourself properly lost. Then come ba
 | Salone dei Savoia | sa lo nay day sa voy ah |
 | Savoy | sa voy |
 | Dante | dan tay |
-| FAI | fy |
 | Piedmont | peed mont |
 
 ## Sources read

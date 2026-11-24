@@ -1,6 +1,6 @@
 # Torre e Casa Campatelli, San Gimignano
 
-*308 words, about 123 seconds at a natural pace.*
+*313 words, about 125 seconds at a natural pace.*
 
 ## Clean script
 
@@ -14,11 +14,11 @@ In the eighteen hundreds the tower and the eighteenth-century house built around
 
 [beat]
 
-That last owner was Lydia Campatelli, who was born in nineteen twenty-five and died in two thousand and five. It's thanks to her that the house came down to us intact, and in two thousand and five she left it to the FAI.
+That last owner was Lydia Campatelli, who was born in nineteen twenty-five and died in two thousand and five. It's thanks to her that the house came down to us intact, and in two thousand and five she left it so that it could be opened to the public.
 
 So you get two things here at once. A medieval tower, from a town that built them like trophies. And inside it, a nineteenth-century family who simply lived there, among the furniture and the portraits, with San Gimignano going on outside the windows.
 
-Before you leave, climb up to the attic, where the FAI projects a short film about a thousand years of the town's history on the walls of the tower itself. Then step back out onto Via San Giovanni and count the towers you can see. Fourteen is fewer than you'd think.
+Before you leave, climb up to the attic, where a short film is projected about a thousand years of the town's history on the walls of the tower itself. Then step back out onto Via San Giovanni and count the towers you can see. Fourteen is fewer than you'd think.
 
 ## TTS-safe script
 
@@ -32,11 +32,11 @@ Most of the town's medieval towers were later cut down or lost altogether. This 
 
 In the eighteen hundreds the tower and the eighteenth century house built around it were bought by the kam pa tel lee, a flor en tine family of landowners and businesspeople, who turned it into a comfortable upper middle class home. Inside, have a look at the great salon with its neo Renaissance fireplace and seventeenth century portraits, the little sitting room, the study and the dining room. On the dining room walls are paintings by gwee doh peh ron, the uncle of the last owner. There's even a tiny family chapel.
 
-That last owner was lid ee ah kam pa tel lee, who was born in nineteen twenty five and died in two thousand and five. It's thanks to her that the house came down to us intact, and in two thousand and five she left it to the fy.
+That last owner was lid ee ah kam pa tel lee, who was born in nineteen twenty five and died in two thousand and five. It's thanks to her that the house came down to us intact, and in two thousand and five she left it so that it could be opened to the public.
 
 So you get two things here at once. A medieval tower, from a town that built them like trophies. And inside it, a nineteenth century family who simply lived there, among the furniture and the portraits, with san jee meen yah no going on outside the windows.
 
-Before you leave, climb up to the attic, where the fy projects a short film about a thousand years of the town's history on the walls of the tower itself. Then step back out onto vee ah san jo van nee and count the towers you can see. Fourteen is fewer than you'd think.
+Before you leave, climb up to the attic, where a short film is projected about a thousand years of the town's history on the walls of the tower itself. Then step back out onto vee ah san jo van nee and count the towers you can see. Fourteen is fewer than you'd think.
 
 ## Respellings
 
@@ -50,7 +50,6 @@ Before you leave, climb up to the attic, where the fy projects a short film abou
 | Guido Peyron | gwee doh peh ron |
 | Lydia | lid ee ah |
 | Florentine | flor en tine |
-| FAI | fy |
 
 ## Sources read
 

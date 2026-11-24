@@ -1,14 +1,14 @@
 # Casa Macchi
 
-*295 words, about 118 seconds at a natural pace.*
+*301 words, about 120 seconds at a natural pace.*
 
 ## Clean script
 
-Somebody left the coffee pot on the stove, and a pipe on the table between the armchairs. The FAI decided to leave them there.
+Somebody left the coffee pot on the stove, and a pipe on the table between the armchairs. They've been left exactly where they were.
 
 Piazza Sant'Ambrogio, Morazzone, right in the shadow of the church tower. The house in front of you has two floors and a little turret, a typical bit of nineteenth-century Lombard building. It isn't a farmhouse and it isn't a palace. That, as it turns out, is exactly why it matters.
 
-In eighteen ninety-eight it became the property of Adele Bottelli, the wife of Giuseppe Macchi, and the family lived in it for three generations. The last of them was Maria Luisa Macchi, who lived here with her family for most of the twentieth century. In twenty fifteen she left it to the FAI, with its original furniture and a family archive of letters, photographs, diaries and postcards that runs from the Risorgimento to the Second World War.
+In eighteen ninety-eight it became the property of Adele Bottelli, the wife of Giuseppe Macchi, and the family lived in it for three generations. The last of them was Maria Luisa Macchi, who lived here with her family for most of the twentieth century. In twenty fifteen she left it, so that it could be opened to the public, with its original furniture and a family archive of letters, photographs, diaries and postcards that runs from the Risorgimento to the Second World War.
 
 So most of what's here isn't grand at all. It's the ordinary stuff of a comfortable family in a small village, kept in place down to the smallest detail, as if everyone had just stepped out.
 
@@ -22,11 +22,11 @@ Before you go, step into the shop on the square, the Emporio di Casa Macchi. The
 
 **Casa mack kee**
 
-Somebody left the coffee pot on the stove, and a pipe on the table between the armchairs. The fy decided to leave them there.
+Somebody left the coffee pot on the stove, and a pipe on the table between the armchairs. They've been left exactly where they were.
 
 pyat sa san tam bro jo, mo rat so neh, right in the shadow of the church tower. The house in front of you has two floors and a little turret, a typical bit of nineteenth century lom bard building. It isn't a farmhouse and it isn't a palace. That, as it turns out, is exactly why it matters.
 
-In eighteen ninety eight it became the property of ah deh leh bot tel lee, the wife of joo sep pay mack kee, and the family lived in it for three generations. The last of them was maria loo ee za mack kee, who lived here with her family for most of the twentieth century. In twenty fifteen she left it to the fy, with its original furniture and a family archive of letters, photographs, diaries and postcards that runs from the ree sor jee men toh to the Second World War.
+In eighteen ninety eight it became the property of ah deh leh bot tel lee, the wife of joo sep pay mack kee, and the family lived in it for three generations. The last of them was maria loo ee za mack kee, who lived here with her family for most of the twentieth century. In twenty fifteen she left it, so that it could be opened to the public, with its original furniture and a family archive of letters, photographs, diaries and postcards that runs from the ree sor jee men toh to the Second World War.
 
 So most of what's here isn't grand at all. It's the ordinary stuff of a comfortable family in a small village, kept in place down to the smallest detail, as if everyone had just stepped out.
 
@@ -48,7 +48,6 @@ Before you go, step into the shop on the square, the em por ee oh di Casa mack k
 | Emporio | em por ee oh |
 | piazza | pyat sa |
 | Lombard | lom bard |
-| FAI | fy |
 
 ## Sources read
 

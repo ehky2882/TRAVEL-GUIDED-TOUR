@@ -1,6 +1,6 @@
 # Castello di Avio
 
-*317 words, about 127 seconds at a natural pace.*
+*315 words, about 126 seconds at a natural pace.*
 
 ## Clean script
 
@@ -18,7 +18,7 @@ Then, if the keep is open, climb to the top floor and the Room of Love. It was p
 
 So here's the castle in a nutshell. Downstairs, how to fight. Upstairs, what you were fighting for.
 
-In nineteen seventy-seven Countess Emanuela Castelbarco Pindemonte Rezzonico, a granddaughter of the conductor Arturo Toscanini, gave the castle to the FAI, and it opened to the public the following year.
+In nineteen seventy-seven Countess Emanuela Castelbarco Pindemonte Rezzonico, a granddaughter of the conductor Arturo Toscanini, gave the castle away, and it opened to the public the following year.
 
 On your way back down, stop at the Picadora tower. It's said this was where the castle carried out its hangings, which is a rather sobering thought among all those vines.
 
@@ -38,7 +38,7 @@ Then, if the keep is open, climb to the top floor and the Room of Love. It was p
 
 So here's the castle in a nutshell. Downstairs, how to fight. Upstairs, what you were fighting for.
 
-In nineteen seventy seven Countess eh ma noo eh la kas tel bar ko pin deh mon teh ret so nee ko, a granddaughter of the conductor ar too ro tos ka nee nee, gave the castle to the fy, and it opened to the public the following year.
+In nineteen seventy seven Countess eh ma noo eh la kas tel bar ko pin deh mon teh ret so nee ko, a granddaughter of the conductor ar too ro tos ka nee nee, gave the castle away, and it opened to the public the following year.
 
 On your way back down, stop at the pee ka doh ra tower. It's said this was where the castle carried out its hangings, which is a rather sobering thought among all those vines.
 
@@ -56,7 +56,6 @@ On your way back down, stop at the pee ka doh ra tower. It's said this was where
 | Trento | tren toh |
 | Emanuela Castelbarco Pindemonte Rezzonico | eh ma noo eh la kas tel bar ko pin deh mon teh ret so nee ko |
 | Arturo Toscanini | ar too ro tos ka nee nee |
-| FAI | fy |
 
 ## Sources read
 

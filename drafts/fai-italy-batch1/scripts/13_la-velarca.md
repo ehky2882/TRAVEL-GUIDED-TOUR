@@ -1,6 +1,6 @@
 # La Velarca
 
-*323 words, about 129 seconds at a natural pace.*
+*332 words, about 133 seconds at a natural pace.*
 
 ## Clean script
 
@@ -18,9 +18,9 @@ Have a look at the round tower of teak in the middle. That's the staircase, wrap
 
 What I like about it is how unserious it is, in the best way. The same studio was building a skyscraper in the middle of Milan, and on weekends they were fitting out a houseboat for their friends.
 
-The family gave it to the FAI in twenty eleven. The hull was beyond repair, so it was rebuilt at the Riva boatyard, and the interiors were restored from old photographs before it came back to its original mooring here.
+The family gave it away in twenty eleven, so that it could be seen by the public. The hull was beyond repair, so it was rebuilt at the Riva boatyard, and the interiors were restored from old photographs before it came back to its original mooring here.
 
-If you fancy a walk, the Greenway path along the shore takes you to Villa del Balbianello in about half an hour. It's a lovely way to go from one FAI house to another, by land, past the boats.
+If you fancy a walk, the Greenway path along the shore takes you to Villa del Balbianello in about half an hour. It's a lovely way to go from one house on the water to another, by land, past the boats.
 
 ## TTS-safe script
 
@@ -38,9 +38,9 @@ Have a look at the round tower of teak in the middle. That's the staircase, wrap
 
 What I like about it is how unserious it is, in the best way. The same studio was building a skyscraper in the middle of Milan, and on weekends they were fitting out a houseboat for their friends.
 
-The family gave it to the fy in twenty eleven. The hull was beyond repair, so it was rebuilt at the ree va boatyard, and the interiors were restored from old photographs before it came back to its original mooring here.
+The family gave it away in twenty eleven, so that it could be seen by the public. The hull was beyond repair, so it was rebuilt at the ree va boatyard, and the interiors were restored from old photographs before it came back to its original mooring here.
 
-If you fancy a walk, the Greenway path along the shore takes you to Villa del bal bya nel lo in about half an hour. It's a lovely way to go from one fy house to another, by land, past the boats.
+If you fancy a walk, the Greenway path along the shore takes you to Villa del bal bya nel lo in about half an hour. It's a lovely way to go from one house on the water to another, by land, past the boats.
 
 ## Respellings
 
@@ -63,7 +63,6 @@ If you fancy a walk, the Greenway path along the shore takes you to Villa del ba
 | Umberto Eco | oom bair toh ay ko |
 | Balbianello | bal bya nel lo |
 | Riva | ree va |
-| FAI | fy |
 
 ## Sources read
 

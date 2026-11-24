@@ -1,6 +1,6 @@
 # Orto sul Colle dell'Infinito, Recanati
 
-*298 words, about 119 seconds at a natural pace.*
+*290 words, about 116 seconds at a natural pace.*
 
 ## Clean script
 
@@ -14,9 +14,9 @@ The poem is short, and it's built on a trick of the eye. Leopardi says this soli
 
 [beat]
 
-So the point isn't the view. It's the bit of the view he couldn't see. The FAI puts it beautifully: here infinity isn't a landscape outside you, it's a place inside you.
+So the point isn't the view. It's the bit of the view he couldn't see. Here, infinity isn't a landscape outside you. It's a place inside you.
 
-The garden came to the FAI in twenty seventeen, entrusted by the town of Recanati and Leopardi's study centres, and it's been restored and opened to everyone. The visit now includes a short journey through the poem itself, with projections and words from Leopardi's notebooks.
+In twenty seventeen the town of Recanati and Leopardi's study centres handed the garden over to be restored, and it's now open to everyone. The visit now includes a short journey through the poem itself, with projections and words from Leopardi's notebooks.
 
 Before you leave, step into the Centro Nazionale di Studi Leopardiani next door, a clean modern building from nineteen thirty-seven. Its library holds more than twelve thousand volumes, and among them, the first printed edition of L'infinito.
 
@@ -32,9 +32,9 @@ For centuries this was the nuns' enclosed garden, a hor tus kon kloo sus, plante
 
 The poem is short, and it's built on a trick of the eye. leh oh par dee says this solitary hill was always dear to him, and so was the hedge that shut out most of the far horizon. Because he couldn't see it, he imagined it: endless spaces, superhuman silences, the deepest quiet. And in the end, he says, it's sweet to drown in that sea.
 
-So the point isn't the view. It's the bit of the view he couldn't see. The fy puts it beautifully: here infinity isn't a landscape outside you, it's a place inside you.
+So the point isn't the view. It's the bit of the view he couldn't see. Here, infinity isn't a landscape outside you. It's a place inside you.
 
-The garden came to the fy in twenty seventeen, entrusted by the town of reh ka nah tee and leh oh par dee's study centres, and it's been restored and opened to everyone. The visit now includes a short journey through the poem itself, with projections and words from leh oh par dee's notebooks.
+In twenty seventeen the town of reh ka nah tee and leh oh par dee's study centres handed the garden over to be restored, and it's now open to everyone. The visit now includes a short journey through the poem itself, with projections and words from leh oh par dee's notebooks.
 
 Before you leave, step into the chen tro nat syo nah leh dee stoo dee leh oh par dyah nee next door, a clean modern building from nineteen thirty seven. Its library holds more than twelve thousand volumes, and among them, the first printed edition of leen fee nee toh.
 
@@ -51,7 +51,6 @@ Before you leave, step into the chen tro nat syo nah leh dee stoo dee leh oh par
 | Leopardi | leh oh par dee |
 | L'infinito | leen fee nee toh |
 | Centro Nazionale di Studi Leopardiani | chen tro nat syo nah leh dee stoo dee leh oh par dyah nee |
-| FAI | fy |
 
 ## Sources read
 

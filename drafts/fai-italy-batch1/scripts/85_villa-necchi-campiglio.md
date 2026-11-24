@@ -1,0 +1,74 @@
+# Villa Necchi Campiglio, Milan
+
+*371 words, about 148 seconds at a natural pace.*
+
+## Clean script
+
+In the middle of Milan, behind a garden wall, a family of sewing-machine makers built themselves a heated swimming pool in the nineteen thirties. It was only the second pool in the whole city.
+
+You're in the garden on Via Mozart, a few streets from the centre. In front of you is the pool, long and blue, and beyond it a pale, flat-fronted house with tall windows and a terrace, set well back from the street, as if it would rather not be noticed.
+
+It was built between nineteen thirty-two and nineteen thirty-five by the architect Piero Portaluppi, for two sisters, Nedda and Gigina Necchi, and Gigina's husband, Angelo Campiglio. They came from Pavia, and they'd done very well out of enamelled cast iron and sewing machines. They wanted everything new: a lift, a dumbwaiter, intercoms, telephones in the rooms, and the pool, the first in Milan on private land. Money, it's fair to say, was not the problem.
+
+Have a look at the clean lines of the house. That's Portaluppi, and the brand-new taste for stripped-back modern design. Then, from nineteen thirty-eight, the family asked Tomaso Buzzi to soften it, and inside some rooms turned eighteenth-century and frilly. The house wears both styles at once, which I rather enjoy.
+
+There are darker chapters too. During the war the family left, and the house was requisitioned as the home of Alessandro Pavolini, one of the leaders of the last Fascist government. After that the British moved in, then the Dutch consul, before the family got it back.
+
+[beat]
+
+And here's the thing. The sisters had no children, and they worried about what would become of it. So they left it to be opened to the public, exactly as they'd lived in it. It opened in May two thousand and eight, and film-makers have loved it ever since. Luca Guadagnino shot I Am Love here, and Ridley Scott used it in House of Gucci.
+
+Before you leave, step into the winter garden, the glass veranda full of plants, and look for the little guest room kept for a prince who designed sets for La Scala. Then walk out past the tennis court, and look back at how quiet the house manages to be.
+
+## TTS-safe script
+
+**Villa neckee kampeelyo, Milan**
+
+In the middle of Milan, behind a garden wall, a family of sewing machine makers built themselves a heated swimming pool in the nineteen thirties. It was only the second pool in the whole city.
+
+You're in the garden on veea motsart, a few streets from the centre. In front of you is the pool, long and blue, and beyond it a pale, flat fronted house with tall windows and a terrace, set well back from the street, as if it would rather not be noticed.
+
+It was built between nineteen thirty two and nineteen thirty five by the architect pyairo portaloopee, for two sisters, nedda and jeejeena neckee, and jeejeena's husband, anjelo kampeelyo. They came from paveea, and they'd done very well out of enamelled cast iron and sewing machines. They wanted everything new: a lift, a dumbwaiter, intercoms, telephones in the rooms, and the pool, the first in Milan on private land. Money, it's fair to say, was not the problem.
+
+Have a look at the clean lines of the house. That's portaloopee, and the brand new taste for stripped back modern design. Then, from nineteen thirty eight, the family asked tomazo bootsee to soften it, and inside some rooms turned eighteenth century and frilly. The house wears both styles at once, which I rather enjoy.
+
+There are darker chapters too. During the war the family left, and the house was requisitioned as the home of alessandro pavoleenee, one of the leaders of the last Fascist government. After that the British moved in, then the Dutch consul, before the family got it back.
+
+And here's the thing. The sisters had no children, and they worried about what would become of it. So they left it to be opened to the public, exactly as they'd lived in it. It opened in May two thousand and eight, and film makers have loved it ever since. looka gwadanyeeno shot I Am Love here, and ridley scott used it in House of Gucci.
+
+Before you leave, step into the winter garden, the glass veranda full of plants, and look for the little guest room kept for a prince who designed sets for la skahla. Then walk out past the tennis court, and look back at how quiet the house manages to be.
+
+## Respellings
+
+| Written | Spoken as |
+|---|---|
+| Necchi Campiglio | neckee kampeelyo |
+| Necchi | neckee |
+| Campiglio | kampeelyo |
+| Via Mozart | veea motsart |
+| Piero Portaluppi | pyairo portaloopee |
+| Portaluppi | portaloopee |
+| Nedda | nedda |
+| Gigina | jeejeena |
+| Angelo | anjelo |
+| Pavia | paveea |
+| Tomaso Buzzi | tomazo bootsee |
+| Alessandro Pavolini | alessandro pavoleenee |
+| La Scala | la skahla |
+| Luca Guadagnino | looka gwadanyeeno |
+| Ridley Scott | ridley scott |
+
+## Sources read
+
+- https://en.wikipedia.org/wiki/Villa_Necchi_Campiglio
+- https://it.wikipedia.org/wiki/Villa_Necchi_Campiglio
+- https://fondoambiente.it/luoghi/villa-necchi-campiglio
+
+## Fact-check notes
+
+- Built 1932-1935 by Piero Portaluppi; lift, dumbwaiter, intercoms, telephones, heated pool; the second pool in Milan after the municipal one and the first on private land: Wikipedia (en, it).
+- Tomaso Buzzi from 1938: Wikipedia.
+- Wartime requisition as Alessandro Pavolini's residence, then the British, then the Dutch consul: it.wikipedia.
+- Bequest and opening in May 2008: Wikipedia. The recipient is not named, per owner instruction.
+- I Am Love (2009, Luca Guadagnino) and House of Gucci (2021, Ridley Scott): en.wikipedia.
+- The 'Camera del principe' was kept for Prince Henry of Hesse (Enrico d'Assia), a set designer for La Scala: it.wikipedia.

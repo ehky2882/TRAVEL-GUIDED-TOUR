@@ -1,6 +1,6 @@
 # Villa Rezzola, Lerici
 
-*320 words, about 128 seconds at a natural pace.*
+*326 words, about 130 seconds at a natural pace.*
 
 ## Clean script
 
@@ -10,7 +10,7 @@ From the terrace below the villa, turn and face the sea. The garden drops away i
 
 The house stands on medieval remains and is documented from the seventeen hundreds. It belonged first to the Botti, a Ligurian noble family. Then, from nineteen hundred, an English couple, Helen Lavinia and William Percy Cochrane, changed it to their taste: bow windows, panelled rooms, and a large park.
 
-In nineteen thirty-five it passed to Countess Mara Braida Carnevale, and then to her daughter Maria Adele, known as Pupa, who lived here with her husband Piero Miniati until her death in twenty twenty. She left it to the FAI.
+In nineteen thirty-five it passed to Countess Mara Braida Carnevale, and then to her daughter Maria Adele, known as Pupa, who lived here with her husband Piero Miniati until her death in twenty twenty. She left it so that it could be opened to the public.
 
 The house has its share of drama. In the Second World War it housed the Italian navy's high command, and then it was taken over by the Germans. One of the officers living here, Captain Rudolf Jacobs, took off his uniform and joined the partisans.
 
@@ -32,7 +32,7 @@ From the terrace below the villa, turn and face the sea. The garden drops away i
 
 The house stands on medieval remains and is documented from the seventeen hundreds. It belonged first to the bot tee, a lih gyoo ree an noble family. Then, from nineteen hundred, an English couple, helen la vin ee ah and William Percy kock ran, changed it to their taste: bow windows, panelled rooms, and a large park.
 
-In nineteen thirty five it passed to Countess mah ra bry da kar neh vah leh, and then to her daughter maria ah deh leh, known as poo pa, who lived here with her husband pyair oh mee nee ah tee until her death in twenty twenty. She left it to the fy.
+In nineteen thirty five it passed to Countess mah ra bry da kar neh vah leh, and then to her daughter maria ah deh leh, known as poo pa, who lived here with her husband pyair oh mee nee ah tee until her death in twenty twenty. She left it so that it could be opened to the public.
 
 The house has its share of drama. In the Second World War it housed the Italian navy's high command, and then it was taken over by the Germans. One of the officers living here, Captain roo dolf yah kobs, took off his uniform and joined the partisans.
 
@@ -60,7 +60,6 @@ Before you go, climb to the belvedere tower. From the top, the whole Gulf of la 
 | Piero Miniati | pyair oh mee nee ah tee |
 | Rudolf Jacobs | roo dolf yah kobs |
 | risseu | ree seh oo |
-| FAI | fy |
 
 ## Sources read
 

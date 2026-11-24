@@ -1,6 +1,6 @@
 # I Giganti della Sila
 
-*348 words, about 139 seconds at a natural pace.*
+*342 words, about 137 seconds at a natural pace.*
 
 ## Clean script
 
@@ -14,9 +14,9 @@ Have a look at the bark low down on some of the trunks. For centuries, woodcutte
 
 [beat]
 
-What I find moving here is how close it came. After the Second World War the estate was taken over by the state forestry, and the trees could easily have become timber. Instead, in nineteen eighty-seven, Paola Manes, the mother of the last owners, helped have it protected as a reserve. Since twenty sixteen the FAI has cared for the wood on behalf of the Sila National Park, and the Mollo sisters gave the Casino to the FAI in memory of their brother.
+What I find moving here is how close it came. After the Second World War the estate was taken over by the state forestry, and the trees could easily have become timber. Instead, in nineteen eighty-seven, Paola Manes, the mother of the last owners, helped have it protected as a reserve. Since twenty sixteen the wood has been cared for on behalf of the Sila National Park, and the Mollo sisters gave the Casino away in memory of their brother.
 
-At the moment the site is closed until further notice, for forest maintenance and to restore the buildings, so check with the FAI before you travel.
+At the moment the site is closed until further notice, for forest maintenance and to restore the buildings, so check before you travel.
 
 When it's open, walk the path slowly, and somewhere in the middle, stop and look straight up. These trees were here before almost everything else you'll see in Calabria, and from underneath, you can see why people called them the giants.
 
@@ -32,9 +32,9 @@ There are around sixty of them in a reserve of just five hectares, and they're h
 
 Have a look at the bark low down on some of the trunks. For centuries, woodcutters known as pee chah ree tapped these trees for resin, and some of the old wounds have grown into hollows big enough for people to have sheltered inside them.
 
-What I find moving here is how close it came. After the Second World War the estate was taken over by the state forestry, and the trees could easily have become timber. Instead, in nineteen eighty seven, pow la mah nes, the mother of the last owners, helped have it protected as a reserve. Since twenty sixteen the fy has cared for the wood on behalf of the see la National Park, and the mol lo sisters gave the Casino to the fy in memory of their brother.
+What I find moving here is how close it came. After the Second World War the estate was taken over by the state forestry, and the trees could easily have become timber. Instead, in nineteen eighty seven, pow la mah nes, the mother of the last owners, helped have it protected as a reserve. Since twenty sixteen the wood has been cared for on behalf of the see la National Park, and the mol lo sisters gave the Casino away in memory of their brother.
 
-At the moment the site is closed until further notice, for forest maintenance and to restore the buildings, so check with the fy before you travel.
+At the moment the site is closed until further notice, for forest maintenance and to restore the buildings, so check before you travel.
 
 When it's open, walk the path slowly, and somewhere in the middle, stop and look straight up. These trees were here before almost everything else you'll see in ka la bree ah, and from underneath, you can see why people called them the giants.
 
@@ -53,7 +53,6 @@ When it's open, walk the path slowly, and somewhere in the middle, stop and look
 | Marseille | mar say |
 | piciari | pee chah ree |
 | Paola Manes | pow la mah nes |
-| FAI | fy |
 
 ## Sources read
 

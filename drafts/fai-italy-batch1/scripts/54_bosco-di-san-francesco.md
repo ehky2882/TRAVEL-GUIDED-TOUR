@@ -1,6 +1,6 @@
 # Bosco di San Francesco, Assisi
 
-*318 words, about 127 seconds at a natural pace.*
+*319 words, about 128 seconds at a natural pace.*
 
 ## Clean script
 
@@ -8,7 +8,7 @@ Step through a door in a wall beside one of the most visited churches in Europe,
 
 On the square of the Upper Basilica of Saint Francis, look for the door set into the wall. That's the way in. The path drops away from the basilica, down through woodland and olive terraces towards the valley below Assisi.
 
-These sixty-four hectares were once neglected and abandoned. In two thousand and eight the FAI bought them, with a gift from the bank Intesa Sanpaolo, and set about bringing them back. The walk down is about a kilometre and a half, on natural paths, with steps in places.
+These sixty-four hectares were once neglected and abandoned. In two thousand and eight they were bought, with a gift from the bank Intesa Sanpaolo, and the work of bringing them back began. The walk down is about a kilometre and a half, on natural paths, with steps in places.
 
 Halfway down you'll come to the old Benedictine complex of Santa Croce, founded by nuns in the twelve or thirteen hundreds: a small Romanesque church, a fourteenth-century tower, the remains of a hospital for pilgrims and the sick, and the old mill, which is now a little osteria. Next to it is the Ponte dei Galli, an old bridge that has survived as well.
 
@@ -28,7 +28,7 @@ Step through a door in a wall beside one of the most visited churches in Europe,
 
 On the square of the Upper Basilica of Saint Francis, look for the door set into the wall. That's the way in. The path drops away from the basilica, down through woodland and olive terraces towards the valley below a see zee.
 
-These sixty four hectares were once neglected and abandoned. In two thousand and eight the fy bought them, with a gift from the bank in teh za san pow lo, and set about bringing them back. The walk down is about a kilometre and a half, on natural paths, with steps in places.
+These sixty four hectares were once neglected and abandoned. In two thousand and eight they were bought, with a gift from the bank in teh za san pow lo, and the work of bringing them back began. The walk down is about a kilometre and a half, on natural paths, with steps in places.
 
 Halfway down you'll come to the old ben eh dik tin complex of santa kro cheh, founded by nuns in the twelve or thirteen hundreds: a small Romanesque church, a fourteenth century tower, the remains of a hospital for pilgrims and the sick, and the old mill, which is now a little os teh ree ah. Next to it is the pon tay day gal lee, an old bridge that has survived as well.
 
@@ -51,7 +51,6 @@ Before you start the walk back up, stop by the circles and look up at a see zee 
 | Ponte dei Galli | pon tay day gal lee |
 | Michelangelo Pistoletto | mee kel an jeh lo pis toh let toh |
 | Canticle | kan tik el |
-| FAI | fy |
 
 ## Sources read
 

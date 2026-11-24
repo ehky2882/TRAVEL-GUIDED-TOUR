@@ -1,6 +1,6 @@
 # Abbazia di San Fruttuoso
 
-*300 words, about 120 seconds at a natural pace.*
+*305 words, about 122 seconds at a natural pace.*
 
 ## Clean script
 
@@ -16,7 +16,7 @@ Then that tower. The Doria built it in fifteen sixty-two to protect the village 
 
 [beat]
 
-So it's an abbey that ran out of monks but never quite stopped being a refuge. In nineteen eighty-three Frank and Orietta Pogson Doria Pamphilj gave it to the FAI, which has restored it, spring and all.
+So it's an abbey that ran out of monks but never quite stopped being a refuge. In nineteen eighty-three Frank and Orietta Pogson Doria Pamphilj gave it away, so that it could be restored, spring and all, and opened to the public.
 
 Before you leave, look out at the bay. Since nineteen fifty-four, a bronze statue of Christ has stood on the seabed out there. You won't see it from the beach, but on a calm day divers and snorkellers go out to it, and the boats pass right over the top.
 
@@ -34,7 +34,7 @@ The abbey you see was rebuilt in the tenth century as a ben eh dik tin monastery
 
 Then that tower. The doh ree ah built it in fifteen sixty two to protect the village and its spring from bar ba ree pirates, and armed it with three bronze cannon.
 
-So it's an abbey that ran out of monks but never quite stopped being a refuge. In nineteen eighty three frank and or ee et ta pog son doh ree ah pam fee lee gave it to the fy, which has restored it, spring and all.
+So it's an abbey that ran out of monks but never quite stopped being a refuge. In nineteen eighty three frank and or ee et ta pog son doh ree ah pam fee lee gave it away, so that it could be restored, spring and all, and opened to the public.
 
 Before you leave, look out at the bay. Since nineteen fifty four, a bronze statue of Christ has stood on the seabed out there. You won't see it from the beach, but on a calm day divers and snorkellers go out to it, and the boats pass right over the top.
 
@@ -51,7 +51,6 @@ Before you leave, look out at the bay. Since nineteen fifty four, a bronze statu
 | Genoa | jen oh ah |
 | Barbary | bar ba ree |
 | Frank and Orietta Pogson Doria Pamphilj | frank and or ee et ta pog son doh ree ah pam fee lee |
-| FAI | fy |
 
 ## Sources read
 

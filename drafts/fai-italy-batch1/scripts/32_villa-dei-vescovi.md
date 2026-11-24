@@ -1,6 +1,6 @@
 # Villa dei Vescovi
 
-*361 words, about 144 seconds at a natural pace.*
+*368 words, about 147 seconds at a natural pace.*
 
 ## Clean script
 
@@ -16,7 +16,7 @@ Inside, look for the work of a Flemish painter, Lambert Sustris, who arrived fro
 
 [beat]
 
-And here's the thing about these walls. In sixteen thirty they were whitewashed over, and the paintings were forgotten for more than three hundred years. They came back to light in the twentieth century, after the bishops sold the villa in nineteen sixty-two. The new owner, Vittorio Olcese, bought it on the advice of the great art historian Roberto Longhi, and restored the frescoes. His family gave it to the FAI in two thousand and five.
+And here's the thing about these walls. In sixteen thirty they were whitewashed over, and the paintings were forgotten for more than three hundred years. They came back to light in the twentieth century, after the bishops sold the villa in nineteen sixty-two. The new owner, Vittorio Olcese, bought it on the advice of the great art historian Roberto Longhi, and restored the frescoes. His family gave it away in two thousand and five, so that it could be opened to the public.
 
 When you've seen the rooms, walk the length of the western loggia, where painted boys climb through trellises and fake Roman statues stand in painted niches. Then go down to the old stables, where the wine shop pours the wines of these hills.
 
@@ -34,7 +34,7 @@ The model was the Roman house, built round a central courtyard, with a gallery a
 
 Inside, look for the work of a Flemish painter, lam bert soos triss, who arrived from Rome in fifteen forty one. He filled the rooms with myths and with landscapes full of Roman ruins: ah ree ad nee abandoned on nax oss, Orpheus and yoo rid i see, Apollo flaying the satyr mar see as. One room is named after a small boy eating grapes.
 
-And here's the thing about these walls. In sixteen thirty they were whitewashed over, and the paintings were forgotten for more than three hundred years. They came back to light in the twentieth century, after the bishops sold the villa in nineteen sixty two. The new owner, vee tor ee oh ol cheh zeh, bought it on the advice of the great art historian ro bair toh lon ghee, and restored the frescoes. His family gave it to the fy in two thousand and five.
+And here's the thing about these walls. In sixteen thirty they were whitewashed over, and the paintings were forgotten for more than three hundred years. They came back to light in the twentieth century, after the bishops sold the villa in nineteen sixty two. The new owner, vee tor ee oh ol cheh zeh, bought it on the advice of the great art historian ro bair toh lon ghee, and restored the frescoes. His family gave it away in two thousand and five, so that it could be opened to the public.
 
 When you've seen the rooms, walk the length of the western loggia, where painted boys climb through trellises and fake Roman statues stand in painted niches. Then go down to the old stables, where the wine shop pours the wines of these hills.
 
@@ -60,7 +60,6 @@ When you've seen the rooms, walk the length of the western loggia, where painted
 | Marsyas | mar see as |
 | Vittorio Olcese | vee tor ee oh ol cheh zeh |
 | Roberto Longhi | ro bair toh lon ghee |
-| FAI | fy |
 
 ## Sources read
 

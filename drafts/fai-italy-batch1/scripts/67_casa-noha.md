@@ -1,14 +1,14 @@
 # Casa Noha, Matera
 
-*313 words, about 125 seconds at a natural pace.*
+*312 words, about 125 seconds at a natural pace.*
 
 ## Clean script
 
-This small house in the Sassi was the FAI's first property in Basilicata, and it doesn't so much show you Matera as tell it.
+This small house in the Sassi doesn't so much show you Matera as tell it.
 
 You're at Recinto Cavone, in the Civita, the old heart of Matera, just a few steps from the cathedral. Look out from the doorway and the Sassi fall away below you: thousands of houses and churches cut into and built onto the rock of the ravine.
 
-The house is part of the old home of the de Noha, a noble family, from the fifteen hundreds. In two thousand and four the Fodale and Latorre families gave it to the FAI, and the foundation decided not to fill it with furniture, but with a story.
+The house is part of the old home of the de Noha, a noble family, from the fifteen hundreds. In two thousand and four the Fodale and Latorre families gave it away, so that it could be opened to the public, and the decision was made not to fill it with furniture, but with a story.
 
 So, inside, in two rooms on the ground floor, the walls themselves become screens. The film is narrated by the actress Lella Costa, and it's projected right onto the stone and the vaults of the house, so the building you're standing in is part of the picture. It runs in two chapters. The first takes Matera from its beginnings up to nineteen forty-five. The second takes it from nineteen forty-five to today.
 
@@ -26,11 +26,11 @@ When you come out, walk down into the Sassi themselves, with the film still fres
 
 **kah za no ah, ma teh ra**
 
-This small house in the sas see was the fy's first property in ba zee lee ka ta, and it doesn't so much show you ma teh ra as tell it.
+This small house in the sas see doesn't so much show you ma teh ra as tell it.
 
 You're at reh chin toh ka vo neh, in the chee vee ta, the old heart of ma teh ra, just a few steps from the cathedral. Look out from the doorway and the sas see fall away below you: thousands of houses and churches cut into and built onto the rock of the ravine.
 
-The house is part of the old home of the de no ah, a noble family, from the fifteen hundreds. In two thousand and four the fo dah leh and la tor reh families gave it to the fy, and the foundation decided not to fill it with furniture, but with a story.
+The house is part of the old home of the de no ah, a noble family, from the fifteen hundreds. In two thousand and four the fo dah leh and la tor reh families gave it away, so that it could be opened to the public, and the decision was made not to fill it with furniture, but with a story.
 
 So, inside, in two rooms on the ground floor, the walls themselves become screens. The film is narrated by the actress lel la kos ta, and it's projected right onto the stone and the vaults of the house, so the building you're standing in is part of the picture. It runs in two chapters. The first takes ma teh ra from its beginnings up to nineteen forty five. The second takes it from nineteen forty five to today.
 
@@ -56,7 +56,6 @@ When you come out, walk down into the sas see themselves, with the film still fr
 | Fodale | fo dah leh |
 | Latorre | la tor reh |
 | Lella Costa | lel la kos ta |
-| FAI | fy |
 
 ## Sources read
 

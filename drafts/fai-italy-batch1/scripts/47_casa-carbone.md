@@ -1,6 +1,6 @@
 # Casa Carbone, Lavagna
 
-*312 words, about 125 seconds at a natural pace.*
+*319 words, about 128 seconds at a natural pace.*
 
 ## Clean script
 
@@ -8,7 +8,7 @@ Step inside this house and you're in the eighteen nineties. Nothing much has mov
 
 You're in the centre of Lavagna, on the coast between Chiavari and Sestri Levante. The way in is from Piazza Cordeviola, under the arcade. Above you is a nineteenth-century townhouse, and behind it, hidden from the street, a garden.
 
-The house passed through a family of marble workers, the Bianchi, then the Raffo, and then the Carbone, who lived here right up to the end of the twentieth century. The last of them were a brother and sister. Emanuele Carbone was a bank director with an artist's eye, and he was the one who imagined the house having a public future. His sister Siria completed the bequest, and in nineteen eighty-seven the house came to the FAI.
+The house passed through a family of marble workers, the Bianchi, then the Raffo, and then the Carbone, who lived here right up to the end of the twentieth century. The last of them were a brother and sister. Emanuele Carbone was a bank director with an artist's eye, and he was the one who imagined the house having a public future. His sister Siria completed the bequest, and in nineteen eighty-seven the house was given away, so that it could be opened to the public.
 
 What they left is a home that's perfectly intact, a portrait of a comfortable family at the end of the eighteen hundreds. Start in the central salon, the only real reception room in the house, and then go through to the smaller rooms around it, crowded with furniture and ornaments in the eclectic taste of the late eighteen hundreds. Look up at the ceilings, painted in tempera with Ligurian themes, and down at the floors, with their decorative mosaics. On the walls hang Genoese paintings from the sixteen to the eighteen hundreds.
 
@@ -16,7 +16,7 @@ What they left is a home that's perfectly intact, a portrait of a comfortable fa
 
 It isn't grand, and that's what makes it interesting. This is what the well-off of a small Ligurian town thought a good life looked like, kept exactly as they left it.
 
-The house opens at weekends in spring and autumn, and closes for the winter, so check before you come. In summer the FAI holds aperitifs in the garden, and that's the best way to see it: a glass in the hand, in the green space behind the house, in a town that has no idea it's there.
+The house opens at weekends in spring and autumn, and closes for the winter, so check before you come. In summer there are aperitifs in the garden, and that's the best way to see it: a glass in the hand, in the green space behind the house, in a town that has no idea it's there.
 
 ## TTS-safe script
 
@@ -26,13 +26,13 @@ Step inside this house and you're in the eighteen nineties. Nothing much has mov
 
 You're in the centre of la van ya, on the coast between kya va ree and ses tree leh van teh. The way in is from pyat sa kor deh vee oh la, under the arcade. Above you is a nineteenth century townhouse, and behind it, hidden from the street, a garden.
 
-The house passed through a family of marble workers, the byan kee, then the raf fo, and then the kar bo neh, who lived here right up to the end of the twentieth century. The last of them were a brother and sister. eh ma noo eh leh kar bo neh was a bank director with an artist's eye, and he was the one who imagined the house having a public future. His sister see ree ah completed the bequest, and in nineteen eighty seven the house came to the fy.
+The house passed through a family of marble workers, the byan kee, then the raf fo, and then the kar bo neh, who lived here right up to the end of the twentieth century. The last of them were a brother and sister. eh ma noo eh leh kar bo neh was a bank director with an artist's eye, and he was the one who imagined the house having a public future. His sister see ree ah completed the bequest, and in nineteen eighty seven the house was given away, so that it could be opened to the public.
 
 What they left is a home that's perfectly intact, a portrait of a comfortable family at the end of the eighteen hundreds. Start in the central salon, the only real reception room in the house, and then go through to the smaller rooms around it, crowded with furniture and ornaments in the eclectic taste of the late eighteen hundreds. Look up at the ceilings, painted in tempera with lih gyoo ree an themes, and down at the floors, with their decorative mosaics. On the walls hang jen oh eez paintings from the sixteen to the eighteen hundreds.
 
 It isn't grand, and that's what makes it interesting. This is what the well off of a small lih gyoo ree an town thought a good life looked like, kept exactly as they left it.
 
-The house opens at weekends in spring and autumn, and closes for the winter, so check before you come. In summer the fy holds aperitifs in the garden, and that's the best way to see it: a glass in the hand, in the green space behind the house, in a town that has no idea it's there.
+The house opens at weekends in spring and autumn, and closes for the winter, so check before you come. In summer there are aperitifs in the garden, and that's the best way to see it: a glass in the hand, in the green space behind the house, in a town that has no idea it's there.
 
 ## Respellings
 
@@ -50,7 +50,6 @@ The house opens at weekends in spring and autumn, and closes for the winter, so 
 | Siria | see ree ah |
 | Ligurian | lih gyoo ree an |
 | Genoese | jen oh eez |
-| FAI | fy |
 
 ## Sources read
 

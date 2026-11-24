@@ -1,6 +1,6 @@
 # Villa e Collezione Panza
 
-*344 words, about 138 seconds at a natural pace.*
+*349 words, about 140 seconds at a natural pace.*
 
 ## Clean script
 
@@ -18,7 +18,7 @@ And here's what I love about it. Upstairs, the rooms are still a home: Renaissan
 
 [beat]
 
-He and his wife Giovanna gave the villa to the FAI in nineteen ninety-six, and they kept living on the top floor.
+He and his wife Giovanna gave the villa away in nineteen ninety-six, so that the public could see it, and they kept living on the top floor.
 
 Before you leave, walk out into the park and find the greenhouse. Inside it, Sean Scully has replaced the glass with panels of colour, so the plants and the light come through together.
 
@@ -38,7 +38,7 @@ Go to the old stables first. That's where you'll find the work of Dan Flavin, wh
 
 And here's what I love about it. Upstairs, the rooms are still a home: Renaissance wedding chests, nineteenth century furniture, African and pre Columbian sculpture. pant sa didn't empty the house to make a gallery. He let the eighteenth century and the twentieth sit in the same rooms and argue it out.
 
-He and his wife jo van na gave the villa to the fy in nineteen ninety six, and they kept living on the top floor.
+He and his wife jo van na gave the villa away in nineteen ninety six, so that the public could see it, and they kept living on the top floor.
 
 Before you leave, walk out into the park and find the greenhouse. Inside it, Sean skully has replaced the glass with panels of colour, so the plants and the light come through together.
 
@@ -58,7 +58,6 @@ Before you leave, walk out into the park and find the greenhouse. Inside it, Sea
 | Giovanna | jo van na |
 | Turrell | tur rel |
 | Scully | skully |
-| FAI | fy |
 
 ## Sources read
 

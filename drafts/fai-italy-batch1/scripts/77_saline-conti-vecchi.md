@@ -1,6 +1,6 @@
 # Saline Conti Vecchi, Assemini
 
-*309 words, about 124 seconds at a natural pace.*
+*306 words, about 122 seconds at a natural pace.*
 
 ## Clean script
 
@@ -10,11 +10,11 @@ You're at the saltworks on the edge of the Santa Gilla lagoon, just outside Cagl
 
 At the end of the nineteen twenties, an engineer called Luigi Conti Vecchi set out to reclaim this marshy lagoon and turn it into a vast saltworks. Santa Gilla covers two thousand seven hundred hectares. Around the salt pans, he built a village, Macchiareddu, with houses, schools and places to relax for the owners, managers and workers, a whole community living off salt.
 
-The saltworks are still working, and they've been producing for almost ninety years. They passed through other owners, and in nineteen eighty-four, by law, to the state energy company Eni, which in twenty seventeen asked the FAI to open them up to visitors.
+The saltworks are still working, and they've been producing for almost ninety years. They passed through other owners, and in nineteen eighty-four, by law, to the state energy company Eni, which in twenty seventeen opened them up to visitors.
 
 [beat]
 
-What I love about this place is that industry and nature are sharing the same water. It's a factory, and it's also one of the great bird sanctuaries of Sardinia: the FAI counts around thirty-five thousand water birds of fifty different species.
+What I love about this place is that industry and nature are sharing the same water. It's a factory, and it's also one of the great bird sanctuaries of Sardinia: around thirty-five thousand water birds have been counted here, of fifty different species.
 
 The visit takes about two hours. Half of it is in the historic buildings, the old offices, the chemistry laboratory, the workshop and the carpentry shop, kept as they were. The other half is a ride on a little train out through the salt pans and the nature reserve, past the great white mountains of salt.
 
@@ -30,9 +30,9 @@ You're at the saltworks on the edge of the santa jeel la lagoon, just outside ka
 
 At the end of the nineteen twenties, an engineer called loo ee jee kon tee vek kee set out to reclaim this marshy lagoon and turn it into a vast saltworks. santa jeel la covers two thousand seven hundred hectares. Around the salt pans, he built a village, mak kya red doo, with houses, schools and places to relax for the owners, managers and workers, a whole community living off salt.
 
-The saltworks are still working, and they've been producing for almost ninety years. They passed through other owners, and in nineteen eighty four, by law, to the state energy company eh nee, which in twenty seventeen asked the fy to open them up to visitors.
+The saltworks are still working, and they've been producing for almost ninety years. They passed through other owners, and in nineteen eighty four, by law, to the state energy company eh nee, which in twenty seventeen opened them up to visitors.
 
-What I love about this place is that industry and nature are sharing the same water. It's a factory, and it's also one of the great bird sanctuaries of sar din ee ah: the fy counts around thirty five thousand water birds of fifty different species.
+What I love about this place is that industry and nature are sharing the same water. It's a factory, and it's also one of the great bird sanctuaries of sar din ee ah: around thirty five thousand water birds have been counted here, of fifty different species.
 
 The visit takes about two hours. Half of it is in the historic buildings, the old offices, the chemistry laboratory, the workshop and the carpentry shop, kept as they were. The other half is a ride on a little train out through the salt pans and the nature reserve, past the great white mountains of salt.
 
@@ -51,7 +51,6 @@ The historic rooms are closed for maintenance at the moment, so check before you
 | Macchiareddu | mak kya red doo |
 | Eni | eh nee |
 | Sardinia | sar din ee ah |
-| FAI | fy |
 
 ## Sources read
 

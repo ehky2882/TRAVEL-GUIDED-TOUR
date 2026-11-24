@@ -1,0 +1,87 @@
+num,slug,title,city,province,region,lat,lon
+01,castello-della-manta,Castello della Manta,Manta,Cuneo,Piemonte,44.61440,7.48280
+02,castello-e-parco-di-masino,Castello e Parco di Masino,Caravino,Torino,Piemonte,45.39188,7.95978
+03,collezione-enrico-villa-flecchia,Collezione Enrico a Villa Flecchia,Magnano,Biella,Piemonte,45.46145,8.00323
+04,sacra-di-san-michele,Sacra di San Michele,Sant'Ambrogio di Torino,Torino,Piemonte,45.09799,7.34305
+05,villa-taranto,Giardini Botanici di Villa Taranto,Verbania (Pallanza),Verbano-Cusio-Ossola,Piemonte,45.925950426944944,8.56528657440804
+06,castel-savoia,Castel Savoia,Gressoney-Saint-Jean,Aosta,Valle d'Aosta,45.76403,7.82671
+07,villa-della-porta-bozzolo,Villa Della Porta Bozzolo,Casalzuigno,Varese,Lombardia,45.90699,8.71147
+08,villa-e-collezione-panza,Villa e Collezione Panza,Varese,Varese,Lombardia,45.82502,8.82928
+09,casa-macchi,Casa Macchi,Morazzone,Varese,Lombardia,45.76474,8.83136
+10,monastero-di-torba,Monastero di Torba,Gornate Olona,Varese,Lombardia,45.72953,8.86365
+11,villa-fogazzaro-roi,Villa Fogazzaro Roi,Valsolda (Oria),Como,Lombardia,46.02154152077036,9.033199996741208
+12,villa-del-balbianello,Villa del Balbianello,Tremezzina,Como,Lombardia,45.96509,9.20250
+13,la-velarca,La Velarca,Tremezzina (Ossuccio),Como,Lombardia,45.96798,9.17325
+14,palazzo-moroni,Palazzo Moroni,Bergamo,Bergamo,Lombardia,45.70344,9.66803
+15,castel-grumello,Castel Grumello,Montagna in Valtellina,Sondrio,Lombardia,46.17366,9.89645
+16,villa-carlotta,Villa Carlotta,Tremezzina,Como,Lombardia,45.9864,9.23084
+17,ponte-san-michele,Ponte San Michele,Paderno d'Adda,Lecco,Lombardia,45.68211,9.45204
+18,villa-reale-di-monza,Villa Reale di Monza,Monza,Monza e della Brianza,Lombardia,45.59346,9.27478
+19,san-siro-leonardos-horse,Ippodromo San Siro and Leonardo's Horse,Milano,Milano,Lombardia,45.48087,9.12965
+20,traghetto-di-leonardo,Traghetto di Leonardo,Imbersago,Lecco,Lombardia,45.70807750506833,9.45624302129537
+21,rocca-di-lonato,Rocca di Lonato and Casa del Podestà,Lonato del Garda,Brescia,Lombardia,45.46295,10.48647
+22,aula-del-simonino,Aula del Simonino,Trento,Trento,Trentino-Alto Adige,46.06864,11.12372
+23,castello-di-avio,Castello di Avio,Avio (Sabbionara),Trento,Trentino-Alto Adige,45.74652,10.95167
+24,castello-del-buonconsiglio,Castello del Buonconsiglio,Trento,Trento,Trentino-Alto Adige,46.07102,11.12727
+25,muse-trento,"MUSE, Museo delle Scienze",Trento,Trento,Trentino-Alto Adige,46.06261,11.11474
+26,mart-rovereto,"Mart, Rovereto",Rovereto,Trento,Trentino-Alto Adige,45.894,11.04502
+27,ponte-del-diavolo-cividale,"Ponte del Diavolo, Cividale del Friuli",Cividale del Friuli,Udine,Friuli-Venezia Giulia,46.09186,13.43167
+28,basilica-di-aquileia,Basilica di Aquileia,Aquileia,Udine,Friuli-Venezia Giulia,45.76963,13.37087
+29,mausoleo-di-teodorico,Mausoleo di Teodorico,Ravenna,Ravenna,Emilia-Romagna,44.42504,12.20915
+30,sant-apollinare-in-classe,Sant'Apollinare in Classe,Ravenna (Classe),Ravenna,Emilia-Romagna,44.38028,12.23302
+31,palazzo-di-teodorico,"Palazzo di Teodorico, Ravenna",Ravenna,Ravenna,Emilia-Romagna,44.41611,12.20463
+32,villa-dei-vescovi,Villa dei Vescovi,Torreglia (Luvigliano),Padova,Veneto,45.34324,11.71154
+33,madonna-della-corona,Santuario Madonna della Corona,Ferrara di Monte Baldo (Spiazzi),Verona,Veneto,45.64959,10.85617
+34,palazzo-della-ragione,"Palazzo della Ragione, Padua",Padova,Padova,Veneto,45.40725,11.87522
+35,san-giorgio-maggiore,San Giorgio Maggiore,Venezia,Venezia,Veneto,45.42939,12.34328
+36,caffe-pedrocchi,"Caffè Pedrocchi, Padua",Padova,Padova,Veneto,45.40769,11.87709
+37,casa-del-petrarca,"Casa del Petrarca, Arquà Petrarca",Arquà Petrarca,Padova,Veneto,45.27073,11.71568
+38,giardini-della-biennale,Giardini della Biennale,Venezia,Venezia,Veneto,45.42902,12.35793
+39,villa-pisani,"Villa Pisani, Stra",Stra,Venezia,Veneto,45.4083,12.01286
+40,ca-giustinian,"Ca' Giustinian, Venice",Venezia (San Marco),Venezia,Veneto,45.43250,12.33670
+41,ca-pesaro,"Ca' Pesaro, Venice",Venezia (Santa Croce),Venezia,Veneto,45.44097,12.33154
+42,monte-fontana-secca,Monte Fontana Secca,Quero Vas / Seren del Grappa,Belluno,Veneto,45.92272,11.80777
+43,ponte-vecchio-bassano,"Ponte Vecchio, Bassano del Grappa",Bassano del Grappa,Vicenza,Veneto,45.76751,11.73111
+44,casa-e-collezione-laura,Casa e Collezione Laura,Ospedaletti,Imperia,Liguria,43.80160,7.72371
+45,antica-barberia-giacalone,"Antica Barberia Giacalone, Genoa",Genova,Genova,Liguria,44.40800,8.92923
+46,abbazia-di-san-fruttuoso,Abbazia di San Fruttuoso,Camogli,Genova,Liguria,44.31649,9.17519
+47,casa-carbone,"Casa Carbone, Lavagna",Lavagna,Genova,Liguria,44.30979,9.34508
+48,villa-rezzola,"Villa Rezzola, Lerici",Lerici (Pugliola),La Spezia,Liguria,44.08599,9.90981
+49,tellaro,Tellaro,Lerici (Tellaro),La Spezia,Liguria,44.05755,9.92923
+50,teatrino-di-vetriano,Teatrino di Vetriano,Pescaglia (Vetriano),Lucca,Toscana,43.98228,10.47149
+51,torre-e-casa-campatelli,"Torre e Casa Campatelli, San Gimignano",San Gimignano,Siena,Toscana,43.46691118046052,11.042979972899634
+52,abbazia-di-san-galgano,Abbazia di San Galgano,Chiusdino,Siena,Toscana,43.14941,11.15532
+53,villa-gamberaia,"Villa Gamberaia, Settignano",Firenze (Settignano),Firenze,Toscana,43.7794,11.32824
+54,bosco-di-san-francesco,"Bosco di San Francesco, Assisi",Assisi,Perugia,Umbria,43.07761,12.61849
+55,ponte-delle-torri,"Ponte delle Torri, Spoleto",Spoleto,Perugia,Umbria,42.733,12.74385
+56,orto-sul-colle-dell-infinito,"Orto sul Colle dell'Infinito, Recanati",Recanati,Macerata,Marche,43.39798,13.54984
+57,rotonda-a-mare,"Rotonda a Mare, Senigallia",Senigallia,Ancona,Marche,43.71656,13.22607
+58,villa-gregoriana,"Villa Gregoriana, Tivoli",Tivoli,Roma,Lazio,41.96647,12.80229
+59,parco-degli-acquedotti,"Parco degli Acquedotti, Rome",Roma,Roma,Lazio,41.84484,12.56237
+60,baia-di-ieranto,Baia di Ieranto,Massa Lubrense,Napoli,Campania,40.57295,14.34118
+61,duomo-di-salerno,Duomo di Salerno,Salerno,Salerno,Campania,40.68022,14.75939
+62,abbazia-di-cerrate,Abbazia di Santa Maria di Cerrate,Lecce,Lecce,Puglia,40.45859,18.11559
+63,cattedrale-di-troia,Cattedrale di Troia,Troia,Foggia,Puglia,41.36097,15.30869
+64,teatro-margherita-bari,"Teatro Margherita, Bari",Bari,Bari,Puglia,41.12636,16.87286
+65,teatro-petruzzelli,"Teatro Petruzzelli, Bari",Bari,Bari,Puglia,41.12356,16.87316
+66,fontana-greca-gallipoli,"Fontana Greca, Gallipoli",Gallipoli,Lecce,Puglia,40.05591,17.98108
+67,casa-noha,"Casa Noha, Matera",Matera,Matera,Basilicata,40.66634,16.61214
+68,castello-tramontano,"Castello Tramontano, Matera",Matera,Matera,Basilicata,40.66392,16.60595
+69,giganti-della-sila,I Giganti della Sila,Spezzano della Sila,Cosenza,Calabria,39.32470,16.46749
+70,giardino-della-kolymbethra,"Giardino della Kolymbethra, Agrigento",Agrigento,Agrigento,Sicilia,37.29167,13.58109
+71,giardino-pantesco-donnafugata,"Giardino Pantesco Donnafugata, Pantelleria",Pantelleria (Khamma),Trapani,Sicilia,36.80803,12.02141
+72,tempio-di-segesta,Tempio di Segesta,Calatafimi-Segesta,Trapani,Sicilia,37.94144,12.83237
+73,fontana-pretoria,"Fontana Pretoria, Palermo",Palermo,Palermo,Sicilia,38.11549,13.36208
+74,san-giovanni-degli-eremiti,"San Giovanni degli Eremiti, Palermo",Palermo,Palermo,Sicilia,38.10956,13.3546
+75,teatro-massimo-bellini,"Teatro Massimo Bellini, Catania",Catania,Catania,Sicilia,37.50416,15.08983
+76,batteria-militare-talmone,"Batteria Militare Talmone, Palau",Palau,Sassari,Sardegna,41.20461,9.34029
+77,saline-conti-vecchi,"Saline Conti Vecchi, Assemini",Assemini,Cagliari,Sardegna,39.22391,9.02382
+78,palazzo-mondadori,"Palazzo Mondadori, Segrate",Segrate,Milano,Lombardia,45.473738605236186,9.296800592299949
+79,ville-jacques-couelle,"Ville Jacques Couëlle, Monti Mannu",Arzachena (Abbiadori),Sassari,Sardegna,41.0997264386791,9.527849496356103
+80,castello-di-sammezzano,Castello di Sammezzano,Reggello (Leccio),Firenze,Toscana,43.70320326354228,11.471737911967578
+81,antica-edicola-mantova,"Antica Edicola dei Giornali, Mantua",Mantova,Mantova,Lombardia,45.15994923675107,10.792552910190384
+82,piazza-del-duomo-trento,"Piazza del Duomo, Trento",Trento,Trento,Trentino-Alto Adige,46.06748506036857,11.121477543654954
+83,palazzo-ducale-venezia,"Doge's Palace, Venice",Venezia (San Marco),Venezia,Veneto,45.433838989133456,12.340410854382185
+84,buco-del-piombo,"Buco del Piombo, Erba",Erba (Crevenna),Como,Lombardia,45.82540224621415,9.200073119357638
+85,villa-necchi-campiglio,"Villa Necchi Campiglio, Milan",Milano,Milano,Lombardia,45.46854452657468,9.201782767877226
+86,idrovora-di-sassu,"Idrovora di Sassu, Arborea",Arborea,Oristano,Sardegna,39.8232643,8.5772244

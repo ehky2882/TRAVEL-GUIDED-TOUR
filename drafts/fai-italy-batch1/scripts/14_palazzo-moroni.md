@@ -1,6 +1,6 @@
 # Palazzo Moroni
 
-*335 words, about 134 seconds at a natural pace.*
+*339 words, about 136 seconds at a natural pace.*
 
 ## Clean script
 
@@ -18,7 +18,7 @@ Then find the Hall of the Golden Age. It holds portraits by Giovan Battista Moro
 
 And then go outside, because the garden is the real surprise. Formal terraces climb against the hill of Sant'Eufemia, and above them is the ortaglia, almost two hectares of kitchen garden, meadow and fruit trees, added in the seventeen and eighteen hundreds. A working farm, inside the walls of a hilltop city.
 
-The FAI took on the palace in twenty nineteen, entrusted to it by the foundation that had cared for it.
+In twenty nineteen the foundation that had cared for the palace passed it on, so that it could be restored and opened to visitors.
 
 If you've the legs, climb right up through the ortaglia to the top. From there you look down over the roofs of the Città Alta, and you realise how much green this city has been keeping behind its walls.
 
@@ -38,7 +38,7 @@ Then find the Hall of the Golden Age. It holds portraits by jo van bat tees ta m
 
 And then go outside, because the garden is the real surprise. Formal terraces climb against the hill of san teh oo feh mee ah, and above them is the or tal ya, almost two hectares of kitchen garden, meadow and fruit trees, added in the seventeen and eighteen hundreds. A working farm, inside the walls of a hilltop city.
 
-The fy took on the palace in twenty nineteen, entrusted to it by the foundation that had cared for it.
+In twenty nineteen the foundation that had cared for the palace passed it on, so that it could be restored and opened to visitors.
 
 If you've the legs, climb right up through the or tal ya to the top. From there you look down over the roofs of the chit tah al ta, and you realise how much green this city has been keeping behind its walls.
 
@@ -58,7 +58,6 @@ If you've the legs, climb right up through the or tal ya to the top. From there 
 | ortaglia | or tal ya |
 | nymphaeum | nim fee um |
 | Moronis | mo ro neez |
-| FAI | fy |
 
 ## Sources read
 

@@ -16,7 +16,7 @@ Inside, it's like stepping into a jewellery box. The locals call it La Bombonier
 
 That motto is the whole place, really. It was built by people with no money and a great deal of determination, so that a mountain village could have plays, music and somewhere to gather.
 
-It was abandoned in the nineteen sixties and declared unsafe. In nineteen ninety-seven the Biagini heirs gave it to the FAI and to the town, and after a careful restoration it reopened in September two thousand and two. The restorers even had local supporters adopt the straw-seated chairs to help pay for them. Since then it's hosted small seasons, concerts, and even performances with La Scala in Milan.
+It was abandoned in the nineteen sixties and declared unsafe. In nineteen ninety-seven the Biagini heirs gave it away, to be shared with the town, and after a careful restoration it reopened in September two thousand and two. The restorers even had local supporters adopt the straw-seated chairs to help pay for them. Since then it's hosted small seasons, concerts, and even performances with La Scala in Milan.
 
 Visits are by booking, so arrange one before you climb up here. And when you're inside, look for the little wooden flowers by the box office. Each one stands for somebody who helped bring this theatre back to life.
 
@@ -34,7 +34,7 @@ Inside, it's like stepping into a jewellery box. The locals call it la bom bon y
 
 That motto is the whole place, really. It was built by people with no money and a great deal of determination, so that a mountain village could have plays, music and somewhere to gather.
 
-It was abandoned in the nineteen sixties and declared unsafe. In nineteen ninety seven the bya jee nee heirs gave it to the fy and to the town, and after a careful restoration it reopened in September two thousand and two. The restorers even had local supporters adopt the straw seated chairs to help pay for them. Since then it's hosted small seasons, concerts, and even performances with la ska la in Milan.
+It was abandoned in the nineteen sixties and declared unsafe. In nineteen ninety seven the bya jee nee heirs gave it away, to be shared with the town, and after a careful restoration it reopened in September two thousand and two. The restorers even had local supporters adopt the straw seated chairs to help pay for them. Since then it's hosted small seasons, concerts, and even performances with la ska la in Milan.
 
 Visits are by booking, so arrange one before you climb up here. And when you're inside, look for the little wooden flowers by the box office. Each one stands for somebody who helped bring this theatre back to life.
 
@@ -50,7 +50,6 @@ Visits are by booking, so arrange one before you climb up here. And when you're 
 | La Bomboniera | la bom bon yeh ra |
 | La Scala | la ska la |
 | Guinness | ginness |
-| FAI | fy |
 
 ## Sources read
 

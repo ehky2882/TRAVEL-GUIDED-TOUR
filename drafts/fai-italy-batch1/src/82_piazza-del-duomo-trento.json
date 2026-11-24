@@ -1,0 +1,59 @@
+{
+ "title": "Piazza del Duomo, Trento",
+ "clean": "A mountain city, a long way from any sea, put the god of the sea in the middle of its main square. There's a pun involved.\n\nYou're in Piazza del Duomo, in the centre of Trento, beside the big fountain with Neptune on top. Behind it, along one side of the square, runs the long stone flank of the cathedral. To the left of the cathedral, as you face it, is the old bishops' palace with its tall civic tower, and on the side of the square opposite the cathedral, a row of arcaded houses with their fronts painted all over.\n\nStart with the fountain. The town council decided on it in seventeen sixty-six, and a sculptor from Lavarone called Giongo made it, with the Neptune and the tritons and sea horses carved by Stefano Salterio. Why Neptune, here? Nobody wrote it down, but the city's Roman name was Tridentum, and Neptune carries a trident. Getting water to it was the hard part. The first pipes burst, and the water only began to flow on the eighth of July, seventeen sixty-nine. A month later the council banned people from washing nappies, tripe and frogs in it. The Neptune you see is a bronze copy. The original is in the courtyard of Palazzo Thun, round the corner.\n\nThen turn to the cathedral. Work on the building you see began in twelve twelve, under the master builder Adamo d'Arogno, and it's here that the Council of Trent opened, on the thirteenth of December, fifteen forty-five. Its early sessions were held in the cathedral choir, as the Church gathered to answer the Protestant Reformation.\n\n[beat]\n\nAnd here's the thing. The fountain cost the city a fortune, and people were furious. Not long after it opened, someone pinned a note to it asking the chief magistrate to turn its stones into bread. The square has always been where Trento argued with itself.\n\nBefore you go, walk over to the painted houses, Casa Cazuffi and Casa Rella, and look up at the frescoes. Then find the single lime tree under the civic tower. To go and sit under the lime tree, in Trento, once meant you'd been thrown out of home.",
+ "respell": [
+  [
+   "Trento",
+   "trento"
+  ],
+  [
+   "Tridentum",
+   "trydentum"
+  ],
+  [
+   "Lavarone",
+   "lavaronay"
+  ],
+  [
+   "Giongo",
+   "jongo"
+  ],
+  [
+   "Stefano Salterio",
+   "stefano saltairio"
+  ],
+  [
+   "Palazzo Thun",
+   "palatso toon"
+  ],
+  [
+   "Adamo d'Arogno",
+   "adamo darronyo"
+  ],
+  [
+   "Casa Cazuffi",
+   "kahza katsoofee"
+  ],
+  [
+   "Casa Rella",
+   "kahza rella"
+  ],
+  [
+   "Duomo",
+   "dwomo"
+  ]
+ ],
+ "sources": [
+  "https://it.wikipedia.org/wiki/Piazza_Duomo_(Trento)",
+  "https://it.wikipedia.org/wiki/Fontana_del_Nettuno_(Trento)",
+  "https://it.wikipedia.org/wiki/Duomo_di_Trento"
+ ],
+ "notes": [
+  "Fountain: council resolution 23 December 1766; designer Giongo of Lavarone (it.wikipedia gives both 'Francesco Antonio' and 'Flavio Antonio', so only the surname is used); statues by Stefano Salterio; water first flowed 8 July 1769; proclamation of 13 August 1769 against washing 'pannolini, trippe, rane'; original Neptune moved to Palazzo Thun in 1939, bronze copy since 1945.",
+  "The Tridentum/trident link is offered by it.wikipedia as a hypothesis; the script says 'nobody wrote it down'.",
+  "The 'turn these stones into bread' note: it.wikipedia, citing Tovazzi.",
+  "Cathedral: first stone 29 February 1212 under Adamo d'Arogno; opening session of the Council 13 December 1545 in the choir: it.wikipedia (Duomo di Trento).",
+  "Lime tree saying 'andar sotto al tiglio': it.wikipedia (Piazza Duomo).",
+  "Layout check: Palazzo Pretorio forms the east side and meets the cathedral at the corner; the painted houses are on the north side, opposite the cathedral's flank."
+ ]
+}

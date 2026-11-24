@@ -1,6 +1,6 @@
 # Giardino della Kolymbethra, Agrigento
 
-*325 words, about 130 seconds at a natural pace.*
+*328 words, about 131 seconds at a natural pace.*
 
 ## Clean script
 
@@ -16,7 +16,7 @@ Then simply walk. There's the citrus grove, the almond and olive terraces, some 
 
 [beat]
 
-By the late twentieth century the garden had been abandoned. In nineteen ninety-nine the Region of Sicily entrusted it to the FAI, which restored the old irrigation channels and brought it back. It's five hectares, and it feels like a secret kept from the busy path above.
+By the late twentieth century the garden had been abandoned. In nineteen ninety-nine the Region of Sicily handed it over to be rescued, and the old irrigation channels were restored and the garden brought back. It's five hectares, and it feels like a secret kept from the busy path above.
 
 Remember you'll need a ticket for the Valley of the Temples as well as for the garden.
 
@@ -36,7 +36,7 @@ Look for the entrances to the high po jee ah, the ancient underground channels. 
 
 Then simply walk. There's the citrus grove, the almond and olive terraces, some of the olives centuries old, and the wild plants of Sicily in between: myrtle, teh reh binth, len tisk and broom.
 
-By the late twentieth century the garden had been abandoned. In nineteen ninety nine the Region of Sicily entrusted it to the fy, which restored the old irrigation channels and brought it back. It's five hectares, and it feels like a secret kept from the busy path above.
+By the late twentieth century the garden had been abandoned. In nineteen ninety nine the Region of Sicily handed it over to be rescued, and the old irrigation channels were restored and the garden brought back. It's five hectares, and it feels like a secret kept from the busy path above.
 
 Remember you'll need a ticket for the Valley of the Temples as well as for the garden.
 
@@ -58,7 +58,6 @@ Before you climb back up, find a spot under the olives where you can see the col
 | terebinth | teh reh binth |
 | lentisk | len tisk |
 |  BC |  bee see |
-| FAI | fy |
 
 ## Sources read
 

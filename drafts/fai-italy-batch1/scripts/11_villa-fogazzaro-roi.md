@@ -1,6 +1,6 @@
 # Villa Fogazzaro Roi
 
-*337 words, about 135 seconds at a natural pace.*
+*335 words, about 134 seconds at a natural pace.*
 
 ## Clean script
 
@@ -18,7 +18,7 @@ Have a look for Fogazzaro's writing desk. He wrote notes all over it, some on th
 
 What I find rather moving is how little this place pretends. The rooms are small. There's a salon the family called Siberia, because it was impossible to heat. It's a real house that a great writer borrowed for a story, and then the story gave it back to us.
 
-His great-nephew Giuseppe Roi, known as Boso, restored it and gave it to the FAI in two thousand and nine, so that nothing would change after he'd gone. Visits are by guided tour.
+His great-nephew Giuseppe Roi, known as Boso, restored it and, in two thousand and nine, gave it away so that nothing would change after he'd gone. Visits are by guided tour.
 
 When you leave, stand out on the terrace for a moment and look across the water. That's the view Franco looked at, and the view Fogazzaro sat down to describe.
 
@@ -38,7 +38,7 @@ Have a look for fo gat sa ro's writing desk. He wrote notes all over it, some on
 
 What I find rather moving is how little this place pretends. The rooms are small. There's a salon the family called Siberia, because it was impossible to heat. It's a real house that a great writer borrowed for a story, and then the story gave it back to us.
 
-His great nephew joo sep pay roy, known as bo zo, restored it and gave it to the fy in two thousand and nine, so that nothing would change after he'd gone. Visits are by guided tour.
+His great nephew joo sep pay roy, known as bo zo, restored it and, in two thousand and nine, gave it away so that nothing would change after he'd gone. Visits are by guided tour.
 
 When you leave, stand out on the terrace for a moment and look across the water. That's the view Franco looked at, and the view fo gat sa ro sat down to describe.
 
@@ -59,7 +59,6 @@ When you leave, stand out on the terrace for a moment and look across the water.
 | Giuseppe | joo sep pay |
 | Boso | bo zo |
 | Antonio | an toe nee oh |
-| FAI | fy |
 
 ## Sources read
 

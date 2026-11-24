@@ -1,6 +1,6 @@
 # Castel Grumello
 
-*317 words, about 127 seconds at a natural pace.*
+*318 words, about 127 seconds at a natural pace.*
 
 ## Clean script
 
@@ -16,7 +16,7 @@ It was begun at the end of the twelve hundreds or the start of the thirteen hund
 
 So what you're looking at is the shell of an argument that was settled five hundred years ago, and the thing that's outlasted it is the farming. The name comes from the knoll it stands on, the grumo, and the terraces below have been growing Nebbiolo, the grape of the Alps, for centuries.
 
-The castle was given to the FAI in nineteen ninety, restored, and opened in two thousand and one.
+The castle was given away in nineteen ninety, restored, and opened to the public in two thousand and one.
 
 There's a small restaurant just below the castle, with seasonal food from the valley. If you've the time, stop there, and then walk down among the terraces. You'll see how much patience it takes to farm a mountain, one dry-stone wall at a time.
 
@@ -34,7 +34,7 @@ It was begun at the end of the twelve hundreds or the start of the thirteen hund
 
 So what you're looking at is the shell of an argument that was settled five hundred years ago, and the thing that's outlasted it is the farming. The name comes from the knoll it stands on, the groo mo, and the terraces below have been growing neb ee oh lo, the grape of the Alps, for centuries.
 
-The castle was given to the fy in nineteen ninety, restored, and opened in two thousand and one.
+The castle was given away in nineteen ninety, restored, and opened to the public in two thousand and one.
 
 There's a small restaurant just below the castle, with seasonal food from the valley. If you've the time, stop there, and then walk down among the terraces. You'll see how much patience it takes to farm a mountain, one dry stone wall at a time.
 
@@ -52,7 +52,6 @@ There's a small restaurant just below the castle, with seasonal food from the va
 | grumo | groo mo |
 | Nebbiolo | neb ee oh lo |
 | Como | ko mo |
-| FAI | fy |
 
 ## Sources read
 

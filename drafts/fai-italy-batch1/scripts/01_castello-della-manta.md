@@ -1,6 +1,6 @@
 # Castello della Manta
 
-*386 words, about 154 seconds at a natural pace.*
+*395 words, about 158 seconds at a natural pace.*
 
 ## Clean script
 
@@ -18,7 +18,7 @@ The source was a romance called The Wandering Knight, written by Valerano's own 
 
 Then there's the south wall: the Fountain of Youth. The old and the frail arrive at one side, they climb into the water, and they come out the other side young and very pleased with themselves. It's one of the rare surviving paintings of the subject anywhere, and it's funny, which you don't expect from the Middle Ages.
 
-The castle passed through several families and fell into ruin, before Countess Elisabetta De Rege Provana gave it to the FAI in nineteen eighty-five.
+The castle passed through several families and fell into ruin, before Countess Elisabetta De Rege Provana gave it away in nineteen eighty-five, so that it could be restored and opened to the public.
 
 Before you leave, walk down to the little church at the foot of the castle. It has its own cycle of frescoes on the Passion of Christ, from the fifteenth and sixteenth centuries, and after the heroes upstairs it's a very different kind of story.
 
@@ -38,7 +38,7 @@ The source was a romance called The Wandering Knight, written by va le rah no's 
 
 Then there's the south wall: the Fountain of Youth. The old and the frail arrive at one side, they climb into the water, and they come out the other side young and very pleased with themselves. It's one of the rare surviving paintings of the subject anywhere, and it's funny, which you don't expect from the Middle Ages.
 
-The castle passed through several families and fell into ruin, before Countess eh lee za bet ta deh ray jay pro vah na gave it to the fy in nineteen eighty five.
+The castle passed through several families and fell into ruin, before Countess eh lee za bet ta deh ray jay pro vah na gave it away in nineteen eighty five, so that it could be restored and opened to the public.
 
 Before you leave, walk down to the little church at the foot of the castle. It has its own cycle of frescoes on the Passion of Christ, from the fifteenth and sixteenth centuries, and after the heroes upstairs it's a very different kind of story.
 
@@ -54,7 +54,6 @@ Before you leave, walk down to the little church at the foot of the castle. It h
 | Bouillon | boo yon |
 | Elisabetta De Rege Provana | eh lee za bet ta deh ray jay pro vah na |
 | Charlemagne | shar le main |
-| FAI | fy |
 
 ## Sources read
 

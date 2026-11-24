@@ -1,6 +1,6 @@
 # Villa Gregoriana, Tivoli
 
-*348 words, about 139 seconds at a natural pace.*
+*347 words, about 139 seconds at a natural pace.*
 
 ## Clean script
 
@@ -8,7 +8,7 @@ In eighteen twenty-six the river Aniene burst its banks and tore through Tivoli.
 
 From the entrance at Largo Sant'Angelo, look down into the gorge. The path drops away into what's called the Valley of Hell, a deep wooded ravine full of the noise of water, and high above it on the far side, on the old acropolis of Tivoli, stand two Roman temples.
 
-After the flood, Pope Gregory the Sixteenth had two tunnels cut through Monte Catillo, between eighteen thirty-two and eighteen thirty-five, to divert the river away from the town. Where the diverted water came out, it made the Great Waterfall, dropping more than a hundred metres. The FAI says it's the second highest waterfall in Italy after the Marmore. The park was laid out around it, and named after the Pope.
+After the flood, Pope Gregory the Sixteenth had two tunnels cut through Monte Catillo, between eighteen thirty-two and eighteen thirty-five, to divert the river away from the town. Where the diverted water came out, it made the Great Waterfall, dropping more than a hundred metres. It's said to be the second highest waterfall in Italy, after the Marmore. The park was laid out around it, and named after the Pope.
 
 As you go down, look for the grottoes the water has carved out of the limestone: the Grotto of Neptune and the Grotto of the Sirens. Along the way, there are the ruins of the country villa of Manlius Vopiscus, a Roman whose house was praised by the poet Statius.
 
@@ -18,7 +18,7 @@ And then the temples. The round one, from around a hundred BC, is probably linke
 
 No wonder this became one of the set pieces of the Grand Tour. Ruins, a roaring waterfall, a gorge, a temple on a cliff: it was practically designed to be painted, and for a century it was, over and over again.
 
-The FAI has looked after the park since two thousand and two. Be warned, it's a proper walk, with eighty-two metres of climb and a great many steps.
+The park was restored and reopened in the early two thousands. Be warned, it's a proper walk, with eighty-two metres of climb and a great many steps.
 
 Save your last breath for the top. You come out by the round temple, and from the terrace beside it you can look straight down at the waterfall you've just walked under.
 
@@ -30,7 +30,7 @@ In eighteen twenty six the river ah nyeh neh burst its banks and tore through te
 
 From the entrance at lar go san tan jeh lo, look down into the gorge. The path drops away into what's called the Valley of Hell, a deep wooded ravine full of the noise of water, and high above it on the far side, on the old acropolis of tee vo lee, stand two Roman temples.
 
-After the flood, Pope Gregory the Sixteenth had two tunnels cut through mon tay ka teel lo, between eighteen thirty two and eighteen thirty five, to divert the river away from the town. Where the diverted water came out, it made the Great Waterfall, dropping more than a hundred metres. The fy says it's the second highest waterfall in Italy after the mar mo reh. The park was laid out around it, and named after the Pope.
+After the flood, Pope Gregory the Sixteenth had two tunnels cut through mon tay ka teel lo, between eighteen thirty two and eighteen thirty five, to divert the river away from the town. Where the diverted water came out, it made the Great Waterfall, dropping more than a hundred metres. It's said to be the second highest waterfall in Italy, after the mar mo reh. The park was laid out around it, and named after the Pope.
 
 As you go down, look for the grottoes the water has carved out of the limestone: the Grotto of Neptune and the Grotto of the Sirens. Along the way, there are the ruins of the country villa of man lee us vo pis kus, a Roman whose house was praised by the poet stay shus.
 
@@ -38,7 +38,7 @@ And then the temples. The round one, from around a hundred bee see, is probably 
 
 No wonder this became one of the set pieces of the Grand Tour. Ruins, a roaring waterfall, a gorge, a temple on a cliff: it was practically designed to be painted, and for a century it was, over and over again.
 
-The fy has looked after the park since two thousand and two. Be warned, it's a proper walk, with eighty two metres of climb and a great many steps.
+The park was restored and reopened in the early two thousands. Be warned, it's a proper walk, with eighty two metres of climb and a great many steps.
 
 Save your last breath for the top. You come out by the round temple, and from the terrace beside it you can look straight down at the waterfall you've just walked under.
 
@@ -58,7 +58,6 @@ Save your last breath for the top. You come out by the round temple, and from th
 | Sibyl | sib il |
 | Tiburnus | ti bur nus |
 | Palladio | pa lah dee oh |
-| FAI | fy |
 
 ## Sources read
 

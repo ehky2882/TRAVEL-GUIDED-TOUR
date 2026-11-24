@@ -1,6 +1,6 @@
 # Giardino Pantesco Donnafugata, Pantelleria
 
-*315 words, about 126 seconds at a natural pace.*
+*321 words, about 128 seconds at a natural pace.*
 
 ## Clean script
 
@@ -16,7 +16,7 @@ Here's the clever part. The walls are thick and made of porous lava. As the air 
 
 So this one tree, an orange of an old variety, has been kept alive for generations by nothing more than a wall and a bit of physics. I find that one of the most quietly impressive pieces of design anywhere in Italy.
 
-The garden was given to the FAI in two thousand and eight by the Donnafugata winery, whose vineyards surround it. Visits are run with the winery, mainly in the summer months, and guided tours leave from the Donnafugata cellars here at Khamma. Book ahead.
+The garden was given away in two thousand and eight by the Donnafugata winery, whose vineyards surround it, so that it could be opened to visitors. Visits are run with the winery, mainly in the summer months, and guided tours leave from the Donnafugata cellars here at Khamma. Book ahead.
 
 When you step inside, stand still for a moment. Notice how the wind drops away and the air changes. That's the whole idea of the place, and you can feel it on your skin.
 
@@ -34,7 +34,7 @@ Here's the clever part. The walls are thick and made of porous lava. As the air 
 
 So this one tree, an orange of an old variety, has been kept alive for generations by nothing more than a wall and a bit of physics. I find that one of the most quietly impressive pieces of design anywhere in Italy.
 
-The garden was given to the fy in two thousand and eight by the don na foo gah ta winery, whose vineyards surround it. Visits are run with the winery, mainly in the summer months, and guided tours leave from the don na foo gah ta cellars here at kam ma. Book ahead.
+The garden was given away in two thousand and eight by the don na foo gah ta winery, whose vineyards surround it, so that it could be opened to visitors. Visits are run with the winery, mainly in the summer months, and guided tours leave from the don na foo gah ta cellars here at kam ma. Book ahead.
 
 When you step inside, stand still for a moment. Notice how the wind drops away and the air changes. That's the whole idea of the place, and you can feel it on your skin.
 
@@ -47,7 +47,6 @@ When you step inside, stand still for a moment. Notice how the wind drops away a
 | Donnafugata | don na foo gah ta |
 | Pantelleria | pan tel leh ree ah |
 | Khamma | kam ma |
-| FAI | fy |
 
 ## Sources read
 

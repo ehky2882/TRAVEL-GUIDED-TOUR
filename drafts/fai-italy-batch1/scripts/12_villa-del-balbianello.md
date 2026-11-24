@@ -1,6 +1,6 @@
 # Villa del Balbianello
 
-*344 words, about 138 seconds at a natural pace.*
+*350 words, about 140 seconds at a natural pace.*
 
 ## Clean script
 
@@ -16,7 +16,7 @@ Now have a look at the trees. The plane trees by the jetty are pruned into cande
 
 [beat]
 
-Monzino died without heirs in nineteen eighty-eight, and left the villa to the FAI. If it looks familiar, that's because film crews love it. It's been a backdrop for Star Wars and for James Bond in Casino Royale.
+Monzino died without heirs in nineteen eighty-eight, and left the villa so that it could be opened to the public. If it looks familiar, that's because film crews love it. It's been a backdrop for Star Wars and for James Bond in Casino Royale.
 
 Before you go, look for the old ice house among the rocks of the park. That's where he asked for his ashes to be laid, which seems about right for a man who spent so much of his life on the ice.
 
@@ -34,7 +34,7 @@ The villa went through several owners after him, but the one who matters most ar
 
 Now have a look at the trees. The plane trees by the jetty are pruned into candelabra. And the big holm oak was clipped into an umbrella so that mon tsee no could see mon tay len yo nay from his study window. The gardeners still do it, climbing up in harnesses.
 
-mon tsee no died without heirs in nineteen eighty eight, and left the villa to the fy. If it looks familiar, that's because film crews love it. It's been a backdrop for Star Wars and for James Bond in Casino Royale.
+mon tsee no died without heirs in nineteen eighty eight, and left the villa so that it could be opened to the public. If it looks familiar, that's because film crews love it. It's been a backdrop for Star Wars and for James Bond in Casino Royale.
 
 Before you go, look for the old ice house among the rocks of the park. That's where he asked for his ashes to be laid, which seems about right for a man who spent so much of his life on the ice.
 
@@ -51,7 +51,6 @@ Before you go, look for the old ice house among the rocks of the park. That's wh
 | Inuit | in yoo it |
 | Monte Legnone | mon tay len yo nay |
 | Franciscan | fran sis kan |
-| FAI | fy |
 
 ## Sources read
 

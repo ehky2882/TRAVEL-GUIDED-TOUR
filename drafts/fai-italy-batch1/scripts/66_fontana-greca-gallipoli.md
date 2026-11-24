@@ -1,6 +1,6 @@
 # Fontana Greca, Gallipoli
 
-*345 words, about 138 seconds at a natural pace.*
+*352 words, about 141 seconds at a natural pace.*
 
 ## Clean script
 
@@ -18,7 +18,7 @@ So it's a rather sombre fountain, when you read it properly. The inscriptions un
 
 Walk round the back and you'll find a second face, added in seventeen sixty-five to hold the whole thing up, with the arms of Gallipoli and the insignia of the Bourbon king Charles the Third. Well within living memory, in the nineteen fifties, people still filled small barrels with water here and sold it by donkey cart to houses without running water.
 
-The fountain needs looking after. The old front has cracks running through it, and in twenty twenty-five the FAI recognised it, which should help pay for its restoration. Take a good look at the carving while you can. Then cross the bridge into the old town, which is what everyone who drank here was on their way to do.
+The fountain needs looking after. The old front has cracks running through it, and in twenty twenty-five it was recognised in a national vote for places worth saving, which should help pay for its restoration. Take a good look at the carving while you can. Then cross the bridge into the old town, which is what everyone who drank here was on their way to do.
 
 ## TTS-safe script
 
@@ -36,14 +36,13 @@ So it's a rather sombre fountain, when you read it properly. The inscriptions un
 
 Walk round the back and you'll find a second face, added in seventeen sixty five to hold the whole thing up, with the arms of gal lee po lee and the insignia of the boor bon king Charles the Third. Well within living memory, in the nineteen fifties, people still filled small barrels with water here and sold it by donkey cart to houses without running water.
 
-The fountain needs looking after. The old front has cracks running through it, and in twenty twenty five the fy recognised it, which should help pay for its restoration. Take a good look at the carving while you can. Then cross the bridge into the old town, which is what everyone who drank here was on their way to do.
+The fountain needs looking after. The old front has cracks running through it, and in twenty twenty five it was recognised in a national vote for places worth saving, which should help pay for its restoration. Take a good look at the carving while you can. Then cross the bridge into the old town, which is what everyone who drank here was on their way to do.
 
 ## Respellings
 
 | Written | Spoken as |
 |---|---|
 |  BC |  bee see |
-| FAI | fy |
 | Fontana Greca | fon tah na greh ka |
 | Gallipoli | gal lee po lee |
 | Dirce | deer cheh |
