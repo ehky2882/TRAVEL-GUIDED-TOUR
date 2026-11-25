@@ -350,4 +350,4 @@ as "EXACT · PROVEN" to `check-place-candidates.py`). **When the owner asks to r
 | N16 | Carnegie Deli + Tanner Smith's | neighbours |
 | N17 | Schweizerhof Fountain, Hofburg + Swiss Gate (Schweizertor), Hofburg | two Hofburg features |
 | N18 | Parliament Square + Houses of Parliament and Big Ben | a square is not the building |
-
+| 5 Brasília Atlas tours + their @ninosbuildings pins (Itamaraty, Cathedral, Palace Hotel, Congress, ICC) | **NO**: keep separate |
