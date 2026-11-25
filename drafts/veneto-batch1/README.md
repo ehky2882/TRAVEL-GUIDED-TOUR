@@ -65,5 +65,9 @@ Palladio (already a tag) on the Bassano bridge.
 `status/owner/place-doges-palace.md`: the new Doge's Palace tour is 4 m from the TikTok pin *The Doge's Palace*
 (@hereinnyc). `join-places.py --max-move 100` raised nothing from this batch.
 
+## Live checks
+All 62 gh-pages files fetched live and byte-identical to the staged copies. `check-image-duplicates.py`
+`--maker PDA` 38 images and `--maker VCE` 157 images, both OK.
+
 ## Not checked
 Historical claims, dates and attributions are quoted from the scripts and were not independently verified.

@@ -20,4 +20,8 @@ p = 0.34: too few to call.
 
 **Checks:** `validate-tours-mirror` 0 errors, no warnings from the new tours · filenames align (51) · no geofence
 overlaps · `spine-lookup` 11 asked, 0 failed · `join-places --max-move 100` nothing new · `check-place-candidates` only
-the Doge's Palace pair. Live-URL hash check: see the PR.
+the Doge's Palace pair · live-URL hash check 62/62 byte-identical after the Pages deploy · `check-image-duplicates`
+--maker PDA 38 images, --maker VCE 157 images, both OK with no WARN lines.
+
+**CI note:** the first simulator build was cancelled after 15 min without ever getting a macOS runner (no steps
+ran); rerun-failed-jobs returned HTTP 500, so CI re-ran on this commit.
