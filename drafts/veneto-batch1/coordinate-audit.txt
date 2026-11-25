@@ -1,0 +1,36 @@
+RUN check-coordinates.py · rev 02bd1f9f · 2026-11-25T15:07:06Z · args: --drop /tmp/claude-0/-home-user-TRAVEL-GUIDED-TOUR/0ce942ef-5339-54cd-b7a6-aab50cd193da/scratchpad/drop/x --city Veneto, Italy --out /tmp/claude-0/-home-user-TRAVEL-GUIDED-TOUR/0ce942ef-5339-54cd-b7a6-aab50cd193da/scratchpad/coords.txt
+auditing 11 coordinate(s) against 'Veneto, Italy'  (~0.4 min at Nominatim's rate limit)
+
+  [  1/11] Santuario Madonna della Corona     fwd      9m  at: Santuario della Madonna della 
+  [  2/11] Ca' Giustinian                     fwd  51290m  at: Calle del Ridotto
+  [  3/11] Ponte Vecchio                      fwd     22m  at: Ponte degli Alpini
+  [  4/11] Monte Fontana Secca                fwd   1073m  at: Malga Fontana Secca
+  [  5/11] Casa del Petrarca                  fwd     13m  at: Casa del Petrarca
+  [  6/11] Caff#U00e8 Pedrocchi               fwd    n/a  at: Zara
+  [  7/11] Ca' Pesaro International Gallery o fwd    n/a  at: Ca' Pesaro
+  [  8/11] Villa dei Vescovi                  fwd     64m  at: Biglietteria Villa dei Vescovi
+  [  9/11] Villa Pisani                       fwd  50403m  at: Villa Pisani
+  [ 10/11] Doge's Palace                      fwd     44m  at: Palazzo Ducale
+  [ 11/11] Palazzo della Ragione              fwd     20m  at: I Trulli
+
+========================================================================
+GROSS - none: every coordinate is at or beside its venue
+
+UNVERIFIABLE - 4: no automatic verdict, and that is
+not the same as a pass. A towpath, a square and a long street have no
+single point to measure against; read the script and judge by hand.
+    Ca' Giustinian                           venue geocodes to a street, not a point
+    Caff#U00e8 Pedrocchi                     venue could not be geocoded
+    Ca' Pesaro International Gallery of Mode venue could not be geocoded
+    Villa Pisani                             match is 50 km away - probably a different place
+  (a GROSS verdict needs the geocoder to have found the venue itself;
+   where it did not, the distance is reported and not acted on)
+
+========================================================================
+BIAS - 7/10 north of true position, median +10.9 m, p = 0.34
+  reference, measured 2026-08-22:
+    old-sourced cities (NYC, London)   24/51   -0.9 m   p = 1.0
+    drop-pipeline cities (BCN, MIL)    41/50  +10.3 m   p = 5.6e-06
+
+  >> Sample too small (n=10) to call either way. This is NOT a
+  >> clean bill of health - run the full city, not a --limit subset.

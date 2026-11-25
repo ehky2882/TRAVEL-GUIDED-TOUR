@@ -426,6 +426,7 @@ let architectTags: Set<String> = [
     "Déborah Hirigoyen", "Iannis Xenakis", "Coop Himmelb(l)au", "Robert Giroud", "Môrice Leroux", "Jakob + MacFarlane", "Jacques-Germain Soufflot", "Bernard Zehrfuss", "Antoine-Marie Chenavard", "Jean-Marie Pollet", "Tony Garnier", "Denis & Eugène Bühler",
     "Michelangelo", "Filippo Brunelleschi", "Bartolomeo Ammannati", "Giovanni Michelucci", "Pier Luigi Nervi", "Michelozzo", "Giuliano da Sangallo", "Il Cronaca", "Adolfo Natalini", "Claudio Nardi", "Michele Bönan", "Francesco Maestrelli", "Pietro Comparini",
     "Jacopo Sansovino", "Patricia Urquiola", "Dorothée Meilichzon", "Gian Giacomo de' Grigi", "Lodovico Cadorin", "Giuseppe Benoni", "Andrea Palladio", "Baldassare Longhena", "Domenico Rossi", "Sverre Fehn", "Giorgio Spavento", "Vincenzo Scamozzi", "Mauro Codussi", "Antonio da Ponte",
+    "Giovanni Bon", "Bartolomeo Bon", "Antonio Gaspari", "Giuseppe Jappelli", "Giovanni degli Eremitani", "Giovanni Maria Falconetto", "Andrea da Valle", "Girolamo Frigimelica", "Francesco Maria Preti",
 ]
 let validTags: Set<String> = placeTypeTags
     .union(themeTags).union(styleEraTags)
