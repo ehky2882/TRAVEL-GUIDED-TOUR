@@ -233,5 +233,7 @@ sources=["https://fondoambiente.it/luoghi/saline-conti-vecchi","https://www.fond
 notes=["Founding is 'at the end of the 1920s' (FAI); 1921 and 1931 are unverified.","2,700 ha is the area of the Santa Gilla pond, not necessarily the saltworks.","'Still working… almost ninety years' (FAI 'da quasi 90 anni').","Eni was assigned it 'ex lege' in 1984; FAI has run the visits since 2017 via Eni Rewind. 'State energy company' is my gloss.","'One of the great bird sanctuaries of Sardinia' is the narrator's claim. The 35,000 birds of 50 species is from FAI.","The historic spaces are currently closed for maintenance (FAI IT).","'Shading from blue to pink' is descriptive."])
 
 for k, v in T.items():
+    if S / f"{k}.json".exists() or "35_san-giorgio" in str(S / f"{k}.json") or "38_giardini" in str(S / f"{k}.json"):
+        continue  # src/*.json is now the source of truth (FAI removed 2026-11-24); never overwrite
     (S / f"{k}.json").write_text(json.dumps(v, ensure_ascii=False, indent=1))
 print(len(T))

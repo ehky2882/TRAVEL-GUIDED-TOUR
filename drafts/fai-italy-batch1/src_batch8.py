@@ -186,5 +186,7 @@ sources=["https://www.sardegnacultura.it/en/articles/arborea-idrovora-di-sassu",
 notes=["COORDINATE: the owner supplied 39.93087, 8.56061, which reverse-geocodes to SP 5 near Cabras, about 12 km north. OpenStreetMap has a named node 'Idrovora Sassu' on the SP 49 at Arborea (39.82326, 8.57722), matching the sources (SP 49, Arborea, 09092). The shortlist uses the OSM point; confirm with the owner.","Inaugurated 4 November 1934 with Fascist authorities; Sassu pond about 2,000 ha; engineer Flavio Scano; transformer-like toothed block on the power-line tower; fasces as decoration: Sardegna Cultura.","Società Bonifiche Sarde from 1918: Sardegna Cultura caption.","Opened to the public for the first time for its 90th anniversary (2024): L'Unione Sarda.","'Still working': L'Unione Sarda describes the pumps as draining the canals of Arborea; treat 'still works' as current per that 2024 report.","Museum: MUB, Museo della Bonifica, Arborea (Lonely Planet listing); opening hours not checked."])
 
 for k, v in T.items():
+    if src / f"{k}.json".exists() or "35_san-giorgio" in str(src / f"{k}.json") or "38_giardini" in str(src / f"{k}.json"):
+        continue  # src/*.json is now the source of truth (FAI removed 2026-11-24); never overwrite
     (src / f"{k}.json").write_text(json.dumps(v, ensure_ascii=False, indent=1))
     print(k)

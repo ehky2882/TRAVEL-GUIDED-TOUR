@@ -275,5 +275,7 @@ sources=["https://it.wikipedia.org/wiki/Fontana_greca","https://en.wikipedia.org
 notes=["The back face (1765) carries the arms of Charles III (Carlo III di Borbone), not Ferdinand IV.","Byblis was turned into a fountain: it.wiki says by the gods, salento.info says by the muses.","The FAI recognition in June 2025 and the cracks are from it.wiki.","The 1950s water selling is from it.wiki."])
 
 for k, v in T.items():
+    if S / f"{k}.json".exists() or "35_san-giorgio" in str(S / f"{k}.json") or "38_giardini" in str(S / f"{k}.json"):
+        continue  # src/*.json is now the source of truth (FAI removed 2026-11-24); never overwrite
     (S / f"{k}.json").write_text(json.dumps(v, ensure_ascii=False, indent=1))
 print(len(T))
