@@ -1,6 +1,6 @@
-# Italy audio scripts — batch 1 (86 single-stop tours)
+# Italy audio scripts — batch 1 (84 single-stop tours)
 
-Written 2026-11-21 (77 tours) and 2026-11-24 (nine more, 78-86). One tour per place. `tours.csv` is the master list: number, slug, title, city, region and coordinates for all 86.
+Written 2026-11-21 (77 tours) and 2026-11-24 (nine more, 78-86). One tour per place. `tours.csv` is the master list: number, slug, title, city, region and coordinates for all 84.
 
 **No script mentions FAI** (owner, 2026-11-24: the tours are not made for FAI and must not read as promotion). `tools/defai.py` rewrote the 52 sentences that did, and `tools/build.py` output was re-checked: no `FAI` in any clean or TTS-safe file. The **sources and fact-check notes** in each `.md` still cite FAI's website where it was the source, because those notes exist for fact-checking, not for recording.
 
@@ -23,6 +23,10 @@ Every script follows the `atlas-audio-tour` skill: British conversational voice,
 
 - Opening hours and access were **not** written into scripts except where a closure matters (Giganti della Sila closed until further notice; Saline Conti Vecchi historic rooms closed; Teatro Massimo Bellini works in 2026; Castel Savoia, Villa Pisani, Buonconsiglio and others single-sourced because official sites were down). Check each tour's notes.
 - Several tours are single-sourced (Wikipedia only) because the official site failed: Castel Savoia, Buonconsiglio, Villa Pisani, Ponte Vecchio Bassano, Rotonda a Mare, Troia, Teatro Margherita, Castello Tramontano, San Giovanni degli Eremiti, Sant'Apollinare in Classe, Palazzo di Teodorico, Tellaro.
+
+## Changes on 2026-11-25
+
+- **Removed 35 San Giorgio Maggiore and 38 Giardini della Biennale**: both are already live Atlas Studio Venice tours (24 m away each). The other numbers were kept as they were, so 35 and 38 are simply missing.
 
 ## Changes on 2026-11-24
 
@@ -70,10 +74,8 @@ Every script follows the `atlas-audio-tour` skill: British conversational voice,
 | 32 | Villa dei Vescovi | Torreglia | Veneto | 368 | `32_villa-dei-vescovi` |
 | 33 | Santuario Madonna della Corona | Ferrara di Monte Baldo | Veneto | 361 | `33_madonna-della-corona` |
 | 34 | Palazzo della Ragione, Padua | Padova | Veneto | 356 | `34_palazzo-della-ragione` |
-| 35 | San Giorgio Maggiore | Venezia | Veneto | 313 | `35_san-giorgio-maggiore` |
 | 36 | Caffè Pedrocchi, Padua | Padova | Veneto | 337 | `36_caffe-pedrocchi` |
 | 37 | Casa del Petrarca, Arquà Petrarca | Arquà Petrarca | Veneto | 320 | `37_casa-del-petrarca` |
-| 38 | Giardini della Biennale | Venezia | Veneto | 333 | `38_giardini-della-biennale` |
 | 39 | Villa Pisani, Stra | Stra | Veneto | 331 | `39_villa-pisani` |
 | 40 | Ca' Giustinian, Venice | Venezia | Veneto | 309 | `40_ca-giustinian` |
 | 41 | Ca' Pesaro, Venice | Venezia | Veneto | 306 | `41_ca-pesaro` |
