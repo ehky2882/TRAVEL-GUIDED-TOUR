@@ -249,7 +249,7 @@ sources=["https://it.wikipedia.org/wiki/Ponte_Vecchio_(Bassano_del_Grappa)","htt
 notes=["Only Wikipedia was readable; re-check before recording.","1209 is the first documented mention, not a construction date.","1945: Wikipedia credits partisans with the sabotage of 17 February 1945.","The 1948 rebuild was by Impresa Giulio Tessarolo & Figli; the Alpini rebuilding is a 'leggenda' (Wikipedia).","Nardini 1779, 'the oldest distillery in Italy', is a claim via nardini.it, hence 'said to be'."])
 
 for k, v in T.items():
-    if S / f"{k}.json".exists() or "35_san-giorgio" in str(S / f"{k}.json") or "38_giardini" in str(S / f"{k}.json"):
+    if (S / f"{k}.json").exists() or "35_san-giorgio" in str(S / f"{k}.json") or "38_giardini" in str(S / f"{k}.json"):
         continue  # src/*.json is now the source of truth (FAI removed 2026-11-24); never overwrite
     (S / f"{k}.json").write_text(json.dumps(v, ensure_ascii=False, indent=1))
 print(len(T))

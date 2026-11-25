@@ -164,7 +164,7 @@ notes=["Only one source could be read, because the regional tourism site was dow
 "Opening hours were not found."])
 
 for k, v in T.items():
-    if S / f"{k}.json".exists() or "35_san-giorgio" in str(S / f"{k}.json") or "38_giardini" in str(S / f"{k}.json"):
+    if (S / f"{k}.json").exists() or "35_san-giorgio" in str(S / f"{k}.json") or "38_giardini" in str(S / f"{k}.json"):
         continue  # src/*.json is now the source of truth (FAI removed 2026-11-24); never overwrite
     (S / f"{k}.json").write_text(json.dumps(v, ensure_ascii=False, indent=1))
 print(len(T))

@@ -313,7 +313,7 @@ sources=["https://www.fondazioneugodacomo.it/it/fondazione","https://www.fondazi
 notes=["The tenth-century origin is Wikipedia-only.","'Lords of Verona' are the Scaligeri, per Wikipedia.","Casa del Podestà purchase: official 1906, Wikipedia 1909. The script uses 1906.","The bird museum location is the Casa del Capitano per the official site; the script says 'up in the Rocchetta'.","'Look north-east' for Lake Garda is my orientation; check it on site.","Winter hours: the Rocca opens weekends only from November to February."])
 
 for k, v in T.items():
-    if S / f"{k}.json".exists() or "35_san-giorgio" in str(S / f"{k}.json") or "38_giardini" in str(S / f"{k}.json"):
+    if (S / f"{k}.json").exists() or "35_san-giorgio" in str(S / f"{k}.json") or "38_giardini" in str(S / f"{k}.json"):
         continue  # src/*.json is now the source of truth (FAI removed 2026-11-24); never overwrite
     (S / f"{k}.json").write_text(json.dumps(v, ensure_ascii=False, indent=1))
 print(len(T))

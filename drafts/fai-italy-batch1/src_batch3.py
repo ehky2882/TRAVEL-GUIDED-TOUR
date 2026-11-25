@@ -201,7 +201,7 @@ sources=["https://it.wikipedia.org/wiki/Palazzo_di_Teodorico","https://www.turis
 notes=["The San Salvatore ad Calchi identification is the prevailing hypothesis (Gerola, 1921), not certain.","The mid-eighth-century date is 'verosimilmente' (probably).","The two columns were inserted during Corrado Ricci's 1897–1907 restoration.","The tub's stay here is from the Mausoleum's Wikipedia page.","Check the walk from here to Sant'Apollinare Nuovo on a map.","Opening status is unverified."])
 
 for k, v in T.items():
-    if S / f"{k}.json".exists() or "35_san-giorgio" in str(S / f"{k}.json") or "38_giardini" in str(S / f"{k}.json"):
+    if (S / f"{k}.json").exists() or "35_san-giorgio" in str(S / f"{k}.json") or "38_giardini" in str(S / f"{k}.json"):
         continue  # src/*.json is now the source of truth (FAI removed 2026-11-24); never overwrite
     (S / f"{k}.json").write_text(json.dumps(v, ensure_ascii=False, indent=1))
 print(len(T))

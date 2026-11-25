@@ -203,7 +203,7 @@ sources=["https://www.villagamberaia.com/","https://www.villagamberaia.com/en/hi
 notes=["Capponi: Wikipedia says 1718; Acton (quoted on the official site) says 1717. The script says 'early seventeen hundreds'.","The parterre was built 1898–1900 (Wikipedia). Ledyard later replaced the flower borders with box and yew; the script says 'edged with box and cypress', which describes it now.","The 1944 fire was set by retreating Germans (Wikipedia)."])
 
 for k, v in T.items():
-    if S / f"{k}.json".exists() or "35_san-giorgio" in str(S / f"{k}.json") or "38_giardini" in str(S / f"{k}.json"):
+    if (S / f"{k}.json").exists() or "35_san-giorgio" in str(S / f"{k}.json") or "38_giardini" in str(S / f"{k}.json"):
         continue  # src/*.json is now the source of truth (FAI removed 2026-11-24); never overwrite
     (S / f"{k}.json").write_text(json.dumps(v, ensure_ascii=False, indent=1))
 print(len(T))
