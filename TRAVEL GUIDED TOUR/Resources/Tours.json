@@ -11250,10 +11250,10 @@
         "fb9c16a1-8a99-585a-abee-c5869052f50f",
         "9f048578-4538-5dec-ab87-406d4eed58c7",
         "d6b330df-82a2-4048-9aaf-bbe28c5f53b0",
+        "e205b670-1574-5402-9f44-6bb2122d91e7",
         "2283b2b6-90d5-5037-a72e-56ba35ef019e",
         "cb10c8c2-243d-5646-ba30-446a006d4703",
-        "6fae3847-e993-4b4f-b851-5e38201c0835",
-        "8D72CE0B-8A53-5BE2-AAAB-16AA671E0B2C"
+        "6fae3847-e993-4b4f-b851-5e38201c0835"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -92309,10 +92309,10 @@
         "89f876ec-c28d-5a1f-9603-31c4706bdf65",
         "ab09a95e-e50a-52fa-b42b-9800bffe8d09",
         "42927d59-4ee8-5f54-85b1-5cd07bfcdb40",
+        "e205b670-1574-5402-9f44-6bb2122d91e7",
         "19452F7C-FDF6-5BF2-881E-3688C0594C1B",
         "8F9BB8DE-8222-4616-B65A-6193F393EE9A",
-        "f5fbccad-9389-501a-96e6-f9a322f7ec6a",
-        "f96868b2-2502-5add-961f-a19245b0fdfa"
+        "f5fbccad-9389-501a-96e6-f9a322f7ec6a"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -93152,8 +93152,8 @@
         "c9f3078e-7d07-5530-aef1-e4cf255b9e09",
         "b4a638a4-81fd-4876-90f5-60949a742c5f",
         "9f048578-4538-5dec-ab87-406d4eed58c7",
-        "675cff67-7f73-543a-8339-61b55d4a8ec8",
-        "fb9c16a1-8a99-585a-abee-c5869052f50f"
+        "e205b670-1574-5402-9f44-6bb2122d91e7",
+        "675cff67-7f73-543a-8339-61b55d4a8ec8"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -93824,8 +93824,8 @@
         "42927d59-4ee8-5f54-85b1-5cd07bfcdb40",
         "82300540-aa36-52e5-b5e5-1681f7c4eab6",
         "70a01d74-8edf-5f78-9d8b-a05850c0299a",
-        "675cff67-7f73-543a-8339-61b55d4a8ec8",
-        "F6F89258-D6EC-5B50-8754-74F1A41D3534"
+        "e205b670-1574-5402-9f44-6bb2122d91e7",
+        "675cff67-7f73-543a-8339-61b55d4a8ec8"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -164611,14 +164611,14 @@
       "city": "Venice",
       "country": "Italy",
       "relatedTourIds": [
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
         "f569cf47-9621-5c66-8895-71e7ea22e83a",
         "e947bf9e-d324-5d18-afa7-f0f43ea024bc",
         "27eea851-bb35-5012-8076-f825aaf991cf",
         "7a73f6e6-37fd-5932-a7c4-051d09e15ede",
+        "8d6a5371-7c18-56fd-a252-3b3dbf303947",
         "fa7f3ef0-8b58-58be-b074-934bc0a36a9e",
-        "b0337534-4c7a-5e58-abf0-5328796a3fc8",
-        "b4942d20-3146-5770-863f-82227a82bbe6",
-        "4b5d7fc1-be7f-5783-8c7b-408bdad18fc0"
+        "b0337534-4c7a-5e58-abf0-5328796a3fc8"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -164676,11 +164676,11 @@
         "5a47f190-128d-59e0-a8bb-b52b80bbcdd4",
         "fa7f3ef0-8b58-58be-b074-934bc0a36a9e",
         "f569cf47-9621-5c66-8895-71e7ea22e83a",
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
         "f8e6f7f5-daec-5b38-99fe-3fb0a4a42062",
         "6e5c2141-335e-567c-a538-9ce1e63c4bd1",
         "97e21598-dca4-5afb-b2f5-fff146cb3d2f",
-        "9a5cfe9e-1e4e-5134-a1ab-97ce5d98dbe0",
-        "8a7957fb-3194-5427-8c9b-6a2eb40cb4bf"
+        "9a5cfe9e-1e4e-5134-a1ab-97ce5d98dbe0"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -164736,11 +164736,11 @@
         "5a47f190-128d-59e0-a8bb-b52b80bbcdd4",
         "b4942d20-3146-5770-863f-82227a82bbe6",
         "8a7957fb-3194-5427-8c9b-6a2eb40cb4bf",
+        "8d6a5371-7c18-56fd-a252-3b3dbf303947",
         "97e21598-dca4-5afb-b2f5-fff146cb3d2f",
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
         "fa7f3ef0-8b58-58be-b074-934bc0a36a9e",
-        "6e5c2141-335e-567c-a538-9ce1e63c4bd1",
-        "50f52a93-8968-50dd-afb2-9cf54cfecb77",
-        "4b5d7fc1-be7f-5783-8c7b-408bdad18fc0"
+        "6e5c2141-335e-567c-a538-9ce1e63c4bd1"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -164854,11 +164854,11 @@
         "f8e6f7f5-daec-5b38-99fe-3fb0a4a42062",
         "b4942d20-3146-5770-863f-82227a82bbe6",
         "fa7f3ef0-8b58-58be-b074-934bc0a36a9e",
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
+        "4c1f9a2b-87ca-5bf8-98cb-f3bd9836361a",
         "27eea851-bb35-5012-8076-f825aaf991cf",
         "8a7957fb-3194-5427-8c9b-6a2eb40cb4bf",
-        "97e21598-dca4-5afb-b2f5-fff146cb3d2f",
-        "50f52a93-8968-50dd-afb2-9cf54cfecb77",
-        "f569cf47-9621-5c66-8895-71e7ea22e83a"
+        "97e21598-dca4-5afb-b2f5-fff146cb3d2f"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -164968,11 +164968,11 @@
         "9a5cfe9e-1e4e-5134-a1ab-97ce5d98dbe0",
         "f8e6f7f5-daec-5b38-99fe-3fb0a4a42062",
         "8a7957fb-3194-5427-8c9b-6a2eb40cb4bf",
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
         "b4942d20-3146-5770-863f-82227a82bbe6",
         "5a47f190-128d-59e0-a8bb-b52b80bbcdd4",
         "b4f8f166-0863-56f0-bff8-44dda0b708a5",
-        "b0337534-4c7a-5e58-abf0-5328796a3fc8",
-        "37f20d89-88ab-523e-a780-59653982d91b"
+        "b0337534-4c7a-5e58-abf0-5328796a3fc8"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -165194,8 +165194,8 @@
         "97e21598-dca4-5afb-b2f5-fff146cb3d2f",
         "b4f8f166-0863-56f0-bff8-44dda0b708a5",
         "3e9d3ca7-eb94-5d22-8517-572b379930b3",
-        "9d0cb124-1008-5f1f-b3ec-ca719ccf850f",
-        "b4942d20-3146-5770-863f-82227a82bbe6"
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
+        "9d0cb124-1008-5f1f-b3ec-ca719ccf850f"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -165308,9 +165308,9 @@
         "8a7957fb-3194-5427-8c9b-6a2eb40cb4bf",
         "53fe1d3e-ecb4-53a4-a9f0-25cb7d82cc83",
         "b4942d20-3146-5770-863f-82227a82bbe6",
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
         "27eea851-bb35-5012-8076-f825aaf991cf",
-        "4b5d7fc1-be7f-5783-8c7b-408bdad18fc0",
-        "894D426C-9592-52D8-99D1-91CF8A296FB4"
+        "4b5d7fc1-be7f-5783-8c7b-408bdad18fc0"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -165362,12 +165362,12 @@
       "relatedTourIds": [
         "894D426C-9592-52D8-99D1-91CF8A296FB4",
         "3d380786-46c0-5e32-99c4-c2931ed3f344",
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
         "6a0e6f0e-54fd-5140-8ebb-44b5c4d60512",
         "b4942d20-3146-5770-863f-82227a82bbe6",
         "f8e6f7f5-daec-5b38-99fe-3fb0a4a42062",
         "e947bf9e-d324-5d18-afa7-f0f43ea024bc",
-        "bf566d16-1a1b-5efa-8928-828ad46c9f5a",
-        "37f20d89-88ab-523e-a780-59653982d91b"
+        "bf566d16-1a1b-5efa-8928-828ad46c9f5a"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -165427,7 +165427,7 @@
         "bf566d16-1a1b-5efa-8928-828ad46c9f5a",
         "BB0A995A-399D-5D1F-9C6E-C82E59EDCD62",
         "37f20d89-88ab-523e-a780-59653982d91b",
-        "fa7f3ef0-8b58-58be-b074-934bc0a36a9e"
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -165540,10 +165540,10 @@
         "9a5cfe9e-1e4e-5134-a1ab-97ce5d98dbe0",
         "e8c07727-94da-516a-beb6-fcf93b24b85e",
         "8a7957fb-3194-5427-8c9b-6a2eb40cb4bf",
+        "8d6a5371-7c18-56fd-a252-3b3dbf303947",
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
         "b4942d20-3146-5770-863f-82227a82bbe6",
-        "EB274AD5-7635-56F2-8AC9-CE2DAC9691E7",
-        "53fe1d3e-ecb4-53a4-a9f0-25cb7d82cc83",
-        "bf566d16-1a1b-5efa-8928-828ad46c9f5a"
+        "4c1f9a2b-87ca-5bf8-98cb-f3bd9836361a"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -165773,14 +165773,14 @@
       "city": "Venice",
       "country": "Italy",
       "relatedTourIds": [
+        "4c1f9a2b-87ca-5bf8-98cb-f3bd9836361a",
         "b4942d20-3146-5770-863f-82227a82bbe6",
+        "8d6a5371-7c18-56fd-a252-3b3dbf303947",
         "37f20d89-88ab-523e-a780-59653982d91b",
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
         "97e21598-dca4-5afb-b2f5-fff146cb3d2f",
         "27eea851-bb35-5012-8076-f825aaf991cf",
-        "fa7f3ef0-8b58-58be-b074-934bc0a36a9e",
-        "5a47f190-128d-59e0-a8bb-b52b80bbcdd4",
-        "24d7a8cc-63bf-5e6e-9252-a7375a53b854",
-        "8a7957fb-3194-5427-8c9b-6a2eb40cb4bf"
+        "fa7f3ef0-8b58-58be-b074-934bc0a36a9e"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -165843,8 +165843,8 @@
         "6e5c2141-335e-567c-a538-9ce1e63c4bd1",
         "97e21598-dca4-5afb-b2f5-fff146cb3d2f",
         "37f20d89-88ab-523e-a780-59653982d91b",
-        "fa7f3ef0-8b58-58be-b074-934bc0a36a9e",
-        "2283b2b6-90d5-5037-a72e-56ba35ef019e"
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
+        "8d6a5371-7c18-56fd-a252-3b3dbf303947"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -165902,11 +165902,11 @@
         "f8e6f7f5-daec-5b38-99fe-3fb0a4a42062",
         "b4942d20-3146-5770-863f-82227a82bbe6",
         "8a7957fb-3194-5427-8c9b-6a2eb40cb4bf",
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
         "fa7f3ef0-8b58-58be-b074-934bc0a36a9e",
         "f569cf47-9621-5c66-8895-71e7ea22e83a",
         "6e5c2141-335e-567c-a538-9ce1e63c4bd1",
-        "5a47f190-128d-59e0-a8bb-b52b80bbcdd4",
-        "27eea851-bb35-5012-8076-f825aaf991cf"
+        "5a47f190-128d-59e0-a8bb-b52b80bbcdd4"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -165959,14 +165959,14 @@
       "city": "Venice",
       "country": "Italy",
       "relatedTourIds": [
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
+        "8d6a5371-7c18-56fd-a252-3b3dbf303947",
         "e8c07727-94da-516a-beb6-fcf93b24b85e",
         "27eea851-bb35-5012-8076-f825aaf991cf",
         "f569cf47-9621-5c66-8895-71e7ea22e83a",
         "2283b2b6-90d5-5037-a72e-56ba35ef019e",
         "b4942d20-3146-5770-863f-82227a82bbe6",
-        "79B7065D-F8BC-577B-BE06-44DF0C5EBF22",
-        "97e21598-dca4-5afb-b2f5-fff146cb3d2f",
-        "BB0A995A-399D-5D1F-9C6E-C82E59EDCD62"
+        "79B7065D-F8BC-577B-BE06-44DF0C5EBF22"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -166021,11 +166021,11 @@
         "27eea851-bb35-5012-8076-f825aaf991cf",
         "2283b2b6-90d5-5037-a72e-56ba35ef019e",
         "bbc7dc7b-8623-574d-9cd1-15f5d6b71650",
+        "4c1f9a2b-87ca-5bf8-98cb-f3bd9836361a",
         "6e5c2141-335e-567c-a538-9ce1e63c4bd1",
         "b4942d20-3146-5770-863f-82227a82bbe6",
         "b0337534-4c7a-5e58-abf0-5328796a3fc8",
-        "97e21598-dca4-5afb-b2f5-fff146cb3d2f",
-        "37f20d89-88ab-523e-a780-59653982d91b"
+        "97e21598-dca4-5afb-b2f5-fff146cb3d2f"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -166145,7 +166145,7 @@
         "5a47f190-128d-59e0-a8bb-b52b80bbcdd4",
         "b4942d20-3146-5770-863f-82227a82bbe6",
         "97e21598-dca4-5afb-b2f5-fff146cb3d2f",
-        "6e5c2141-335e-567c-a538-9ce1e63c4bd1"
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -166258,13 +166258,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "e947bf9e-d324-5d18-afa7-f0f43ea024bc",
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
+        "8d6a5371-7c18-56fd-a252-3b3dbf303947",
         "27eea851-bb35-5012-8076-f825aaf991cf",
         "37f20d89-88ab-523e-a780-59653982d91b",
         "2283b2b6-90d5-5037-a72e-56ba35ef019e",
         "fa7f3ef0-8b58-58be-b074-934bc0a36a9e",
-        "97e21598-dca4-5afb-b2f5-fff146cb3d2f",
-        "f8e6f7f5-daec-5b38-99fe-3fb0a4a42062",
-        "5a47f190-128d-59e0-a8bb-b52b80bbcdd4"
+        "97e21598-dca4-5afb-b2f5-fff146cb3d2f"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -166318,12 +166318,12 @@
       "relatedTourIds": [
         "e947bf9e-d324-5d18-afa7-f0f43ea024bc",
         "F18DB152-C93C-594D-9F14-FED28982AF92",
+        "4c1f9a2b-87ca-5bf8-98cb-f3bd9836361a",
         "27eea851-bb35-5012-8076-f825aaf991cf",
+        "8d6a5371-7c18-56fd-a252-3b3dbf303947",
         "bbc7dc7b-8623-574d-9cd1-15f5d6b71650",
         "9a5cfe9e-1e4e-5134-a1ab-97ce5d98dbe0",
-        "6a0e6f0e-54fd-5140-8ebb-44b5c4d60512",
-        "f569cf47-9621-5c66-8895-71e7ea22e83a",
-        "f8e6f7f5-daec-5b38-99fe-3fb0a4a42062"
+        "6a0e6f0e-54fd-5140-8ebb-44b5c4d60512"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -166381,8 +166381,8 @@
         "f8e6f7f5-daec-5b38-99fe-3fb0a4a42062",
         "97e21598-dca4-5afb-b2f5-fff146cb3d2f",
         "7a73f6e6-37fd-5932-a7c4-051d09e15ede",
-        "37f20d89-88ab-523e-a780-59653982d91b",
-        "b4f8f166-0863-56f0-bff8-44dda0b708a5"
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
+        "37f20d89-88ab-523e-a780-59653982d91b"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -166438,7 +166438,16 @@
       "centroidLongitude": 12.3404109,
       "city": "Venice",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f569cf47-9621-5c66-8895-71e7ea22e83a",
+        "D372E86B-9DF0-53F9-8F5F-BDC94F23F5D3",
+        "e947bf9e-d324-5d18-afa7-f0f43ea024bc",
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
+        "2283b2b6-90d5-5037-a72e-56ba35ef019e",
+        "5a47f190-128d-59e0-a8bb-b52b80bbcdd4",
+        "b4942d20-3146-5770-863f-82227a82bbe6",
+        "f8e6f7f5-daec-5b38-99fe-3fb0a4a42062"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Civic",
@@ -166494,7 +166503,16 @@
       "centroidLongitude": 12.331621,
       "city": "Venice",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
+        "f8e6f7f5-daec-5b38-99fe-3fb0a4a42062",
+        "f569cf47-9621-5c66-8895-71e7ea22e83a",
+        "97e21598-dca4-5afb-b2f5-fff146cb3d2f",
+        "6a0e6f0e-54fd-5140-8ebb-44b5c4d60512",
+        "27eea851-bb35-5012-8076-f825aaf991cf",
+        "37f20d89-88ab-523e-a780-59653982d91b",
+        "4c1f9a2b-87ca-5bf8-98cb-f3bd9836361a"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Museum",
@@ -166541,7 +166559,16 @@
       "centroidLongitude": 12.3365338,
       "city": "Venice",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "8d6a5371-7c18-56fd-a252-3b3dbf303947",
+        "b4942d20-3146-5770-863f-82227a82bbe6",
+        "5a47f190-128d-59e0-a8bb-b52b80bbcdd4",
+        "f8e6f7f5-daec-5b38-99fe-3fb0a4a42062",
+        "97e21598-dca4-5afb-b2f5-fff146cb3d2f",
+        "37f20d89-88ab-523e-a780-59653982d91b",
+        "6a0e6f0e-54fd-5140-8ebb-44b5c4d60512",
+        "8a7957fb-3194-5427-8c9b-6a2eb40cb4bf"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -166594,7 +166621,16 @@
       "centroidLongitude": 11.8772173,
       "city": "Padua",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "a19499d4-c624-5a02-821a-dbbc0dd6cb62",
+        "E2A4EF38-8FCA-5120-99FC-A6D06FED6EA5",
+        "E6355A7F-053C-562A-B152-B5F39C1962D1",
+        "e8c07727-94da-516a-beb6-fcf93b24b85e",
+        "e54f16d9-df0d-57ab-8524-43bd86308e03",
+        "CA666546-F322-4330-9AB9-7089C37B34C0",
+        "5e459e99-b003-5daa-bc7e-19720898a6cd",
+        "78889e07-9142-5ff2-be77-21b7d322a507"
+      ],
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Venue",
@@ -166644,7 +166680,16 @@
       "centroidLongitude": 11.8752563,
       "city": "Padua",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "6b75888e-dbfe-5f42-8641-5b294f0113be",
+        "675cff67-7f73-543a-8339-61b55d4a8ec8",
+        "e0566808-f11e-53bb-9beb-0f853d45f3be",
+        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
+        "c7d6db46-7c8a-59a3-92af-7f3429d719df",
+        "4c1f9a2b-87ca-5bf8-98cb-f3bd9836361a",
+        "422ef78c-4407-5609-aeca-6e885ae727b7",
+        "9ce70403-81e1-566e-8288-349f2be37e9c"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Civic",
@@ -166695,7 +166740,16 @@
       "centroidLongitude": 11.7155277,
       "city": "Arquà Petrarca",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4",
+        "e0566808-f11e-53bb-9beb-0f853d45f3be",
+        "34b8104f-318d-5276-bf7d-04e933deebe9",
+        "70a01d74-8edf-5f78-9d8b-a05850c0299a",
+        "e01770af-347d-5f43-a63e-1fa97ce3551d",
+        "ad1e75de-62e8-50df-84a0-4fbf77031178",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "0165232e-3d55-5685-a448-a7bf5afece8f"
+      ],
       "primaryCategory": "literature",
       "tags": [
         "Museum",
@@ -166746,7 +166800,16 @@
       "centroidLongitude": 11.7107181,
       "city": "Torreglia",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "862699b1-0f51-5cd5-bd20-3c8916eec8b7",
+        "e0566808-f11e-53bb-9beb-0f853d45f3be",
+        "408e3ea7-5407-5498-a692-ffbc300c451d",
+        "69d08739-f300-56b7-8c41-67f1e08b745b",
+        "422ef78c-4407-5609-aeca-6e885ae727b7",
+        "BC0A0EEB-80D4-5A64-AF7B-83AC0137759B",
+        "a19499d4-c624-5a02-821a-dbbc0dd6cb62",
+        "3a204992-9c15-5d46-849a-8b5ec49e3729"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -166799,7 +166862,16 @@
       "centroidLongitude": 12.0126024,
       "city": "Stra",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "4c1f9a2b-87ca-5bf8-98cb-f3bd9836361a",
+        "f8e6f7f5-daec-5b38-99fe-3fb0a4a42062",
+        "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4",
+        "a19499d4-c624-5a02-821a-dbbc0dd6cb62",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "422ef78c-4407-5609-aeca-6e885ae727b7"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -166852,7 +166924,16 @@
       "centroidLongitude": 11.7311684,
       "city": "Bassano del Grappa",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "24d7a8cc-63bf-5e6e-9252-a7375a53b854",
+        "65deaa22-8fc8-5ad0-becc-e96996c53c4b",
+        "f1f1d615-c789-5075-8b21-440d490c89b6",
+        "E0D5B392-7C18-4A6F-9B24-1F8360C5A7D4",
+        "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
+        "f7e9e489-f276-4681-9efa-b8064340d18b",
+        "7ed84c6e-2698-572e-901f-4fc13969845a",
+        "03f76815-3768-59f7-a0f6-8c10e25b994e"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Bridge",
@@ -166904,7 +166985,16 @@
       "centroidLongitude": 10.8562671,
       "city": "Ferrara di Monte Baldo",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "0165232e-3d55-5685-a448-a7bf5afece8f",
+        "9ce70403-81e1-566e-8288-349f2be37e9c",
+        "b4a638a4-81fd-4876-90f5-60949a742c5f",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "c9f3078e-7d07-5530-aef1-e4cf255b9e09",
+        "fb9c16a1-8a99-585a-abee-c5869052f50f",
+        "2283b2b6-90d5-5037-a72e-56ba35ef019e",
+        "e947bf9e-d324-5d18-afa7-f0f43ea024bc"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -166953,7 +167043,16 @@
       "centroidLongitude": 11.8428325,
       "city": "Seren del Grappa",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "c7d6db46-7c8a-59a3-92af-7f3429d719df",
+        "0165232e-3d55-5685-a448-a7bf5afece8f",
+        "f3e87d25-bf60-5b79-9fc1-4d6f936899b3",
+        "408e3ea7-5407-5498-a692-ffbc300c451d",
+        "6165be6c-ff3b-581f-95cb-71686ab5a3ba",
+        "34ee1c47-2571-56ff-becb-d719f43c3efc",
+        "422ef78c-4407-5609-aeca-6e885ae727b7",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -199683,7 +199782,8 @@
       "city": "Padua",
       "country": "Italy",
       "relatedTourIds": [
-        "E2A4EF38-8FCA-5120-99FC-A6D06FED6EA5"
+        "E2A4EF38-8FCA-5120-99FC-A6D06FED6EA5",
+        "6b75888e-dbfe-5f42-8641-5b294f0113be"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -199731,14 +199831,14 @@
       "city": "Venice",
       "country": "Italy",
       "relatedTourIds": [
+        "4c1f9a2b-87ca-5bf8-98cb-f3bd9836361a",
         "5a47f190-128d-59e0-a8bb-b52b80bbcdd4",
         "f569cf47-9621-5c66-8895-71e7ea22e83a",
         "f8e6f7f5-daec-5b38-99fe-3fb0a4a42062",
         "C8683190-CCF6-5E5A-AE2E-0E672D93D4A6",
         "BB0A995A-399D-5D1F-9C6E-C82E59EDCD62",
-        "6a0e6f0e-54fd-5140-8ebb-44b5c4d60512",
-        "EB274AD5-7635-56F2-8AC9-CE2DAC9691E7",
-        "b4942d20-3146-5770-863f-82227a82bbe6"
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
+        "6a0e6f0e-54fd-5140-8ebb-44b5c4d60512"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -199832,7 +199932,8 @@
       "city": "Padua",
       "country": "Italy",
       "relatedTourIds": [
-        "E6355A7F-053C-562A-B152-B5F39C1962D1"
+        "E6355A7F-053C-562A-B152-B5F39C1962D1",
+        "6b75888e-dbfe-5f42-8641-5b294f0113be"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -247457,8 +247558,10 @@
       "city": "Venice",
       "country": "Italy",
       "relatedTourIds": [
+        "8d6a5371-7c18-56fd-a252-3b3dbf303947",
         "6a0e6f0e-54fd-5140-8ebb-44b5c4d60512",
         "97e21598-dca4-5afb-b2f5-fff146cb3d2f",
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
         "C8683190-CCF6-5E5A-AE2E-0E672D93D4A6",
         "f8e6f7f5-daec-5b38-99fe-3fb0a4a42062",
         "b4942d20-3146-5770-863f-82227a82bbe6",
@@ -274081,11 +274184,12 @@
       "relatedTourIds": [
         "2283b2b6-90d5-5037-a72e-56ba35ef019e",
         "e947bf9e-d324-5d18-afa7-f0f43ea024bc",
+        "4c1f9a2b-87ca-5bf8-98cb-f3bd9836361a",
         "D372E86B-9DF0-53F9-8F5F-BDC94F23F5D3",
         "27eea851-bb35-5012-8076-f825aaf991cf",
+        "8d6a5371-7c18-56fd-a252-3b3dbf303947",
         "97e21598-dca4-5afb-b2f5-fff146cb3d2f",
-        "5a47f190-128d-59e0-a8bb-b52b80bbcdd4",
-        "6a0e6f0e-54fd-5140-8ebb-44b5c4d60512"
+        "5a47f190-128d-59e0-a8bb-b52b80bbcdd4"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
