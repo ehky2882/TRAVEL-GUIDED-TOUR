@@ -1,0 +1,66 @@
+RUN check-coordinates.py · rev 02bd1f9f · 2026-11-13T01:30:33Z · args: --drop /tmp/claude-0/drop/x --city Nice, France --out /tmp/claude-0/coords.txt
+auditing 32 coordinate(s) against 'Nice, France'  (~1.2 min at Nominatim's rate limit)
+
+  [  1/32] Place Garibaldi                    fwd      8m  at: -
+  [  2/32] Cathédrale Orthodoxe Russe Saint-N fwd    n/a  at: памятник Цесаревичу Николаю Ал
+  [  3/32] Maison Auer                        fwd     17m  at: Église Saint-François de Paule
+  [  4/32] Villa Arson                        fwd    128m  at: Villa Arson
+  [  5/32] Colline du Château                 fwd     79m  at: Terrasse Nietzsche
+  [  6/32] Hôtel Le Negresco                  fwd    n/a  at: Le 1913
+  [  7/32] Musée des Arts Asiatiques          fwd     28m  at: -
+  [  8/32] Hôtel Windsor                      fwd     20m  at: -
+  [  9/32] La Merenda                         fwd     31m  at: -
+  [ 10/32] Cours Saleya                       fwd      0m  at: -
+  [ 11/32] Monument aux Morts de Rauba-Capèu  fwd     18m  at: Monument aux morts de Rauba-Ca
+  [ 12/32] Chez Acchiardo                     fwd    n/a  at: -
+  [ 13/32] Les Delices de Candice             fwd     70m  at: -
+  [ 14/32] MAMAC, Musée d'Art Moderne et d'Ar fwd    n/a  at: Musée d'art moderne et d'art c
+  [ 15/32] Chez Pipo                          fwd   6944m  at: -
+  [ 16/32] Musée Masséna                      fwd     44m  at: -
+  [ 17/32] Les Distilleries Idéales           fwd     20m  at: -
+  [ 18/32] Tête Carrée                        fwd     25m  at: Tête carrée
+  [ 19/32] Église Sainte-Jeanne-d'Arc         fwd     20m  at: -
+  [ 20/32] Promenade du Paillon               fwd     32m  at: -
+  [ 21/32] Musée National Marc Chagall        fwd    n/a  at: Villa Hadriana
+  [ 22/32] Peixes                             fwd     19m  at: Caisse d'Épargne
+  [ 23/32] Hôtel du Couvent                   fwd      9m  at: Hôtel du Couvent
+  [ 24/32] Café du Cycliste                   fwd     17m  at: -
+  [ 25/32] Confiserie Florian                 fwd     25m  at: -
+  [ 26/32] Musée Matisse                      fwd     30m  at: -
+  [ 27/32] La Part des Anges                  fwd     23m  at: -
+  [ 28/32] Café de Turin                      fwd     20m  at: -
+  [ 29/32] Moulin à Huile d'Olive Alziari     fwd      3m  at: -
+  [ 30/32] Hôtel La Pérouse                   fwd     24m  at: Hôtel Suisse
+  [ 31/32] Le Plongeoir                       fwd     20m  at: Le Plongeoir
+  [ 32/32] Palais Lascaris                    fwd     22m  at: -
+
+========================================================================
+GROSS - 1 coordinate(s) may not be at their venue
+Check each by hand. Reverse-geocoding the SUPPLIED point is what
+settles it: a motorway or an unrelated office means it is wrong;
+a neighbour on the right street means it is fine.
+
+  Chez Pipo
+    supplied      43.7000890, 7.2854740
+    sits on       (unnamed)  [place]
+    venue geocode 6944 m away - Chez Pipo, Rue Costes et Bellonte, Les Moulins, Caucade, Nic
+
+UNVERIFIABLE - 5: no automatic verdict, and that is
+not the same as a pass. A towpath, a square and a long street have no
+single point to measure against; read the script and judge by hand.
+    Cathédrale Orthodoxe Russe Saint-Nicolas venue could not be geocoded
+    Hôtel Le Negresco                        venue could not be geocoded
+    Chez Acchiardo                           venue could not be geocoded
+    MAMAC, Musée d'Art Moderne et d'Art Cont venue could not be geocoded
+    Musée National Marc Chagall              venue could not be geocoded
+  (a GROSS verdict needs the geocoder to have found the venue itself;
+   where it did not, the distance is reported and not acted on)
+
+========================================================================
+BIAS - 12/15 north of true position, median +8.4 m, p = 0.035
+  reference, measured 2026-08-22:
+    old-sourced cities (NYC, London)   24/51   -0.9 m   p = 1.0
+    drop-pipeline cities (BCN, MIL)    41/50  +10.3 m   p = 5.6e-06
+
+  >> Sample too small (n=15) to call either way. This is NOT a
+  >> clean bill of health - run the full city, not a --limit subset.

@@ -401,3 +401,11 @@ Full text for every one of them is in
 - [HANDOFF-261111-random-batch.md](HANDOFF-261111-random-batch.md) — **Random batch: 61 link pins** from 73 links (46 creators, 23 new, 8 new cities); 6 joins and 13 new places made on Edward's OK; nothing held
 - [HANDOFF-261111-washington-dc.md](HANDOFF-261111-washington-dc.md) — **Washington DC launch: Atlas Studio WAS**, 31 singles + 5 walks (34 stops), 65 MP3s transcript-matched, 11 new architect tags; places 513 → 515 (National Archives, Old Post Office new; Washington Monument and Union Station joined); Capitol trigger + Ford's hero to Edward
 - [HANDOFF-261111-brasilia.md](HANDOFF-261111-brasilia.md) — **Brasília launch: Atlas Studio BSB**, 31 singles, 7 new architect tags; 3 pins moved onto their buildings; 5 place questions to Edward
+- [HANDOFF-261113-nice.md](HANDOFF-261113-nice.md) — **Nice launch: Atlas Studio NCE**, 32 singles, 15 new architect tags; 1 pin moved; 1 place question to Edward
+- [HANDOFF-261114-lyon.md](HANDOFF-261114-lyon.md) — **Lyon launch: Atlas Studio LYS**, 34 singles, 12 new architect tags; 1 pin moved; 1 place question to Edward
+- [HANDOFF-261118-florence.md](HANDOFF-261118-florence.md) — **Florence launch: Atlas Studio FLR**, 34 singles, 13 new architect tags; 1 pin moved; 3 place questions to Edward
+- [HANDOFF-261116-triage-batch.md](HANDOFF-261116-triage-batch.md) — **Triage batch: 38 link pins** from 35 creators (21 new); 3 skipped, 1 held, 9 place questions left for Edward.
+- [HANDOFF-261118-triage-batch.md](HANDOFF-261118-triage-batch.md) — **Triage batch: 69 link pins** from 14 creators (9 new); 6 skipped, 1 held (Ahwahnee), 16 place questions left for Edward.
+- [HANDOFF-261118-scenescout.md](HANDOFF-261118-scenescout.md) — **Triage batch: 32 link pins** from one new TikTok creator (@scenescout_), LA filming locations; 0 skipped; 4 place questions left for Edward.
+- [HANDOFF-261122-venice.md](HANDOFF-261122-venice.md) — **Venice launch:** Atlas Studio VCE (68th studio), 31 singles, 11 bilingual, 14 new architect tags; 5 place questions left for Edward.
+- [HANDOFF-261124-triage-batch.md](HANDOFF-261124-triage-batch.md) — **Triage batch: 55 link pins** from 30 creators (19 new; 17 @garyhe McDonald's); 13 skipped; 10 place questions left for Edward.

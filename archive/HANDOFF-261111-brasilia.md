@@ -28,3 +28,11 @@ parent — verified — so nothing changed). Lesson: guard the push on the A cou
 
 **Checks:** `validate-tours-mirror` 0 errors, 742 warnings (unchanged from before the batch) · filenames align (155) ·
 no geofence overlaps · `spine-lookup` 31 asked, 0 failed · `join-places --max-move 100` nothing new.
+
+**After the merge — the publish hung (2026-11-11 19:34 → 2026-11-12 00:00 UTC).** Publish run #421 (for #1187) failed its
+gh-pages mirror step on a GitHub HTTP 502, and its **Supabase seed sat in "Apply seed" for 4 h 26 min** (normal today:
+8½–15 min), holding the `publish-catalog` concurrency group, so run #422 queued behind it and nothing published. The
+contributor asked why Brasília was not in the app; the database held 0 BSB rows and `catalog_snapshot_age` still read 18:33.
+Cancelled #421 on the contributor's instruction; #422 (a newer `main`, which contains #1187) started at once and finished
+green: seed 8½ min, mirror published, snapshot 00:08:53, **31 BSB rows live**. ⚠️ No cause found for the hang — the job log
+is unavailable while a step runs, and the cancelled run's log was not read. If a seed runs past ~30 min, cancel it.

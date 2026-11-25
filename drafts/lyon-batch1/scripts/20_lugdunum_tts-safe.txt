@@ -1,0 +1,15 @@
+Loog doo num
+
+The museum of Roman Lyon is almost invisible, and that was the whole idea.
+
+Near the top of Foor vee air hill, on Roo Clay bairg, is the entrance to the archaeological park. Below you are the two Roman theatres cut into the slope. Now look for the museum. You'll find only a concrete entrance and, if you look down the hillside, a few long windows in the slope itself. The rest of the building is in the hill.
+
+The architect was Bair nar Zair foos, and the museum opened on the fifteenth of November nineteen seventy five. He set it half into the flank of the hill, beside the great theatre and the smaller odeon, so that the building wouldn't compete with the ruins it was built to explain. Inside, the visit goes downwards, on a long concrete ramp that winds through the hill, and at the windows you look straight out at the theatres.
+
+Here's the gift detail. Lyon was Loog doo num, one of the great cities of Roman Gaul, and the Emperor Claudius was born here. The museum holds the Claudian Table, a large bronze tablet found in fifteen twenty eight on the slopes of the Krwah Roos. It records a speech Claudius gave to the Senate in Rome, arguing that leading men from Gaul should be allowed to become senators. A speech about who belongs, preserved in bronze for two thousand years.
+
+Then there's the circus mosaic, from the third century, found on the Presk eel. It shows a chariot race in full flight, the whole thing from start to finish: the starting gates, the track, the chariots. It's a Roman sports report in tiles.
+
+And here's the thing. Most museums want to be noticed. This one deliberately hides, and lets the hill and the theatres take the attention. Nearly fifty years on, that modesty looks rather wise.
+
+When you come out, walk down into the great theatre and climb the stone seats to the top row. From there you can see the whole of Lyon, much as the Romans did, only with rather more roofs.

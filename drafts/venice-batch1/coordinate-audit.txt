@@ -1,0 +1,76 @@
+RUN check-coordinates.py · rev 02bd1f9f · 2026-11-22T16:12:18Z · args: --drop /tmp/claude-0/-home-user-TRAVEL-GUIDED-TOUR/0c4a59d9-ff5d-575e-acfc-81d5b29585a4/scratchpad/drop/x --city Venice, Italy --out /tmp/claude-0/-home-user-TRAVEL-GUIDED-TOUR/0c4a59d9-ff5d-575e-acfc-81d5b29585a4/scratchpad/coords.txt
+auditing 31 coordinate(s) against 'Venice, Italy'  (~1.1 min at Nominatim's rate limit)
+
+  [  1/31] Aman Venice                        fwd     28m  at: Fondamenta de Ca' Businello
+  [  2/31] outut Basilica di San Giorgio Magg fwd    n/a  at: Basilica di San Giorgio Maggio
+  [  3/31] Ponte della Costituzione           fwd     41m  at: Ponte della Costituzione
+  [  4/31] Giardini della Biennale            fwd     24m  at: Giardini della Biennale
+  [  5/31] Cantinone del Vino gi#U00e0 Schiav fwd    n/a  at: Fondamenta Priuli
+  [  6/31] Il Palazzo Experimental            fwd     14m  at: Il Palazzo Experimental
+  [  7/31] Caff#U00e8 Florian                 fwd    n/a  at: -
+  [  8/31] Scala Contarini del Bovolo         fwd     21m  at: -
+  [  9/31] Libreria Acqua Alta                fwd      8m  at: Libreria Acqua Alta
+  [ 10/31] Fondazione Prada                   fwd     19m  at: Corte del Correggio
+  [ 11/31] Ca' d'Oro alla Vedova              fwd     22m  at: Calle Zotti
+  [ 12/31] Cimitero di San Michele            fwd    237m  at: -
+  [ 13/31] Ca' Macana                         fwd      4m  at: -
+  [ 14/31] The Gritti Palace                  fwd    n/a  at: Campo del Traghetto
+  [ 15/31] The IUAV Gate at the Tolentini     fwd    n/a  at: Campazzo dei Tolentini
+  [ 16/31] Ponte di Rialto                    fwd     19m  at: Antico Ponte Antiquariato
+  [ 17/31] Fortuny Showroom and Factory       fwd     52m  at: Fondamenta San Biagio
+  [ 18/31] St. Marks Basilica                 fwd    n/a  at: Monumento ai Tetrarchi
+  [ 19/31] Osteria alle Testiere              fwd     15m  at: Fondamenta de Cadonici
+  [ 20/31] Local                              fwd     21m  at: -
+  [ 21/31] Fondazione Querini Stampalia       fwd     61m  at: Campo Santa Maria Formosa
+  [ 22/31] Al Timon                           fwd   1019m  at: Sotoportego Ca Calergi Vulgo C
+  [ 23/31] Tessitura Luigi Bevilacqua         fwd    n/a  at: -
+  [ 24/31] Il Mercante                        fwd     10m  at: -
+  [ 25/31] Trattoria Antiche Carampane        fwd     14m  at: -
+  [ 26/31] Punta della Dogana                 fwd     57m  at: Il nuovo trionfo
+  [ 27/31] Venissa                            fwd     64m  at: Fondamenta Santa Caterina
+  [ 28/31] Fondazione Giorgio Cini            fwd     56m  at: -
+  [ 29/31] Trattoria al Gatto Nero            fwd     19m  at: -
+  [ 30/31] Ca' di Dio                         fwd     14m  at: -
+  [ 31/31] Negozio Olivetti                   fwd     21m  at: Human Safety Net
+
+========================================================================
+GROSS - 2 coordinate(s) may not be at their venue
+Check each by hand. Reverse-geocoding the SUPPLIED point is what
+settles it: a motorway or an unrelated office means it is wrong;
+a neighbour on the right street means it is fine.
+
+  Cimitero di San Michele
+    supplied      45.4487246, 12.3463573
+    sits on       (unnamed)  [amenity]
+    venue geocode 237 m away - Cimitero di San Michele, Venezia-Murano-Burano, Murano, Vene
+
+  Al Timon
+    supplied      45.4456975, 12.3284501
+    sits on       Sotoportego Ca Calergi Vulgo Calesi  [highway]
+    venue geocode 1019 m away - Al Timon, 3057, San Polo, Venezia-Murano-Burano, Murano, Ven
+
+UNVERIFIABLE - 7: no automatic verdict, and that is
+not the same as a pass. A towpath, a square and a long street have no
+single point to measure against; read the script and judge by hand.
+    outut Basilica di San Giorgio Maggiore   venue could not be geocoded
+    Cantinone del Vino gi#U00e0 Schiavi      venue could not be geocoded
+    Caff#U00e8 Florian                       venue could not be geocoded
+    The Gritti Palace                        venue could not be geocoded
+    The IUAV Gate at the Tolentini           venue could not be geocoded
+    St. Marks Basilica                       venue could not be geocoded
+    Tessitura Luigi Bevilacqua               venue could not be geocoded
+  (a GROSS verdict needs the geocoder to have found the venue itself;
+   where it did not, the distance is reported and not acted on)
+
+========================================================================
+BIAS - 11/12 north of true position, median +6.9 m, p = 0.0063
+  reference, measured 2026-08-22:
+    old-sourced cities (NYC, London)   24/51   -0.9 m   p = 1.0
+    drop-pipeline cities (BCN, MIL)    41/50  +10.3 m   p = 5.6e-06
+
+  >> SYSTEMATIC NORTHWARD OFFSET STILL PRESENT.
+  >> Upstream has NOT been fixed. Whatever converts a map position
+  >> to lat/lon is applying a constant offset in screen pixels;
+  >> it is small here only because these subjects were framed at
+  >> high zoom. The same fault produces kilometre errors on any
+  >> subject far enough out of town to need zooming out.

@@ -1,0 +1,58 @@
+RUN check-coordinates.py · rev 02bd1f9f · 2026-11-14T18:35:23Z · args: --drop /tmp/claude-0/drop/u --city Lyon, France
+auditing 34 coordinate(s) against 'Lyon, France'  (~1.2 min at Nominatim's rate limit)
+
+  [  1/34] Librairie Le Bal des Ardents       fwd     19m  at: Κϵφι
+  [  2/34] Le Sucre                           fwd     12m  at: Le Sucre
+  [  3/34] Marché de la Création              fwd  70129m  at: -
+  [  4/34] Musée des Confluences              fwd     15m  at: La Serre
+  [  5/34] Cour des Voraces                   fwd     10m  at: -
+  [  6/34] Lugdunum                           fwd    988m  at: -
+  [  7/34] Jardin des Curiosités              fwd     21m  at: -
+  [  8/34] MOB Hotel Lyon                     fwd     23m  at: Mob Hôtel
+  [  9/34] La Mère Brazier                    fwd     26m  at: -
+  [ 10/34] Tour Rose (Maison du Crible)       fwd  49985m  at: La Tour Rose
+  [ 11/34] InterContinental Lyon - Hotel Dieu fwd     24m  at: -
+  [ 12/34] Le Fantôme de l'Opéra              fwd     20m  at: Atelier des Médias
+  [ 13/34] Ombellule                          fwd     21m  at: Cours Franklin Roosevelt
+  [ 14/34] Mokxa                              fwd     13m  at: L'Escale
+  [ 15/34] Institut Lumière                   fwd     15m  at: Institut Lumière
+  [ 16/34] Pralus Lyon - Monplaisir           fwd     18m  at: Groupe scolaire Lumière
+  [ 17/34] Cité Musée Tony Garnier            fwd     19m  at: -
+  [ 18/34] Cube Orange                        fwd      9m  at: -
+  [ 19/34] Cour des Loges                     fwd     45m  at: Mairie du 5e - Annexe Vieux-Ly
+  [ 20/34] Parc de la Tête d'Or               fwd    548m  at: -
+  [ 21/34] Mur des Canuts                     fwd     20m  at: Espace Guignol
+  [ 22/34] La Commune                         fwd     13m  at: -
+  [ 23/34] Opéra de Lyon                      fwd     27m  at: Opéra de Lyon
+  [ 24/34] Le Bouchon des Filles              fwd     11m  at: Baroudeur Cycles - Le Magasin
+  [ 25/34] Daniel et Denise Saint-Jean        fwd     22m  at: -
+  [ 26/34] Jardin Rosa Mir                    fwd     17m  at: -
+  [ 27/34] L'Antiquaire                       fwd     13m  at: -
+  [ 28/34] Couvent Sainte-Marie de La Tourett fwd    292m  at: Couvent de la Tourette
+  [ 29/34] Villa Florentine                   fwd     25m  at: -
+  [ 30/34] Passage Thiaffait                  fwd     16m  at: -
+  [ 31/34] Café Comptoir Abel                 fwd     16m  at: -
+  [ 32/34] Hôtel de Ville de Villeurbanne     fwd     18m  at: Hôtel de Ville de Villeurbanne
+  [ 33/34] Les Halles de Lyon Paul Bocuse     fwd    n/a  at: L'îlot des Gourmets
+  [ 34/34] Gare de Lyon Saint-Exupéry TGV     fwd     14m  at: Lyon-Saint-Exupéry TGV
+
+========================================================================
+GROSS - none: every coordinate is at or beside its venue
+
+UNVERIFIABLE - 3: no automatic verdict, and that is
+not the same as a pass. A towpath, a square and a long street have no
+single point to measure against; read the script and judge by hand.
+    Marché de la Création                    match is 70 km away - probably a different place
+    Tour Rose (Maison du Crible)             geocoder found something else (50 km away)
+    Les Halles de Lyon Paul Bocuse           venue could not be geocoded
+  (a GROSS verdict needs the geocoder to have found the venue itself;
+   where it did not, the distance is reported and not acted on)
+
+========================================================================
+BIAS - 8/16 north of true position, median +1.7 m, p = 1
+  reference, measured 2026-08-22:
+    old-sourced cities (NYC, London)   24/51   -0.9 m   p = 1.0
+    drop-pipeline cities (BCN, MIL)    41/50  +10.3 m   p = 5.6e-06
+
+  >> Sample too small (n=16) to call either way. This is NOT a
+  >> clean bill of health - run the full city, not a --limit subset.
