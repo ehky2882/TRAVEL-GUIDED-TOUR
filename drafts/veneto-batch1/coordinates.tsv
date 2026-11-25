@@ -1,0 +1,12 @@
+slug	lat	lon	radius	category	city
+vce-palazzo-ducale	45.433839	12.3404109	50	history	Venice
+vce-ca-pesaro	45.441255	12.331621	30	visualArt	Venice
+vce-ca-giustinian	45.4328789	12.3365338	30	history	Venice
+pda-caffe-pedrocchi	45.4079143	11.8772173	25	foodAndDrink	Padua
+pda-palazzo-della-ragione	45.4074282	11.8752563	40	architecture	Padua
+pda-casa-del-petrarca	45.270781	11.7155277	25	literature	Arquà Petrarca
+pda-villa-dei-vescovi	45.3432227	11.7107181	40	architecture	Torreglia
+pda-villa-pisani	45.4084407	12.0126024	50	architecture	Stra
+pda-ponte-vecchio-bassano	45.767707	11.7311684	40	architecture	Bassano del Grappa
+pda-madonna-della-corona	45.6496402	10.8562671	50	sacredSites	Ferrara di Monte Baldo
+pda-monte-fontana-secca	45.922905	11.8428325	60	natureAndParks	Seren del Grappa
