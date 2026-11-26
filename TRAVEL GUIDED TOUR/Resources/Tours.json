@@ -5831,6 +5831,16 @@
       "websiteURL": null
     },
     {
+      "id": "fd5fca23-af5f-5a67-a9d1-4268e5535354",
+      "displayName": "Atlas Studio GOA",
+      "platform": "dozent",
+      "handle": "atlas.goa",
+      "avatarURL": null,
+      "avatarEmoji": "🇮🇹",
+      "bio": "Atlas Studio's Genoa bureau, along the Ligurian coast: a barber's shop lined with coloured glass in the old city's alleys; an abbey reached only by boat or on foot; two family houses left exactly as their owners lived in them; a terraced garden above the Gulf of Poets; and a village whose church bell, they say, was once rung by an octopus.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -167682,6 +167692,298 @@
         "Venue",
         "Performance",
         "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "198f2d6f-f024-5a98-a9cf-d88d300c5f63",
+      "createdAt": "2026-11-26",
+      "title": "Villa Rezzola",
+      "shortDescription": "Shelley, Byron and D.H. Lawrence all loved this gulf. This is the garden that looks out over it.",
+      "longDescription": "Shelley, Byron and D.H. Lawrence all loved this gulf. This is the garden that looks out over it.\n\nThe house stands on medieval remains and is documented from the seventeen hundreds. It belonged first to the Botti, a Ligurian noble family. Then, from nineteen hundred, an English couple, Helen Lavinia and William Percy Cochrane, changed it to their taste: bow windows, panelled rooms, and a large park.",
+      "makerId": "fd5fca23-af5f-5a67-a9d1-4268e5535354",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-villa-rezzola_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-villa-rezzola_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-villa-rezzola_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-villa-rezzola_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-villa-rezzola_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-villa-rezzola_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-villa-rezzola_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d77edac4-d970-57fa-90e7-5fd1fbfff577",
+          "order": 0,
+          "title": "Villa Rezzola",
+          "caption": "On the terrace below the villa, facing the Gulf of La Spezia.",
+          "latitude": 44.0859942,
+          "longitude": 9.9098111,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/goa-villa-rezzola.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-villa-rezzola_hero.webp",
+          "transcriptText": "Shelley, Byron and D.H. Lawrence all loved this gulf. This is the garden that looks out over it.\n\nFrom the terrace below the villa, turn and face the sea. The garden drops away in terraces towards the water, and beyond it is the Gulf of La Spezia, the Gulf of Poets. Nearby runs a long pergola of fifty-six pillars, hung with wisteria.\n\nThe house stands on medieval remains and is documented from the seventeen hundreds. It belonged first to the Botti, a Ligurian noble family. Then, from nineteen hundred, an English couple, Helen Lavinia and William Percy Cochrane, changed it to their taste: bow windows, panelled rooms, and a large park.\n\nIn nineteen thirty-five it passed to Countess Mara Braida Carnevale, and then to her daughter Maria Adele, known as Pupa, who lived here with her husband Piero Miniati until her death in twenty twenty. She left it so that it could be opened to the public.\n\nThe house has its share of drama. In the Second World War it housed the Italian navy's high command, and then it was taken over by the Germans. One of the officers living here, Captain Rudolf Jacobs, took off his uniform and joined the partisans.\n\nWhat I like about the garden is how practical it is. Along the wisteria walk there are kitchen gardens, orchards and a rose garden on one side, and a big Italian lawn on the other. There are basins and cisterns feeding greenhouses and seed beds. It's a garden that was meant to feed the house as well as delight it. On the staircase landings, look down for the black and white pebble mosaics, the Ligurian risseu.\n\nThe park was restored in twenty twenty-three and twenty twenty-four, and the house itself is still being restored.\n\nBefore you go, climb to the belvedere tower. From the top, the whole Gulf of La Spezia opens up beneath you, and you'll see why the poets kept coming back."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 44.0859942,
+      "centroidLongitude": 9.9098111,
+      "city": "Lerici",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Notable Building",
+        "History",
+        "War",
+        "Green Escape",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "734e5f61-f82f-52b1-ab20-4639a5c99d3a",
+      "createdAt": "2026-11-26",
+      "title": "San Fruttuoso Abbey | Abbazia di San Fruttuoso",
+      "shortDescription": "There's no road to this abbey. You arrive by boat, or on foot over the mountain, which is exactly why it's here.",
+      "longDescription": "There's no road to this abbey. You arrive by boat, or on foot over the mountain, which is exactly why it's here.\n\nThe story goes that in the seven hundreds a bishop called Prosper of Tarragona fled the Arab invasion of Spain with the relics of Saint Fructuosus, a martyr of his city. By tradition, the saint himself showed Prosper this bay in a dream. Whatever the truth, the place made sense. It was hidden, and it had a spring of fresh water.",
+      "makerId": "fd5fca23-af5f-5a67-a9d1-4268e5535354",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-abbazia-di-san-fruttuoso_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-abbazia-di-san-fruttuoso_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-abbazia-di-san-fruttuoso_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-abbazia-di-san-fruttuoso_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "fe29d3ed-84fe-5ba7-a774-d5fdc9216378",
+          "order": 0,
+          "title": "San Fruttuoso Abbey | Abbazia di San Fruttuoso",
+          "caption": "On the little beach, looking up at the abbey's arches and domed tower.",
+          "latitude": 44.3166209,
+          "longitude": 9.1751259,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/goa-abbazia-di-san-fruttuoso.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-abbazia-di-san-fruttuoso_hero.webp",
+          "transcriptText": "There's no road to this abbey. You arrive by boat, or on foot over the mountain, which is exactly why it's here.\n\nFrom the little beach, look up at the abbey. It sits right at the back of a tiny bay, between the green slopes of the Portofino headland and the water, with its domed tower above the arches. High on the rocks above the bay is a square stone watchtower.\n\nThe story goes that in the seven hundreds a bishop called Prosper of Tarragona fled the Arab invasion of Spain with the relics of Saint Fructuosus, a martyr of his city. By tradition, the saint himself showed Prosper this bay in a dream. Whatever the truth, the place made sense. It was hidden, and it had a spring of fresh water.\n\nThe abbey you see was rebuilt in the tenth century as a Benedictine monastery. Go into the cloister and look for the tombs of the Doria, the great family of Genoa. Seven members of the family who died between twelve seventy-five and thirteen oh five are buried here, in white marble and grey stone.\n\nThen that tower. The Doria built it in fifteen sixty-two to protect the village and its spring from Barbary pirates, and armed it with three bronze cannon.\n\nSo it's an abbey that ran out of monks but never quite stopped being a refuge. In nineteen eighty-three Frank and Orietta Pogson Doria Pamphilj gave it away, so that it could be restored, spring and all, and opened to the public.\n\nBefore you leave, look out at the bay. Since nineteen fifty-four, a bronze statue of Christ has stood on the seabed out there. You won't see it from the beach, but on a calm day divers and snorkellers go out to it, and the boats pass right over the top."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 102,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 44.3166209,
+      "centroidLongitude": 9.1751259,
+      "city": "Camogli",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History",
+        "Maritime",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f639f6ec-0ffd-5dc1-9ba6-49cab30164a5",
+      "createdAt": "2026-11-26",
+      "title": "Antica Barberia Giacalone",
+      "shortDescription": "Ten square metres, coloured glass on every surface, and you can still get a shave.",
+      "longDescription": "Ten square metres, coloured glass on every surface, and you can still get a shave.\n\nA barber called Giacalone opened it in eighteen eighty-two. In nineteen twenty-two his son Italo decided to redo the whole interior, and what he made is the shop you see now. The walls and the ceiling are covered with coloured glass and oval mirrors. There are Liberty lamps, and at the back the plain white tiles every proper barber's shop has. It's the size of a small bedroom, about ten square metres, and every one of them is decorated.",
+      "makerId": "fd5fca23-af5f-5a67-a9d1-4268e5535354",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-antica-barberia-giacalone_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-antica-barberia-giacalone_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-antica-barberia-giacalone_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-antica-barberia-giacalone_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "07a88d89-2e8e-5d38-9ee8-7a049dd75892",
+          "order": 0,
+          "title": "Antica Barberia Giacalone",
+          "caption": "On Vicolo dei Caprettari, at the small window glittering in the alley.",
+          "latitude": 44.4082285,
+          "longitude": 8.9291972,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/goa-antica-barberia-giacalone.mp3",
+          "audioDurationSeconds": 94,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-antica-barberia-giacalone_hero.webp",
+          "transcriptText": "Ten square metres, coloured glass on every surface, and you can still get a shave.\n\nYou're on Vicolo dei Caprettari, one of the narrow caruggi of old Genoa. Look for the small shop window glittering in the alley. That's the barber's.\n\nA barber called Giacalone opened it in eighteen eighty-two. In nineteen twenty-two his son Italo decided to redo the whole interior, and what he made is the shop you see now. The walls and the ceiling are covered with coloured glass and oval mirrors. There are Liberty lamps, and at the back the plain white tiles every proper barber's shop has. It's the size of a small bedroom, about ten square metres, and every one of them is decorated.\n\nThe Giacalone family kept it until nineteen ninety-two. When Italo died, the shop was at real risk of being lost. So there was a public appeal, the people of the city chipped in, and the shop was bought from his heirs.\n\nAnd then something rather sensible happened. Nobody turned the shop into a museum. It restored it and kept it working, so it's still a barber's, still cutting the hair of Genoese regulars and curious visitors, still doing the job it was built for in eighteen eighty-two.\n\nI think that's the best kind of conservation. Not a room behind a rope, but a room that's still being used for the thing it's good at.\n\nIf you've got a quarter of an hour and a chin that needs attention, go in and ask for a shave. If not, stand at the window for a minute and watch the light bounce round that glass. It's one of the smallest treasures in the city, and one of the most cheerful."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 94,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 44.4082285,
+      "centroidLongitude": 8.9291972,
+      "city": "Genoa",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Notable Building",
+        "Commerce",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
+      "createdAt": "2026-11-26",
+      "title": "Casa Carbone",
+      "shortDescription": "Step inside this house and you're in the eighteen nineties. Nothing much has moved since.",
+      "longDescription": "Step inside this house and you're in the eighteen nineties. Nothing much has moved since.\n\nThe house passed through a family of marble workers, the Bianchi, then the Raffo, and then the Carbone, who lived here right up to the end of the twentieth century. The last of them were a brother and sister. Emanuele Carbone was a bank director with an artist's eye, and he was the one who imagined the house having a public future. His sister Siria completed the bequest, and in nineteen eighty-seven the house was given away, so that it could be opened to the public.",
+      "makerId": "fd5fca23-af5f-5a67-a9d1-4268e5535354",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-carbone_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-carbone_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-carbone_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-carbone_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-carbone_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-carbone_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e253c204-ea9a-5639-9f3c-0acfde1d5ca6",
+          "order": 0,
+          "title": "Casa Carbone",
+          "caption": "Under the arcade on Piazza Cordeviola, at the way in to the house.",
+          "latitude": 44.3099259,
+          "longitude": 9.344993,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/goa-casa-carbone.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-carbone_hero.webp",
+          "transcriptText": "Step inside this house and you're in the eighteen nineties. Nothing much has moved since.\n\nYou're in the centre of Lavagna, on the coast between Chiavari and Sestri Levante. The way in is from Piazza Cordeviola, under the arcade. Above you is a nineteenth-century townhouse, and behind it, hidden from the street, a garden.\n\nThe house passed through a family of marble workers, the Bianchi, then the Raffo, and then the Carbone, who lived here right up to the end of the twentieth century. The last of them were a brother and sister. Emanuele Carbone was a bank director with an artist's eye, and he was the one who imagined the house having a public future. His sister Siria completed the bequest, and in nineteen eighty-seven the house was given away, so that it could be opened to the public.\n\nWhat they left is a home that's perfectly intact, a portrait of a comfortable family at the end of the eighteen hundreds. Start in the central salon, the only real reception room in the house, and then go through to the smaller rooms around it, crowded with furniture and ornaments in the eclectic taste of the late eighteen hundreds. Look up at the ceilings, painted in tempera with Ligurian themes, and down at the floors, with their decorative mosaics. On the walls hang Genoese paintings from the sixteen to the eighteen hundreds.\n\nIt isn't grand, and that's what makes it interesting. This is what the well-off of a small Ligurian town thought a good life looked like, kept exactly as they left it.\n\nThe house opens at weekends in spring and autumn, and closes for the winter, so check before you come. In summer there are aperitifs in the garden, and that's the best way to see it: a glass in the hand, in the green space behind the house, in a town that has no idea it's there."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 44.3099259,
+      "centroidLongitude": 9.344993,
+      "city": "Lavagna",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "Notable Building",
+        "History",
+        "Art",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2563ece9-6a6b-59f7-95a7-b9a7398e4b6b",
+      "createdAt": "2026-11-26",
+      "title": "The Laura House and Collection | Casa e Collezione Laura",
+      "shortDescription": "This house used to be a church. Then an antique dealer and his wife moved in with six thousand works of art.",
+      "longDescription": "This house used to be a church. Then an antique dealer and his wife moved in with six thousand works of art.\n\nIt was built as an Anglican church, and it was badly damaged in the Second World War. From nineteen fifty-three, Luigi Anton Laura, an antique dealer with an international name, and his wife Renata Salesi, known to everyone as Nera, turned it into their home.",
+      "makerId": "fd5fca23-af5f-5a67-a9d1-4268e5535354",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-e-collezione-laura_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-e-collezione-laura_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-e-collezione-laura_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-e-collezione-laura_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "703ff145-03b5-5f5c-bd49-4ed033331559",
+          "order": 0,
+          "title": "The Laura House and Collection | Casa e Collezione Laura",
+          "caption": "On Via Cavour, in front of Villa San Luca, the old Anglican church.",
+          "latitude": 43.8016995,
+          "longitude": 7.7236764,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/goa-casa-e-collezione-laura.mp3",
+          "audioDurationSeconds": 100,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-e-collezione-laura_hero.webp",
+          "transcriptText": "This house used to be a church. Then an antique dealer and his wife moved in with six thousand works of art.\n\nYou're on Via Cavour in Ospedaletti, on the Riviera di Ponente, between Sanremo and Bordighera, with the bright light of the sea all around. The building in front of you is Villa San Luca, and if its shape reminds you of a church, that's because it was one.\n\nIt was built as an Anglican church, and it was badly damaged in the Second World War. From nineteen fifty-three, Luigi Anton Laura, an antique dealer with an international name, and his wife Renata Salesi, known to everyone as Nera, turned it into their home.\n\nWhat they filled it with is the point. Around six thousand pieces, gathered over more than fifty years of buying and selling. Two great worlds sit side by side: the decorative art of eighteenth-century Europe, with Italian, French and English furniture, silver and maiolica, and the art of East Asia and the Middle East, with Chinese porcelain and oriental antiquities.\n\nHere's what I find rather lovely about it. Most dealers spend their lives letting beautiful things go. This one kept the ones he couldn't bear to part with, and put them in a former church, where they could be looked at with something like devotion.\n\nThe house was given away in two thousand and one, so that it could be seen by the public, and it opened in twenty twenty-one. Visits are by guided tour only, and the house closes for a winter break from early November, so book ahead.\n\nOn the tour, ask the guide to show you where East meets West, the rooms where Chinese porcelain stands next to French furniture. It's the whole collection, and the whole couple, in a single glance."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 100,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.8016995,
+      "centroidLongitude": 7.7236764,
+      "city": "Ospedaletti",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "dbb84b8b-eecf-5956-bedb-c0be8aea1227",
+      "createdAt": "2026-11-26",
+      "title": "Tellaro",
+      "shortDescription": "There's a story in this village that an octopus once saved it from pirates. It's written up in Latin on the church.",
+      "longDescription": "There's a story in this village that an octopus once saved it from pirates. It's written up in Latin on the church.\n\nThe church was built in the fifteen hundreds on the remains of a Genoese fort from the thirteen hundreds, and its bell tower was made out of one of the fort's towers. It was consecrated in fifteen eighty-four.",
+      "makerId": "fd5fca23-af5f-5a67-a9d1-4268e5535354",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-tellaro_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-tellaro_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "febae06b-743d-5494-a26c-db4fb8c9a16c",
+          "order": 0,
+          "title": "Tellaro",
+          "caption": "At the church of San Giorgio, on the rock at the very end of the village.",
+          "latitude": 44.0575476,
+          "longitude": 9.9292254,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/goa-tellaro.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-tellaro_hero.webp",
+          "transcriptText": "There's a story in this village that an octopus once saved it from pirates. It's written up in Latin on the church.\n\nWalk out to the very end of the village, to the church of San Giorgio, sitting on a spur of rock with the sea on three sides. Its bell tower and its apse face straight out over the water. Behind you, the houses of Tellaro are stacked up the cliff.\n\nThe church was built in the fifteen hundreds on the remains of a Genoese fort from the thirteen hundreds, and its bell tower was made out of one of the fort's towers. It was consecrated in fifteen eighty-four.\n\nNow the octopus. The legend says that one night Saracen pirates were creeping up on the sleeping village, and a giant octopus climbed out of the sea, wrapped its tentacles round the bell rope and rang the alarm. The villagers woke and drove the pirates off. Look outside the church for the plaque, in Latin, which tells the story with a perfectly straight face.\n\nWhat I love is that there may be a grain of truth in it. In the sixteen sixties a lookout fell asleep during a raid, and the bell rang anyway. Perhaps it was the wind on the rope. Perhaps it was an octopus. The village has always preferred the octopus.\n\nTellaro has had some notable neighbours. The writer and film director Mario Soldati lived here from nineteen sixty, and died here in nineteen ninety-nine. And just along the coast, at Fiascherino, D.H. Lawrence and Frieda spent the winter of nineteen thirteen in a little pink villa, where he worked on The Rainbow.\n\nThere's only one road into Tellaro, and it hugs the cliffs from Lerici. If you've the time, walk back along it to Fiascherino, look down at the coves Lawrence looked at, and you'll understand why he stayed."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 44.0575476,
+      "centroidLongitude": 9.9292254,
+      "city": "Lerici",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Religious Building",
+        "Waterfront",
+        "History",
+        "Literature",
+        "Maritime",
+        "Viewpoint",
         "Hidden Gem"
       ],
       "priceUSD": 0
