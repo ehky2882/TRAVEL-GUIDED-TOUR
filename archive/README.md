@@ -412,4 +412,5 @@ Full text for every one of them is in
 - [HANDOFF-261125-veneto.md](HANDOFF-261125-veneto.md) — **Veneto batch:** Atlas Studio PDA (69th studio) launches with 8 singles, plus 3 Venice singles for VCE; 9 new architect tags; 1 place question left for Edward.
 - [HANDOFF-261126-trentino.md](HANDOFF-261126-trentino.md) — **Trentino batch:** Atlas Studio TNO (70th studio) launches with 6 singles across Trento, Rovereto and Avio; 1 new architect tag; no place questions.
 - [HANDOFF-261126-tuscany.md](HANDOFF-261126-tuscany.md) — **Tuscany batch:** Atlas Studio SIE (71st studio) launches with 3 singles, plus 2 Florence-area singles for FLR; 1 new architect tag; Gamberaia pin moved onto the villa; no place questions.
-- [HANDOFF-261126-piedmont.md](HANDOFF-261126-piedmont.md) — **Piedmont batch:** Atlas Studio PIE (72nd studio) launches with 5 singles across Piedmont; no architect tags; no place questions.
+- [HANDOFF-261126-liguria.md](HANDOFF-261126-liguria.md) — **Liguria batch:** Atlas Studio GOA (72nd studio) launches with 6 singles along the Ligurian coast; Tellaro and Villa Rezzola pins moved onto their subjects; no architect tags, no place questions.
+- [HANDOFF-261126-piedmont.md](HANDOFF-261126-piedmont.md) — **Piedmont batch:** Atlas Studio PIE (73rd studio) launches with 5 singles across Piedmont; no architect tags; no place questions.

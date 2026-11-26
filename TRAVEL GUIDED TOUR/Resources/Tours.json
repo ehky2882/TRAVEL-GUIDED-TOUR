@@ -5831,6 +5831,16 @@
       "websiteURL": null
     },
     {
+      "id": "fd5fca23-af5f-5a67-a9d1-4268e5535354",
+      "displayName": "Atlas Studio GOA",
+      "platform": "dozent",
+      "handle": "atlas.goa",
+      "avatarURL": null,
+      "avatarEmoji": "🇮🇹",
+      "bio": "Atlas Studio's Genoa bureau, along the Ligurian coast: a barber's shop lined with coloured glass in the old city's alleys; an abbey reached only by boat or on foot; two family houses left exactly as their owners lived in them; a terraced garden above the Gulf of Poets; and a village whose church bell, they say, was once rung by an octopus.",
+      "websiteURL": null
+    },
+    {
       "id": "fbe4066b-2aa0-51ba-b03d-cd8cefe988be",
       "displayName": "Atlas Studio PIE",
       "platform": "dozent",
@@ -92340,9 +92350,9 @@
         "ab09a95e-e50a-52fa-b42b-9800bffe8d09",
         "42927d59-4ee8-5f54-85b1-5cd07bfcdb40",
         "e205b670-1574-5402-9f44-6bb2122d91e7",
+        "734e5f61-f82f-52b1-ab20-4639a5c99d3a",
         "19452F7C-FDF6-5BF2-881E-3688C0594C1B",
-        "8F9BB8DE-8222-4616-B65A-6193F393EE9A",
-        "f5fbccad-9389-501a-96e6-f9a322f7ec6a"
+        "8F9BB8DE-8222-4616-B65A-6193F393EE9A"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -95761,14 +95771,14 @@
       "city": "Opera",
       "country": "Italy",
       "relatedTourIds": [
+        "734e5f61-f82f-52b1-ab20-4639a5c99d3a",
         "8F9BB8DE-8222-4616-B65A-6193F393EE9A",
         "734793f0-1df7-51c2-ac12-6506dd88681e",
         "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
         "6169243c-cc0b-5e2c-839a-608d63268c90",
         "244d9961-3c36-5950-960c-38de6b7e3d92",
-        "40a5cbe9-fb42-5101-9655-127f8f9d803c",
-        "9ce70403-81e1-566e-8288-349f2be37e9c",
-        "fb9c16a1-8a99-585a-abee-c5869052f50f"
+        "2563ece9-6a6b-59f7-95a7-b9a7398e4b6b",
+        "40a5cbe9-fb42-5101-9655-127f8f9d803c"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -113682,14 +113692,14 @@
       "city": "Viljandi",
       "country": "Estonia",
       "relatedTourIds": [
+        "eb3f227a-d6fc-591f-9fc6-a5e3366ce12f",
         "fe2cbf01-fba7-57c4-8788-5ca761c33e81",
         "9f3aa784-002e-5e43-bad3-c68e2a88b022",
         "99a765a9-b698-5534-8807-72fdaec4c06d",
         "8efa1abc-1274-475f-89ee-c506bb72f1ea",
         "b66f9ad2-0562-4038-a5c0-ba198f0bc2de",
         "b9aa0360-6536-5c85-9c7e-b7767cc32c9b",
-        "1f9c2bac-c453-59b8-8087-addc46140a0d",
-        "dfeb21ed-ac84-5819-a177-24b08786691f"
+        "1f9c2bac-c453-59b8-8087-addc46140a0d"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -124958,12 +124968,12 @@
       "relatedTourIds": [
         "03c18be5-fa1d-502c-bee2-da87aca34151",
         "ada17ad9-8c2d-5e74-b104-88c92eec5299",
+        "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
         "54acd589-bb34-57ca-98df-4f220870468f",
         "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
         "1c1b956a-4b83-5a3f-8f89-c29965091c1f",
         "B8BDA2BF-FA8E-5902-809E-F6AE24E7EEEE",
-        "6339e837-a7b5-56f9-8dbf-c19710f25473",
-        "858f510b-0e43-5272-9a1c-0c30a3c3cd46"
+        "6339e837-a7b5-56f9-8dbf-c19710f25473"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -137645,10 +137655,10 @@
         "862699b1-0f51-5cd5-bd20-3c8916eec8b7",
         "37f20d89-88ab-523e-a780-59653982d91b",
         "e01770af-347d-5f43-a63e-1fa97ce3551d",
+        "5a393da6-b959-5866-a4dd-6c3d7df62f2b",
         "70a01d74-8edf-5f78-9d8b-a05850c0299a",
-        "75524167-b50d-5eb4-8070-cda9113f0e3c",
-        "89443016-9aea-5422-a33a-be72636e89f1",
-        "ad1e75de-62e8-50df-84a0-4fbf77031178"
+        "2563ece9-6a6b-59f7-95a7-b9a7398e4b6b",
+        "198f2d6f-f024-5a98-a9cf-d88d300c5f63"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -162853,11 +162863,11 @@
         "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
         "df28f59a-1734-5ea0-a505-aa939a414eba",
         "14e01635-4715-545b-bb64-ddaffda41f82",
+        "5a393da6-b959-5866-a4dd-6c3d7df62f2b",
         "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
         "4f57408c-2fe0-59d8-9936-4128dcda4647",
         "bf74e1d6-d495-5988-9874-50ff39d6b7df",
-        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
-        "e54f16d9-df0d-57ab-8524-43bd86308e03"
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -164356,11 +164366,11 @@
         "f1f1d615-c789-5075-8b21-440d490c89b6",
         "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
+        "5a393da6-b959-5866-a4dd-6c3d7df62f2b",
         "75524167-b50d-5eb4-8070-cda9113f0e3c",
         "d6a5e0f4-c797-555f-9381-abd85767fa5d",
         "bf74e1d6-d495-5988-9874-50ff39d6b7df",
-        "14e01635-4715-545b-bb64-ddaffda41f82",
-        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b"
+        "14e01635-4715-545b-bb64-ddaffda41f82"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -164413,13 +164423,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "5a393da6-b959-5866-a4dd-6c3d7df62f2b",
         "0fc566b0-b131-54ce-9088-5bb4df2068c0",
         "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
         "c12be314-082d-5864-a541-b088b3e92d09",
         "aafc8126-49f3-5425-a79d-ef1523406c01",
         "e54f16d9-df0d-57ab-8524-43bd86308e03",
-        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
-        "75524167-b50d-5eb4-8070-cda9113f0e3c"
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -164587,9 +164597,9 @@
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
         "75524167-b50d-5eb4-8070-cda9113f0e3c",
         "d6a5e0f4-c797-555f-9381-abd85767fa5d",
+        "5a393da6-b959-5866-a4dd-6c3d7df62f2b",
         "14e01635-4715-545b-bb64-ddaffda41f82",
-        "aafc8126-49f3-5425-a79d-ef1523406c01",
-        "30CF0118-B1D0-506A-BFD6-FD82707D2A29"
+        "aafc8126-49f3-5425-a79d-ef1523406c01"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -166771,14 +166781,14 @@
       "city": "Arquà Petrarca",
       "country": "Italy",
       "relatedTourIds": [
+        "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
         "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4",
         "e0566808-f11e-53bb-9beb-0f853d45f3be",
+        "99d7310b-4ab2-5e14-9b1f-ca2d0fec3f27",
         "34b8104f-318d-5276-bf7d-04e933deebe9",
         "70a01d74-8edf-5f78-9d8b-a05850c0299a",
         "e01770af-347d-5f43-a63e-1fa97ce3551d",
-        "ad1e75de-62e8-50df-84a0-4fbf77031178",
-        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
-        "0165232e-3d55-5685-a448-a7bf5afece8f"
+        "9d8991ce-07d9-5938-99fd-efe3258886f9"
       ],
       "primaryCategory": "literature",
       "tags": [
@@ -166835,10 +166845,10 @@
         "e0566808-f11e-53bb-9beb-0f853d45f3be",
         "53b4634c-4980-5efd-9c09-32456e6ad712",
         "408e3ea7-5407-5498-a692-ffbc300c451d",
+        "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
         "69d08739-f300-56b7-8c41-67f1e08b745b",
         "422ef78c-4407-5609-aeca-6e885ae727b7",
-        "BC0A0EEB-80D4-5A64-AF7B-83AC0137759B",
-        "a19499d4-c624-5a02-821a-dbbc0dd6cb62"
+        "BC0A0EEB-80D4-5A64-AF7B-83AC0137759B"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -166899,8 +166909,8 @@
         "a19499d4-c624-5a02-821a-dbbc0dd6cb62",
         "aafc8126-49f3-5425-a79d-ef1523406c01",
         "a42a5c17-b713-5676-b5b4-1bc602ff4611",
-        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
-        "422ef78c-4407-5609-aeca-6e885ae727b7"
+        "99d7310b-4ab2-5e14-9b1f-ca2d0fec3f27",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -167017,13 +167027,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "0165232e-3d55-5685-a448-a7bf5afece8f",
+        "9d8991ce-07d9-5938-99fd-efe3258886f9",
         "9ce70403-81e1-566e-8288-349f2be37e9c",
         "b4a638a4-81fd-4876-90f5-60949a742c5f",
+        "734e5f61-f82f-52b1-ab20-4639a5c99d3a",
         "3b0808ae-0324-57e1-bdc0-5352abbd4897",
         "c9f3078e-7d07-5530-aef1-e4cf255b9e09",
-        "fb9c16a1-8a99-585a-abee-c5869052f50f",
-        "2283b2b6-90d5-5037-a72e-56ba35ef019e",
-        "e947bf9e-d324-5d18-afa7-f0f43ea024bc"
+        "fb9c16a1-8a99-585a-abee-c5869052f50f"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -167142,7 +167152,7 @@
         "b9994181-63a7-5869-b713-2a619339f314",
         "01b5d1e0-dbf4-55c5-9258-629ec886a99c",
         "76858496-cf7a-57b0-a076-283a91b491e5",
-        "b22666df-064a-58ae-9bd2-9e1d6d1a566f"
+        "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -167431,11 +167441,11 @@
         "53b4634c-4980-5efd-9c09-32456e6ad712",
         "70db8bd2-ea84-5cef-9bb8-a3db8dc914e9",
         "e0566808-f11e-53bb-9beb-0f853d45f3be",
+        "d9c541b5-73ef-59a8-9c88-e66f6a62b854",
         "221df301-bbf0-5288-be84-4a8da8410e32",
         "4c1f9a2b-87ca-5bf8-98cb-f3bd9836361a",
         "a19499d4-c624-5a02-821a-dbbc0dd6cb62",
-        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
-        "8d6a5371-7c18-56fd-a252-3b3dbf303947"
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -167486,7 +167496,16 @@
       "centroidLongitude": 11.3282381,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "f1f1d615-c789-5075-8b21-440d490c89b6",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "76858496-cf7a-57b0-a076-283a91b491e5",
+        "75524167-b50d-5eb4-8070-cda9113f0e3c",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -167537,7 +167556,16 @@
       "centroidLongitude": 11.4717379,
       "city": "Reggello",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "99d7310b-4ab2-5e14-9b1f-ca2d0fec3f27",
+        "e0566808-f11e-53bb-9beb-0f853d45f3be",
+        "a04f5bb2-d1cc-5876-accc-de2501105507",
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
+        "37f20d89-88ab-523e-a780-59653982d91b",
+        "5a393da6-b959-5866-a4dd-6c3d7df62f2b"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -167587,7 +167615,16 @@
       "centroidLongitude": 11.1550553,
       "city": "Chiusdino",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b22666df-064a-58ae-9bd2-9e1d6d1a566f",
+        "e205b670-1574-5402-9f44-6bb2122d91e7",
+        "734e5f61-f82f-52b1-ab20-4639a5c99d3a",
+        "9ce70403-81e1-566e-8288-349f2be37e9c",
+        "7ed84c6e-2698-572e-901f-4fc13969845a",
+        "e947bf9e-d324-5d18-afa7-f0f43ea024bc",
+        "fb9c16a1-8a99-585a-abee-c5869052f50f",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -167636,7 +167673,16 @@
       "centroidLongitude": 11.04298,
       "city": "San Gimignano",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e0566808-f11e-53bb-9beb-0f853d45f3be",
+        "d9c541b5-73ef-59a8-9c88-e66f6a62b854",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "37f20d89-88ab-523e-a780-59653982d91b",
+        "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Tower",
@@ -167686,12 +167732,367 @@
       "centroidLongitude": 10.4715236,
       "city": "Pescaglia",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "9f3aa784-002e-5e43-bad3-c68e2a88b022",
+        "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
+        "9a0ad257-6e04-573e-a0e5-19d385309440",
+        "675cff67-7f73-543a-8339-61b55d4a8ec8",
+        "a5eb1d6b-ccab-5826-9248-9fce4540e318",
+        "8efa1abc-1274-475f-89ee-c506bb72f1ea",
+        "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Venue",
         "Performance",
         "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "198f2d6f-f024-5a98-a9cf-d88d300c5f63",
+      "createdAt": "2026-11-26",
+      "title": "Villa Rezzola",
+      "shortDescription": "Shelley, Byron and D.H. Lawrence all loved this gulf. This is the garden that looks out over it.",
+      "longDescription": "Shelley, Byron and D.H. Lawrence all loved this gulf. This is the garden that looks out over it.\n\nThe house stands on medieval remains and is documented from the seventeen hundreds. It belonged first to the Botti, a Ligurian noble family. Then, from nineteen hundred, an English couple, Helen Lavinia and William Percy Cochrane, changed it to their taste: bow windows, panelled rooms, and a large park.",
+      "makerId": "fd5fca23-af5f-5a67-a9d1-4268e5535354",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-villa-rezzola_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-villa-rezzola_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-villa-rezzola_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-villa-rezzola_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-villa-rezzola_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-villa-rezzola_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-villa-rezzola_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d77edac4-d970-57fa-90e7-5fd1fbfff577",
+          "order": 0,
+          "title": "Villa Rezzola",
+          "caption": "On the terrace below the villa, facing the Gulf of La Spezia.",
+          "latitude": 44.0859942,
+          "longitude": 9.9098111,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/goa-villa-rezzola.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-villa-rezzola_hero.webp",
+          "transcriptText": "Shelley, Byron and D.H. Lawrence all loved this gulf. This is the garden that looks out over it.\n\nFrom the terrace below the villa, turn and face the sea. The garden drops away in terraces towards the water, and beyond it is the Gulf of La Spezia, the Gulf of Poets. Nearby runs a long pergola of fifty-six pillars, hung with wisteria.\n\nThe house stands on medieval remains and is documented from the seventeen hundreds. It belonged first to the Botti, a Ligurian noble family. Then, from nineteen hundred, an English couple, Helen Lavinia and William Percy Cochrane, changed it to their taste: bow windows, panelled rooms, and a large park.\n\nIn nineteen thirty-five it passed to Countess Mara Braida Carnevale, and then to her daughter Maria Adele, known as Pupa, who lived here with her husband Piero Miniati until her death in twenty twenty. She left it so that it could be opened to the public.\n\nThe house has its share of drama. In the Second World War it housed the Italian navy's high command, and then it was taken over by the Germans. One of the officers living here, Captain Rudolf Jacobs, took off his uniform and joined the partisans.\n\nWhat I like about the garden is how practical it is. Along the wisteria walk there are kitchen gardens, orchards and a rose garden on one side, and a big Italian lawn on the other. There are basins and cisterns feeding greenhouses and seed beds. It's a garden that was meant to feed the house as well as delight it. On the staircase landings, look down for the black and white pebble mosaics, the Ligurian risseu.\n\nThe park was restored in twenty twenty-three and twenty twenty-four, and the house itself is still being restored.\n\nBefore you go, climb to the belvedere tower. From the top, the whole Gulf of La Spezia opens up beneath you, and you'll see why the poets kept coming back."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 44.0859942,
+      "centroidLongitude": 9.9098111,
+      "city": "Lerici",
+      "country": "Italy",
+      "relatedTourIds": [
+        "5a393da6-b959-5866-a4dd-6c3d7df62f2b",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "8587bca7-d0e8-55fe-a2c4-69fc3cf96cc7",
+        "69d08739-f300-56b7-8c41-67f1e08b745b",
+        "59c9eb6b-ddd3-5811-a779-ec4884fd90ba",
+        "e0566808-f11e-53bb-9beb-0f853d45f3be",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900"
+      ],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Notable Building",
+        "History",
+        "War",
+        "Green Escape",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "734e5f61-f82f-52b1-ab20-4639a5c99d3a",
+      "createdAt": "2026-11-26",
+      "title": "San Fruttuoso Abbey | Abbazia di San Fruttuoso",
+      "shortDescription": "There's no road to this abbey. You arrive by boat, or on foot over the mountain, which is exactly why it's here.",
+      "longDescription": "There's no road to this abbey. You arrive by boat, or on foot over the mountain, which is exactly why it's here.\n\nThe story goes that in the seven hundreds a bishop called Prosper of Tarragona fled the Arab invasion of Spain with the relics of Saint Fructuosus, a martyr of his city. By tradition, the saint himself showed Prosper this bay in a dream. Whatever the truth, the place made sense. It was hidden, and it had a spring of fresh water.",
+      "makerId": "fd5fca23-af5f-5a67-a9d1-4268e5535354",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-abbazia-di-san-fruttuoso_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-abbazia-di-san-fruttuoso_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-abbazia-di-san-fruttuoso_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-abbazia-di-san-fruttuoso_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "fe29d3ed-84fe-5ba7-a774-d5fdc9216378",
+          "order": 0,
+          "title": "San Fruttuoso Abbey | Abbazia di San Fruttuoso",
+          "caption": "On the little beach, looking up at the abbey's arches and domed tower.",
+          "latitude": 44.3166209,
+          "longitude": 9.1751259,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/goa-abbazia-di-san-fruttuoso.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-abbazia-di-san-fruttuoso_hero.webp",
+          "transcriptText": "There's no road to this abbey. You arrive by boat, or on foot over the mountain, which is exactly why it's here.\n\nFrom the little beach, look up at the abbey. It sits right at the back of a tiny bay, between the green slopes of the Portofino headland and the water, with its domed tower above the arches. High on the rocks above the bay is a square stone watchtower.\n\nThe story goes that in the seven hundreds a bishop called Prosper of Tarragona fled the Arab invasion of Spain with the relics of Saint Fructuosus, a martyr of his city. By tradition, the saint himself showed Prosper this bay in a dream. Whatever the truth, the place made sense. It was hidden, and it had a spring of fresh water.\n\nThe abbey you see was rebuilt in the tenth century as a Benedictine monastery. Go into the cloister and look for the tombs of the Doria, the great family of Genoa. Seven members of the family who died between twelve seventy-five and thirteen oh five are buried here, in white marble and grey stone.\n\nThen that tower. The Doria built it in fifteen sixty-two to protect the village and its spring from Barbary pirates, and armed it with three bronze cannon.\n\nSo it's an abbey that ran out of monks but never quite stopped being a refuge. In nineteen eighty-three Frank and Orietta Pogson Doria Pamphilj gave it away, so that it could be restored, spring and all, and opened to the public.\n\nBefore you leave, look out at the bay. Since nineteen fifty-four, a bronze statue of Christ has stood on the seabed out there. You won't see it from the beach, but on a calm day divers and snorkellers go out to it, and the boats pass right over the top."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 102,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 44.3166209,
+      "centroidLongitude": 9.1751259,
+      "city": "Camogli",
+      "country": "Italy",
+      "relatedTourIds": [
+        "5a01f367-5ded-54b3-9f65-6587be265184",
+        "9d8991ce-07d9-5938-99fd-efe3258886f9",
+        "27eea851-bb35-5012-8076-f825aaf991cf",
+        "e205b670-1574-5402-9f44-6bb2122d91e7",
+        "734793f0-1df7-51c2-ac12-6506dd88681e",
+        "9ce70403-81e1-566e-8288-349f2be37e9c",
+        "c9f3078e-7d07-5530-aef1-e4cf255b9e09",
+        "e25e5718-6f18-4f7c-8d5a-174662f1a953"
+      ],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History",
+        "Maritime",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f639f6ec-0ffd-5dc1-9ba6-49cab30164a5",
+      "createdAt": "2026-11-26",
+      "title": "Antica Barberia Giacalone",
+      "shortDescription": "Ten square metres, coloured glass on every surface, and you can still get a shave.",
+      "longDescription": "Ten square metres, coloured glass on every surface, and you can still get a shave.\n\nA barber called Giacalone opened it in eighteen eighty-two. In nineteen twenty-two his son Italo decided to redo the whole interior, and what he made is the shop you see now. The walls and the ceiling are covered with coloured glass and oval mirrors. There are Liberty lamps, and at the back the plain white tiles every proper barber's shop has. It's the size of a small bedroom, about ten square metres, and every one of them is decorated.",
+      "makerId": "fd5fca23-af5f-5a67-a9d1-4268e5535354",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-antica-barberia-giacalone_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-antica-barberia-giacalone_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-antica-barberia-giacalone_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-antica-barberia-giacalone_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "07a88d89-2e8e-5d38-9ee8-7a049dd75892",
+          "order": 0,
+          "title": "Antica Barberia Giacalone",
+          "caption": "On Vicolo dei Caprettari, at the small window glittering in the alley.",
+          "latitude": 44.4082285,
+          "longitude": 8.9291972,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/goa-antica-barberia-giacalone.mp3",
+          "audioDurationSeconds": 94,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-antica-barberia-giacalone_hero.webp",
+          "transcriptText": "Ten square metres, coloured glass on every surface, and you can still get a shave.\n\nYou're on Vicolo dei Caprettari, one of the narrow caruggi of old Genoa. Look for the small shop window glittering in the alley. That's the barber's.\n\nA barber called Giacalone opened it in eighteen eighty-two. In nineteen twenty-two his son Italo decided to redo the whole interior, and what he made is the shop you see now. The walls and the ceiling are covered with coloured glass and oval mirrors. There are Liberty lamps, and at the back the plain white tiles every proper barber's shop has. It's the size of a small bedroom, about ten square metres, and every one of them is decorated.\n\nThe Giacalone family kept it until nineteen ninety-two. When Italo died, the shop was at real risk of being lost. So there was a public appeal, the people of the city chipped in, and the shop was bought from his heirs.\n\nAnd then something rather sensible happened. Nobody turned the shop into a museum. It restored it and kept it working, so it's still a barber's, still cutting the hair of Genoese regulars and curious visitors, still doing the job it was built for in eighteen eighty-two.\n\nI think that's the best kind of conservation. Not a room behind a rope, but a room that's still being used for the thing it's good at.\n\nIf you've got a quarter of an hour and a chin that needs attention, go in and ask for a shave. If not, stand at the window for a minute and watch the light bounce round that glass. It's one of the smallest treasures in the city, and one of the most cheerful."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 94,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 44.4082285,
+      "centroidLongitude": 8.9291972,
+      "city": "Genoa",
+      "country": "Italy",
+      "relatedTourIds": [
+        "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
+        "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
+        "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4",
+        "3a204992-9c15-5d46-849a-8b5ec49e3729",
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "81cd2cae-8115-5bd1-b9cc-bda95a7a8320",
+        "0e585845-3bdb-5ffd-8da1-b9db2d7d2daf"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Notable Building",
+        "Commerce",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
+      "createdAt": "2026-11-26",
+      "title": "Casa Carbone",
+      "shortDescription": "Step inside this house and you're in the eighteen nineties. Nothing much has moved since.",
+      "longDescription": "Step inside this house and you're in the eighteen nineties. Nothing much has moved since.\n\nThe house passed through a family of marble workers, the Bianchi, then the Raffo, and then the Carbone, who lived here right up to the end of the twentieth century. The last of them were a brother and sister. Emanuele Carbone was a bank director with an artist's eye, and he was the one who imagined the house having a public future. His sister Siria completed the bequest, and in nineteen eighty-seven the house was given away, so that it could be opened to the public.",
+      "makerId": "fd5fca23-af5f-5a67-a9d1-4268e5535354",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-carbone_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-carbone_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-carbone_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-carbone_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-carbone_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-carbone_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e253c204-ea9a-5639-9f3c-0acfde1d5ca6",
+          "order": 0,
+          "title": "Casa Carbone",
+          "caption": "Under the arcade on Piazza Cordeviola, at the way in to the house.",
+          "latitude": 44.3099259,
+          "longitude": 9.344993,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/goa-casa-carbone.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-carbone_hero.webp",
+          "transcriptText": "Step inside this house and you're in the eighteen nineties. Nothing much has moved since.\n\nYou're in the centre of Lavagna, on the coast between Chiavari and Sestri Levante. The way in is from Piazza Cordeviola, under the arcade. Above you is a nineteenth-century townhouse, and behind it, hidden from the street, a garden.\n\nThe house passed through a family of marble workers, the Bianchi, then the Raffo, and then the Carbone, who lived here right up to the end of the twentieth century. The last of them were a brother and sister. Emanuele Carbone was a bank director with an artist's eye, and he was the one who imagined the house having a public future. His sister Siria completed the bequest, and in nineteen eighty-seven the house was given away, so that it could be opened to the public.\n\nWhat they left is a home that's perfectly intact, a portrait of a comfortable family at the end of the eighteen hundreds. Start in the central salon, the only real reception room in the house, and then go through to the smaller rooms around it, crowded with furniture and ornaments in the eclectic taste of the late eighteen hundreds. Look up at the ceilings, painted in tempera with Ligurian themes, and down at the floors, with their decorative mosaics. On the walls hang Genoese paintings from the sixteen to the eighteen hundreds.\n\nIt isn't grand, and that's what makes it interesting. This is what the well-off of a small Ligurian town thought a good life looked like, kept exactly as they left it.\n\nThe house opens at weekends in spring and autumn, and closes for the winter, so check before you come. In summer there are aperitifs in the garden, and that's the best way to see it: a glass in the hand, in the green space behind the house, in a town that has no idea it's there."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 44.3099259,
+      "centroidLongitude": 9.344993,
+      "city": "Lavagna",
+      "country": "Italy",
+      "relatedTourIds": [
+        "2563ece9-6a6b-59f7-95a7-b9a7398e4b6b",
+        "e0566808-f11e-53bb-9beb-0f853d45f3be",
+        "34b8104f-318d-5276-bf7d-04e933deebe9",
+        "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
+        "47bc0a50-cd97-5013-9d84-352523ee74e6",
+        "70a01d74-8edf-5f78-9d8b-a05850c0299a"
+      ],
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "Notable Building",
+        "History",
+        "Art",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2563ece9-6a6b-59f7-95a7-b9a7398e4b6b",
+      "createdAt": "2026-11-26",
+      "title": "The Laura House and Collection | Casa e Collezione Laura",
+      "shortDescription": "This house used to be a church. Then an antique dealer and his wife moved in with six thousand works of art.",
+      "longDescription": "This house used to be a church. Then an antique dealer and his wife moved in with six thousand works of art.\n\nIt was built as an Anglican church, and it was badly damaged in the Second World War. From nineteen fifty-three, Luigi Anton Laura, an antique dealer with an international name, and his wife Renata Salesi, known to everyone as Nera, turned it into their home.",
+      "makerId": "fd5fca23-af5f-5a67-a9d1-4268e5535354",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-e-collezione-laura_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-e-collezione-laura_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-e-collezione-laura_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-e-collezione-laura_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "703ff145-03b5-5f5c-bd49-4ed033331559",
+          "order": 0,
+          "title": "The Laura House and Collection | Casa e Collezione Laura",
+          "caption": "On Via Cavour, in front of Villa San Luca, the old Anglican church.",
+          "latitude": 43.8016995,
+          "longitude": 7.7236764,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/goa-casa-e-collezione-laura.mp3",
+          "audioDurationSeconds": 100,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-casa-e-collezione-laura_hero.webp",
+          "transcriptText": "This house used to be a church. Then an antique dealer and his wife moved in with six thousand works of art.\n\nYou're on Via Cavour in Ospedaletti, on the Riviera di Ponente, between Sanremo and Bordighera, with the bright light of the sea all around. The building in front of you is Villa San Luca, and if its shape reminds you of a church, that's because it was one.\n\nIt was built as an Anglican church, and it was badly damaged in the Second World War. From nineteen fifty-three, Luigi Anton Laura, an antique dealer with an international name, and his wife Renata Salesi, known to everyone as Nera, turned it into their home.\n\nWhat they filled it with is the point. Around six thousand pieces, gathered over more than fifty years of buying and selling. Two great worlds sit side by side: the decorative art of eighteenth-century Europe, with Italian, French and English furniture, silver and maiolica, and the art of East Asia and the Middle East, with Chinese porcelain and oriental antiquities.\n\nHere's what I find rather lovely about it. Most dealers spend their lives letting beautiful things go. This one kept the ones he couldn't bear to part with, and put them in a former church, where they could be looked at with something like devotion.\n\nThe house was given away in two thousand and one, so that it could be seen by the public, and it opened in twenty twenty-one. Visits are by guided tour only, and the house closes for a winter break from early November, so book ahead.\n\nOn the tour, ask the guide to show you where East meets West, the rooms where Chinese porcelain stands next to French furniture. It's the whole collection, and the whole couple, in a single glance."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 100,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.8016995,
+      "centroidLongitude": 7.7236764,
+      "city": "Ospedaletti",
+      "country": "Italy",
+      "relatedTourIds": [
+        "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
+        "37f20d89-88ab-523e-a780-59653982d91b",
+        "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
+        "70a01d74-8edf-5f78-9d8b-a05850c0299a",
+        "26a5bcfb-6a0d-5ba0-9a0e-d1cf26abdf06",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "724D5D8E-2BFC-5F9F-86B0-5DC7A831109C"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "dbb84b8b-eecf-5956-bedb-c0be8aea1227",
+      "createdAt": "2026-11-26",
+      "title": "Tellaro",
+      "shortDescription": "There's a story in this village that an octopus once saved it from pirates. It's written up in Latin on the church.",
+      "longDescription": "There's a story in this village that an octopus once saved it from pirates. It's written up in Latin on the church.\n\nThe church was built in the fifteen hundreds on the remains of a Genoese fort from the thirteen hundreds, and its bell tower was made out of one of the fort's towers. It was consecrated in fifteen eighty-four.",
+      "makerId": "fd5fca23-af5f-5a67-a9d1-4268e5535354",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-tellaro_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-tellaro_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "febae06b-743d-5494-a26c-db4fb8c9a16c",
+          "order": 0,
+          "title": "Tellaro",
+          "caption": "At the church of San Giorgio, on the rock at the very end of the village.",
+          "latitude": 44.0575476,
+          "longitude": 9.9292254,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/goa-tellaro.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/goa-tellaro_hero.webp",
+          "transcriptText": "There's a story in this village that an octopus once saved it from pirates. It's written up in Latin on the church.\n\nWalk out to the very end of the village, to the church of San Giorgio, sitting on a spur of rock with the sea on three sides. Its bell tower and its apse face straight out over the water. Behind you, the houses of Tellaro are stacked up the cliff.\n\nThe church was built in the fifteen hundreds on the remains of a Genoese fort from the thirteen hundreds, and its bell tower was made out of one of the fort's towers. It was consecrated in fifteen eighty-four.\n\nNow the octopus. The legend says that one night Saracen pirates were creeping up on the sleeping village, and a giant octopus climbed out of the sea, wrapped its tentacles round the bell rope and rang the alarm. The villagers woke and drove the pirates off. Look outside the church for the plaque, in Latin, which tells the story with a perfectly straight face.\n\nWhat I love is that there may be a grain of truth in it. In the sixteen sixties a lookout fell asleep during a raid, and the bell rang anyway. Perhaps it was the wind on the rope. Perhaps it was an octopus. The village has always preferred the octopus.\n\nTellaro has had some notable neighbours. The writer and film director Mario Soldati lived here from nineteen sixty, and died here in nineteen ninety-nine. And just along the coast, at Fiascherino, D.H. Lawrence and Frieda spent the winter of nineteen thirteen in a little pink villa, where he worked on The Rainbow.\n\nThere's only one road into Tellaro, and it hugs the cliffs from Lerici. If you've the time, walk back along it to Fiascherino, look down at the coves Lawrence looked at, and you'll understand why he stayed."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 44.0575476,
+      "centroidLongitude": 9.9292254,
+      "city": "Lerici",
+      "country": "Italy",
+      "relatedTourIds": [
+        "e947bf9e-d324-5d18-afa7-f0f43ea024bc",
+        "734e5f61-f82f-52b1-ab20-4639a5c99d3a",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "81cd2cae-8115-5bd1-b9cc-bda95a7a8320",
+        "d9c541b5-73ef-59a8-9c88-e66f6a62b854",
+        "710FD756-0FF3-5A99-93D1-7B8F305F494A",
+        "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4",
+        "675cff67-7f73-543a-8339-61b55d4a8ec8"
+      ],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Religious Building",
+        "Waterfront",
+        "History",
+        "Literature",
+        "Maritime",
+        "Viewpoint",
         "Hidden Gem"
       ],
       "priceUSD": 0

@@ -10,7 +10,7 @@ Source: contributor drop (Dropbox). 5 `output <Name> <lat>, <lon>` folders, scri
 Run it once only. Slugs carry the studio prefix: `audio/pie-<slug>.mp3`, `images/pie-<slug>_hero.webp`, `_2.webp`, …
 
 - **New maker:** Atlas Studio PIE 🇮🇹 (Piemonte), platform `dozent`, handle `atlas.pie`, uuid5 `atlas-maker:pie` =
-  `fbe4066b-2aa0-51ba-b03d-cd8cefe988be`. The 72nd studio. Inserted after SIE. One regional studio for five towns,
+  `fbe4066b-2aa0-51ba-b03d-cd8cefe988be`. The 73rd studio. Inserted after GOA. One regional studio for five towns,
   none of them in Turin (27–117 km out), on the contributor's choice (arthur.yung), rather than under TRN.
 - **Ids:** `atlas-tour:pie:pie-<slug>`, stops `atlas-stop:pie:pie-<slug>:1`.
 - **gh-pages:** `c8c9ca7`, one commit, 34 files added (5 audio + 29 images), A only.

@@ -15,7 +15,7 @@ NS = uuid.NAMESPACE_URL
 DM = "Designed by a Master"
 COUNTRY = "Italy"
 
-PREV_ID = str(uuid.uuid5(NS, "atlas-maker:sie"))
+PREV_ID = str(uuid.uuid5(NS, "atlas-maker:goa"))
 PIE_ID = str(uuid.uuid5(NS, "atlas-maker:pie"))
 CODES = {"pie": PIE_ID}
 
