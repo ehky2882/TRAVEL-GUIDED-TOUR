@@ -5811,6 +5811,16 @@
       "websiteURL": null
     },
     {
+      "id": "cda1160d-8001-5a71-9fb0-29888bc56bf0",
+      "displayName": "Atlas Studio TNO",
+      "platform": "dozent",
+      "handle": "atlas.tno",
+      "avatarURL": null,
+      "avatarEmoji": "🇮🇹",
+      "bio": "Atlas Studio's Trento bureau, down the Adige valley: the prince-bishops' castle and its calendar with a month missing; the square where the Council of Trent opened; a house that now tells the truth about a 1475 lie; Renzo Piano's mountain of a science museum; Mario Botta's hidden dome at Rovereto; and the frescoed castle of Avio among the vines.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -167062,6 +167072,304 @@
         "Food",
         "Viewpoint",
         "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "eb174652-6b60-5e32-b2d9-65b9f7599570",
+      "createdAt": "2026-11-26",
+      "title": "Aula del Simonino",
+      "shortDescription": "Above the door of this house, a painted inscription still says that a blessed child was born here. It's a lie, and it has been kept there on…",
+      "longDescription": "Above the door of this house, a painted inscription still says that a blessed child was born here. It's a lie, and it has been kept there on purpose.\n\nHere's what happened. In Easter week of fourteen seventy-five, a little boy called Simon, about two years old, went missing, and was found dead in a ditch beside a house belonging to a Jewish family. The Prince-Bishop of Trento, Johannes Hinderbach, backed the accusation that the town's small Jewish community had killed him in a ritual murder. It was the old blood libel, and it had no truth in it at all.",
+      "makerId": "cda1160d-8001-5a71-9fb0-29888bc56bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-aula-del-simonino_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-aula-del-simonino_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-aula-del-simonino_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-aula-del-simonino_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-aula-del-simonino_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-aula-del-simonino_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c558d8f9-7949-5b4c-ad4b-3ef812dea437",
+          "order": 0,
+          "title": "Aula del Simonino",
+          "caption": "On Via del Simonino in old Trento, facing the house with the painted inscription over its door.",
+          "latitude": 46.0689299,
+          "longitude": 11.1237541,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tno-aula-del-simonino.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-aula-del-simonino_hero.webp",
+          "transcriptText": "Above the door of this house, a painted inscription still says that a blessed child was born here. It's a lie, and it has been kept there on purpose.\n\nYou're on Via del Simonino, in the old centre of Trento. Look at the front of the building: the fifteenth-century windows uncovered in the restoration, and the eighteenth-century figures and lettering painted back in. The room behind it was, until recently, known as the Chapel of the Simonino.\n\nHere's what happened. In Easter week of fourteen seventy-five, a little boy called Simon, about two years old, went missing, and was found dead in a ditch beside a house belonging to a Jewish family. The Prince-Bishop of Trento, Johannes Hinderbach, backed the accusation that the town's small Jewish community had killed him in a ritual murder. It was the old blood libel, and it had no truth in it at all.\n\nJewish men were arrested and tortured for months. In June that year they were executed. The women were put on trial after them. The community was expelled from Trento, and Jews did not return to live in the city until nineteen ninety-two. Even at the time, a papal envoy spoke out against the accusation.\n\nAnd yet the child became a cult. Simon was venerated as a martyr for almost five hundred years, with processions, relics and chapels like this one. It wasn't until nineteen sixty-five that the cult was finally suppressed, the processions stopped, and his remains were taken away.\n\nIn twenty eighteen the house was given away by Marina Larcher Fogazzaro, so that it could be opened to the public. Rather than tidy the story away, the room has been turned into a place to tell it. Inside, you listen on headphones to a sound piece of about twenty minutes, narrated by the actress Daria Deflorian.\n\nWhen you leave, walk to Piazza Duomo. Since January twenty twenty-five there's been a plaque there remembering the Jews of Trento who were tortured and killed in fourteen seventy-five. It's worth standing in front of both."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 46.0689299,
+      "centroidLongitude": 11.1237541,
+      "city": "Trento",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Faith",
+        "Remembrance",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "53b4634c-4980-5efd-9c09-32456e6ad712",
+      "createdAt": "2026-11-26",
+      "title": "Buonconsiglio Castle | Castello del Buonconsiglio",
+      "shortDescription": "The bishops who ruled Trento lived here for centuries. The castle's best-loved painting is a calendar, and one month is missing.",
+      "longDescription": "The bishops who ruled Trento lived here for centuries. The castle's best-loved painting is a calendar, and one month is missing.\n\nThe Renaissance palace was the work of Bernardo Cles, Prince-Bishop of Trento and cardinal, one of the great organisers of the Council of Trent. He wanted a residence fit for the gathering of the whole Catholic world, and in fifteen thirty-one he brought in painters to fill it. Among them was Girolamo Romanino from Brescia, who painted the loggia of the Lions' Courtyard. Have a look for his heroines and villains up there: Judith and Holofernes, Lucretia, Cleopatra, Samson and Delilah. It's lively, slightly wild painting for a bishop's house.",
+      "makerId": "cda1160d-8001-5a71-9fb0-29888bc56bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-castello-del-buonconsiglio_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-castello-del-buonconsiglio_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-castello-del-buonconsiglio_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-castello-del-buonconsiglio_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "fa025501-bd85-5c02-9812-631c30aae94b",
+          "order": 0,
+          "title": "Buonconsiglio Castle | Castello del Buonconsiglio",
+          "caption": "On Via Bernardo Clesio, standing back to take in the round tower and the long Renaissance palace.",
+          "latitude": 46.0716084,
+          "longitude": 11.1270049,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tno-castello-del-buonconsiglio.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-castello-del-buonconsiglio_hero.webp",
+          "transcriptText": "The bishops who ruled Trento lived here for centuries. The castle's best-loved painting is a calendar, and one month is missing.\n\nStand back from the castle on Via Bernardo Clesio, so you can see how it grew. On the left, the oldest part, the Castelvecchio, with its great round tower, rebuilt in fourteen forty. Then the long Renaissance palace, and the Baroque link between them, added at the end of the sixteen hundreds.\n\nThe Renaissance palace was the work of Bernardo Cles, Prince-Bishop of Trento and cardinal, one of the great organisers of the Council of Trent. He wanted a residence fit for the gathering of the whole Catholic world, and in fifteen thirty-one he brought in painters to fill it. Among them was Girolamo Romanino from Brescia, who painted the loggia of the Lions' Courtyard. Have a look for his heroines and villains up there: Judith and Holofernes, Lucretia, Cleopatra, Samson and Delilah. It's lively, slightly wild painting for a bishop's house.\n\nThen there's the Eagle Tower, and the reason a lot of people come. Around fourteen hundred, Bishop Giorgio of Liechtenstein had its room painted with the Cycle of the Months: the whole year of noble and peasant life in the countryside, one month at a time. The painter was probably from Bohemia. There are eleven panels, not twelve. March was lost in a fire.\n\nThe castle has a darker memory too. In nineteen sixteen, when Trento was still Austrian, the Italian patriots Cesare Battisti and Fabio Filzi were tried here and hanged in the meadow beneath the eastern walls, now called the Martyrs' Ditch. Damiano Chiesa had been shot there that May.\n\nWhen you've seen the rooms, go down to the Martyrs' Ditch. It's a quiet patch of grass under the walls, and it's the moment this bishops' castle became part of Italy's story."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 46.0716084,
+      "centroidLongitude": 11.1270049,
+      "city": "Trento",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "History",
+        "Power",
+        "Art",
+        "War",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9ad5cbe9-6b4b-5771-9aca-4b68002b703d",
+      "createdAt": "2026-11-26",
+      "title": "Piazza del Duomo, Trento",
+      "shortDescription": "A mountain city, a long way from any sea, put the god of the sea in the middle of its main square. There's a pun involved.",
+      "longDescription": "A mountain city, a long way from any sea, put the god of the sea in the middle of its main square. There's a pun involved.\n\nStart with the fountain. The town council decided on it in seventeen sixty-six, and a sculptor from Lavarone called Giongo made it, with the Neptune and the tritons and sea horses carved by Stefano Salterio. Why Neptune, here? Nobody wrote it down, but the city's Roman name was Tridentum, and Neptune carries a trident. Getting water to it was the hard part. The first pipes burst, and the water only began to flow on the eighth of July, seventeen sixty-nine. A month later the council banned people from washing nappies, tripe and frogs in it. The Neptune you see is a bronze copy. The original is in the courtyard of Palazzo Thun, round the corner.",
+      "makerId": "cda1160d-8001-5a71-9fb0-29888bc56bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-piazza-del-duomo-trento_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-piazza-del-duomo-trento_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-piazza-del-duomo-trento_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-piazza-del-duomo-trento_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4d48cf5d-8a52-5a61-b982-fd802383fe2b",
+          "order": 0,
+          "title": "Piazza del Duomo, Trento",
+          "caption": "By the Neptune fountain, the cathedral's long stone flank along one side of the square.",
+          "latitude": 46.0674851,
+          "longitude": 11.1214775,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tno-piazza-del-duomo-trento.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-piazza-del-duomo-trento_hero.webp",
+          "transcriptText": "A mountain city, a long way from any sea, put the god of the sea in the middle of its main square. There's a pun involved.\n\nYou're in Piazza del Duomo, in the centre of Trento, beside the big fountain with Neptune on top. Behind it, along one side of the square, runs the long stone flank of the cathedral. To the left of the cathedral, as you face it, is the old bishops' palace with its tall civic tower, and on the side of the square opposite the cathedral, a row of arcaded houses with their fronts painted all over.\n\nStart with the fountain. The town council decided on it in seventeen sixty-six, and a sculptor from Lavarone called Giongo made it, with the Neptune and the tritons and sea horses carved by Stefano Salterio. Why Neptune, here? Nobody wrote it down, but the city's Roman name was Tridentum, and Neptune carries a trident. Getting water to it was the hard part. The first pipes burst, and the water only began to flow on the eighth of July, seventeen sixty-nine. A month later the council banned people from washing nappies, tripe and frogs in it. The Neptune you see is a bronze copy. The original is in the courtyard of Palazzo Thun, round the corner.\n\nThen turn to the cathedral. Work on the building you see began in twelve twelve, under the master builder Adamo d'Arogno, and it's here that the Council of Trent opened, on the thirteenth of December, fifteen forty-five. Its early sessions were held in the cathedral choir, as the Church gathered to answer the Protestant Reformation.\n\nAnd here's the thing. The fountain cost the city a fortune, and people were furious. Not long after it opened, someone pinned a note to it asking the chief magistrate to turn its stones into bread. The square has always been where Trento argued with itself.\n\nBefore you go, walk over to the painted houses, Casa Cazuffi and Casa Rella, and look up at the frescoes. Then find the single lime tree under the civic tower. To go and sit under the lime tree, in Trento, once meant you'd been thrown out of home."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 126,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 46.0674851,
+      "centroidLongitude": 11.1214775,
+      "city": "Trento",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Public Square",
+        "History",
+        "Faith",
+        "Architecture",
+        "Iconic Landmark",
+        "Free to Visit",
+        "Designed by a Master",
+        "Adamo d'Arogno"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "eb61fd16-822f-551f-ae64-a6b371f08363",
+      "createdAt": "2026-11-26",
+      "title": "MUSE Science Museum | MUSE – Museo delle Scienze",
+      "shortDescription": "Look at the roofline and you'll see mountains. That's not an accident.",
+      "longDescription": "Look at the roofline and you'll see mountains. That's not an accident.\n\nIt opened in July twenty thirteen, on the site of the old Michelin factory, and Piano designed the new neighbourhood around it too, Le Albere. A tyre works became a science museum, which feels about right for a city that's always had to make the most of a narrow valley floor.",
+      "makerId": "cda1160d-8001-5a71-9fb0-29888bc56bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-muse-trento_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-muse-trento_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-muse-trento_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1faf79b0-d8b4-5b54-9bc4-42c8c30936b1",
+          "order": 0,
+          "title": "MUSE Science Museum | MUSE – Museo delle Scienze",
+          "caption": "On the lawn in front of the museum, looking up at its jagged roof of peaks.",
+          "latitude": 46.0626124,
+          "longitude": 11.1149974,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tno-muse-trento.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-muse-trento_hero.webp",
+          "transcriptText": "Look at the roofline and you'll see mountains. That's not an accident.\n\nFrom the lawn in front of the museum, take in the whole building: long and low, with a jagged, sharply pointed roof that rises and falls like a ridge of peaks. The architect was Renzo Piano, and the outline is meant to recall the mountains of Trentino, and especially the Dolomites.\n\nIt opened in July twenty thirteen, on the site of the old Michelin factory, and Piano designed the new neighbourhood around it too, Le Albere. A tyre works became a science museum, which feels about right for a city that's always had to make the most of a narrow valley floor.\n\nInside, the whole museum is built on one idea, a mountain you explore from the top down. Start on the fourth floor, with the high peaks and a glacier made of real ice. Then work your way down through alpine nature, geology and the history of the people of the Alps, all the way to the lowest level, where the story becomes the history of life itself. At the western end there's a tropical greenhouse, six hundred square metres of mountain rainforest.\n\nAnd running through the middle of it all is the Big Void, a tall open space that links every floor. Hanging in it are animals, as if they're flying or leaping across the gap, and the complete skeleton of a fin whale that washed up on the coast near Livorno in nineteen ninety-five.\n\nWhat I like about MUSE is that it doesn't ask you to look at science behind glass. It asks you to walk downhill through it. More than five million people have done so since it opened.\n\nBefore you start, go right up to the terrace on the fifth floor. From there you can see over Trento and along the Adige valley to the real mountains, and then the building's roof starts to make sense."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 46.0626124,
+      "centroidLongitude": 11.1149974,
+      "city": "Trento",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Architecture",
+        "Contemporary",
+        "Viewpoint",
+        "Designed by a Master",
+        "Renzo Piano"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "32f44df2-481b-5605-9957-16456e666803",
+      "createdAt": "2026-11-26",
+      "title": "Mart | Museo di arte moderna e contemporanea",
+      "shortDescription": "Walk in between two old palaces on the main street, and you come out under a dome the same size as the Pantheon.",
+      "longDescription": "Walk in between two old palaces on the main street, and you come out under a dome the same size as the Pantheon.\n\nThat piazza is forty metres across. The museum says it's exactly the diameter of the Pantheon in Rome, and the dome rises twenty-five metres above you. The building is by the Swiss architect Mario Botta, working with the Rovereto engineer Giulio Andreolli. The first stone went down in nineteen ninety-seven, and it opened in December two thousand and two.",
+      "makerId": "cda1160d-8001-5a71-9fb0-29888bc56bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-mart-rovereto_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-mart-rovereto_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-mart-rovereto_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-mart-rovereto_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-mart-rovereto_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7df130e1-ff75-58a3-ab42-dac7ea2ba723",
+          "order": 0,
+          "title": "Mart | Museo di arte moderna e contemporanea",
+          "caption": "On Corso Bettini, at the passage between two old palazzi that leads in under the glass dome.",
+          "latitude": 45.8941448,
+          "longitude": 11.0447426,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tno-mart-rovereto.mp3",
+          "audioDurationSeconds": 101,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-mart-rovereto_hero.webp",
+          "transcriptText": "Walk in between two old palaces on the main street, and you come out under a dome the same size as the Pantheon.\n\nYou're on Corso Bettini in Rovereto. Find the narrow passage between the two eighteenth-century palazzi, Palazzo Alberti and Palazzo dell'Annona, and walk through it. You'll come out into a round piazza, open to the sky but covered by a great dome of glass and steel.\n\nThat piazza is forty metres across. The museum says it's exactly the diameter of the Pantheon in Rome, and the dome rises twenty-five metres above you. The building is by the Swiss architect Mario Botta, working with the Rovereto engineer Giulio Andreolli. The first stone went down in nineteen ninety-seven, and it opened in December two thousand and two.\n\nI think the trick is rather clever. From the street you'd barely know it was there. Botta tucked a big modern museum in behind the historic front of the town, and gave you a doorway instead of a facade.\n\nInside are five thousand square metres of galleries, and one of the most important collections of twentieth-century Italian art: Giorgio de Chirico, Carlo Carrà, Giorgio Morandi, Felice Casorati, Mario Sironi. And at the heart of it all, Fortunato Depero, the Futurist from this very region. The museum was founded partly to bring his work together with the province's own collection.\n\nSo when you leave, go and see Depero at home. The Casa d'Arte Futurista Depero is in the old town at Via Portici thirty-eight, a few minutes' walk away. It's as bright and strange as you'd hope. One ticket covers the Mart and Casa Depero, so there's no excuse."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 101,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.8941448,
+      "centroidLongitude": 11.0447426,
+      "city": "Rovereto",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Contemporary",
+        "Designed by a Master",
+        "Mario Botta"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a04f5bb2-d1cc-5876-accc-de2501105507",
+      "createdAt": "2026-11-26",
+      "title": "Avio Castle | Castello di Avio",
+      "shortDescription": "At the very top of this castle is a small round room where a painter showed lovers being shot through the heart with arrows. It's one of the…",
+      "longDescription": "At the very top of this castle is a small round room where a painter showed lovers being shot through the heart with arrows. It's one of the earliest pictures of romantic love you'll find in Italy that has nothing religious about it.\n\nIt's mentioned as Castellum Ava as early as ten fifty-three. For most of its life it belonged to the Castelbarco family, vassals of the Bishop of Trento, who turned a military post into a small feudal court. In thirteen thirty-three they entertained the future Emperor Charles the Fourth here. In fourteen eleven they left it, by will, to the Republic of Venice.",
+      "makerId": "cda1160d-8001-5a71-9fb0-29888bc56bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-castello-di-avio_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-castello-di-avio_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-castello-di-avio_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-castello-di-avio_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-castello-di-avio_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-castello-di-avio_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ad6ca536-12a4-584e-a4c0-31768d57890c",
+          "order": 0,
+          "title": "Avio Castle | Castello di Avio",
+          "caption": "At the gate, looking up Monte Vignola to the keep above the terraced vines.",
+          "latitude": 45.7466345,
+          "longitude": 10.951675,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tno-castello-di-avio.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tno-castello-di-avio_hero.webp",
+          "transcriptText": "At the very top of this castle is a small round room where a painter showed lovers being shot through the heart with arrows. It's one of the earliest pictures of romantic love you'll find in Italy that has nothing religious about it.\n\nFrom the gate, look up the hill. The castle climbs Monte Vignola in stages, with terraced vineyards at its feet, a lone tower called the Picadora partway up, and at the top the keep and the remains of the lord's palace. Below you is the Vallagarina, the valley of the Adige, the old road between Italy and the north.\n\nIt's mentioned as Castellum Ava as early as ten fifty-three. For most of its life it belonged to the Castelbarco family, vassals of the Bishop of Trento, who turned a military post into a small feudal court. In thirteen thirty-three they entertained the future Emperor Charles the Fourth here. In fourteen eleven they left it, by will, to the Republic of Venice.\n\nFind the Guards' House first. Its walls were painted in the middle of the thirteen hundreds with battles, knights and sieges: the arts of war a young knight had to learn, shown almost like a training manual.\n\nThen, if the keep is open, climb to the top floor and the Room of Love. It was painted around thirteen forty, in soft pinks and greens, with scenes of courtly love, and those arrows finding their mark.\n\nSo here's the castle in a nutshell. Downstairs, how to fight. Upstairs, what you were fighting for.\n\nIn nineteen seventy-seven Countess Emanuela Castelbarco Pindemonte Rezzonico, a granddaughter of the conductor Arturo Toscanini, gave the castle away, and it opened to the public the following year.\n\nOn your way back down, stop at the Picadora tower. It's said this was where the castle carried out its hangings, which is a rather sobering thought among all those vines."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7466345,
+      "centroidLongitude": 10.951675,
+      "city": "Avio",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Art",
+        "War",
+        "Viewpoint"
       ],
       "priceUSD": 0
     }
