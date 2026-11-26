@@ -31206,7 +31206,7 @@
         "EB6E8880-9A90-586F-855F-F3BCF1CF141C",
         "fd7e6fc1-5753-4dce-8aa5-5663a3a64879",
         "2B2F6B50-D61A-51D3-AACA-2F4DA72918FE",
-        "4476559b-9a55-5f1a-90d1-3f331f03ec52"
+        "eb61fd16-822f-551f-ae64-a6b371f08363"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -166813,12 +166813,12 @@
       "relatedTourIds": [
         "862699b1-0f51-5cd5-bd20-3c8916eec8b7",
         "e0566808-f11e-53bb-9beb-0f853d45f3be",
+        "53b4634c-4980-5efd-9c09-32456e6ad712",
         "408e3ea7-5407-5498-a692-ffbc300c451d",
         "69d08739-f300-56b7-8c41-67f1e08b745b",
         "422ef78c-4407-5609-aeca-6e885ae727b7",
         "BC0A0EEB-80D4-5A64-AF7B-83AC0137759B",
-        "a19499d4-c624-5a02-821a-dbbc0dd6cb62",
-        "3a204992-9c15-5d46-849a-8b5ec49e3729"
+        "a19499d4-c624-5a02-821a-dbbc0dd6cb62"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -167114,7 +167114,16 @@
       "centroidLongitude": 11.1237541,
       "city": "Trento",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "53b4634c-4980-5efd-9c09-32456e6ad712",
+        "9ad5cbe9-6b4b-5771-9aca-4b68002b703d",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "52e98312-2fc5-5714-a1a8-7f344f4dbd7a",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "01b5d1e0-dbf4-55c5-9258-629ec886a99c",
+        "76858496-cf7a-57b0-a076-283a91b491e5",
+        "b22666df-064a-58ae-9bd2-9e1d6d1a566f"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -167162,7 +167171,16 @@
       "centroidLongitude": 11.1270049,
       "city": "Trento",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "eb174652-6b60-5e32-b2d9-65b9f7599570",
+        "9ad5cbe9-6b4b-5771-9aca-4b68002b703d",
+        "a04f5bb2-d1cc-5876-accc-de2501105507",
+        "7b60d399-189a-52ce-8d68-2e5f95d7c72a",
+        "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4",
+        "4c1f9a2b-87ca-5bf8-98cb-f3bd9836361a",
+        "221df301-bbf0-5288-be84-4a8da8410e32",
+        "e0566808-f11e-53bb-9beb-0f853d45f3be"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Museum",
@@ -167211,7 +167229,16 @@
       "centroidLongitude": 11.1214775,
       "city": "Trento",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "53b4634c-4980-5efd-9c09-32456e6ad712",
+        "eb174652-6b60-5e32-b2d9-65b9f7599570",
+        "eb61fd16-822f-551f-ae64-a6b371f08363",
+        "54ededa4-a0c8-50b5-9562-b6b0dd5f9d8f",
+        "675cff67-7f73-543a-8339-61b55d4a8ec8",
+        "81cd2cae-8115-5bd1-b9cc-bda95a7a8320",
+        "1ea2031e-cb40-5845-980f-1d1f85222c57",
+        "422ef78c-4407-5609-aeca-6e885ae727b7"
+      ],
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Public Square",
@@ -167261,7 +167288,16 @@
       "centroidLongitude": 11.1149974,
       "city": "Trento",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "9ad5cbe9-6b4b-5771-9aca-4b68002b703d",
+        "7e98950e-dc6e-5d54-b121-83d4a11e185c",
+        "346e343c-a9fd-5542-99db-126e36904781",
+        "d8f9fda3-2d1d-57bc-939d-2e3ffae0455a",
+        "1f17e306-6bf8-545e-8b91-150b721ef9b8",
+        "24A5FF02-DFF6-437B-9FD8-F3D71B70A627",
+        "32f44df2-481b-5605-9957-16456e666803",
+        "c4d1a116-79e7-59ad-89c8-66e1187699ea"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Museum",
@@ -167311,7 +167347,16 @@
       "centroidLongitude": 11.0447426,
       "city": "Rovereto",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "3a204992-9c15-5d46-849a-8b5ec49e3729",
+        "3A7BADC1-0424-58B8-B9B8-1ED933FD60EF",
+        "bf74e1d6-d495-5988-9874-50ff39d6b7df",
+        "b1fb37af-feb1-5d87-be76-7540c2768cc1",
+        "1f17e306-6bf8-545e-8b91-150b721ef9b8",
+        "ae97b215-411e-5fe7-bda1-d51f7bed29f2",
+        "c5bf4a63-0b85-5c3e-92f2-5dab1cd7f614",
+        "14e01635-4715-545b-bb64-ddaffda41f82"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Museum",
@@ -167362,7 +167407,16 @@
       "centroidLongitude": 10.951675,
       "city": "Avio",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "53b4634c-4980-5efd-9c09-32456e6ad712",
+        "70db8bd2-ea84-5cef-9bb8-a3db8dc914e9",
+        "e0566808-f11e-53bb-9beb-0f853d45f3be",
+        "221df301-bbf0-5288-be84-4a8da8410e32",
+        "4c1f9a2b-87ca-5bf8-98cb-f3bd9836361a",
+        "a19499d4-c624-5a02-821a-dbbc0dd6cb62",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "8d6a5371-7c18-56fd-a252-3b3dbf303947"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
