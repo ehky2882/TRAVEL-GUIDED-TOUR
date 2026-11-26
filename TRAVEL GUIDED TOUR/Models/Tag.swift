@@ -252,6 +252,7 @@ enum Tag {
             "Giovanni Bon", "Bartolomeo Bon", "Antonio Gaspari", "Giuseppe Jappelli", "Giovanni degli Eremitani", "Giovanni Maria Falconetto", "Andrea da Valle", "Girolamo Frigimelica", "Francesco Maria Preti",
             "Adamo d'Arogno",
             "Ferdinando Panciatichi Ximenes d'Aragona",
+            "Piero Portaluppi", "Tomaso Buzzi", "BBPR", "Paolo Vietti-Violi", "Pietro Porcinai", "Luigi Canonica", "Jules Röthlisberger",
         ]),
     ]
 

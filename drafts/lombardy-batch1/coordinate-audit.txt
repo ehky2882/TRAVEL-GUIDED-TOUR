@@ -1,0 +1,46 @@
+RUN check-coordinates.py · rev 02bd1f9f · 2026-11-26T17:50:36Z · args: --drop /tmp/claude-0/-home-user-TRAVEL-GUIDED-TOUR/da481004-8da8-5dc5-91d6-11e89b8aaddf/scratchpad/drop/x --city Lombardy, Italy --out /tmp/claude-0/-home-user-TRAVEL-GUIDED-TOUR/da481004-8da8-5dc5-91d6-11e89b8aaddf/scratchpad/coords.txt
+auditing 19 coordinate(s) against 'Lombardy, Italy'  (~0.7 min at Nominatim's rate limit)
+
+  [  1/19] Monastero di Torba                 fwd     35m  at: Ristorante Antica Torre
+  [  2/19] Palazzo Mondadori                  fwd    319m  at: Mondadori
+  [  3/19] output                             fwd    n/a  at: Via Ugo da Como
+  [  4/19] Buco del Piombo                    fwd    105m  at: Sentiero della cascata
+  [  5/19] Ponte San Michele                  fwd     66m  at: -
+  [  6/19] Villa del Balbianello              fwd     35m  at: -
+  [  7/19] Antica Edicola Liberty             fwd    n/a  at: -
+  [  8/19] Villa Necchi Campiglio             fwd     36m  at: Villa Necchi Campiglio
+  [  9/19] Villa Carlotta                     fwd     47m  at: -
+  [ 10/19] Villa Reale di Monza               fwd     19m  at: Le Cucine di Villa Reale
+  [ 11/19] La Velarca                         fwd    n/a  at: Via Statale Regina
+  [ 12/19] Villa Fogazzaro Roi                fwd     20m  at: Villa Fogazzaro Roi
+  [ 13/19] Casa ed Emporio Macchi             fwd     24m  at: Casa ed Emporio Macchi
+  [ 14/19] Castel Grumello                    fwd     18m  at: Castel Grumello
+  [ 15/19] Traghetto di Leonardo a Imbersago  fwd    n/a  at: Imbersago
+  [ 16/19] Palazzo Moroni                     fwd     17m  at: Fondazione Museo di Palazzo Mo
+  [ 17/19] Ippodromo San Siro and Leonardo's  fwd    n/a  at: Cavallo di Leonardo da Vinci
+  [ 18/19] Villa e Collezione Panza           fwd    n/a  at: Osteria di Piazza Litta
+  [ 19/19] Villa Della Porta Bozzolo          fwd     59m  at: -
+
+========================================================================
+GROSS - none: every coordinate is at or beside its venue
+
+UNVERIFIABLE - 6: no automatic verdict, and that is
+not the same as a pass. A towpath, a square and a long street have no
+single point to measure against; read the script and judge by hand.
+    output                                   venue could not be geocoded
+    Antica Edicola Liberty                   venue could not be geocoded
+    La Velarca                               venue could not be geocoded
+    Traghetto di Leonardo a Imbersago        venue could not be geocoded
+    Ippodromo San Siro and Leonardo's Horse  venue could not be geocoded
+    Villa e Collezione Panza                 venue could not be geocoded
+  (a GROSS verdict needs the geocoder to have found the venue itself;
+   where it did not, the distance is reported and not acted on)
+
+========================================================================
+BIAS - 12/15 north of true position, median +11.8 m, p = 0.035
+  reference, measured 2026-08-22:
+    old-sourced cities (NYC, London)   24/51   -0.9 m   p = 1.0
+    drop-pipeline cities (BCN, MIL)    41/50  +10.3 m   p = 5.6e-06
+
+  >> Sample too small (n=15) to call either way. This is NOT a
+  >> clean bill of health - run the full city, not a --limit subset.
