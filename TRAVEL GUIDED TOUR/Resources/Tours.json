@@ -113672,14 +113672,14 @@
       "city": "Viljandi",
       "country": "Estonia",
       "relatedTourIds": [
+        "eb3f227a-d6fc-591f-9fc6-a5e3366ce12f",
         "fe2cbf01-fba7-57c4-8788-5ca761c33e81",
         "9f3aa784-002e-5e43-bad3-c68e2a88b022",
         "99a765a9-b698-5534-8807-72fdaec4c06d",
         "8efa1abc-1274-475f-89ee-c506bb72f1ea",
         "b66f9ad2-0562-4038-a5c0-ba198f0bc2de",
         "b9aa0360-6536-5c85-9c7e-b7767cc32c9b",
-        "1f9c2bac-c453-59b8-8087-addc46140a0d",
-        "dfeb21ed-ac84-5819-a177-24b08786691f"
+        "1f9c2bac-c453-59b8-8087-addc46140a0d"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -137635,10 +137635,10 @@
         "862699b1-0f51-5cd5-bd20-3c8916eec8b7",
         "37f20d89-88ab-523e-a780-59653982d91b",
         "e01770af-347d-5f43-a63e-1fa97ce3551d",
+        "5a393da6-b959-5866-a4dd-6c3d7df62f2b",
         "70a01d74-8edf-5f78-9d8b-a05850c0299a",
         "75524167-b50d-5eb4-8070-cda9113f0e3c",
-        "89443016-9aea-5422-a33a-be72636e89f1",
-        "ad1e75de-62e8-50df-84a0-4fbf77031178"
+        "89443016-9aea-5422-a33a-be72636e89f1"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -162843,11 +162843,11 @@
         "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
         "df28f59a-1734-5ea0-a505-aa939a414eba",
         "14e01635-4715-545b-bb64-ddaffda41f82",
+        "5a393da6-b959-5866-a4dd-6c3d7df62f2b",
         "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
         "4f57408c-2fe0-59d8-9936-4128dcda4647",
         "bf74e1d6-d495-5988-9874-50ff39d6b7df",
-        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
-        "e54f16d9-df0d-57ab-8524-43bd86308e03"
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -164346,11 +164346,11 @@
         "f1f1d615-c789-5075-8b21-440d490c89b6",
         "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
+        "5a393da6-b959-5866-a4dd-6c3d7df62f2b",
         "75524167-b50d-5eb4-8070-cda9113f0e3c",
         "d6a5e0f4-c797-555f-9381-abd85767fa5d",
         "bf74e1d6-d495-5988-9874-50ff39d6b7df",
-        "14e01635-4715-545b-bb64-ddaffda41f82",
-        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b"
+        "14e01635-4715-545b-bb64-ddaffda41f82"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -164403,13 +164403,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "5a393da6-b959-5866-a4dd-6c3d7df62f2b",
         "0fc566b0-b131-54ce-9088-5bb4df2068c0",
         "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
         "c12be314-082d-5864-a541-b088b3e92d09",
         "aafc8126-49f3-5425-a79d-ef1523406c01",
         "e54f16d9-df0d-57ab-8524-43bd86308e03",
-        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
-        "75524167-b50d-5eb4-8070-cda9113f0e3c"
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -164577,9 +164577,9 @@
         "02B70DF9-E6E0-5EEC-B4D0-E68F743596E4",
         "75524167-b50d-5eb4-8070-cda9113f0e3c",
         "d6a5e0f4-c797-555f-9381-abd85767fa5d",
+        "5a393da6-b959-5866-a4dd-6c3d7df62f2b",
         "14e01635-4715-545b-bb64-ddaffda41f82",
-        "aafc8126-49f3-5425-a79d-ef1523406c01",
-        "30CF0118-B1D0-506A-BFD6-FD82707D2A29"
+        "aafc8126-49f3-5425-a79d-ef1523406c01"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -166763,12 +166763,12 @@
       "relatedTourIds": [
         "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4",
         "e0566808-f11e-53bb-9beb-0f853d45f3be",
+        "99d7310b-4ab2-5e14-9b1f-ca2d0fec3f27",
         "34b8104f-318d-5276-bf7d-04e933deebe9",
         "70a01d74-8edf-5f78-9d8b-a05850c0299a",
         "e01770af-347d-5f43-a63e-1fa97ce3551d",
-        "ad1e75de-62e8-50df-84a0-4fbf77031178",
-        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
-        "0165232e-3d55-5685-a448-a7bf5afece8f"
+        "9d8991ce-07d9-5938-99fd-efe3258886f9",
+        "ad1e75de-62e8-50df-84a0-4fbf77031178"
       ],
       "primaryCategory": "literature",
       "tags": [
@@ -166889,8 +166889,8 @@
         "a19499d4-c624-5a02-821a-dbbc0dd6cb62",
         "aafc8126-49f3-5425-a79d-ef1523406c01",
         "a42a5c17-b713-5676-b5b4-1bc602ff4611",
-        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
-        "422ef78c-4407-5609-aeca-6e885ae727b7"
+        "99d7310b-4ab2-5e14-9b1f-ca2d0fec3f27",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -167007,13 +167007,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "0165232e-3d55-5685-a448-a7bf5afece8f",
+        "9d8991ce-07d9-5938-99fd-efe3258886f9",
         "9ce70403-81e1-566e-8288-349f2be37e9c",
         "b4a638a4-81fd-4876-90f5-60949a742c5f",
         "3b0808ae-0324-57e1-bdc0-5352abbd4897",
         "c9f3078e-7d07-5530-aef1-e4cf255b9e09",
         "fb9c16a1-8a99-585a-abee-c5869052f50f",
-        "2283b2b6-90d5-5037-a72e-56ba35ef019e",
-        "e947bf9e-d324-5d18-afa7-f0f43ea024bc"
+        "2283b2b6-90d5-5037-a72e-56ba35ef019e"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -167421,11 +167421,11 @@
         "53b4634c-4980-5efd-9c09-32456e6ad712",
         "70db8bd2-ea84-5cef-9bb8-a3db8dc914e9",
         "e0566808-f11e-53bb-9beb-0f853d45f3be",
+        "d9c541b5-73ef-59a8-9c88-e66f6a62b854",
         "221df301-bbf0-5288-be84-4a8da8410e32",
         "4c1f9a2b-87ca-5bf8-98cb-f3bd9836361a",
         "a19499d4-c624-5a02-821a-dbbc0dd6cb62",
-        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
-        "8d6a5371-7c18-56fd-a252-3b3dbf303947"
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -167476,7 +167476,16 @@
       "centroidLongitude": 11.3282381,
       "city": "Florence",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "f1f1d615-c789-5075-8b21-440d490c89b6",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "76858496-cf7a-57b0-a076-283a91b491e5",
+        "75524167-b50d-5eb4-8070-cda9113f0e3c",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -167527,7 +167536,16 @@
       "centroidLongitude": 11.4717379,
       "city": "Reggello",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "99d7310b-4ab2-5e14-9b1f-ca2d0fec3f27",
+        "e0566808-f11e-53bb-9beb-0f853d45f3be",
+        "a04f5bb2-d1cc-5876-accc-de2501105507",
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
+        "37f20d89-88ab-523e-a780-59653982d91b",
+        "5a393da6-b959-5866-a4dd-6c3d7df62f2b"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -167577,7 +167595,16 @@
       "centroidLongitude": 11.1550553,
       "city": "Chiusdino",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "b22666df-064a-58ae-9bd2-9e1d6d1a566f",
+        "e205b670-1574-5402-9f44-6bb2122d91e7",
+        "9ce70403-81e1-566e-8288-349f2be37e9c",
+        "7ed84c6e-2698-572e-901f-4fc13969845a",
+        "e947bf9e-d324-5d18-afa7-f0f43ea024bc",
+        "fb9c16a1-8a99-585a-abee-c5869052f50f",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "fd4761f2-de44-5088-b631-42d5b85fc9ba"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -167626,7 +167653,16 @@
       "centroidLongitude": 11.04298,
       "city": "San Gimignano",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e0566808-f11e-53bb-9beb-0f853d45f3be",
+        "d9c541b5-73ef-59a8-9c88-e66f6a62b854",
+        "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "37f20d89-88ab-523e-a780-59653982d91b",
+        "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4",
+        "76858496-cf7a-57b0-a076-283a91b491e5"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Tower",
@@ -167676,7 +167712,16 @@
       "centroidLongitude": 10.4715236,
       "city": "Pescaglia",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "9f3aa784-002e-5e43-bad3-c68e2a88b022",
+        "9a0ad257-6e04-573e-a0e5-19d385309440",
+        "675cff67-7f73-543a-8339-61b55d4a8ec8",
+        "a5eb1d6b-ccab-5826-9248-9fce4540e318",
+        "8efa1abc-1274-475f-89ee-c506bb72f1ea",
+        "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
+        "32f44df2-481b-5605-9957-16456e666803"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Venue",
