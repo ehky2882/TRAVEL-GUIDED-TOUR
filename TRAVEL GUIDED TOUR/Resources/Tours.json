@@ -5811,6 +5811,16 @@
       "websiteURL": null
     },
     {
+      "id": "241cc7ba-f823-5e63-8e79-1c59948ce760",
+      "displayName": "Atlas Studio SIE",
+      "platform": "dozent",
+      "handle": "atlas.sie",
+      "avatarURL": null,
+      "avatarEmoji": "🇮🇹",
+      "bio": "Atlas Studio's Siena bureau, out across the Tuscan hills: a Cistercian abbey roofed by the sky, with a knight's sword still in the rock above it; the one San Gimignano tower still at its full height, and the family home inside it; and, high above Lucca, a village hayloft turned into the smallest historic theatre in the world.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -167062,6 +167072,255 @@
         "Food",
         "Viewpoint",
         "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5a393da6-b959-5866-a4dd-6c3d7df62f2b",
+      "createdAt": "2026-11-26",
+      "title": "Villa Gamberaia",
+      "shortDescription": "The New York Times once put this garden on its list of twenty-five you should see in your lifetime. It hardly raises its voice.",
+      "longDescription": "The New York Times once put this garden on its list of twenty-five you should see in your lifetime. It hardly raises its voice.\n\nThe name may come from gamberi, the freshwater crayfish once raised in ponds round here. In the fourteen and fifteen hundreds the land belonged to the Gamberelli, the family of the sculptors Antonio and Bernardo Rossellino. But the villa itself was built by Zanobi Lapi, whose name and the date sixteen ten are recorded in an inscription.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-villa-gamberaia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-villa-gamberaia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-villa-gamberaia_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-villa-gamberaia_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-villa-gamberaia_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-villa-gamberaia_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8f23bb31-1c29-5dfb-a05c-9a1629609bd2",
+          "order": 0,
+          "title": "Villa Gamberaia",
+          "caption": "On the long grass walk beside the villa, the view of Florence at one end.",
+          "latitude": 43.7793978,
+          "longitude": 11.3282381,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-villa-gamberaia.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-villa-gamberaia_hero.webp",
+          "transcriptText": "The New York Times once put this garden on its list of twenty-five you should see in your lifetime. It hardly raises its voice.\n\nYou're on the hillside at Settignano, above Florence. Find the long grass walk that runs the length of the garden, with the villa on one side. At one end, the walk opens out to the view: the city of Florence and the valley of the Arno, laid out below you.\n\nThe name may come from gamberi, the freshwater crayfish once raised in ponds round here. In the fourteen and fifteen hundreds the land belonged to the Gamberelli, the family of the sculptors Antonio and Bernardo Rossellino. But the villa itself was built by Zanobi Lapi, whose name and the date sixteen ten are recorded in an inscription.\n\nThen came the Capponi family, in the early seventeen hundreds, and they gave the garden much of its shape. That long grass walk was once a bowling green. Off it are small, separate garden rooms. Look for the grotto garden, the nymphaeum, with its sculpture in relief, still fed by water from the springs on the hill above. And look for the lemon house, which goes back to the very beginning.\n\nThe most famous thing here, though, came much later. In eighteen ninety-six, a Romanian princess, Jeanne Ghyka, bought the run-down villa, and around nineteen hundred she swept away an old vegetable patch in front of the house and replaced it with a water parterre: long, still pools, mirrored side by side, edged with box and cypress. Edith Wharton didn't care for it. Almost everyone else since has disagreed with her.\n\nThe house burned in August nineteen forty-four, set alight by retreating German soldiers, and it was rescued ten years later by Marcello Marchi, who restored it. The gardens opened to the public in nineteen fifty-six. The villa is still a private home, but the garden can be visited by ticket, so check the calendar and book before you come.\n\nBefore you leave, stand at the end of the water parterre and look back at the house reflected in the pools. It's the picture everybody takes, and for once, everybody's right."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 123,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7793978,
+      "centroidLongitude": 11.3282381,
+      "city": "Florence",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Notable Building",
+        "History",
+        "Green Escape",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d9c541b5-73ef-59a8-9c88-e66f6a62b854",
+      "createdAt": "2026-11-26",
+      "title": "Sammezzano Castle | Castello di Sammezzano",
+      "shortDescription": "A Tuscan nobleman spent nearly forty years filling a farmhouse in the hills above the Arno with an imaginary Moorish palace.",
+      "longDescription": "A Tuscan nobleman spent nearly forty years filling a farmhouse in the hills above the Arno with an imaginary Moorish palace.\n\nThere was a farm here by sixteen oh five, built by the Ximenes of Aragon. In the eighteen hundreds it came to Ferdinando Panciatichi Ximenes d'Aragona, and from eighteen fifty-three to eighteen eighty-nine he remade it, room by room, in the Moorish style that was the height of fashion. He designed it himself and paid for it himself, and every brick, every piece of stucco and every tile was made here, by local workers he trained for the job. There's an entrance hall, a corridor hung with plaster stalactites, a ballroom, and the famous Peacock Room, all of it in colour and pattern from floor to ceiling. The story goes that there's a room for every day of the year.",
+      "makerId": "2ef7f356-9ba8-552f-a182-7ffbd7d78c7b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-castello-di-sammezzano_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-castello-di-sammezzano_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-castello-di-sammezzano_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-castello-di-sammezzano_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-castello-di-sammezzano_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-castello-di-sammezzano_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-castello-di-sammezzano_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "63e571a2-6e21-5c92-80b2-ae1c0afedba1",
+          "order": 0,
+          "title": "Sammezzano Castle | Castello di Sammezzano",
+          "caption": "In the park above Leccio, facing the long battlemented front and its tower.",
+          "latitude": 43.7032033,
+          "longitude": 11.4717379,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flr-castello-di-sammezzano.mp3",
+          "audioDurationSeconds": 122,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/flr-castello-di-sammezzano_hero.webp",
+          "transcriptText": "A Tuscan nobleman spent nearly forty years filling a farmhouse in the hills above the Arno with an imaginary Moorish palace.\n\nYou're at Sammezzano, above the village of Leccio, south-east of Florence, among some of the tallest trees in Italy. Ahead of you, through the park, is a long building with battlements and a tower, which looks fairly ordinary from outside. That's the trick. The surprise is all indoors.\n\nThere was a farm here by sixteen oh five, built by the Ximenes of Aragon. In the eighteen hundreds it came to Ferdinando Panciatichi Ximenes d'Aragona, and from eighteen fifty-three to eighteen eighty-nine he remade it, room by room, in the Moorish style that was the height of fashion. He designed it himself and paid for it himself, and every brick, every piece of stucco and every tile was made here, by local workers he trained for the job. There's an entrance hall, a corridor hung with plaster stalactites, a ballroom, and the famous Peacock Room, all of it in colour and pattern from floor to ceiling. The story goes that there's a room for every day of the year.\n\nKing Umberto the First came to stay in eighteen seventy-eight. After the war the castle was a luxury hotel, and film crews loved it: Pasolini shot his Arabian Nights here, and Matteo Garrone his Tale of Tales.\n\nAnd then it was left empty. For years it changed hands at auction and slowly fell apart, until people simply refused to let it go. In twenty sixteen it came top of a national poll of the places Italians most wanted saved, with more than fifty thousand votes. In twenty twenty-five it was bought by the Moretti family, who plan a long restoration.\n\nIt's private, and the doors open only on rare occasions, so check before you come. But do look at the trees. The park holds the largest group of giant sequoias in Italy, fifty-seven of them, all more than thirty-five metres tall. Planted by the same man, who clearly didn't do anything by halves."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 122,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7032033,
+      "centroidLongitude": 11.4717379,
+      "city": "Reggello",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History",
+        "Green Escape",
+        "Hidden Gem",
+        "Designed by a Master",
+        "Ferdinando Panciatichi Ximenes d'Aragona"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9d8991ce-07d9-5938-99fd-efe3258886f9",
+      "createdAt": "2026-11-26",
+      "title": "San Galgano Abbey | Abbazia di San Galgano",
+      "shortDescription": "The roof of this church is the sky. And on the hill above it, a knight's sword is still stuck in the rock.",
+      "longDescription": "The roof of this church is the sky. And on the hill above it, a knight's sword is still stuck in the rock.\n\nThe story starts with a knight called Galgano Guidotti, who gave up his life as a soldier. On Christmas Day, eleven eighty, so the tradition goes, he drove his sword into the ground on the hill of Montesiepi, meaning to turn it into a cross. He lived there as a hermit until he died the following year.",
+      "makerId": "241cc7ba-f823-5e63-8e79-1c59948ce760",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sie-abbazia-di-san-galgano_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sie-abbazia-di-san-galgano_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sie-abbazia-di-san-galgano_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sie-abbazia-di-san-galgano_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "aa129c46-6214-50e8-8ba8-b2ce3d6aebdb",
+          "order": 0,
+          "title": "San Galgano Abbey | Abbazia di San Galgano",
+          "caption": "In the middle of the open-air nave, Gothic walls either side, nothing overhead but sky.",
+          "latitude": 43.1496618,
+          "longitude": 11.1550553,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sie-abbazia-di-san-galgano.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sie-abbazia-di-san-galgano_hero.webp",
+          "transcriptText": "The roof of this church is the sky. And on the hill above it, a knight's sword is still stuck in the rock.\n\nStand in the middle of the nave of the abbey. Great Gothic walls of stone and brick rise on either side of you, the pointed windows open to the air, and over your head there's nothing at all. Grass underfoot, clouds above.\n\nThe story starts with a knight called Galgano Guidotti, who gave up his life as a soldier. On Christmas Day, eleven eighty, so the tradition goes, he drove his sword into the ground on the hill of Montesiepi, meaning to turn it into a cross. He lived there as a hermit until he died the following year.\n\nAfter him came the Cistercian monks, who began building this great abbey in twelve eighteen, and it was consecrated in twelve eighty-eight. Then came the long decline. One account says that in fifteen fifty an abbot sold off the lead from the roof. The vaults fell in in seventeen eighty-one, the bell tower collapsed in seventeen eighty-six, and three years later the church was deconsecrated and left open to the weather.\n\nAnd here's the thing. It's more beautiful as a ruin than it could ever have been with its roof on. The light comes straight in, and the building feels less like a church than like the memory of one.\n\nNow walk up the hill, a few minutes away, to the chapel of Montesiepi. It's a round building, with a dome made of rings of alternating coloured stone, built where Galgano lived. In the middle of the floor is the rock, and sticking out of it, under a protective cover, the hilt of a sword and a stump of corroded blade.\n\nBefore you leave the chapel, look into the little side chapel on the left. Its walls were painted by Ambrogio Lorenzetti in the thirteen thirties, with a Madonna enthroned and an Annunciation. They're faded now, but they're by one of the great painters of Siena, in a hermit's chapel on a hill."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.1496618,
+      "centroidLongitude": 11.1550553,
+      "city": "Chiusdino",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History",
+        "Art",
+        "Gothic",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "99d7310b-4ab2-5e14-9b1f-ca2d0fec3f27",
+      "createdAt": "2026-11-26",
+      "title": "Campatelli Tower House | Torre e Casa Campatelli",
+      "shortDescription": "San Gimignano once had seventy-two towers. Fourteen are left, and this is the only one that's still exactly the size it was built.",
+      "longDescription": "San Gimignano once had seventy-two towers. Fourteen are left, and this is the only one that's still exactly the size it was built.\n\nMost of the town's medieval towers were later cut down or lost altogether. This one kept its full original volume, which makes it rather special among the fourteen survivors.",
+      "makerId": "241cc7ba-f823-5e63-8e79-1c59948ce760",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sie-torre-e-casa-campatelli_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sie-torre-e-casa-campatelli_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sie-torre-e-casa-campatelli_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sie-torre-e-casa-campatelli_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "384a1ad6-8fe6-5321-93bb-860d2bde62d0",
+          "order": 0,
+          "title": "Campatelli Tower House | Torre e Casa Campatelli",
+          "caption": "On Via San Giovanni, looking up at the plain 28-metre stone tower rising out of the house.",
+          "latitude": 43.4669112,
+          "longitude": 11.04298,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sie-torre-e-casa-campatelli.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sie-torre-e-casa-campatelli_hero.webp",
+          "transcriptText": "San Gimignano once had seventy-two towers. Fourteen are left, and this is the only one that's still exactly the size it was built.\n\nYou're on Via San Giovanni, the main street climbing into the town. Look up at the tall, plain tower of stone rising out of the house in front of you. It's twenty-eight metres high, and it's the Torre Campatelli.\n\nMost of the town's medieval towers were later cut down or lost altogether. This one kept its full original volume, which makes it rather special among the fourteen survivors.\n\nIn the eighteen hundreds the tower and the eighteenth-century house built around it were bought by the Campatelli, a Florentine family of landowners and businesspeople, who turned it into a comfortable upper-middle-class home. Inside, have a look at the great salon with its neo-Renaissance fireplace and seventeenth-century portraits, the little sitting room, the study and the dining room. On the dining room walls are paintings by Guido Peyron, the uncle of the last owner. There's even a tiny family chapel.\n\nThat last owner was Lydia Campatelli, who was born in nineteen twenty-five and died in two thousand and five. It's thanks to her that the house came down to us intact, and in two thousand and five she left it so that it could be opened to the public.\n\nSo you get two things here at once. A medieval tower, from a town that built them like trophies. And inside it, a nineteenth-century family who simply lived there, among the furniture and the portraits, with San Gimignano going on outside the windows.\n\nBefore you leave, climb up to the attic, where a short film is projected about a thousand years of the town's history on the walls of the tower itself. Then step back out onto Via San Giovanni and count the towers you can see. Fourteen is fewer than you'd think."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.4669112,
+      "centroidLongitude": 11.04298,
+      "city": "San Gimignano",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Tower",
+        "Museum",
+        "History",
+        "Art",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "eb3f227a-d6fc-591f-9fc6-a5e3366ce12f",
+      "createdAt": "2026-11-26",
+      "title": "The Little Theatre of Vetriano | Teatrino di Vetriano",
+      "shortDescription": "Seventy-one square metres, eighty seats, two tiers of boxes, and a Guinness record for being the smallest historic public theatre in the world.",
+      "longDescription": "Seventy-one square metres, eighty seats, two tiers of boxes, and a Guinness record for being the smallest historic public theatre in the world.\n\nIn eighteen eighty-nine a local engineer, Virgilio Biagini, gave the village an old hayloft on one condition: that it be turned into a theatre. Twenty-two villagers formed a society to do it. Each paid a little every month, and each gave their labour for free. The theatre opened in eighteen ninety-one.",
+      "makerId": "241cc7ba-f823-5e63-8e79-1c59948ce760",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sie-teatrino-di-vetriano_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sie-teatrino-di-vetriano_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sie-teatrino-di-vetriano_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sie-teatrino-di-vetriano_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sie-teatrino-di-vetriano_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sie-teatrino-di-vetriano_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "596e916e-447e-5d64-8e69-9639320745cb",
+          "order": 0,
+          "title": "The Little Theatre of Vetriano | Teatrino di Vetriano",
+          "caption": "In the hamlet of Vetriano, outside the old hayloft that hides the theatre.",
+          "latitude": 43.9824789,
+          "longitude": 10.4715236,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sie-teatrino-di-vetriano.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sie-teatrino-di-vetriano_hero.webp",
+          "transcriptText": "Seventy-one square metres, eighty seats, two tiers of boxes, and a Guinness record for being the smallest historic public theatre in the world.\n\nYou're in the hamlet of Vetriano, high in the hills above Lucca. From the outside, you'd hardly guess there was a theatre here at all. That's because it used to be a hayloft.\n\nIn eighteen eighty-nine a local engineer, Virgilio Biagini, gave the village an old hayloft on one condition: that it be turned into a theatre. Twenty-two villagers formed a society to do it. Each paid a little every month, and each gave their labour for free. The theatre opened in eighteen ninety-one.\n\nInside, it's like stepping into a jewellery box. The locals call it La Bomboniera, the sweet box. Sixty seats in the stalls, twenty more in two little tiers of balconies, the boxes painted with coats of arms, garlands and masks. And then the curtain, painted in the late eighteen hundreds with the sister arts of painting, music and poetry, and a Latin motto that roughly means: to make progress, and to give honest pleasure.\n\nThat motto is the whole place, really. It was built by people with no money and a great deal of determination, so that a mountain village could have plays, music and somewhere to gather.\n\nIt was abandoned in the nineteen sixties and declared unsafe. In nineteen ninety-seven the Biagini heirs gave it away, to be shared with the town, and after a careful restoration it reopened in September two thousand and two. The restorers even had local supporters adopt the straw-seated chairs to help pay for them. Since then it's hosted small seasons, concerts, and even performances with La Scala in Milan.\n\nVisits are by booking, so arrange one before you climb up here. And when you're inside, look for the little wooden flowers by the box office. Each one stands for somebody who helped bring this theatre back to life."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.9824789,
+      "centroidLongitude": 10.4715236,
+      "city": "Pescaglia",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance",
+        "History",
+        "Hidden Gem"
       ],
       "priceUSD": 0
     }

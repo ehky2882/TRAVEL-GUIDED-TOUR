@@ -1,0 +1,21 @@
+RUN check-coordinates.py · rev 02bd1f9f · 2026-11-26T11:21:48Z · args: --drop /tmp/claude-0/drop/x --city Tuscany, Italy --out /tmp/claude-0/tuscany/coords.txt
+auditing 5 coordinate(s) against 'Tuscany, Italy'  (~0.2 min at Nominatim's rate limit)
+
+  [  1/5] Villa Gamberaia                    fwd    167m  at: -
+  [  2/5] Torre e Casa Campatelli            fwd    n/a  at: Bar Boboli Via
+  [  3/5] Castello di Sammezzano             fwd     43m  at: Sequoia 117
+  [  4/5] Abbazia di San Galgano             fwd     35m  at: Strada Vicinale Tempio di San 
+  [  5/5] Teatrino di Vetriano               fwd     22m  at: -
+
+========================================================================
+GROSS - none: every coordinate is at or beside its venue
+
+UNVERIFIABLE - 1: no automatic verdict, and that is
+not the same as a pass. A towpath, a square and a long street have no
+single point to measure against; read the script and judge by hand.
+    Torre e Casa Campatelli                  venue could not be geocoded
+  (a GROSS verdict needs the geocoder to have found the venue itself;
+   where it did not, the distance is reported and not acted on)
+
+========================================================================
+BIAS - not enough point-like matches (2) to measure
