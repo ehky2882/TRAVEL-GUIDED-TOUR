@@ -250,6 +250,7 @@ enum Tag {
             "Michelangelo", "Filippo Brunelleschi", "Bartolomeo Ammannati", "Giovanni Michelucci", "Pier Luigi Nervi", "Michelozzo", "Giuliano da Sangallo", "Il Cronaca", "Adolfo Natalini", "Claudio Nardi", "Michele Bönan", "Francesco Maestrelli", "Pietro Comparini",
             "Jacopo Sansovino", "Patricia Urquiola", "Dorothée Meilichzon", "Gian Giacomo de' Grigi", "Lodovico Cadorin", "Giuseppe Benoni", "Andrea Palladio", "Baldassare Longhena", "Domenico Rossi", "Sverre Fehn", "Giorgio Spavento", "Vincenzo Scamozzi", "Mauro Codussi", "Antonio da Ponte",
             "Giovanni Bon", "Bartolomeo Bon", "Antonio Gaspari", "Giuseppe Jappelli", "Giovanni degli Eremitani", "Giovanni Maria Falconetto", "Andrea da Valle", "Girolamo Frigimelica", "Francesco Maria Preti",
+            "Adamo d'Arogno",
         ]),
     ]
 
