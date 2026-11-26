@@ -1,0 +1,23 @@
+RUN check-coordinates.py · rev 02bd1f9f · 2026-11-26T10:56:09Z · args: --drop /tmp/claude-0/drop/x --city Trento, Italy --out /tmp/claude-0/drop/coord.txt
+auditing 6 coordinate(s) against 'Trento, Italy'  (~0.2 min at Nominatim's rate limit)
+
+  [  1/6] MUSE, Museo delle Scienze          fwd    n/a  at: Gino Tomasi
+  [  2/6] Castello di Avio                   fwd    204m  at: Castello di Sabbionara D'Avio
+  [  3/6] Aula del Simonino                  fwd    n/a  at: IN-CONTRO
+  [  4/6] Mart - Museo di arte moderna e con fwd     27m  at: Piazza Umberto Savoia
+  [  5/6] Castello del Buonconsiglio         fwd     68m  at: Loggia Veneziana
+  [  6/6] Piazza del Duomo di Trento         fwd     15m  at: Fontana del Nettuno
+
+========================================================================
+GROSS - none: every coordinate is at or beside its venue
+
+UNVERIFIABLE - 2: no automatic verdict, and that is
+not the same as a pass. A towpath, a square and a long street have no
+single point to measure against; read the script and judge by hand.
+    MUSE, Museo delle Scienze                venue could not be geocoded
+    Aula del Simonino                        venue could not be geocoded
+  (a GROSS verdict needs the geocoder to have found the venue itself;
+   where it did not, the distance is reported and not acted on)
+
+========================================================================
+BIAS - not enough point-like matches (5) to measure

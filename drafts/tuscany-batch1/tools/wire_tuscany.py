@@ -17,7 +17,7 @@ COUNTRY = "Italy"
 
 FLR_ID = str(uuid.uuid5(NS, "atlas-maker:flr"))
 SIE_ID = str(uuid.uuid5(NS, "atlas-maker:sie"))
-PDA_ID = str(uuid.uuid5(NS, "atlas-maker:pda"))
+TNO_ID = str(uuid.uuid5(NS, "atlas-maker:tno"))
 CODES = {"flr": FLR_ID, "sie": SIE_ID}
 N = 5
 
@@ -164,7 +164,7 @@ def main():
                 print(f"OVERLAP {a['title']} / {b['title']}: {dd:.0f} m", file=sys.stderr)
     assert any(m["id"] == FLR_ID for m in data["makers"])
     if not any(m["id"] == SIE_ID for m in data["makers"]):
-        prev = next(i for i, m in enumerate(data["makers"]) if m["id"] == PDA_ID)
+        prev = next(i for i, m in enumerate(data["makers"]) if m["id"] == TNO_ID)
         data["makers"].insert(prev + 1, {
             "id": SIE_ID, "displayName": "Atlas Studio SIE", "platform": "dozent", "handle": "atlas.sie",
             "avatarURL": None, "avatarEmoji": "🇮🇹",

@@ -10,7 +10,7 @@ gap suggests more of this set may follow). Each holds `<NN>_<slug>_clean.txt` + 
 Run it once only. Slugs carry a studio prefix: `audio/<code>-<slug>.mp3`, `images/<code>-<slug>_hero.webp`, `_2.webp`, …
 
 - **New maker:** Atlas Studio SIE 🇮🇹 (Siena and the Tuscan hills), platform `dozent`, handle `atlas.sie`, uuid5
-  `atlas-maker:sie` = `241cc7ba-f823-5e63-8e79-1c59948ce760`. The 70th studio. Inserted after PDA.
+  `atlas-maker:sie` = `241cc7ba-f823-5e63-8e79-1c59948ce760`. The 71st studio (Trentino's TNO merged first as the 70th). Inserted after TNO.
 - **Existing maker:** Atlas Studio FLR, `2ef7f356-9ba8-552f-a182-7ffbd7d78c7b`, for the two Florence-area tours.
 - **Ids:** `atlas-tour:<code>:<code>-<slug>`, stops `atlas-stop:<code>:<code>-<slug>:1`.
 - **gh-pages:** `5d0bf13`, one commit, 32 files added (5 audio + 27 images), A only.
