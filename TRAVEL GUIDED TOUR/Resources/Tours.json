@@ -14241,8 +14241,8 @@
         "5a01f367-5ded-54b3-9f65-6587be265184",
         "f5fbccad-9389-501a-96e6-f9a322f7ec6a",
         "6b30022e-2630-489d-80ea-02e6931b4ae0",
-        "63b7938f-7011-53b8-9dae-47d17a36910b",
-        "d6b330df-82a2-4048-9aaf-bbe28c5f53b0"
+        "8a734239-474d-56a3-ab5f-16f502d48def",
+        "63b7938f-7011-53b8-9dae-47d17a36910b"
       ],
       "walkingDistanceMeters": null
     },
@@ -25025,7 +25025,7 @@
         "0b030b2b-eab2-50d8-bf50-31e810357fb0",
         "03f46680-ea6c-5eab-9020-167b59b0f0c5",
         "c2d24ddb-a962-53a1-a384-51764dc01f93",
-        "42D33D2D-6830-5CF8-9CD7-906DC26CAA39"
+        "40376928-7556-5f79-b05b-d67a92cfea27"
       ],
       "walkingDistanceMeters": null
     },
@@ -85828,9 +85828,9 @@
         "7ad5059f-976e-4ecf-a17a-be8d5e907644",
         "03f46680-ea6c-5eab-9020-167b59b0f0c5",
         "3ad6f369-1a73-595e-8a78-26e67a7b139b",
+        "40376928-7556-5f79-b05b-d67a92cfea27",
         "136E6351-B1C3-4AA4-9153-460B6C1AE76B",
-        "1b7d0be6-3d92-57a3-a364-bb72fe106875",
-        "e6c19c3e-c40d-5b9d-a494-859e3e157759"
+        "1b7d0be6-3d92-57a3-a364-bb72fe106875"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -89132,12 +89132,12 @@
       "relatedTourIds": [
         "17bcdc55-93ab-51b5-8279-43e265b08507",
         "e6c19c3e-c40d-5b9d-a494-859e3e157759",
+        "40376928-7556-5f79-b05b-d67a92cfea27",
         "af71230e-eb66-5732-831b-f799b735f869",
         "c71e0a14-95cf-5ed9-b843-e8cfdc8984c9",
         "136E6351-B1C3-4AA4-9153-460B6C1AE76B",
         "baeaa4fa-c80e-58b0-b0e9-c2df127af3df",
-        "c2d24ddb-a962-53a1-a384-51764dc01f93",
-        "0DE94AD6-31ED-5E02-9065-08DB79B11F69"
+        "c2d24ddb-a962-53a1-a384-51764dc01f93"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -89687,8 +89687,8 @@
         "3ad6f369-1a73-595e-8a78-26e67a7b139b",
         "0b030b2b-eab2-50d8-bf50-31e810357fb0",
         "ccf6f620-660b-4a88-ba94-606221d0cf7c",
-        "05c6041a-924c-56b6-bb82-19acdcefc33c",
-        "af71230e-eb66-5732-831b-f799b735f869"
+        "40376928-7556-5f79-b05b-d67a92cfea27",
+        "05c6041a-924c-56b6-bb82-19acdcefc33c"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -92349,10 +92349,10 @@
         "89f876ec-c28d-5a1f-9603-31c4706bdf65",
         "ab09a95e-e50a-52fa-b42b-9800bffe8d09",
         "42927d59-4ee8-5f54-85b1-5cd07bfcdb40",
+        "8a734239-474d-56a3-ab5f-16f502d48def",
         "e205b670-1574-5402-9f44-6bb2122d91e7",
         "734e5f61-f82f-52b1-ab20-4639a5c99d3a",
-        "19452F7C-FDF6-5BF2-881E-3688C0594C1B",
-        "8F9BB8DE-8222-4616-B65A-6193F393EE9A"
+        "19452F7C-FDF6-5BF2-881E-3688C0594C1B"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -95776,9 +95776,9 @@
         "734793f0-1df7-51c2-ac12-6506dd88681e",
         "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
         "6169243c-cc0b-5e2c-839a-608d63268c90",
+        "8a734239-474d-56a3-ab5f-16f502d48def",
         "244d9961-3c36-5950-960c-38de6b7e3d92",
-        "2563ece9-6a6b-59f7-95a7-b9a7398e4b6b",
-        "40a5cbe9-fb42-5101-9655-127f8f9d803c"
+        "2563ece9-6a6b-59f7-95a7-b9a7398e4b6b"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -98761,6 +98761,7 @@
       "city": "Stockholm",
       "country": "Sweden",
       "relatedTourIds": [
+        "40376928-7556-5f79-b05b-d67a92cfea27",
         "03f46680-ea6c-5eab-9020-167b59b0f0c5",
         "0b030b2b-eab2-50d8-bf50-31e810357fb0",
         "af71230e-eb66-5732-831b-f799b735f869",
@@ -166782,13 +166783,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
+        "7b4f5f61-16c2-5c61-aa3d-527c4fc99d5e",
         "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4",
+        "8a734239-474d-56a3-ab5f-16f502d48def",
         "e0566808-f11e-53bb-9beb-0f853d45f3be",
         "99d7310b-4ab2-5e14-9b1f-ca2d0fec3f27",
         "34b8104f-318d-5276-bf7d-04e933deebe9",
-        "70a01d74-8edf-5f78-9d8b-a05850c0299a",
-        "e01770af-347d-5f43-a63e-1fa97ce3551d",
-        "9d8991ce-07d9-5938-99fd-efe3258886f9"
+        "12ebbf71-0422-5ad8-9935-1e4af80d56f9"
       ],
       "primaryCategory": "literature",
       "tags": [
@@ -167026,14 +167027,14 @@
       "city": "Ferrara di Monte Baldo",
       "country": "Italy",
       "relatedTourIds": [
+        "8a734239-474d-56a3-ab5f-16f502d48def",
         "0165232e-3d55-5685-a448-a7bf5afece8f",
         "9d8991ce-07d9-5938-99fd-efe3258886f9",
         "9ce70403-81e1-566e-8288-349f2be37e9c",
         "b4a638a4-81fd-4876-90f5-60949a742c5f",
         "734e5f61-f82f-52b1-ab20-4639a5c99d3a",
         "3b0808ae-0324-57e1-bdc0-5352abbd4897",
-        "c9f3078e-7d07-5530-aef1-e4cf255b9e09",
-        "fb9c16a1-8a99-585a-abee-c5869052f50f"
+        "c9f3078e-7d07-5530-aef1-e4cf255b9e09"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -167087,11 +167088,11 @@
         "c7d6db46-7c8a-59a3-92af-7f3429d719df",
         "0165232e-3d55-5685-a448-a7bf5afece8f",
         "f3e87d25-bf60-5b79-9fc1-4d6f936899b3",
+        "7b4f5f61-16c2-5c61-aa3d-527c4fc99d5e",
         "408e3ea7-5407-5498-a692-ffbc300c451d",
         "6165be6c-ff3b-581f-95cb-71686ab5a3ba",
         "34ee1c47-2571-56ff-becb-d719f43c3efc",
-        "422ef78c-4407-5609-aeca-6e885ae727b7",
-        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce"
+        "422ef78c-4407-5609-aeca-6e885ae727b7"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -167438,14 +167439,14 @@
       "city": "Avio",
       "country": "Italy",
       "relatedTourIds": [
+        "ee4e3363-0e29-55df-a5f5-de531a6d6cae",
+        "7b4f5f61-16c2-5c61-aa3d-527c4fc99d5e",
         "53b4634c-4980-5efd-9c09-32456e6ad712",
         "70db8bd2-ea84-5cef-9bb8-a3db8dc914e9",
         "e0566808-f11e-53bb-9beb-0f853d45f3be",
         "d9c541b5-73ef-59a8-9c88-e66f6a62b854",
         "221df301-bbf0-5288-be84-4a8da8410e32",
-        "4c1f9a2b-87ca-5bf8-98cb-f3bd9836361a",
-        "a19499d4-c624-5a02-821a-dbbc0dd6cb62",
-        "3b0808ae-0324-57e1-bdc0-5352abbd4897"
+        "4c1f9a2b-87ca-5bf8-98cb-f3bd9836361a"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -167559,12 +167560,12 @@
       "relatedTourIds": [
         "99d7310b-4ab2-5e14-9b1f-ca2d0fec3f27",
         "e0566808-f11e-53bb-9beb-0f853d45f3be",
+        "7b4f5f61-16c2-5c61-aa3d-527c4fc99d5e",
         "a04f5bb2-d1cc-5876-accc-de2501105507",
         "a42a5c17-b713-5676-b5b4-1bc602ff4611",
         "df28f59a-1734-5ea0-a505-aa939a414eba",
         "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
-        "37f20d89-88ab-523e-a780-59653982d91b",
-        "5a393da6-b959-5866-a4dd-6c3d7df62f2b"
+        "37f20d89-88ab-523e-a780-59653982d91b"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -167616,14 +167617,14 @@
       "city": "Chiusdino",
       "country": "Italy",
       "relatedTourIds": [
+        "8a734239-474d-56a3-ab5f-16f502d48def",
         "b22666df-064a-58ae-9bd2-9e1d6d1a566f",
         "e205b670-1574-5402-9f44-6bb2122d91e7",
         "734e5f61-f82f-52b1-ab20-4639a5c99d3a",
         "9ce70403-81e1-566e-8288-349f2be37e9c",
         "7ed84c6e-2698-572e-901f-4fc13969845a",
         "e947bf9e-d324-5d18-afa7-f0f43ea024bc",
-        "fb9c16a1-8a99-585a-abee-c5869052f50f",
-        "3b0808ae-0324-57e1-bdc0-5352abbd4897"
+        "fb9c16a1-8a99-585a-abee-c5869052f50f"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -167678,10 +167679,10 @@
         "d9c541b5-73ef-59a8-9c88-e66f6a62b854",
         "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
         "14e01635-4715-545b-bb64-ddaffda41f82",
+        "7b4f5f61-16c2-5c61-aa3d-527c4fc99d5e",
         "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
         "df28f59a-1734-5ea0-a505-aa939a414eba",
-        "37f20d89-88ab-523e-a780-59653982d91b",
-        "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4"
+        "37f20d89-88ab-523e-a780-59653982d91b"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -167795,11 +167796,11 @@
         "5a393da6-b959-5866-a4dd-6c3d7df62f2b",
         "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
         "8587bca7-d0e8-55fe-a2c4-69fc3cf96cc7",
+        "40376928-7556-5f79-b05b-d67a92cfea27",
         "69d08739-f300-56b7-8c41-67f1e08b745b",
         "59c9eb6b-ddd3-5811-a779-ec4884fd90ba",
         "e0566808-f11e-53bb-9beb-0f853d45f3be",
-        "df28f59a-1734-5ea0-a505-aa939a414eba",
-        "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900"
+        "df28f59a-1734-5ea0-a505-aa939a414eba"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -167850,14 +167851,14 @@
       "city": "Camogli",
       "country": "Italy",
       "relatedTourIds": [
+        "8a734239-474d-56a3-ab5f-16f502d48def",
         "5a01f367-5ded-54b3-9f65-6587be265184",
         "9d8991ce-07d9-5938-99fd-efe3258886f9",
         "27eea851-bb35-5012-8076-f825aaf991cf",
         "e205b670-1574-5402-9f44-6bb2122d91e7",
         "734793f0-1df7-51c2-ac12-6506dd88681e",
         "9ce70403-81e1-566e-8288-349f2be37e9c",
-        "c9f3078e-7d07-5530-aef1-e4cf255b9e09",
-        "e25e5718-6f18-4f7c-8d5a-174662f1a953"
+        "c9f3078e-7d07-5530-aef1-e4cf255b9e09"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -167970,9 +167971,9 @@
         "34b8104f-318d-5276-bf7d-04e933deebe9",
         "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4",
         "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "12ebbf71-0422-5ad8-9935-1e4af80d56f9",
         "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
-        "47bc0a50-cd97-5013-9d84-352523ee74e6",
-        "70a01d74-8edf-5f78-9d8b-a05850c0299a"
+        "47bc0a50-cd97-5013-9d84-352523ee74e6"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -168135,7 +168136,16 @@
       "centroidLongitude": 7.4826249,
       "city": "Manta",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "a04f5bb2-d1cc-5876-accc-de2501105507",
+        "53b4634c-4980-5efd-9c09-32456e6ad712",
+        "7b4f5f61-16c2-5c61-aa3d-527c4fc99d5e",
+        "e0566808-f11e-53bb-9beb-0f853d45f3be",
+        "422ef78c-4407-5609-aeca-6e885ae727b7",
+        "4c1f9a2b-87ca-5bf8-98cb-f3bd9836361a",
+        "99d7310b-4ab2-5e14-9b1f-ca2d0fec3f27",
+        "221df301-bbf0-5288-be84-4a8da8410e32"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Notable Building",
@@ -168185,7 +168195,16 @@
       "centroidLongitude": 7.9592875,
       "city": "Caravino",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "a04f5bb2-d1cc-5876-accc-de2501105507",
+        "99d7310b-4ab2-5e14-9b1f-ca2d0fec3f27",
+        "d9c541b5-73ef-59a8-9c88-e66f6a62b854",
+        "e0566808-f11e-53bb-9beb-0f853d45f3be",
+        "A71280AB-9381-4EED-94A4-2E0ABC3C1FD8",
+        "ee4e3363-0e29-55df-a5f5-de531a6d6cae",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "c7d6db46-7c8a-59a3-92af-7f3429d719df"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
@@ -168238,7 +168257,16 @@
       "centroidLongitude": 8.0031038,
       "city": "Magnano",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "5a393da6-b959-5866-a4dd-6c3d7df62f2b",
+        "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4",
+        "862699b1-0f51-5cd5-bd20-3c8916eec8b7",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "53b4634c-4980-5efd-9c09-32456e6ad712"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Museum",
@@ -168288,7 +168316,16 @@
       "centroidLongitude": 8.5652866,
       "city": "Verbania",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "136E6351-B1C3-4AA4-9153-460B6C1AE76B",
+        "5a393da6-b959-5866-a4dd-6c3d7df62f2b",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "198f2d6f-f024-5a98-a9cf-d88d300c5f63",
+        "0b188d21-824e-4ced-8514-7f0032ed69b3",
+        "ef1b3686-d6bf-5468-980c-40cb96fcdb44",
+        "af71230e-eb66-5732-831b-f799b735f869",
+        "03f46680-ea6c-5eab-9020-167b59b0f0c5"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -168335,7 +168372,16 @@
       "centroidLongitude": 7.3431938,
       "city": "Sant'Ambrogio di Torino",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e205b670-1574-5402-9f44-6bb2122d91e7",
+        "734e5f61-f82f-52b1-ab20-4639a5c99d3a",
+        "9d8991ce-07d9-5938-99fd-efe3258886f9",
+        "9ce70403-81e1-566e-8288-349f2be37e9c",
+        "0165232e-3d55-5685-a448-a7bf5afece8f",
+        "7ed84c6e-2698-572e-901f-4fc13969845a",
+        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
