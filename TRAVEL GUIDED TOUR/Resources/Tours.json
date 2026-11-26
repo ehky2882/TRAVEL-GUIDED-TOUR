@@ -92340,9 +92340,9 @@
         "ab09a95e-e50a-52fa-b42b-9800bffe8d09",
         "42927d59-4ee8-5f54-85b1-5cd07bfcdb40",
         "e205b670-1574-5402-9f44-6bb2122d91e7",
+        "734e5f61-f82f-52b1-ab20-4639a5c99d3a",
         "19452F7C-FDF6-5BF2-881E-3688C0594C1B",
-        "8F9BB8DE-8222-4616-B65A-6193F393EE9A",
-        "f5fbccad-9389-501a-96e6-f9a322f7ec6a"
+        "8F9BB8DE-8222-4616-B65A-6193F393EE9A"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -95761,14 +95761,14 @@
       "city": "Opera",
       "country": "Italy",
       "relatedTourIds": [
+        "734e5f61-f82f-52b1-ab20-4639a5c99d3a",
         "8F9BB8DE-8222-4616-B65A-6193F393EE9A",
         "734793f0-1df7-51c2-ac12-6506dd88681e",
         "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
         "6169243c-cc0b-5e2c-839a-608d63268c90",
         "244d9961-3c36-5950-960c-38de6b7e3d92",
-        "40a5cbe9-fb42-5101-9655-127f8f9d803c",
-        "9ce70403-81e1-566e-8288-349f2be37e9c",
-        "fb9c16a1-8a99-585a-abee-c5869052f50f"
+        "2563ece9-6a6b-59f7-95a7-b9a7398e4b6b",
+        "40a5cbe9-fb42-5101-9655-127f8f9d803c"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -124958,12 +124958,12 @@
       "relatedTourIds": [
         "03c18be5-fa1d-502c-bee2-da87aca34151",
         "ada17ad9-8c2d-5e74-b104-88c92eec5299",
+        "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
         "54acd589-bb34-57ca-98df-4f220870468f",
         "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
         "1c1b956a-4b83-5a3f-8f89-c29965091c1f",
         "B8BDA2BF-FA8E-5902-809E-F6AE24E7EEEE",
-        "6339e837-a7b5-56f9-8dbf-c19710f25473",
-        "858f510b-0e43-5272-9a1c-0c30a3c3cd46"
+        "6339e837-a7b5-56f9-8dbf-c19710f25473"
       ],
       "primaryCategory": "foodAndDrink",
       "tags": [
@@ -137647,8 +137647,8 @@
         "e01770af-347d-5f43-a63e-1fa97ce3551d",
         "5a393da6-b959-5866-a4dd-6c3d7df62f2b",
         "70a01d74-8edf-5f78-9d8b-a05850c0299a",
-        "75524167-b50d-5eb4-8070-cda9113f0e3c",
-        "89443016-9aea-5422-a33a-be72636e89f1"
+        "2563ece9-6a6b-59f7-95a7-b9a7398e4b6b",
+        "198f2d6f-f024-5a98-a9cf-d88d300c5f63"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -166771,14 +166771,14 @@
       "city": "Arquà Petrarca",
       "country": "Italy",
       "relatedTourIds": [
+        "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
         "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4",
         "e0566808-f11e-53bb-9beb-0f853d45f3be",
         "99d7310b-4ab2-5e14-9b1f-ca2d0fec3f27",
         "34b8104f-318d-5276-bf7d-04e933deebe9",
         "70a01d74-8edf-5f78-9d8b-a05850c0299a",
         "e01770af-347d-5f43-a63e-1fa97ce3551d",
-        "9d8991ce-07d9-5938-99fd-efe3258886f9",
-        "ad1e75de-62e8-50df-84a0-4fbf77031178"
+        "9d8991ce-07d9-5938-99fd-efe3258886f9"
       ],
       "primaryCategory": "literature",
       "tags": [
@@ -166835,10 +166835,10 @@
         "e0566808-f11e-53bb-9beb-0f853d45f3be",
         "53b4634c-4980-5efd-9c09-32456e6ad712",
         "408e3ea7-5407-5498-a692-ffbc300c451d",
+        "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
         "69d08739-f300-56b7-8c41-67f1e08b745b",
         "422ef78c-4407-5609-aeca-6e885ae727b7",
-        "BC0A0EEB-80D4-5A64-AF7B-83AC0137759B",
-        "a19499d4-c624-5a02-821a-dbbc0dd6cb62"
+        "BC0A0EEB-80D4-5A64-AF7B-83AC0137759B"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -167020,10 +167020,10 @@
         "9d8991ce-07d9-5938-99fd-efe3258886f9",
         "9ce70403-81e1-566e-8288-349f2be37e9c",
         "b4a638a4-81fd-4876-90f5-60949a742c5f",
+        "734e5f61-f82f-52b1-ab20-4639a5c99d3a",
         "3b0808ae-0324-57e1-bdc0-5352abbd4897",
         "c9f3078e-7d07-5530-aef1-e4cf255b9e09",
-        "fb9c16a1-8a99-585a-abee-c5869052f50f",
-        "2283b2b6-90d5-5037-a72e-56ba35ef019e"
+        "fb9c16a1-8a99-585a-abee-c5869052f50f"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -167142,7 +167142,7 @@
         "b9994181-63a7-5869-b713-2a619339f314",
         "01b5d1e0-dbf4-55c5-9258-629ec886a99c",
         "76858496-cf7a-57b0-a076-283a91b491e5",
-        "b22666df-064a-58ae-9bd2-9e1d6d1a566f"
+        "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -167608,12 +167608,12 @@
       "relatedTourIds": [
         "b22666df-064a-58ae-9bd2-9e1d6d1a566f",
         "e205b670-1574-5402-9f44-6bb2122d91e7",
+        "734e5f61-f82f-52b1-ab20-4639a5c99d3a",
         "9ce70403-81e1-566e-8288-349f2be37e9c",
         "7ed84c6e-2698-572e-901f-4fc13969845a",
         "e947bf9e-d324-5d18-afa7-f0f43ea024bc",
         "fb9c16a1-8a99-585a-abee-c5869052f50f",
-        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
-        "fd4761f2-de44-5088-b631-42d5b85fc9ba"
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -167668,10 +167668,10 @@
         "d9c541b5-73ef-59a8-9c88-e66f6a62b854",
         "d4fac7bb-ea1f-541d-bd5d-b72531980ac1",
         "14e01635-4715-545b-bb64-ddaffda41f82",
+        "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
         "df28f59a-1734-5ea0-a505-aa939a414eba",
         "37f20d89-88ab-523e-a780-59653982d91b",
-        "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4",
-        "76858496-cf7a-57b0-a076-283a91b491e5"
+        "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -167724,13 +167724,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "9f3aa784-002e-5e43-bad3-c68e2a88b022",
+        "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
         "9a0ad257-6e04-573e-a0e5-19d385309440",
         "675cff67-7f73-543a-8339-61b55d4a8ec8",
         "a5eb1d6b-ccab-5826-9248-9fce4540e318",
         "8efa1abc-1274-475f-89ee-c506bb72f1ea",
         "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
-        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
-        "32f44df2-481b-5605-9957-16456e666803"
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -167781,7 +167781,16 @@
       "centroidLongitude": 9.9098111,
       "city": "Lerici",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "5a393da6-b959-5866-a4dd-6c3d7df62f2b",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "8587bca7-d0e8-55fe-a2c4-69fc3cf96cc7",
+        "69d08739-f300-56b7-8c41-67f1e08b745b",
+        "59c9eb6b-ddd3-5811-a779-ec4884fd90ba",
+        "e0566808-f11e-53bb-9beb-0f853d45f3be",
+        "df28f59a-1734-5ea0-a505-aa939a414eba",
+        "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -167830,7 +167839,16 @@
       "centroidLongitude": 9.1751259,
       "city": "Camogli",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "5a01f367-5ded-54b3-9f65-6587be265184",
+        "9d8991ce-07d9-5938-99fd-efe3258886f9",
+        "27eea851-bb35-5012-8076-f825aaf991cf",
+        "e205b670-1574-5402-9f44-6bb2122d91e7",
+        "734793f0-1df7-51c2-ac12-6506dd88681e",
+        "9ce70403-81e1-566e-8288-349f2be37e9c",
+        "c9f3078e-7d07-5530-aef1-e4cf255b9e09",
+        "e25e5718-6f18-4f7c-8d5a-174662f1a953"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -167878,7 +167896,16 @@
       "centroidLongitude": 8.9291972,
       "city": "Genoa",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
+        "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
+        "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4",
+        "3a204992-9c15-5d46-849a-8b5ec49e3729",
+        "74a84ae4-100b-538d-952d-d37259e970a3",
+        "6751d279-8123-552e-a43d-9980dcd7c0e0",
+        "81cd2cae-8115-5bd1-b9cc-bda95a7a8320",
+        "0e585845-3bdb-5ffd-8da1-b9db2d7d2daf"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Notable Building",
@@ -167927,7 +167954,16 @@
       "centroidLongitude": 9.344993,
       "city": "Lavagna",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "2563ece9-6a6b-59f7-95a7-b9a7398e4b6b",
+        "e0566808-f11e-53bb-9beb-0f853d45f3be",
+        "34b8104f-318d-5276-bf7d-04e933deebe9",
+        "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4",
+        "f6a5df9e-d256-5475-a01b-0b90901d5fc0",
+        "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
+        "47bc0a50-cd97-5013-9d84-352523ee74e6",
+        "70a01d74-8edf-5f78-9d8b-a05850c0299a"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Museum",
@@ -167975,7 +168011,16 @@
       "centroidLongitude": 7.7236764,
       "city": "Ospedaletti",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
+        "37f20d89-88ab-523e-a780-59653982d91b",
+        "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
+        "70a01d74-8edf-5f78-9d8b-a05850c0299a",
+        "26a5bcfb-6a0d-5ba0-9a0e-d1cf26abdf06",
+        "b9994181-63a7-5869-b713-2a619339f314",
+        "aafc8126-49f3-5425-a79d-ef1523406c01",
+        "724D5D8E-2BFC-5F9F-86B0-5DC7A831109C"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Museum",
@@ -168020,7 +168065,16 @@
       "centroidLongitude": 9.9292254,
       "city": "Lerici",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "e947bf9e-d324-5d18-afa7-f0f43ea024bc",
+        "734e5f61-f82f-52b1-ab20-4639a5c99d3a",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "81cd2cae-8115-5bd1-b9cc-bda95a7a8320",
+        "d9c541b5-73ef-59a8-9c88-e66f6a62b854",
+        "710FD756-0FF3-5A99-93D1-7B8F305F494A",
+        "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4",
+        "675cff67-7f73-543a-8339-61b55d4a8ec8"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Religious Building",
