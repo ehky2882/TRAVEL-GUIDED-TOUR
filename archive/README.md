@@ -414,3 +414,4 @@ Full text for every one of them is in
 - [HANDOFF-261126-tuscany.md](HANDOFF-261126-tuscany.md) — **Tuscany batch:** Atlas Studio SIE (71st studio) launches with 3 singles, plus 2 Florence-area singles for FLR; 1 new architect tag; Gamberaia pin moved onto the villa; no place questions.
 - [HANDOFF-261126-liguria.md](HANDOFF-261126-liguria.md) — **Liguria batch:** Atlas Studio GOA (72nd studio) launches with 6 singles along the Ligurian coast; Tellaro and Villa Rezzola pins moved onto their subjects; no architect tags, no place questions.
 - [HANDOFF-261126-piedmont.md](HANDOFF-261126-piedmont.md) — **Piedmont batch:** Atlas Studio PIE (73rd studio) launches with 5 singles across Piedmont; no architect tags; no place questions.
+- [HANDOFF-261126-lombardy.md](HANDOFF-261126-lombardy.md) — **Lombardy batch:** Atlas Studio LOM (74th studio) launches with 16 singles, MIL +3; 7 new architect tags; one place question (Villa Necchi).

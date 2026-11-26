@@ -5851,6 +5851,16 @@
       "websiteURL": null
     },
     {
+      "id": "0050f2e3-ec73-5205-9eaa-7ab9c795f79a",
+      "displayName": "Atlas Studio LOM",
+      "platform": "dozent",
+      "handle": "atlas.lom",
+      "avatarURL": null,
+      "avatarEmoji": "🇮🇹",
+      "bio": "Atlas Studio's Lombardy bureau, out from Milan: villas on the lakes of Como and Lugano and a houseboat by the architects of the Torre Velasca; a Roman tower painted by Lombard nuns; rooms made of light at Varese; an iron arch over the Adda and the ferry that crosses it with no engine; a royal palace at Monza; and a newsstand in Mantua that was asked to move.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -168390,6 +168400,965 @@
         "Architecture",
         "Literature",
         "Iconic Landmark",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "da55d9d7-0fd8-5e1c-979c-2b08c249f98f",
+      "createdAt": "2026-11-26",
+      "title": "Villa Necchi Campiglio",
+      "shortDescription": "In the middle of Milan, behind a garden wall, a family of sewing-machine makers built themselves a heated swimming pool in the nineteen…",
+      "longDescription": "In the middle of Milan, behind a garden wall, a family of sewing-machine makers built themselves a heated swimming pool in the nineteen thirties. It was only the second pool in the whole city.\n\nIt was built between nineteen thirty-two and nineteen thirty-five by the architect Piero Portaluppi, for two sisters, Nedda and Gigina Necchi, and Gigina's husband, Angelo Campiglio. They came from Pavia, and they'd done very well out of enamelled cast iron and sewing machines. They wanted everything new: a lift, a dumbwaiter, intercoms, telephones in the rooms, and the pool, the first in Milan on private land. Money, it's fair to say, was not the problem.",
+      "makerId": "a875e649-d154-5f8c-b9fc-540691f0960a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mil-villa-necchi-campiglio_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mil-villa-necchi-campiglio_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mil-villa-necchi-campiglio_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mil-villa-necchi-campiglio_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mil-villa-necchi-campiglio_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9d482f82-8c6b-55b3-bec7-d26155696495",
+          "order": 0,
+          "title": "Villa Necchi Campiglio",
+          "caption": "In the garden on Via Mozart, the long blue pool in front of you and the pale house beyond it.",
+          "latitude": 45.4685445,
+          "longitude": 9.2017828,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mil-villa-necchi-campiglio.mp3",
+          "audioDurationSeconds": 128,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mil-villa-necchi-campiglio_hero.webp",
+          "transcriptText": "In the middle of Milan, behind a garden wall, a family of sewing-machine makers built themselves a heated swimming pool in the nineteen thirties. It was only the second pool in the whole city.\n\nYou're in the garden on Via Mozart, a few streets from the centre. In front of you is the pool, long and blue, and beyond it a pale, flat-fronted house with tall windows and a terrace, set well back from the street, as if it would rather not be noticed.\n\nIt was built between nineteen thirty-two and nineteen thirty-five by the architect Piero Portaluppi, for two sisters, Nedda and Gigina Necchi, and Gigina's husband, Angelo Campiglio. They came from Pavia, and they'd done very well out of enamelled cast iron and sewing machines. They wanted everything new: a lift, a dumbwaiter, intercoms, telephones in the rooms, and the pool, the first in Milan on private land. Money, it's fair to say, was not the problem.\n\nHave a look at the clean lines of the house. That's Portaluppi, and the brand-new taste for stripped-back modern design. Then, from nineteen thirty-eight, the family asked Tomaso Buzzi to soften it, and inside some rooms turned eighteenth-century and frilly. The house wears both styles at once, which I rather enjoy.\n\nThere are darker chapters too. During the war the family left, and the house was requisitioned as the home of Alessandro Pavolini, one of the leaders of the last Fascist government. After that the British moved in, then the Dutch consul, before the family got it back.\n\nAnd here's the thing. The sisters had no children, and they worried about what would become of it. So they left it to be opened to the public, exactly as they'd lived in it. It opened in May two thousand and eight, and film-makers have loved it ever since. Luca Guadagnino shot I Am Love here, and Ridley Scott used it in House of Gucci.\n\nBefore you leave, step into the winter garden, the glass veranda full of plants, and look for the little guest room kept for a prince who designed sets for La Scala. Then walk out past the tennis court, and look back at how quiet the house manages to be."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 128,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.4685445,
+      "centroidLongitude": 9.2017828,
+      "city": "Milan",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Museum",
+        "Architecture",
+        "Art Deco",
+        "Modernist",
+        "Designed by a Master",
+        "Piero Portaluppi",
+        "Tomaso Buzzi"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "062b82b1-fea3-5cae-85e5-c612cf1f9550",
+      "createdAt": "2026-11-26",
+      "title": "San Siro Racecourse and Leonardo's Horse | Ippodromo San Siro e il Cavallo di Leonardo",
+      "shortDescription": "Leonardo da Vinci spent years on a horse that was never cast. Five hundred years later, somebody finished the job.",
+      "longDescription": "Leonardo da Vinci spent years on a horse that was never cast. Five hundred years later, somebody finished the job.\n\nIn fourteen eighty-two Ludovico Sforza, Il Moro, Duke of Milan, asked Leonardo to make the largest equestrian statue in the world, in honour of his father, Francesco Sforza. Leonardo worked on it for years, and in fourteen ninety-three a full-size clay model went on show in Milan. The bronze was set aside to cast it. Then war came. The metal went to make cannon, and when the French took the city in fourteen ninety-nine, their soldiers used the clay horse for target practice until there was nothing left.",
+      "makerId": "a875e649-d154-5f8c-b9fc-540691f0960a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mil-san-siro-leonardos-horse_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mil-san-siro-leonardos-horse_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mil-san-siro-leonardos-horse_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mil-san-siro-leonardos-horse_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "235fc421-4e7d-5468-8c67-7037a3374ea3",
+          "order": 0,
+          "title": "San Siro Racecourse and Leonardo's Horse | Ippodromo San Siro e il Cavallo di Leonardo",
+          "caption": "On Piazzale dello Sport, the bronze horse on its plinth and the racecourse behind it.",
+          "latitude": 45.4810098,
+          "longitude": 9.1296749,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mil-san-siro-leonardos-horse.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mil-san-siro-leonardos-horse_hero.webp",
+          "transcriptText": "Leonardo da Vinci spent years on a horse that was never cast. Five hundred years later, somebody finished the job.\n\nPiazzale dello Sport, outside the racecourse at San Siro. In front of you, on its plinth, is a bronze horse a little over seven metres tall, caught mid-stride.\n\nIn fourteen eighty-two Ludovico Sforza, Il Moro, Duke of Milan, asked Leonardo to make the largest equestrian statue in the world, in honour of his father, Francesco Sforza. Leonardo worked on it for years, and in fourteen ninety-three a full-size clay model went on show in Milan. The bronze was set aside to cast it. Then war came. The metal went to make cannon, and when the French took the city in fourteen ninety-nine, their soldiers used the clay horse for target practice until there was nothing left.\n\nThat might have been the end of it. But in nineteen seventy-seven an American called Charles Dent set out to make it. He spent years raising money and died in nineteen ninety-four before it was done. The supermarket owner Frederik Meijer took on the cost, on one condition: there would be two horses, one for Milan and one for his gardens in Michigan. The sculptor Nina Akamu shaped it, and the horse was unveiled here in September nineteen ninety-nine.\n\nSo it's not quite Leonardo's horse, and it never could be. It's a promise kept by strangers, five centuries late, and I think that's rather lovely.\n\nThe racecourse behind it opened in nineteen twenty, designed by Paolo Vietti-Violi, and its buildings are full of Liberty-style detail. The area around the horse, and the small gallery about the racecourse, are free to visit every day.\n\nIf you've the time, follow the self-guided trail round the grounds. There are seven markers to find, and a botanical park with more than seventy species of trees. Look out for the Palazzina del Peso, the old weighing house, one of the original Liberty buildings."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.4810098,
+      "centroidLongitude": 9.1296749,
+      "city": "Milan",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Monument",
+        "Art",
+        "History",
+        "Public Art",
+        "Free to Visit",
+        "Designed by a Master",
+        "Paolo Vietti-Violi"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5648c7aa-a09e-54f3-b66e-d8f610b10745",
+      "createdAt": "2026-11-26",
+      "title": "Palazzo Mondadori",
+      "shortDescription": "No two of these arches are the same. Look along the row and you'll see it straight away.",
+      "longDescription": "No two of these arches are the same. Look along the row and you'll see it straight away.\n\nIt's the headquarters of the publisher Mondadori, and it exists because of a trip to Brazil. Between nineteen fifty and nineteen sixty-five the company's staff grew from about three hundred and thirty to three thousand, and it badly needed a new home. In nineteen sixty-five Giorgio Mondadori saw Oscar Niemeyer's Foreign Ministry in Brasília, the Itamaraty, and in nineteen sixty-eight he asked Niemeyer to design one for him. It was built between nineteen seventy and nineteen seventy-five.",
+      "makerId": "a875e649-d154-5f8c-b9fc-540691f0960a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mil-palazzo-mondadori_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mil-palazzo-mondadori_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mil-palazzo-mondadori_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mil-palazzo-mondadori_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mil-palazzo-mondadori_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "884c2e3b-0d58-5133-acb4-4435f8f9443e",
+          "order": 0,
+          "title": "Palazzo Mondadori",
+          "caption": "Beside the water on Via Arnoldo Mondadori, the glass block hanging inside its white arches.",
+          "latitude": 45.4718096,
+          "longitude": 9.2989512,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mil-palazzo-mondadori.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mil-palazzo-mondadori_hero.webp",
+          "transcriptText": "No two of these arches are the same. Look along the row and you'll see it straight away.\n\nVia Arnoldo Mondadori, on the eastern edge of Milan, with the airport not far away. Across the water in front of you, a long glass building hangs inside a line of tall white concrete arches, and to either side are two low buildings with curving walls, one round, one shaped rather like a leaf. This is a working office, so you're looking from outside, which is how it was meant to be seen.\n\nIt's the headquarters of the publisher Mondadori, and it exists because of a trip to Brazil. Between nineteen fifty and nineteen sixty-five the company's staff grew from about three hundred and thirty to three thousand, and it badly needed a new home. In nineteen sixty-five Giorgio Mondadori saw Oscar Niemeyer's Foreign Ministry in Brasília, the Itamaraty, and in nineteen sixty-eight he asked Niemeyer to design one for him. It was built between nineteen seventy and nineteen seventy-five.\n\nNow have a look at how the glass block sits. It doesn't stand on the ground at all. Five floors of offices, two hundred metres long, are hung from the arches above, a system the engineer Bruno Contarini worked out when the first scheme wouldn't stand up. And the arches themselves change their rhythm as they go. Niemeyer was rather pleased about that. Nobody, he said, had ever seen a colonnade where the arches were all different from each other.\n\nThe water is part of the design too, about twenty thousand square metres of it, set in a park by the landscape architect Pietro Porcinai.\n\nAnd here's the thing. Niemeyer called this advertising architecture. It needs no sign, because the building is the sign. A publisher's name, written in concrete, for everyone driving past on the way to the airport.\n\nBefore you go, look out in the water for the tall steel sculpture by Arnaldo Pomodoro, the Column of Large Sheets, which is about the power of communication. Then walk a little way along the road and watch the arches shift as you move."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.4718096,
+      "centroidLongitude": 9.2989512,
+      "city": "Segrate",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Modernist",
+        "Engineering",
+        "Designed by a Master",
+        "Oscar Niemeyer",
+        "Pietro Porcinai"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "31c2e35c-6767-5da9-99b2-d30e2698a26d",
+      "createdAt": "2026-11-26",
+      "title": "Villa del Balbianello",
+      "shortDescription": "The man who left this villa to Italy had been to the North Pole and up Everest. He asked to end up in the garden.",
+      "longDescription": "The man who left this villa to Italy had been to the North Pole and up Everest. He asked to end up in the garden.\n\nThere was a Franciscan convent on this point from the thirteenth century. Then, at the end of the seventeen hundreds, Cardinal Angelo Maria Durini made it into a retreat for pleasure and for literature, and this loggia was his great idea, with a music room on one side and a library on the other.",
+      "makerId": "0050f2e3-ec73-5205-9eaa-7ab9c795f79a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-del-balbianello_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-del-balbianello_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-del-balbianello_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-del-balbianello_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-del-balbianello_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-del-balbianello_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "dabe29fa-8c81-5912-b2ab-735d05125089",
+          "order": 0,
+          "title": "Villa del Balbianello",
+          "caption": "In the loggia at the tip of the Lavedo peninsula, with the lake on both sides of you.",
+          "latitude": 45.9654024,
+          "longitude": 9.202503,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lom-villa-del-balbianello.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-del-balbianello_hero.webp",
+          "transcriptText": "The man who left this villa to Italy had been to the North Pole and up Everest. He asked to end up in the garden.\n\nAt the tip of the Lavedo peninsula, find the loggia, the open gallery on the highest point of the garden, with lake on both sides of you. Its columns are smothered in creeping fig, and set into the floor at your feet is an inlaid compass rose.\n\nThere was a Franciscan convent on this point from the thirteenth century. Then, at the end of the seventeen hundreds, Cardinal Angelo Maria Durini made it into a retreat for pleasure and for literature, and this loggia was his great idea, with a music room on one side and a library on the other.\n\nThe villa went through several owners after him, but the one who matters most arrived in nineteen seventy-four. Guido Monzino was a Milanese businessman and an explorer. He led expeditions to the Arctic, including one to the North Pole in nineteen seventy-one, and in nineteen seventy-three he led the Italian expedition that put climbers on the summit of Everest. Up in the attic is his Museum of Expeditions: flags, photographs, the sledge from the North Pole, and around three hundred small Inuit carvings, the largest collection of Inuit ivories outside Greenland.\n\nNow have a look at the trees. The plane trees by the jetty are pruned into candelabra. And the big holm oak was clipped into an umbrella so that Monzino could see Monte Legnone from his study window. The gardeners still do it, climbing up in harnesses.\n\nMonzino died without heirs in nineteen eighty-eight, and left the villa so that it could be opened to the public. If it looks familiar, that's because film crews love it. It's been a backdrop for Star Wars and for James Bond in Casino Royale.\n\nBefore you go, look for the old ice house among the rocks of the park. That's where he asked for his ashes to be laid, which seems about right for a man who spent so much of his life on the ice."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.9654024,
+      "centroidLongitude": 9.202503,
+      "city": "Tremezzina",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Notable Building",
+        "Park",
+        "Museum",
+        "History",
+        "Green Escape",
+        "Waterfront",
+        "Viewpoint",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f2327db9-9976-5ae5-97a6-8ddea6d7aa78",
+      "createdAt": "2026-11-26",
+      "title": "Villa Carlotta",
+      "shortDescription": "This villa has had a great many owners, and one wedding present. The wedding present is the one whose name stuck.",
+      "longDescription": "This villa has had a great many owners, and one wedding present. The wedding present is the one whose name stuck.\n\nIt was built at the end of the sixteen hundreds for the Clerici family of Milan. In eighteen oh one it was bought by Giovanni Battista Sommariva, a politician of Napoleon's Cisalpine Republic and a very serious collector. He's the reason the inside is full of sculpture.",
+      "makerId": "0050f2e3-ec73-5205-9eaa-7ab9c795f79a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-carlotta_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-carlotta_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-carlotta_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-carlotta_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-carlotta_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a411b425-74c1-5c49-8c3d-1f416b077c3c",
+          "order": 0,
+          "title": "Villa Carlotta",
+          "caption": "At the lakeside gates in Tremezzo, the villa above you on its terrace and the lake at your back.",
+          "latitude": 45.9860014,
+          "longitude": 9.2306504,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lom-villa-carlotta.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-carlotta_hero.webp",
+          "transcriptText": "This villa has had a great many owners, and one wedding present. The wedding present is the one whose name stuck.\n\nFrom the lakeside gates on the road at Tremezzo, look up. The villa sits above you on its terrace, with the garden spreading out on either side and the lake at your back.\n\nIt was built at the end of the sixteen hundreds for the Clerici family of Milan. In eighteen oh one it was bought by Giovanni Battista Sommariva, a politician of Napoleon's Cisalpine Republic and a very serious collector. He's the reason the inside is full of sculpture.\n\nHave a look for three things. Canova's Palamedes, which has stood in its room since eighteen eighteen. A version of Canova's Cupid and Psyche, carved by his pupil Adamo Tadolini. And a long marble frieze by the Danish sculptor Thorvaldsen, The Entry of Alexander the Great into Babylon. Then, in the room named after him, Francesco Hayez's painting Romeo and Juliet's Last Kiss, from eighteen twenty-three, which is about as romantic as paint gets.\n\nNow the name. In eighteen forty-three the villa was bought by Princess Marianne of Prussia, and she gave it to her daughter Charlotte when she married Duke Georg of Saxe-Meiningen. Charlotte died young, in eighteen fifty-five, but the villa kept her name. Carlotta is simply Charlotte in Italian.\n\nAnd here's the thing. Sommariva filled the house, but it was the duke who made the garden. He took a hollow that people called the valley of brambles, ran a stream through it, and turned it into a valley of ferns. The rhododendrons and azaleas came later, and they're what most people come for now.\n\nSince nineteen twenty-seven the villa has been run by a public trust, and it's open to everyone.\n\nIf you're here in spring, mid-March to mid-April is when the rhododendrons are at their fullest. Whatever the season, though, find the Valley of Ferns. It's the duke's quiet answer to all that marble."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.9860014,
+      "centroidLongitude": 9.2306504,
+      "city": "Tremezzina",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Notable Building",
+        "Museum",
+        "Park",
+        "Art",
+        "Neoclassical",
+        "Green Escape",
+        "Waterfront"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e776f6a5-340f-544d-9435-399aa31c1ed6",
+      "createdAt": "2026-11-26",
+      "title": "La Velarca",
+      "shortDescription": "It's a house. It's a boat. And it was designed by the same people who gave Milan the Torre Velasca.",
+      "longDescription": "It's a house. It's a boat. And it was designed by the same people who gave Milan the Torre Velasca.\n\nThe hull is older than the house. It belonged to a working lake boat, the Corriera Tremezzina, nineteen metres long, which carried goods and passengers across Lake Como from nineteen eleven. In nineteen fifty-nine, the Milan architects BBPR, Banfi, Belgiojoso, Peressutti and Rogers, set a home on top of it. It was finished in nineteen sixty-one.",
+      "makerId": "0050f2e3-ec73-5205-9eaa-7ab9c795f79a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-la-velarca_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-la-velarca_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-la-velarca_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-la-velarca_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-la-velarca_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c865f8fb-5c11-58e7-98d6-6c55df55e6ec",
+          "order": 0,
+          "title": "La Velarca",
+          "caption": "On the shore at Ossuccio, by the long, low boat with a timber cabin on its deck.",
+          "latitude": 45.9684511,
+          "longitude": 9.1734548,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lom-la-velarca.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-la-velarca_hero.webp",
+          "transcriptText": "It's a house. It's a boat. And it was designed by the same people who gave Milan the Torre Velasca.\n\nOn the shore at Ossuccio, look for the long, low boat moored by the bank, with a timber cabin sitting on its deck like a small, very elegant shed. That's La Velarca, and the name is a little joke on the tower.\n\nThe hull is older than the house. It belonged to a working lake boat, the Corriera Tremezzina, nineteen metres long, which carried goods and passengers across Lake Como from nineteen eleven. In nineteen fifty-nine, the Milan architects BBPR, Banfi, Belgiojoso, Peressutti and Rogers, set a home on top of it. It was finished in nineteen sixty-one.\n\nThe idea came from Fiammetta and Emilio Norsa, who wanted somewhere on the lake to have their friends to stay. And what friends. Gio Ponti, the poet Eugenio Montale, the artist Lucio Fontana, Umberto Eco, and the architects themselves.\n\nHave a look at the round tower of teak in the middle. That's the staircase, wrapped in a cylinder, and it ties the whole thing together. Bedrooms and a sitting room at the bow, a kitchen and bathrooms along the sides, a study and another bedroom at the stern.\n\nWhat I like about it is how unserious it is, in the best way. The same studio was building a skyscraper in the middle of Milan, and on weekends they were fitting out a houseboat for their friends.\n\nThe family gave it away in twenty eleven, so that it could be seen by the public. The hull was beyond repair, so it was rebuilt at the Riva boatyard, and the interiors were restored from old photographs before it came back to its original mooring here.\n\nIf you fancy a walk, the Greenway path along the shore takes you to Villa del Balbianello in about half an hour. It's a lovely way to go from one house on the water to another, by land, past the boats."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.9684511,
+      "centroidLongitude": 9.1734548,
+      "city": "Tremezzina",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Modernist",
+        "Maritime",
+        "Waterfront",
+        "Hidden Gem",
+        "Designed by a Master",
+        "BBPR"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "24555fa1-551d-5ecf-a327-70ca3ee56d9b",
+      "createdAt": "2026-11-26",
+      "title": "Villa Fogazzaro Roi",
+      "shortDescription": "Every Italian schoolchild reads a novel set in this house. The house kept the evidence.",
+      "longDescription": "Every Italian schoolchild reads a novel set in this house. The house kept the evidence.\n\nThe writer was Antonio Fogazzaro, from Vicenza, who spent much of his life here. The house came down through his mother's family, and it became the setting for his best-known book, Piccolo mondo antico, The Little World of the Past, published in eighteen ninety-six. It's the story of Franco and Luisa Maironi, and much of it happens in these rooms.",
+      "makerId": "0050f2e3-ec73-5205-9eaa-7ab9c795f79a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-fogazzaro-roi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-fogazzaro-roi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-fogazzaro-roi_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-fogazzaro-roi_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-fogazzaro-roi_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-fogazzaro-roi_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-fogazzaro-roi_7.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-fogazzaro-roi_8.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2b7a2cc3-78c2-5dc5-8b06-5deb3c037711",
+          "order": 0,
+          "title": "Villa Fogazzaro Roi",
+          "caption": "In Oria on Lake Lugano, the villa on the water with its little terrace over the lake.",
+          "latitude": 46.0215415,
+          "longitude": 9.0332,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lom-villa-fogazzaro-roi.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-fogazzaro-roi_hero.webp",
+          "transcriptText": "Every Italian schoolchild reads a novel set in this house. The house kept the evidence.\n\nYou're in Oria, on the Italian shore of Lake Lugano, about ten kilometres from Lugano itself. The villa sits right on the water, with a hanging garden behind and a little terrace jutting out over the lake.\n\nThe writer was Antonio Fogazzaro, from Vicenza, who spent much of his life here. The house came down through his mother's family, and it became the setting for his best-known book, Piccolo mondo antico, The Little World of the Past, published in eighteen ninety-six. It's the story of Franco and Luisa Maironi, and much of it happens in these rooms.\n\nThat little terrace with the small cupola and the round iron table is Franco's terrace in the novel. The sweet olive in the hanging garden is in the book too. And the boat landing below the house is where the story reaches its saddest moment, when their little daughter Ombretta drowns.\n\nHave a look for Fogazzaro's writing desk. He wrote notes all over it, some on the very edges of the wood, and one of them records the day he finished the book, the eleventh of August, eighteen ninety-five: finished in tears. That same year his own son Mariano died of typhus, and there's a note on the desk to him as well.\n\nWhat I find rather moving is how little this place pretends. The rooms are small. There's a salon the family called Siberia, because it was impossible to heat. It's a real house that a great writer borrowed for a story, and then the story gave it back to us.\n\nHis great-nephew Giuseppe Roi, known as Boso, restored it and, in two thousand and nine, gave it away so that nothing would change after he'd gone. Visits are by guided tour.\n\nWhen you leave, stand out on the terrace for a moment and look across the water. That's the view Franco looked at, and the view Fogazzaro sat down to describe."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 46.0215415,
+      "centroidLongitude": 9.0332,
+      "city": "Valsolda",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "literature",
+      "tags": [
+        "Notable Building",
+        "Museum",
+        "Literature",
+        "Waterfront",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e5051402-b0c7-5bbb-9e66-421e4a3b5c9d",
+      "createdAt": "2026-11-26",
+      "title": "Buco del Piombo",
+      "shortDescription": "This cave is so big that people compare it to the Duomo of Milan. Wait until you see the front door.",
+      "longDescription": "This cave is so big that people compare it to the Duomo of Milan. Wait until you see the front door.\n\nThat's the first thing to have a look at. In the Middle Ages someone built a wall across the entrance and turned the cave into a fortress. You can still see the square holes in the rock where the beams of its floors once rested. For centuries the people of Erba came up here to hide, in times of war and of plague. Today the old building holds a small museum, a ticket office and a café.",
+      "makerId": "0050f2e3-ec73-5205-9eaa-7ab9c795f79a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-buco-del-piombo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-buco-del-piombo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-buco-del-piombo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-buco-del-piombo_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-buco-del-piombo_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3db6300b-f834-5486-b1cf-361eaa7381d5",
+          "order": 0,
+          "title": "Buco del Piombo",
+          "caption": "At the foot of the limestone cliff above Erba, the great cave mouth walled across ahead of you.",
+          "latitude": 45.8259406,
+          "longitude": 9.1989638,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lom-buco-del-piombo.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-buco-del-piombo_hero.webp",
+          "transcriptText": "This cave is so big that people compare it to the Duomo of Milan. Wait until you see the front door.\n\nYou're in the Valle Bova, above Crevenna, high over the town of Erba, at the foot of a sheer cliff of pale grey limestone. Ahead of you the cliff opens into an enormous mouth, forty-five metres high and thirty-eight wide, and set into it, like a cork in a bottle, is a stone building with windows.\n\nThat's the first thing to have a look at. In the Middle Ages someone built a wall across the entrance and turned the cave into a fortress. You can still see the square holes in the rock where the beams of its floors once rested. For centuries the people of Erba came up here to hide, in times of war and of plague. Today the old building holds a small museum, a ticket office and a café.\n\nThe name means the hole of lead. It isn't about any mine. Look at the walls inside the entrance and you'll see why: the limestone has been turned grey by the tiny living things growing on it, very much the colour of lead.\n\nLong before people, the cave belonged to bears. A whole layer of cave bear bones was found inside, and later the Romans used it too. By the nineteenth century it was a fashionable outing. The viceroy Eugène de Beauharnais came, and on the first of September eighteen eighty, so did Queen Margherita.\n\nWhat's worth knowing, standing here, is how close it came to being lost. It was shut for twelve years, tangled up in rockfalls and paperwork, and only opened again in May twenty twenty-four, with cavers leading the visits. Beyond the entrance run more than four hundred metres of passages, still not fully explored.\n\nCheck before you come, because visits are guided and not every day. And if you have time afterwards, follow the path down the Valle Bova. On the far side, hidden in the woods, is a much smaller cave, the Tamborin, where people lived thousands of years before the bears were forgotten."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.8259406,
+      "centroidLongitude": 9.1989638,
+      "city": "Erba",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Green Escape",
+        "History",
+        "Hidden Gem",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "23e1fa18-458f-5870-bc8e-b1aa790ed978",
+      "createdAt": "2026-11-26",
+      "title": "Villa Panza and the Panza Collection | Villa e Collezione Panza",
+      "shortDescription": "An old aristocratic villa, chandeliers and all, and in the stables, rooms made of nothing but light.",
+      "longDescription": "An old aristocratic villa, chandeliers and all, and in the stables, rooms made of nothing but light.\n\nIts history is a parade of owners. The Menafoglio family built it. In eighteen twenty-three it passed to Pompeo Litta, who had the architect Luigi Canonica enlarge it and turn the farm buildings into stables. In nineteen thirty-five it was bought by Ernesto Panza, and his son Giuseppe grew up here.",
+      "makerId": "0050f2e3-ec73-5205-9eaa-7ab9c795f79a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-e-collezione-panza_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-e-collezione-panza_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-e-collezione-panza_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-e-collezione-panza_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-e-collezione-panza_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-e-collezione-panza_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e799e827-d823-5d6a-b917-419d383f41d7",
+          "order": 0,
+          "title": "Villa Panza and the Panza Collection | Villa e Collezione Panza",
+          "caption": "On Piazza Litta on the hill of Biumo, the long, pale villa and its formal garden in front of you.",
+          "latitude": 45.8256485,
+          "longitude": 8.828856,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lom-villa-e-collezione-panza.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-e-collezione-panza_hero.webp",
+          "transcriptText": "An old aristocratic villa, chandeliers and all, and in the stables, rooms made of nothing but light.\n\nPiazza Litta, on the hill of Biumo above Varese. The long, pale villa in front of you looks exactly like what it is: a country house of the Milanese nobility, with a formal Italian garden in front and an English park beyond, more than thirty thousand square metres of it, looking out over the city.\n\nIts history is a parade of owners. The Menafoglio family built it. In eighteen twenty-three it passed to Pompeo Litta, who had the architect Luigi Canonica enlarge it and turn the farm buildings into stables. In nineteen thirty-five it was bought by Ernesto Panza, and his son Giuseppe grew up here.\n\nGiuseppe Panza became one of the great collectors of his century. From the nineteen fifties until his death in twenty ten he gathered more than two and a half thousand works of contemporary art, much of it American, and much of it about light and colour. Around a hundred and fifty pieces live here now.\n\nGo to the old stables first. That's where you'll find the work of Dan Flavin, who made art out of coloured fluorescent tubes, and this villa has the largest concentration of his work on permanent show anywhere. Alongside him are rooms by James Turrell and Robert Irwin, each one built for this house, each one a kind of small temple to light.\n\nAnd here's what I love about it. Upstairs, the rooms are still a home: Renaissance wedding chests, nineteenth-century furniture, African and pre-Columbian sculpture. Panza didn't empty the house to make a gallery. He let the eighteenth century and the twentieth sit in the same rooms and argue it out.\n\nHe and his wife Giovanna gave the villa away in nineteen ninety-six, so that the public could see it, and they kept living on the top floor.\n\nBefore you leave, walk out into the park and find the greenhouse. Inside it, Sean Scully has replaced the glass with panels of colour, so the plants and the light come through together."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.8256485,
+      "centroidLongitude": 8.828856,
+      "city": "Varese",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Contemporary",
+        "Park",
+        "Green Escape",
+        "Designed by a Master",
+        "Luigi Canonica"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7efd2038-8b5d-5652-ac25-e5b644b83371",
+      "createdAt": "2026-11-26",
+      "title": "Villa Della Porta Bozzolo",
+      "shortDescription": "Most villa gardens march straight out from the front door. This one runs off sideways, up the hill, and that's rather the point of it.",
+      "longDescription": "Most villa gardens march straight out from the front door. This one runs off sideways, up the hill, and that's rather the point of it.\n\nThe house began in the sixteenth century as a modest country place for a notary called Giroldino Della Porta, the founder of the family. Two hundred years later, his descendant Gian Angelo the Third married Isabella Giulini, in seventeen fourteen, and the couple decided the old place needed remaking. The terraces date from then. So does the fishpond up at the theatre, from seventeen twenty-three.",
+      "makerId": "0050f2e3-ec73-5205-9eaa-7ab9c795f79a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-della-porta-bozzolo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-della-porta-bozzolo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-della-porta-bozzolo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-della-porta-bozzolo_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0956cd19-f6bf-5f87-93ab-08a5d657f827",
+          "order": 0,
+          "title": "Villa Della Porta Bozzolo",
+          "caption": "On the parterre in front of the villa, facing the terraces that climb the hill.",
+          "latitude": 45.9070909,
+          "longitude": 8.7122197,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lom-villa-della-porta-bozzolo.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-della-porta-bozzolo_hero.webp",
+          "transcriptText": "Most villa gardens march straight out from the front door. This one runs off sideways, up the hill, and that's rather the point of it.\n\nFrom the parterre in front of the villa, turn to face the slope. A stone staircase climbs through four terraces, each with its balustrade and its statues, all the way up to a lawn framed by cypresses near the top of the hill. That lawn is called the theatre, and you're standing in the stalls.\n\nThe house began in the sixteenth century as a modest country place for a notary called Giroldino Della Porta, the founder of the family. Two hundred years later, his descendant Gian Angelo the Third married Isabella Giulini, in seventeen fourteen, and the couple decided the old place needed remaking. The terraces date from then. So does the fishpond up at the theatre, from seventeen twenty-three.\n\nInside, the walls were painted between seventeen twenty-four and seventeen twenty-six. Have a look for the ballroom, where painted landscapes open up the walls as if the room had no walls at all, and the gallery upstairs, full of sirens, nymphs and tritons. Then find the billiard room. It holds a rare example of a game called biribissi, an eighteenth-century gamble that's been described as the ancestor of roulette.\n\nAnd here's the thing. This was never just a pleasure house. Downstairs and round the back are the working buildings: an ice house, a spinning mill for silk, a cellar of old barrels, and a huge wooden wine press from the sixteenth century. A villa of delight, yes, but one that still had to pay its way.\n\nIn the late eighteen hundreds the house went to Senator Camillo Bozzolo, a doctor who'd fought with Garibaldi, and in nineteen eighty-nine his heirs gave it away, so that it could be opened to the public.\n\nWhen you've done the rooms, climb all the way up to the theatre and keep going. A path leads on into the woods to a viewpoint over the Valcuvia, with the little fifteenth-century church of San Bernardino close by."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.9070909,
+      "centroidLongitude": 8.7122197,
+      "city": "Casalzuigno",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "Park",
+        "History",
+        "Baroque",
+        "Green Escape",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9bd2129e-cbc5-54b1-9e65-46368da17006",
+      "createdAt": "2026-11-26",
+      "title": "Torba Monastery | Monastero di Torba",
+      "shortDescription": "This tower was built to keep the barbarians out. Then the barbarians moved in, and after them, the nuns.",
+      "longDescription": "This tower was built to keep the barbarians out. Then the barbarians moved in, and after them, the nuns.\n\nThe tower is the oldest thing here, part of a Roman fort built in the late fourth or fifth century, when this valley was a frontier. It's one of the rare pieces of late Roman military building to survive in the north of Italy. After the Romans came the Goths, the Byzantines and then the Lombards, and each of them used the fort in turn.",
+      "makerId": "0050f2e3-ec73-5205-9eaa-7ab9c795f79a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-monastero-di-torba_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-monastero-di-torba_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-monastero-di-torba_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-monastero-di-torba_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-monastero-di-torba_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "66e9e346-10f3-5e04-82dc-3a239b1a6692",
+          "order": 0,
+          "title": "Torba Monastery | Monastero di Torba",
+          "caption": "In the meadow, with the stone tower, the church and the old monastery all in view.",
+          "latitude": 45.7298131,
+          "longitude": 8.863451,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lom-monastero-di-torba.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-monastero-di-torba_hero.webp",
+          "transcriptText": "This tower was built to keep the barbarians out. Then the barbarians moved in, and after them, the nuns.\n\nStand in the meadow where you can see the whole group: the tall stone tower, the low church of Santa Maria beside it, and the old monastery buildings with their portico. Behind you is the wooded valley of the Olona.\n\nThe tower is the oldest thing here, part of a Roman fort built in the late fourth or fifth century, when this valley was a frontier. It's one of the rare pieces of late Roman military building to survive in the north of Italy. After the Romans came the Goths, the Byzantines and then the Lombards, and each of them used the fort in turn.\n\nIn the eighth century, Benedictine nuns arrived and turned the tower into a chapel. Climb to the second floor and you'll find what they painted: Christ blessing, with angels, the Virgin and Child, and along one wall a procession of nuns in prayer. One of the women buried in the tower has a name that's unmistakably Lombard, Aliberga. The church next door has an eighth-century crypt beneath it.\n\nHere's the thing about Torba. It's a place that kept changing its mind about what it was for. Fort, convent, and then, after the nuns left for good in the fourteen eighties and Napoleon closed what remained, a farm. The church became a store for carts. The frescoes vanished under fresh plaster.\n\nIt was rescued in the nineteen seventies by Giulia Maria Crespi, a Milanese campaigner for Italy's heritage, who bought it so that it could be saved and opened to the public. Since twenty eleven it's been part of the UNESCO site for the Lombards in Italy, together with Castelseprio up the hill.\n\nBefore you go, step into the church to see its newest addition, an altar designed and given by the architect Mario Botta in twenty twenty-five. Then, if you've the time, take the path up through the woods to the ruins of Castelseprio, which is the other half of the story."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7298131,
+      "centroidLongitude": 8.863451,
+      "city": "Gornate Olona",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Tower",
+        "History",
+        "Faith",
+        "Art",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2c6b943b-b454-553e-b220-969a3336a690",
+      "createdAt": "2026-11-26",
+      "title": "The Macchi House and Shop | Casa ed Emporio Macchi",
+      "shortDescription": "Somebody left the coffee pot on the stove, and a pipe on the table between the armchairs. They've been left exactly where they were.",
+      "longDescription": "Somebody left the coffee pot on the stove, and a pipe on the table between the armchairs. They've been left exactly where they were.\n\nIn eighteen ninety-eight it became the property of Adele Bottelli, the wife of Giuseppe Macchi, and the family lived in it for three generations. The last of them was Maria Luisa Macchi, who lived here with her family for most of the twentieth century. In twenty fifteen she left it, so that it could be opened to the public, with its original furniture and a family archive of letters, photographs, diaries and postcards that runs from the Risorgimento to the Second World War.",
+      "makerId": "0050f2e3-ec73-5205-9eaa-7ab9c795f79a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-casa-macchi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-casa-macchi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-casa-macchi_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-casa-macchi_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-casa-macchi_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-casa-macchi_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-casa-macchi_7.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-casa-macchi_8.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8ca2c9c8-39bd-56f7-8e0d-e7867b2d8fd2",
+          "order": 0,
+          "title": "The Macchi House and Shop | Casa ed Emporio Macchi",
+          "caption": "On Piazza Sant'Ambrogio in Morazzone, the house with the little turret below the church tower.",
+          "latitude": 45.7649589,
+          "longitude": 8.8314142,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lom-casa-macchi.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-casa-macchi_hero.webp",
+          "transcriptText": "Somebody left the coffee pot on the stove, and a pipe on the table between the armchairs. They've been left exactly where they were.\n\nPiazza Sant'Ambrogio, Morazzone, right in the shadow of the church tower. The house in front of you has two floors and a little turret, a typical bit of nineteenth-century Lombard building. It isn't a farmhouse and it isn't a palace. That, as it turns out, is exactly why it matters.\n\nIn eighteen ninety-eight it became the property of Adele Bottelli, the wife of Giuseppe Macchi, and the family lived in it for three generations. The last of them was Maria Luisa Macchi, who lived here with her family for most of the twentieth century. In twenty fifteen she left it, so that it could be opened to the public, with its original furniture and a family archive of letters, photographs, diaries and postcards that runs from the Risorgimento to the Second World War.\n\nSo most of what's here isn't grand at all. It's the ordinary stuff of a comfortable family in a small village, kept in place down to the smallest detail, as if everyone had just stepped out.\n\nAnd I think that's what's rather brave about it. Heritage usually means the exceptional: the castle, the chapel, the famous painting. This is a museum of the unexceptional, and it turns out that's the thing almost nobody keeps.\n\nBefore you go, step into the shop on the square, the Emporio di Casa Macchi. There's been a shop on this piazza since the eighteen hundreds, and until nineteen seventy-five this square and the old main street held twenty-five shops and workshops between them. The Emporio has been fitted out with the counters and shelves of an old Milanese grocer's, and what you buy there helps keep the house going."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7649589,
+      "centroidLongitude": 8.8314142,
+      "city": "Morazzone",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Museum",
+        "History",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "15b6cba8-daa1-501b-b1ce-2b207df9350b",
+      "createdAt": "2026-11-26",
+      "title": "Palazzo Moroni",
+      "shortDescription": "From the street it's a fairly sober front on a steep lane. Behind it is the largest private garden in Bergamo's upper town.",
+      "longDescription": "From the street it's a fairly sober front on a steep lane. Behind it is the largest private garden in Bergamo's upper town.\n\nThe palace was built in the middle of the sixteen hundreds by Francesco Moroni, to show the world how far his family had risen, and the Moronis lived in it for almost four centuries.",
+      "makerId": "0050f2e3-ec73-5205-9eaa-7ab9c795f79a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-palazzo-moroni_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-palazzo-moroni_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-palazzo-moroni_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-palazzo-moroni_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-palazzo-moroni_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "20686de8-18e5-5d32-8538-55e5b61c36f8",
+          "order": 0,
+          "title": "Palazzo Moroni",
+          "caption": "In the courtyard of honour off Via Porta Dipinta, the grotto fountain and the gardens above it.",
+          "latitude": 45.7034916,
+          "longitude": 9.6678301,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lom-palazzo-moroni.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-palazzo-moroni_hero.webp",
+          "transcriptText": "From the street it's a fairly sober front on a steep lane. Behind it is the largest private garden in Bergamo's upper town.\n\nYou're on Via Porta Dipinta, in the Città Alta. Go in through the entrance and stop in the courtyard of honour. In front of you is a nymphaeum, a grotto-like fountain, and above it the first of the gardens climbing away up the hill.\n\nThe palace was built in the middle of the sixteen hundreds by Francesco Moroni, to show the world how far his family had risen, and the Moronis lived in it for almost four centuries.\n\nClimb the grand staircase and look up. The painter Gian Giacomo Barbelli covered it with the tale of Cupid and Psyche, and he went on to paint the main rooms. In one of them, the Hall of the Giants, the figures seem to break straight through the ceiling. Another tells the story of Jerusalem Delivered, the great Renaissance poem of the Crusades.\n\nThen find the Hall of the Golden Age. It holds portraits by Giovan Battista Moroni, one of the finest portrait painters of the Renaissance, and the best known is the Knight in Pink, a young man called Gian Gerolamo Grumelli, signed and dated fifteen sixty. He stands there in rose-coloured silk looking entirely pleased with himself, and frankly he's entitled to.\n\nAnd then go outside, because the garden is the real surprise. Formal terraces climb against the hill of Sant'Eufemia, and above them is the ortaglia, almost two hectares of kitchen garden, meadow and fruit trees, added in the seventeen and eighteen hundreds. A working farm, inside the walls of a hilltop city.\n\nIn twenty nineteen the foundation that had cared for the palace passed it on, so that it could be restored and opened to visitors.\n\nIf you've the legs, climb right up through the ortaglia to the top. From there you look down over the roofs of the Città Alta, and you realise how much green this city has been keeping behind its walls."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7034916,
+      "centroidLongitude": 9.6678301,
+      "city": "Bergamo",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Notable Building",
+        "Museum",
+        "Art",
+        "Baroque",
+        "Park",
+        "Green Escape",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f764d704-7116-5198-a01a-540a97860d81",
+      "createdAt": "2026-11-26",
+      "title": "San Michele Bridge | Ponte San Michele",
+      "shortDescription": "Eighty-five metres above the river, the trains run underneath the cars.",
+      "longDescription": "Eighty-five metres above the river, the trains run underneath the cars.\n\nIt was built between eighteen eighty-seven and eighteen eighty-nine by the Società Nazionale delle Officine di Savigliano, to a design by their head engineer, a Swiss called Jules Röthlisberger. It's two hundred and sixty-six metres long. The arch spans a hundred and fifty. About four hundred and seventy men put it together from around two and a half thousand tonnes of iron, all of it riveted. There isn't a weld anywhere.",
+      "makerId": "0050f2e3-ec73-5205-9eaa-7ab9c795f79a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-ponte-san-michele_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-ponte-san-michele_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-ponte-san-michele_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-ponte-san-michele_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-ponte-san-michele_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7457ecaa-45ff-5c64-89d0-852266eae971",
+          "order": 0,
+          "title": "San Michele Bridge | Ponte San Michele",
+          "caption": "On the walkway or the bank of the Adda, the iron arch leaping the gorge in front of you.",
+          "latitude": 45.6826333,
+          "longitude": 9.4524479,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lom-ponte-san-michele.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-ponte-san-michele_hero.webp",
+          "transcriptText": "Eighty-five metres above the river, the trains run underneath the cars.\n\nFrom the bank of the Adda, or from the walkway on the bridge itself, take in the whole span. One great iron arch leaps the gorge between Paderno and Calusco, and the deck sits on top of it like a long straight shelf. Look closely and you'll see there are two decks. The road runs along the top, with a footpath either side. The railway runs through the level below.\n\nIt was built between eighteen eighty-seven and eighteen eighty-nine by the Società Nazionale delle Officine di Savigliano, to a design by their head engineer, a Swiss called Jules Röthlisberger. It's two hundred and sixty-six metres long. The arch spans a hundred and fifty. About four hundred and seventy men put it together from around two and a half thousand tonnes of iron, all of it riveted. There isn't a weld anywhere.\n\nIf that sounds like something Gustave Eiffel might have done, you're not wrong. It belongs to exactly the same moment as his great iron bridges in France and Portugal, and as the Eiffel Tower itself.\n\nAnd here's the thing worth knowing. This isn't a monument you look at. It's a working bridge, well over a hundred and thirty years old, still carrying a railway line. In September twenty eighteen it was closed overnight after sensors picked up worrying readings. Walkers were back in March twenty nineteen, cars that November, and trains in September twenty twenty.\n\nThere was a plan to put it forward for UNESCO alongside its sister bridges abroad, but it was dropped in twenty twenty-four, because a new bridge is planned right next to this one. Enjoy it while it stands alone.\n\nFrom here, the paths along the Adda are the Ecomuseo Adda di Leonardo, the river Leonardo da Vinci knew. Follow the river a few kilometres upstream and you'll come to Imbersago, and a ferry that still crosses the Adda with no engine at all."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.6826333,
+      "centroidLongitude": 9.4524479,
+      "city": "Paderno d'Adda",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Bridge",
+        "Engineering",
+        "History",
+        "Viewpoint",
+        "Free to Visit",
+        "Designed by a Master",
+        "Jules Röthlisberger"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0af5ad78-98ec-5e5f-b2a5-70867bd69a3c",
+      "createdAt": "2026-11-26",
+      "title": "Leonardo's Ferry | Traghetto di Leonardo",
+      "shortDescription": "No engine, no fuel, and it's been taking people across this river for centuries.",
+      "longDescription": "No engine, no fuel, and it's been taking people across this river for centuries.\n\nHere's how it works. The ferry is tied to the cable, and the ferryman angles the boat against the current with its rudder. The river pushes on one side of the hull and simply shoves it across. He uses an iron pole to push off. It takes about five minutes, and it works because the river never stops.",
+      "makerId": "0050f2e3-ec73-5205-9eaa-7ab9c795f79a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-traghetto-di-leonardo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-traghetto-di-leonardo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-traghetto-di-leonardo_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f8db18ac-df26-5327-a779-0e435a53c777",
+          "order": 0,
+          "title": "Leonardo's Ferry | Traghetto di Leonardo",
+          "caption": "At the landing in Imbersago, the cable across the Adda and the wooden ferry hanging from it.",
+          "latitude": 45.7080775,
+          "longitude": 9.456243,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lom-traghetto-di-leonardo.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-traghetto-di-leonardo_hero.webp",
+          "transcriptText": "No engine, no fuel, and it's been taking people across this river for centuries.\n\nAt the landing in Imbersago, look out at the Adda. Stretched right across the water is a steel cable, and hanging from it is a wide wooden ferry, flat-decked, with a single ferryman aboard. On the far bank is Villa d'Adda, in another province.\n\nHere's how it works. The ferry is tied to the cable, and the ferryman angles the boat against the current with its rudder. The river pushes on one side of the hull and simply shoves it across. He uses an iron pole to push off. It takes about five minutes, and it works because the river never stops.\n\nIt's called Leonardo's ferry, and he did know this river well. He stayed downstream at Vaprio d'Adda with the Melzi family in the early fifteen hundreds, and there's a drawing of his, now in the Royal Collection at Windsor, of the Adda with a ferry tied to a cable. But to be honest, he didn't invent it. Ferries like this were common all along the river, and there were five on the Adda at one time. This is the one that survived.\n\nWhat's documented is that a cable crossing ran here by sixteen seventy-eight. The boat you're looking at is younger. The old one was taken out of service as unsafe in nineteen ninety-one, and Venetian shipwrights built an exact copy, which began crossing in May nineteen ninety-four. Pope John the Twenty-Third used this ferry on his pilgrimages to the sanctuary up the hill.\n\nSince the bridge at Brivio closed for works in twenty twenty-six, the ferry has gone back to being what it always was, a way to get to work.\n\nSo take the crossing, if it's running. Then, on the Imbersago side, walk up to the Santuario della Madonna del Bosco, the sanctuary the Pope was making for. It's worth the climb."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7080775,
+      "centroidLongitude": 9.456243,
+      "city": "Imbersago",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Waterfront",
+        "Maritime",
+        "Engineering",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b8dfe2b2-252d-5614-be2b-d95a201dc569",
+      "createdAt": "2026-11-26",
+      "title": "Royal Villa of Monza | Villa Reale di Monza",
+      "shortDescription": "Around seven hundred rooms, and the architect was given three years to finish them.",
+      "longDescription": "Around seven hundred rooms, and the architect was given three years to finish them.\n\nIn seventeen seventy-seven the commission went to the imperial architect Giuseppe Piermarini. The client was the Archduke Ferdinand of Habsburg, son of the Empress Maria Theresa and governor of Milan, who wanted a summer residence in the country. Piermarini delivered it in about three years.",
+      "makerId": "0050f2e3-ec73-5205-9eaa-7ab9c795f79a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-reale-di-monza_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-reale-di-monza_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-reale-di-monza_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-reale-di-monza_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d643daf9-04cf-551c-944b-41cd535b7b78",
+          "order": 0,
+          "title": "Royal Villa of Monza | Villa Reale di Monza",
+          "caption": "In the great courtyard, the palace wrapped round you in a long U and the park beyond.",
+          "latitude": 45.5935993,
+          "longitude": 9.2746365,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lom-villa-reale-di-monza.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-villa-reale-di-monza_hero.webp",
+          "transcriptText": "Around seven hundred rooms, and the architect was given three years to finish them.\n\nStand in the great courtyard in front of the main facade. The palace wraps round you in a long U, pale and calm, with the town of Monza behind you and the park beyond the building.\n\nIn seventeen seventy-seven the commission went to the imperial architect Giuseppe Piermarini. The client was the Archduke Ferdinand of Habsburg, son of the Empress Maria Theresa and governor of Milan, who wanted a summer residence in the country. Piermarini delivered it in about three years.\n\nThen the regimes changed and the palace changed with them. Napoleon's stepson, Eugène de Beauharnais, made it his residence as Viceroy of Italy, and that's when it became the Villa Reale, the Royal Villa. The vast park behind it was founded by decree of Napoleon himself in eighteen oh five. It's seven hundred and twenty hectares, one of the largest walled parks in Europe, and somewhere in it is the Formula One circuit.\n\nAfter unification it became the favourite house of King Umberto the First. And this is where the story turns. On the twenty-ninth of July, nineteen hundred, Umberto was shot dead in Monza by the anarchist Gaetano Bresci.\n\nHis son never forgave the place. Victor Emmanuel the Third closed the villa, and much of its furniture went off to Rome. It stayed shut, more or less, for a century, until the restoration that reopened it in twenty fourteen.\n\nInside, look for the royal apartments: the King's armoury and study, and Queen Margherita's sitting room and boudoir, and the billiard room with its tables by the cabinetmaker Giuseppe Maggiolini.\n\nWhen you come out, walk round to the rose garden, with about a thousand varieties, and then keep going into the park. On a weekday morning you can walk for an hour and hardly see another soul."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.5935993,
+      "centroidLongitude": 9.2746365,
+      "city": "Monza",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "Museum",
+        "Park",
+        "History",
+        "Power",
+        "Neoclassical",
+        "Designed by a Master",
+        "Giuseppe Piermarini"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "21e731da-0bdd-59b9-a125-5a19ce0d0589",
+      "createdAt": "2026-11-26",
+      "title": "Grumello Castle | Castel Grumello",
+      "shortDescription": "Two castles on one rock, and vineyards all the way down.",
+      "longDescription": "Two castles on one rock, and vineyards all the way down.\n\nLook at the ruins and you'll see there are two of them, side by side inside one wall. That's what makes Grumello unusual. It's a twin castle. The eastern half was military, built around a big square tower, with the remains of a second tower for keeping watch. The other half was for living in, with better cut stone and a fireplace, the part meant for comfort and for show.",
+      "makerId": "0050f2e3-ec73-5205-9eaa-7ab9c795f79a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-castel-grumello_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-castel-grumello_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-castel-grumello_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-castel-grumello_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "fcd4c05a-da1d-5708-b0eb-bce805e8a222",
+          "order": 0,
+          "title": "Grumello Castle | Castel Grumello",
+          "caption": "On the rocky spur above Montagna, the twin ruins round you and the vine terraces below.",
+          "latitude": 46.1737907,
+          "longitude": 9.8963152,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lom-castel-grumello.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-castel-grumello_hero.webp",
+          "transcriptText": "Two castles on one rock, and vineyards all the way down.\n\nYou're on the rocky spur above Montagna in Valtellina, with the castle ruins around you and the valley opening out below. Behind you rise the Rhaetian Alps. Ahead and beneath, the terraces of vines step down the mountainside.\n\nLook at the ruins and you'll see there are two of them, side by side inside one wall. That's what makes Grumello unusual. It's a twin castle. The eastern half was military, built around a big square tower, with the remains of a second tower for keeping watch. The other half was for living in, with better cut stone and a fireplace, the part meant for comfort and for show.\n\nIt was begun at the end of the twelve hundreds or the start of the thirteen hundreds by Corrado de Piro, a Ghibelline who'd come up into the valley with his family after the wars between Milan and Como. It didn't go well for them. Within a few decades they had to sell it to their rivals. And in fifteen twenty-six it was destroyed by the Grey Leagues, the Swiss confederation of the Grisons, along with many of the fortresses of the Valtellina.\n\nSo what you're looking at is the shell of an argument that was settled five hundred years ago, and the thing that's outlasted it is the farming. The name comes from the knoll it stands on, the grumo, and the terraces below have been growing Nebbiolo, the grape of the Alps, for centuries.\n\nThe castle was given away in nineteen ninety, restored, and opened to the public in two thousand and one.\n\nThere's a small restaurant just below the castle, with seasonal food from the valley. If you've the time, stop there, and then walk down among the terraces. You'll see how much patience it takes to farm a mountain, one dry-stone wall at a time."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 46.1737907,
+      "centroidLongitude": 9.8963152,
+      "city": "Montagna in Valtellina",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Power",
+        "Food",
+        "Viewpoint",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3b83c694-3a45-53b0-8208-99fe2dcac30e",
+      "createdAt": "2026-11-26",
+      "title": "The Old Newsstand | Antica Edicola dei Giornali",
+      "shortDescription": "This may well be one of the prettiest newsstands in Italy, and it was moved here because it was getting in the way of a church.",
+      "longDescription": "This may well be one of the prettiest newsstands in Italy, and it was moved here because it was getting in the way of a church.\n\nPeople often call it Liberty, Italy's word for Art Nouveau, but have a look at those windows. They're paired pointed arches, which makes it neo-Gothic, a nineteenth-century idea of the Middle Ages rather than a twentieth-century one.",
+      "makerId": "0050f2e3-ec73-5205-9eaa-7ab9c795f79a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-antica-edicola-mantova_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-antica-edicola-mantova_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-antica-edicola-mantova_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "43c5c4fe-5822-5832-9961-bc129d753583",
+          "order": 0,
+          "title": "The Old Newsstand | Antica Edicola dei Giornali",
+          "caption": "In Piazza Canossa, the little eight-sided kiosk of iron, wood and glass in front of you.",
+          "latitude": 45.1599492,
+          "longitude": 10.7925529,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lom-antica-edicola-mantova.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-antica-edicola-mantova_hero.webp",
+          "transcriptText": "This may well be one of the prettiest newsstands in Italy, and it was moved here because it was getting in the way of a church.\n\nYou're in Piazza Canossa, in the old centre of Mantua. In front of you, standing on its own, is a small eight-sided kiosk of iron, wood and glass, on a low stone base, with pointed windows all the way round and a little metal spire on top, like a lantern that's wandered in from a Gothic cathedral.\n\nPeople often call it Liberty, Italy's word for Art Nouveau, but have a look at those windows. They're paired pointed arches, which makes it neo-Gothic, a nineteenth-century idea of the Middle Ages rather than a twentieth-century one.\n\nIn eighteen eighty-two the town gave a Mantuan called Ulisse Sicola permission to open a newspaper kiosk in the square in front of Sant'Andrea, the great church by Leon Battista Alberti. In nineteen twenty-five he was asked to move it here, so as not to interfere, in the words of the time, with the triumphal architecture of the basilica. I rather like that. The newspaper man was told he was spoiling the view.\n\nIt very nearly didn't survive. In nineteen eleven its roof was replaced with a cap of concrete that blocked the little upper windows, and by the late twentieth century it was in a sorry state. It was protected in nineteen ninety-one, bought the following year after a public appeal, and put back the way it was meant to look. For a while it sold flowers instead of newspapers.\n\nWhat's worth knowing, standing here, is how much care has gone into something so small. In twenty twenty-three it was restored again, piece by piece, removing the rust and replacing only what couldn't be saved. Now it's lit up as a tiny gallery, with exhibitions of local photographers. A lantern for the city, after all.\n\nFrom here it's a short walk to Piazza Mantegna and the front of Sant'Andrea. Stand there for a moment and picture the kiosk in front of that enormous arch. You can see why somebody asked it to move."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.1599492,
+      "centroidLongitude": 10.7925529,
+      "city": "Mantua",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Notable Building",
+        "Commerce",
+        "Gothic",
+        "Public Art",
+        "Free to Visit",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cdfd2a5f-6dea-5294-982b-71c9328387a2",
+      "createdAt": "2026-11-26",
+      "title": "Lonato Fortress and the Podestà's House | Rocca di Lonato e Casa del Podestà",
+      "shortDescription": "A senator bought a castle, a house and fifty thousand books, and then gave the lot away.",
+      "longDescription": "A senator bought a castle, a house and fifty thousand books, and then gave the lot away.\n\nPeople have been fortifying this ridge since the tenth century. It passed from the lords of Verona to the Visconti of Milan, then the Gonzaga, and in fourteen forty-one to the Republic of Venice, which held Lonato for more than three hundred and fifty years. You'll notice it's really two castles in one: the Rocchetta at the top, and the larger main quarter below. Up in the Rocchetta, there's now a museum of birds, with around seven hundred specimens.",
+      "makerId": "0050f2e3-ec73-5205-9eaa-7ab9c795f79a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-rocca-di-lonato_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-rocca-di-lonato_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-rocca-di-lonato_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-rocca-di-lonato_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-rocca-di-lonato_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e006985a-27b2-5ed4-a713-2e2fe19ac904",
+          "order": 0,
+          "title": "Lonato Fortress and the Podestà's House | Rocca di Lonato e Casa del Podestà",
+          "caption": "On the walls of the Rocca, looking north-east over the town towards Lake Garda.",
+          "latitude": 45.4629478,
+          "longitude": 10.4864679,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lom-rocca-di-lonato.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lom-rocca-di-lonato_hero.webp",
+          "transcriptText": "A senator bought a castle, a house and fifty thousand books, and then gave the lot away.\n\nUp on the walls of the Rocca, look north-east. The fortress runs along a ridge of glacial moraine, almost a hundred and eighty metres long, and from the wall walk you can see out over the southern end of Lake Garda.\n\nPeople have been fortifying this ridge since the tenth century. It passed from the lords of Verona to the Visconti of Milan, then the Gonzaga, and in fourteen forty-one to the Republic of Venice, which held Lonato for more than three hundred and fifty years. You'll notice it's really two castles in one: the Rocchetta at the top, and the larger main quarter below. Up in the Rocchetta, there's now a museum of birds, with around seven hundred specimens.\n\nNow look down into the town, towards a house just below the fortress. That's the Casa del Podestà, built in the middle of the fourteen hundreds for the official who governed Lonato on behalf of Venice.\n\nHere's where the senator comes in. Ugo Da Como was a lawyer from Brescia, then a member of parliament, then a senator. In nineteen oh six he bought the Casa del Podestà at public auction, and had it restored by the leading architect of Brescia, Antonio Tagliaferri. Later he bought the Rocca too. And into the house went his library: around fifty thousand volumes, four hundred incunabula, the earliest printed books, and five hundred manuscripts going back to the twelfth century.\n\nHe lived there until his death in nineteen forty-one, and his foundation was created by royal decree the following year, so that none of it would be broken up. It's still a private foundation, and still open to the public.\n\nWhen you come down from the walls, go into the Casa del Podestà and ask to see the library. It's one man's lifetime of reading, still on the shelves where he left it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.4629478,
+      "centroidLongitude": 10.4864679,
+      "city": "Lonato del Garda",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "Library",
+        "Museum",
+        "History",
+        "Power",
+        "War",
         "Viewpoint"
       ],
       "priceUSD": 0
