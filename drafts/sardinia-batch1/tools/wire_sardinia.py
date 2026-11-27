@@ -1,0 +1,180 @@
+#!/usr/bin/env python3
+"""Build the Sardinia batch from the Dropbox drop: 4 singles for a new studio, Atlas Studio CAG (Cagliari), covering all
+four sites across Sardinia on the contributor's choice. Adapted from drafts/puglia-batch1/tools/wire_puglia.py.
+Folders are matched by script number. Writes renamed media into <stage>/{audio,images} and merges into Tours.json.
+
+Usage: python3 -I wire_sardinia.py <unzipped drop> <stage dir>   (run once: refuses colliding ids)"""
+import json, os, re, shutil, subprocess, sys, uuid, glob, math
+
+DROP = sys.argv[1] if len(sys.argv) > 1 else "drop/x"
+STAGE = sys.argv[2] if len(sys.argv) > 2 else "stage"
+CAT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../../TRAVEL GUIDED TOUR/Resources/Tours.json")
+BASE = "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/"
+TODAY = "2026-11-27"
+NS = uuid.NAMESPACE_URL
+DM = "Designed by a Master"
+COUNTRY = "Italy"
+
+PREV_ID = str(uuid.uuid5(NS, "atlas-maker:bri"))
+CAG_ID = str(uuid.uuid5(NS, "atlas-maker:cag"))
+CODES = {"cag": CAG_ID}
+
+# script no., studio, slug, title, category, tags, radius, caption, city
+SPEC = [
+ ("76", "cag", "batteria-militare-talmone", "Talmone Battery | Batteria Militare Talmone", "history",
+  ["Monument", "War", "Maritime", "Viewpoint", "Hidden Gem"], 50,
+  "At the end of the path on Punta Don Diego, by the lookout shelter facing Spargi.", "Palau"),
+ ("86", "cag", "idrovora-di-sassu", "Sassu Pumping Station | Idrovora di Sassu", "architecture",
+  ["Notable Building", "Engineering", "Power", "Modernist", DM, "Hidden Gem", "Flavio Scano"], 40,
+  "On the road beside the canals, facing the pale tower and rounded wings of the pumping station.", "Arborea"),
+ ("77", "cag", "saline-conti-vecchi", "Conti Vecchi Saltworks | Saline Conti Vecchi", "natureAndParks",
+  ["Museum", "Waterfront", "Commerce", "Engineering", "Green Escape"], 60,
+  "At the historic saltworks buildings, with the pink salt pans of Santa Gilla stretching beyond.", "Assemini"),
+ ("79", "cag", "ville-jacques-couelle", "Jacques Couëlle Villas | Ville Jacques Couëlle", "architecture",
+  ["Notable Building", "Architecture", DM, "Crime", "Hidden Gem", "Jacques Couëlle"], 50,
+  "Among the granite boulders at Monti Mannu, facing the curving walls of the villas.", "Arzachena"),
+]
+
+# check-coordinates.py --drop: Sassu GROSS (supplied point is 12 km north, near Cabras); Saline 220 m out in the pans;
+# Talmone 94 m. Moved onto the OSM features by name, on the contributor's OK ("go"). Couëlle kept as supplied.
+COORD_OVERRIDE = {
+    "idrovora-di-sassu": (39.8232643, 8.5772244),       # OSM building "Idrovora Sassu", SP49, Arborea
+    "saline-conti-vecchi": (39.2239149, 9.0238286),     # OSM museum "Saline Conti Vecchi", Assemini
+    "batteria-militare-talmone": (41.2044453, 9.3395558),  # OSM ruins "Batteria Militare di Talmone", Palau
+}
+SKIP_IMAGES = {}
+TEXT_FIX = {}
+
+
+def folder(num):
+    pat = f"{num}_*_clean.txt"
+    m = [d for d in glob.glob(f"{DROP}/*") if os.path.isdir(d) and glob.glob(f"{d}/{pat}")]
+    assert len(m) == 1, (num, m)
+    return m[0]
+
+
+def coords(d):
+    m = re.search(r"(-?\d+\.\d+),\s*(-?\d+\.\d+)\s*$", d)
+    return (round(float(m.group(1)), 7), round(float(m.group(2)), 7))
+
+
+def paras(path):
+    txt = open(path, encoding="utf-8").read().replace("[beat]", "")
+    for a, b in TEXT_FIX.items():
+        txt = txt.replace(a, b)
+    ps = [re.sub(r"\s+", " ", p).strip() for p in re.split(r"\n\s*\n", txt)]
+    return [p for p in ps if p][1:]  # drop the title line
+
+
+def short(s, n=145):
+    if len(s) <= n:
+        return s
+    return s[:n].rsplit(" ", 1)[0].rstrip(",;:") + "…"
+
+
+def duration(mp3):
+    out = subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", mp3])
+    return round(float(out))
+
+
+def build(spec):
+    num, code, slug, title, cat, tags, radius, caption, city = spec
+    d = folder(num)
+    lat, lon = COORD_OVERRIDE.get(slug, coords(d))
+    script = glob.glob(f"{d}/*_clean.txt"); assert len(script) == 1, (d, script)
+    ps = paras(script[0])
+    mp3 = glob.glob(f"{d}/*.mp3"); assert len(mp3) == 1
+    webps = glob.glob(f"{d}/*.webp")
+    hero = [w for w in webps if w.endswith("_hero.webp")]; assert len(hero) == 1, d
+    rest = sorted((w for w in webps if w not in hero
+                   and int(re.search(r"_(\d+)o?\.webp$", w).group(1)) not in SKIP_IMAGES.get(slug, ())),
+                  key=lambda w: int(re.search(r"_(\d+)o?\.webp$", w).group(1)))
+    stem = f"{code}-{slug}"
+    os.makedirs(f"{STAGE}/audio", exist_ok=True); os.makedirs(f"{STAGE}/images", exist_ok=True)
+    shutil.copyfile(mp3[0], f"{STAGE}/audio/{stem}.mp3")
+    shutil.copyfile(hero[0], f"{STAGE}/images/{stem}_hero.webp")
+    extra = []
+    for i, w in enumerate(rest, start=2):
+        shutil.copyfile(w, f"{STAGE}/images/{stem}_{i}.webp")
+        extra.append(f"{BASE}images/{stem}_{i}.webp")
+    dur = duration(mp3[0])
+    key = f"{code}:{stem}"
+    hero_url = f"{BASE}images/{stem}_hero.webp"
+    return {
+        "id": str(uuid.uuid5(NS, f"atlas-tour:{key}")),
+        "createdAt": TODAY,
+        "title": title,
+        "shortDescription": short(ps[0]),
+        "longDescription": ps[0] + "\n\n" + ps[2],
+        "makerId": CODES[code],
+        "heroImageURL": hero_url,
+        "additionalImageURLs": extra,
+        "kind": "single",
+        "stops": [{
+            "id": str(uuid.uuid5(NS, f"atlas-stop:{key}:1")),
+            "order": 0,
+            "title": title,
+            "caption": caption,
+            "latitude": lat,
+            "longitude": lon,
+            "audioURL": f"{BASE}audio/{stem}.mp3",
+            "audioDurationSeconds": dur,
+            "triggerMode": "geofenced",
+            "triggerRadiusMeters": radius,
+            "imageURL": hero_url,
+            "transcriptText": "\n\n".join(ps),
+        }],
+        "introAudioURL": None,
+        "totalDurationSeconds": dur,
+        "walkingDistanceMeters": None,
+        "centroidLatitude": lat,
+        "centroidLongitude": lon,
+        "city": city,
+        "country": COUNTRY,
+        "relatedTourIds": [],
+        "primaryCategory": cat,
+        "tags": tags,
+        "priceUSD": 0,
+    }
+
+
+def dist(a, b):
+    k = math.cos(math.radians(a[0]))
+    return math.hypot((a[0] - b[0]) * 111320, (a[1] - b[1]) * 111320 * k)
+
+
+def main():
+    data = json.load(open(CAT, encoding="utf-8"))
+    ids = {t["id"] for t in data["tours"]}
+    assert len({s[2] for s in SPEC}) == len(SPEC) == 4
+    assert len({s[0] for s in SPEC}) == 4
+    for s in SPEC:
+        assert len(s[7]) <= 110, (s[2], len(s[7]))
+    new = [build(s) for s in SPEC]
+    for t in new:
+        assert t["id"] not in ids, ("id collision", t["title"])
+    for i, a in enumerate(new):
+        for b in new[i + 1:]:
+            sa, sb = a["stops"][0], b["stops"][0]
+            dd = dist((sa["latitude"], sa["longitude"]), (sb["latitude"], sb["longitude"]))
+            if dd < sa["triggerRadiusMeters"] + sb["triggerRadiusMeters"]:
+                print(f"OVERLAP {a['title']} / {b['title']}: {dd:.0f} m", file=sys.stderr)
+    assert any(m["id"] == PREV_ID for m in data["makers"])
+    if not any(m["id"] == CAG_ID for m in data["makers"]):
+        prev = next(i for i, m in enumerate(data["makers"]) if m["id"] == PREV_ID)
+        data["makers"].insert(prev + 1, {
+            "id": CAG_ID, "displayName": "Atlas Studio CAG", "platform": "dozent", "handle": "atlas.cag",
+            "avatarURL": None, "avatarEmoji": "🇮🇹",
+            "bio": "Atlas Studio's Sardinia bureau, out from Cagliari: flamingos and salt mountains on the Santa Gilla "
+                   "lagoon; a Fascist-era pumping station still keeping a drained marsh dry at Arborea; a coastal "
+                   "battery watching the Maddalena channel from Palau; and Jacques Couëlle's houses grown out of the "
+                   "granite above Porto Cervo.",
+            "websiteURL": None})
+    data["tours"].extend(new)
+    with open(CAT, "wb") as f:
+        f.write(json.dumps(data, indent=2, ensure_ascii=False).encode() + b"\n")
+    print(f"added {len(new)} tours; maker CAG {CAG_ID}")
+
+
+if __name__ == "__main__":
+    main()
