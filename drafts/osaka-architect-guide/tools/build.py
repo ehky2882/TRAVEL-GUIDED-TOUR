@@ -95,6 +95,8 @@ RESPELL = {
     "Tachu Naito": "Tah choo Nye toh", "Hitachi": "Heetahchee",
     "Chikatsu Asuka Fudoki no Oka": "Cheekahtsoo Ahsookah Foo dohkee noh Ohkah", "Chikatsu Asuka": "Cheekahtsoo Ahsookah",
     "kofun": "kohfoon", "Arc de Triomphe": "Ark duh Tree omf",
+    "Yasaka": "Yahsahkah", "Shishiden": "Sheeshee den", "Susanoo": "Soosah noh oh", "Nintoku": "Neen tohkoo",
+    "Inari": "Eenahree", "torii": "toree ee",
 }
 
 ONES = "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen".split()

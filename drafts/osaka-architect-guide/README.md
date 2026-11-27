@@ -1,4 +1,4 @@
-# Osaka: an architect's city guide, 34 audio scripts (drafted 2026-11-11)
+# Osaka: an architect's city guide, 35 audio scripts (drafted 2026-11-11; Namba Yasaka Shrine added 2026-11-27)
 
 These are the scripts for the Osaka city guide written in the Architecture Hunter format, with recommendations for where to
 stay, dine, drink, shop, visit and observe. Each venue is its own single-stop tour, written in the Atlas British voice

@@ -346,4 +346,28 @@ Before you leave, walk the paths through the park to the old tombs themselves. S
 ["http://chikatsu-asuka.jp/ (official site)",
  "https://www.pref.osaka.lg.jp/documents/31519/506_tikatuasuka.pdf",
  "https://www.timeout.com/osaka/museums/chikatsu-asuka-museum"]),
+(35, "namba_yasaka_shrine", "Namba Yasaka Shrine", "Nahmbah Yahsahkah Shrine", "Visit", 34.661482, 135.496733,
+"""Most shrines guard their gods behind a quiet wooden hall. This one put its god inside a lion's head twelve metres tall, with its mouth wide open.
+
+Come in through the torii gate from the street, and you'll see it at once. In front of you, a giant lion's face, brightly painted, with bulging eyes, heavy brows and a gaping mouth big enough to hold a stage. Which is exactly what's inside it.
+
+The lion is called the Shishiden, the lion hall. It's about twelve metres high, eleven wide and ten deep, and it was finished in May 1974. It's also a shrine in its own right, holding the fierce, rough spirit of the god Susanoo, and its mouth doubles as a stage, where lion dances and performances take place at festival time.
+
+Here's why it's a lion. This part of Osaka was once the village of Namba, and lion dances to drive away evil were a long tradition here. So when the shrine came to rebuild, it took the lion as its symbol. The idea is that the great mouth swallows evil spirits and draws in victory, which is why students before exams and shopkeepers hoping for good trade come here to pray. At New Year and during the summer festival, the eyes light up.
+
+Nobody knows when the shrine was founded. Tradition says a plague swept through this area in the days of the Emperor Nintoku, a god appeared, and the people began to worship him here. Then, in March 1945, the first great air raid on Osaka burned it to the ground. The main hall you see now was finished in 1974, at the same time as the lion.
+
+And that, if you ask me, is the interesting bit. The shrine could have rebuilt exactly what it had lost. Instead it set out to make something that would astonish the people of Osaka. A lion with a stage in its mouth, in a backstreet behind Namba, at a shrine whose own records go back to the eleventh century. That's Osaka all over: very old, and not in the least bit solemn about it.
+
+[beat]
+
+Before you go, look round the grounds for the smaller shrines, including a little Inari shrine for business and harvests. And if you're in Osaka in January, come back on the third Sunday, for the tug of war. The rope is twisted into a serpent with eight heads and eight tails, the monster Susanoo slew in the old myth, and everyone takes hold of it.""",
+["https://nambayasaka.jp/ (official site: history, main hall, tug of war)",
+ "https://nambayasaka.jp/?page_id=275 (official: precincts and sub-shrines)",
+ "https://nambayasaka.jp/?page_id=145 (official: Tsunahiki Shinji)",
+ "https://nambayasaka.jp/?page_id=144 (official: summer festival)",
+ "https://nambayasaka.jp/?page_id=142 (official: access)",
+ "https://ja.wikipedia.org/wiki/難波八阪神社 (Shishiden built May 1974; 1945 air raid; Nintoku legend)",
+ "https://aumo.jp/articles/59955 (quotes the official site: 12 m high, 10 m deep, 11 m wide; swallows evil, draws in victory)",
+ "https://maido-bob.osaka/spot/namba-yasaka-jinja-shrine"]),
 ]

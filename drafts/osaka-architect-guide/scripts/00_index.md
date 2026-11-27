@@ -38,3 +38,4 @@
 | 32 | Hozenji Yokocho | Observe | 34.668185, 135.502671 | 314 | `32_hozenji_yokocho_clean.txt` · `32_hozenji_yokocho_tts-safe.txt` · `32_hozenji_yokocho.md` |
 | 33 | Tsutenkaku | Observe | 34.652539, 135.506310 | 321 | `33_tsutenkaku_clean.txt` · `33_tsutenkaku_tts-safe.txt` · `33_tsutenkaku.md` |
 | 34 | Chikatsu Asuka Museum | Observe | 34.503111, 135.643613 | 309 | `34_chikatsu_asuka_museum_clean.txt` · `34_chikatsu_asuka_museum_tts-safe.txt` · `34_chikatsu_asuka_museum.md` |
+| 35 | Namba Yasaka Shrine | Visit | 34.661482, 135.496733 | 418 | `35_namba_yasaka_shrine_clean.txt` · `35_namba_yasaka_shrine_tts-safe.txt` · `35_namba_yasaka_shrine.md` |
