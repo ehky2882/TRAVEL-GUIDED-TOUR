@@ -1,0 +1,21 @@
+RUN check-coordinates.py · rev 02bd1f9f · 2026-11-27T10:25:18Z · args: --drop /tmp/claude-0/drop/x --city Apulia, Italy --out /tmp/claude-0/drop/coord.txt
+auditing 5 coordinate(s) against 'Apulia, Italy'  (~0.2 min at Nominatim's rate limit)
+
+  [  1/5] Abbazia di Santa Maria di Cerrate  fwd     22m  at: Chiesa dell'Abbazia di Santa M
+  [  2/5] Fontana Greca                      fwd     15m  at: Fontana Greca Caffè
+  [  3/5] Cattedrale di Troia                fwd    n/a  at: Sica dal 1929
+  [  4/5] Teatro Petruzzelli                 fwd     38m  at: Teatro Petruzzelli
+  [  5/5] Teatro Margherita                  fwd     29m  at: -
+
+========================================================================
+GROSS - none: every coordinate is at or beside its venue
+
+UNVERIFIABLE - 1: no automatic verdict, and that is
+not the same as a pass. A towpath, a square and a long street have no
+single point to measure against; read the script and judge by hand.
+    Cattedrale di Troia                      venue could not be geocoded
+  (a GROSS verdict needs the geocoder to have found the venue itself;
+   where it did not, the distance is reported and not acted on)
+
+========================================================================
+BIAS - not enough point-like matches (4) to measure
