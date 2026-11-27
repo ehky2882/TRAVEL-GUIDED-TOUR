@@ -16,7 +16,7 @@ gh-pages `2b32475`: 18 A only.
 **Architect tags (Job 5):** Flavio Scano, Jacques Couëlle.
 **Place questions:** none from the scripts. The @rayisaplace Couëlle pin (1.5 km, Cala di Volpe) is a different site.
 **Open:** perishable lines in the Saline ("closed for maintenance") and Couëlle ("not open every day yet") audio.
-**Offered, not done:** adding the Jacques Couëlle tag to the @rayisaplace pin — awaiting the contributor's yes.
+**Also tagged:** the @rayisaplace pin "The Houses Without Right Angles" now carries Jacques Couëlle (contributor: "yes").
 
 **Checks:** `validate-tours-mirror` 0 errors, no warnings on the new tours · filenames align (18) · `spine-lookup`
 4 asked, 0 failed · `join-places --max-move 100` and `check-place-candidates` list nothing new vs main.
