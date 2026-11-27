@@ -158,6 +158,10 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// A tour deep link that arrived during the launch splash (cold launch),
     /// held until `ContentView` — which hosts the detail presenter — is mounted.
     @State private var pendingDeepLink: DeepLink?
+    /// Identifies the newest link that arrived while the app was already
+    /// running and is still waiting to be shown. A second link tapped before
+    /// the first lands replaces it, rather than both sliding up in turn.
+    @State private var warmDeepLinkToken: UUID?
     /// Mirrors the `@AppStorage` key used by SettingsView's Appearance
     /// picker. Wired here so `.preferredColorScheme` applies app-wide.
     @AppStorage("colorSchemePreference") private var colorSchemePreference: ColorSchemePreference = .system
@@ -344,8 +348,9 @@ struct TRAVEL_GUIDED_TOURApp: App {
                 .onChange(of: colorSchemePreference) { _, newValue in
                     bottomModuleWindow.apply(preference: newValue)
                 }
-                // Deep links while the app is already running route straight
-                // through (catalog is in memory; ContentView is mounted).
+                // Deep links while the app is already running go through
+                // `presentWarmDeepLink`, which waits for the scene to become
+                // active and clears whatever is in the way first.
                 .onOpenURL(perform: handleDeepLink)
                 .onContinueUserActivity(NSUserActivityTypeBrowsingWeb, perform: handleUserActivity)
                 // NOTE: the full player is presented from within the
@@ -740,15 +745,67 @@ struct TRAVEL_GUIDED_TOURApp: App {
     }
 
     /// Entry point for both Universal Links and the `dozent://` custom scheme.
-    /// Parses the URL; presents immediately when running, or stashes it for
-    /// after the launch splash on a cold start. Unrecognized URLs are ignored.
+    /// Parses the URL; stashes it for after the launch splash on a cold start,
+    /// or hands it to `presentWarmDeepLink` when the app is already running.
+    /// Unrecognized URLs are ignored.
     private func handleDeepLink(_ url: URL) {
         guard let link = DeepLinkParser.parse(url) else { return }
         if launchState.isSplashVisible {
             pendingDeepLink = link
         } else {
-            present(link)
+            let token = UUID()
+            warmDeepLinkToken = token
+            Task { @MainActor in
+                await presentWarmDeepLink(link, token: token)
+            }
         }
+    }
+
+    /// A link that arrived while the app was already running (owner report,
+    /// 2026-11-27: creator and tour links opened the right page when DOZENT
+    /// was closed, and did nothing when it was already open).
+    ///
+    /// 🔴 TWO THINGS STOOD BETWEEN A WARM LINK AND THE SCREEN, and a cold link
+    /// meets neither because it waits for the splash:
+    ///
+    /// 1. **The scene is not active yet.** iOS delivers the URL while bringing
+    ///    the app back, with the scene still `.foregroundInactive`, and
+    ///    `BottomLayerController.present` finds no top view controller in that
+    ///    state and returns silently. The presenter's state was set anyway, so
+    ///    tapping the same link again changed nothing either. Wait for
+    ///    `canPresentNow` instead.
+    /// 2. **Something may already be open.** A layer presented underneath the
+    ///    full player, or under a tour or creator page the user left up, is
+    ///    invisible. Take those down first (the same direct `dismiss()` route
+    ///    the map's expand control uses, which does not depend on an observer
+    ///    in the covered main window), then wait for the slide-down to finish,
+    ///    because UIKit refuses a presentation while a dismissal is running.
+    @MainActor
+    private func presentWarmDeepLink(_ link: DeepLink, token: UUID) async {
+        let deadline = Date().addingTimeInterval(DeepLinkTiming.activationTimeout)
+        while !BottomLayerController.canPresentNow, Date() < deadline {
+            try? await Task.sleep(for: DeepLinkTiming.pollInterval)
+        }
+        guard warmDeepLinkToken == token else { return }
+
+        let screen = DeepLinkScreenState(
+            tourId: tourPresenter.presentedTour?.id,
+            makerId: makerPresenter.presentedMaker?.id,
+            placeId: placePresenter.presentedPlace?.id,
+            listTargetId: listPresenter.presented?.id,
+            fullPlayerUp: appShared.showingFullPlayer
+        )
+        if link.needsClearing(screen) {
+            appShared.showingFullPlayer = false
+            tourPresenter.dismiss()
+            makerPresenter.dismiss()
+            placePresenter.dismiss()
+            listPresenter.dismiss()
+            try? await Task.sleep(for: DeepLinkTiming.clearDelay)
+            guard warmDeepLinkToken == token else { return }
+        }
+        warmDeepLinkToken = nil
+        present(link)
     }
 
     /// Resolves a parsed link against the loaded catalog and presents it via the

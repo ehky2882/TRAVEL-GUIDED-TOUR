@@ -251,7 +251,7 @@ final class BottomLayerController {
         _ view: Content,
         onDismiss: @escaping () -> Void
     ) {
-        guard let top = topViewController() else { return }
+        guard let top = Self.topViewController() else { return }
         // Tear down any previous transitioning delegate before
         // building a new one — the delegate's `onSystemDismiss`
         // closure captures app state, so we need a fresh one per
@@ -301,7 +301,22 @@ final class BottomLayerController {
         presented.dismiss(animated: true, completion: completion)
     }
 
-    private func topViewController() -> UIViewController? {
+    /// Whether a layer could be presented right now.
+    ///
+    /// 🔴 `present` needs a scene in `.foregroundActive`, and a link that
+    /// arrives while the app is already running is delivered BEFORE that: the
+    /// tap in Messages brings the app back, iOS hands over the URL while the
+    /// scene is still `.foregroundInactive`, and only then activates it. A
+    /// `present` in that gap finds no top view controller and returns without
+    /// a word, which is why a shared link worked from a closed app (held until
+    /// after the splash) and did nothing when the app was already open. The
+    /// warm-link path waits on this before presenting. Same condition as
+    /// `topViewController()`, deliberately, so the two cannot disagree.
+    static var canPresentNow: Bool {
+        topViewController() != nil
+    }
+
+    private static func topViewController() -> UIViewController? {
         let root = UIApplication.shared.connectedScenes
             .compactMap { $0 as? UIWindowScene }
             .first(where: { $0.activationState == .foregroundActive })?

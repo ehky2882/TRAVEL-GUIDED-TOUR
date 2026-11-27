@@ -17,6 +17,59 @@ enum DeepLink: Equatable {
     case group(String)
 }
 
+/// What is on screen when a link arrives while the app is already running.
+///
+/// A warm link has to land ON TOP. On a cold launch nothing is open, so the
+/// layer simply slides up over Home; on a warm one the user may have left a
+/// tour page, a creator page or the full player up, and a new layer presented
+/// underneath any of them is a link that "did nothing".
+struct DeepLinkScreenState: Equatable {
+    var tourId: UUID? = nil
+    var makerId: UUID? = nil
+    var placeId: UUID? = nil
+    /// `TourListTarget.id` of the list layer, if one is up.
+    var listTargetId: String? = nil
+    var fullPlayerUp: Bool = false
+}
+
+extension DeepLink {
+    /// Whether what is on screen has to come down before this link can show.
+    ///
+    /// False when nothing is up, when the link's own page is the only layer
+    /// showing (it is already in front of the user), and for a Group Listen
+    /// join, which opens no page of its own. Pure, so it is unit-tested.
+    func needsClearing(_ screen: DeepLinkScreenState) -> Bool {
+        if case .group = self { return false }
+        if screen.fullPlayerUp { return true }
+        let tourUp = screen.tourId != nil
+        let makerUp = screen.makerId != nil
+        let placeUp = screen.placeId != nil
+        let listUp = screen.listTargetId != nil
+        let layersUp = [tourUp, makerUp, placeUp, listUp].filter { $0 }.count
+        guard layersUp > 0 else { return false }
+        guard layersUp == 1 else { return true }
+        switch self {
+        case .tour(let id):  return screen.tourId != id
+        case .maker(let id): return screen.makerId != id
+        case .place(let id): return screen.placeId != id
+        case .list(let id):  return screen.listTargetId != TourListTarget.list(id: id, preloaded: nil).id
+        case .group:         return false
+        }
+    }
+}
+
+/// Timings for a link that arrives while the app is already running. See
+/// `presentWarmDeepLink` in the app entry.
+enum DeepLinkTiming {
+    /// How long to wait for the scene to become active before trying anyway.
+    /// It normally takes a fraction of a second; this only bounds a stall.
+    static let activationTimeout: TimeInterval = 5
+    static let pollInterval: Duration = .milliseconds(50)
+    /// Long enough for a layer's 0.4 s slide-down, or the full player's cover,
+    /// to finish: UIKit refuses to present while a dismissal is running.
+    static let clearDelay: Duration = .milliseconds(550)
+}
+
 /// Parses incoming URLs — Universal Links (https) and the `dozent://` custom
 /// scheme — into a `DeepLink`. Pure and side-effect free; the app layer
 /// resolves the id against the catalog and presents it.
