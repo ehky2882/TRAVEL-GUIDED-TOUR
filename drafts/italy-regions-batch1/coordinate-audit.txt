@@ -1,0 +1,52 @@
+RUN check-coordinates.py · rev 02bd1f9f · 2026-11-27T14:21:57Z · args: --drop /tmp/claude-0/-home-user-TRAVEL-GUIDED-TOUR/85589257-009e-5d55-bfa6-97654bcccb2d/scratchpad/drop/raw --city Italy --out /tmp/claude-0/-home-user-TRAVEL-GUIDED-TOUR/85589257-009e-5d55-bfa6-97654bcccb2d/scratchpad/coord-audit.txt
+auditing 15 coordinate(s) against 'Italy'  (~0.6 min at Nominatim's rate limit)
+
+  [  1/15] Castello Tramontano                fwd     22m  at: -
+  [  2/15] Parco degli Acquedotti             fwd    751m  at: -
+  [  3/15] Baia di Ieranto                    fwd     80m  at: Scala dei minatori
+  [  4/15] Bosco di San Francesco             fwd    593m  at: Chiesa Santa Croce
+  [  5/15] Palazzo di Teodorico               fwd     10m  at: Palazzo di Teodorico
+  [  6/15] Mausoleo di Teodorico              fwd     12m  at: Mausoleo di Teodorico
+  [  7/15] Villa Gregoriana                   fwd 509479m  at: -
+  [  8/15] Basilica di Aquileia               fwd     27m  at: Basilica di Santa Maria Assunt
+  [  9/15] output                             fwd    n/a  at: -
+  [ 10/15] Rotonda a Mare                     fwd     10m  at: Piazzale della Libertà
+  [ 11/15] Sant'Apollinare in Classe          fwd     38m  at: Basilica di Sant'Apollinare in
+  [ 12/15] I Giganti della Sila               fwd      9m  at: -
+  [ 13/15] Orto sul Colle dell'Infinito       fwd    107m  at: Centro Nazionale di Studi Leop
+  [ 14/15] Ponte del Diavolo                  fwd 524033m  at: Ponte del Diavolo
+  [ 15/15] Duomo di Salerno                   fwd  14155m  at: Via Nicola Monterisi
+
+========================================================================
+GROSS - 2 coordinate(s) may not be at their venue
+Check each by hand. Reverse-geocoding the SUPPLIED point is what
+settles it: a motorway or an unrelated office means it is wrong;
+a neighbour on the right street means it is fine.
+
+  Bosco di San Francesco
+    supplied      43.0822882, 12.6149671
+    sits on       Chiesa Santa Croce  [amenity]
+    venue geocode 593 m away - Bosco di San Francesco, Assisi, Perugia, Umbria, 06081, Ital
+
+  Duomo di Salerno
+    supplied      40.6802013, 14.7600405
+    sits on       Via Nicola Monterisi  [highway]
+    venue geocode 14155 m away - Duomo di Amalfi, 1, Piazza Duomo, Pogerola, Amalfi, Salerno,
+
+UNVERIFIABLE - 3: no automatic verdict, and that is
+not the same as a pass. A towpath, a square and a long street have no
+single point to measure against; read the script and judge by hand.
+    Villa Gregoriana                         venue geocodes to a street, not a point
+    output                                   venue could not be geocoded
+    Ponte del Diavolo                        match is 524 km away - probably a different place
+  (a GROSS verdict needs the geocoder to have found the venue itself;
+   where it did not, the distance is reported and not acted on)
+
+========================================================================
+BIAS - 9/11 north of true position, median +16.6 m, p = 0.065
+  reference, measured 2026-08-22:
+    old-sourced cities (NYC, London)   24/51   -0.9 m   p = 1.0
+    drop-pipeline cities (BCN, MIL)    41/50  +10.3 m   p = 5.6e-06
+
+  >> Sample too small (n=11) to call either way. This is NOT a
+  >> clean bill of health - run the full city, not a --limit subset.

@@ -5891,6 +5891,66 @@
       "websiteURL": null
     },
     {
+      "id": "49a646f8-27b1-52d2-b0eb-6da3e1d5ae82",
+      "displayName": "Atlas Studio AOT",
+      "platform": "dozent",
+      "handle": "atlas.aot",
+      "avatarURL": null,
+      "avatarEmoji": "🇮🇹",
+      "bio": "Atlas Studio's Aosta Valley bureau: Queen Margherita's five-towered summer house above Gressoney, with Monte Rosa behind it and its kitchens thirty metres away, connected by an underground railway.",
+      "websiteURL": null
+    },
+    {
+      "id": "4efbe89f-c552-5ca8-b3ac-acb550d5fd16",
+      "displayName": "Atlas Studio TRS",
+      "platform": "dozent",
+      "handle": "atlas.trs",
+      "avatarURL": null,
+      "avatarEmoji": "🇮🇹",
+      "bio": "Atlas Studio's Friuli bureau, out from Trieste: the largest early Christian mosaic floor in the West at Aquileia, and the Devil's Bridge at Cividale, blown up in 1917 and rebuilt exactly as it was.",
+      "websiteURL": null
+    },
+    {
+      "id": "a80e1b9f-48b5-52ef-8a7b-1f1779a4a3a4",
+      "displayName": "Atlas Studio PEG",
+      "platform": "dozent",
+      "handle": "atlas.peg",
+      "avatarURL": null,
+      "avatarEmoji": "🇮🇹",
+      "bio": "Atlas Studio's Umbria bureau, out from Perugia: the wood below the Basilica of Saint Francis in Assisi, down to Pistoletto's Third Paradise, and Spoleto's Ponte delle Torri, an aqueduct eighty metres above a gorge.",
+      "websiteURL": null
+    },
+    {
+      "id": "94438230-d491-5a06-906a-2865d30d0021",
+      "displayName": "Atlas Studio SUF",
+      "platform": "dozent",
+      "handle": "atlas.suf",
+      "avatarURL": null,
+      "avatarEmoji": "🇮🇹",
+      "bio": "Atlas Studio's Calabria bureau, out from Lamezia: the Giants of the Sila, laricio pines three and a half centuries old, saved by the family that planted them.",
+      "websiteURL": null
+    },
+    {
+      "id": "acb0e2f1-a01a-576f-8316-af6487f3ffb5",
+      "displayName": "Atlas Studio RAN",
+      "platform": "dozent",
+      "handle": "atlas.ran",
+      "avatarURL": null,
+      "avatarEmoji": "🇮🇹",
+      "bio": "Atlas Studio's Ravenna bureau: Theodoric's tomb under its single stone dome, the palace that was never his, and the green mosaic meadow of Sant'Apollinare in Classe.",
+      "websiteURL": null
+    },
+    {
+      "id": "cc29a316-746c-574f-8927-c0019a21f2ef",
+      "displayName": "Atlas Studio AOI",
+      "platform": "dozent",
+      "handle": "atlas.aoi",
+      "avatarURL": null,
+      "avatarEmoji": "🇮🇹",
+      "bio": "Atlas Studio's Marche bureau, out from Ancona: the garden in Recanati where Leopardi wrote L'infinito, and Senigallia's Rotonda a Mare, a pavilion standing out in the Adriatic.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -170432,6 +170492,786 @@
         "Crime",
         "Hidden Gem",
         "Jacques Couëlle"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "eda5db91-cc53-5e92-bbe5-24def5cc18a5",
+      "createdAt": "2026-11-27",
+      "title": "Savoy Castle | Castel Savoia",
+      "shortDescription": "A queen wanted a summer house with a view of Monte Rosa. Her husband never got to sleep in it.",
+      "longDescription": "A queen wanted a summer house with a view of Monte Rosa. Her husband never got to sleep in it.\n\nThe queen was Margherita of Savoy. She first came to Gressoney on holiday in eighteen eighty-nine and fell for it, and she chose this slope, about fourteen hundred and forty metres up, for a house of her own. The first stone was laid in the summer of eighteen ninety-nine, to designs by Emilio Stramucci, who had worked on the royal palace in Turin. King Umberto was assassinated at Monza in nineteen hundred, four years before the house was finished.",
+      "makerId": "49a646f8-27b1-52d2-b0eb-6da3e1d5ae82",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aot-castel-savoia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aot-castel-savoia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aot-castel-savoia_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aot-castel-savoia_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aot-castel-savoia_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e0c76cd4-3ff4-5f22-b075-c8ecba60bb1b",
+          "order": 0,
+          "title": "Savoy Castle | Castel Savoia",
+          "caption": "On the drive below the castle, far enough back to take in all five towers at once.",
+          "latitude": 45.7643245,
+          "longitude": 7.8267325,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/aot-castel-savoia.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aot-castel-savoia_hero.webp",
+          "transcriptText": "A queen wanted a summer house with a view of Monte Rosa. Her husband never got to sleep in it.\n\nStand on the drive, a little way back from the building, so you can take in all of it at once. A three-storey villa of local stone with five pointed towers, all at different heights, one of them octagonal, and every spire a different shape. Behind you, if the cloud allows, the glacier of the Lyskamm and the Monte Rosa massif.\n\nThe queen was Margherita of Savoy. She first came to Gressoney on holiday in eighteen eighty-nine and fell for it, and she chose this slope, about fourteen hundred and forty metres up, for a house of her own. The first stone was laid in the summer of eighteen ninety-nine, to designs by Emilio Stramucci, who had worked on the royal palace in Turin. King Umberto was assassinated at Monza in nineteen hundred, four years before the house was finished.\n\nIt's called a castle, but it's really a grand villa dressed up as one, and that mix of styles was exactly what she asked for. She followed the building closely.\n\nInside, have a look at the carving. The oak staircase, the panelling and the ceilings are covered with Savoy emblems and with flowers chosen to echo her name. Margherita is Italian for daisy. And here's the gift: there are no kitchens in the house. She had them built about thirty metres away, and the food came through an underground tunnel on a little railway with electric trolleys, then up a lift to the dining room. A queen's summer house where you'd never smell the cooking.\n\nShe came every summer until nineteen twenty-five, and friends like the poet Giosuè Carducci stayed nearby. After her death the house was sold to a Milanese industrialist who kept it almost exactly as it was, and in nineteen eighty-one the Aosta Valley bought it.\n\nWhen you've seen the rooms, walk down to the rock garden at the foot of the building, then follow the drive to Villa Belvedere, where her guests and the royal guard were lodged. Look back from there and you'll have the towers and the mountain in one frame."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7643245,
+      "centroidLongitude": 7.8267325,
+      "city": "Gressoney-Saint-Jean",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Power",
+        "Viewpoint",
+        "Designed by a Master",
+        "Emilio Stramucci"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6ffc77ab-8e6e-5ebf-9ac6-32113f739673",
+      "createdAt": "2026-11-27",
+      "title": "Ieranto Bay | Baia di Ieranto",
+      "shortDescription": "According to the Roman writer Pliny the Elder, this is where Ulysses met the Sirens. It's also where a steelworks once quarried limestone.",
+      "longDescription": "According to the Roman writer Pliny the Elder, this is where Ulysses met the Sirens. It's also where a steelworks once quarried limestone.\n\nLook up to your left, to the headland of Montalto, and you'll see an old stone watchtower. It's one of the defensive towers built along this coast in the fifteen hundreds, when Saracen pirates were a real and regular danger. Another stands out on Punta Campanella, the very tip of the peninsula.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-baia-di-ieranto_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-baia-di-ieranto_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-baia-di-ieranto_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "47fc9e53-c46d-5faa-8ec9-024b14f36362",
+          "order": 0,
+          "title": "Ieranto Bay | Baia di Ieranto",
+          "caption": "At the bottom of the path from Nerano, above the bay, facing the Faraglioni of Capri.",
+          "latitude": 40.5745636,
+          "longitude": 14.3410658,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-baia-di-ieranto.mp3",
+          "audioDurationSeconds": 101,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 80,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-baia-di-ieranto_hero.webp",
+          "transcriptText": "According to the Roman writer Pliny the Elder, this is where Ulysses met the Sirens. It's also where a steelworks once quarried limestone.\n\nYou've walked down from Nerano, and here's the bay: a deep green inlet at the very end of the Sorrento peninsula, the only one of its kind on this tip of land, and directly across the water, the great sea stacks of Capri, the Faraglioni.\n\nLook up to your left, to the headland of Montalto, and you'll see an old stone watchtower. It's one of the defensive towers built along this coast in the fifteen hundreds, when Saracen pirates were a real and regular danger. Another stands out on Punta Campanella, the very tip of the peninsula.\n\nThe quieter history is the quarry. From the early nineteen hundreds, limestone was dug out of these cliffs, and from nineteen eighteen the quarry belonged to the steel company Ilva, part of what later became Italsider. Workers came all the way from Sardinia to cut the rock. It closed for good in nineteen fifty-two.\n\nAnd then the company did something unusual. Rather than sell the land for villas, it gave the whole bay away, in the late nineteen eighties, so it couldn't be built on. That's why it looks like this. The water belongs to the Punta Campanella marine reserve, and the land has been left to the olives, the scrub and the walkers.\n\nThere are no bars and no bins down here. Bring water, and take everything home with you.\n\nIf you've the energy for one more climb, go up to the Torre di Montalto. From there you see the whole story at once: the quarry scars healing over, the bay below, and Capri sitting out in the haze, exactly where the Sirens would have been singing."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 101,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.5745636,
+      "centroidLongitude": 14.3410658,
+      "city": "Massa Lubrense",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "Maritime",
+        "History",
+        "Green Escape",
+        "Viewpoint",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e09fc5b3-f0b9-54bf-9751-3382494aeb8a",
+      "createdAt": "2026-11-27",
+      "title": "Aquileia Basilica | Basilica di Aquileia",
+      "shortDescription": "Under your feet is a floor laid not long after Christianity stopped being illegal. It's the largest early Christian mosaic in the western world.",
+      "longDescription": "Under your feet is a floor laid not long after Christianity stopped being illegal. It's the largest early Christian mosaic in the western world.\n\nIt was laid by Bishop Theodore in the years just after three thirteen, when the Emperor Constantine allowed Christians to worship openly. It covers more than seven hundred and sixty square metres. For centuries nobody could see it at all. It was only brought back to light between nineteen oh nine and nineteen twelve.",
+      "makerId": "4efbe89f-c552-5ca8-b3ac-acb550d5fd16",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trs-basilica-di-aquileia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trs-basilica-di-aquileia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trs-basilica-di-aquileia_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trs-basilica-di-aquileia_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trs-basilica-di-aquileia_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "78c25ad6-4533-5406-bda0-79252c10c47e",
+          "order": 0,
+          "title": "Aquileia Basilica | Basilica di Aquileia",
+          "caption": "Inside the basilica, on the walkway above the fourth-century mosaic floor.",
+          "latitude": 45.7698531,
+          "longitude": 13.3710047,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trs-basilica-di-aquileia.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trs-basilica-di-aquileia_hero.webp",
+          "transcriptText": "Under your feet is a floor laid not long after Christianity stopped being illegal. It's the largest early Christian mosaic in the western world.\n\nStep inside the basilica and look down. A carpet of mosaic stretches almost the whole length of the church: fish, birds, shepherds, inscriptions, and a great deal of sea.\n\nIt was laid by Bishop Theodore in the years just after three thirteen, when the Emperor Constantine allowed Christians to worship openly. It covers more than seven hundred and sixty square metres. For centuries nobody could see it at all. It was only brought back to light between nineteen oh nine and nineteen twelve.\n\nHave a look for three things. First, Jonah, a story told in episodes: thrown to a sea monster, swallowed, spat out again, and finally resting under a vine. Then the Good Shepherd, with a sheep across his shoulders. And then a strange little fight between a cockerel and a tortoise. The cockerel, crowing at dawn, has long been read as the light of Christ. The tortoise, in this reading, stands for darkness, and its name in Greek was thought to come from Tartarus, the underworld.\n\nLook in the fishing scene, too, for Theodore's own inscription. It begins Theodore, you are blessed, and it thanks him for building the church.\n\nHere's what I find so moving. These are some of the first Christian pictures anyone made in public, and they're not grand or solemn. They're cheerful. Fish and birds and a man getting swallowed by a whale.\n\nThe church above you came later. It was rebuilt in the Romanesque style and consecrated by Patriarch Poppo in ten thirty-one, and he raised the great bell tower outside, more than seventy metres tall.\n\nBefore you go, find the Crypt of the Excavations. There's more fourth-century mosaic down there, from Theodore's northern hall, and it's quieter, and rather more mysterious."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.7698531,
+      "centroidLongitude": 13.3710047,
+      "city": "Aquileia",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Art",
+        "History",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a1e5db7c-abfd-5e45-840e-ab93db84c92b",
+      "createdAt": "2026-11-27",
+      "title": "St Francis's Wood | Bosco di San Francesco",
+      "shortDescription": "Step through a door in a wall beside one of the most visited churches in Europe, and within minutes you're alone in a wood.",
+      "longDescription": "Step through a door in a wall beside one of the most visited churches in Europe, and within minutes you're alone in a wood.\n\nThese sixty-four hectares were once neglected and abandoned. In two thousand and eight they were bought, with a gift from the bank Intesa Sanpaolo, and the work of bringing them back began. The walk down is about a kilometre and a half, on natural paths, with steps in places.",
+      "makerId": "a80e1b9f-48b5-52ef-8a7b-1f1779a4a3a4",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/peg-bosco-di-san-francesco_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/peg-bosco-di-san-francesco_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/peg-bosco-di-san-francesco_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/peg-bosco-di-san-francesco_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/peg-bosco-di-san-francesco_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/peg-bosco-di-san-francesco_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f892bef2-7074-5adc-8426-9a7167982763",
+          "order": 0,
+          "title": "St Francis's Wood | Bosco di San Francesco",
+          "caption": "On the lawn of the Upper Basilica square, by the door in the wall that leads down into the wood.",
+          "latitude": 43.0747,
+          "longitude": 12.6071,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/peg-bosco-di-san-francesco.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/peg-bosco-di-san-francesco_hero.webp",
+          "transcriptText": "Step through a door in a wall beside one of the most visited churches in Europe, and within minutes you're alone in a wood.\n\nOn the square of the Upper Basilica of Saint Francis, look for the door set into the wall. That's the way in. The path drops away from the basilica, down through woodland and olive terraces towards the valley below Assisi.\n\nThese sixty-four hectares were once neglected and abandoned. In two thousand and eight they were bought, with a gift from the bank Intesa Sanpaolo, and the work of bringing them back began. The walk down is about a kilometre and a half, on natural paths, with steps in places.\n\nHalfway down you'll come to the old Benedictine complex of Santa Croce, founded by nuns in the twelve or thirteen hundreds: a small Romanesque church, a fourteenth-century tower, the remains of a hospital for pilgrims and the sick, and the old mill, which is now a little osteria. Next to it is the Ponte dei Galli, an old bridge that has survived as well.\n\nAnd then, at the bottom, in a clearing, comes the surprise. The artist Michelangelo Pistoletto has planted a hundred and twenty-one olive trees in double rows to make three huge, touching circles. He calls it the Third Paradise: the first paradise was nature, the second is the world humans have built, and the third is the one where the two might finally get along.\n\nIt's a rather fitting thing to find below Saint Francis, the saint who preached to the birds and wrote the Canticle of the Creatures. The basilica up the hill is about his life. This wood is about his idea.\n\nBefore you start the walk back up, stop by the circles and look up at Assisi on its hill above you. It's a view of the town most visitors never see, because most visitors never come down this far."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.0747,
+      "centroidLongitude": 12.6071,
+      "city": "Assisi",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Green Escape",
+        "Faith",
+        "Art",
+        "Public Art",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1722c5fd-6939-5782-925a-5a19386a69ab",
+      "createdAt": "2026-11-27",
+      "title": "Tramontano Castle | Castello Tramontano",
+      "shortDescription": "The man who built this castle was murdered before it was finished, and the street where it happened is still called the Street of Redemption.",
+      "longDescription": "The man who built this castle was murdered before it was finished, and the street where it happened is still called the Street of Redemption.\n\nIt was begun in fifteen oh one by Count Giovan Carlo Tramontano, who had been given the county of Matera a few years earlier. He was deep in debt, and he paid for his building, and his debts, by taxing the people of Matera. The castle cost twenty-five thousand ducats, a fortune, and it was meant less to defend the town than to keep it under control.",
+      "makerId": "a3db3b82-d71b-5d58-ac11-0ce976e99588",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-castello-tramontano_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-castello-tramontano_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-castello-tramontano_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "09326c7a-d6c4-5b93-ac9d-df63571221f0",
+          "order": 0,
+          "title": "Tramontano Castle | Castello Tramontano",
+          "caption": "On the Lapillo hill above the old town, facing the round keep and its two side towers.",
+          "latitude": 40.6641128,
+          "longitude": 16.6059024,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bri-castello-tramontano.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-castello-tramontano_hero.webp",
+          "transcriptText": "The man who built this castle was murdered before it was finished, and the street where it happened is still called the Street of Redemption.\n\nYou're on the Lapillo hill, above the old centre of Matera. Ahead of you is the castle: a big round keep in the middle, two lower round towers either side of it, all crenellated and pierced with slits for weapons, standing alone above the town.\n\nIt was begun in fifteen oh one by Count Giovan Carlo Tramontano, who had been given the county of Matera a few years earlier. He was deep in debt, and he paid for his building, and his debts, by taxing the people of Matera. The castle cost twenty-five thousand ducats, a fortune, and it was meant less to defend the town than to keep it under control.\n\nLook at the style, too. It's Aragonese, the military architecture of the Spanish kings who then ruled southern Italy. The two side towers were once joined by a bridge, long since gone. And a walkway that was meant to link the castle to the older Norman fortress was never built at all.\n\nBecause on the twenty-ninth of December, fifteen fourteen, the count walked out of the cathedral and was killed in a side street just beside it. The people of Matera had planned it, meeting in secret behind a boulder they came to call the stone of bad counsel. The street where he died was later given the name Via del Riscatto, which means the street of redemption, or of ransom, depending on how you like your history.\n\nThe castle was never finished.\n\nIt's been under restoration, along with the park around it, for some years, so check what's open before you come. Either way, walk round the moat, where the old tufa walls have been repaired, and then go down into the town and find Via del Riscatto beside the cathedral. It's a short walk, from the count's ambition to the place it ended."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.6641128,
+      "centroidLongitude": 16.6059024,
+      "city": "Matera",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Power",
+        "Crime",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c8f7ddfd-af4b-5eb1-9fba-3a6cbea416ee",
+      "createdAt": "2026-11-27",
+      "title": "Salerno Cathedral | Duomo di Salerno",
+      "shortDescription": "A Norman warlord built this cathedral, an exiled pope consecrated it, and an apostle is buried in the crypt.",
+      "longDescription": "A Norman warlord built this cathedral, an exiled pope consecrated it, and an apostle is buried in the crypt.\n\nThe cathedral was begun after the Norman Robert Guiscard conquered Salerno, in the ten seventies. In ten eighty-four it was consecrated by Pope Gregory the Seventh, who'd taken refuge here in exile from Rome.",
+      "makerId": "7e8369f6-3020-5033-9b31-6f2fc5123e8e",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-duomo-di-salerno_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-duomo-di-salerno_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-duomo-di-salerno_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5a3c42a0-5c21-5e17-acc3-abf45fedad13",
+          "order": 0,
+          "title": "Salerno Cathedral | Duomo di Salerno",
+          "caption": "Through the Lion Gate, in the arcaded courtyard in front of the cathedral.",
+          "latitude": 40.6802013,
+          "longitude": 14.7600405,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nap-duomo-di-salerno.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nap-duomo-di-salerno_hero.webp",
+          "transcriptText": "A Norman warlord built this cathedral, an exiled pope consecrated it, and an apostle is buried in the crypt.\n\nGo through the Lion Gate, named for the stone lion and lioness either side of it, and stop in the great courtyard beyond. Arcades run round all four sides on columns taken from older buildings, and Roman sarcophagi line the walls. Nearby rises the bell tower, more than fifty metres of it.\n\nThe cathedral was begun after the Norman Robert Guiscard conquered Salerno, in the ten seventies. In ten eighty-four it was consecrated by Pope Gregory the Seventh, who'd taken refuge here in exile from Rome.\n\nThis courtyard is rare. A square Romanesque cloister in front of a church: the only other in Italy is at Sant'Ambrogio in Milan. And those Roman sarcophagi were reused in the Middle Ages as tombs for the families of Salerno, which makes the courtyard a sort of pantheon of the city.\n\nNow the doors into the church. They're bronze, cast in Constantinople in ten ninety-nine and given by a Salerno couple, Landolfo and Guisana Butrumile, fifty-four panels, most of them with Byzantine crosses.\n\nBut the real heart of the place is downstairs. Go down to the crypt. The relics of Saint Matthew, the apostle and evangelist, were laid here, and according to tradition they'd been in Salerno since nine fifty-four. The crypt was rebuilt in the early sixteen hundreds by the architect Domenico Fontana and his son, and covered with frescoes, so it glows with colour.\n\nAbove the tomb stands a double statue of Saint Matthew, made by Michelangelo Naccherino in the early sixteen hundreds, two figures back to back, so the saint faces both ways.\n\nWhen you come up, step back out into the courtyard and look up at the bell tower, built in the eleven hundreds, part Arab, part Norman. It's the best summary of Salerno's history you'll find: everyone who passed through left something on top of everyone else."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.6802013,
+      "centroidLongitude": 14.7600405,
+      "city": "Salerno",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Art",
+        "History",
+        "Architecture",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Domenico Fontana"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c1639376-320f-531e-881f-2bbfa7e0c17b",
+      "createdAt": "2026-11-27",
+      "title": "The Giants of the Sila | I Giganti della Sila",
+      "shortDescription": "Some of these trees were already old when Napoleon was born. They're around three hundred and fifty years old, and up to forty-five metres tall.",
+      "longDescription": "Some of these trees were already old when Napoleon was born. They're around three hundred and fifty years old, and up to forty-five metres tall.\n\nThere are around sixty of them in a reserve of just five hectares, and they're here because a family left them alone. In sixteen thirty-one the Mollo barons bought this land, and in the sixteen hundreds the pines were planted. The family turned the estate into a farm with its own silk industry, and the Mollo hunting lodge, the Casino Mollo, stands nearby, with its mill and its silk works. Silk from here went as far as Marseille, London and Lyon.",
+      "makerId": "94438230-d491-5a06-906a-2865d30d0021",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/suf-giganti-della-sila_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/suf-giganti-della-sila_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/suf-giganti-della-sila_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/suf-giganti-della-sila_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/suf-giganti-della-sila_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "93a37580-9a91-57ad-995e-976126e4345f",
+          "order": 0,
+          "title": "The Giants of the Sila | I Giganti della Sila",
+          "caption": "At the edge of the wood near Croce di Magara, where the path leads in among the pines.",
+          "latitude": 39.3246247,
+          "longitude": 16.4674483,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/suf-giganti-della-sila.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/suf-giganti-della-sila_hero.webp",
+          "transcriptText": "Some of these trees were already old when Napoleon was born. They're around three hundred and fifty years old, and up to forty-five metres tall.\n\nYou're in the Sila, the high plateau of Calabria, about fourteen hundred metres up, at the edge of a small wood near Croce di Magara. The path leads in among the trunks, enormous grey columns of laricio pine, the great native pine of Calabria, with mountain maples between them.\n\nThere are around sixty of them in a reserve of just five hectares, and they're here because a family left them alone. In sixteen thirty-one the Mollo barons bought this land, and in the sixteen hundreds the pines were planted. The family turned the estate into a farm with its own silk industry, and the Mollo hunting lodge, the Casino Mollo, stands nearby, with its mill and its silk works. Silk from here went as far as Marseille, London and Lyon.\n\nHave a look at the bark low down on some of the trunks. For centuries, woodcutters known as piciari tapped these trees for resin, and some of the old wounds have grown into hollows big enough for people to have sheltered inside them.\n\nWhat I find moving here is how close it came. After the Second World War the estate was taken over by the state forestry, and the trees could easily have become timber. Instead, in nineteen eighty-seven, Paola Manes, the mother of the last owners, helped have it protected as a reserve. Since twenty sixteen the wood has been cared for on behalf of the Sila National Park, and the Mollo sisters gave the Casino away in memory of their brother.\n\nAt the moment the site is closed until further notice, for forest maintenance and to restore the buildings, so check before you travel.\n\nWhen it's open, walk the path slowly, and somewhere in the middle, stop and look straight up. These trees were here before almost everything else you'll see in Calabria, and from underneath, you can see why people called them the giants."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 39.3246247,
+      "centroidLongitude": 16.4674483,
+      "city": "Spezzano della Sila",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Green Escape",
+        "History",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0131495a-2143-5cd5-8930-8411b2d202c8",
+      "createdAt": "2026-11-27",
+      "title": "Mausoleum of Theodoric | Mausoleo di Teodorico",
+      "shortDescription": "The roof of this building is one single stone, more than two hundred tonnes of it, and somebody got it up there in the sixth century.",
+      "longDescription": "The roof of this building is one single stone, more than two hundred tonnes of it, and somebody got it up there in the sixth century.\n\nThis is the tomb of Theodoric the Great, the Ostrogoth king who ruled Italy from Ravenna. It was built around five twenty, of stone from Aurisina near Trieste, laid dry, without mortar. Nobody is quite sure how they lifted the dome. The usual estimate is around two hundred and thirty tonnes, and newer calculations put it nearer two hundred and ninety.",
+      "makerId": "acb0e2f1-a01a-576f-8316-af6487f3ffb5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ran-mausoleo-di-teodorico_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ran-mausoleo-di-teodorico_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ran-mausoleo-di-teodorico_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ran-mausoleo-di-teodorico_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ran-mausoleo-di-teodorico_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "39006eac-c373-559e-806d-d919266cbacf",
+          "order": 0,
+          "title": "Mausoleum of Theodoric | Mausoleo di Teodorico",
+          "caption": "On the lawn outside the tomb, where you can see both storeys and the single-stone dome.",
+          "latitude": 44.4251451,
+          "longitude": 12.2091778,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ran-mausoleo-di-teodorico.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ran-mausoleo-di-teodorico_hero.webp",
+          "transcriptText": "The roof of this building is one single stone, more than two hundred tonnes of it, and somebody got it up there in the sixth century.\n\nFrom the lawn outside, walk round until you can see the whole thing. Two storeys of pale stone blocks, both ten-sided, the lower one with deep arched recesses. And on top, a shallow dome, ten metres seventy-six across, carved from one piece of stone.\n\nThis is the tomb of Theodoric the Great, the Ostrogoth king who ruled Italy from Ravenna. It was built around five twenty, of stone from Aurisina near Trieste, laid dry, without mortar. Nobody is quite sure how they lifted the dome. The usual estimate is around two hundred and thirty tonnes, and newer calculations put it nearer two hundred and ninety.\n\nNow look along the rim of the dome. Those twelve stone handles probably helped with moving and lifting it, and they carry the names of eight apostles and the four evangelists. Then look for the crack running across it. Legend says lightning split the dome and killed Theodoric while he was sitting inside, as punishment for his sins. He was actually dead and buried by then, but it's a good story.\n\nInside the upper room is a great tub of red porphyry, which tradition says held his body. His remains didn't stay. When the Byzantines took Ravenna, the tomb was turned into a chapel, and the king's bones were removed and scattered.\n\nSo it's a building that's lost the one thing it was built to hold, and still looks entirely certain of itself.\n\nBefore you leave, walk round the outside of the upper storey and look for the band of carving that runs round it, a pattern like a row of pincers. It's the only decoration in Ravenna taken from Gothic goldwork, the jewellery of Theodoric's own people, a little signature from the Goths in a city full of Byzantine mosaics."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 44.4251451,
+      "centroidLongitude": 12.2091778,
+      "city": "Ravenna",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Power",
+        "Engineering",
+        "Architecture",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a91af257-ba50-5703-b2b6-6ed809a9f78a",
+      "createdAt": "2026-11-27",
+      "title": "Garden on the Hill of the Infinite | Orto sul Colle dell'Infinito",
+      "shortDescription": "Two hundred years ago a young man sat in this garden, looked past a hedge, and wrote fifteen lines that every Italian knows by heart.",
+      "longDescription": "Two hundred years ago a young man sat in this garden, looked past a hedge, and wrote fifteen lines that every Italian knows by heart.\n\nFor centuries this was the nuns' enclosed garden, a hortus conclusus, planted with flowers, vegetables and fruit trees. A few steps away is the house where Giacomo Leopardi was born, and in eighteen nineteen, aged about twenty-one, he came up to this hill and conceived his poem L'infinito, The Infinite.",
+      "makerId": "cc29a316-746c-574f-8927-c0019a21f2ef",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aoi-orto-sul-colle-dell-infinito_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aoi-orto-sul-colle-dell-infinito_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aoi-orto-sul-colle-dell-infinito_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aoi-orto-sul-colle-dell-infinito_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aoi-orto-sul-colle-dell-infinito_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aoi-orto-sul-colle-dell-infinito_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "57d68027-6438-5f23-9026-6d5b1dd16893",
+          "order": 0,
+          "title": "Garden on the Hill of the Infinite | Orto sul Colle dell'Infinito",
+          "caption": "In the old nuns' garden beside Santo Stefano, at the edge looking out over the hills.",
+          "latitude": 43.3981498,
+          "longitude": 13.5511387,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/aoi-orto-sul-colle-dell-infinito.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aoi-orto-sul-colle-dell-infinito_hero.webp",
+          "transcriptText": "Two hundred years ago a young man sat in this garden, looked past a hedge, and wrote fifteen lines that every Italian knows by heart.\n\nYou're at the edge of the old town of Recanati, in the garden beside the sixteenth-century monastery of Santo Stefano. Walk to the edge and look out. On a clear day the gentle lines of the Sibillini mountains, and in the other direction, the sea.\n\nFor centuries this was the nuns' enclosed garden, a hortus conclusus, planted with flowers, vegetables and fruit trees. A few steps away is the house where Giacomo Leopardi was born, and in eighteen nineteen, aged about twenty-one, he came up to this hill and conceived his poem L'infinito, The Infinite.\n\nThe poem is short, and it's built on a trick of the eye. Leopardi says this solitary hill was always dear to him, and so was the hedge that shut out most of the far horizon. Because he couldn't see it, he imagined it: endless spaces, superhuman silences, the deepest quiet. And in the end, he says, it's sweet to drown in that sea.\n\nSo the point isn't the view. It's the bit of the view he couldn't see. Here, infinity isn't a landscape outside you. It's a place inside you.\n\nIn twenty seventeen the town of Recanati and Leopardi's study centres handed the garden over to be restored, and it's now open to everyone. The visit now includes a short journey through the poem itself, with projections and words from Leopardi's notebooks.\n\nBefore you leave, step into the Centro Nazionale di Studi Leopardiani next door, a clean modern building from nineteen thirty-seven. Its library holds more than twelve thousand volumes, and among them, the first printed edition of L'infinito."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.3981498,
+      "centroidLongitude": 13.5511387,
+      "city": "Recanati",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "literature",
+      "tags": [
+        "Park",
+        "Literature",
+        "Viewpoint",
+        "Green Escape",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "045530cc-acdf-5428-820b-7d5c09b07dbc",
+      "createdAt": "2026-11-27",
+      "title": "Palace of Theodoric | Palazzo di Teodorico",
+      "shortDescription": "This is called Theodoric's Palace. It almost certainly isn't.",
+      "longDescription": "This is called Theodoric's Palace. It almost certainly isn't.\n\nFor centuries people assumed this was what was left of the palace of Theodoric, the Ostrogoth king. The name stuck, and it's stuck ever since. But the building is later than him, probably from the middle of the seven hundreds, more than two centuries after he died.",
+      "makerId": "acb0e2f1-a01a-576f-8316-af6487f3ffb5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ran-palazzo-di-teodorico_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ran-palazzo-di-teodorico_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "70a3a62d-e365-5ac3-8754-9d000437c9e4",
+          "order": 0,
+          "title": "Palace of Theodoric | Palazzo di Teodorico",
+          "caption": "On Via di Roma at the corner of Via Alberoni, facing the tall brick facade.",
+          "latitude": 44.4161829,
+          "longitude": 12.2047195,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ran-palazzo-di-teodorico.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ran-palazzo-di-teodorico_hero.webp",
+          "transcriptText": "This is called Theodoric's Palace. It almost certainly isn't.\n\nOn Via di Roma, at the corner of Via Alberoni, stop in front of the tall brick facade. A big central arch, a row of smaller arches above, and two columns set into the windows facing the street. It looks like the front of something rather grand, and that's exactly the problem.\n\nFor centuries people assumed this was what was left of the palace of Theodoric, the Ostrogoth king. The name stuck, and it's stuck ever since. But the building is later than him, probably from the middle of the seven hundreds, more than two centuries after he died.\n\nSo what is it? The leading idea, put forward in nineteen twenty-one, is that it's the front of a church, San Salvatore ad Calchi, which was pulled down in the early fifteen hundreds. Behind the facade were two round staircases leading up to a gallery, which fits a church rather well. Scholars still argue about it, but the church has the better case.\n\nAnd here's a curious link. For more than three hundred years, from fifteen sixty-four until eighteen ninety-seven, the great porphyry tub from Theodoric's tomb was set into this very building. So the king's supposed coffin was on show in the king's supposed palace, and neither of them was quite what it said.\n\nThe two columns in the windows, by the way, were put in during the restoration of the eighteen nineties and nineteen hundreds.\n\nIf you want to see the real palace, walk a short way along Via di Roma to Sant'Apollinare Nuovo. On its wall is a mosaic of Theodoric's palace from the early five hundreds, his court made in glass and gold. It's the nearest any of us will get to the real thing."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 44.4161829,
+      "centroidLongitude": 12.2047195,
+      "city": "Ravenna",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Architecture",
+        "Free to Visit",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4e9bdfc7-2490-5a85-8120-83b8daf2c885",
+      "createdAt": "2026-11-27",
+      "title": "Park of the Aqueducts | Parco degli Acquedotti",
+      "shortDescription": "For eight hundred and fifty years, these arches carried water to Rome. Now they carry the sunset.",
+      "longDescription": "For eight hundred and fifty years, these arches carried water to Rome. Now they carry the sunset.\n\nSeveral aqueducts cross the park, Roman and papal. The tallest arches you see belong to the Aqua Claudia, begun under Caligula in thirty-eight AD and finished by Claudius in fifty-two, with a second channel, the Anio Novus, running along the top. Lower down, there's the Aqua Felice, built by Pope Sixtus the Fifth between fifteen eighty-five and fifteen ninety, and still used to water the fields today. To build it, his engineers cut straight through part of the older Aqua Marcia.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rom-parco-degli-acquedotti_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rom-parco-degli-acquedotti_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rom-parco-degli-acquedotti_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rom-parco-degli-acquedotti_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9650a66a-4889-5d18-a9dc-a57ceee95afb",
+          "order": 0,
+          "title": "Park of the Aqueducts | Parco degli Acquedotti",
+          "caption": "In the open meadow, looking along the arches of the Aqua Claudia towards the city.",
+          "latitude": 41.8505207,
+          "longitude": 12.5574787,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rom-parco-degli-acquedotti.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 80,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rom-parco-degli-acquedotti_hero.webp",
+          "transcriptText": "For eight hundred and fifty years, these arches carried water to Rome. Now they carry the sunset.\n\nStand in the open meadow and look along the great line of brick and stone arches marching across the grass towards the city. This is the Parco degli Acquedotti, two hundred and forty hectares of the old Roman countryside, the Campagna, that somehow survived inside the modern city.\n\nSeveral aqueducts cross the park, Roman and papal. The tallest arches you see belong to the Aqua Claudia, begun under Caligula in thirty-eight AD and finished by Claudius in fifty-two, with a second channel, the Anio Novus, running along the top. Lower down, there's the Aqua Felice, built by Pope Sixtus the Fifth between fifteen eighty-five and fifteen ninety, and still used to water the fields today. To build it, his engineers cut straight through part of the older Aqua Marcia.\n\nFrom the first of these aqueducts, the water flowed into Rome for some eight and a half centuries, until the Goths cut them in the year five thirty-seven.\n\nLook out, too, for the ruins of the Villa delle Vignacce, a Roman villa with its own great cistern, and for the Casale di Roma Vecchia, a farmhouse from the twelve hundreds that gave this whole area its old name, Old Rome.\n\nWhat's remarkable is that any of it is here at all. In the nineteen seventies the area was full of shacks and building plots. In nineteen eighty-six a group of local people formed a committee to save it, and by nineteen eighty-eight they'd got it included in the Appia Antica regional park.\n\nFilm-makers love it. Fellini used it for La Dolce Vita, and Sorrentino came back for La Grande Bellezza.\n\nIf you can, stay until the evening. Walk along the Claudia as the sun goes down behind the arches, with the joggers and the dog walkers, and you'll see why the people who live round here fought so hard to keep it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8505207,
+      "centroidLongitude": 12.5574787,
+      "city": "Rome",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Engineering",
+        "History",
+        "Green Escape",
+        "Free to Visit",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c101c01c-1c40-5ecb-85d1-1b291635b6e1",
+      "createdAt": "2026-11-27",
+      "title": "Devil's Bridge | Ponte del Diavolo",
+      "shortDescription": "The townspeople made a deal with the devil to get this bridge built. Then they cheated him.",
+      "longDescription": "The townspeople made a deal with the devil to get this bridge built. Then they cheated him.\n\nWork began in fourteen forty-two, to a design by a master builder from Bissone called Iacopo Dugaro. After him came Erardo of Villach, and then Bartolomeo delle Cisterne, who saw it through. It's twenty-two and a half metres high, and the deck was first paved in fifteen oh one, so it took most of the century.",
+      "makerId": "4efbe89f-c552-5ca8-b3ac-acb550d5fd16",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trs-ponte-del-diavolo-cividale_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trs-ponte-del-diavolo-cividale_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trs-ponte-del-diavolo-cividale_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "42e1aea1-8f37-574f-95d6-a845c527d5f0",
+          "order": 0,
+          "title": "Devil's Bridge | Ponte del Diavolo",
+          "caption": "On the bridge, or the bank below it, looking down at the green Natisone.",
+          "latitude": 46.0919999,
+          "longitude": 13.4317244,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trs-ponte-del-diavolo-cividale.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trs-ponte-del-diavolo-cividale_hero.webp",
+          "transcriptText": "The townspeople made a deal with the devil to get this bridge built. Then they cheated him.\n\nStand on the bridge, or on the riverbank just below it, and look down at the Natisone, running a startling green between the rocks. The bridge crosses in two arches, and you'll see they aren't the same size. That's because the middle pier stands on a great natural boulder sitting in the riverbed, slightly off-centre, and the builders simply used it.\n\nWork began in fourteen forty-two, to a design by a master builder from Bissone called Iacopo Dugaro. After him came Erardo of Villach, and then Bartolomeo delle Cisterne, who saw it through. It's twenty-two and a half metres high, and the deck was first paved in fifteen oh one, so it took most of the century.\n\nThat long, difficult build is probably where the legend comes from. The story goes that the people of Cividale couldn't manage it, so they asked the devil. He agreed to build it in return for the soul of the first living thing to cross. His mother carried the boulder for the middle pier in her apron. And in the morning, the townspeople sent across a dog. Or a cat, depending on who's telling it.\n\nThe real drama came in the twentieth century. On the twenty-seventh of October nineteen seventeen, during the retreat after Caporetto, the Italian army blew the bridge up. It was rebuilt the following year in exactly the same form, and reopened in May nineteen eighteen. So the bridge you're standing on is a faithful copy of itself.\n\nFrom here, walk up into the old town and find the Tempietto Longobardo, the little Lombard temple, built around seven sixty, with its stucco saints standing high on the wall. It's part of the UNESCO site for the Lombards in Italy, and it's one of the most extraordinary small rooms in the country."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 46.0919999,
+      "centroidLongitude": 13.4317244,
+      "city": "Cividale del Friuli",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "history",
+      "tags": [
+        "Bridge",
+        "Engineering",
+        "War",
+        "History",
+        "Free to Visit",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3b2c3297-4f4f-5816-ac0c-f592faaca829",
+      "createdAt": "2026-11-27",
+      "title": "Bridge of Towers | Ponte delle Torri",
+      "shortDescription": "Two hundred and thirty metres long, eighty metres high, and Goethe said it looked like a second nature.",
+      "longDescription": "Two hundred and thirty metres long, eighty metres high, and Goethe said it looked like a second nature.\n\nNobody is quite sure when it was built. It probably took its present form at the end of the thirteen hundreds, and it may stand on the remains of something Roman, though nothing Roman obviously survives. It's often linked to the great building works that began after thirteen sixty-three, when Cardinal Albornoz started work on the fortress behind you.",
+      "makerId": "a80e1b9f-48b5-52ef-8a7b-1f1779a4a3a4",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/peg-ponte-delle-torri_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/peg-ponte-delle-torri_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/peg-ponte-delle-torri_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ecf015e9-7026-5f22-a0cc-486a6e224a52",
+          "order": 0,
+          "title": "Bridge of Towers | Ponte delle Torri",
+          "caption": "At the town end of the bridge, below the Rocca, looking across the gorge to Monteluco.",
+          "latitude": 42.7330853,
+          "longitude": 12.7438442,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/peg-ponte-delle-torri.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/peg-ponte-delle-torri_hero.webp",
+          "transcriptText": "Two hundred and thirty metres long, eighty metres high, and Goethe said it looked like a second nature.\n\nStand at the end of the bridge near the Rocca, the great fortress on the hill above Spoleto, and look across. Nine tall stone arches stride over the gorge to the slopes of Monteluco, the wooded mountain opposite. A wall runs along the top on the side you're walking, about twelve metres high.\n\nNobody is quite sure when it was built. It probably took its present form at the end of the thirteen hundreds, and it may stand on the remains of something Roman, though nothing Roman obviously survives. It's often linked to the great building works that began after thirteen sixty-three, when Cardinal Albornoz started work on the fortress behind you.\n\nHere's the gift: it isn't really a road bridge at all. It was an aqueduct. A channel along the top carried water from springs on Monteluco into the town, to the fortress and to the fountains of Spoleto. The high wall was built to protect it.\n\nAt the far end is a smaller fort, the Fortilizio dei Mulini, built to guard the crossing, and it worked as a mill until the eighteen hundreds. A couple of the piers rising from the valley floor are hollow, with rooms for guards inside.\n\nIn October seventeen eighty-six, Goethe came this way and was enchanted. He wrote that it was the third work of the ancients he had seen that had the same grand spirit, a second nature working for human purposes. There's a plaque recording his visit.\n\nAfter the earthquakes of twenty sixteen, the bridge was closed for eight years, and it reopened in December twenty twenty-four.\n\nWhen you've crossed, keep going. At the far end, near the Fortilizio, a path called the Giro dei condotti follows the line of an old aqueduct along the slopes of Monteluco, past ancient hermitages, with the whole bridge and town opening up behind you."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 42.7330853,
+      "centroidLongitude": 12.7438442,
+      "city": "Spoleto",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Bridge",
+        "Engineering",
+        "History",
+        "Iconic Landmark",
+        "Viewpoint",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "95f1cf65-d9b9-513c-8d9c-d556e0a07155",
+      "createdAt": "2026-11-27",
+      "title": "Rotonda a Mare",
+      "shortDescription": "A round pavilion standing out in the sea on a long pier, built so that summer visitors could take the air without getting their feet wet.",
+      "longDescription": "A round pavilion standing out in the sea on a long pier, built so that summer visitors could take the air without getting their feet wet.\n\nThere's been something here since the middle of the eighteen hundreds. The architect Vincenzo Ghinelli designed a timber platform on piles in eighteen fifty, and again in eighteen sixty-five, a gathering place for holidaymakers with a whiff of the health cure about it, inspired by the fashion for sea-water therapy. In nineteen ten it was enlarged and linked to the Hotel Bagni.",
+      "makerId": "cc29a316-746c-574f-8927-c0019a21f2ef",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aoi-rotonda-a-mare_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aoi-rotonda-a-mare_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aoi-rotonda-a-mare_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0a01c504-1891-50e5-a80a-51534d5da7d7",
+          "order": 0,
+          "title": "Rotonda a Mare",
+          "caption": "At the end of the pier from the seafront, where it reaches the round pavilion.",
+          "latitude": 43.7166421,
+          "longitude": 13.2261158,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/aoi-rotonda-a-mare.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aoi-rotonda-a-mare_hero.webp",
+          "transcriptText": "A round pavilion standing out in the sea on a long pier, built so that summer visitors could take the air without getting their feet wet.\n\nFrom the seafront at Senigallia, walk out along the pier, eighty metres of it, and stop as you reach the Rotonda. The building sits on a platform about three metres above the water, with a central hall around sixteen metres across and a flat-roofed colonnade running round it.\n\nThere's been something here since the middle of the eighteen hundreds. The architect Vincenzo Ghinelli designed a timber platform on piles in eighteen fifty, and again in eighteen sixty-five, a gathering place for holidaymakers with a whiff of the health cure about it, inspired by the fashion for sea-water therapy. In nineteen ten it was enlarged and linked to the Hotel Bagni.\n\nThe building you see now went up in nineteen thirty-two and nineteen thirty-three, to a design by an engineer called Cardelli, chosen, the records say, because it was cheaper and suited the taste of the time.\n\nIt has had a hard life for a holiday building. It was badly damaged in the war, repaired, reshaped, weakened by storms and earthquakes in the nineteen seventies, briefly a discotheque in the nineteen eighties, and then badly burned in nineteen ninety-two.\n\nAnd yet the town kept coming back to it. In two thousand and six, after a restoration costing more than two and a half million euros, it reopened, and now it holds exhibitions and conferences in the summer.\n\nI think it's the most cheerful kind of landmark, a building whose only job was to let people enjoy the sea. Senigallia's beach has long been called the velvet beach, for its fine sand, and the Rotonda is its emblem.\n\nBefore you walk back, stand at the far side of the Rotonda, with the town behind you and nothing but the Adriatic in front. That's the feeling the whole thing was built to sell."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7166421,
+      "centroidLongitude": 13.2261158,
+      "city": "Senigallia",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Waterfront",
+        "Venue",
+        "Architecture",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ebbc8517-e4db-516f-8644-16a4f0c45db6",
+      "createdAt": "2026-11-27",
+      "title": "Basilica of Sant'Apollinare in Classe | Sant'Apollinare in Classe",
+      "shortDescription": "Out here among the fields south of Ravenna is a church with a meadow painted on the end wall, and it's the greenest thing you'll see indoors all…",
+      "longDescription": "Out here among the fields south of Ravenna is a church with a meadow painted on the end wall, and it's the greenest thing you'll see indoors all year.\n\nThis is the basilica of Saint Apollinaris, the first bishop of Ravenna, and that's him, praying, at the centre of the meadow. It was consecrated on the ninth of May, five forty-nine, by Maximian, the first archbishop of Ravenna, and it was paid for by a banker called Julian Argentarius.",
+      "makerId": "acb0e2f1-a01a-576f-8316-af6487f3ffb5",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ran-sant-apollinare-in-classe_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ran-sant-apollinare-in-classe_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ran-sant-apollinare-in-classe_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ran-sant-apollinare-in-classe_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c05bd04b-ee41-5fbf-b9c7-b08996e68ca7",
+          "order": 0,
+          "title": "Basilica of Sant'Apollinare in Classe | Sant'Apollinare in Classe",
+          "caption": "Down the nave between the marble columns, facing the green mosaic of the apse.",
+          "latitude": 44.3803295,
+          "longitude": 12.2326394,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ran-sant-apollinare-in-classe.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ran-sant-apollinare-in-classe_hero.webp",
+          "transcriptText": "Out here among the fields south of Ravenna is a church with a meadow painted on the end wall, and it's the greenest thing you'll see indoors all year.\n\nWalk down the nave, between the two rows of marble columns, and stop where you can take in the whole apse ahead of you. Below, a green valley full of rocks, bushes and birds. In the middle, a figure in white with his arms raised. Above, a great starry disc with a jewelled cross.\n\nThis is the basilica of Saint Apollinaris, the first bishop of Ravenna, and that's him, praying, at the centre of the meadow. It was consecrated on the ninth of May, five forty-nine, by Maximian, the first archbishop of Ravenna, and it was paid for by a banker called Julian Argentarius.\n\nHave a look at the sheep. There are twelve white lambs either side of Apollinaris, and they stand for the twelve apostles. Higher up, three more lambs gaze up towards the cross, and they're thought to be Peter, James and John. Either side of the disc, in the clouds, are Moses and Elijah. Put those together and the scene is probably a symbolic picture of the Transfiguration, the moment the three disciples saw Christ shining on the mountain. And right at the centre of the cross, in a small round medallion, is the face of Christ himself.\n\nWhat I love about it is that it doesn't show the miracle at all. No blinding figure, no terrified disciples. Just a cross in the stars, three sheep looking up, and a meadow in flower. It trusts you to know the story.\n\nThe columns either side of you are of Proconnesian marble, from an island in the Sea of Marmara, twelve on each side. The church has been part of Ravenna's UNESCO World Heritage site since nineteen ninety-six.\n\nWhen you leave, walk out into the grounds and look back at the round bell tower, from the ninth century, with its windows getting wider as they go up: one opening, then two, then three. It's one of the loveliest silhouettes in Romagna."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 44.3803295,
+      "centroidLongitude": 12.2326394,
+      "city": "Ravenna",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Art",
+        "History",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b1f98e54-7126-52d3-ab22-c7303f480e00",
+      "createdAt": "2026-11-27",
+      "title": "Villa Gregoriana",
+      "shortDescription": "In eighteen twenty-six the river Aniene burst its banks and tore through Tivoli. The Pope's answer was to drill through a mountain.",
+      "longDescription": "In eighteen twenty-six the river Aniene burst its banks and tore through Tivoli. The Pope's answer was to drill through a mountain.\n\nAfter the flood, Pope Gregory the Sixteenth had two tunnels cut through Monte Catillo, between eighteen thirty-two and eighteen thirty-five, to divert the river away from the town. Where the diverted water came out, it made the Great Waterfall, dropping more than a hundred metres. It's said to be the second highest waterfall in Italy, after the Marmore. The park was laid out around it, and named after the Pope.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rom-villa-gregoriana_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rom-villa-gregoriana_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rom-villa-gregoriana_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rom-villa-gregoriana_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rom-villa-gregoriana_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rom-villa-gregoriana_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "62de77db-0f0c-55a7-b62b-6fad8993df3a",
+          "order": 0,
+          "title": "Villa Gregoriana",
+          "caption": "At the entrance on Largo Sant'Angelo, looking down into the gorge of the Aniene.",
+          "latitude": 41.9656419,
+          "longitude": 12.8017589,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rom-villa-gregoriana.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rom-villa-gregoriana_hero.webp",
+          "transcriptText": "In eighteen twenty-six the river Aniene burst its banks and tore through Tivoli. The Pope's answer was to drill through a mountain.\n\nFrom the entrance at Largo Sant'Angelo, look down into the gorge. The path drops away into what's called the Valley of Hell, a deep wooded ravine full of the noise of water, and high above it on the far side, on the old acropolis of Tivoli, stand two Roman temples.\n\nAfter the flood, Pope Gregory the Sixteenth had two tunnels cut through Monte Catillo, between eighteen thirty-two and eighteen thirty-five, to divert the river away from the town. Where the diverted water came out, it made the Great Waterfall, dropping more than a hundred metres. It's said to be the second highest waterfall in Italy, after the Marmore. The park was laid out around it, and named after the Pope.\n\nAs you go down, look for the grottoes the water has carved out of the limestone: the Grotto of Neptune and the Grotto of the Sirens. Along the way, there are the ruins of the country villa of Manlius Vopiscus, a Roman whose house was praised by the poet Statius.\n\nAnd then the temples. The round one, from around a hundred BC, is probably linked to the cult of the Sibyl. The rectangular one beside it is older, from about a hundred and fifty BC, and may have been dedicated to Hercules or to Tiburnus, the legendary founder of Tivoli. Palladio studied the round temple.\n\nNo wonder this became one of the set pieces of the Grand Tour. Ruins, a roaring waterfall, a gorge, a temple on a cliff: it was practically designed to be painted, and for a century it was, over and over again.\n\nThe park was restored and reopened in the early two thousands. Be warned, it's a proper walk, with eighty-two metres of climb and a great many steps.\n\nSave your last breath for the top. You come out by the round temple, and from the terrace beside it you can look straight down at the waterfall you've just walked under."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.9656419,
+      "centroidLongitude": 12.8017589,
+      "city": "Tivoli",
+      "country": "Italy",
+      "relatedTourIds": [],
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Engineering",
+        "History",
+        "Green Escape",
+        "Viewpoint"
       ],
       "priceUSD": 0
     }
