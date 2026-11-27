@@ -5871,6 +5871,16 @@
       "websiteURL": null
     },
     {
+      "id": "a3db3b82-d71b-5d58-ac11-0ce976e99588",
+      "displayName": "Atlas Studio BRI",
+      "platform": "dozent",
+      "handle": "atlas.bri",
+      "avatarURL": null,
+      "avatarEmoji": "🇮🇹",
+      "bio": "Atlas Studio's Puglia bureau, out from Bari: a theatre built over the sea through a loophole and an opera house brought back from the ashes; a rose window cut like lace at Troia; Byzantine frescoes in an abbey that became an olive farm near Lecce; and a 'Greek' fountain in Gallipoli that is neither Greek nor where it started.",
+      "websiteURL": null
+    },
+    {
       "id": "AC52DD77-1381-5650-8B5F-62BC5EF4D2B3",
       "displayName": "TikTok @agathusstudios",
       "platform": "tiktok",
@@ -95791,14 +95801,14 @@
       "city": "Opera",
       "country": "Italy",
       "relatedTourIds": [
+        "e6bd876c-7210-5d45-a806-b109bb5522d0",
         "734e5f61-f82f-52b1-ab20-4639a5c99d3a",
         "8F9BB8DE-8222-4616-B65A-6193F393EE9A",
         "734793f0-1df7-51c2-ac12-6506dd88681e",
         "9bd2129e-cbc5-54b1-9e65-46368da17006",
         "78ffb49e-151a-5bb2-8e10-4bd2f05c8413",
         "6169243c-cc0b-5e2c-839a-608d63268c90",
-        "8a734239-474d-56a3-ab5f-16f502d48def",
-        "244d9961-3c36-5950-960c-38de6b7e3d92"
+        "8a734239-474d-56a3-ab5f-16f502d48def"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -117493,11 +117503,11 @@
         "c23291e5-0bb0-5bd7-b113-0d4fc121ee25",
         "fe2cbf01-fba7-57c4-8788-5ca761c33e81",
         "3f835ead-9829-5521-97f1-00d9ad78cfb0",
+        "7f1f54a0-f49b-5149-b0f7-947f6988cda9",
         "e8630587-812e-583a-9bd4-af283c885a85",
         "6a48b1a8-2896-58d6-af40-4af1c584eac2",
         "a0261a5e-a433-5289-afad-dd77b481afb1",
-        "5d1f8221-725a-5578-a79e-7c089c2a8014",
-        "30234cc2-792a-5ef5-9588-e7646e04c81d"
+        "5d1f8221-725a-5578-a79e-7c089c2a8014"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -121900,9 +121910,9 @@
         "e5afcfe3-d7e5-5000-ae6e-681101a645a3",
         "3b55c3e9-492e-50c8-8378-d8a5fda6c4d8",
         "e2a1f1b9-2d1a-51bc-b042-17a88ae7c8f2",
+        "c404fa6b-a706-50d9-978e-274b4f165555",
         "b4f87483-ebae-567e-896f-b7b4042ca34a",
-        "af17ee6c-6270-505e-b7de-620242413dc1",
-        "efe39735-c6a8-5bd3-bedd-594d78985b27"
+        "af17ee6c-6270-505e-b7de-620242413dc1"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -166869,7 +166879,7 @@
         "408e3ea7-5407-5498-a692-ffbc300c451d",
         "f2327db9-9976-5ae5-97a6-8ddea6d7aa78",
         "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
-        "69d08739-f300-56b7-8c41-67f1e08b745b"
+        "e6bd876c-7210-5d45-a806-b109bb5522d0"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -167642,9 +167652,9 @@
         "9bd2129e-cbc5-54b1-9e65-46368da17006",
         "e205b670-1574-5402-9f44-6bb2122d91e7",
         "734e5f61-f82f-52b1-ab20-4639a5c99d3a",
+        "e6bd876c-7210-5d45-a806-b109bb5522d0",
         "9ce70403-81e1-566e-8288-349f2be37e9c",
-        "15b6cba8-daa1-501b-b1ce-2b207df9350b",
-        "7ed84c6e-2698-572e-901f-4fc13969845a"
+        "15b6cba8-daa1-501b-b1ce-2b207df9350b"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -167759,9 +167769,9 @@
         "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
         "9a0ad257-6e04-573e-a0e5-19d385309440",
         "4e1383c6-7028-575b-8852-f534d7333297",
+        "37060d91-2eb2-55c0-a342-ab4a31ac36f8",
         "675cff67-7f73-543a-8339-61b55d4a8ec8",
-        "a5eb1d6b-ccab-5826-9248-9fce4540e318",
-        "8efa1abc-1274-475f-89ee-c506bb72f1ea"
+        "a5eb1d6b-ccab-5826-9248-9fce4540e318"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -167872,13 +167882,13 @@
       "country": "Italy",
       "relatedTourIds": [
         "8a734239-474d-56a3-ab5f-16f502d48def",
+        "e6bd876c-7210-5d45-a806-b109bb5522d0",
         "9bd2129e-cbc5-54b1-9e65-46368da17006",
         "5a01f367-5ded-54b3-9f65-6587be265184",
         "9d8991ce-07d9-5938-99fd-efe3258886f9",
         "27eea851-bb35-5012-8076-f825aaf991cf",
         "e205b670-1574-5402-9f44-6bb2122d91e7",
-        "734793f0-1df7-51c2-ac12-6506dd88681e",
-        "9ce70403-81e1-566e-8288-349f2be37e9c"
+        "734793f0-1df7-51c2-ac12-6506dd88681e"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -168104,7 +168114,7 @@
         "d9c541b5-73ef-59a8-9c88-e66f6a62b854",
         "710FD756-0FF3-5A99-93D1-7B8F305F494A",
         "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4",
-        "675cff67-7f73-543a-8339-61b55d4a8ec8"
+        "e6bd876c-7210-5d45-a806-b109bb5522d0"
       ],
       "primaryCategory": "hiddenGems",
       "tags": [
@@ -168400,7 +168410,7 @@
         "9ce70403-81e1-566e-8288-349f2be37e9c",
         "0165232e-3d55-5685-a448-a7bf5afece8f",
         "7ed84c6e-2698-572e-901f-4fc13969845a",
-        "e1c6669c-67b2-5c1c-ac8a-76db540d86bd"
+        "e6bd876c-7210-5d45-a806-b109bb5522d0"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -169056,11 +169066,11 @@
         "9d8991ce-07d9-5938-99fd-efe3258886f9",
         "8a734239-474d-56a3-ab5f-16f502d48def",
         "734e5f61-f82f-52b1-ab20-4639a5c99d3a",
+        "e6bd876c-7210-5d45-a806-b109bb5522d0",
         "99d7310b-4ab2-5e14-9b1f-ca2d0fec3f27",
         "7ed84c6e-2698-572e-901f-4fc13969845a",
         "b22666df-064a-58ae-9bd2-9e1d6d1a566f",
-        "734793f0-1df7-51c2-ac12-6506dd88681e",
-        "5a01f367-5ded-54b3-9f65-6587be265184"
+        "734793f0-1df7-51c2-ac12-6506dd88681e"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -169587,8 +169597,8 @@
         "3b0808ae-0324-57e1-bdc0-5352abbd4897",
         "595609f3-77f0-5c4e-8168-3ba0fd34b228",
         "422ef78c-4407-5609-aeca-6e885ae727b7",
-        "408e3ea7-5407-5498-a692-ffbc300c451d",
-        "6b12c6ef-e8f9-574e-87bf-2e46f2008238"
+        "c404fa6b-a706-50d9-978e-274b4f165555",
+        "408e3ea7-5407-5498-a692-ffbc300c451d"
       ],
       "primaryCategory": "visualArt",
       "tags": [
@@ -169643,10 +169653,10 @@
         "44754A4D-9175-50FD-AB99-B4B2C4529886",
         "6609afe3-8251-59cc-9571-37b0152fd8a7",
         "2283b2b6-90d5-5037-a72e-56ba35ef019e",
+        "e6bd876c-7210-5d45-a806-b109bb5522d0",
         "d9c541b5-73ef-59a8-9c88-e66f6a62b854",
         "9bd2129e-cbc5-54b1-9e65-46368da17006",
-        "fb9c16a1-8a99-585a-abee-c5869052f50f",
-        "fd5f496b-16ee-56c4-83c2-0050cf4c8957"
+        "fb9c16a1-8a99-585a-abee-c5869052f50f"
       ],
       "primaryCategory": "sacredSites",
       "tags": [
@@ -169754,14 +169764,14 @@
       "city": "Catania",
       "country": "Italy",
       "relatedTourIds": [
+        "37060d91-2eb2-55c0-a342-ab4a31ac36f8",
         "4276d68a-9de8-5ba0-ab89-4befd72b0f5c",
+        "7f1f54a0-f49b-5149-b0f7-947f6988cda9",
         "a2c34aab-c671-5d26-8205-cc7230b46221",
         "a42a5c17-b713-5676-b5b4-1bc602ff4611",
         "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
         "6169243c-cc0b-5e2c-839a-608d63268c90",
-        "8B322D5E-F6F8-54B4-9EEE-80AD6DFC7B6A",
-        "2c6b943b-b454-553e-b220-969a3336a690",
-        "1f17e306-6bf8-545e-8b91-150b721ef9b8"
+        "8B322D5E-F6F8-54B4-9EEE-80AD6DFC7B6A"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -169885,6 +169895,306 @@
         "Engineering",
         "Hidden Gem",
         "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e6bd876c-7210-5d45-a806-b109bb5522d0",
+      "createdAt": "2026-11-27",
+      "title": "Cerrate Abbey | Abbazia di Santa Maria di Cerrate",
+      "shortDescription": "Greek monks once prayed here in the middle of an olive grove in Puglia. Then the pirates came, and the abbey became a farm.",
+      "longDescription": "Greek monks once prayed here in the middle of an olive grove in Puglia. Then the pirates came, and the abbey became a farm.\n\nThe legend says it was founded after King Tancred of Hauteville, Count of Lecce, saw a vision of the Virgin while out hunting. The history is a little different. Between the end of the ten hundreds and the start of the eleven hundreds, the Norman Bohemond of Hauteville set up a monastery here for Greek monks, who followed the rule of Saint Basil. Southern Italy still had a strong Greek-speaking church, and this was one of its houses.",
+      "makerId": "a3db3b82-d71b-5d58-ac11-0ce976e99588",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-abbazia-di-cerrate_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-abbazia-di-cerrate_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-abbazia-di-cerrate_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-abbazia-di-cerrate_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-abbazia-di-cerrate_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-abbazia-di-cerrate_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-abbazia-di-cerrate_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4891c82e-5ad8-5e6b-a674-a8c33dcc9964",
+          "order": 0,
+          "title": "Cerrate Abbey | Abbazia di Santa Maria di Cerrate",
+          "caption": "In the open ground before the church, its plain stone front and portico ringed by olive trees.",
+          "latitude": 40.4587799,
+          "longitude": 18.115622,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bri-abbazia-di-cerrate.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-abbazia-di-cerrate_hero.webp",
+          "transcriptText": "Greek monks once prayed here in the middle of an olive grove in Puglia. Then the pirates came, and the abbey became a farm.\n\nIn the open ground in front of the church, look at its plain stone face: a simple gabled front, a rose window, and a carved doorway in the honey-coloured stone of Lecce. Along one side runs a fourteenth-century portico. All around, olive trees.\n\nThe legend says it was founded after King Tancred of Hauteville, Count of Lecce, saw a vision of the Virgin while out hunting. The history is a little different. Between the end of the ten hundreds and the start of the eleven hundreds, the Norman Bohemond of Hauteville set up a monastery here for Greek monks, who followed the rule of Saint Basil. Southern Italy still had a strong Greek-speaking church, and this was one of its houses.\n\nGo inside and look at the walls. The church holds a rare collection of Byzantine frescoes, now restored. Some were taken off the walls in earlier restorations and you'll find them in the little museum.\n\nAnd here's the turn in the story. In fifteen thirty-one the abbey passed to a hospital in Naples. Then, in seventeen eleven, Turkish pirates sacked it. After that it was abandoned as a monastery and turned into a working farm, a masseria, for pressing olive oil and drying tobacco. The monks' world became a farmer's world, and both of them are still here.\n\nLook for the well in the courtyard, dated fifteen eighty-five. And then go down underground to the olive press, cut into the rock, where the oil was made in the cool and the dark.\n\nIn twenty twelve the Province of Lecce handed the abbey over to be restored and opened to visitors. When you leave, take the old road outside for a few minutes. It follows the line of the ancient route between Brindisi, Lecce and Otranto, the road the monks would have known."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.4587799,
+      "centroidLongitude": 18.115622,
+      "city": "Lecce",
+      "country": "Italy",
+      "relatedTourIds": [
+        "5a01f367-5ded-54b3-9f65-6587be265184",
+        "734e5f61-f82f-52b1-ab20-4639a5c99d3a",
+        "9bd2129e-cbc5-54b1-9e65-46368da17006",
+        "8a734239-474d-56a3-ab5f-16f502d48def",
+        "fb9c16a1-8a99-585a-abee-c5869052f50f",
+        "b22666df-064a-58ae-9bd2-9e1d6d1a566f",
+        "0c87b47e-8ebb-5b41-a177-cc620c3ef6c4",
+        "734793f0-1df7-51c2-ac12-6506dd88681e"
+      ],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Museum",
+        "Faith",
+        "History",
+        "Art",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "96479b92-674e-5b39-980f-0c0c208dc30d",
+      "createdAt": "2026-11-27",
+      "title": "Troia Cathedral | Cattedrale di Troia",
+      "shortDescription": "Eleven columns, eleven segments, and a rose window so finely cut that it's been called embroidery in stone.",
+      "longDescription": "Eleven columns, eleven segments, and a rose window so finely cut that it's been called embroidery in stone.\n\nThe cathedral was built between ten ninety-three and eleven twenty-five, in the Romanesque style of Puglia, on top of an older Byzantine church, using stones taken from the Roman town that stood here. Bishop Guglielmo the Second paid for much of it, and you'll find his name carved inside.",
+      "makerId": "a3db3b82-d71b-5d58-ac11-0ce976e99588",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-cattedrale-di-troia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-cattedrale-di-troia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-cattedrale-di-troia_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-cattedrale-di-troia_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-cattedrale-di-troia_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-cattedrale-di-troia_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "670e28db-9ae1-53ae-9a84-e9ba38045b0a",
+          "order": 0,
+          "title": "Troia Cathedral | Cattedrale di Troia",
+          "caption": "In the street before the cathedral, looking up at the rose window and the bronze door.",
+          "latitude": 41.3612828,
+          "longitude": 15.3084738,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bri-cattedrale-di-troia.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-cattedrale-di-troia_hero.webp",
+          "transcriptText": "Eleven columns, eleven segments, and a rose window so finely cut that it's been called embroidery in stone.\n\nFrom the street in front of the cathedral in Troia, look up at the facade, nineteen metres wide and nearly thirty high. Halfway up is the rose window. Below it, in the centre, the great bronze door.\n\nThe cathedral was built between ten ninety-three and eleven twenty-five, in the Romanesque style of Puglia, on top of an older Byzantine church, using stones taken from the Roman town that stood here. Bishop Guglielmo the Second paid for much of it, and you'll find his name carved inside.\n\nNow the rose window. Eleven little columns radiate from the centre at equal angles, dividing it into eleven segments, each one filled with carved openwork as fine as lace. The odd number makes it slightly asymmetrical, which is part of its charm. The usual reading is that the eleven columns are the apostles without Peter, the circle at the centre is Christ, and the carved pattern round the edge is eternity.\n\nThen look at the bronze door, made in eleven nineteen by Oderisio of Benevento. It has twenty-eight panels, and among the figures he included himself and the bishop who paid him. Two dragons in the fourth row guard the treasure of the church. Round the side is a second, simpler bronze door, by the same man, from eleven twenty-seven, made when money was tighter.\n\nBronze doors are rare in Italian churches of this age. Troia has two, by the same artist, eight years apart, and you can see the budget shrink between them.\n\nThe rose window has been through two earthquakes, in seventeen thirty-one and in two thousand and two, and was carefully restored afterwards. It's so admired that it once appeared on an Italian banknote, the old five thousand lire.\n\nBefore you go in, read the inscription above the central door. It says, roughly, may this material door give us a spiritual way in. It's a good thought to carry inside."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.3612828,
+      "centroidLongitude": 15.3084738,
+      "city": "Troia",
+      "country": "Italy",
+      "relatedTourIds": [
+        "fb9c16a1-8a99-585a-abee-c5869052f50f",
+        "ee0f9fbe-25b2-4aa6-ba15-590e1e26402c",
+        "40a5cbe9-fb42-5101-9655-127f8f9d803c",
+        "3b83c694-3a45-53b0-8208-99fe2dcac30e",
+        "70cf47eb-947f-5f56-bfa2-8b3177886871",
+        "9d7c66f0-1c4a-4f00-966c-4f5bb41615de",
+        "6fc552fb-643a-5fe8-a7b8-328e90d031ac",
+        "1f17e306-6bf8-545e-8b91-150b721ef9b8"
+      ],
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Architecture",
+        "Art",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c404fa6b-a706-50d9-978e-274b4f165555",
+      "createdAt": "2026-11-27",
+      "title": "Greek Fountain | Fontana Greca",
+      "shortDescription": "It's called the Greek Fountain. It isn't Greek, and it's been moved twice, but it's still one of the most beautiful things in Gallipoli.",
+      "longDescription": "It's called the Greek Fountain. It isn't Greek, and it's been moved twice, but it's still one of the most beautiful things in Gallipoli.\n\nFor a long time people believed it was ancient Greek, from the third century BC. These days most scholars think it's from the Renaissance, in the fifteen hundreds. It started out at a spring by the old baths outside the town, was moved in fifteen forty-eight, and in fifteen sixty it was taken down and rebuilt here, with new Latin inscriptions added.",
+      "makerId": "a3db3b82-d71b-5d58-ac11-0ce976e99588",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-fontana-greca-gallipoli_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-fontana-greca-gallipoli_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-fontana-greca-gallipoli_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c146198d-24aa-5e33-b5a1-ef75bcea2057",
+          "order": 0,
+          "title": "Greek Fountain | Fontana Greca",
+          "caption": "At the foot of the bridge to the old town, in front of the fountain's carved stone panels.",
+          "latitude": 40.0560355,
+          "longitude": 17.981003,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bri-fontana-greca-gallipoli.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-fontana-greca-gallipoli_hero.webp",
+          "transcriptText": "It's called the Greek Fountain. It isn't Greek, and it's been moved twice, but it's still one of the most beautiful things in Gallipoli.\n\nAt the foot of the bridge to the old town of Gallipoli, stop in front of the tall carved stone front of the fountain, about five metres high. Four carved figures hold up the structure and divide it into three panels of relief, with a trough for animals below.\n\nFor a long time people believed it was ancient Greek, from the third century BC. These days most scholars think it's from the Renaissance, in the fifteen hundreds. It started out at a spring by the old baths outside the town, was moved in fifteen forty-eight, and in fifteen sixty it was taken down and rebuilt here, with new Latin inscriptions added.\n\nThe three panels each tell a myth about a woman turned into water. Have a look at them in turn. Dirce, tied to a bull. Salmacis, whose body was fused with the young man she loved into a single spring. And Byblis, who loved her own brother, wept for him when he rejected her, and was turned into a fountain of tears.\n\nSo it's a rather sombre fountain, when you read it properly. The inscriptions under the scenes are moral warnings: about desire, about envy, about going too far.\n\nWalk round the back and you'll find a second face, added in seventeen sixty-five to hold the whole thing up, with the arms of Gallipoli and the insignia of the Bourbon king Charles the Third. Well within living memory, in the nineteen fifties, people still filled small barrels with water here and sold it by donkey cart to houses without running water.\n\nThe fountain needs looking after. The old front has cracks running through it, and in twenty twenty-five it was recognised in a national vote for places worth saving, which should help pay for its restoration. Take a good look at the carving while you can. Then cross the bridge into the old town, which is what everyone who drank here was on their way to do."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.0560355,
+      "centroidLongitude": 17.981003,
+      "city": "Gallipoli",
+      "country": "Italy",
+      "relatedTourIds": [
+        "1ea2031e-cb40-5845-980f-1d1f85222c57",
+        "675cff67-7f73-543a-8339-61b55d4a8ec8",
+        "6609afe3-8251-59cc-9571-37b0152fd8a7",
+        "20f2428b-aff3-54f6-af9c-bf6d60fdfe98",
+        "34ee1c47-2571-56ff-becb-d719f43c3efc",
+        "422ef78c-4407-5609-aeca-6e885ae727b7",
+        "408e3ea7-5407-5498-a692-ffbc300c451d",
+        "b898ab3b-374b-50bd-a53b-dbbacf55a12e"
+      ],
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Monument",
+        "Waterfront",
+        "Art",
+        "History",
+        "Public Art",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7f1f54a0-f49b-5149-b0f7-947f6988cda9",
+      "createdAt": "2026-11-27",
+      "title": "Teatro Margherita",
+      "shortDescription": "This theatre stands on the sea because of a contract. Bari had promised not to build another theatre on city land. So somebody built one on the…",
+      "longDescription": "This theatre stands on the sea because of a contract. Bari had promised not to build another theatre on city land. So somebody built one on the water.\n\nHere's the story. The city of Bari had an agreement with the Petruzzelli family, who were building the great opera house in town: the council would not put up any other theatre on municipal land, except over the sea. A company called Orfeo saw the gap, got a concession on the water, and in nineteen ten opened a wooden variety hall here, the Varietà Margherita. It burned down the following year.",
+      "makerId": "a3db3b82-d71b-5d58-ac11-0ce976e99588",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-teatro-margherita_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-teatro-margherita_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-teatro-margherita_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-teatro-margherita_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bd0cba6a-b63c-5020-8074-6389a98973be",
+          "order": 0,
+          "title": "Teatro Margherita",
+          "caption": "On the seafront at Piazza Quattro Novembre, the domed theatre at the edge of the old port.",
+          "latitude": 41.1266226,
+          "longitude": 16.8728375,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bri-teatro-margherita.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-teatro-margherita_hero.webp",
+          "transcriptText": "This theatre stands on the sea because of a contract. Bari had promised not to build another theatre on city land. So somebody built one on the water.\n\nFrom the seafront at Piazza Quattro Novembre, look at the pale building standing at the edge of the old port, with its dome and its rows of tall windows. Today the sea has been filled in around its base, but when it was built, it stood on pillars sunk into the water.\n\nHere's the story. The city of Bari had an agreement with the Petruzzelli family, who were building the great opera house in town: the council would not put up any other theatre on municipal land, except over the sea. A company called Orfeo saw the gap, got a concession on the water, and in nineteen ten opened a wooden variety hall here, the Varietà Margherita. It burned down the following year.\n\nThe stone building that replaced it went up between nineteen twelve and nineteen fourteen, designed by Francesco De Giglio in the Liberty style, and it opened as the Kursaal Margherita in August nineteen fourteen. It was the first building in Bari made of reinforced concrete.\n\nSo a loophole gave Bari a landmark. And the building has had several lives since. It showed films from the nineteen twenties. In nineteen forty-three the Allied army took it over and called it the Garrison Theatre, and it was damaged in the bombing raid that December. After the war it was a cinema again, until it closed around nineteen eighty.\n\nAfter years of restoration, it reopened in December twenty eighteen, not as a theatre but as a centre for contemporary art. Its first show was an immersive Van Gogh exhibition, and nearly ninety-five thousand people came.\n\nBefore you go, walk round to the old harbour side and look back at the building. Try to imagine it on its stilts, with the water lapping right underneath, a theatre built exactly where nobody had thought to forbid one."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.1266226,
+      "centroidLongitude": 16.8728375,
+      "city": "Bari",
+      "country": "Italy",
+      "relatedTourIds": [
+        "37060d91-2eb2-55c0-a342-ab4a31ac36f8",
+        "4276d68a-9de8-5ba0-ab89-4befd72b0f5c",
+        "4e1383c6-7028-575b-8852-f534d7333297",
+        "3f835ead-9829-5521-97f1-00d9ad78cfb0",
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
+        "14e01635-4715-545b-bb64-ddaffda41f82",
+        "225ee3e3-c16c-55e7-bd98-6eeae329fabb",
+        "4b5d7fc1-be7f-5783-8c7b-408bdad18fc0"
+      ],
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Museum",
+        "Waterfront",
+        "Architecture",
+        "Engineering",
+        "War",
+        "Art",
+        "Designed by a Master",
+        "Francesco De Giglio"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "37060d91-2eb2-55c0-a342-ab4a31ac36f8",
+      "createdAt": "2026-11-27",
+      "title": "Teatro Petruzzelli",
+      "shortDescription": "The fourth largest theatre in Italy burned down one October night in nineteen ninety-one. It took eighteen years to bring it back.",
+      "longDescription": "The fourth largest theatre in Italy burned down one October night in nineteen ninety-one. It took eighteen years to bring it back.\n\nIt was built by two brothers, Onofrio and Antonio Petruzzelli, merchants and shipowners, and designed by their brother-in-law, the engineer Angelo Cicciomessere. Building began in eighteen ninety-eight, and it opened on the fourteenth of February nineteen oh three, with Meyerbeer's opera Les Huguenots. It had electric light and heating from the start, and its interior was gilded with pure gold leaf.",
+      "makerId": "a3db3b82-d71b-5d58-ac11-0ce976e99588",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-teatro-petruzzelli_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-teatro-petruzzelli_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-teatro-petruzzelli_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-teatro-petruzzelli_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-teatro-petruzzelli_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8e4f5eb8-a38e-538e-b535-c9bec5fd1db6",
+          "order": 0,
+          "title": "Teatro Petruzzelli",
+          "caption": "Across the street from the opera house, taking in its great red facade.",
+          "latitude": 41.1237451,
+          "longitude": 16.8727731,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bri-teatro-petruzzelli.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bri-teatro-petruzzelli_hero.webp",
+          "transcriptText": "The fourth largest theatre in Italy burned down one October night in nineteen ninety-one. It took eighteen years to bring it back.\n\nIn the new town of Bari, stand across the street from the theatre and take in its great facade. Inside is a horseshoe of boxes in white and gold, around one of the biggest auditoriums in the country.\n\nIt was built by two brothers, Onofrio and Antonio Petruzzelli, merchants and shipowners, and designed by their brother-in-law, the engineer Angelo Cicciomessere. Building began in eighteen ninety-eight, and it opened on the fourteenth of February nineteen oh three, with Meyerbeer's opera Les Huguenots. It had electric light and heating from the start, and its interior was gilded with pure gold leaf.\n\nFor most of the twentieth century this was where Bari came to hear the greatest voices of the age. Beniamino Gigli, Renata Tebaldi, Mario Del Monaco, Alfredo Kraus, and later Pavarotti, Domingo and Carreras all sang here, and the great ballet companies danced here.\n\nThen, on the night of the twenty-sixth to the twenty-seventh of October nineteen ninety-one, after a performance of Norma, the theatre caught fire. The blaze was judged to be deliberate. When the dome collapsed, it smothered the flames and saved what was left, but the inside was gutted. There followed years of trials and arguments over who owned it.\n\nIt was rebuilt as it had been, with modern safety inside, and reopened in October two thousand and nine with Beethoven's Ninth Symphony. That December the opera season began again, with Turandot.\n\nIf you can, take one of the short guided tours, about half an hour round the foyer and the stalls. Or better still, buy a ticket for an evening and sit in it. A theatre that came this close to being lost should be heard, not just looked at."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.1237451,
+      "centroidLongitude": 16.8727731,
+      "city": "Bari",
+      "country": "Italy",
+      "relatedTourIds": [
+        "7f1f54a0-f49b-5149-b0f7-947f6988cda9",
+        "4e1383c6-7028-575b-8852-f534d7333297",
+        "4276d68a-9de8-5ba0-ab89-4befd72b0f5c",
+        "a2c34aab-c671-5d26-8205-cc7230b46221",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
+        "3f835ead-9829-5521-97f1-00d9ad78cfb0",
+        "14e01635-4715-545b-bb64-ddaffda41f82"
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Notable Building",
+        "Performance",
+        "Architecture",
+        "History",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Angelo Cicciomessere"
       ],
       "priceUSD": 0
     }
