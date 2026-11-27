@@ -88290,10 +88290,10 @@
         "d1a5e1a2-6619-52fc-9f47-786cfc951713",
         "29509C0D-6645-5ADF-B498-5ADC01923ABF",
         "6dd34b79-17f1-5b88-be50-d26628f4e5cd",
+        "6470ff9f-f04a-5a33-be85-e6095c7333bf",
         "3d324428-9711-5480-9b5c-180374f3090c",
         "60944363-58DF-54B1-90A4-EC2018EB3D19",
-        "855f3f28-0e8f-5c73-9205-3ddedd081033",
-        "080d1ed4-e942-55fd-8b1e-68c9cf929170"
+        "855f3f28-0e8f-5c73-9205-3ddedd081033"
       ],
       "primaryCategory": "history",
       "tags": [
@@ -144791,8 +144791,8 @@
         "0ba914a0-2b66-5107-98c6-fc3b6d157194",
         "f84b3616-1878-52f6-87fb-6e67ef3e6e54",
         "1d7e97a5-3bff-5d27-bb3c-e299d03c732a",
-        "defeef28-4159-4ad2-813a-111c64720889",
-        "855f3f28-0e8f-5c73-9205-3ddedd081033"
+        "c2a36340-9794-537a-a41f-a9a5e1cd756b",
+        "defeef28-4159-4ad2-813a-111c64720889"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -167128,11 +167128,11 @@
         "21e731da-0bdd-59b9-a125-5a19ce0d0589",
         "c7d6db46-7c8a-59a3-92af-7f3429d719df",
         "0165232e-3d55-5685-a448-a7bf5afece8f",
+        "27e8d368-c0fa-58cc-a998-61d95b629847",
         "f3e87d25-bf60-5b79-9fc1-4d6f936899b3",
         "7b4f5f61-16c2-5c61-aa3d-527c4fc99d5e",
         "408e3ea7-5407-5498-a692-ffbc300c451d",
-        "6165be6c-ff3b-581f-95cb-71686ab5a3ba",
-        "34ee1c47-2571-56ff-becb-d719f43c3efc"
+        "6165be6c-ff3b-581f-95cb-71686ab5a3ba"
       ],
       "primaryCategory": "natureAndParks",
       "tags": [
@@ -170245,7 +170245,14 @@
       "centroidLongitude": 9.3395558,
       "city": "Palau",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "664eb3a1-31fc-5ad4-9ea6-3397fa5bea4d",
+        "6165be6c-ff3b-581f-95cb-71686ab5a3ba",
+        "21dad720-d2dd-5fb1-b263-d37752c18c5f",
+        "27eea851-bb35-5012-8076-f825aaf991cf",
+        "1163c8d4-a4f8-594d-9e87-75fdc7f42aee",
+        "e205b670-1574-5402-9f44-6bb2122d91e7"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Monument",
@@ -170291,7 +170298,16 @@
       "centroidLongitude": 8.5772244,
       "city": "Arborea",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "364fbc84-62fe-590d-acbe-71fa035d5b87",
+        "08FA5214-28A6-4678-9AD9-6B9F1E13F9CF",
+        "6dd34b79-17f1-5b88-be50-d26628f4e5cd",
+        "5a393da6-b959-5866-a4dd-6c3d7df62f2b",
+        "2ed7186f-6b2e-5baf-85bd-a9ad19149510",
+        "33abafb1-404b-5078-abbb-fbd97132fbba",
+        "75ecaa41-46ed-5c24-b447-367a1f3e1e18",
+        "788bc04c-3a98-5257-817e-221cdac7f2d3"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
@@ -170343,7 +170359,16 @@
       "centroidLongitude": 9.0238286,
       "city": "Assemini",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "CAE89CA4-4A3C-5F23-A356-147E07929831",
+        "0ae3efc4-479b-5440-8fe8-f5469237a6bb",
+        "9d0cb124-1008-5f1f-b3ec-ca719ccf850f",
+        "3e9d3ca7-eb94-5d22-8517-572b379930b3",
+        "205409d0-071e-5612-9e9e-2d6027b4e027",
+        "8618f79f-cc8d-4177-9bcb-bc9b2b5c92bd",
+        "37f20d89-88ab-523e-a780-59653982d91b",
+        "ECF3AA10-F175-5E8E-B2E8-1A19C7B73055"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Museum",
@@ -170389,7 +170414,16 @@
       "centroidLongitude": 9.5278495,
       "city": "Arzachena",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "70a01d74-8edf-5f78-9d8b-a05850c0299a",
+        "26D1FB2C-0AEB-5EED-BEC3-667BE0B128AD",
+        "e9740319-7b4f-5e89-ac29-7471dd0f3881",
+        "1ff51015-6af1-544e-91f5-bbd975bbfa28",
+        "62cca756-02e7-5848-ace4-502800c37005",
+        "f96346b3-d5be-5ba4-8fa2-5bd3b0c11af2",
+        "34b8104f-318d-5276-bf7d-04e933deebe9",
+        "a945386e-27f0-5994-9deb-7a8f878a395b"
+      ],
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
