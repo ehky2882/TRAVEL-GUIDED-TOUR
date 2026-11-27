@@ -1,0 +1,33 @@
+RUN check-coordinates.py · rev 02bd1f9f · 2026-11-27T12:42:26Z · args: --drop <drop> --city Sardinia, Italy
+auditing 4 coordinate(s) against 'Sardinia, Italy'  (~0.1 min at Nominatim's rate limit)
+
+  [  1/4] Idrovora di Sassu                  fwd  12049m  at: Strada Provinciale 5
+  [  2/4] Saline Conti Vecchi                fwd    220m  at: -
+  [  3/4] Ville Jacques Cou#U00eblle         fwd    n/a  at: -
+  [  4/4] Batteria Militare Talmone          fwd     94m  at: Percorso di Talmone
+
+========================================================================
+GROSS - 2 coordinate(s) may not be at their venue
+Check each by hand. Reverse-geocoding the SUPPLIED point is what
+settles it: a motorway or an unrelated office means it is wrong;
+a neighbour on the right street means it is fine.
+
+  Idrovora di Sassu
+    supplied      39.9308672, 8.5606074
+    sits on       Strada Provinciale 5  [highway]
+    venue geocode 12049 m away - Idrovora Sassu, Strada Provinciale 49, Centro Uno Sassu, Arb
+
+  Saline Conti Vecchi
+    supplied      39.2258671, 9.0242480
+    sits on       (unnamed)  [leisure]
+    venue geocode 220 m away - Saline Conti Vecchi, Strada Conti Vecchi, Assèmini/Assemini,
+
+UNVERIFIABLE - 1: no automatic verdict, and that is
+not the same as a pass. A towpath, a square and a long street have no
+single point to measure against; read the script and judge by hand.
+    Ville Jacques Cou#U00eblle               venue could not be geocoded
+  (a GROSS verdict needs the geocoder to have found the venue itself;
+   where it did not, the distance is reported and not acted on)
+
+========================================================================
+BIAS - not enough point-like matches (1) to measure

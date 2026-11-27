@@ -432,6 +432,7 @@ let architectTags: Set<String> = [
     "Piero Portaluppi", "Tomaso Buzzi", "BBPR", "Paolo Vietti-Violi", "Pietro Porcinai", "Luigi Canonica", "Jules Röthlisberger",
     "Carlo Sada", "Andrea Scala",
     "Francesco De Giglio", "Angelo Cicciomessere",
+    "Flavio Scano", "Jacques Couëlle",
 ]
 let validTags: Set<String> = placeTypeTags
     .union(themeTags).union(styleEraTags)

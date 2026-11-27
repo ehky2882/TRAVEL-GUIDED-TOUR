@@ -255,6 +255,7 @@ enum Tag {
             "Piero Portaluppi", "Tomaso Buzzi", "BBPR", "Paolo Vietti-Violi", "Pietro Porcinai", "Luigi Canonica", "Jules Röthlisberger",
             "Carlo Sada", "Andrea Scala",
             "Francesco De Giglio", "Angelo Cicciomessere",
+            "Flavio Scano", "Jacques Couëlle",
         ]),
     ]
 
