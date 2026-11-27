@@ -1,5 +1,1 @@
-# Accept Apple's latest Program License Agreement
-
-_opened 2026-11-27 · clear with `git rm status/owner/apple-pla-261127.md`_
-
-Accept the latest Apple Developer Program License Agreement (developer.apple.com → Account). TestFlight build 191 for PR #1208 failed at signing on 2026-11-27 because it is pending; every TestFlight build is blocked until it is accepted.
+Accept the latest Apple Developer Program License Agreement (accepted 2026-11-27), AND check App Store Connect → Business for any other pending or expired agreement. Build 192 for PR #1208 compiled and signed but its upload was refused with "a required agreement is missing or has expired". Every TestFlight upload is blocked until it is cleared.
