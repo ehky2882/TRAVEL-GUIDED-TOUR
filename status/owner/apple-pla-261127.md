@@ -1,0 +1,1 @@
+Accept the latest Apple Developer Program License Agreement (accepted 2026-11-27), AND check App Store Connect → Business for any other pending or expired agreement. Build 192 for PR #1208 compiled and signed but its upload was refused with "a required agreement is missing or has expired". Every TestFlight upload is blocked until it is cleared.
