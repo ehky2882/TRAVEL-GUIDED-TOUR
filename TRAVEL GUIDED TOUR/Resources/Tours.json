@@ -167286,9 +167286,9 @@
         "eb61fd16-822f-551f-ae64-a6b371f08363",
         "54ededa4-a0c8-50b5-9562-b6b0dd5f9d8f",
         "675cff67-7f73-543a-8339-61b55d4a8ec8",
+        "6609afe3-8251-59cc-9571-37b0152fd8a7",
         "81cd2cae-8115-5bd1-b9cc-bda95a7a8320",
-        "1ea2031e-cb40-5845-980f-1d1f85222c57",
-        "422ef78c-4407-5609-aeca-6e885ae727b7"
+        "1ea2031e-cb40-5845-980f-1d1f85222c57"
       ],
       "primaryCategory": "culturalHeritage",
       "tags": [
@@ -167582,10 +167582,10 @@
         "7efd2038-8b5d-5652-ac25-e5b644b83371",
         "e0566808-f11e-53bb-9beb-0f853d45f3be",
         "7b4f5f61-16c2-5c61-aa3d-527c4fc99d5e",
+        "f0c32fb3-23f3-5224-b2d2-760644fca81d",
         "a04f5bb2-d1cc-5876-accc-de2501105507",
         "23e1fa18-458f-5870-bc8e-b1aa790ed978",
-        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
-        "df28f59a-1734-5ea0-a505-aa939a414eba"
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611"
       ],
       "primaryCategory": "architecture",
       "tags": [
@@ -167758,10 +167758,10 @@
         "9f3aa784-002e-5e43-bad3-c68e2a88b022",
         "d96f4611-cbf7-56c4-9e9b-2f1c5cbb0900",
         "9a0ad257-6e04-573e-a0e5-19d385309440",
+        "4e1383c6-7028-575b-8852-f534d7333297",
         "675cff67-7f73-543a-8339-61b55d4a8ec8",
         "a5eb1d6b-ccab-5826-9248-9fce4540e318",
-        "8efa1abc-1274-475f-89ee-c506bb72f1ea",
-        "78ffb49e-151a-5bb2-8e10-4bd2f05c8413"
+        "8efa1abc-1274-475f-89ee-c506bb72f1ea"
       ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
@@ -169580,7 +169580,16 @@
       "centroidLongitude": 13.3621051,
       "city": "Palermo",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f0c32fb3-23f3-5224-b2d2-760644fca81d",
+        "675cff67-7f73-543a-8339-61b55d4a8ec8",
+        "1394E226-7767-54F5-BC0E-5D3576409C07",
+        "3b0808ae-0324-57e1-bdc0-5352abbd4897",
+        "595609f3-77f0-5c4e-8168-3ba0fd34b228",
+        "422ef78c-4407-5609-aeca-6e885ae727b7",
+        "408e3ea7-5407-5498-a692-ffbc300c451d",
+        "6b12c6ef-e8f9-574e-87bf-2e46f2008238"
+      ],
       "primaryCategory": "visualArt",
       "tags": [
         "Public Square",
@@ -169629,7 +169638,16 @@
       "centroidLongitude": 13.354714,
       "city": "Palermo",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "44381335-C93E-5645-8BFD-005E1BF808CD",
+        "44754A4D-9175-50FD-AB99-B4B2C4529886",
+        "6609afe3-8251-59cc-9571-37b0152fd8a7",
+        "2283b2b6-90d5-5037-a72e-56ba35ef019e",
+        "d9c541b5-73ef-59a8-9c88-e66f6a62b854",
+        "9bd2129e-cbc5-54b1-9e65-46368da17006",
+        "fb9c16a1-8a99-585a-abee-c5869052f50f",
+        "fd5f496b-16ee-56c4-83c2-0050cf4c8957"
+      ],
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
@@ -169677,7 +169695,16 @@
       "centroidLongitude": 12.832454,
       "city": "Calatafimi-Segesta",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "0fd389b6-aa95-5b05-a0ec-f3e4935b4fe9",
+        "88375d4b-7502-53bc-b4a7-f6583ec24a70",
+        "E27E7953-F4BE-502D-A07A-FA55FAF76FA2",
+        "a647ecd6-b8bd-5b5d-abb5-2d06cb7f765a",
+        "d8f9fda3-2d1d-57bc-939d-2e3ffae0455a",
+        "c574f27b-0b14-56db-851c-404ad0462d75",
+        "137146d0-0398-5074-8c5c-484d1244172d",
+        "FA17B0B4-0CED-5612-A554-FE0D95AE71E6"
+      ],
       "primaryCategory": "history",
       "tags": [
         "Religious Building",
@@ -169726,7 +169753,16 @@
       "centroidLongitude": 15.0900013,
       "city": "Catania",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "4276d68a-9de8-5ba0-ab89-4befd72b0f5c",
+        "a2c34aab-c671-5d26-8205-cc7230b46221",
+        "a42a5c17-b713-5676-b5b4-1bc602ff4611",
+        "675ea55a-b9a0-54a8-a0a8-98d6e35cca6b",
+        "6169243c-cc0b-5e2c-839a-608d63268c90",
+        "8B322D5E-F6F8-54B4-9EEE-80AD6DFC7B6A",
+        "2c6b943b-b454-553e-b220-969a3336a690",
+        "1f17e306-6bf8-545e-8b91-150b721ef9b8"
+      ],
       "primaryCategory": "musicAndPerformance",
       "tags": [
         "Venue",
@@ -169777,7 +169813,16 @@
       "centroidLongitude": 13.5818854,
       "city": "Agrigento",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "f6e0dac0-e4ff-57bc-9cdf-12c8d015048c",
+        "8ad5d877-d662-5501-85d0-72d19385139d",
+        "442b859c-5e6b-52cd-87c0-f6861951ee90",
+        "fd4761f2-de44-5088-b631-42d5b85fc9ba",
+        "3e9d3ca7-eb94-5d22-8517-572b379930b3",
+        "5a393da6-b959-5866-a4dd-6c3d7df62f2b",
+        "d2b10d89-4493-5ae8-a878-c8df6afa8e73",
+        "ebb8cc3c-69ec-5d7f-a5da-b99008afb765"
+      ],
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
@@ -169824,7 +169869,16 @@
       "centroidLongitude": 12.0213427,
       "city": "Pantelleria",
       "country": "Italy",
-      "relatedTourIds": [],
+      "relatedTourIds": [
+        "3e9d3ca7-eb94-5d22-8517-572b379930b3",
+        "dd325cdd-a0f7-5919-bc3c-8338d82a1bce",
+        "7d14400b-a222-51a2-bf3c-b308c2a817be",
+        "445AFBE2-5A95-53EA-BD93-435284EE8AC8",
+        "a17dbd1d-3491-4062-a62e-9b0059c678f7",
+        "d9c541b5-73ef-59a8-9c88-e66f6a62b854",
+        "15b6cba8-daa1-501b-b1ce-2b207df9350b",
+        "40376928-7556-5f79-b05b-d67a92cfea27"
+      ],
       "primaryCategory": "hiddenGems",
       "tags": [
         "Park",
@@ -357152,6 +357206,7 @@
       "city": "Palermo",
       "country": "Italy",
       "relatedTourIds": [
+        "f0c32fb3-23f3-5224-b2d2-760644fca81d",
         "44754A4D-9175-50FD-AB99-B4B2C4529886"
       ],
       "primaryCategory": "sacredSites",
@@ -357354,6 +357409,7 @@
       "city": "Palermo",
       "country": "Italy",
       "relatedTourIds": [
+        "f0c32fb3-23f3-5224-b2d2-760644fca81d",
         "44381335-C93E-5645-8BFD-005E1BF808CD"
       ],
       "primaryCategory": "architecture",
