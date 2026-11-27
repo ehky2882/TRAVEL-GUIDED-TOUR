@@ -1,0 +1,24 @@
+RUN check-coordinates.py · rev 02bd1f9f · 2026-11-27T08:58:58Z · args: --drop /tmp/claude-0/drop/x --city Sicily, Italy --out drafts/sicily-batch1/coordinate-audit.txt
+auditing 6 coordinate(s) against 'Sicily, Italy'  (~0.2 min at Nominatim's rate limit)
+
+  [  1/6] Tempio di Segesta                  fwd   1280m  at: -
+  [  2/6] Fontana Pretoria                   fwd     13m  at: -
+  [  3/6] Giardino della Kolymbethra         fwd    n/a  at: Mirto della Kolymbetra
+  [  4/6] San Giovanni degli Eremiti         fwd     35m  at: -
+  [  5/6] Teatro Massimo Bellini             fwd     31m  at: Teatro Massimo Bellini
+  [  6/6] Giardino Pantesco Donnafugata      fwd    n/a  at: Vicolo Maccotta
+
+========================================================================
+GROSS - none: every coordinate is at or beside its venue
+
+UNVERIFIABLE - 3: no automatic verdict, and that is
+not the same as a pass. A towpath, a square and a long street have no
+single point to measure against; read the script and judge by hand.
+    Tempio di Segesta                        venue geocodes to a street, not a point
+    Giardino della Kolymbethra               venue could not be geocoded
+    Giardino Pantesco Donnafugata            venue could not be geocoded
+  (a GROSS verdict needs the geocoder to have found the venue itself;
+   where it did not, the distance is reported and not acted on)
+
+========================================================================
+BIAS - not enough point-like matches (3) to measure
